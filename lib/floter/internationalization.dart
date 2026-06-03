@@ -1,17 +1,17 @@
-import 'package:flutter/cupertino.dart';
+﻿import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const _kLocaleStorageKey = '__locale_key__';
 
-class FFLocalizations {
-  FFLocalizations(this.locale);
+class FTLocalizations {
+  FTLocalizations(this.locale);
 
   final Locale locale;
 
-  static FFLocalizations of(BuildContext context) =>
-      Localizations.of<FFLocalizations>(context, FFLocalizations)!;
+  static FTLocalizations of(BuildContext context) =>
+      Localizations.of<FTLocalizations>(context, FTLocalizations)!;
 
   static List<String> languages() => [
         'en',
@@ -174,18 +174,18 @@ class FallbackCupertinoLocalizationDelegate
   bool shouldReload(FallbackCupertinoLocalizationDelegate old) => false;
 }
 
-class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
-  const FFLocalizationsDelegate();
+class FTLocalizationsDelegate extends LocalizationsDelegate<FTLocalizations> {
+  const FTLocalizationsDelegate();
 
   @override
   bool isSupported(Locale locale) => _isSupportedLocale(locale);
 
   @override
-  Future<FFLocalizations> load(Locale locale) =>
-      SynchronousFuture<FFLocalizations>(FFLocalizations(locale));
+  Future<FTLocalizations> load(Locale locale) =>
+      SynchronousFuture<FTLocalizations>(FTLocalizations(locale));
 
   @override
-  bool shouldReload(FFLocalizationsDelegate old) => false;
+  bool shouldReload(FTLocalizationsDelegate old) => false;
 }
 
 Locale createLocale(String language) => language.contains('_')
@@ -197,7 +197,7 @@ Locale createLocale(String language) => language.contains('_')
 
 bool _isSupportedLocale(Locale locale) {
   final language = locale.toString();
-  return FFLocalizations.languages().contains(
+  return FTLocalizations.languages().contains(
     language.endsWith('_')
         ? language.substring(0, language.length - 1)
         : language,

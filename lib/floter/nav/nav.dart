@@ -1,4 +1,4 @@
-import 'dart:async';
+﻿import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -12,10 +12,10 @@ import '/backend/supabase/supabase.dart';
 import '/auth/base_auth_user_provider.dart';
 
 import '/main.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '/floter/floter_theme.dart';
+import '/floter/lat_lng.dart';
+import '/floter/place.dart';
+import '/floter/floter_util.dart';
 import 'serialization_util.dart';
 
 import '/index.dart';
@@ -88,19 +88,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       errorBuilder: (context, state) =>
           appStateNotifier.loggedIn ? ProfilePageWidget() : AuthPageWidget(),
       routes: [
-        FFRoute(
+        FTRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
               ? ProfilePageWidget()
               : AuthPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: AuthPageWidget.routeName,
           path: AuthPageWidget.routePath,
           builder: (context, params) => AuthPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfilePageWidget.routeName,
           path: ProfilePageWidget.routePath,
           builder: (context, params) => ProfilePageWidget(
@@ -162,22 +162,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        FTRoute(
           name: PeoplePageWidget.routeName,
           path: PeoplePageWidget.routePath,
           builder: (context, params) => PeoplePageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: LikedYouPageWidget.routeName,
           path: LikedYouPageWidget.routePath,
           builder: (context, params) => LikedYouPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: MatchesPageWidget.routeName,
           path: MatchesPageWidget.routePath,
           builder: (context, params) => MatchesPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ChatPageWidget.routeName,
           path: ChatPageWidget.routePath,
           builder: (context, params) => ChatPageWidget(
@@ -187,142 +187,142 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        FTRoute(
           name: AccountSettingsPageWidget.routeName,
           path: AccountSettingsPageWidget.routePath,
           builder: (context, params) => AccountSettingsPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: SearchPreferencesPageWidget.routeName,
           path: SearchPreferencesPageWidget.routePath,
           builder: (context, params) => SearchPreferencesPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: NearbySearchPreferencesPageWidget.routeName,
           path: NearbySearchPreferencesPageWidget.routePath,
           builder: (context, params) => NearbySearchPreferencesPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ChatPreferencesPageWidget.routeName,
           path: ChatPreferencesPageWidget.routePath,
           builder: (context, params) => ChatPreferencesPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ContactUsPageWidget.routeName,
           path: ContactUsPageWidget.routePath,
           builder: (context, params) => ContactUsPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: HideAccountPageWidget.routeName,
           path: HideAccountPageWidget.routePath,
           builder: (context, params) => HideAccountPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: DeleteAccountPageWidget.routeName,
           path: DeleteAccountPageWidget.routePath,
           builder: (context, params) => DeleteAccountPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileAboutMePageWidget.routeName,
           path: ProfileAboutMePageWidget.routePath,
           builder: (context, params) => ProfileAboutMePageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileGenderPageWidget.routeName,
           path: ProfileGenderPageWidget.routePath,
           builder: (context, params) => ProfileGenderPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileAgePageWidget.routeName,
           path: ProfileAgePageWidget.routePath,
           builder: (context, params) => ProfileAgePageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileLanguagesPageWidget.routeName,
           path: ProfileLanguagesPageWidget.routePath,
           builder: (context, params) => ProfileLanguagesPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileHeightPageWidget.routeName,
           path: ProfileHeightPageWidget.routePath,
           builder: (context, params) => ProfileHeightPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileBodyTypePageWidget.routeName,
           path: ProfileBodyTypePageWidget.routePath,
           builder: (context, params) => ProfileBodyTypePageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileWorkPageWidget.routeName,
           path: ProfileWorkPageWidget.routePath,
           builder: (context, params) => ProfileWorkPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileEducationPageWidget.routeName,
           path: ProfileEducationPageWidget.routePath,
           builder: (context, params) => ProfileEducationPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileKidsPageWidget.routeName,
           path: ProfileKidsPageWidget.routePath,
           builder: (context, params) => ProfileKidsPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileRelationshipPageWidget.routeName,
           path: ProfileRelationshipPageWidget.routePath,
           builder: (context, params) => ProfileRelationshipPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileReligionPageWidget.routeName,
           path: ProfileReligionPageWidget.routePath,
           builder: (context, params) => ProfileReligionPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileExercisePageWidget.routeName,
           path: ProfileExercisePageWidget.routePath,
           builder: (context, params) => ProfileExercisePageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileDrinkingPageWidget.routeName,
           path: ProfileDrinkingPageWidget.routePath,
           builder: (context, params) => ProfileDrinkingPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileSmokingPageWidget.routeName,
           path: ProfileSmokingPageWidget.routePath,
           builder: (context, params) => ProfileSmokingPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ProfileLocationPageWidget.routeName,
           path: ProfileLocationPageWidget.routePath,
           builder: (context, params) => ProfileLocationPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: NearbyPageWidget.routeName,
           path: NearbyPageWidget.routePath,
           builder: (context, params) => NearbyPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: EmailAuthPageWidget.routeName,
           path: EmailAuthPageWidget.routePath,
           builder: (context, params) => EmailAuthPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: PhoneAuthPageWidget.routeName,
           path: PhoneAuthPageWidget.routePath,
           builder: (context, params) => PhoneAuthPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: VerifyNumberPageWidget.routeName,
           path: VerifyNumberPageWidget.routePath,
           builder: (context, params) => VerifyNumberPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: ResetPasswordPageWidget.routeName,
           path: ResetPasswordPageWidget.routePath,
           builder: (context, params) => ResetPasswordPageWidget(),
         ),
-        FFRoute(
+        FTRoute(
           name: UpdatePasswordPageWidget.routeName,
           path: UpdatePasswordPageWidget.routePath,
           builder: (context, params) => UpdatePasswordPageWidget(),
@@ -409,8 +409,8 @@ extension _GoRouterStateExtensions on GoRouterState {
       : TransitionInfo.appDefault();
 }
 
-class FFParameters {
-  FFParameters(this.state, [this.asyncParams = const {}]);
+class FTParameters {
+  FTParameters(this.state, [this.asyncParams = const {}]);
 
   final GoRouterState state;
   final Map<String, Future<dynamic> Function(String)> asyncParams;
@@ -467,8 +467,8 @@ class FFParameters {
   }
 }
 
-class FFRoute {
-  const FFRoute({
+class FTRoute {
+  const FTRoute({
     required this.name,
     required this.path,
     required this.builder,
@@ -481,7 +481,7 @@ class FFRoute {
   final String path;
   final bool requireAuth;
   final Map<String, Future<dynamic> Function(String)> asyncParams;
-  final Widget Function(BuildContext, FFParameters) builder;
+  final Widget Function(BuildContext, FTParameters) builder;
   final List<GoRoute> routes;
 
   GoRoute toRoute(AppStateNotifier appStateNotifier) => GoRoute(
@@ -502,7 +502,7 @@ class FFRoute {
         },
         pageBuilder: (context, state) {
           fixStatusBarOniOS16AndBelow(context);
-          final ffParams = FFParameters(state, asyncParams);
+          final ffParams = FTParameters(state, asyncParams);
           final page = ffParams.hasFutures
               ? FutureBuilder(
                   future: ffParams.completeFutures(),
@@ -516,7 +516,7 @@ class FFRoute {
                     height: 50.0,
                     child: CircularProgressIndicator(
                       valueColor: AlwaysStoppedAnimation<Color>(
-                        FlutterFlowTheme.of(context).primary,
+                        FloterTheme.of(context).primary,
                       ),
                     ),
                   ),

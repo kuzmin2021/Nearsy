@@ -1,6 +1,6 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +48,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<FTAppState>();
 
     return Container(
       width: double.infinity,
@@ -100,7 +100,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Icon(
                                       Icons.person,
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .secondaryText,
                                       size: 34.0,
                                     ),
@@ -114,29 +114,29 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                             height: 72.0,
                             alignment: AlignmentDirectional(0.0, 1.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
+                              FTLocalizations.of(context).getText(
                                 'z78wpbqh' /* Profile */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 1,
-                              style: FlutterFlowTheme.of(context)
+                              style: FloterTheme.of(context)
                                   .bodySmall
                                   .override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodySmall
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodySmall
                                           .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryText,
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodySmall
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodySmall
                                         .fontStyle,
                                   ),
@@ -161,7 +161,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    if (FFAppState().profileIsOnboarded) {
+                    if (FTAppState().profileIsOnboarded) {
                       context.pushNamed(PeoplePageWidget.routeName);
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
@@ -201,7 +201,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                                       alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         Icons.groups,
-                                        color: FlutterFlowTheme.of(context)
+                                        color: FloterTheme.of(context)
                                             .secondaryText,
                                         size: 40.0,
                                       ),
@@ -213,7 +213,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                                       alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         Icons.groups,
-                                        color: FlutterFlowTheme.of(context)
+                                        color: FloterTheme.of(context)
                                             .primary,
                                         size: 40.0,
                                       ),
@@ -227,29 +227,29 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                             height: 72.0,
                             alignment: AlignmentDirectional(0.0, 1.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
+                              FTLocalizations.of(context).getText(
                                 'eecxwhyi' /* People */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 1,
-                              style: FlutterFlowTheme.of(context)
+                              style: FloterTheme.of(context)
                                   .bodySmall
                                   .override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodySmall
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodySmall
                                           .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryText,
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodySmall
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodySmall
                                         .fontStyle,
                                   ),
@@ -274,7 +274,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    if (FFAppState().profileIsOnboarded) {
+                    if (FTAppState().profileIsOnboarded) {
                       context.pushNamed(NearbyPageWidget.routeName);
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
@@ -313,7 +313,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Icon(
                                       Icons.near_me,
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .secondaryText,
                                       size: 36.0,
                                     ),
@@ -327,29 +327,29 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                             height: 72.0,
                             alignment: AlignmentDirectional(0.0, 1.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
+                              FTLocalizations.of(context).getText(
                                 'd57j2g66' /* Nearby */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 1,
-                              style: FlutterFlowTheme.of(context)
+                              style: FloterTheme.of(context)
                                   .bodySmall
                                   .override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodySmall
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodySmall
                                           .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryText,
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodySmall
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodySmall
                                         .fontStyle,
                                   ),
@@ -374,7 +374,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    if (FFAppState().profileIsOnboarded) {
+                    if (FTAppState().profileIsOnboarded) {
                       context.pushNamed(LikedYouPageWidget.routeName);
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
@@ -413,7 +413,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Icon(
                                       Icons.favorite,
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .secondaryText,
                                       size: 38.0,
                                     ),
@@ -427,29 +427,29 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                             height: 72.0,
                             alignment: AlignmentDirectional(0.0, 1.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
+                              FTLocalizations.of(context).getText(
                                 '2e6burd6' /* Liked You */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 1,
-                              style: FlutterFlowTheme.of(context)
+                              style: FloterTheme.of(context)
                                   .bodySmall
                                   .override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodySmall
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodySmall
                                           .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryText,
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodySmall
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodySmall
                                         .fontStyle,
                                   ),
@@ -474,7 +474,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    if (FFAppState().profileIsOnboarded) {
+                    if (FTAppState().profileIsOnboarded) {
                       context.pushNamed(MatchesPageWidget.routeName);
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
@@ -513,7 +513,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Icon(
                                       Icons.chat_bubble,
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .secondaryText,
                                       size: 36.0,
                                     ),
@@ -527,29 +527,29 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                             height: 72.0,
                             alignment: AlignmentDirectional(0.0, 1.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
+                              FTLocalizations.of(context).getText(
                                 'js52vjp7' /* Chats */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 1,
-                              style: FlutterFlowTheme.of(context)
+                              style: FloterTheme.of(context)
                                   .bodySmall
                                   .override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodySmall
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodySmall
                                           .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryText,
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodySmall
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodySmall
                                         .fontStyle,
                                   ),

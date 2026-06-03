@@ -1,8 +1,8 @@
-import '/components/lookaround_bottom_nav_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/components/lookaround_bottom_nav_widget.dart';
+import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -50,7 +50,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Container(
@@ -83,46 +83,46 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
+                                    FTLocalizations.of(context).getText(
                                       'uoyiqj22' /* Nearby */,
                                     ),
-                                    style: FlutterFlowTheme.of(context)
+                                    style: FloterTheme.of(context)
                                         .titleLarge
                                         .override(
                                           font: GoogleFonts.interTight(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .titleLarge
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .titleLarge
                                                     .fontStyle,
                                           ),
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .primary,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .titleLarge
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .titleLarge
                                                   .fontStyle,
                                         ),
                                   ),
                                 ].divide(SizedBox(width: 4.0)),
                               ),
-                              FlutterFlowIconButton(
+                              FloterIconButton(
                                 borderRadius: 8.0,
                                 buttonSize: 40.0,
-                                fillColor: FlutterFlowTheme.of(context)
+                                fillColor: FloterTheme.of(context)
                                     .primaryBackground,
                                 icon: Icon(
                                   Icons.tune,
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      FloterTheme.of(context).primaryText,
                                   size: 22.0,
                                 ),
                                 onPressed: () {
@@ -133,7 +133,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
+                              color: FloterTheme.of(context)
                                   .secondaryBackground,
                               borderRadius: BorderRadius.circular(8.0),
                             ),
@@ -145,60 +145,60 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
+                                    FTLocalizations.of(context).getText(
                                       '885fe35y' /* Visible near Guboshlyopsk */,
                                     ),
-                                    style: FlutterFlowTheme.of(context)
+                                    style: FloterTheme.of(context)
                                         .titleSmall
                                         .override(
                                           font: GoogleFonts.interTight(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .titleSmall
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .titleSmall
                                                     .fontStyle,
                                           ),
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .titleSmall
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .titleSmall
                                                   .fontStyle,
                                         ),
                                   ),
                                   Text(
-                                    FFLocalizations.of(context).getText(
+                                    FTLocalizations.of(context).getText(
                                       'xjya5wpl' /* Your profile is discoverable b... */,
                                     ),
                                     maxLines: 3,
-                                    style: FlutterFlowTheme.of(context)
+                                    style: FloterTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.inter(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -212,17 +212,17 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                     children: [
                                       Expanded(
                                         flex: 1,
-                                        child: FFButtonWidget(
+                                        child: FTButtonWidget(
                                           onPressed: () async {
                                             context.pushNamed(
                                                 SearchPreferencesPageWidget
                                                     .routeName);
                                           },
-                                          text: FFLocalizations.of(context)
+                                          text: FTLocalizations.of(context)
                                               .getText(
                                             'd2x9fyd8' /* Filters */,
                                           ),
-                                          options: FFButtonOptions(
+                                          options: FTButtonOptions(
                                             width: double.infinity,
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
@@ -233,12 +233,12 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                             color: Colors.transparent,
                                             textStyle: TextStyle(
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primary,
                                             ),
                                             borderSide: BorderSide(
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primary,
                                               width: 1.0,
                                             ),
@@ -249,17 +249,17 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                       ),
                                       Expanded(
                                         flex: 1,
-                                        child: FFButtonWidget(
+                                        child: FTButtonWidget(
                                           onPressed: () async {
                                             context.pushNamed(
                                                 NearbySearchPreferencesPageWidget
                                                     .routeName);
                                           },
-                                          text: FFLocalizations.of(context)
+                                          text: FTLocalizations.of(context)
                                               .getText(
                                             'cs6sopfc' /* Visibility */,
                                           ),
-                                          options: FFButtonOptions(
+                                          options: FTButtonOptions(
                                             width: double.infinity,
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
@@ -267,11 +267,11 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                             iconPadding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
-                                            color: FlutterFlowTheme.of(context)
+                                            color: FloterTheme.of(context)
                                                 .primary,
                                             textStyle: TextStyle(
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryBackground,
                                             ),
                                             borderRadius:
@@ -294,7 +294,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                 flex: 1,
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
@@ -320,30 +320,30 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                         ),
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           '7ux3hs7f' /* Alex, 37 */,
                                         ),
                                         maxLines: 1,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -357,7 +357,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                 flex: 1,
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
@@ -383,30 +383,30 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                         ),
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'yjx5vp7b' /* Mikhail, 42 */,
                                         ),
                                         maxLines: 1,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -427,7 +427,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                 flex: 1,
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
@@ -453,30 +453,30 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                         ),
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'phargmkc' /* Roman, 34 */,
                                         ),
                                         maxLines: 1,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -490,7 +490,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                 flex: 1,
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
@@ -516,30 +516,30 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                         ),
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'sccjgfjq' /* Denis, 39 */,
                                         ),
                                         maxLines: 1,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),

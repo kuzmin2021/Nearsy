@@ -1,8 +1,8 @@
-import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/backend/supabase/supabase.dart';
+import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -93,7 +93,7 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Padding(
@@ -109,14 +109,14 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      FlutterFlowIconButton(
+                      FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 64.0,
                         fillColor:
-                            FlutterFlowTheme.of(context).primaryBackground,
+                            FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: FloterTheme.of(context).primaryText,
                           size: 48.0,
                         ),
                         onPressed: () async {
@@ -190,25 +190,25 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             '6totld84' /* About me: */,
                           ),
                           maxLines: 2,
                           style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
+                              FloterTheme.of(context).titleLarge.override(
                                     font: GoogleFonts.interTight(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .titleLarge
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .titleLarge
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .titleLarge
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .titleLarge
                                         .fontStyle,
                                   ),
@@ -226,27 +226,27 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'm5bix7wt' /* No pressure - leave it blank i... */,
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.inter(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
                                 ),
@@ -254,7 +254,7 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                           Container(
                             height: 210.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
+                              color: FloterTheme.of(context)
                                   .secondaryBackground,
                               borderRadius: BorderRadius.circular(4.0),
                             ),

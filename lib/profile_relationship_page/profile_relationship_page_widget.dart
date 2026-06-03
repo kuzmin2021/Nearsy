@@ -1,10 +1,10 @@
-import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/backend/supabase/supabase.dart';
+import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
-import '/flutter_flow/custom_functions.dart' as functions;
+import '/floter/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -121,7 +121,7 @@ class _ProfileRelationshipPageWidgetState
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Padding(
@@ -137,14 +137,14 @@ class _ProfileRelationshipPageWidgetState
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      FlutterFlowIconButton(
+                      FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 64.0,
                         fillColor:
-                            FlutterFlowTheme.of(context).primaryBackground,
+                            FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: FloterTheme.of(context).primaryText,
                           size: 48.0,
                         ),
                         onPressed: () async {
@@ -217,25 +217,25 @@ class _ProfileRelationshipPageWidgetState
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             'opwq6j63' /* My preferred relationship: */,
                           ),
                           maxLines: 2,
                           style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
+                              FloterTheme.of(context).titleLarge.override(
                                     font: GoogleFonts.interTight(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .titleLarge
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .titleLarge
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .titleLarge
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .titleLarge
                                         .fontStyle,
                                   ),
@@ -253,27 +253,27 @@ class _ProfileRelationshipPageWidgetState
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'iielabgp' /* What are you looking for? */,
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.inter(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
                                 ),
@@ -295,7 +295,7 @@ class _ProfileRelationshipPageWidgetState
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -318,7 +318,7 @@ class _ProfileRelationshipPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -329,7 +329,7 @@ class _ProfileRelationshipPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -346,28 +346,28 @@ class _ProfileRelationshipPageWidgetState
                                               '',
                                               'something_serious')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -390,7 +390,7 @@ class _ProfileRelationshipPageWidgetState
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -413,7 +413,7 @@ class _ProfileRelationshipPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -424,7 +424,7 @@ class _ProfileRelationshipPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -441,28 +441,28 @@ class _ProfileRelationshipPageWidgetState
                                               '',
                                               'just_dating')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -485,7 +485,7 @@ class _ProfileRelationshipPageWidgetState
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -508,7 +508,7 @@ class _ProfileRelationshipPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -519,7 +519,7 @@ class _ProfileRelationshipPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -536,28 +536,28 @@ class _ProfileRelationshipPageWidgetState
                                               '',
                                               'just_fun')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -580,7 +580,7 @@ class _ProfileRelationshipPageWidgetState
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -603,7 +603,7 @@ class _ProfileRelationshipPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -614,7 +614,7 @@ class _ProfileRelationshipPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -631,28 +631,28 @@ class _ProfileRelationshipPageWidgetState
                                               '',
                                               'open_to_anything')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -675,7 +675,7 @@ class _ProfileRelationshipPageWidgetState
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -698,7 +698,7 @@ class _ProfileRelationshipPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -709,7 +709,7 @@ class _ProfileRelationshipPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -726,28 +726,28 @@ class _ProfileRelationshipPageWidgetState
                                               '',
                                               'not_sure')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),

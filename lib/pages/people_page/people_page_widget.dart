@@ -1,8 +1,8 @@
-import '/components/lookaround_bottom_nav_widget.dart';
-import '/flutter_flow/flutter_flow_swipeable_stack.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/components/lookaround_bottom_nav_widget.dart';
+import '/floter/floter_swipeable_stack.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +50,7 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Container(
@@ -90,38 +90,38 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
                                     children: [
                                       Icon(
                                         Icons.favorite_border,
-                                        color: FlutterFlowTheme.of(context)
+                                        color: FloterTheme.of(context)
                                             .primary,
                                         size: 22.0,
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'gsj1r0db' /* Lookaround */,
                                         ),
                                         maxLines: 1,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .titleLarge
                                             .override(
                                               font: GoogleFonts.interTight(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .titleLarge
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .titleLarge
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primary,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .titleLarge
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .titleLarge
                                                       .fontStyle,
                                             ),
@@ -148,7 +148,7 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Icon(
                                       Icons.settings,
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .primaryText,
                                       size: 42.0,
                                     ),
@@ -173,62 +173,62 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'l4crpudp' /* Agrippina, 35 */,
                                         ),
                                         maxLines: 1,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .titleLarge
                                             .override(
                                               font: GoogleFonts.interTight(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .titleLarge
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .titleLarge
                                                         .fontStyle,
                                               ),
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .titleLarge
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .titleLarge
                                                       .fontStyle,
                                             ),
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'mvk593mi' /* Guess what I'm thinking */,
                                         ),
                                         maxLines: 1,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodySmall
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodySmall
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodySmall
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodySmall
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodySmall
                                                       .fontStyle,
                                             ),
@@ -249,7 +249,7 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
                                   24.0, 112.0, 24.0, 0.0),
                               child: Container(
                                 child: Container(
-                                  child: FlutterFlowSwipeableStack(
+                                  child: FloterSwipeableStack(
                                     onSwipeFn:
                                         (candidateSwipeableStackIndex) {},
                                     onLeftSwipe:
@@ -342,7 +342,7 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
                                     child: Icon(
                                       Icons.location_on,
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
+                                          FloterTheme.of(context).primary,
                                       size: 44.0,
                                     ),
                                   ),
@@ -390,13 +390,13 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
                                           width: 80.0,
                                           height: 80.0,
                                           decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
+                                            color: FloterTheme.of(context)
                                                 .primaryBackground,
                                             borderRadius:
                                                 BorderRadius.circular(40.0),
                                             border: Border.all(
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .alternate,
                                               width: 1.0,
                                             ),
@@ -405,7 +405,7 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
                                               AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             Icons.close,
-                                            color: FlutterFlowTheme.of(context)
+                                            color: FloterTheme.of(context)
                                                 .secondaryText,
                                             size: 46.0,
                                           ),
@@ -436,7 +436,7 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
                                           width: 80.0,
                                           height: 80.0,
                                           decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
+                                            color: FloterTheme.of(context)
                                                 .primary,
                                             borderRadius:
                                                 BorderRadius.circular(40.0),
@@ -445,7 +445,7 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
                                               AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             Icons.favorite,
-                                            color: FlutterFlowTheme.of(context)
+                                            color: FloterTheme.of(context)
                                                 .primaryBackground,
                                             size: 44.0,
                                           ),

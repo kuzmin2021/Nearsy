@@ -1,4 +1,4 @@
-// ignore_for_file: overridden_fields, annotate_overrides
+﻿// ignore_for_file: overridden_fields, annotate_overrides
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,7 +9,7 @@ const kThemeModeKey = '__theme_mode__';
 
 SharedPreferences? _prefs;
 
-abstract class FlutterFlowTheme {
+abstract class FloterTheme {
   static Future initialize() async =>
       _prefs = await SharedPreferences.getInstance();
 
@@ -26,7 +26,7 @@ abstract class FlutterFlowTheme {
       ? _prefs?.remove(kThemeModeKey)
       : _prefs?.setBool(kThemeModeKey, mode == ThemeMode.dark);
 
-  static FlutterFlowTheme of(BuildContext context) {
+  static FloterTheme of(BuildContext context) {
     return Theme.of(context).brightness == Brightness.dark
         ? DarkModeTheme()
         : LightModeTheme();
@@ -56,7 +56,7 @@ abstract class FlutterFlowTheme {
   late Color error;
   late Color info;
 
-  FFDesignTokens get designToken => FFDesignTokens(this);
+  FTDesignTokens get designToken => FTDesignTokens(this);
 
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
@@ -136,7 +136,7 @@ abstract class FlutterFlowTheme {
   Typography get typography => ThemeTypography(this);
 }
 
-class LightModeTheme extends FlutterFlowTheme {
+class LightModeTheme extends FloterTheme {
   @Deprecated('Use primary instead')
   Color get primaryColor => primary;
   @Deprecated('Use secondary instead')
@@ -213,7 +213,7 @@ abstract class Typography {
 class ThemeTypography extends Typography {
   ThemeTypography(this.theme);
 
-  final FlutterFlowTheme theme;
+  final FloterTheme theme;
 
   String get displayLargeFamily => 'Inter Tight';
   bool get displayLargeIsCustom => false;
@@ -322,7 +322,7 @@ class ThemeTypography extends Typography {
       );
 }
 
-class DarkModeTheme extends FlutterFlowTheme {
+class DarkModeTheme extends FloterTheme {
   @Deprecated('Use primary instead')
   Color get primaryColor => primary;
   @Deprecated('Use secondary instead')
@@ -348,16 +348,16 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color info = const Color(0xFFFFFFFF);
 }
 
-class FFDesignTokens {
-  const FFDesignTokens(this.theme);
-  final FlutterFlowTheme theme;
-  FFSpacing get spacing => const FFSpacing();
-  FFRadius get radius => const FFRadius();
-  FFShadows get shadow => FFShadows(theme);
+class FTDesignTokens {
+  const FTDesignTokens(this.theme);
+  final FloterTheme theme;
+  FTSpacing get spacing => const FTSpacing();
+  FTRadius get radius => const FTRadius();
+  FTShadows get shadow => FTShadows(theme);
 }
 
-class FFSpacing {
-  const FFSpacing();
+class FTSpacing {
+  const FTSpacing();
   double get xs => 4.0;
   double get sm => 8.0;
   double get md => 16.0;
@@ -365,17 +365,17 @@ class FFSpacing {
   double get xl => 32.0;
 }
 
-class FFRadius {
-  const FFRadius();
+class FTRadius {
+  const FTRadius();
   double get sm => 8.0;
   double get md => 16.0;
   double get lg => 24.0;
   double get full => 9999.0;
 }
 
-class FFShadows {
-  const FFShadows(this.theme);
-  final FlutterFlowTheme theme;
+class FTShadows {
+  const FTShadows(this.theme);
+  final FloterTheme theme;
   BoxShadow get sm => const BoxShadow(
       blurRadius: 3.0,
       color: const Color(0x1A000000),

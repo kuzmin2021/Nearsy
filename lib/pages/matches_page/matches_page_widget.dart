@@ -1,8 +1,8 @@
-import '/components/lookaround_bottom_nav_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/components/lookaround_bottom_nav_widget.dart';
+import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -50,7 +50,7 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Container(
@@ -82,43 +82,43 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  FFLocalizations.of(context).getText(
+                                  FTLocalizations.of(context).getText(
                                     'ay1qd21k' /* Chats */,
                                   ),
-                                  style: FlutterFlowTheme.of(context)
+                                  style: FloterTheme.of(context)
                                       .titleLarge
                                       .override(
                                         font: GoogleFonts.interTight(
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .titleLarge
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .titleLarge
                                                   .fontStyle,
                                         ),
-                                        color: FlutterFlowTheme.of(context)
+                                        color: FloterTheme.of(context)
                                             .primary,
                                         letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
+                                        fontWeight: FloterTheme.of(context)
                                             .titleLarge
                                             .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: FloterTheme.of(context)
                                             .titleLarge
                                             .fontStyle,
                                       ),
                                 ),
                               ].divide(SizedBox(width: 4.0)),
                             ),
-                            FlutterFlowIconButton(
+                            FloterIconButton(
                               borderRadius: 8.0,
                               buttonSize: 40.0,
-                              fillColor: FlutterFlowTheme.of(context)
+                              fillColor: FloterTheme.of(context)
                                   .primaryBackground,
                               icon: Icon(
                                 Icons.tune,
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: FloterTheme.of(context).primaryText,
                                 size: 22.0,
                               ),
                               onPressed: () async {
@@ -176,65 +176,65 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          FFLocalizations.of(context).getText(
+                                          FTLocalizations.of(context).getText(
                                             '5a3gr4f5' /* Kirill, 38 */,
                                           ),
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .titleSmall
                                               .override(
                                                 font: GoogleFonts.interTight(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .titleSmall
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .titleSmall
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .titleSmall
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .titleSmall
                                                         .fontStyle,
                                               ),
                                         ),
                                         Text(
-                                          FFLocalizations.of(context).getText(
+                                          FTLocalizations.of(context).getText(
                                             'fkpmlsax' /* You: Normur */,
                                           ),
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodySmall
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodySmall
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodySmall
                                                           .fontStyle,
                                                 ),
                                                 color:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .secondaryText,
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodySmall
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodySmall
                                                         .fontStyle,
                                               ),
@@ -245,13 +245,13 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                   ),
                                   Icon(
                                     Icons.chat_bubble_outline,
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .secondaryText,
                                     size: 20.0,
                                   ),
                                   Icon(
                                     Icons.notifications,
-                                    color: FlutterFlowTheme.of(context).primary,
+                                    color: FloterTheme.of(context).primary,
                                     size: 20.0,
                                   ),
                                 ].divide(SizedBox(width: 12.0)),
@@ -289,61 +289,61 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'to7m2154' /* Fyodor, 45 */,
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .titleSmall
                                             .override(
                                               font: GoogleFonts.interTight(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .titleSmall
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .titleSmall
                                                         .fontStyle,
                                               ),
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .titleSmall
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .titleSmall
                                                       .fontStyle,
                                             ),
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           '1gsvf1cu' /* You: How big is your... */,
                                         ),
                                         maxLines: 1,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodySmall
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodySmall
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodySmall
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .secondaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodySmall
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodySmall
                                                       .fontStyle,
                                             ),
@@ -354,13 +354,13 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                 ),
                                 Icon(
                                   Icons.chat_bubble_outline,
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText,
                                   size: 20.0,
                                 ),
                                 Icon(
                                   Icons.notifications,
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: FloterTheme.of(context).primary,
                                   size: 20.0,
                                 ),
                               ].divide(SizedBox(width: 12.0)),
@@ -397,61 +397,61 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'dzw8ocy7' /* Stepan, 29 */,
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .titleSmall
                                             .override(
                                               font: GoogleFonts.interTight(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .titleSmall
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .titleSmall
                                                         .fontStyle,
                                               ),
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .titleSmall
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .titleSmall
                                                       .fontStyle,
                                             ),
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'lm802i01' /* Sure, see you at bla... */,
                                         ),
                                         maxLines: 1,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodySmall
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodySmall
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodySmall
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .secondaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodySmall
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodySmall
                                                       .fontStyle,
                                             ),
@@ -462,13 +462,13 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                 ),
                                 Icon(
                                   Icons.chat_bubble_outline,
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText,
                                   size: 20.0,
                                 ),
                                 Icon(
                                   Icons.notifications,
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: FloterTheme.of(context).primary,
                                   size: 20.0,
                                 ),
                               ].divide(SizedBox(width: 12.0)),

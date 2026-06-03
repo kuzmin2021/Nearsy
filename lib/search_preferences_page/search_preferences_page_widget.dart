@@ -1,7 +1,7 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +50,7 @@ class _SearchPreferencesPageWidgetState
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Padding(
@@ -66,14 +66,14 @@ class _SearchPreferencesPageWidgetState
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      FlutterFlowIconButton(
+                      FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 40.0,
                         fillColor:
-                            FlutterFlowTheme.of(context).primaryBackground,
+                            FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: FloterTheme.of(context).primaryText,
                           size: 24.0,
                         ),
                         onPressed: () async {
@@ -83,25 +83,25 @@ class _SearchPreferencesPageWidgetState
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             'r26bpflk' /* Search Preferences */,
                           ),
                           maxLines: 2,
                           style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
+                              FloterTheme.of(context).titleLarge.override(
                                     font: GoogleFonts.interTight(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .titleLarge
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .titleLarge
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .titleLarge
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .titleLarge
                                         .fontStyle,
                                   ),
@@ -110,24 +110,24 @@ class _SearchPreferencesPageWidgetState
                     ].divide(SizedBox(width: 12.0)),
                   ),
                   Text(
-                    FFLocalizations.of(context).getText(
+                    FTLocalizations.of(context).getText(
                       '1ceobegk' /* Who you want to date: */,
                     ),
-                    style: FlutterFlowTheme.of(context).titleSmall.override(
+                    style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .titleSmall
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .titleSmall
                                 .fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
+                          fontWeight: FloterTheme.of(context)
                               .titleSmall
                               .fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                              FloterTheme.of(context).titleSmall.fontStyle,
                         ),
                   ),
                   Column(
@@ -147,7 +147,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue1 ??= false,
@@ -156,16 +156,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue1 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -173,7 +173,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'ej9yk57d' /* Women */,
                             ),
                             style: TextStyle(),
@@ -192,7 +192,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue2 ??= false,
@@ -201,16 +201,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue2 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -218,7 +218,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'dy9g6y15' /* Men */,
                             ),
                             style: TextStyle(),
@@ -237,7 +237,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue3 ??= false,
@@ -246,16 +246,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue3 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -263,7 +263,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'a9s8whut' /* Other */,
                             ),
                             style: TextStyle(),
@@ -278,45 +278,45 @@ class _SearchPreferencesPageWidgetState
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           '3e8iu5qv' /* Age: */,
                         ),
-                        style: FlutterFlowTheme.of(context).titleSmall.override(
+                        style: FloterTheme.of(context).titleSmall.override(
                               font: GoogleFonts.interTight(
-                                fontWeight: FlutterFlowTheme.of(context)
+                                fontWeight: FloterTheme.of(context)
                                     .titleSmall
                                     .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: FloterTheme.of(context)
                                     .titleSmall
                                     .fontStyle,
                               ),
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
+                              fontWeight: FloterTheme.of(context)
                                   .titleSmall
                                   .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: FloterTheme.of(context)
                                   .titleSmall
                                   .fontStyle,
                             ),
                       ),
                       Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           'qxhimjcb' /* Between 20 and 50 */,
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FloterTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.inter(
-                                fontWeight: FlutterFlowTheme.of(context)
+                                fontWeight: FloterTheme.of(context)
                                     .bodyMedium
                                     .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: FloterTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
+                              fontWeight: FloterTheme.of(context)
                                   .bodyMedium
                                   .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: FloterTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
                             ),
@@ -326,7 +326,7 @@ class _SearchPreferencesPageWidgetState
                   Container(
                     height: 4.0,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).alternate,
+                      color: FloterTheme.of(context).alternate,
                       borderRadius: BorderRadius.circular(2.0),
                     ),
                     child: Row(
@@ -338,7 +338,7 @@ class _SearchPreferencesPageWidgetState
                           flex: 1,
                           child: Container(
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).primary,
+                              color: FloterTheme.of(context).primary,
                             ),
                           ),
                         ),
@@ -346,7 +346,7 @@ class _SearchPreferencesPageWidgetState
                           flex: 1,
                           child: Container(
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).alternate,
+                              color: FloterTheme.of(context).alternate,
                             ),
                           ),
                         ),
@@ -359,45 +359,45 @@ class _SearchPreferencesPageWidgetState
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           'qx2es48d' /* Search radius: */,
                         ),
-                        style: FlutterFlowTheme.of(context).titleSmall.override(
+                        style: FloterTheme.of(context).titleSmall.override(
                               font: GoogleFonts.interTight(
-                                fontWeight: FlutterFlowTheme.of(context)
+                                fontWeight: FloterTheme.of(context)
                                     .titleSmall
                                     .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: FloterTheme.of(context)
                                     .titleSmall
                                     .fontStyle,
                               ),
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
+                              fontWeight: FloterTheme.of(context)
                                   .titleSmall
                                   .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: FloterTheme.of(context)
                                   .titleSmall
                                   .fontStyle,
                             ),
                       ),
                       Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           'ozz4jru3' /* Up to 161 kilometres away */,
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FloterTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.inter(
-                                fontWeight: FlutterFlowTheme.of(context)
+                                fontWeight: FloterTheme.of(context)
                                     .bodyMedium
                                     .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: FloterTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
+                              fontWeight: FloterTheme.of(context)
                                   .bodyMedium
                                   .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: FloterTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
                             ),
@@ -407,7 +407,7 @@ class _SearchPreferencesPageWidgetState
                   Container(
                     height: 4.0,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).alternate,
+                      color: FloterTheme.of(context).alternate,
                       borderRadius: BorderRadius.circular(2.0),
                     ),
                     child: Row(
@@ -419,7 +419,7 @@ class _SearchPreferencesPageWidgetState
                           flex: 1,
                           child: Container(
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).primary,
+                              color: FloterTheme.of(context).primary,
                             ),
                           ),
                         ),
@@ -427,7 +427,7 @@ class _SearchPreferencesPageWidgetState
                           flex: 1,
                           child: Container(
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).alternate,
+                              color: FloterTheme.of(context).alternate,
                             ),
                           ),
                         ),
@@ -435,24 +435,24 @@ class _SearchPreferencesPageWidgetState
                     ),
                   ),
                   Text(
-                    FFLocalizations.of(context).getText(
+                    FTLocalizations.of(context).getText(
                       'zct3y2e7' /* Languages they know: */,
                     ),
-                    style: FlutterFlowTheme.of(context).titleSmall.override(
+                    style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .titleSmall
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .titleSmall
                                 .fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
+                          fontWeight: FloterTheme.of(context)
                               .titleSmall
                               .fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                              FloterTheme.of(context).titleSmall.fontStyle,
                         ),
                   ),
                   Column(
@@ -472,7 +472,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue4 ??= false,
@@ -481,16 +481,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue4 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -498,7 +498,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'rold44c7' /* Afar */,
                             ),
                             style: TextStyle(),
@@ -517,7 +517,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue5 ??= false,
@@ -526,16 +526,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue5 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -543,7 +543,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '0cps7xi2' /* Afrikaans */,
                             ),
                             style: TextStyle(),
@@ -562,7 +562,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue6 ??= false,
@@ -571,16 +571,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue6 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -588,7 +588,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'gw9mgb1k' /* Albanian */,
                             ),
                             style: TextStyle(),
@@ -607,7 +607,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue7 ??= false,
@@ -616,16 +616,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue7 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -633,7 +633,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '4o1b7hdw' /* Amharic */,
                             ),
                             style: TextStyle(),
@@ -652,7 +652,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue8 ??= false,
@@ -661,16 +661,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue8 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -678,7 +678,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'bl0kfji0' /* Arabic */,
                             ),
                             style: TextStyle(),
@@ -697,7 +697,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue9 ??= false,
@@ -706,16 +706,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue9 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -723,7 +723,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'k95dn1le' /* Armenian */,
                             ),
                             style: TextStyle(),
@@ -742,7 +742,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue10 ??= false,
@@ -751,16 +751,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue10 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -768,7 +768,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'ryyp6qis' /* Bengali */,
                             ),
                             style: TextStyle(),
@@ -787,7 +787,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue11 ??= false,
@@ -796,16 +796,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue11 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -813,7 +813,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'ajfq1v6c' /* Catalan */,
                             ),
                             style: TextStyle(),
@@ -823,24 +823,24 @@ class _SearchPreferencesPageWidgetState
                     ].divide(SizedBox(height: 8.0)),
                   ),
                   Text(
-                    FFLocalizations.of(context).getText(
+                    FTLocalizations.of(context).getText(
                       'opjm711h' /* What are they looking for? */,
                     ),
-                    style: FlutterFlowTheme.of(context).titleSmall.override(
+                    style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .titleSmall
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .titleSmall
                                 .fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
+                          fontWeight: FloterTheme.of(context)
                               .titleSmall
                               .fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                              FloterTheme.of(context).titleSmall.fontStyle,
                         ),
                   ),
                   Column(
@@ -860,7 +860,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue12 ??= false,
@@ -869,16 +869,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue12 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -886,7 +886,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '6vfvx1lg' /* Something serious */,
                             ),
                             style: TextStyle(),
@@ -905,7 +905,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue13 ??= false,
@@ -914,16 +914,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue13 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -931,7 +931,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '261ma4hv' /* Just dating */,
                             ),
                             style: TextStyle(),
@@ -950,7 +950,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue14 ??= false,
@@ -959,16 +959,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue14 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -976,7 +976,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'j7rnlwhp' /* Just fun */,
                             ),
                             style: TextStyle(),
@@ -995,7 +995,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue15 ??= false,
@@ -1004,16 +1004,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue15 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1021,7 +1021,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'pkln3ugj' /* Open to anything */,
                             ),
                             style: TextStyle(),
@@ -1040,7 +1040,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue16 ??= false,
@@ -1049,16 +1049,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue16 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1066,7 +1066,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '4qwv2rlu' /* Not sure */,
                             ),
                             style: TextStyle(),
@@ -1076,24 +1076,24 @@ class _SearchPreferencesPageWidgetState
                     ].divide(SizedBox(height: 8.0)),
                   ),
                   Text(
-                    FFLocalizations.of(context).getText(
+                    FTLocalizations.of(context).getText(
                       'bvwkn5e4' /* What are their beliefs? */,
                     ),
-                    style: FlutterFlowTheme.of(context).titleSmall.override(
+                    style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .titleSmall
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .titleSmall
                                 .fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
+                          fontWeight: FloterTheme.of(context)
                               .titleSmall
                               .fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                              FloterTheme.of(context).titleSmall.fontStyle,
                         ),
                   ),
                   Column(
@@ -1113,7 +1113,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue17 ??= false,
@@ -1122,16 +1122,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue17 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1139,7 +1139,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'dwstzpd5' /* Agnostic */,
                             ),
                             style: TextStyle(),
@@ -1158,7 +1158,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue18 ??= false,
@@ -1167,16 +1167,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue18 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1184,7 +1184,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'b070wcti' /* Atheist */,
                             ),
                             style: TextStyle(),
@@ -1203,7 +1203,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue19 ??= false,
@@ -1212,16 +1212,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue19 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1229,7 +1229,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'do33iuna' /* Buddhist */,
                             ),
                             style: TextStyle(),
@@ -1248,7 +1248,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue20 ??= false,
@@ -1257,16 +1257,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue20 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1274,7 +1274,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'z6wm40k5' /* Christian */,
                             ),
                             style: TextStyle(),
@@ -1293,7 +1293,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue21 ??= false,
@@ -1302,16 +1302,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue21 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1319,7 +1319,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'thois5wg' /* Jewish */,
                             ),
                             style: TextStyle(),
@@ -1338,7 +1338,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue22 ??= false,
@@ -1347,16 +1347,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue22 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1364,7 +1364,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'q8p0cvld' /* Muslim */,
                             ),
                             style: TextStyle(),
@@ -1383,7 +1383,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue23 ??= false,
@@ -1392,16 +1392,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue23 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1409,7 +1409,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '1rb5ysd5' /* Other */,
                             ),
                             style: TextStyle(),
@@ -1419,24 +1419,24 @@ class _SearchPreferencesPageWidgetState
                     ].divide(SizedBox(height: 8.0)),
                   ),
                   Text(
-                    FFLocalizations.of(context).getText(
+                    FTLocalizations.of(context).getText(
                       'f4in38tx' /* Do they exercise? */,
                     ),
-                    style: FlutterFlowTheme.of(context).titleSmall.override(
+                    style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .titleSmall
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .titleSmall
                                 .fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
+                          fontWeight: FloterTheme.of(context)
                               .titleSmall
                               .fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                              FloterTheme.of(context).titleSmall.fontStyle,
                         ),
                   ),
                   Column(
@@ -1456,7 +1456,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue24 ??= false,
@@ -1465,16 +1465,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue24 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1482,7 +1482,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '5svn0y8u' /* Regularly */,
                             ),
                             style: TextStyle(),
@@ -1501,7 +1501,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue25 ??= false,
@@ -1510,16 +1510,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue25 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1527,7 +1527,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'y12tt6lp' /* Occasionally */,
                             ),
                             style: TextStyle(),
@@ -1546,7 +1546,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue26 ??= false,
@@ -1555,16 +1555,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue26 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1572,7 +1572,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'tk25c1vl' /* Rarely */,
                             ),
                             style: TextStyle(),
@@ -1582,24 +1582,24 @@ class _SearchPreferencesPageWidgetState
                     ].divide(SizedBox(height: 8.0)),
                   ),
                   Text(
-                    FFLocalizations.of(context).getText(
+                    FTLocalizations.of(context).getText(
                       'bh4cd9kz' /* Do they drink? */,
                     ),
-                    style: FlutterFlowTheme.of(context).titleSmall.override(
+                    style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .titleSmall
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .titleSmall
                                 .fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
+                          fontWeight: FloterTheme.of(context)
                               .titleSmall
                               .fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                              FloterTheme.of(context).titleSmall.fontStyle,
                         ),
                   ),
                   Column(
@@ -1619,7 +1619,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue27 ??= false,
@@ -1628,16 +1628,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue27 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1645,7 +1645,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '133llaz7' /* Yes */,
                             ),
                             style: TextStyle(),
@@ -1664,7 +1664,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue28 ??= false,
@@ -1673,16 +1673,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue28 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1690,7 +1690,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '7meo207v' /* Occasionally */,
                             ),
                             style: TextStyle(),
@@ -1709,7 +1709,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue29 ??= false,
@@ -1718,16 +1718,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue29 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1735,7 +1735,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'sbyyyril' /* Rarely */,
                             ),
                             style: TextStyle(),
@@ -1754,7 +1754,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue30 ??= false,
@@ -1763,16 +1763,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue30 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1780,7 +1780,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '4u2f7jk4' /* No */,
                             ),
                             style: TextStyle(),
@@ -1790,24 +1790,24 @@ class _SearchPreferencesPageWidgetState
                     ].divide(SizedBox(height: 8.0)),
                   ),
                   Text(
-                    FFLocalizations.of(context).getText(
+                    FTLocalizations.of(context).getText(
                       'qg5g2soy' /* Do they smoke? */,
                     ),
-                    style: FlutterFlowTheme.of(context).titleSmall.override(
+                    style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .titleSmall
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .titleSmall
                                 .fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
+                          fontWeight: FloterTheme.of(context)
                               .titleSmall
                               .fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                              FloterTheme.of(context).titleSmall.fontStyle,
                         ),
                   ),
                   Column(
@@ -1827,7 +1827,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue31 ??= false,
@@ -1836,16 +1836,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue31 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1853,7 +1853,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '4fbc0b1p' /* Yes */,
                             ),
                             style: TextStyle(),
@@ -1872,7 +1872,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue32 ??= false,
@@ -1881,16 +1881,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue32 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1898,7 +1898,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'wpnpxctk' /* Sometimes */,
                             ),
                             style: TextStyle(),
@@ -1917,7 +1917,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue33 ??= false,
@@ -1926,16 +1926,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue33 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1943,7 +1943,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'hihnvmcy' /* No */,
                             ),
                             style: TextStyle(),
@@ -1962,7 +1962,7 @@ class _SearchPreferencesPageWidgetState
                                 ),
                               ),
                               unselectedWidgetColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
+                                  FloterTheme.of(context).secondaryText,
                             ),
                             child: Checkbox(
                               value: _model.checkboxValue34 ??= false,
@@ -1971,16 +1971,16 @@ class _SearchPreferencesPageWidgetState
                                     () => _model.checkboxValue34 = newValue!);
                               },
                               side:
-                                  (FlutterFlowTheme.of(context).secondaryText !=
+                                  (FloterTheme.of(context).secondaryText !=
                                           null)
                                       ? BorderSide(
                                           width: 2,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText!,
                                         )
                                       : null,
-                              activeColor: FlutterFlowTheme.of(context).primary,
-                              checkColor: FlutterFlowTheme.of(context)
+                              activeColor: FloterTheme.of(context).primary,
+                              checkColor: FloterTheme.of(context)
                                   .primaryBackground,
                             ),
                           ),
@@ -1988,7 +1988,7 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'z9mkeadz' /* Trying to quit */,
                             ),
                             style: TextStyle(),
@@ -1997,15 +1997,15 @@ class _SearchPreferencesPageWidgetState
                       ),
                     ].divide(SizedBox(height: 8.0)),
                   ),
-                  FFButtonWidget(
+                  FTButtonWidget(
                     onPressed: () async {
                       context.pushNamed(
                           NearbySearchPreferencesPageWidget.routeName);
                     },
-                    text: FFLocalizations.of(context).getText(
+                    text: FTLocalizations.of(context).getText(
                       'wwihxowg' /* Nearby visibility */,
                     ),
-                    options: FFButtonOptions(
+                    options: FTButtonOptions(
                       width: double.infinity,
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
@@ -2013,31 +2013,31 @@ class _SearchPreferencesPageWidgetState
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: Colors.transparent,
                       textStyle: TextStyle(
-                        color: FlutterFlowTheme.of(context).primary,
+                        color: FloterTheme.of(context).primary,
                       ),
                       borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).primary,
+                        color: FloterTheme.of(context).primary,
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
-                  FFButtonWidget(
+                  FTButtonWidget(
                     onPressed: () async {
                       context.pop();
                     },
-                    text: FFLocalizations.of(context).getText(
+                    text: FTLocalizations.of(context).getText(
                       '5ru3ofbe' /* Apply filters */,
                     ),
-                    options: FFButtonOptions(
+                    options: FTButtonOptions(
                       width: double.infinity,
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primary,
+                      color: FloterTheme.of(context).primary,
                       textStyle: TextStyle(
-                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        color: FloterTheme.of(context).primaryBackground,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),

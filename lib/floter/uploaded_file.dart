@@ -1,8 +1,8 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'dart:typed_data' show Uint8List;
 
-class FFUploadedFile {
-  const FFUploadedFile({
+class FTUploadedFile {
+  const FTUploadedFile({
     this.name,
     this.bytes,
     this.height,
@@ -20,7 +20,7 @@ class FFUploadedFile {
 
   @override
   String toString() =>
-      'FFUploadedFile(name: $name, bytes: ${bytes?.length ?? 0}, height: $height, width: $width, blurHash: $blurHash, originalFilename: $originalFilename,)';
+      'FTUploadedFile(name: $name, bytes: ${bytes?.length ?? 0}, height: $height, width: $width, blurHash: $blurHash, originalFilename: $originalFilename,)';
 
   String serialize() => jsonEncode(
         {
@@ -33,7 +33,7 @@ class FFUploadedFile {
         },
       );
 
-  static FFUploadedFile deserialize(String val) {
+  static FTUploadedFile deserialize(String val) {
     final serializedData = jsonDecode(val) as Map<String, dynamic>;
     final data = {
       'name': serializedData['name'] ?? '',
@@ -43,7 +43,7 @@ class FFUploadedFile {
       'blurHash': serializedData['blurHash'],
       'originalFilename': serializedData['originalFilename'] ?? '',
     };
-    return FFUploadedFile(
+    return FTUploadedFile(
       name: data['name'] as String,
       bytes: Uint8List.fromList(data['bytes'].cast<int>().toList()),
       height: data['height'] as double?,
@@ -65,7 +65,7 @@ class FFUploadedFile {
 
   @override
   bool operator ==(other) =>
-      other is FFUploadedFile &&
+      other is FTUploadedFile &&
       name == other.name &&
       bytes == other.bytes &&
       height == other.height &&

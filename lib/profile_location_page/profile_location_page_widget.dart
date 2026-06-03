@@ -1,8 +1,8 @@
-import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/backend/supabase/supabase.dart';
+import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -92,7 +92,7 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Padding(
@@ -108,14 +108,14 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      FlutterFlowIconButton(
+                      FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 64.0,
                         fillColor:
-                            FlutterFlowTheme.of(context).primaryBackground,
+                            FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: FloterTheme.of(context).primaryText,
                           size: 48.0,
                         ),
                         onPressed: () async {
@@ -178,25 +178,25 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             'g5g26gn2' /* My location: */,
                           ),
                           maxLines: 2,
                           style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
+                              FloterTheme.of(context).titleLarge.override(
                                     font: GoogleFonts.interTight(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .titleLarge
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .titleLarge
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .titleLarge
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .titleLarge
                                         .fontStyle,
                                   ),
@@ -224,35 +224,35 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   Icons.check_box,
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: FloterTheme.of(context).primary,
                                   size: 28.0,
                                 ),
                               ),
                               Expanded(
                                 flex: 1,
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
+                                  FTLocalizations.of(context).getText(
                                     '68k2xtu0' /* Automatically detect my locati... */,
                                   ),
                                   maxLines: 2,
-                                  style: FlutterFlowTheme.of(context)
+                                  style: FloterTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.inter(
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
                                         letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
+                                        fontWeight: FloterTheme.of(context)
                                             .bodyMedium
                                             .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: FloterTheme.of(context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -261,52 +261,52 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                             ].divide(SizedBox(width: 8.0)),
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'crtjb4jv' /* Detected location: Guboshlyops... */,
                             ),
                             maxLines: 2,
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.inter(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
                                 ),
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'f5vbot5y' /* Status in Nearby: Local */,
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.inter(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
                                 ),
@@ -322,7 +322,7 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   Icons.check_box_outline_blank,
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText,
                                   size: 28.0,
                                 ),
@@ -330,28 +330,28 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                               Expanded(
                                 flex: 1,
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
+                                  FTLocalizations.of(context).getText(
                                     'gttp7ffd' /* I will set my location manuall... */,
                                   ),
                                   maxLines: 1,
-                                  style: FlutterFlowTheme.of(context)
+                                  style: FloterTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.inter(
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
                                         letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
+                                        fontWeight: FloterTheme.of(context)
                                             .bodyMedium
                                             .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: FloterTheme.of(context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -363,7 +363,7 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                           Container(
                             height: 48.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
+                              color: FloterTheme.of(context)
                                   .secondaryBackground,
                               borderRadius: BorderRadius.circular(4.0),
                             ),
@@ -386,7 +386,7 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                                 ),
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  hintText: FFLocalizations.of(context).getText(
+                                  hintText: FTLocalizations.of(context).getText(
                                     '1s7qbre9' /* Select location... */,
                                   ),
                                   enabledBorder: OutlineInputBorder(
@@ -440,27 +440,27 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                             ),
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '5ph0nmbb' /* In the Nearby section, others ... */,
                             ),
                             maxLines: 5,
                             style:
-                                FlutterFlowTheme.of(context).bodySmall.override(
+                                FloterTheme.of(context).bodySmall.override(
                                       font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
+                                        fontWeight: FloterTheme.of(context)
                                             .bodySmall
                                             .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: FloterTheme.of(context)
                                             .bodySmall
                                             .fontStyle,
                                       ),
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .secondaryText,
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodySmall
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodySmall
                                           .fontStyle,
                                     ),

@@ -1,7 +1,7 @@
-import '/auth/supabase_auth/auth_util.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/auth/supabase_auth/auth_util.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'update_password_page_widget.dart' show UpdatePasswordPageWidget;
@@ -12,7 +12,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class UpdatePasswordPageModel
-    extends FlutterFlowModel<UpdatePasswordPageWidget> {
+    extends FloterModel<UpdatePasswordPageWidget> {
   ///  Local state fields for this page.
 
   String? password = '';

@@ -1,7 +1,7 @@
-import '/auth/supabase_auth/auth_util.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/auth/supabase_auth/auth_util.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -57,7 +57,7 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Container(
@@ -107,13 +107,13 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                                   width: 42.0,
                                   height: 42.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Icon(
                                     Icons.arrow_back,
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryText,
                                     size: 24.0,
                                   ),
@@ -121,7 +121,7 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                               ),
                               Icon(
                                 Icons.favorite_border,
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: FloterTheme.of(context).primary,
                                 size: 46.0,
                               ),
                             ],
@@ -130,54 +130,54 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                             height: 20.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'vtbhnfbe' /* Update password */,
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .headlineSmall
                                 .override(
                                   font: GoogleFonts.interTight(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .headlineSmall
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .headlineSmall
                                         .fontStyle,
                                   ),
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .headlineSmall
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .headlineSmall
                                       .fontStyle,
                                 ),
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'k2foskvu' /* Choose a new password for your... */,
                             ),
                             maxLines: 2,
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.inter(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
                                 ),
@@ -201,7 +201,7 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                             ),
                             obscureText: !_model.updatePasswordFieldVisibility,
                             decoration: InputDecoration(
-                              labelText: FFLocalizations.of(context).getText(
+                              labelText: FTLocalizations.of(context).getText(
                                 'oiijjlsz' /* New password */,
                               ),
                               enabledBorder: OutlineInputBorder(
@@ -286,7 +286,7 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                             obscureText:
                                 !_model.confirmUpdatePasswordFieldVisibility,
                             decoration: InputDecoration(
-                              labelText: FFLocalizations.of(context).getText(
+                              labelText: FTLocalizations.of(context).getText(
                                 'llads8px' /* Repeat password */,
                               ),
                               enabledBorder: OutlineInputBorder(
@@ -354,7 +354,7 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                                 .confirmUpdatePasswordFieldTextControllerValidator
                                 .asValidator(context),
                           ),
-                          FFButtonWidget(
+                          FTButtonWidget(
                             onPressed: () async {
                               Function() _navigate = () {};
                               if (_model.password == '') {
@@ -412,19 +412,19 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
 
                               _navigate();
                             },
-                            text: FFLocalizations.of(context).getText(
+                            text: FTLocalizations.of(context).getText(
                               'myryizr5' /* Update password */,
                             ),
-                            options: FFButtonOptions(
+                            options: FTButtonOptions(
                               width: double.infinity,
                               height: 48.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
+                              color: FloterTheme.of(context).primary,
                               textStyle: TextStyle(
-                                color: FlutterFlowTheme.of(context)
+                                color: FloterTheme.of(context)
                                     .primaryBackground,
                               ),
                               borderRadius: BorderRadius.circular(12.0),

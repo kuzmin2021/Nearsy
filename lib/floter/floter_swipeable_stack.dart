@@ -1,10 +1,10 @@
-import 'dart:math';
+﻿import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 
-class FlutterFlowSwipeableStack extends StatefulWidget {
-  const FlutterFlowSwipeableStack({
+class FloterSwipeableStack extends StatefulWidget {
+  const FloterSwipeableStack({
     super.key,
     required this.itemBuilder,
     required this.itemCount,
@@ -42,10 +42,10 @@ class FlutterFlowSwipeableStack extends StatefulWidget {
   final AllowedSwipeDirection? allowedSwipeDirection;
 
   @override
-  _FFSwipeableStackState createState() => _FFSwipeableStackState();
+  _FTSwipeableStackState createState() => _FTSwipeableStackState();
 }
 
-class _FFSwipeableStackState extends State<FlutterFlowSwipeableStack> {
+class _FTSwipeableStackState extends State<FloterSwipeableStack> {
   @override
   Widget build(BuildContext context) {
     return CardSwiper(

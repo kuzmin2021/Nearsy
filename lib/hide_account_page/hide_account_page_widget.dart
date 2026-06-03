@@ -1,7 +1,7 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -47,7 +47,7 @@ class _HideAccountPageWidgetState extends State<HideAccountPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Padding(
@@ -63,14 +63,14 @@ class _HideAccountPageWidgetState extends State<HideAccountPageWidget> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      FlutterFlowIconButton(
+                      FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 40.0,
                         fillColor:
-                            FlutterFlowTheme.of(context).primaryBackground,
+                            FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: FloterTheme.of(context).primaryText,
                           size: 24.0,
                         ),
                         onPressed: () async {
@@ -80,25 +80,25 @@ class _HideAccountPageWidgetState extends State<HideAccountPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             '9o2rvhqi' /* Hide account */,
                           ),
                           maxLines: 2,
                           style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
+                              FloterTheme.of(context).titleLarge.override(
                                     font: GoogleFonts.interTight(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .titleLarge
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .titleLarge
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .titleLarge
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .titleLarge
                                         .fontStyle,
                                   ),
@@ -107,27 +107,27 @@ class _HideAccountPageWidgetState extends State<HideAccountPageWidget> {
                     ].divide(SizedBox(width: 12.0)),
                   ),
                   Text(
-                    FFLocalizations.of(context).getText(
+                    FTLocalizations.of(context).getText(
                       'rcjmbn7h' /* Hide your profile when you are... */,
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: FloterTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .bodyMedium
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .bodyMedium
                                 .fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
+                          fontWeight: FloterTheme.of(context)
                               .bodyMedium
                               .fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                              FloterTheme.of(context).bodyMedium.fontStyle,
                         ),
                   ),
-                  FFButtonWidget(
+                  FTButtonWidget(
                     onPressed: () async {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
@@ -140,18 +140,18 @@ class _HideAccountPageWidgetState extends State<HideAccountPageWidget> {
                       );
                       context.pop();
                     },
-                    text: FFLocalizations.of(context).getText(
+                    text: FTLocalizations.of(context).getText(
                       'omxskgfq' /* Hide */,
                     ),
-                    options: FFButtonOptions(
+                    options: FTButtonOptions(
                       width: double.infinity,
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primary,
+                      color: FloterTheme.of(context).primary,
                       textStyle: TextStyle(
-                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        color: FloterTheme.of(context).primaryBackground,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),

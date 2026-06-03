@@ -1,10 +1,10 @@
-import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/backend/supabase/supabase.dart';
+import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
-import '/flutter_flow/custom_functions.dart' as functions;
+import '/floter/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -125,7 +125,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Padding(
@@ -141,14 +141,14 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      FlutterFlowIconButton(
+                      FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 64.0,
                         fillColor:
-                            FlutterFlowTheme.of(context).primaryBackground,
+                            FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: FloterTheme.of(context).primaryText,
                           size: 48.0,
                         ),
                         onPressed: () async {
@@ -221,25 +221,25 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             '37jvlgzr' /* My beliefs: */,
                           ),
                           maxLines: 2,
                           style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
+                              FloterTheme.of(context).titleLarge.override(
                                     font: GoogleFonts.interTight(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .titleLarge
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .titleLarge
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .titleLarge
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .titleLarge
                                         .fontStyle,
                                   ),
@@ -273,7 +273,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -295,7 +295,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -305,7 +305,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -320,28 +320,28 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           functions.effectiveProfileAttribute(
                                               'religion', '', 'agnostic')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -364,7 +364,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -386,7 +386,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -396,7 +396,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -411,28 +411,28 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           functions.effectiveProfileAttribute(
                                               'religion', '', 'atheist')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -455,7 +455,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -477,7 +477,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -487,7 +487,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -502,28 +502,28 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           functions.effectiveProfileAttribute(
                                               'religion', '', 'buddhist')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -546,7 +546,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -568,7 +568,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -579,7 +579,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -594,28 +594,28 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           functions.effectiveProfileAttribute(
                                               'religion', '', 'christian')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -638,7 +638,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -660,7 +660,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -670,7 +670,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -685,28 +685,28 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           functions.effectiveProfileAttribute(
                                               'religion', '', 'hindu')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -729,7 +729,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -751,7 +751,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -761,7 +761,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -776,28 +776,28 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           functions.effectiveProfileAttribute(
                                               'religion', '', 'jewish')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -820,7 +820,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -842,7 +842,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -852,7 +852,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -867,28 +867,28 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           functions.effectiveProfileAttribute(
                                               'religion', '', 'muslim')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -911,7 +911,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -933,7 +933,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -943,7 +943,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -958,28 +958,28 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           functions.effectiveProfileAttribute(
                                               'religion', '', 'sikh')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -1002,7 +1002,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -1024,7 +1024,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -1035,7 +1035,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -1050,28 +1050,28 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           functions.effectiveProfileAttribute(
                                               'religion', '', 'spiritual')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -1094,7 +1094,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 child: Container(
                                   height: 48.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   child: Row(
@@ -1116,7 +1116,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 28.0,
@@ -1126,7 +1126,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   size: 28.0,
@@ -1141,28 +1141,28 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           functions.effectiveProfileAttribute(
                                               'religion', '', 'other')!,
                                           maxLines: 1,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),

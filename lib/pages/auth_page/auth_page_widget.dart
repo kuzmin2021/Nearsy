@@ -1,6 +1,6 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -48,7 +48,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Container(
@@ -88,31 +88,31 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                             children: [
                               Icon(
                                 Icons.favorite_border,
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: FloterTheme.of(context).primary,
                                 size: 68.0,
                               ),
                               Text(
-                                FFLocalizations.of(context).getText(
+                                FTLocalizations.of(context).getText(
                                   'ae8yv3e9' /* Nearsy */,
                                 ),
-                                style: FlutterFlowTheme.of(context)
+                                style: FloterTheme.of(context)
                                     .headlineMedium
                                     .override(
                                       font: GoogleFonts.interTight(
-                                        fontWeight: FlutterFlowTheme.of(context)
+                                        fontWeight: FloterTheme.of(context)
                                             .headlineMedium
                                             .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: FloterTheme.of(context)
                                             .headlineMedium
                                             .fontStyle,
                                       ),
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
+                                          FloterTheme.of(context).primary,
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .headlineMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .headlineMedium
                                           .fontStyle,
                                     ),
@@ -120,28 +120,28 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                             ].divide(SizedBox(width: 12.0)),
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'idizt7xv' /* Meet near. Keep it easy */,
                             ),
                             textAlign: TextAlign.center,
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .titleLarge
                                 .override(
                                   font: GoogleFonts.interTight(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .titleLarge
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .titleLarge
                                         .fontStyle,
                                   ),
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .titleLarge
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .titleLarge
                                       .fontStyle,
                                 ),
@@ -149,14 +149,14 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                           Container(
                             height: 44.0,
                           ),
-                          FFButtonWidget(
+                          FTButtonWidget(
                             onPressed: () async {
                               context.pushNamed(EmailAuthPageWidget.routeName);
                             },
-                            text: FFLocalizations.of(context).getText(
+                            text: FTLocalizations.of(context).getText(
                               'bmetmsfz' /* Continue with email */,
                             ),
-                            options: FFButtonOptions(
+                            options: FTButtonOptions(
                               width: double.infinity,
                               height: 52.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -165,23 +165,23 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                   0.0, 0.0, 0.0, 0.0),
                               color: Colors.transparent,
                               textStyle: TextStyle(
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: FloterTheme.of(context).primary,
                               ),
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: FloterTheme.of(context).primary,
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                           ),
-                          FFButtonWidget(
+                          FTButtonWidget(
                             onPressed: () async {
                               context.pushNamed(PhoneAuthPageWidget.routeName);
                             },
-                            text: FFLocalizations.of(context).getText(
+                            text: FTLocalizations.of(context).getText(
                               'ipzoovop' /* Continue with phone */,
                             ),
-                            options: FFButtonOptions(
+                            options: FTButtonOptions(
                               width: double.infinity,
                               height: 52.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -190,10 +190,10 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                   0.0, 0.0, 0.0, 0.0),
                               color: Colors.transparent,
                               textStyle: TextStyle(
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: FloterTheme.of(context).primary,
                               ),
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: FloterTheme.of(context).primary,
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(12.0),
@@ -203,57 +203,57 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                             height: 28.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '7s7d4as5' /* By signing up you agree to the... */,
                             ),
                             textAlign: TextAlign.center,
                             maxLines: 1,
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .bodySmall
                                 .override(
                                   font: GoogleFonts.inter(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodySmall
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodySmall
                                         .fontStyle,
                                   ),
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodySmall
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodySmall
                                       .fontStyle,
                                 ),
                             overflow: TextOverflow.ellipsis,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'mmt4grho' /* Service and Privacy Policy */,
                             ),
                             textAlign: TextAlign.center,
                             maxLines: 1,
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .bodySmall
                                 .override(
                                   font: GoogleFonts.inter(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodySmall
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodySmall
                                         .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: FloterTheme.of(context).primary,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodySmall
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodySmall
                                       .fontStyle,
                                 ),

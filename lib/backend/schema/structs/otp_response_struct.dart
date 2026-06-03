@@ -1,9 +1,9 @@
-// ignore_for_file: unnecessary_getters_setters
+﻿// ignore_for_file: unnecessary_getters_setters
 
 import '/backend/schema/util/schema_util.dart';
 
 import 'index.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '/floter/floter_util.dart';
 
 /// Minimal response wrapper for Supabase OTP REST calls.
 class OtpResponseStruct extends BaseStruct {

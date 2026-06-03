@@ -1,4 +1,4 @@
-import 'package:provider/provider.dart';
+﻿import 'package:provider/provider.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -9,10 +9,10 @@ import 'auth/supabase_auth/supabase_user_provider.dart';
 import 'auth/supabase_auth/auth_util.dart';
 
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import 'flutter_flow/flutter_flow_util.dart';
-import 'flutter_flow/internationalization.dart';
-import 'flutter_flow/nav/nav.dart';
+import '/floter/floter_theme.dart';
+import 'floter/floter_util.dart';
+import 'floter/internationalization.dart';
+import 'floter/nav/nav.dart';
 import 'index.dart';
 
 void main() async {
@@ -22,11 +22,11 @@ void main() async {
 
   await SupaFlow.initialize();
 
-  await FlutterFlowTheme.initialize();
+  await FloterTheme.initialize();
 
-  await FFLocalizations.initialize();
+  await FTLocalizations.initialize();
 
-  final appState = FFAppState(); // Initialize FFAppState
+  final appState = FTAppState(); // Initialize FTAppState
   await appState.initializePersistedState();
 
   runApp(ChangeNotifierProvider(
@@ -45,9 +45,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale? _locale = FFLocalizations.getStoredLocale();
+  Locale? _locale = FTLocalizations.getStoredLocale();
 
-  ThemeMode _themeMode = FlutterFlowTheme.themeMode;
+  ThemeMode _themeMode = FloterTheme.themeMode;
 
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
@@ -85,12 +85,12 @@ class _MyAppState extends State<MyApp> {
 
   void setLocale(String language) {
     safeSetState(() => _locale = createLocale(language));
-    FFLocalizations.storeLocale(language);
+    FTLocalizations.storeLocale(language);
   }
 
   void setThemeMode(ThemeMode mode) => safeSetState(() {
         _themeMode = mode;
-        FlutterFlowTheme.saveThemeMode(mode);
+        FloterTheme.saveThemeMode(mode);
       });
 
   @override
@@ -99,7 +99,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Lookaround MVP',
       localizationsDelegates: [
-        FFLocalizationsDelegate(),
+        FTLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,

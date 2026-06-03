@@ -1,7 +1,7 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -57,7 +57,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Padding(
@@ -72,13 +72,13 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    FlutterFlowIconButton(
+                    FloterIconButton(
                       borderRadius: 8.0,
                       buttonSize: 48.0,
-                      fillColor: FlutterFlowTheme.of(context).primaryBackground,
+                      fillColor: FloterTheme.of(context).primaryBackground,
                       icon: Icon(
                         Icons.arrow_back,
-                        color: FlutterFlowTheme.of(context).primaryText,
+                        color: FloterTheme.of(context).primaryText,
                         size: 32.0,
                       ),
                       onPressed: () async {
@@ -98,23 +98,23 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                       ),
                     ),
                     Text(
-                      FFLocalizations.of(context).getText(
+                      FTLocalizations.of(context).getText(
                         'clbiscd7' /* Kirill, 38 */,
                       ),
-                      style: FlutterFlowTheme.of(context).titleMedium.override(
+                      style: FloterTheme.of(context).titleMedium.override(
                             font: GoogleFonts.interTight(
-                              fontWeight: FlutterFlowTheme.of(context)
+                              fontWeight: FloterTheme.of(context)
                                   .titleMedium
                                   .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: FloterTheme.of(context)
                                   .titleMedium
                                   .fontStyle,
                             ),
                             letterSpacing: 0.0,
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .titleMedium
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .titleMedium
                                 .fontStyle,
                           ),
@@ -131,33 +131,33 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primary,
+                        color: FloterTheme.of(context).primary,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 8.0, 16.0, 8.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             'wr4813k2' /* Chyokak? */,
                           ),
                           style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
+                              FloterTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -173,33 +173,33 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: FloterTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 8.0, 16.0, 8.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             'y3thfetu' /* Normur */,
                           ),
-                          style: FlutterFlowTheme.of(context)
+                          style: FloterTheme.of(context)
                               .bodyMedium
                               .override(
                                 font: GoogleFonts.inter(
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
                                 ),
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: FloterTheme.of(context).primaryText,
                                 letterSpacing: 0.0,
-                                fontWeight: FlutterFlowTheme.of(context)
+                                fontWeight: FloterTheme.of(context)
                                     .bodyMedium
                                     .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: FloterTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
@@ -209,23 +209,23 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                   ],
                 ),
                 Text(
-                  FFLocalizations.of(context).getText(
+                  FTLocalizations.of(context).getText(
                     '1vfihew0' /* Kirill is typing... */,
                   ),
                   textAlign: TextAlign.center,
-                  style: FlutterFlowTheme.of(context).bodySmall.override(
+                  style: FloterTheme.of(context).bodySmall.override(
                         font: GoogleFonts.inter(
                           fontWeight:
-                              FlutterFlowTheme.of(context).bodySmall.fontWeight,
+                              FloterTheme.of(context).bodySmall.fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).bodySmall.fontStyle,
+                              FloterTheme.of(context).bodySmall.fontStyle,
                         ),
-                        color: FlutterFlowTheme.of(context).secondaryText,
+                        color: FloterTheme.of(context).secondaryText,
                         letterSpacing: 0.0,
                         fontWeight:
-                            FlutterFlowTheme.of(context).bodySmall.fontWeight,
+                            FloterTheme.of(context).bodySmall.fontWeight,
                         fontStyle:
-                            FlutterFlowTheme.of(context).bodySmall.fontStyle,
+                            FloterTheme.of(context).bodySmall.fontStyle,
                       ),
                 ),
                 Expanded(
@@ -266,7 +266,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                         },
                         obscureText: false,
                         decoration: InputDecoration(
-                          hintText: FFLocalizations.of(context).getText(
+                          hintText: FTLocalizations.of(context).getText(
                             '3368xeok' /* Write a message */,
                           ),
                           enabledBorder: OutlineInputBorder(
@@ -318,13 +318,13 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                             .asValidator(context),
                       ),
                     ),
-                    FlutterFlowIconButton(
+                    FloterIconButton(
                       borderRadius: 24.0,
                       buttonSize: 40.0,
-                      fillColor: FlutterFlowTheme.of(context).primary,
+                      fillColor: FloterTheme.of(context).primary,
                       icon: Icon(
                         Icons.send,
-                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        color: FloterTheme.of(context).primaryBackground,
                         size: 24.0,
                       ),
                       onPressed: () async {

@@ -1,12 +1,12 @@
-import '/auth/supabase_auth/auth_util.dart';
+﻿import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/components/lookaround_bottom_nav_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
-import '/flutter_flow/custom_functions.dart' as functions;
+import '/floter/custom_functions.dart' as functions;
 import '/index.dart';
 import 'profile_page_widget.dart' show ProfilePageWidget;
 import 'package:cached_network_image/cached_network_image.dart';
@@ -18,7 +18,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ProfilePageModel extends FlutterFlowModel<ProfilePageWidget> {
+class ProfilePageModel extends FloterModel<ProfilePageWidget> {
   ///  Local state fields for this page.
 
   String? profileDisplayName = '';

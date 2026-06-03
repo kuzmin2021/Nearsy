@@ -1,6 +1,6 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +47,7 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Container(
@@ -97,13 +97,13 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                                   width: 42.0,
                                   height: 42.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Icon(
                                     Icons.arrow_back,
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryText,
                                     size: 24.0,
                                   ),
@@ -111,7 +111,7 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                               ),
                               Icon(
                                 Icons.favorite_border,
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: FloterTheme.of(context).primary,
                                 size: 46.0,
                               ),
                             ],
@@ -120,54 +120,54 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                             height: 20.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'kp7a40ty' /* Phone auth */,
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .headlineSmall
                                 .override(
                                   font: GoogleFonts.interTight(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .headlineSmall
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .headlineSmall
                                         .fontStyle,
                                   ),
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .headlineSmall
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .headlineSmall
                                       .fontStyle,
                                 ),
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'eot2blxz' /* This screen is kept in the app... */,
                             ),
                             maxLines: 2,
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.inter(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
                                 ),
@@ -175,34 +175,34 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
+                              color: FloterTheme.of(context)
                                   .primaryBackground,
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: Padding(
                               padding: EdgeInsets.all(18.0),
                               child: Text(
-                                FFLocalizations.of(context).getText(
+                                FTLocalizations.of(context).getText(
                                   '203pvda9' /* Phone verification is not impl... */,
                                 ),
-                                style: FlutterFlowTheme.of(context)
+                                style: FloterTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
+                                        fontWeight: FloterTheme.of(context)
                                             .bodyMedium
                                             .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: FloterTheme.of(context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .primaryText,
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),

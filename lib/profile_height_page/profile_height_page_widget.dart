@@ -1,8 +1,8 @@
-import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/backend/supabase/supabase.dart';
+import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -115,14 +115,14 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Container(
             width: double.infinity,
             height: 926.0,
             decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primaryBackground,
+              color: FloterTheme.of(context).primaryBackground,
             ),
             child: Container(
               width: double.infinity,
@@ -139,14 +139,14 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                           EdgeInsetsDirectional.fromSTEB(36.0, 24.0, 0.0, 0.0),
                       child: Container(
                         child: Container(
-                          child: FlutterFlowIconButton(
+                          child: FloterIconButton(
                             borderRadius: 8.0,
                             buttonSize: 64.0,
                             fillColor:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                                FloterTheme.of(context).primaryBackground,
                             icon: Icon(
                               Icons.arrow_back,
-                              color: FlutterFlowTheme.of(context).primaryText,
+                              color: FloterTheme.of(context).primaryText,
                               size: 48.0,
                             ),
                             onPressed: () async {
@@ -263,26 +263,26 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                       child: Container(
                         child: Container(
                           child: Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '6vhy5m18' /* My height: */,
                             ),
                             maxLines: 1,
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .titleMedium
                                 .override(
                                   font: GoogleFonts.interTight(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .titleMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .titleMedium
                                         .fontStyle,
                                   ),
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .titleMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .titleMedium
                                       .fontStyle,
                                 ),
@@ -301,28 +301,28 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                       child: Container(
                         child: Container(
                           child: Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'zn6hzdig' /* Enter your height */,
                             ),
                             maxLines: 1,
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.inter(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
                                 ),
@@ -346,27 +346,27 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                FFLocalizations.of(context).getText(
+                                FTLocalizations.of(context).getText(
                                   'qo1m3zvr' /* ft */,
                                 ),
-                                style: FlutterFlowTheme.of(context)
+                                style: FloterTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
+                                        fontWeight: FloterTheme.of(context)
                                             .bodyMedium
                                             .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: FloterTheme.of(context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .primaryText,
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
@@ -436,7 +436,7 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                   width: 56.0,
                                   height: 56.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                   ),
                                   alignment: AlignmentDirectional(0.0, 0.0),
@@ -448,13 +448,13 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                           width: 36.0,
                                           height: 18.0,
                                           decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
+                                            color: FloterTheme.of(context)
                                                 .secondary,
                                             borderRadius:
                                                 BorderRadius.circular(9.0),
                                             border: Border.all(
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               width: 1.0,
                                             ),
@@ -465,13 +465,13 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                           width: 36.0,
                                           height: 18.0,
                                           decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
+                                            color: FloterTheme.of(context)
                                                 .primaryBackground,
                                             borderRadius:
                                                 BorderRadius.circular(9.0),
                                             border: Border.all(
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               width: 1.0,
                                             ),
@@ -488,13 +488,13 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                             height: 16.0,
                                             decoration: BoxDecoration(
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryBackground,
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
                                               border: Border.all(
                                                 color:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .primaryText,
                                                 width: 1.0,
                                               ),
@@ -512,13 +512,13 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                             height: 16.0,
                                             decoration: BoxDecoration(
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryBackground,
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
                                               border: Border.all(
                                                 color:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .primaryText,
                                                 width: 1.0,
                                               ),
@@ -530,27 +530,27 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                 ),
                               ),
                               Text(
-                                FFLocalizations.of(context).getText(
+                                FTLocalizations.of(context).getText(
                                   'p6i9afuo' /* cm */,
                                 ),
-                                style: FlutterFlowTheme.of(context)
+                                style: FloterTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.inter(
-                                        fontWeight: FlutterFlowTheme.of(context)
+                                        fontWeight: FloterTheme.of(context)
                                             .bodyMedium
                                             .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: FloterTheme.of(context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .primaryText,
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
@@ -574,11 +574,11 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                             width: 166.0,
                             height: 56.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
+                              color: FloterTheme.of(context)
                                   .primaryBackground,
                               borderRadius: BorderRadius.circular(5.0),
                               border: Border.all(
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: FloterTheme.of(context).primaryText,
                                 width: 1.0,
                               ),
                             ),
@@ -642,7 +642,7 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                 filled: true,
                               ),
                               style: TextStyle(
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: FloterTheme.of(context).primaryText,
                                 fontSize: 30.0,
                               ),
                               textAlign: TextAlign.center,

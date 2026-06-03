@@ -1,7 +1,7 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'search_preferences_page_widget.dart' show SearchPreferencesPageWidget;
@@ -10,7 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class SearchPreferencesPageModel
-    extends FlutterFlowModel<SearchPreferencesPageWidget> {
+    extends FloterModel<SearchPreferencesPageWidget> {
   ///  Local state fields for this page.
 
   int? minAge = 20;

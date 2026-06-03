@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class FlutterFlowIconButton extends StatefulWidget {
-  const FlutterFlowIconButton({
+class FloterIconButton extends StatefulWidget {
+  const FloterIconButton({
     Key? key,
     required this.icon,
     this.borderColor,
@@ -38,10 +38,10 @@ class FlutterFlowIconButton extends StatefulWidget {
   final BorderRadius? focusBorderRadius;
 
   @override
-  State<FlutterFlowIconButton> createState() => _FlutterFlowIconButtonState();
+  State<FloterIconButton> createState() => _FloterIconButtonState();
 }
 
-class _FlutterFlowIconButtonState extends State<FlutterFlowIconButton> {
+class _FloterIconButtonState extends State<FloterIconButton> {
   bool loading = false;
   late double? iconSize;
   late Color? iconColor;
@@ -54,7 +54,7 @@ class _FlutterFlowIconButtonState extends State<FlutterFlowIconButton> {
   }
 
   @override
-  void didUpdateWidget(FlutterFlowIconButton oldWidget) {
+  void didUpdateWidget(FloterIconButton oldWidget) {
     super.didUpdateWidget(oldWidget);
     _updateIcon();
   }

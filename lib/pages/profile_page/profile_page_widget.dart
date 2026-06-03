@@ -1,12 +1,12 @@
-import '/auth/supabase_auth/auth_util.dart';
+﻿import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/components/lookaround_bottom_nav_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
-import '/flutter_flow/custom_functions.dart' as functions;
+import '/floter/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -579,11 +579,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
             }
             return;
           }
-          FFAppState().profileIsOnboarded = true;
+          FTAppState().profileIsOnboarded = true;
           safeSetState(() {});
         } else {
           _model.showProfileNameError = true;
-          FFAppState().profileIsOnboarded = false;
+          FTAppState().profileIsOnboarded = false;
           safeSetState(() {});
           if (context.mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
@@ -643,7 +643,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Container(
@@ -676,31 +676,31 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 child: Container(
                                   child: Container(
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
+                                      FTLocalizations.of(context).getText(
                                         'wfki4rrr' /* Profile */,
                                       ),
-                                      style: FlutterFlowTheme.of(context)
+                                      style: FloterTheme.of(context)
                                           .titleLarge
                                           .override(
                                             font: GoogleFonts.interTight(
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .titleLarge
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .titleLarge
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
+                                            color: FloterTheme.of(context)
                                                 .primary,
                                             letterSpacing: 0.0,
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .titleLarge
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .titleLarge
                                                     .fontStyle,
                                           ),
@@ -708,15 +708,15 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                   ),
                                 ),
                               ),
-                              FlutterFlowIconButton(
+                              FloterIconButton(
                                 borderRadius: 8.0,
                                 buttonSize: 54.0,
-                                fillColor: FlutterFlowTheme.of(context)
+                                fillColor: FloterTheme.of(context)
                                     .primaryBackground,
                                 icon: Icon(
                                   Icons.settings,
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      FloterTheme.of(context).primaryText,
                                   size: 38.0,
                                 ),
                                 onPressed: () {
@@ -777,7 +777,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 child: Container(
                                                   height: 150.0,
                                                   decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(
+                                                    color: FloterTheme.of(
                                                             context)
                                                         .primaryBackground,
                                                     borderRadius:
@@ -785,7 +785,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                             15.0),
                                                     border: Border.all(
                                                       color:
-                                                          FlutterFlowTheme.of(
+                                                          FloterTheme.of(
                                                                   context)
                                                               .primaryText,
                                                       width: 1.0,
@@ -910,7 +910,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                       height: 56.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            FlutterFlowTheme.of(
+                                                            FloterTheme.of(
                                                                     context)
                                                                 .alternate,
                                                         borderRadius:
@@ -922,7 +922,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                               0.0, 0.0),
                                                       child: Icon(
                                                         Icons.add,
-                                                        color: FlutterFlowTheme
+                                                        color: FloterTheme
                                                                 .of(context)
                                                             .primaryBackground,
                                                         size: 44.0,
@@ -965,7 +965,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                   width: 42.0,
                                                   height: 42.0,
                                                   decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(
+                                                    color: FloterTheme.of(
                                                             context)
                                                         .alternate,
                                                     borderRadius:
@@ -977,7 +977,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                           0.0, 0.0),
                                                   child: Icon(
                                                     Icons.close,
-                                                    color: FlutterFlowTheme.of(
+                                                    color: FloterTheme.of(
                                                             context)
                                                         .primaryBackground,
                                                     size: 30.0,
@@ -1012,12 +1012,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                               height: 44.0,
                                               decoration: BoxDecoration(
                                                 color:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .secondaryBackground,
                                                 borderRadius:
                                                     BorderRadius.circular(8.0),
                                                 border: Border.all(
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   width: 1.0,
@@ -1031,12 +1031,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                               height: 44.0,
                                               decoration: BoxDecoration(
                                                 color:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .secondaryBackground,
                                                 borderRadius:
                                                     BorderRadius.circular(8.0),
                                                 border: Border.all(
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .error,
                                                   width: 1.0,
@@ -1072,7 +1072,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                       _model.showProfileNameError =
                                                           false;
                                                       safeSetState(() {});
-                                                      FFAppState()
+                                                      FTAppState()
                                                               .profileIsOnboarded =
                                                           false;
                                                       safeSetState(() {});
@@ -1080,7 +1080,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                       _model.showProfileNameError =
                                                           true;
                                                       safeSetState(() {});
-                                                      FFAppState()
+                                                      FTAppState()
                                                               .profileIsOnboarded =
                                                           false;
                                                       safeSetState(() {});
@@ -1113,7 +1113,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                         currentUserUid,
                                                       ),
                                                     );
-                                                    FFAppState()
+                                                    FTAppState()
                                                             .profileIsOnboarded =
                                                         true;
                                                     safeSetState(() {});
@@ -1121,7 +1121,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     _model.showProfileNameError =
                                                         true;
                                                     safeSetState(() {});
-                                                    FFAppState()
+                                                    FTAppState()
                                                             .profileIsOnboarded =
                                                         false;
                                                     safeSetState(() {});
@@ -1143,7 +1143,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 },
                                                 obscureText: false,
                                                 decoration: InputDecoration(
-                                                  hintText: FFLocalizations.of(
+                                                  hintText: FTLocalizations.of(
                                                           context)
                                                       .getText(
                                                     '9fzwisdr' /* Name */,
@@ -1229,12 +1229,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       width: double.infinity,
                                       height: 72.0,
                                       decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
+                                        color: FloterTheme.of(context)
                                             .secondaryBackground,
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                         border: Border.all(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           width: 1.0,
                                         ),
@@ -1281,7 +1281,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             hintText:
-                                                FFLocalizations.of(context)
+                                                FTLocalizations.of(context)
                                                     .getText(
                                               'hv110wzh' /* Catchphrase */,
                                             ),
@@ -1548,7 +1548,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                       height: 42.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            FlutterFlowTheme.of(
+                                                            FloterTheme.of(
                                                                     context)
                                                                 .alternate,
                                                         borderRadius:
@@ -1560,7 +1560,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                               0.0, 0.0),
                                                       child: Icon(
                                                         Icons.close,
-                                                        color: FlutterFlowTheme
+                                                        color: FloterTheme
                                                                 .of(context)
                                                             .primaryBackground,
                                                         size: 30.0,
@@ -1577,14 +1577,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                               child: Container(
                                                 height: 150.0,
                                                 decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryBackground,
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           15.0),
                                                   border: Border.all(
-                                                    color: FlutterFlowTheme.of(
+                                                    color: FloterTheme.of(
                                                             context)
                                                         .primaryText,
                                                     width: 1.0,
@@ -1844,7 +1844,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     height: 56.0,
                                                     decoration: BoxDecoration(
                                                       color:
-                                                          FlutterFlowTheme.of(
+                                                          FloterTheme.of(
                                                                   context)
                                                               .alternate,
                                                       borderRadius:
@@ -1856,7 +1856,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                             0.0, 0.0),
                                                     child: Icon(
                                                       Icons.add,
-                                                      color: FlutterFlowTheme
+                                                      color: FloterTheme
                                                               .of(context)
                                                           .primaryBackground,
                                                       size: 44.0,
@@ -1872,14 +1872,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                               child: Container(
                                                 height: 150.0,
                                                 decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryBackground,
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           15.0),
                                                   border: Border.all(
-                                                    color: FlutterFlowTheme.of(
+                                                    color: FloterTheme.of(
                                                             context)
                                                         .alternate,
                                                     width: 1.0,
@@ -1907,7 +1907,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -1930,33 +1930,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            FFLocalizations.of(context).getText(
+                                            FTLocalizations.of(context).getText(
                                               'ery0k4mb' /* About me */,
                                             ),
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -1967,32 +1967,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 'about',
                                                 widget!.aboutOverride,
                                                 _model.profileAbout)!,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -2007,7 +2007,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                             0.0, 2.0, 0.0, 0.0),
                                         child: Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -2030,7 +2030,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -2046,33 +2046,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'cr4tn1fs' /* Gender */,
                                         ),
                                         maxLines: 2,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -2097,32 +2097,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 _model.profileGender)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -2132,7 +2132,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                         Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -2154,7 +2154,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -2170,33 +2170,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           '6807n9ts' /* Age */,
                                         ),
                                         maxLines: 2,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -2221,32 +2221,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 _model.profileBirthday)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -2256,7 +2256,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                         Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -2279,7 +2279,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -2305,29 +2305,29 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                             functions.profileLanguagesUiText(
                                                 'section')!,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -2339,32 +2339,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     .toList(),
                                                 widget!.languagesOverride)!,
                                             maxLines: 8,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -2380,7 +2380,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                             0.0, 2.0, 0.0, 0.0),
                                         child: Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -2403,7 +2403,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -2419,33 +2419,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           '83xv5flg' /* Height */,
                                         ),
                                         maxLines: 2,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -2470,32 +2470,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 _model.profileHeight)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -2505,7 +2505,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                         Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -2528,7 +2528,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -2544,33 +2544,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'ae3e1gj6' /* Work */,
                                         ),
                                         maxLines: 2,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -2595,32 +2595,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 _model.profileWork)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -2630,7 +2630,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                         Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -2653,7 +2653,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -2669,33 +2669,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'hvommh9i' /* Education */,
                                         ),
                                         maxLines: 2,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -2720,32 +2720,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 _model.profileEducation)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -2755,7 +2755,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                         Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -2778,7 +2778,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -2794,33 +2794,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'itv924zk' /* Kids */,
                                         ),
                                         maxLines: 2,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -2845,32 +2845,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 _model.profileKids)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -2880,7 +2880,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                         Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -2903,7 +2903,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -2919,33 +2919,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           '39dvkt1u' /* Preferred relationships */,
                                         ),
                                         maxLines: 2,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -2972,32 +2972,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     .profileRelationshipType)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -3007,7 +3007,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                         Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -3030,7 +3030,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -3046,33 +3046,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'xeqi6e27' /* Beliefs */,
                                         ),
                                         maxLines: 2,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -3097,32 +3097,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 _model.profileBeliefs)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -3132,7 +3132,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                         Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -3155,7 +3155,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -3171,33 +3171,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'bvjbapib' /* Body type */,
                                         ),
                                         maxLines: 2,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -3222,32 +3222,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 _model.profileBodyType)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -3257,7 +3257,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                         Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -3280,7 +3280,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -3296,33 +3296,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           '338v1qbs' /* Exercise */,
                                         ),
                                         maxLines: 2,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -3347,32 +3347,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 _model.profileExercise)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -3382,7 +3382,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                         Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -3405,7 +3405,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -3421,33 +3421,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'qiw3d3vo' /* Drinking */,
                                         ),
                                         maxLines: 2,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -3472,32 +3472,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 _model.profileDrinking)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -3507,7 +3507,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                         Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
@@ -3530,7 +3530,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: FloterTheme.of(context).alternate,
                                   width: 1.0,
                                 ),
                               ),
@@ -3546,33 +3546,33 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                           'pri636kn' /* Smoking */,
                                         ),
                                         maxLines: 2,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: FloterTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.inter(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    FloterTheme.of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -3597,32 +3597,32 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 _model.profileSmoking)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: FloterTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.inter(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
+                                                        FloterTheme.of(
                                                                 context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
+                                                  color: FloterTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
+                                                      FloterTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .fontStyle,
@@ -3632,7 +3632,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                         Icon(
                                           Icons.chevron_right,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),

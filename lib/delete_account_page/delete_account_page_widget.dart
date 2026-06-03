@@ -1,7 +1,7 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -48,7 +48,7 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Padding(
@@ -64,14 +64,14 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      FlutterFlowIconButton(
+                      FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 40.0,
                         fillColor:
-                            FlutterFlowTheme.of(context).primaryBackground,
+                            FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: FloterTheme.of(context).primaryText,
                           size: 24.0,
                         ),
                         onPressed: () async {
@@ -81,25 +81,25 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             '1q7dwdh6' /* Delete account */,
                           ),
                           maxLines: 2,
                           style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
+                              FloterTheme.of(context).titleLarge.override(
                                     font: GoogleFonts.interTight(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .titleLarge
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .titleLarge
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .titleLarge
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .titleLarge
                                         .fontStyle,
                                   ),
@@ -108,31 +108,31 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                     ].divide(SizedBox(width: 12.0)),
                   ),
                   Text(
-                    FFLocalizations.of(context).getText(
+                    FTLocalizations.of(context).getText(
                       'n1xhhz40' /* This will permanently delete y... */,
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: FloterTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .bodyMedium
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .bodyMedium
                                 .fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
+                          fontWeight: FloterTheme.of(context)
                               .bodyMedium
                               .fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                              FloterTheme.of(context).bodyMedium.fontStyle,
                         ),
                   ),
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8.0),
                       border: Border.all(
-                        color: FlutterFlowTheme.of(context).alternate,
+                        color: FloterTheme.of(context).alternate,
                         width: 1.0,
                       ),
                     ),
@@ -144,25 +144,25 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'x0pjotnp' /* Are you sure? */,
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .titleSmall
                                 .override(
                                   font: GoogleFonts.interTight(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .titleSmall
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .titleSmall
                                         .fontStyle,
                                   ),
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .titleSmall
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .titleSmall
                                       .fontStyle,
                                 ),
@@ -174,7 +174,7 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                             children: [
                               Expanded(
                                 flex: 1,
-                                child: FFButtonWidget(
+                                child: FTButtonWidget(
                                   onPressed: () async {
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
@@ -187,18 +187,18 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                                     );
                                     context.pop();
                                   },
-                                  text: FFLocalizations.of(context).getText(
+                                  text: FTLocalizations.of(context).getText(
                                     'b9fscyhj' /* Absolutely */,
                                   ),
-                                  options: FFButtonOptions(
+                                  options: FTButtonOptions(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color:
-                                        FlutterFlowTheme.of(context).tertiary,
+                                        FloterTheme.of(context).tertiary,
                                     textStyle: TextStyle(
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .primaryBackground,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
@@ -207,22 +207,22 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                               ),
                               Expanded(
                                 flex: 1,
-                                child: FFButtonWidget(
+                                child: FTButtonWidget(
                                   onPressed: () async {
                                     context.pop();
                                   },
-                                  text: FFLocalizations.of(context).getText(
+                                  text: FTLocalizations.of(context).getText(
                                     'gjk9b5ge' /* Not quite */,
                                   ),
-                                  options: FFButtonOptions(
+                                  options: FTButtonOptions(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color:
-                                        FlutterFlowTheme.of(context).alternate,
+                                        FloterTheme.of(context).alternate,
                                     textStyle: TextStyle(
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .primaryText,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),

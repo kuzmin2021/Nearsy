@@ -1,8 +1,8 @@
-import '/auth/supabase_auth/auth_util.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/auth/supabase_auth/auth_util.dart';
+import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +50,7 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Padding(
@@ -66,14 +66,14 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      FlutterFlowIconButton(
+                      FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 48.0,
                         fillColor:
-                            FlutterFlowTheme.of(context).primaryBackground,
+                            FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: FloterTheme.of(context).primaryText,
                           size: 32.0,
                         ),
                         onPressed: () async {
@@ -81,24 +81,24 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         },
                       ),
                       Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           'g8akwzb1' /* Account Settings */,
                         ),
                         style:
-                            FlutterFlowTheme.of(context).titleMedium.override(
+                            FloterTheme.of(context).titleMedium.override(
                                   font: GoogleFonts.interTight(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .titleMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .titleMedium
                                         .fontStyle,
                                   ),
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .titleMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .titleMedium
                                       .fontStyle,
                                 ),
@@ -116,25 +116,25 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             '7w151rh4' /* Member ID:  19074217 */,
                           ),
                           maxLines: 1,
                           style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
+                              FloterTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -151,25 +151,25 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             'oco1zpb0' /* Email:  abram@gmail.com */,
                           ),
                           maxLines: 1,
                           style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
+                              FloterTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -181,25 +181,25 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         height: 48.0,
                         alignment: AlignmentDirectional(1.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             '0afjx8ko' /* Edit */,
                           ),
                           style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
+                              FloterTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context).primary,
+                                    color: FloterTheme.of(context).primary,
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -215,25 +215,25 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             'qgxkprry' /* Phone:  13173849446 */,
                           ),
                           maxLines: 1,
                           style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
+                              FloterTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -245,25 +245,25 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         height: 48.0,
                         alignment: AlignmentDirectional(1.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             '9tpm8z1d' /* Edit */,
                           ),
                           style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
+                              FloterTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context).primary,
+                                    color: FloterTheme.of(context).primary,
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -279,25 +279,25 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             'qncwd9eh' /* Password:  ******** */,
                           ),
                           maxLines: 1,
                           style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
+                              FloterTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -317,26 +317,26 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           height: 48.0,
                           alignment: AlignmentDirectional(1.0, 0.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'b15egb2c' /* Edit */,
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.inter(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: FloterTheme.of(context).primary,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
                                 ),
@@ -353,25 +353,25 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          FTLocalizations.of(context).getText(
                             'u2lvgvo6' /* Email authentication */,
                           ),
                           maxLines: 1,
                           style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
+                              FloterTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                                      fontWeight: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                      fontStyle: FloterTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
                                     ),
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
@@ -391,26 +391,26 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           height: 48.0,
                           alignment: AlignmentDirectional(1.0, 0.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'gu67jn9n' /* Manage */,
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.inter(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: FloterTheme.of(context).primary,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
                                 ),
@@ -423,45 +423,45 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                     height: 17.0,
                   ),
                   Text(
-                    FFLocalizations.of(context).getText(
+                    FTLocalizations.of(context).getText(
                       'yw0s6dhx' /* Notifications */,
                     ),
-                    style: FlutterFlowTheme.of(context).titleSmall.override(
+                    style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .titleSmall
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .titleSmall
                                 .fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
+                          fontWeight: FloterTheme.of(context)
                               .titleSmall
                               .fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                              FloterTheme.of(context).titleSmall.fontStyle,
                         ),
                   ),
                   Text(
-                    FFLocalizations.of(context).getText(
+                    FTLocalizations.of(context).getText(
                       '8vqwop22' /*   Push Notifications */,
                     ),
-                    style: FlutterFlowTheme.of(context).titleSmall.override(
+                    style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .titleSmall
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .titleSmall
                                 .fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
+                          fontWeight: FloterTheme.of(context)
                               .titleSmall
                               .fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                              FloterTheme.of(context).titleSmall.fontStyle,
                         ),
                   ),
                   Row(
@@ -476,7 +476,7 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                             ),
                           ),
                           unselectedWidgetColor:
-                              FlutterFlowTheme.of(context).secondaryText,
+                              FloterTheme.of(context).secondaryText,
                         ),
                         child: Checkbox(
                           value: _model.pushMatchesToggleValue ??=
@@ -494,24 +494,24 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                               safeSetState(() {});
                             }
                           },
-                          side: (FlutterFlowTheme.of(context).secondaryText !=
+                          side: (FloterTheme.of(context).secondaryText !=
                                   null)
                               ? BorderSide(
                                   width: 2,
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText!,
                                 )
                               : null,
-                          activeColor: FlutterFlowTheme.of(context).primary,
+                          activeColor: FloterTheme.of(context).primary,
                           checkColor:
-                              FlutterFlowTheme.of(context).primaryBackground,
+                              FloterTheme.of(context).primaryBackground,
                         ),
                       ),
                       Container(
                         width: 8.0,
                       ),
                       Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           '9kqemlf5' /* Matches */,
                         ),
                         style: TextStyle(),
@@ -530,7 +530,7 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                             ),
                           ),
                           unselectedWidgetColor:
-                              FlutterFlowTheme.of(context).secondaryText,
+                              FloterTheme.of(context).secondaryText,
                         ),
                         child: Checkbox(
                           value: _model.pushMessagesToggleValue ??=
@@ -548,24 +548,24 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                               safeSetState(() {});
                             }
                           },
-                          side: (FlutterFlowTheme.of(context).secondaryText !=
+                          side: (FloterTheme.of(context).secondaryText !=
                                   null)
                               ? BorderSide(
                                   width: 2,
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText!,
                                 )
                               : null,
-                          activeColor: FlutterFlowTheme.of(context).primary,
+                          activeColor: FloterTheme.of(context).primary,
                           checkColor:
-                              FlutterFlowTheme.of(context).primaryBackground,
+                              FloterTheme.of(context).primaryBackground,
                         ),
                       ),
                       Container(
                         width: 8.0,
                       ),
                       Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           'eq1ydgxg' /* Messages */,
                         ),
                         style: TextStyle(),
@@ -584,7 +584,7 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                             ),
                           ),
                           unselectedWidgetColor:
-                              FlutterFlowTheme.of(context).secondaryText,
+                              FloterTheme.of(context).secondaryText,
                         ),
                         child: Checkbox(
                           value: _model.pushLikedYouToggleValue ??=
@@ -602,24 +602,24 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                               safeSetState(() {});
                             }
                           },
-                          side: (FlutterFlowTheme.of(context).secondaryText !=
+                          side: (FloterTheme.of(context).secondaryText !=
                                   null)
                               ? BorderSide(
                                   width: 2,
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText!,
                                 )
                               : null,
-                          activeColor: FlutterFlowTheme.of(context).primary,
+                          activeColor: FloterTheme.of(context).primary,
                           checkColor:
-                              FlutterFlowTheme.of(context).primaryBackground,
+                              FloterTheme.of(context).primaryBackground,
                         ),
                       ),
                       Container(
                         width: 8.0,
                       ),
                       Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           'gjwnz4hu' /* Liked you */,
                         ),
                         style: TextStyle(),
@@ -627,24 +627,24 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                     ],
                   ),
                   Text(
-                    FFLocalizations.of(context).getText(
+                    FTLocalizations.of(context).getText(
                       'uxq1n9vz' /*   Email Notifications */,
                     ),
-                    style: FlutterFlowTheme.of(context).titleSmall.override(
+                    style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: FloterTheme.of(context)
                                 .titleSmall
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: FloterTheme.of(context)
                                 .titleSmall
                                 .fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
+                          fontWeight: FloterTheme.of(context)
                               .titleSmall
                               .fontWeight,
                           fontStyle:
-                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                              FloterTheme.of(context).titleSmall.fontStyle,
                         ),
                   ),
                   Row(
@@ -659,7 +659,7 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                             ),
                           ),
                           unselectedWidgetColor:
-                              FlutterFlowTheme.of(context).secondaryText,
+                              FloterTheme.of(context).secondaryText,
                         ),
                         child: Checkbox(
                           value: _model.emailMatchesToggleValue ??=
@@ -677,24 +677,24 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                               safeSetState(() {});
                             }
                           },
-                          side: (FlutterFlowTheme.of(context).secondaryText !=
+                          side: (FloterTheme.of(context).secondaryText !=
                                   null)
                               ? BorderSide(
                                   width: 2,
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText!,
                                 )
                               : null,
-                          activeColor: FlutterFlowTheme.of(context).primary,
+                          activeColor: FloterTheme.of(context).primary,
                           checkColor:
-                              FlutterFlowTheme.of(context).primaryBackground,
+                              FloterTheme.of(context).primaryBackground,
                         ),
                       ),
                       Container(
                         width: 8.0,
                       ),
                       Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           '7y8nzvev' /* Matches */,
                         ),
                         style: TextStyle(),
@@ -713,7 +713,7 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                             ),
                           ),
                           unselectedWidgetColor:
-                              FlutterFlowTheme.of(context).secondaryText,
+                              FloterTheme.of(context).secondaryText,
                         ),
                         child: Checkbox(
                           value: _model.emailMessagesToggleValue ??=
@@ -731,24 +731,24 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                               safeSetState(() {});
                             }
                           },
-                          side: (FlutterFlowTheme.of(context).secondaryText !=
+                          side: (FloterTheme.of(context).secondaryText !=
                                   null)
                               ? BorderSide(
                                   width: 2,
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText!,
                                 )
                               : null,
-                          activeColor: FlutterFlowTheme.of(context).primary,
+                          activeColor: FloterTheme.of(context).primary,
                           checkColor:
-                              FlutterFlowTheme.of(context).primaryBackground,
+                              FloterTheme.of(context).primaryBackground,
                         ),
                       ),
                       Container(
                         width: 8.0,
                       ),
                       Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           'i2lhqaqf' /* Messages */,
                         ),
                         style: TextStyle(),
@@ -767,7 +767,7 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                             ),
                           ),
                           unselectedWidgetColor:
-                              FlutterFlowTheme.of(context).secondaryText,
+                              FloterTheme.of(context).secondaryText,
                         ),
                         child: Checkbox(
                           value: _model.emailLikedYouToggleValue ??=
@@ -785,24 +785,24 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                               safeSetState(() {});
                             }
                           },
-                          side: (FlutterFlowTheme.of(context).secondaryText !=
+                          side: (FloterTheme.of(context).secondaryText !=
                                   null)
                               ? BorderSide(
                                   width: 2,
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText!,
                                 )
                               : null,
-                          activeColor: FlutterFlowTheme.of(context).primary,
+                          activeColor: FloterTheme.of(context).primary,
                           checkColor:
-                              FlutterFlowTheme.of(context).primaryBackground,
+                              FloterTheme.of(context).primaryBackground,
                         ),
                       ),
                       Container(
                         width: 8.0,
                       ),
                       Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           '42l47d1g' /* Liked you */,
                         ),
                         style: TextStyle(),
@@ -824,24 +824,24 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       height: 48.0,
                       alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           '2jb9lnvs' /* Feedback */,
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FloterTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.inter(
-                                fontWeight: FlutterFlowTheme.of(context)
+                                fontWeight: FloterTheme.of(context)
                                     .bodyMedium
                                     .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: FloterTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).primary,
+                              color: FloterTheme.of(context).primary,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
+                              fontWeight: FloterTheme.of(context)
                                   .bodyMedium
                                   .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: FloterTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
                             ),
@@ -860,24 +860,24 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       height: 48.0,
                       alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           'lkylcqyl' /* Hide account */,
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FloterTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.inter(
-                                fontWeight: FlutterFlowTheme.of(context)
+                                fontWeight: FloterTheme.of(context)
                                     .bodyMedium
                                     .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: FloterTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).primary,
+                              color: FloterTheme.of(context).primary,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
+                              fontWeight: FloterTheme.of(context)
                                   .bodyMedium
                                   .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: FloterTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
                             ),
@@ -896,24 +896,24 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       height: 48.0,
                       alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
+                        FTLocalizations.of(context).getText(
                           'sea1s8fp' /* Delete account */,
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: FloterTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.inter(
-                                fontWeight: FlutterFlowTheme.of(context)
+                                fontWeight: FloterTheme.of(context)
                                     .bodyMedium
                                     .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: FloterTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).primary,
+                              color: FloterTheme.of(context).primary,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
+                              fontWeight: FloterTheme.of(context)
                                   .bodyMedium
                                   .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: FloterTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
                             ),
@@ -923,9 +923,9 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                   Container(
                     height: 26.0,
                   ),
-                  FFButtonWidget(
+                  FTButtonWidget(
                     onPressed: () async {
-                      FFAppState().profileIsOnboarded = false;
+                      FTAppState().profileIsOnboarded = false;
                       safeSetState(() {});
                       GoRouter.of(context).prepareAuthEvent();
                       await authManager.signOut();
@@ -934,10 +934,10 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       context.goNamedAuth(
                           AuthPageWidget.routeName, context.mounted);
                     },
-                    text: FFLocalizations.of(context).getText(
+                    text: FTLocalizations.of(context).getText(
                       'cfrtj6zl' /* Log out */,
                     ),
-                    options: FFButtonOptions(
+                    options: FTButtonOptions(
                       width: double.infinity,
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
@@ -945,10 +945,10 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: Colors.transparent,
                       textStyle: TextStyle(
-                        color: FlutterFlowTheme.of(context).primary,
+                        color: FloterTheme.of(context).primary,
                       ),
                       borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).primary,
+                        color: FloterTheme.of(context).primary,
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),

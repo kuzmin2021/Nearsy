@@ -1,8 +1,8 @@
-import '/components/lookaround_bottom_nav_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+﻿import '/components/lookaround_bottom_nav_widget.dart';
+import '/floter/floter_icon_button.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -50,7 +50,7 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Container(
@@ -82,43 +82,43 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  FFLocalizations.of(context).getText(
+                                  FTLocalizations.of(context).getText(
                                     '3j3aqja2' /* Liked You */,
                                   ),
-                                  style: FlutterFlowTheme.of(context)
+                                  style: FloterTheme.of(context)
                                       .titleLarge
                                       .override(
                                         font: GoogleFonts.interTight(
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .titleLarge
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .titleLarge
                                                   .fontStyle,
                                         ),
-                                        color: FlutterFlowTheme.of(context)
+                                        color: FloterTheme.of(context)
                                             .primary,
                                         letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
+                                        fontWeight: FloterTheme.of(context)
                                             .titleLarge
                                             .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: FloterTheme.of(context)
                                             .titleLarge
                                             .fontStyle,
                                       ),
                                 ),
                               ].divide(SizedBox(width: 4.0)),
                             ),
-                            FlutterFlowIconButton(
+                            FloterIconButton(
                               borderRadius: 8.0,
                               buttonSize: 40.0,
-                              fillColor: FlutterFlowTheme.of(context)
+                              fillColor: FloterTheme.of(context)
                                   .primaryBackground,
                               icon: Icon(
                                 Icons.tune,
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: FloterTheme.of(context).primaryText,
                                 size: 22.0,
                               ),
                               onPressed: () async {
@@ -137,10 +137,10 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                             children: [
                               Container(
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: FloterTheme.of(context).primary,
                                   borderRadius: BorderRadius.circular(18.0),
                                   border: Border.all(
-                                    color: FlutterFlowTheme.of(context).primary,
+                                    color: FloterTheme.of(context).primary,
                                     width: 1.0,
                                   ),
                                 ),
@@ -148,32 +148,32 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       14.0, 8.0, 14.0, 8.0),
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
+                                    FTLocalizations.of(context).getText(
                                       'jlxojex8' /* All 3 */,
                                     ),
                                     maxLines: 1,
-                                    style: FlutterFlowTheme.of(context)
+                                    style: FloterTheme.of(context)
                                         .bodySmall
                                         .override(
                                           font: GoogleFonts.inter(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodySmall
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodySmall
                                                     .fontStyle,
                                           ),
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .primaryBackground,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .bodySmall
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .bodySmall
                                                   .fontStyle,
                                         ),
@@ -183,12 +183,12 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               ),
                               Container(
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .primaryBackground,
                                   borderRadius: BorderRadius.circular(18.0),
                                   border: Border.all(
                                     color:
-                                        FlutterFlowTheme.of(context).alternate,
+                                        FloterTheme.of(context).alternate,
                                     width: 1.0,
                                   ),
                                 ),
@@ -196,32 +196,32 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       14.0, 8.0, 14.0, 8.0),
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
+                                    FTLocalizations.of(context).getText(
                                       'na4queqq' /* Filter matches 0 */,
                                     ),
                                     maxLines: 1,
-                                    style: FlutterFlowTheme.of(context)
+                                    style: FloterTheme.of(context)
                                         .bodySmall
                                         .override(
                                           font: GoogleFonts.inter(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodySmall
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodySmall
                                                     .fontStyle,
                                           ),
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .primaryText,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .bodySmall
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .bodySmall
                                                   .fontStyle,
                                         ),
@@ -231,12 +231,12 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               ),
                               Container(
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .primaryBackground,
                                   borderRadius: BorderRadius.circular(18.0),
                                   border: Border.all(
                                     color:
-                                        FlutterFlowTheme.of(context).alternate,
+                                        FloterTheme.of(context).alternate,
                                     width: 1.0,
                                   ),
                                 ),
@@ -244,32 +244,32 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       14.0, 8.0, 14.0, 8.0),
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
+                                    FTLocalizations.of(context).getText(
                                       '76w4obvd' /* Outside 3 */,
                                     ),
                                     maxLines: 1,
-                                    style: FlutterFlowTheme.of(context)
+                                    style: FloterTheme.of(context)
                                         .bodySmall
                                         .override(
                                           font: GoogleFonts.inter(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodySmall
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodySmall
                                                     .fontStyle,
                                           ),
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .primaryText,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .bodySmall
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              FloterTheme.of(context)
                                                   .bodySmall
                                                   .fontStyle,
                                         ),
@@ -289,7 +289,7 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               flex: 1,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .primaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
@@ -313,30 +313,30 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                       ),
                                     ),
                                     Text(
-                                      FFLocalizations.of(context).getText(
+                                      FTLocalizations.of(context).getText(
                                         'of1638tz' /* Fedor, 35 */,
                                       ),
                                       maxLines: 1,
-                                      style: FlutterFlowTheme.of(context)
+                                      style: FloterTheme.of(context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.inter(
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
                                             letterSpacing: 0.0,
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -350,7 +350,7 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               flex: 1,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .primaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
@@ -374,30 +374,30 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                       ),
                                     ),
                                     Text(
-                                      FFLocalizations.of(context).getText(
+                                      FTLocalizations.of(context).getText(
                                         '4jkory6o' /* Evgeny, 41 */,
                                       ),
                                       maxLines: 1,
-                                      style: FlutterFlowTheme.of(context)
+                                      style: FloterTheme.of(context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.inter(
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
                                             letterSpacing: 0.0,
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -418,7 +418,7 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               flex: 1,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .primaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
@@ -442,30 +442,30 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                       ),
                                     ),
                                     Text(
-                                      FFLocalizations.of(context).getText(
+                                      FTLocalizations.of(context).getText(
                                         'ezi0nc1w' /* Gleb, 38 */,
                                       ),
                                       maxLines: 1,
-                                      style: FlutterFlowTheme.of(context)
+                                      style: FloterTheme.of(context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.inter(
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
                                             letterSpacing: 0.0,
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -479,7 +479,7 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               flex: 1,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .primaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
@@ -503,30 +503,30 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                       ),
                                     ),
                                     Text(
-                                      FFLocalizations.of(context).getText(
+                                      FTLocalizations.of(context).getText(
                                         'vprag4kd' /* Maksim, 36 */,
                                       ),
                                       maxLines: 1,
-                                      style: FlutterFlowTheme.of(context)
+                                      style: FloterTheme.of(context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.inter(
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
                                             letterSpacing: 0.0,
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),

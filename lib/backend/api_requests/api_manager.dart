@@ -1,4 +1,4 @@
-// ignore_for_file: constant_identifier_names, depend_on_referenced_packages, prefer_final_fields
+﻿// ignore_for_file: constant_identifier_names, depend_on_referenced_packages, prefer_final_fields
 
 import 'dart:async';
 import 'dart:convert';
@@ -15,7 +15,7 @@ import 'package:flutter/foundation.dart';
 import 'package:http/browser_client.dart'
     if (dart.library.io) 'browser_client_stub.dart';
 
-import '/flutter_flow/uploaded_file.dart';
+import '/floter/uploaded_file.dart';
 
 import 'get_streamed_response.dart';
 
@@ -383,9 +383,9 @@ class ApiManager {
     );
 
     bool isFile(dynamic e) =>
-        e is FFUploadedFile ||
-        e is List<FFUploadedFile> ||
-        (e is List && e.firstOrNull is FFUploadedFile);
+        e is FTUploadedFile ||
+        e is List<FTUploadedFile> ||
+        (e is List && e.firstOrNull is FTUploadedFile);
 
     final nonFileParams = toStringMap(
         Map.fromEntries(params.entries.where((e) => !isFile(e.value))));
@@ -394,8 +394,8 @@ class ApiManager {
     params.entries.where((e) => isFile(e.value)).forEach((e) {
       final param = e.value;
       final uploadedFiles = param is List
-          ? param as List<FFUploadedFile>
-          : [param as FFUploadedFile];
+          ? param as List<FTUploadedFile>
+          : [param as FTUploadedFile];
       for (var uploadedFile in uploadedFiles) {
         files.add(
           http.MultipartFile.fromBytes(

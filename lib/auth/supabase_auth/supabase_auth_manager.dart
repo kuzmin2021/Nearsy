@@ -1,13 +1,13 @@
-import 'dart:async';
+﻿import 'dart:async';
 
 import 'package:flutter/material.dart';
 import '/auth/auth_manager.dart';
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '/floter/floter_util.dart';
 import 'email_auth.dart';
 
 import 'supabase_user_provider.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '/floter/floter_util.dart';
 
 export '/auth/base_auth_user_provider.dart';
 

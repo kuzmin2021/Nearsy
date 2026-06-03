@@ -1,8 +1,8 @@
-import '/auth/supabase_auth/auth_util.dart';
+﻿import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/floter/floter_theme.dart';
+import '/floter/floter_util.dart';
+import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -60,7 +60,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Container(
@@ -110,13 +110,13 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                   width: 42.0,
                                   height: 42.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryBackground,
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   child: Icon(
                                     Icons.arrow_back,
-                                    color: FlutterFlowTheme.of(context)
+                                    color: FloterTheme.of(context)
                                         .primaryText,
                                     size: 24.0,
                                   ),
@@ -124,7 +124,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                               ),
                               Icon(
                                 Icons.favorite_border,
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: FloterTheme.of(context).primary,
                                 size: 46.0,
                               ),
                             ],
@@ -133,54 +133,54 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                             height: 20.0,
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               '6hsbqooj' /* Sign in with email */,
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .headlineSmall
                                 .override(
                                   font: GoogleFonts.interTight(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .headlineSmall
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .headlineSmall
                                         .fontStyle,
                                   ),
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .headlineSmall
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .headlineSmall
                                       .fontStyle,
                                 ),
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
+                            FTLocalizations.of(context).getText(
                               'sar6c7h6' /* Use your email and password, o... */,
                             ),
                             maxLines: 2,
-                            style: FlutterFlowTheme.of(context)
+                            style: FloterTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.inter(
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                    fontWeight: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
+                                    fontStyle: FloterTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context)
+                                  color: FloterTheme.of(context)
                                       .secondaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
+                                  fontWeight: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle: FloterTheme.of(context)
                                       .bodyMedium
                                       .fontStyle,
                                 ),
@@ -201,25 +201,25 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                 children: [
                                   Expanded(
                                     flex: 1,
-                                    child: FFButtonWidget(
+                                    child: FTButtonWidget(
                                       onPressed: () async {
                                         _model.emailMode = 'signIn';
                                         safeSetState(() {});
                                       },
-                                      text: FFLocalizations.of(context).getText(
+                                      text: FTLocalizations.of(context).getText(
                                         'f4ef3w8u' /* Sign in */,
                                       ),
-                                      options: FFButtonOptions(
+                                      options: FTButtonOptions(
                                         width: double.infinity,
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 0.0),
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: FlutterFlowTheme.of(context)
+                                        color: FloterTheme.of(context)
                                             .primary,
                                         textStyle: TextStyle(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .primaryBackground,
                                         ),
                                         borderRadius:
@@ -229,15 +229,15 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                   ),
                                   Expanded(
                                     flex: 1,
-                                    child: FFButtonWidget(
+                                    child: FTButtonWidget(
                                       onPressed: () async {
                                         _model.emailMode = 'register';
                                         safeSetState(() {});
                                       },
-                                      text: FFLocalizations.of(context).getText(
+                                      text: FTLocalizations.of(context).getText(
                                         'p29jwoah' /* Register */,
                                       ),
-                                      options: FFButtonOptions(
+                                      options: FTButtonOptions(
                                         width: double.infinity,
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 0.0),
@@ -246,11 +246,11 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: Colors.transparent,
                                         textStyle: TextStyle(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .primary,
                                         ),
                                         borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: FloterTheme.of(context)
                                               .primary,
                                           width: 1.0,
                                         ),
@@ -276,7 +276,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelText:
-                                      FFLocalizations.of(context).getText(
+                                      FTLocalizations.of(context).getText(
                                     '9qex9k1m' /* Email address */,
                                   ),
                                   enabledBorder: OutlineInputBorder(
@@ -346,7 +346,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                 obscureText: !_model.passwordFieldVisibility,
                                 decoration: InputDecoration(
                                   labelText:
-                                      FFLocalizations.of(context).getText(
+                                      FTLocalizations.of(context).getText(
                                     'w4qsrbhk' /* Password */,
                                   ),
                                   enabledBorder: OutlineInputBorder(
@@ -433,7 +433,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                       !_model.confirmPasswordFieldVisibility,
                                   decoration: InputDecoration(
                                     labelText:
-                                        FFLocalizations.of(context).getText(
+                                        FTLocalizations.of(context).getText(
                                       'uw4ggeko' /* Repeat password */,
                                     ),
                                     enabledBorder: OutlineInputBorder(
@@ -502,7 +502,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                       .asValidator(context),
                                 ),
                               if (_model.emailMode == 'signIn')
-                                FFButtonWidget(
+                                FTButtonWidget(
                                   onPressed: () async {
                                     Function() _navigate = () {};
                                     if (_model.email == '') {
@@ -531,7 +531,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                           ),
                                         );
                                       } else {
-                                        FFAppState().profileIsOnboarded = false;
+                                        FTAppState().profileIsOnboarded = false;
                                         safeSetState(() {});
                                         GoRouter.of(context).prepareAuthEvent();
 
@@ -553,10 +553,10 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
 
                                     _navigate();
                                   },
-                                  text: FFLocalizations.of(context).getText(
+                                  text: FTLocalizations.of(context).getText(
                                     'zxxbmmbr' /* Continue */,
                                   ),
-                                  options: FFButtonOptions(
+                                  options: FTButtonOptions(
                                     width: double.infinity,
                                     height: 48.0,
                                     padding: EdgeInsetsDirectional.fromSTEB(
@@ -565,14 +565,14 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                         0.0, 0.0, 0.0, 0.0),
                                     color: Color(0xFFC2A7FF),
                                     textStyle: TextStyle(
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .primaryText,
                                     ),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                 ),
                               if (_model.emailMode == 'register')
-                                FFButtonWidget(
+                                FTButtonWidget(
                                   onPressed: () async {
                                     Function() _navigate = () {};
                                     if (_model.email == '') {
@@ -616,7 +616,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                         } else {
                                           if (_model.password ==
                                               _model.confirmPassword) {
-                                            FFAppState().profileIsOnboarded =
+                                            FTAppState().profileIsOnboarded =
                                                 false;
                                             safeSetState(() {});
                                             GoRouter.of(context)
@@ -677,10 +677,10 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
 
                                     safeSetState(() {});
                                   },
-                                  text: FFLocalizations.of(context).getText(
+                                  text: FTLocalizations.of(context).getText(
                                     'vjud8ony' /* Create account */,
                                   ),
-                                  options: FFButtonOptions(
+                                  options: FTButtonOptions(
                                     width: double.infinity,
                                     height: 48.0,
                                     padding: EdgeInsetsDirectional.fromSTEB(
@@ -689,7 +689,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                         0.0, 0.0, 0.0, 0.0),
                                     color: Color(0xFFC2A7FF),
                                     textStyle: TextStyle(
-                                      color: FlutterFlowTheme.of(context)
+                                      color: FloterTheme.of(context)
                                           .primaryText,
                                     ),
                                     borderRadius: BorderRadius.circular(12.0),
@@ -709,32 +709,32 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                     height: 48.0,
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
+                                      FTLocalizations.of(context).getText(
                                         'v8872n7y' /* Forgot password? */,
                                       ),
                                       textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
+                                      style: FloterTheme.of(context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.inter(
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
+                                            color: FloterTheme.of(context)
                                                 .primary,
                                             letterSpacing: 0.0,
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                FloterTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
