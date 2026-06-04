@@ -28,7 +28,7 @@
   },
   "people": {
     "lookaround": "Lookaround",
-    "guess_what_i": "Guess what I",
+    "guess_what_i": "Guess what I\\",
     "title": "Люди"
   },
   "liked_you": {
@@ -59,11 +59,11 @@
     "email_authentication": "Email authentication",
     "manage": "Manage",
     "notifications": "Уведомления",
-    "push_notifications": "Push Notifications",
+    "push_notifications": "  Push Notifications",
     "matches": "Пары",
     "messages": "Сообщения",
     "liked_you": "Liked you",
-    "email_notifications": "Email Notifications",
+    "email_notifications": "  Email Notifications",
     "matches_email": "Пары",
     "messages_email": "Сообщения",
     "liked_you_email": "Liked you",
@@ -157,12 +157,12 @@
   "profile_age": {
     "when_were_you_born": "Когда вы родились:",
     "day": "День",
+    "unused": "--",
     "month": "Месяц",
+    "unused_2": "--",
     "year": "Год",
-    "optional": "Необязательно",
-    "day_placeholder": "--",
-    "month_placeholder": "--",
-    "year_placeholder": "--"
+    "unused_3": "--",
+    "optional": "Необязательно"
   },
   "months": {
     "january": "Январь",

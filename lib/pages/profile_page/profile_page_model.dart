@@ -67,7 +67,7 @@ class ProfilePageModel extends FloterModel<ProfilePageWidget> {
 
   String? profileSmoking = '';
 
-  List<String> profileGridSlots = [];
+  List<String> profileGridSlots = ['__add_photo__', '__empty_photo__', '__empty_photo__', '__empty_photo__', '__empty_photo__', '__empty_photo__'];
   void addToProfileGridSlots(String item) => profileGridSlots.add(item);
   void removeFromProfileGridSlots(String item) => profileGridSlots.remove(item);
   void removeAtIndexFromProfileGridSlots(int index) =>

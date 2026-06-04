@@ -33,11 +33,13 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
     super.initState();
     _model = createModel(context, () => EmailAuthPageModel());
 
-    _model.emailFieldTextController ??= TextEditingController();
+    _model.emailFieldTextController ??= TextEditingController(text: 'alx@test.ru');
     _model.emailFieldFocusNode ??= FocusNode();
+    _model.email = 'alx@test.ru';
 
-    _model.passwordFieldTextController ??= TextEditingController();
+    _model.passwordFieldTextController ??= TextEditingController(text: 'Test1234!');
     _model.passwordFieldFocusNode ??= FocusNode();
+    _model.password = 'Test1234!';
 
     _model.confirmPasswordFieldTextController ??= TextEditingController();
     _model.confirmPasswordFieldFocusNode ??= FocusNode();
@@ -501,7 +503,14 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                 FTButtonWidget(
                                   onPressed: () async {
                                     Function() _navigate = () {};
-                                    if (_model.email == '') {
+                                    final email =
+                                        _model.emailFieldTextController.text
+                                            .trim();
+                                    final password =
+                                        _model.passwordFieldTextController.text;
+                                    _model.email = email;
+                                    _model.password = password;
+                                    if (email.isEmpty) {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
                                         SnackBar(
@@ -514,7 +523,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                         ),
                                       );
                                     } else {
-                                      if (_model.password == '') {
+                                      if (password.isEmpty) {
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(
                                           SnackBar(
@@ -534,8 +543,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                         final user =
                                             await authManager.signInWithEmail(
                                           context,
-                                          _model.email!,
-                                          _model.password!,
+                                          email,
+                                          password,
                                         );
                                         if (user == null) {
                                           return;
@@ -571,7 +580,18 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                 FTButtonWidget(
                                   onPressed: () async {
                                     Function() _navigate = () {};
-                                    if (_model.email == '') {
+                                    final email =
+                                        _model.emailFieldTextController.text
+                                            .trim();
+                                    final password =
+                                        _model.passwordFieldTextController.text;
+                                    final confirmPassword =
+                                        _model.confirmPasswordFieldTextController
+                                            .text;
+                                    _model.email = email;
+                                    _model.password = password;
+                                    _model.confirmPassword = confirmPassword;
+                                    if (email.isEmpty) {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
                                         SnackBar(
@@ -584,7 +604,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                         ),
                                       );
                                     } else {
-                                      if (_model.password == '') {
+                                      if (password.isEmpty) {
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(
                                           SnackBar(
@@ -597,7 +617,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                           ),
                                         );
                                       } else {
-                                        if (_model.confirmPassword == '') {
+                                        if (confirmPassword.isEmpty) {
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(
                                             SnackBar(
@@ -610,15 +630,15 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                             ),
                                           );
                                         } else {
-                                          if (_model.password ==
-                                              _model.confirmPassword) {
+                                          if (password ==
+                                              confirmPassword) {
                                             FTAppState().profileIsOnboarded =
                                                 false;
                                             safeSetState(() {});
                                             GoRouter.of(context)
                                                 .prepareAuthEvent();
-                                            if (_model.password! !=
-                                                _model.confirmPassword!) {
+                                            if (password !=
+                                                confirmPassword) {
                                               ScaffoldMessenger.of(context)
                                                   .showSnackBar(
                                                 SnackBar(
@@ -633,8 +653,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                             final user = await authManager
                                                 .createAccountWithEmail(
                                               context,
-                                              _model.email!,
-                                              _model.password!,
+                                              email,
+                                              password,
                                             );
                                             if (user == null) {
                                               return;

@@ -512,7 +512,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
           localizeProfileAttribute('smoking', profile?['smoking']);
       final photos = await SupaFlow.client
           .from('user_photos')
-          .select('photo_url, storage_path, slot, order')
+          .select('photo_url, slot, order')
           .eq('user_id', userId)
           .order('slot', ascending: true)
           .order('order', ascending: true)
@@ -1048,9 +1048,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                             width: double.infinity,
                                             height: 44.0,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      12.0, 2.0, 12.0, 2.0),
+                                              padding: EdgeInsets.zero,
                                               child: TextFormField(
                                                 controller: _model
                                                     .profileDisplayNameFieldTextController,
@@ -1144,6 +1142,10 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 },
                                                 obscureText: false,
                                                 decoration: InputDecoration(
+                                                  contentPadding:
+                                                      EdgeInsetsDirectional
+                                                          .fromSTEB(
+                                                              12.0, 0.0, 12.0, 0.0),
                                                   hintText: AppLabels.of(
                                                           context)
                                                       .get(
@@ -1226,10 +1228,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ],
                                       ),
                                     ),
-                                    Container(
-                                      width: double.infinity,
-                                      height: 72.0,
-                                      decoration: BoxDecoration(
+                                    AspectRatio(
+                                      aspectRatio: 3.0,
+                                      child: Container(
+                                        width: double.infinity,
+                                        decoration: BoxDecoration(
                                         color: FloterTheme.of(context)
                                             .secondaryBackground,
                                         borderRadius:
@@ -1241,8 +1244,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            12.0, 6.0, 12.0, 6.0),
+                                        padding: EdgeInsets.zero,
                                         child: TextFormField(
                                           controller: _model
                                               .profileCatchphraseFieldTextController,
@@ -1281,6 +1283,10 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           },
                                           obscureText: false,
                                           decoration: InputDecoration(
+                                            contentPadding:
+                                                EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        12.0, 8.0, 12.0, 8.0),
                                             hintText:
                                                 AppLabels.of(context)
                                                     .get(
@@ -1334,7 +1340,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                             filled: true,
                                           ),
                                           style: TextStyle(),
-                                          maxLines: 2,
+                                          textAlignVertical:
+                                              TextAlignVertical.top,
+                                          expands: true,
+                                          minLines: null,
+                                          maxLines: null,
                                           maxLength: 80,
                                           maxLengthEnforcement:
                                               MaxLengthEnforcement.enforced,
@@ -1349,7 +1359,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 8.0)),
+                                  ),
+                                ].divide(SizedBox(height: 8.0)),
                                 ),
                               ),
                             ].divide(SizedBox(width: 16.0)),
@@ -1368,7 +1379,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     crossAxisCount: 3,
                                     crossAxisSpacing: 12.0,
                                     mainAxisSpacing: 12.0,
-                                    childAspectRatio: 0.8,
+                                    childAspectRatio: 1.0,
                                   ),
                                   shrinkWrap: true,
                                   itemCount: profileGridSlot.length,
@@ -1657,7 +1668,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                           .client
                                                           .from('user_photos')
                                                           .select(
-                                                              'id, photo_url, storage_path, slot, order')
+                                                              'id, photo_url, slot, order')
                                                           .eq('user_id', userId)
                                                           .order('slot',
                                                               ascending: true)
@@ -1812,15 +1823,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                           'user_id': userId,
                                                           'photo_url':
                                                               uploadedUrl,
-                                                          'photo_path':
-                                                              uploadedUrl,
-                                                          'storage_path':
-                                                              storagePath,
                                                           'slot': nextSlot,
                                                           'order': nextSlot,
-                                                          'position': nextSlot,
-                                                          'is_main': false,
-                                                          'used': 'true',
                                                         });
                                                       } catch (error) {
                                                         await storageBucket
