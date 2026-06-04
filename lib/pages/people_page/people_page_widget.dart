@@ -1,4 +1,4 @@
-﻿import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_swipeable_stack.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -95,8 +95,8 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
                                         size: 22.0,
                                       ),
                                       Text(
-                                        FTLocalizations.of(context).getText(
-                                          'gsj1r0db' /* Lookaround */,
+                                        AppLabels.of(context).get(
+                                          'people.lookaround' /* Lookaround */,
                                         ),
                                         maxLines: 1,
                                         style: FloterTheme.of(context)
@@ -173,8 +173,8 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        FTLocalizations.of(context).getText(
-                                          'l4crpudp' /* Agrippina, 35 */,
+                                        AppLabels.of(context).get(
+                                          'skip' /* Agrippina, 35 */,
                                         ),
                                         maxLines: 1,
                                         style: FloterTheme.of(context)
@@ -202,8 +202,8 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
                                             ),
                                       ),
                                       Text(
-                                        FTLocalizations.of(context).getText(
-                                          'mvk593mi' /* Guess what I'm thinking */,
+                                        AppLabels.of(context).get(
+                                          'people.guess_what_i' /* Guess what I'm thinking */,
                                         ),
                                         maxLines: 1,
                                         style: FloterTheme.of(context)

@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -221,8 +221,8 @@ class _ProfileBodyTypePageWidgetState extends State<ProfileBodyTypePageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'r169jpvj' /* My body type: */,
+                          AppLabels.of(context).get(
+                            'profile_body_type.my_body_type' /* My body type: */,
                           ),
                           maxLines: 2,
                           style:

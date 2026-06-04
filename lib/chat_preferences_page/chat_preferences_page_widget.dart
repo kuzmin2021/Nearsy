@@ -1,4 +1,4 @@
-﻿import '/floter/floter_icon_button.dart';
+import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
@@ -84,8 +84,8 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'hke77tzj' /* Chat Preferences */,
+                          AppLabels.of(context).get(
+                            'chat_preferences.title' /* Chat Preferences */,
                           ),
                           maxLines: 2,
                           style:
@@ -111,8 +111,8 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                     ].divide(SizedBox(width: 12.0)),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'oblqk4dv' /* Choose who can message you. Yo... */,
+                    AppLabels.of(context).get(
+                      'chat_preferences.choose_who_can_message_you_you_can_change_this_anytime' /* Choose who can message you. Yo... */,
                     ),
                     style: FloterTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
@@ -132,8 +132,8 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                         ),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'run936hm' /* Availability modes: */,
+                    AppLabels.of(context).get(
+                      'chat_preferences.availability_modes' /* Availability modes: */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -183,8 +183,8 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                               ),
                             ),
                             Text(
-                              FTLocalizations.of(context).getText(
-                                '9ueqeejc' /* Unavailable */,
+                              AppLabels.of(context).get(
+                                'chat_preferences.unavailable' /* Unavailable */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 3,
@@ -237,8 +237,8 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                               ),
                             ),
                             Text(
-                              FTLocalizations.of(context).getText(
-                                '9je3gcf7' /* Matched users only */,
+                              AppLabels.of(context).get(
+                                'chat_preferences.matched_users_only' /* Matched users only */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 3,
@@ -292,8 +292,8 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                               ),
                             ),
                             Text(
-                              FTLocalizations.of(context).getText(
-                                'rynvhts0' /* Available */,
+                              AppLabels.of(context).get(
+                                'chat_preferences.available' /* Available */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 3,
@@ -324,8 +324,8 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                     ],
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      '41ha6dgj' /* Stuff I could talk about for h... */,
+                    AppLabels.of(context).get(
+                      'chat_preferences.stuff_i_could_talk_about_for_hours' /* Stuff I could talk about for h... */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -349,8 +349,8 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                     focusNode: _model.chatTopicsFieldFocusNode,
                     obscureText: false,
                     decoration: InputDecoration(
-                      hintText: FTLocalizations.of(context).getText(
-                        'tvxcs529' /* Obscure sci-fi films with depr... */,
+                      hintText: AppLabels.of(context).get(
+                        'chat_preferences.obscure_scifi_films_with_depressing_endings' /* Obscure sci-fi films with depr... */,
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -403,8 +403,8 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                     onPressed: () async {
                       context.pop();
                     },
-                    text: FTLocalizations.of(context).getText(
-                      'hz3lhlw8' /* Save chat preferences */,
+                    text: AppLabels.of(context).get(
+                      'chat_preferences.save_chat_preferences' /* Save chat preferences */,
                     ),
                     options: FTButtonOptions(
                       width: double.infinity,

@@ -10,6 +10,8 @@ import 'auth/supabase_auth/auth_util.dart';
 
 import '/backend/supabase/supabase.dart';
 import '/floter/floter_theme.dart';
+import '/services/i18n/app_labels.dart';
+import '/services/i18n/app_labels_delegate.dart';
 import 'floter/floter_util.dart';
 import 'floter/internationalization.dart';
 import 'floter/nav/nav.dart';
@@ -24,7 +26,10 @@ void main() async {
 
   await FloterTheme.initialize();
 
-  await FTLocalizations.initialize();
+  await AppLabels.initialize();
+  await AppLabels.loadTranslations(
+    AppLabels.getStoredLocale()?.languageCode ?? 'en',
+  );
 
   final appState = FTAppState(); // Initialize FTAppState
   await appState.initializePersistedState();
@@ -45,7 +50,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale? _locale = FTLocalizations.getStoredLocale();
+  Locale? _locale = AppLabels.getStoredLocale();
+
+  static Locale _resolveLocale(String language) => language.contains('_')
+      ? Locale.fromSubtags(
+          languageCode: language.split('_').first,
+          scriptCode: language.split('_').last,
+        )
+      : Locale(language);
 
   ThemeMode _themeMode = FloterTheme.themeMode;
 
@@ -84,8 +96,9 @@ class _MyAppState extends State<MyApp> {
   }
 
   void setLocale(String language) {
-    safeSetState(() => _locale = createLocale(language));
-    FTLocalizations.storeLocale(language);
+    safeSetState(() => _locale = _resolveLocale(language));
+    AppLabels.storeLocale(language);
+    AppLabels.loadTranslations(language);
   }
 
   void setThemeMode(ThemeMode mode) => safeSetState(() {
@@ -99,7 +112,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Lookaround MVP',
       localizationsDelegates: [
-        FTLocalizationsDelegate(),
+        AppLabelsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,

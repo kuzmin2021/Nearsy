@@ -4,6 +4,7 @@ import '../schema/structs/index.dart';
 
 import 'package:flutter/foundation.dart';
 
+import '/core/config/app_config.dart';
 import '/floter/floter_util.dart';
 import 'api_manager.dart';
 
@@ -14,11 +15,10 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 /// Start SupabaseAuthRest Group Code
 
 class SupabaseAuthRestGroup {
-  static String getBaseUrl() => 'https://mkmyybajywmljytduftp.supabase.co';
+  static String getBaseUrl() => AppConfig.supabaseUrl;
   static Map<String, String> headers = {
     'Content-Type': 'application/json',
-    'apikey':
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1rbXl5YmFqeXdtbGp5dGR1ZnRwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc5MDkxNDcsImV4cCI6MjA5MzQ4NTE0N30.DVlVT6CgXQ7G7HHCwjqAflj_8_PxHm6FLV15jLy5yt8',
+    'apikey': AppConfig.supabaseAnonKey,
   };
   static SendMagicLinkCall sendMagicLinkCall = SendMagicLinkCall();
 }

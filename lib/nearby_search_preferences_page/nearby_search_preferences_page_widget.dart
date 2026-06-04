@@ -1,4 +1,4 @@
-﻿import '/floter/floter_icon_button.dart';
+import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
@@ -82,8 +82,8 @@ class _NearbySearchPreferencesPageWidgetState
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            '21o1043b' /* Nearby Search Preferences */,
+                          AppLabels.of(context).get(
+                            'nearby_search_preferences.title' /* Nearby Search Preferences */,
                           ),
                           maxLines: 2,
                           style:
@@ -109,8 +109,8 @@ class _NearbySearchPreferencesPageWidgetState
                     ].divide(SizedBox(width: 12.0)),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'qfl92558' /* Choose how visible your locati... */,
+                    AppLabels.of(context).get(
+                      'nearby_search_preferences.choose_how_visible_your_location_is_you_can_change_this_anytime' /* Choose how visible your locati... */,
                     ),
                     style: FloterTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
@@ -130,8 +130,8 @@ class _NearbySearchPreferencesPageWidgetState
                         ),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'ipljq269' /* Visibility modes: */,
+                    AppLabels.of(context).get(
+                      'nearby_search_preferences.visibility_modes' /* Visibility modes: */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -180,8 +180,8 @@ class _NearbySearchPreferencesPageWidgetState
                               ),
                             ),
                             Text(
-                              FTLocalizations.of(context).getText(
-                                'amjglpsh' /* Invisible */,
+                              AppLabels.of(context).get(
+                                'nearby_search_preferences.invisible' /* Invisible */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 3,
@@ -235,8 +235,8 @@ class _NearbySearchPreferencesPageWidgetState
                               ),
                             ),
                             Text(
-                              FTLocalizations.of(context).getText(
-                                'kpjw7g5i' /* Visible while using the app */,
+                              AppLabels.of(context).get(
+                                'nearby_search_preferences.visible_while_using_the_app' /* Visible while using the app */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 3,
@@ -290,8 +290,8 @@ class _NearbySearchPreferencesPageWidgetState
                               ),
                             ),
                             Text(
-                              FTLocalizations.of(context).getText(
-                                '8tgju6qc' /* Your last location */,
+                              AppLabels.of(context).get(
+                                'nearby_search_preferences.your_last_location' /* Your last location */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 3,
@@ -322,14 +322,14 @@ class _NearbySearchPreferencesPageWidgetState
                     ],
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      '02lrj0jh' /* You appear as: Local Guboshlyo... */,
+                    AppLabels.of(context).get(
+                      'nearby_search_preferences.you_appear_as_local_guboshlyopsk_zabuldogovo' /* You appear as: Local Guboshlyo... */,
                     ),
                     style: TextStyle(),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'rybz2me7' /* To update your status, go to P... */,
+                    AppLabels.of(context).get(
+                      'nearby_search_preferences.to_update_your_status_go_to_profile_settings_location' /* To update your status, go to P... */,
                     ),
                     style: FloterTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
@@ -353,8 +353,8 @@ class _NearbySearchPreferencesPageWidgetState
                     onPressed: () async {
                       context.pop();
                     },
-                    text: FTLocalizations.of(context).getText(
-                      '9orga110' /* Save visibility */,
+                    text: AppLabels.of(context).get(
+                      'nearby_search_preferences.save_visibility' /* Save visibility */,
                     ),
                     options: FTButtonOptions(
                       width: double.infinity,

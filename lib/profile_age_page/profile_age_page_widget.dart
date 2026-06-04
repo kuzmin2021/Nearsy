@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_drop_down.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
@@ -83,52 +83,52 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
           String localizedMonthName(int month) {
             switch (month) {
               case 1:
-                return FTLocalizations.of(context).getText(
-                  'yw24pjew' /* January */,
+                return AppLabels.of(context).get(
+                  'months.january' /* January */,
                 );
               case 2:
-                return FTLocalizations.of(context).getText(
-                  'xqnx7l0f' /* February */,
+                return AppLabels.of(context).get(
+                  'months.february' /* February */,
                 );
               case 3:
-                return FTLocalizations.of(context).getText(
-                  'ypwnkp0l' /* March */,
+                return AppLabels.of(context).get(
+                  'months.march' /* March */,
                 );
               case 4:
-                return FTLocalizations.of(context).getText(
-                  'hb7et7lf' /* April */,
+                return AppLabels.of(context).get(
+                  'months.april' /* April */,
                 );
               case 5:
-                return FTLocalizations.of(context).getText(
-                  'uodv0vde' /* May */,
+                return AppLabels.of(context).get(
+                  'months.may' /* May */,
                 );
               case 6:
-                return FTLocalizations.of(context).getText(
-                  'xil6itt6' /* June */,
+                return AppLabels.of(context).get(
+                  'months.june' /* June */,
                 );
               case 7:
-                return FTLocalizations.of(context).getText(
-                  'daazanz1' /* July */,
+                return AppLabels.of(context).get(
+                  'months.july' /* July */,
                 );
               case 8:
-                return FTLocalizations.of(context).getText(
-                  'mewzycrj' /* August */,
+                return AppLabels.of(context).get(
+                  'months.august' /* August */,
                 );
               case 9:
-                return FTLocalizations.of(context).getText(
-                  'mck9r90j' /* September */,
+                return AppLabels.of(context).get(
+                  'months.september' /* September */,
                 );
               case 10:
-                return FTLocalizations.of(context).getText(
-                  '0tadc3ic' /* October */,
+                return AppLabels.of(context).get(
+                  'months.october' /* October */,
                 );
               case 11:
-                return FTLocalizations.of(context).getText(
-                  '2f6ro706' /* November */,
+                return AppLabels.of(context).get(
+                  'months.november' /* November */,
                 );
               case 12:
-                return FTLocalizations.of(context).getText(
-                  'vyx9usdo' /* December */,
+                return AppLabels.of(context).get(
+                  'months.december' /* December */,
                 );
               default:
                 return '--';
@@ -595,8 +595,8 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'yfngd0ai' /* When were you born: */,
+                          AppLabels.of(context).get(
+                            'profile_age.when_were_you_born' /* When were you born: */,
                           ),
                           maxLines: 2,
                           style:
@@ -652,101 +652,101 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                               _model.birthdayDay,
                                         ),
                                         options: [
-                                          FTLocalizations.of(context).getText(
-                                            'evj11y9k' /* -- */,
+                                          AppLabels.of(context).get(
+                                            'profile_age.day_placeholder' /* -- */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'hnoclb5h' /* 01 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 01 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'i85tsvb7' /* 02 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 02 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '544ol1ml' /* 03 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 03 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'a3av34yv' /* 04 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 04 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '81ksvrw7' /* 05 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 05 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '7qf0dsbo' /* 06 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 06 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'ilnr6qid' /* 07 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 07 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'vbpifo3j' /* 08 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 08 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '8jarvmm2' /* 09 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 09 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'yu89i5ty' /* 10 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 10 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'm0zx38hh' /* 11 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 11 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '20xpr3yy' /* 12 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 12 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'q7kpg6g7' /* 13 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 13 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'dorwptj7' /* 14 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 14 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'zbwxjkmb' /* 15 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 15 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '0dvgzzxk' /* 16 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 16 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'kt4o5r39' /* 17 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 17 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'pqahhuyj' /* 18 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 18 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'lsjhr27i' /* 19 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 19 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'lz46yfmf' /* 20 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 20 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'sqlukj38' /* 21 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 21 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'bwphn9sh' /* 22 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 22 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'n83rygwt' /* 23 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 23 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'ru7bpod1' /* 24 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 24 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'n77q723c' /* 25 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 25 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'jbzbwzyr' /* 26 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 26 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '93jznrsc' /* 27 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 27 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'w6fihphh' /* 28 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 28 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'vmvx9nth' /* 29 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 29 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'p1fe7s7h' /* 30 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 30 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'vaz558z1' /* 31 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 31 */,
                                           )
                                         ],
                                         onChanged: (val) async {
@@ -807,8 +807,8 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                         isSearchable: false,
                                         isMultiSelect: false,
                                         labelText:
-                                            FTLocalizations.of(context).getText(
-                                          'ffkcps64' /* Day */,
+                                            AppLabels.of(context).get(
+                                          'profile_age.day' /* Day */,
                                         ),
                                         labelTextStyle: TextStyle(),
                                       ),
@@ -824,44 +824,44 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                               _model.birthdayMonth,
                                         ),
                                         options: [
-                                          FTLocalizations.of(context).getText(
-                                            'w6gdyvm3' /* -- */,
+                                          AppLabels.of(context).get(
+                                            'profile_age.month_placeholder' /* -- */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'yw24pjew' /* January */,
+                                          AppLabels.of(context).get(
+                                            'months.january' /* January */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'xqnx7l0f' /* February */,
+                                          AppLabels.of(context).get(
+                                            'months.february' /* February */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'ypwnkp0l' /* March */,
+                                          AppLabels.of(context).get(
+                                            'months.march' /* March */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'hb7et7lf' /* April */,
+                                          AppLabels.of(context).get(
+                                            'months.april' /* April */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'uodv0vde' /* May */,
+                                          AppLabels.of(context).get(
+                                            'months.may' /* May */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'xil6itt6' /* June */,
+                                          AppLabels.of(context).get(
+                                            'months.june' /* June */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'daazanz1' /* July */,
+                                          AppLabels.of(context).get(
+                                            'months.july' /* July */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'mewzycrj' /* August */,
+                                          AppLabels.of(context).get(
+                                            'months.august' /* August */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'mck9r90j' /* September */,
+                                          AppLabels.of(context).get(
+                                            'months.september' /* September */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '0tadc3ic' /* October */,
+                                          AppLabels.of(context).get(
+                                            'months.october' /* October */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '2f6ro706' /* November */,
+                                          AppLabels.of(context).get(
+                                            'months.november' /* November */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'vyx9usdo' /* December */,
+                                          AppLabels.of(context).get(
+                                            'months.december' /* December */,
                                           )
                                         ],
                                         onChanged: (val) async {
@@ -922,8 +922,8 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                         isSearchable: false,
                                         isMultiSelect: false,
                                         labelText:
-                                            FTLocalizations.of(context).getText(
-                                          'wro3xzbl' /* Month */,
+                                            AppLabels.of(context).get(
+                                          'profile_age.month' /* Month */,
                                         ),
                                         labelTextStyle: TextStyle(),
                                       ),
@@ -939,308 +939,308 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                               _model.birthdayYear,
                                         ),
                                         options: [
-                                          FTLocalizations.of(context).getText(
-                                            '6nbq71q6' /* -- */,
+                                          AppLabels.of(context).get(
+                                            'profile_age.year_placeholder' /* -- */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'c20ppisq' /* 2008 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 2008 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'g24py9k7' /* 2007 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 2007 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'loveqmon' /* 2006 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 2006 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'cb74gq5d' /* 2005 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 2005 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'lakasbmc' /* 2004 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 2004 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'hz4476jx' /* 2003 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 2003 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'wss64wkx' /* 2002 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 2002 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'qcx81s4w' /* 2001 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 2001 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'g60eifu5' /* 2000 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 2000 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '2k3vaatx' /* 1999 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1999 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'mxr48o4z' /* 1998 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1998 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'l6lczap5' /* 1997 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1997 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '4fu848nm' /* 1996 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1996 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '236bfgsf' /* 1995 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1995 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'd1avq9cy' /* 1994 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1994 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '1nbt1eeu' /* 1993 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1993 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '8y3exir8' /* 1992 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1992 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'dtlwmlij' /* 1991 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1991 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'ox2affg6' /* 1990 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1990 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'p5qhzce4' /* 1989 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1989 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'obyf4hzv' /* 1988 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1988 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'l35b37ny' /* 1987 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1987 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'yg7n723u' /* 1986 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1986 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'kzf33ry6' /* 1985 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1985 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'gw4msgi4' /* 1984 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1984 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'lsd1exvt' /* 1983 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1983 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'q5iv982i' /* 1982 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1982 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'a87kkvle' /* 1981 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1981 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'ewu7ac53' /* 1980 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1980 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '2y2mdqiq' /* 1979 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1979 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'o5fop9uj' /* 1978 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1978 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'htl3x8t7' /* 1977 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1977 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'po7f6gcg' /* 1976 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1976 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'yj80jxq5' /* 1975 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1975 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'ylsru30s' /* 1974 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1974 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '4s8fkbc9' /* 1973 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1973 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '7pgfsedg' /* 1972 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1972 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'q8q7x2k5' /* 1971 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1971 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'uo3oc8cn' /* 1970 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1970 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'vq0war2f' /* 1969 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1969 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'ohfc9njg' /* 1968 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1968 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'insmnflw' /* 1967 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1967 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'voj4gjl6' /* 1966 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1966 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'zc6iv1gb' /* 1965 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1965 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'e4tbwikj' /* 1964 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1964 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'xg2oofva' /* 1963 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1963 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'dsjmkhp1' /* 1962 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1962 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            't2htqnuh' /* 1961 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1961 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '74hbtmwu' /* 1960 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1960 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'v429irv6' /* 1959 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1959 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'b6rrlvof' /* 1958 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1958 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'v9og6b0r' /* 1957 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1957 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '9bz27hpf' /* 1956 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1956 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'nb7x4dno' /* 1955 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1955 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '0c83m1qq' /* 1954 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1954 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'b7ipsprs' /* 1953 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1953 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '3sggpffy' /* 1952 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1952 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'g2sr6st0' /* 1951 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1951 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'cr9exfsb' /* 1950 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1950 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'zuyrui2c' /* 1949 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1949 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'mvs8blc4' /* 1948 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1948 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'r8n934c9' /* 1947 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1947 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'p3xh973v' /* 1946 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1946 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '98dw87hb' /* 1945 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1945 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '4fjsj5qy' /* 1944 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1944 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'kps1ikcc' /* 1943 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1943 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'k0eszrws' /* 1942 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1942 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '0i7qwcl7' /* 1941 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1941 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'vnyalti1' /* 1940 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1940 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'j3aaqeyq' /* 1939 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1939 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'mj75dg2j' /* 1938 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1938 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'qtwz8zuh' /* 1937 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1937 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'o7yfp5on' /* 1936 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1936 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'lssxvy06' /* 1935 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1935 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'lxd6pn86' /* 1934 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1934 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'qces6nnm' /* 1933 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1933 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'zql2izt3' /* 1932 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1932 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'uc62tpi0' /* 1931 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1931 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'nred6q16' /* 1930 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1930 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'd0p7yk1s' /* 1929 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1929 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'rday2dad' /* 1928 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1928 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'wxch9755' /* 1927 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1927 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'exam0qgm' /* 1926 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1926 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'vycvn9aq' /* 1925 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1925 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'q72yrkaf' /* 1924 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1924 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'xsl2ar2o' /* 1923 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1923 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '3d7v4qed' /* 1922 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1922 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'afysxs78' /* 1921 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1921 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'nwyawcg8' /* 1920 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1920 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'vx3k7jjk' /* 1919 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1919 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'mdkebgdf' /* 1918 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1918 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'euapssdd' /* 1917 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1917 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'g5plhn21' /* 1916 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1916 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'etmorxb0' /* 1915 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1915 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '9x0cysiv' /* 1914 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1914 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '2pcf6p0h' /* 1913 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1913 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'nus89wj5' /* 1912 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1912 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'my8pl9gv' /* 1911 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1911 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            'hkhxqi8g' /* 1910 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1910 */,
                                           ),
-                                          FTLocalizations.of(context).getText(
-                                            '1z59mvhk' /* 1909 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* 1909 */,
                                           )
                                         ],
                                         onChanged: (val) async {
@@ -1301,8 +1301,8 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                         isSearchable: false,
                                         isMultiSelect: false,
                                         labelText:
-                                            FTLocalizations.of(context).getText(
-                                          'hsmz61d9' /* Year */,
+                                            AppLabels.of(context).get(
+                                          'profile_age.year' /* Year */,
                                         ),
                                         labelTextStyle: TextStyle(),
                                       ),
@@ -1310,8 +1310,8 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                   ].divide(SizedBox(width: 4.0)),
                                 ),
                                 Text(
-                                  FTLocalizations.of(context).getText(
-                                    'b0qb2m72' /* Optional */,
+                                  AppLabels.of(context).get(
+                                    'profile_age.optional' /* Optional */,
                                   ),
                                   style: FloterTheme.of(context)
                                       .bodySmall

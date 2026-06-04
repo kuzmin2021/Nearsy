@@ -1,0 +1,362 @@
+{
+  "auth": {
+    "nearsy": "Nearsy",
+    "meet_near_keep_it_easy": "Meet near. Keep it easy",
+    "continue_with_email": "ইমেল দিয়ে চালিয়ে যান",
+    "continue_with_phone": "Continue with phone",
+    "by_signing_up_you_agree_to_the_terms_of": "By signing up you agree to the Terms of",
+    "service_and_privacy_policy": "Service and Privacy Policy"
+  },
+  "profile": {
+    "title": "প্রোফাইল",
+    "name": "নাম",
+    "catchphrase": "Catchphrase",
+    "about_me": "আমার সম্পর্কে",
+    "gender": "লিঙ্গ",
+    "age": "বয়স",
+    "height": "উচ্চতা",
+    "work": "কাজ",
+    "education": "শিক্ষা",
+    "kids": "সন্তান",
+    "preferred_relationships": "পছন্দের সম্পর্ক",
+    "beliefs": "বিশ্বাস",
+    "body_type": "শরীরের ধরন",
+    "exercise": "ব্যায়াম",
+    "drinking": "মদ্যপান",
+    "smoking": "ধূমপান",
+    "profile_alt": "প্রোফাইল"
+  },
+  "people": {
+    "lookaround": "Lookaround",
+    "guess_what_i": "Guess what I",
+    "title": "মানুষ"
+  },
+  "liked_you": {
+    "title": "আপনাকে পছন্দ করেছে",
+    "all_3": "All 3",
+    "filter_matches_0": "Filter matches 0",
+    "outside_3": "Outside 3",
+    "tab_label": "আপনাকে পছন্দ করেছে"
+  },
+  "matches": {
+    "chats": "চ্যাট",
+    "you_normur": "You: Normur",
+    "you_how_big_is_your": "You: How big is your...",
+    "sure_see_you_at_bla": "Sure, see you at bla...",
+    "tab_label": "চ্যাট"
+  },
+  "chat": {
+    "chyokak": "Chyokak?",
+    "normur": "Normur",
+    "kirill_is_typing": "Kirill is typing...",
+    "write_a_message": "Write a message"
+  },
+  "account_settings": {
+    "title": "অ্যাকাউন্ট সেটিংস",
+    "edit_email": "সম্পাদনা",
+    "edit_phone": "সম্পাদনা",
+    "edit_password": "সম্পাদনা",
+    "email_authentication": "Email authentication",
+    "manage": "Manage",
+    "notifications": "নোটিফিকেশন",
+    "push_notifications": "Push Notifications",
+    "matches": "ম্যাচ",
+    "messages": "বার্তা",
+    "liked_you": "Liked you",
+    "email_notifications": "Email Notifications",
+    "matches_email": "ম্যাচ",
+    "messages_email": "বার্তা",
+    "liked_you_email": "Liked you",
+    "feedback": "প্রতিক্রিয়া",
+    "hide_account": "অ্যাকাউন্ট লুকান",
+    "delete_account": "অ্যাকাউন্ট মুছুন",
+    "log_out": "লগ আউট",
+    "chats": "চ্যাট"
+  },
+  "search_preferences": {
+    "title": "অনুসন্ধান পছন্দ",
+    "who_you_want_to_date": "Who you want to date:",
+    "women": "Women",
+    "men": "Men",
+    "other_gender": "Other",
+    "age": "বয়স:",
+    "between_20_and_50": "Between 20 and 50",
+    "search_radius": "Search radius:",
+    "up_to_161_kilometres_away": "Up to 161 kilometres away",
+    "languages_they_know": "Languages they know:",
+    "what_are_they_looking_for": "What are they looking for?",
+    "something_serious": "Something serious",
+    "just_dating": "Just dating",
+    "just_fun": "Just fun",
+    "open_to_anything": "Open to anything",
+    "not_sure": "Not sure",
+    "what_are_their_beliefs": "What are their beliefs?",
+    "agnostic": "Agnostic",
+    "atheist": "Atheist",
+    "buddhist": "Buddhist",
+    "christian": "Christian",
+    "jewish": "Jewish",
+    "muslim": "Muslim",
+    "other_beliefs": "Other",
+    "do_they_exercise": "Do they exercise?",
+    "regularly": "Regularly",
+    "occasionally": "Occasionally",
+    "rarely": "Rarely",
+    "do_they_drink": "Do they drink?",
+    "yes_drink": "হ্যাঁ",
+    "occasionally_drink": "Occasionally",
+    "rarely_drink": "Rarely",
+    "no_drink": "না",
+    "do_they_smoke": "Do they smoke?",
+    "yes_smoke": "হ্যাঁ",
+    "sometimes": "Sometimes",
+    "no_smoke": "না",
+    "trying_to_quit": "Trying to quit",
+    "nearby_visibility": "Nearby visibility",
+    "apply_filters": "Apply filters"
+  },
+  "nearby_search_preferences": {
+    "title": "Nearby Search Preferences",
+    "choose_how_visible_your_location_is_you_can_change_this_anytime": "Choose how visible your location is. You can change this anytime.",
+    "visibility_modes": "Visibility modes:",
+    "invisible": "Invisible",
+    "visible_while_using_the_app": "Visible while using the app",
+    "your_last_location": "Your last location",
+    "to_update_your_status_go_to_profile_settings_location": "To update your status, go to Profile Settings > Location.",
+    "save_visibility": "দৃশ্যমানতা সংরক্ষণ করুন"
+  },
+  "chat_preferences": {
+    "title": "Chat Preferences",
+    "choose_who_can_message_you_you_can_change_this_anytime": "Choose who can message you. You can change this anytime.",
+    "availability_modes": "Availability modes:",
+    "unavailable": "Unavailable",
+    "matched_users_only": "Matched users only",
+    "available": "Available",
+    "stuff_i_could_talk_about_for_hours": "Stuff I could talk about for hours:",
+    "obscure_scifi_films_with_depressing_endings": "Obscure sci-fi films with depressing endings",
+    "save_chat_preferences": "Save chat preferences"
+  },
+  "contact_us": {
+    "title": "Contact us",
+    "let_us_know_what_you_think": "Let us know what you think...",
+    "submit": "জমা দিন"
+  },
+  "hide_account": {
+    "title": "অ্যাকাউন্ট লুকান",
+    "hide": "Hide"
+  },
+  "delete_account": {
+    "title": "অ্যাকাউন্ট মুছুন",
+    "are_you_sure": "Are you sure?",
+    "absolutely": "Absolutely",
+    "not_quite": "Not quite"
+  },
+  "profile_about_me": {
+    "about_me": "আমার সম্পর্কে:",
+    "no_pressure_leave_it_blank_if_you_like": "কোনো চাপ নেই - চাইলে খালি রাখুন।"
+  },
+  "profile_gender": {
+    "gender": "লিঙ্গ:"
+  },
+  "profile_age": {
+    "when_were_you_born": "আপনার জন্ম কবে:",
+    "day": "দিন",
+    "month": "মাস",
+    "year": "বছর",
+    "optional": "ঐচ্ছিক",
+    "day_placeholder": "--",
+    "month_placeholder": "--",
+    "year_placeholder": "--"
+  },
+  "months": {
+    "january": "জানুয়ারি",
+    "february": "ফেব্রুয়ারি",
+    "march": "মার্চ",
+    "april": "এপ্রিল",
+    "may": "মে",
+    "june": "জুন",
+    "july": "জুলাই",
+    "august": "আগস্ট",
+    "september": "সেপ্টেম্বর",
+    "october": "অক্টোবর",
+    "november": "নভেম্বর",
+    "december": "ডিসেম্বর"
+  },
+  "profile_height": {
+    "my_height": "উচ্চতা:",
+    "enter_your_height": "আপনার উচ্চতা লিখুন",
+    "ft": "ft",
+    "cm": "cm"
+  },
+  "profile_body_type": {
+    "my_body_type": "শরীরের ধরন:"
+  },
+  "profile_work": {
+    "my_work": "কাজ:",
+    "what_do_you_do": "আপনি কী করেন?"
+  },
+  "profile_education": {
+    "my_education": "শিক্ষা:",
+    "pick_the_closest_match": "সবচেয়ে কাছাকাছি মিল বেছে নিন"
+  },
+  "profile_kids": {
+    "kids": "সন্তান:"
+  },
+  "profile_relationship": {
+    "my_preferred_relationship": "পছন্দের সম্পর্ক:",
+    "what_are_you_looking_for": "আপনি কী খুঁজছেন?"
+  },
+  "profile_religion": {
+    "my_beliefs": "বিশ্বাস:"
+  },
+  "profile_exercise": {
+    "exercise": "ব্যায়াম:",
+    "any_form_of_physical_activity": "যেকোনো ধরনের শারীরিক কার্যকলাপ"
+  },
+  "profile_drinking": {
+    "my_drinking_habits": "মদ্যপান:",
+    "choose_what_best_describes_your_alcohol_use": "আপনার মদ্যপানের অভ্যাস যা সবচেয়ে ভালো বোঝায় তা বেছে নিন।"
+  },
+  "profile_smoking": {
+    "my_smoking_habits": "ধূমপান:",
+    "do_you_smoke": "আপনি ধূমপান করেন?"
+  },
+  "profile_location": {
+    "my_location": "My location:",
+    "automatically_detect_my_location_recommended": "Automatically detect my location (recommended)",
+    "status_in_nearby_local": "Status in Nearby: Local",
+    "i_will_set_my_location_manually": "I will set my location manually",
+    "select_location": "Select location..."
+  },
+  "nearby": {
+    "title": "কাছাকাছি",
+    "filters": "ফিল্টার",
+    "visibility": "Visibility",
+    "tab_label": "কাছাকাছি"
+  },
+  "email_auth": {
+    "sign_in_with_email": "Sign in with email",
+    "use_your_email_and_password_or_create_a_new_account": "Use your email and password, or create a new account.",
+    "sign_in": "সাইন ইন",
+    "register": "নিবন্ধন",
+    "email_address": "ইমেল ঠিকানা",
+    "password": "পাসওয়ার্ড",
+    "repeat_password": "Repeat password",
+    "create_account": "অ্যাকাউন্ট তৈরি করুন",
+    "forgot_password": "Forgot password?",
+    "continue_button": "চালিয়ে যান"
+  },
+  "phone_auth": {
+    "title": "Phone auth",
+    "phone_verification_is_not_implemented_yet": "Phone verification is not implemented yet."
+  },
+  "verify_number": {
+    "title": "Verify number",
+    "sms_verification_is_not_implemented_yet": "SMS verification is not implemented yet."
+  },
+  "reset_password": {
+    "title": "পাসওয়ার্ড রিসেট করুন",
+    "enter_your_email_and_we_will_send_a_password_reset_link": "Enter your email and we will send a password reset link.",
+    "email_address": "ইমেল ঠিকানা",
+    "send_reset_link": "Send reset link"
+  },
+  "update_password": {
+    "title": "পাসওয়ার্ড আপডেট করুন",
+    "choose_a_new_password_for_your_nearsy_account": "Choose a new password for your Nearsy account.",
+    "new_password": "New password",
+    "repeat_password": "Repeat password",
+    "submit_button": "পাসওয়ার্ড আপডেট করুন"
+  },
+  "lookaround_bottom_nav": {
+    "profile": "প্রোফাইল",
+    "people": "মানুষ",
+    "nearby": "কাছাকাছি",
+    "liked_you": "আপনাকে পছন্দ করেছে",
+    "chats": "চ্যাট"
+  },
+  "profile_attributes": {
+    "gender": {
+      "woman": "Woman",
+      "man": "Man",
+      "non_binary": "Non-binary",
+      "other": "Other"
+    },
+    "education": {
+      "high_school": "High School",
+      "currently_studying": "Currently Studying",
+      "trade_qualification": "Trade Qualification",
+      "bachelors_degree": "Bachelor's Degree",
+      "masters_degree": "Master's Degree",
+      "doctorate_phd": "Doctorate / PhD",
+      "postgraduate": "Postgraduate",
+      "other": "Other",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "kids": {
+      "yes": "Have kids",
+      "no": "Don't have kids",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "relationship_type": {
+      "something_serious": "Something Serious",
+      "just_dating": "Just Dating",
+      "just_fun": "Just Fun",
+      "open_to_anything": "Open to Anything",
+      "not_sure": "Not Sure"
+    },
+    "religion": {
+      "agnostic": "Agnostic",
+      "atheist": "Atheist",
+      "buddhist": "Buddhist",
+      "christian": "Christian",
+      "hindu": "Hindu",
+      "jewish": "Jewish",
+      "muslim": "Muslim",
+      "sikh": "Sikh",
+      "spiritual": "Spiritual",
+      "other": "Other"
+    },
+    "body_type": {
+      "slim": "Slim",
+      "lean": "Lean",
+      "average": "Average",
+      "fit": "Fit",
+      "athletic": "Athletic",
+      "muscular": "Muscular",
+      "broad": "Broad",
+      "stocky": "Stocky",
+      "bigger": "Bigger",
+      "curvy": "Curvy",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "exercise": {
+      "regularly": "Regularly",
+      "occasionally": "Occasionally",
+      "rarely": "Rarely",
+      "never": "Never"
+    },
+    "drinking": {
+      "yes": "Yes",
+      "occasionally": "Occasionally",
+      "rarely": "Rarely",
+      "no": "No",
+      "stopped_for_now": "Stopped for now"
+    },
+    "smoking": {
+      "yes": "Yes",
+      "sometimes": "Sometimes",
+      "no": "No",
+      "trying_to_quit": "Trying to quit"
+    }
+  },
+  "languages": {
+    "afar": "Afar",
+    "afrikaans": "Afrikaans",
+    "albanian": "Albanian",
+    "amharic": "Amharic",
+    "arabic": "Arabic",
+    "armenian": "Armenian",
+    "bengali": "Bengali",
+    "catalan": "Catalan"
+  }
+}

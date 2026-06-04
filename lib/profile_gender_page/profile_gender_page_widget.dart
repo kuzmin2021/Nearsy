@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -210,8 +210,8 @@ class _ProfileGenderPageWidgetState extends State<ProfileGenderPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            '66ivcyvi' /* Gender: */,
+                          AppLabels.of(context).get(
+                            'profile_gender.gender' /* Gender: */,
                           ),
                           maxLines: 2,
                           style:

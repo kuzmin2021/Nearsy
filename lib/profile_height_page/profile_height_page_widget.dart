@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -263,8 +263,8 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                       child: Container(
                         child: Container(
                           child: Text(
-                            FTLocalizations.of(context).getText(
-                              '6vhy5m18' /* My height: */,
+                            AppLabels.of(context).get(
+                              'profile_height.my_height' /* My height: */,
                             ),
                             maxLines: 1,
                             style: FloterTheme.of(context)
@@ -301,8 +301,8 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                       child: Container(
                         child: Container(
                           child: Text(
-                            FTLocalizations.of(context).getText(
-                              'zn6hzdig' /* Enter your height */,
+                            AppLabels.of(context).get(
+                              'profile_height.enter_your_height' /* Enter your height */,
                             ),
                             maxLines: 1,
                             style: FloterTheme.of(context)
@@ -346,8 +346,8 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                FTLocalizations.of(context).getText(
-                                  'qo1m3zvr' /* ft */,
+                                AppLabels.of(context).get(
+                                  'profile_height.ft' /* ft */,
                                 ),
                                 style: FloterTheme.of(context)
                                     .bodyMedium
@@ -530,8 +530,8 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                 ),
                               ),
                               Text(
-                                FTLocalizations.of(context).getText(
-                                  'p6i9afuo' /* cm */,
+                                AppLabels.of(context).get(
+                                  'profile_height.cm' /* cm */,
                                 ),
                                 style: FloterTheme.of(context)
                                     .bodyMedium

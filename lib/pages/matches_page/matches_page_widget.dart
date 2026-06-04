@@ -1,4 +1,4 @@
-﻿import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -82,8 +82,8 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  FTLocalizations.of(context).getText(
-                                    'ay1qd21k' /* Chats */,
+                                  AppLabels.of(context).get(
+                                    'matches.chats' /* Chats */,
                                   ),
                                   style: FloterTheme.of(context)
                                       .titleLarge
@@ -176,8 +176,8 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          FTLocalizations.of(context).getText(
-                                            '5a3gr4f5' /* Kirill, 38 */,
+                                          AppLabels.of(context).get(
+                                            'skip' /* Kirill, 38 */,
                                           ),
                                           style: FloterTheme.of(context)
                                               .titleSmall
@@ -206,8 +206,8 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                               ),
                                         ),
                                         Text(
-                                          FTLocalizations.of(context).getText(
-                                            'fkpmlsax' /* You: Normur */,
+                                          AppLabels.of(context).get(
+                                            'matches.you_normur' /* You: Normur */,
                                           ),
                                           maxLines: 1,
                                           style: FloterTheme.of(context)
@@ -289,8 +289,8 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        FTLocalizations.of(context).getText(
-                                          'to7m2154' /* Fyodor, 45 */,
+                                        AppLabels.of(context).get(
+                                          'skip' /* Fyodor, 45 */,
                                         ),
                                         style: FloterTheme.of(context)
                                             .titleSmall
@@ -317,8 +317,8 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                             ),
                                       ),
                                       Text(
-                                        FTLocalizations.of(context).getText(
-                                          '1gsvf1cu' /* You: How big is your... */,
+                                        AppLabels.of(context).get(
+                                          'matches.you_how_big_is_your' /* You: How big is your... */,
                                         ),
                                         maxLines: 1,
                                         style: FloterTheme.of(context)
@@ -397,8 +397,8 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        FTLocalizations.of(context).getText(
-                                          'dzw8ocy7' /* Stepan, 29 */,
+                                        AppLabels.of(context).get(
+                                          'skip' /* Stepan, 29 */,
                                         ),
                                         style: FloterTheme.of(context)
                                             .titleSmall
@@ -425,8 +425,8 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                             ),
                                       ),
                                       Text(
-                                        FTLocalizations.of(context).getText(
-                                          'lm802i01' /* Sure, see you at bla... */,
+                                        AppLabels.of(context).get(
+                                          'matches.sure_see_you_at_bla' /* Sure, see you at bla... */,
                                         ),
                                         maxLines: 1,
                                         style: FloterTheme.of(context)

@@ -1,8 +1,7 @@
-﻿import '/floter/floter_theme.dart';
+import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
 import 'dart:ui';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -56,11 +55,8 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
             child: Stack(
               alignment: AlignmentDirectional(0.0, 0.0),
               children: [
-                CachedNetworkImage(
-                  fadeInDuration: Duration(milliseconds: 0),
-                  fadeOutDuration: Duration(milliseconds: 0),
-                  imageUrl:
-                      'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=85',
+                Image.asset(
+                  'assets/images/start_screen_bg.png',
                   width: double.infinity,
                   height: 926.0,
                   fit: BoxFit.cover,
@@ -120,8 +116,8 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                             height: 20.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'kp7a40ty' /* Phone auth */,
+                            AppLabels.of(context).get(
+                              'phone_auth.title' /* Phone auth */,
                             ),
                             style: FloterTheme.of(context)
                                 .headlineSmall
@@ -146,8 +142,8 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                                 ),
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'eot2blxz' /* This screen is kept in the app... */,
+                            AppLabels.of(context).get(
+                              'phone_auth.label_1' /* This screen is kept in the app... */,
                             ),
                             maxLines: 2,
                             style: FloterTheme.of(context)
@@ -182,8 +178,8 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                             child: Padding(
                               padding: EdgeInsets.all(18.0),
                               child: Text(
-                                FTLocalizations.of(context).getText(
-                                  '203pvda9' /* Phone verification is not impl... */,
+                                AppLabels.of(context).get(
+                                  'phone_auth.phone_verification_is_not_implemented_yet' /* Phone verification is not impl... */,
                                 ),
                                 style: FloterTheme.of(context)
                                     .bodyMedium

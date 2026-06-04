@@ -1,0 +1,362 @@
+{
+  "auth": {
+    "nearsy": "Nearsy",
+    "meet_near_keep_it_easy": "Meet near. Keep it easy",
+    "continue_with_email": "மின்னஞ்சலுடன் தொடரவும்",
+    "continue_with_phone": "Continue with phone",
+    "by_signing_up_you_agree_to_the_terms_of": "By signing up you agree to the Terms of",
+    "service_and_privacy_policy": "Service and Privacy Policy"
+  },
+  "profile": {
+    "title": "சுயவிவரம்",
+    "name": "பெயர்",
+    "catchphrase": "Catchphrase",
+    "about_me": "என்னை பற்றி",
+    "gender": "பாலினம்",
+    "age": "வயது",
+    "height": "உயரம்",
+    "work": "வேலை",
+    "education": "கல்வி",
+    "kids": "குழந்தைகள்",
+    "preferred_relationships": "விரும்பும் உறவுகள்",
+    "beliefs": "நம்பிக்கைகள்",
+    "body_type": "உடல் வகை",
+    "exercise": "உடற்பயிற்சி",
+    "drinking": "மது",
+    "smoking": "புகைபிடித்தல்",
+    "profile_alt": "சுயவிவரம்"
+  },
+  "people": {
+    "lookaround": "Lookaround",
+    "guess_what_i": "Guess what I",
+    "title": "மக்கள்"
+  },
+  "liked_you": {
+    "title": "உங்களை விரும்பினர்",
+    "all_3": "All 3",
+    "filter_matches_0": "Filter matches 0",
+    "outside_3": "Outside 3",
+    "tab_label": "உங்களை விரும்பினர்"
+  },
+  "matches": {
+    "chats": "அரட்டைகள்",
+    "you_normur": "You: Normur",
+    "you_how_big_is_your": "You: How big is your...",
+    "sure_see_you_at_bla": "Sure, see you at bla...",
+    "tab_label": "அரட்டைகள்"
+  },
+  "chat": {
+    "chyokak": "Chyokak?",
+    "normur": "Normur",
+    "kirill_is_typing": "Kirill is typing...",
+    "write_a_message": "Write a message"
+  },
+  "account_settings": {
+    "title": "கணக்கு அமைப்புகள்",
+    "edit_email": "திருத்து",
+    "edit_phone": "திருத்து",
+    "edit_password": "திருத்து",
+    "email_authentication": "Email authentication",
+    "manage": "Manage",
+    "notifications": "அறிவிப்புகள்",
+    "push_notifications": "Push Notifications",
+    "matches": "பொருத்தங்கள்",
+    "messages": "செய்திகள்",
+    "liked_you": "Liked you",
+    "email_notifications": "Email Notifications",
+    "matches_email": "பொருத்தங்கள்",
+    "messages_email": "செய்திகள்",
+    "liked_you_email": "Liked you",
+    "feedback": "கருத்து",
+    "hide_account": "கணக்கை மறை",
+    "delete_account": "கணக்கை நீக்கு",
+    "log_out": "வெளியேறு",
+    "chats": "அரட்டைகள்"
+  },
+  "search_preferences": {
+    "title": "தேடல் விருப்பங்கள்",
+    "who_you_want_to_date": "Who you want to date:",
+    "women": "Women",
+    "men": "Men",
+    "other_gender": "Other",
+    "age": "வயது:",
+    "between_20_and_50": "Between 20 and 50",
+    "search_radius": "Search radius:",
+    "up_to_161_kilometres_away": "Up to 161 kilometres away",
+    "languages_they_know": "Languages they know:",
+    "what_are_they_looking_for": "What are they looking for?",
+    "something_serious": "Something serious",
+    "just_dating": "Just dating",
+    "just_fun": "Just fun",
+    "open_to_anything": "Open to anything",
+    "not_sure": "Not sure",
+    "what_are_their_beliefs": "What are their beliefs?",
+    "agnostic": "Agnostic",
+    "atheist": "Atheist",
+    "buddhist": "Buddhist",
+    "christian": "Christian",
+    "jewish": "Jewish",
+    "muslim": "Muslim",
+    "other_beliefs": "Other",
+    "do_they_exercise": "Do they exercise?",
+    "regularly": "Regularly",
+    "occasionally": "Occasionally",
+    "rarely": "Rarely",
+    "do_they_drink": "Do they drink?",
+    "yes_drink": "ஆம்",
+    "occasionally_drink": "Occasionally",
+    "rarely_drink": "Rarely",
+    "no_drink": "இல்லை",
+    "do_they_smoke": "Do they smoke?",
+    "yes_smoke": "ஆம்",
+    "sometimes": "Sometimes",
+    "no_smoke": "இல்லை",
+    "trying_to_quit": "Trying to quit",
+    "nearby_visibility": "Nearby visibility",
+    "apply_filters": "Apply filters"
+  },
+  "nearby_search_preferences": {
+    "title": "Nearby Search Preferences",
+    "choose_how_visible_your_location_is_you_can_change_this_anytime": "Choose how visible your location is. You can change this anytime.",
+    "visibility_modes": "Visibility modes:",
+    "invisible": "Invisible",
+    "visible_while_using_the_app": "Visible while using the app",
+    "your_last_location": "Your last location",
+    "to_update_your_status_go_to_profile_settings_location": "To update your status, go to Profile Settings > Location.",
+    "save_visibility": "காண்பித்தலை சேமி"
+  },
+  "chat_preferences": {
+    "title": "Chat Preferences",
+    "choose_who_can_message_you_you_can_change_this_anytime": "Choose who can message you. You can change this anytime.",
+    "availability_modes": "Availability modes:",
+    "unavailable": "Unavailable",
+    "matched_users_only": "Matched users only",
+    "available": "Available",
+    "stuff_i_could_talk_about_for_hours": "Stuff I could talk about for hours:",
+    "obscure_scifi_films_with_depressing_endings": "Obscure sci-fi films with depressing endings",
+    "save_chat_preferences": "Save chat preferences"
+  },
+  "contact_us": {
+    "title": "Contact us",
+    "let_us_know_what_you_think": "Let us know what you think...",
+    "submit": "சமர்ப்பி"
+  },
+  "hide_account": {
+    "title": "கணக்கை மறை",
+    "hide": "Hide"
+  },
+  "delete_account": {
+    "title": "கணக்கை நீக்கு",
+    "are_you_sure": "Are you sure?",
+    "absolutely": "Absolutely",
+    "not_quite": "Not quite"
+  },
+  "profile_about_me": {
+    "about_me": "என்னை பற்றி:",
+    "no_pressure_leave_it_blank_if_you_like": "அழுத்தம் இல்லை - விரும்பினால் காலியாக விடலாம்."
+  },
+  "profile_gender": {
+    "gender": "பாலினம்:"
+  },
+  "profile_age": {
+    "when_were_you_born": "நீங்கள் எப்போது பிறந்தீர்கள்:",
+    "day": "நாள்",
+    "month": "மாதம்",
+    "year": "ஆண்டு",
+    "optional": "விருப்பமானது",
+    "day_placeholder": "--",
+    "month_placeholder": "--",
+    "year_placeholder": "--"
+  },
+  "months": {
+    "january": "ஜனவரி",
+    "february": "பிப்ரவரி",
+    "march": "மார்ச்",
+    "april": "ஏப்ரல்",
+    "may": "மே",
+    "june": "ஜூன்",
+    "july": "ஜூலை",
+    "august": "ஆகஸ்ட்",
+    "september": "செப்டம்பர்",
+    "october": "அக்டோபர்",
+    "november": "நவம்பர்",
+    "december": "டிசம்பர்"
+  },
+  "profile_height": {
+    "my_height": "உயரம்:",
+    "enter_your_height": "உங்கள் உயரத்தை உள்ளிடுங்கள்",
+    "ft": "ft",
+    "cm": "cm"
+  },
+  "profile_body_type": {
+    "my_body_type": "உடல் வகை:"
+  },
+  "profile_work": {
+    "my_work": "வேலை:",
+    "what_do_you_do": "நீங்கள் என்ன வேலை செய்கிறீர்கள்?"
+  },
+  "profile_education": {
+    "my_education": "கல்வி:",
+    "pick_the_closest_match": "மிக பொருத்தமானதை தேர்வு செய்யுங்கள்"
+  },
+  "profile_kids": {
+    "kids": "குழந்தைகள்:"
+  },
+  "profile_relationship": {
+    "my_preferred_relationship": "விரும்பும் உறவுகள்:",
+    "what_are_you_looking_for": "நீங்கள் என்ன தேடுகிறீர்கள்?"
+  },
+  "profile_religion": {
+    "my_beliefs": "நம்பிக்கைகள்:"
+  },
+  "profile_exercise": {
+    "exercise": "உடற்பயிற்சி:",
+    "any_form_of_physical_activity": "எந்த வகையான உடல் செயல்பாடும்"
+  },
+  "profile_drinking": {
+    "my_drinking_habits": "மது:",
+    "choose_what_best_describes_your_alcohol_use": "உங்கள் மது பயன்பாட்டை சிறப்பாக விவரிப்பதை தேர்வு செய்யுங்கள்."
+  },
+  "profile_smoking": {
+    "my_smoking_habits": "புகைபிடித்தல்:",
+    "do_you_smoke": "நீங்கள் புகைபிடிப்பீர்களா?"
+  },
+  "profile_location": {
+    "my_location": "My location:",
+    "automatically_detect_my_location_recommended": "Automatically detect my location (recommended)",
+    "status_in_nearby_local": "Status in Nearby: Local",
+    "i_will_set_my_location_manually": "I will set my location manually",
+    "select_location": "Select location..."
+  },
+  "nearby": {
+    "title": "அருகில்",
+    "filters": "வடிப்பான்கள்",
+    "visibility": "Visibility",
+    "tab_label": "அருகில்"
+  },
+  "email_auth": {
+    "sign_in_with_email": "Sign in with email",
+    "use_your_email_and_password_or_create_a_new_account": "Use your email and password, or create a new account.",
+    "sign_in": "உள்நுழை",
+    "register": "பதிவு செய்",
+    "email_address": "மின்னஞ்சல் முகவரி",
+    "password": "கடவுச்சொல்",
+    "repeat_password": "Repeat password",
+    "create_account": "கணக்கை உருவாக்கு",
+    "forgot_password": "Forgot password?",
+    "continue_button": "தொடரவும்"
+  },
+  "phone_auth": {
+    "title": "Phone auth",
+    "phone_verification_is_not_implemented_yet": "Phone verification is not implemented yet."
+  },
+  "verify_number": {
+    "title": "Verify number",
+    "sms_verification_is_not_implemented_yet": "SMS verification is not implemented yet."
+  },
+  "reset_password": {
+    "title": "கடவுச்சொல்லை மீட்டமை",
+    "enter_your_email_and_we_will_send_a_password_reset_link": "Enter your email and we will send a password reset link.",
+    "email_address": "மின்னஞ்சல் முகவரி",
+    "send_reset_link": "Send reset link"
+  },
+  "update_password": {
+    "title": "கடவுச்சொல்லை புதுப்பி",
+    "choose_a_new_password_for_your_nearsy_account": "Choose a new password for your Nearsy account.",
+    "new_password": "New password",
+    "repeat_password": "Repeat password",
+    "submit_button": "கடவுச்சொல்லை புதுப்பி"
+  },
+  "lookaround_bottom_nav": {
+    "profile": "சுயவிவரம்",
+    "people": "மக்கள்",
+    "nearby": "அருகில்",
+    "liked_you": "உங்களை விரும்பினர்",
+    "chats": "அரட்டைகள்"
+  },
+  "profile_attributes": {
+    "gender": {
+      "woman": "Woman",
+      "man": "Man",
+      "non_binary": "Non-binary",
+      "other": "Other"
+    },
+    "education": {
+      "high_school": "High School",
+      "currently_studying": "Currently Studying",
+      "trade_qualification": "Trade Qualification",
+      "bachelors_degree": "Bachelor's Degree",
+      "masters_degree": "Master's Degree",
+      "doctorate_phd": "Doctorate / PhD",
+      "postgraduate": "Postgraduate",
+      "other": "Other",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "kids": {
+      "yes": "Have kids",
+      "no": "Don't have kids",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "relationship_type": {
+      "something_serious": "Something Serious",
+      "just_dating": "Just Dating",
+      "just_fun": "Just Fun",
+      "open_to_anything": "Open to Anything",
+      "not_sure": "Not Sure"
+    },
+    "religion": {
+      "agnostic": "Agnostic",
+      "atheist": "Atheist",
+      "buddhist": "Buddhist",
+      "christian": "Christian",
+      "hindu": "Hindu",
+      "jewish": "Jewish",
+      "muslim": "Muslim",
+      "sikh": "Sikh",
+      "spiritual": "Spiritual",
+      "other": "Other"
+    },
+    "body_type": {
+      "slim": "Slim",
+      "lean": "Lean",
+      "average": "Average",
+      "fit": "Fit",
+      "athletic": "Athletic",
+      "muscular": "Muscular",
+      "broad": "Broad",
+      "stocky": "Stocky",
+      "bigger": "Bigger",
+      "curvy": "Curvy",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "exercise": {
+      "regularly": "Regularly",
+      "occasionally": "Occasionally",
+      "rarely": "Rarely",
+      "never": "Never"
+    },
+    "drinking": {
+      "yes": "Yes",
+      "occasionally": "Occasionally",
+      "rarely": "Rarely",
+      "no": "No",
+      "stopped_for_now": "Stopped for now"
+    },
+    "smoking": {
+      "yes": "Yes",
+      "sometimes": "Sometimes",
+      "no": "No",
+      "trying_to_quit": "Trying to quit"
+    }
+  },
+  "languages": {
+    "afar": "Afar",
+    "afrikaans": "Afrikaans",
+    "albanian": "Albanian",
+    "amharic": "Amharic",
+    "arabic": "Arabic",
+    "armenian": "Armenian",
+    "bengali": "Bengali",
+    "catalan": "Catalan"
+  }
+}

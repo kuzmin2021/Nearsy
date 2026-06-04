@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -210,8 +210,8 @@ class _ProfileExercisePageWidgetState extends State<ProfileExercisePageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'tskjzxjt' /* Exercise: */,
+                          AppLabels.of(context).get(
+                            'profile_exercise.exercise' /* Exercise: */,
                           ),
                           maxLines: 2,
                           style:
@@ -246,8 +246,8 @@ class _ProfileExercisePageWidgetState extends State<ProfileExercisePageWidget> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'z2fpmgrg' /* Any form of physical activity */,
+                            AppLabels.of(context).get(
+                              'profile_exercise.any_form_of_physical_activity' /* Any form of physical activity */,
                             ),
                             style: FloterTheme.of(context)
                                 .bodyMedium

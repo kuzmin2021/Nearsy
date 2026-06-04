@@ -1,0 +1,362 @@
+{
+  "auth": {
+    "nearsy": "Nearsy",
+    "meet_near_keep_it_easy": "Meet near. Keep it easy",
+    "continue_with_email": "ईमेलने पुढे जा",
+    "continue_with_phone": "Continue with phone",
+    "by_signing_up_you_agree_to_the_terms_of": "By signing up you agree to the Terms of",
+    "service_and_privacy_policy": "Service and Privacy Policy"
+  },
+  "profile": {
+    "title": "प्रोफाइल",
+    "name": "नाव",
+    "catchphrase": "Catchphrase",
+    "about_me": "माझ्याबद्दल",
+    "gender": "लिंग",
+    "age": "वय",
+    "height": "उंची",
+    "work": "काम",
+    "education": "शिक्षण",
+    "kids": "मुले",
+    "preferred_relationships": "पसंतीचे नाते",
+    "beliefs": "विश्वास",
+    "body_type": "शरीर प्रकार",
+    "exercise": "व्यायाम",
+    "drinking": "मद्यपान",
+    "smoking": "धूम्रपान",
+    "profile_alt": "प्रोफाइल"
+  },
+  "people": {
+    "lookaround": "Lookaround",
+    "guess_what_i": "Guess what I",
+    "title": "लोक"
+  },
+  "liked_you": {
+    "title": "ज्यांना तुम्ही आवडलात",
+    "all_3": "All 3",
+    "filter_matches_0": "Filter matches 0",
+    "outside_3": "Outside 3",
+    "tab_label": "ज्यांना तुम्ही आवडलात"
+  },
+  "matches": {
+    "chats": "चॅट",
+    "you_normur": "You: Normur",
+    "you_how_big_is_your": "You: How big is your...",
+    "sure_see_you_at_bla": "Sure, see you at bla...",
+    "tab_label": "चॅट"
+  },
+  "chat": {
+    "chyokak": "Chyokak?",
+    "normur": "Normur",
+    "kirill_is_typing": "Kirill is typing...",
+    "write_a_message": "Write a message"
+  },
+  "account_settings": {
+    "title": "खाते सेटिंग्ज",
+    "edit_email": "संपादित करा",
+    "edit_phone": "संपादित करा",
+    "edit_password": "संपादित करा",
+    "email_authentication": "Email authentication",
+    "manage": "Manage",
+    "notifications": "सूचना",
+    "push_notifications": "Push Notifications",
+    "matches": "मॅचेस",
+    "messages": "संदेश",
+    "liked_you": "Liked you",
+    "email_notifications": "Email Notifications",
+    "matches_email": "मॅचेस",
+    "messages_email": "संदेश",
+    "liked_you_email": "Liked you",
+    "feedback": "अभिप्राय",
+    "hide_account": "खाते लपवा",
+    "delete_account": "खाते हटवा",
+    "log_out": "लॉग आउट",
+    "chats": "चॅट"
+  },
+  "search_preferences": {
+    "title": "शोध प्राधान्ये",
+    "who_you_want_to_date": "Who you want to date:",
+    "women": "Women",
+    "men": "Men",
+    "other_gender": "Other",
+    "age": "वय:",
+    "between_20_and_50": "Between 20 and 50",
+    "search_radius": "Search radius:",
+    "up_to_161_kilometres_away": "Up to 161 kilometres away",
+    "languages_they_know": "Languages they know:",
+    "what_are_they_looking_for": "What are they looking for?",
+    "something_serious": "Something serious",
+    "just_dating": "Just dating",
+    "just_fun": "Just fun",
+    "open_to_anything": "Open to anything",
+    "not_sure": "Not sure",
+    "what_are_their_beliefs": "What are their beliefs?",
+    "agnostic": "Agnostic",
+    "atheist": "Atheist",
+    "buddhist": "Buddhist",
+    "christian": "Christian",
+    "jewish": "Jewish",
+    "muslim": "Muslim",
+    "other_beliefs": "Other",
+    "do_they_exercise": "Do they exercise?",
+    "regularly": "Regularly",
+    "occasionally": "Occasionally",
+    "rarely": "Rarely",
+    "do_they_drink": "Do they drink?",
+    "yes_drink": "होय",
+    "occasionally_drink": "Occasionally",
+    "rarely_drink": "Rarely",
+    "no_drink": "नाही",
+    "do_they_smoke": "Do they smoke?",
+    "yes_smoke": "होय",
+    "sometimes": "Sometimes",
+    "no_smoke": "नाही",
+    "trying_to_quit": "Trying to quit",
+    "nearby_visibility": "Nearby visibility",
+    "apply_filters": "Apply filters"
+  },
+  "nearby_search_preferences": {
+    "title": "Nearby Search Preferences",
+    "choose_how_visible_your_location_is_you_can_change_this_anytime": "Choose how visible your location is. You can change this anytime.",
+    "visibility_modes": "Visibility modes:",
+    "invisible": "Invisible",
+    "visible_while_using_the_app": "Visible while using the app",
+    "your_last_location": "Your last location",
+    "to_update_your_status_go_to_profile_settings_location": "To update your status, go to Profile Settings > Location.",
+    "save_visibility": "दृश्यमानता जतन करा"
+  },
+  "chat_preferences": {
+    "title": "Chat Preferences",
+    "choose_who_can_message_you_you_can_change_this_anytime": "Choose who can message you. You can change this anytime.",
+    "availability_modes": "Availability modes:",
+    "unavailable": "Unavailable",
+    "matched_users_only": "Matched users only",
+    "available": "Available",
+    "stuff_i_could_talk_about_for_hours": "Stuff I could talk about for hours:",
+    "obscure_scifi_films_with_depressing_endings": "Obscure sci-fi films with depressing endings",
+    "save_chat_preferences": "Save chat preferences"
+  },
+  "contact_us": {
+    "title": "Contact us",
+    "let_us_know_what_you_think": "Let us know what you think...",
+    "submit": "सबमिट करा"
+  },
+  "hide_account": {
+    "title": "खाते लपवा",
+    "hide": "Hide"
+  },
+  "delete_account": {
+    "title": "खाते हटवा",
+    "are_you_sure": "Are you sure?",
+    "absolutely": "Absolutely",
+    "not_quite": "Not quite"
+  },
+  "profile_about_me": {
+    "about_me": "माझ्याबद्दल:",
+    "no_pressure_leave_it_blank_if_you_like": "दबाव नाही - हवे असल्यास रिकामे ठेवा."
+  },
+  "profile_gender": {
+    "gender": "लिंग:"
+  },
+  "profile_age": {
+    "when_were_you_born": "तुमचा जन्म कधी झाला:",
+    "day": "दिवस",
+    "month": "महिना",
+    "year": "वर्ष",
+    "optional": "ऐच्छिक",
+    "day_placeholder": "--",
+    "month_placeholder": "--",
+    "year_placeholder": "--"
+  },
+  "months": {
+    "january": "जानेवारी",
+    "february": "फेब्रुवारी",
+    "march": "मार्च",
+    "april": "एप्रिल",
+    "may": "मे",
+    "june": "जून",
+    "july": "जुलै",
+    "august": "ऑगस्ट",
+    "september": "सप्टेंबर",
+    "october": "ऑक्टोबर",
+    "november": "नोव्हेंबर",
+    "december": "डिसेंबर"
+  },
+  "profile_height": {
+    "my_height": "उंची:",
+    "enter_your_height": "तुमची उंची लिहा",
+    "ft": "ft",
+    "cm": "cm"
+  },
+  "profile_body_type": {
+    "my_body_type": "शरीर प्रकार:"
+  },
+  "profile_work": {
+    "my_work": "काम:",
+    "what_do_you_do": "तुम्ही काय करता?"
+  },
+  "profile_education": {
+    "my_education": "शिक्षण:",
+    "pick_the_closest_match": "सर्वात जवळचा पर्याय निवडा"
+  },
+  "profile_kids": {
+    "kids": "मुले:"
+  },
+  "profile_relationship": {
+    "my_preferred_relationship": "पसंतीचे नाते:",
+    "what_are_you_looking_for": "तुम्ही काय शोधत आहात?"
+  },
+  "profile_religion": {
+    "my_beliefs": "विश्वास:"
+  },
+  "profile_exercise": {
+    "exercise": "व्यायाम:",
+    "any_form_of_physical_activity": "कोणत्याही प्रकारची शारीरिक क्रिया"
+  },
+  "profile_drinking": {
+    "my_drinking_habits": "मद्यपान:",
+    "choose_what_best_describes_your_alcohol_use": "तुमच्या मद्यपानाचे सर्वात चांगले वर्णन निवडा."
+  },
+  "profile_smoking": {
+    "my_smoking_habits": "धूम्रपान:",
+    "do_you_smoke": "तुम्ही धूम्रपान करता का?"
+  },
+  "profile_location": {
+    "my_location": "My location:",
+    "automatically_detect_my_location_recommended": "Automatically detect my location (recommended)",
+    "status_in_nearby_local": "Status in Nearby: Local",
+    "i_will_set_my_location_manually": "I will set my location manually",
+    "select_location": "Select location..."
+  },
+  "nearby": {
+    "title": "जवळपास",
+    "filters": "फिल्टर",
+    "visibility": "Visibility",
+    "tab_label": "जवळपास"
+  },
+  "email_auth": {
+    "sign_in_with_email": "Sign in with email",
+    "use_your_email_and_password_or_create_a_new_account": "Use your email and password, or create a new account.",
+    "sign_in": "साइन इन",
+    "register": "नोंदणी करा",
+    "email_address": "ईमेल पत्ता",
+    "password": "पासवर्ड",
+    "repeat_password": "Repeat password",
+    "create_account": "खाते तयार करा",
+    "forgot_password": "Forgot password?",
+    "continue_button": "पुढे जा"
+  },
+  "phone_auth": {
+    "title": "Phone auth",
+    "phone_verification_is_not_implemented_yet": "Phone verification is not implemented yet."
+  },
+  "verify_number": {
+    "title": "Verify number",
+    "sms_verification_is_not_implemented_yet": "SMS verification is not implemented yet."
+  },
+  "reset_password": {
+    "title": "पासवर्ड रीसेट करा",
+    "enter_your_email_and_we_will_send_a_password_reset_link": "Enter your email and we will send a password reset link.",
+    "email_address": "ईमेल पत्ता",
+    "send_reset_link": "Send reset link"
+  },
+  "update_password": {
+    "title": "पासवर्ड अपडेट करा",
+    "choose_a_new_password_for_your_nearsy_account": "Choose a new password for your Nearsy account.",
+    "new_password": "New password",
+    "repeat_password": "Repeat password",
+    "submit_button": "पासवर्ड अपडेट करा"
+  },
+  "lookaround_bottom_nav": {
+    "profile": "प्रोफाइल",
+    "people": "लोक",
+    "nearby": "जवळपास",
+    "liked_you": "ज्यांना तुम्ही आवडलात",
+    "chats": "चॅट"
+  },
+  "profile_attributes": {
+    "gender": {
+      "woman": "Woman",
+      "man": "Man",
+      "non_binary": "Non-binary",
+      "other": "Other"
+    },
+    "education": {
+      "high_school": "High School",
+      "currently_studying": "Currently Studying",
+      "trade_qualification": "Trade Qualification",
+      "bachelors_degree": "Bachelor's Degree",
+      "masters_degree": "Master's Degree",
+      "doctorate_phd": "Doctorate / PhD",
+      "postgraduate": "Postgraduate",
+      "other": "Other",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "kids": {
+      "yes": "Have kids",
+      "no": "Don't have kids",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "relationship_type": {
+      "something_serious": "Something Serious",
+      "just_dating": "Just Dating",
+      "just_fun": "Just Fun",
+      "open_to_anything": "Open to Anything",
+      "not_sure": "Not Sure"
+    },
+    "religion": {
+      "agnostic": "Agnostic",
+      "atheist": "Atheist",
+      "buddhist": "Buddhist",
+      "christian": "Christian",
+      "hindu": "Hindu",
+      "jewish": "Jewish",
+      "muslim": "Muslim",
+      "sikh": "Sikh",
+      "spiritual": "Spiritual",
+      "other": "Other"
+    },
+    "body_type": {
+      "slim": "Slim",
+      "lean": "Lean",
+      "average": "Average",
+      "fit": "Fit",
+      "athletic": "Athletic",
+      "muscular": "Muscular",
+      "broad": "Broad",
+      "stocky": "Stocky",
+      "bigger": "Bigger",
+      "curvy": "Curvy",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "exercise": {
+      "regularly": "Regularly",
+      "occasionally": "Occasionally",
+      "rarely": "Rarely",
+      "never": "Never"
+    },
+    "drinking": {
+      "yes": "Yes",
+      "occasionally": "Occasionally",
+      "rarely": "Rarely",
+      "no": "No",
+      "stopped_for_now": "Stopped for now"
+    },
+    "smoking": {
+      "yes": "Yes",
+      "sometimes": "Sometimes",
+      "no": "No",
+      "trying_to_quit": "Trying to quit"
+    }
+  },
+  "languages": {
+    "afar": "Afar",
+    "afrikaans": "Afrikaans",
+    "albanian": "Albanian",
+    "amharic": "Amharic",
+    "arabic": "Arabic",
+    "armenian": "Armenian",
+    "bengali": "Bengali",
+    "catalan": "Catalan"
+  }
+}

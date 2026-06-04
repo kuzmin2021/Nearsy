@@ -1,4 +1,4 @@
-﻿import '/floter/floter_icon_button.dart';
+import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
@@ -80,8 +80,8 @@ class _HideAccountPageWidgetState extends State<HideAccountPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            '9o2rvhqi' /* Hide account */,
+                          AppLabels.of(context).get(
+                            'hide_account.title' /* Hide account */,
                           ),
                           maxLines: 2,
                           style:
@@ -107,8 +107,8 @@ class _HideAccountPageWidgetState extends State<HideAccountPageWidget> {
                     ].divide(SizedBox(width: 12.0)),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'rcjmbn7h' /* Hide your profile when you are... */,
+                    AppLabels.of(context).get(
+                      'hide_account.label_1' /* Hide your profile when you are... */,
                     ),
                     style: FloterTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
@@ -140,8 +140,8 @@ class _HideAccountPageWidgetState extends State<HideAccountPageWidget> {
                       );
                       context.pop();
                     },
-                    text: FTLocalizations.of(context).getText(
-                      'omxskgfq' /* Hide */,
+                    text: AppLabels.of(context).get(
+                      'hide_account.hide' /* Hide */,
                     ),
                     options: FTButtonOptions(
                       width: double.infinity,

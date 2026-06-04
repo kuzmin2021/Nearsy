@@ -1,4 +1,4 @@
-﻿import '/auth/supabase_auth/auth_util.dart';
+import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
@@ -16,6 +16,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'widgets/profile_photo_grid.dart';
 import 'profile_page_model.dart';
 export 'profile_page_model.dart';
 
@@ -676,8 +677,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 child: Container(
                                   child: Container(
                                     child: Text(
-                                      FTLocalizations.of(context).getText(
-                                        'wfki4rrr' /* Profile */,
+                                      AppLabels.of(context).get(
+                                        'profile.title' /* Profile */,
                                       ),
                                       style: FloterTheme.of(context)
                                           .titleLarge
@@ -1143,10 +1144,10 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 },
                                                 obscureText: false,
                                                 decoration: InputDecoration(
-                                                  hintText: FTLocalizations.of(
+                                                  hintText: AppLabels.of(
                                                           context)
-                                                      .getText(
-                                                    '9fzwisdr' /* Name */,
+                                                      .get(
+                                                    'profile.name' /* Name */,
                                                   ),
                                                   enabledBorder:
                                                       OutlineInputBorder(
@@ -1281,9 +1282,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             hintText:
-                                                FTLocalizations.of(context)
-                                                    .getText(
-                                              'hv110wzh' /* Catchphrase */,
+                                                AppLabels.of(context)
+                                                    .get(
+                                              'profile.catchphrase' /* Catchphrase */,
                                             ),
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
@@ -1930,8 +1931,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            FTLocalizations.of(context).getText(
-                                              'ery0k4mb' /* About me */,
+                                            AppLabels.of(context).get(
+                                              'profile.about_me' /* About me */,
                                             ),
                                             maxLines: 1,
                                             style: FloterTheme.of(context)
@@ -2046,8 +2047,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FTLocalizations.of(context).getText(
-                                          'cr4tn1fs' /* Gender */,
+                                        AppLabels.of(context).get(
+                                          'profile.gender' /* Gender */,
                                         ),
                                         maxLines: 2,
                                         style: FloterTheme.of(context)
@@ -2170,8 +2171,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FTLocalizations.of(context).getText(
-                                          '6807n9ts' /* Age */,
+                                        AppLabels.of(context).get(
+                                          'profile.age' /* Age */,
                                         ),
                                         maxLines: 2,
                                         style: FloterTheme.of(context)
@@ -2419,8 +2420,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FTLocalizations.of(context).getText(
-                                          '83xv5flg' /* Height */,
+                                        AppLabels.of(context).get(
+                                          'profile.height' /* Height */,
                                         ),
                                         maxLines: 2,
                                         style: FloterTheme.of(context)
@@ -2544,8 +2545,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FTLocalizations.of(context).getText(
-                                          'ae3e1gj6' /* Work */,
+                                        AppLabels.of(context).get(
+                                          'profile.work' /* Work */,
                                         ),
                                         maxLines: 2,
                                         style: FloterTheme.of(context)
@@ -2669,8 +2670,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FTLocalizations.of(context).getText(
-                                          'hvommh9i' /* Education */,
+                                        AppLabels.of(context).get(
+                                          'profile.education' /* Education */,
                                         ),
                                         maxLines: 2,
                                         style: FloterTheme.of(context)
@@ -2794,8 +2795,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FTLocalizations.of(context).getText(
-                                          'itv924zk' /* Kids */,
+                                        AppLabels.of(context).get(
+                                          'profile.kids' /* Kids */,
                                         ),
                                         maxLines: 2,
                                         style: FloterTheme.of(context)
@@ -2919,8 +2920,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FTLocalizations.of(context).getText(
-                                          '39dvkt1u' /* Preferred relationships */,
+                                        AppLabels.of(context).get(
+                                          'profile.preferred_relationships' /* Preferred relationships */,
                                         ),
                                         maxLines: 2,
                                         style: FloterTheme.of(context)
@@ -3046,8 +3047,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FTLocalizations.of(context).getText(
-                                          'xeqi6e27' /* Beliefs */,
+                                        AppLabels.of(context).get(
+                                          'profile.beliefs' /* Beliefs */,
                                         ),
                                         maxLines: 2,
                                         style: FloterTheme.of(context)
@@ -3171,8 +3172,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FTLocalizations.of(context).getText(
-                                          'bvjbapib' /* Body type */,
+                                        AppLabels.of(context).get(
+                                          'profile.body_type' /* Body type */,
                                         ),
                                         maxLines: 2,
                                         style: FloterTheme.of(context)
@@ -3296,8 +3297,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FTLocalizations.of(context).getText(
-                                          '338v1qbs' /* Exercise */,
+                                        AppLabels.of(context).get(
+                                          'profile.exercise' /* Exercise */,
                                         ),
                                         maxLines: 2,
                                         style: FloterTheme.of(context)
@@ -3421,8 +3422,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FTLocalizations.of(context).getText(
-                                          'qiw3d3vo' /* Drinking */,
+                                        AppLabels.of(context).get(
+                                          'profile.drinking' /* Drinking */,
                                         ),
                                         maxLines: 2,
                                         style: FloterTheme.of(context)
@@ -3546,8 +3547,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     Expanded(
                                       flex: 1,
                                       child: Text(
-                                        FTLocalizations.of(context).getText(
-                                          'pri636kn' /* Smoking */,
+                                        AppLabels.of(context).get(
+                                          'profile.smoking' /* Smoking */,
                                         ),
                                         maxLines: 2,
                                         style: FloterTheme.of(context)

@@ -1,9 +1,8 @@
-﻿import '/floter/floter_theme.dart';
+import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -57,11 +56,8 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
             child: Stack(
               alignment: AlignmentDirectional(0.0, 0.0),
               children: [
-                CachedNetworkImage(
-                  fadeInDuration: Duration(milliseconds: 0),
-                  fadeOutDuration: Duration(milliseconds: 0),
-                  imageUrl:
-                      'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=85',
+                Image.asset(
+                  'assets/images/start_screen_bg.png',
                   width: double.infinity,
                   height: 926.0,
                   fit: BoxFit.cover,
@@ -92,8 +88,8 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                 size: 68.0,
                               ),
                               Text(
-                                FTLocalizations.of(context).getText(
-                                  'ae8yv3e9' /* Nearsy */,
+                                AppLabels.of(context).get(
+                                  'auth.nearsy' /* Nearsy */,
                                 ),
                                 style: FloterTheme.of(context)
                                     .headlineMedium
@@ -120,8 +116,8 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                             ].divide(SizedBox(width: 12.0)),
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'idizt7xv' /* Meet near. Keep it easy */,
+                            AppLabels.of(context).get(
+                              'auth.meet_near_keep_it_easy' /* Meet near. Keep it easy */,
                             ),
                             textAlign: TextAlign.center,
                             style: FloterTheme.of(context)
@@ -153,8 +149,8 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                             onPressed: () async {
                               context.pushNamed(EmailAuthPageWidget.routeName);
                             },
-                            text: FTLocalizations.of(context).getText(
-                              'bmetmsfz' /* Continue with email */,
+                            text: AppLabels.of(context).get(
+                              'auth.continue_with_email' /* Continue with email */,
                             ),
                             options: FTButtonOptions(
                               width: double.infinity,
@@ -169,17 +165,17 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                               ),
                               borderSide: BorderSide(
                                 color: FloterTheme.of(context).primary,
-                                width: 1.0,
+                                width: 1.5,
                               ),
-                              borderRadius: BorderRadius.circular(12.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),
                           FTButtonWidget(
                             onPressed: () async {
                               context.pushNamed(PhoneAuthPageWidget.routeName);
                             },
-                            text: FTLocalizations.of(context).getText(
-                              'ipzoovop' /* Continue with phone */,
+                            text: AppLabels.of(context).get(
+                              'auth.continue_with_phone' /* Continue with phone */,
                             ),
                             options: FTButtonOptions(
                               width: double.infinity,
@@ -194,17 +190,17 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                               ),
                               borderSide: BorderSide(
                                 color: FloterTheme.of(context).primary,
-                                width: 1.0,
+                                width: 1.5,
                               ),
-                              borderRadius: BorderRadius.circular(12.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),
                           Container(
                             height: 28.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '7s7d4as5' /* By signing up you agree to the... */,
+                            AppLabels.of(context).get(
+                              'auth.by_signing_up_you_agree_to_the_terms_of' /* By signing up you agree to the... */,
                             ),
                             textAlign: TextAlign.center,
                             maxLines: 1,
@@ -232,8 +228,8 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                             overflow: TextOverflow.ellipsis,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'mmt4grho' /* Service and Privacy Policy */,
+                            AppLabels.of(context).get(
+                              'auth.service_and_privacy_policy' /* Service and Privacy Policy */,
                             ),
                             textAlign: TextAlign.center,
                             maxLines: 1,

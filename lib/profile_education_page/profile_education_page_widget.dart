@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -219,8 +219,8 @@ class _ProfileEducationPageWidgetState
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            '30ul7rbx' /* My education: */,
+                          AppLabels.of(context).get(
+                            'profile_education.my_education' /* My education: */,
                           ),
                           maxLines: 2,
                           style:
@@ -255,8 +255,8 @@ class _ProfileEducationPageWidgetState
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '6ht04the' /* Pick the closest match */,
+                            AppLabels.of(context).get(
+                              'profile_education.pick_the_closest_match' /* Pick the closest match */,
                             ),
                             style: FloterTheme.of(context)
                                 .bodyMedium

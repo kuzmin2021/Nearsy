@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -188,8 +188,8 @@ class _ProfileWorkPageWidgetState extends State<ProfileWorkPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            '00ao8fdo' /* My work: */,
+                          AppLabels.of(context).get(
+                            'profile_work.my_work' /* My work: */,
                           ),
                           maxLines: 2,
                           style:
@@ -224,8 +224,8 @@ class _ProfileWorkPageWidgetState extends State<ProfileWorkPageWidget> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'fcs0dgvx' /* What do you do? */,
+                            AppLabels.of(context).get(
+                              'profile_work.what_do_you_do' /* What do you do? */,
                             ),
                             style: FloterTheme.of(context)
                                 .bodyMedium

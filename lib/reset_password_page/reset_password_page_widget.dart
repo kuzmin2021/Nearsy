@@ -1,10 +1,9 @@
-﻿import '/auth/supabase_auth/auth_util.dart';
+import '/auth/supabase_auth/auth_util.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -63,11 +62,8 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
             child: Stack(
               alignment: AlignmentDirectional(0.0, 0.0),
               children: [
-                CachedNetworkImage(
-                  fadeInDuration: Duration(milliseconds: 0),
-                  fadeOutDuration: Duration(milliseconds: 0),
-                  imageUrl:
-                      'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=85',
+                Image.asset(
+                  'assets/images/start_screen_bg.png',
                   width: double.infinity,
                   height: 926.0,
                   fit: BoxFit.cover,
@@ -127,8 +123,8 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
                             height: 20.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'oswncel2' /* Reset password */,
+                            AppLabels.of(context).get(
+                              'reset_password.title' /* Reset password */,
                             ),
                             style: FloterTheme.of(context)
                                 .headlineSmall
@@ -153,8 +149,8 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
                                 ),
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'cec5s8sw' /* Enter your email and we will s... */,
+                            AppLabels.of(context).get(
+                              'reset_password.enter_your_email_and_we_will_send_a_password_reset_link' /* Enter your email and we will s... */,
                             ),
                             maxLines: 2,
                             style: FloterTheme.of(context)
@@ -197,8 +193,8 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
                             ),
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: FTLocalizations.of(context).getText(
-                                'cjhz8mt8' /* Email address */,
+                              labelText: AppLabels.of(context).get(
+                                'reset_password.email_address' /* Email address */,
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
@@ -291,8 +287,8 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
                                 context.pop();
                               }
                             },
-                            text: FTLocalizations.of(context).getText(
-                              'wct9hajd' /* Send reset link */,
+                            text: AppLabels.of(context).get(
+                              'reset_password.send_reset_link' /* Send reset link */,
                             ),
                             options: FTButtonOptions(
                               width: double.infinity,
@@ -306,7 +302,7 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
                                 color: FloterTheme.of(context)
                                     .primaryBackground,
                               ),
-                              borderRadius: BorderRadius.circular(12.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),
                         ].divide(SizedBox(height: 16.0)),

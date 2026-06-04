@@ -1,10 +1,9 @@
-﻿import '/auth/supabase_auth/auth_util.dart';
+import '/auth/supabase_auth/auth_util.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -66,11 +65,8 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
             child: Stack(
               alignment: AlignmentDirectional(0.0, 0.0),
               children: [
-                CachedNetworkImage(
-                  fadeInDuration: Duration(milliseconds: 0),
-                  fadeOutDuration: Duration(milliseconds: 0),
-                  imageUrl:
-                      'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=85',
+                Image.asset(
+                  'assets/images/start_screen_bg.png',
                   width: double.infinity,
                   height: 926.0,
                   fit: BoxFit.cover,
@@ -130,8 +126,8 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                             height: 20.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'vtbhnfbe' /* Update password */,
+                            AppLabels.of(context).get(
+                              'update_password.title' /* Update password */,
                             ),
                             style: FloterTheme.of(context)
                                 .headlineSmall
@@ -156,8 +152,8 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                                 ),
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'k2foskvu' /* Choose a new password for your... */,
+                            AppLabels.of(context).get(
+                              'update_password.choose_a_new_password_for_your_nearsy_account' /* Choose a new password for your... */,
                             ),
                             maxLines: 2,
                             style: FloterTheme.of(context)
@@ -201,8 +197,8 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                             ),
                             obscureText: !_model.updatePasswordFieldVisibility,
                             decoration: InputDecoration(
-                              labelText: FTLocalizations.of(context).getText(
-                                'oiijjlsz' /* New password */,
+                              labelText: AppLabels.of(context).get(
+                                'update_password.new_password' /* New password */,
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
@@ -286,8 +282,8 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                             obscureText:
                                 !_model.confirmUpdatePasswordFieldVisibility,
                             decoration: InputDecoration(
-                              labelText: FTLocalizations.of(context).getText(
-                                'llads8px' /* Repeat password */,
+                              labelText: AppLabels.of(context).get(
+                                'update_password.repeat_password' /* Repeat password */,
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
@@ -412,8 +408,8 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
 
                               _navigate();
                             },
-                            text: FTLocalizations.of(context).getText(
-                              'myryizr5' /* Update password */,
+                            text: AppLabels.of(context).get(
+                              'update_password.submit_button' /* Update password */,
                             ),
                             options: FTButtonOptions(
                               width: double.infinity,
@@ -427,7 +423,7 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                                 color: FloterTheme.of(context)
                                     .primaryBackground,
                               ),
-                              borderRadius: BorderRadius.circular(12.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),
                         ].divide(SizedBox(height: 16.0)),

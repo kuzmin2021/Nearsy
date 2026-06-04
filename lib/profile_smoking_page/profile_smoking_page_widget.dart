@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -210,8 +210,8 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'f64uw35p' /* My smoking habits: */,
+                          AppLabels.of(context).get(
+                            'profile_smoking.my_smoking_habits' /* My smoking habits: */,
                           ),
                           maxLines: 2,
                           style:
@@ -246,8 +246,8 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'nn86zv1j' /* Do you smoke? */,
+                            AppLabels.of(context).get(
+                              'profile_smoking.do_you_smoke' /* Do you smoke? */,
                             ),
                             style: FloterTheme.of(context)
                                 .bodyMedium

@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -221,8 +221,8 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            '37jvlgzr' /* My beliefs: */,
+                          AppLabels.of(context).get(
+                            'profile_religion.my_beliefs' /* My beliefs: */,
                           ),
                           maxLines: 2,
                           style:

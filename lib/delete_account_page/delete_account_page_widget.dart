@@ -1,4 +1,4 @@
-﻿import '/floter/floter_icon_button.dart';
+import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
@@ -81,8 +81,8 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            '1q7dwdh6' /* Delete account */,
+                          AppLabels.of(context).get(
+                            'delete_account.title' /* Delete account */,
                           ),
                           maxLines: 2,
                           style:
@@ -108,8 +108,8 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                     ].divide(SizedBox(width: 12.0)),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'n1xhhz40' /* This will permanently delete y... */,
+                    AppLabels.of(context).get(
+                      'delete_account.label_1' /* This will permanently delete y... */,
                     ),
                     style: FloterTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
@@ -144,8 +144,8 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'x0pjotnp' /* Are you sure? */,
+                            AppLabels.of(context).get(
+                              'delete_account.are_you_sure' /* Are you sure? */,
                             ),
                             style: FloterTheme.of(context)
                                 .titleSmall
@@ -187,8 +187,8 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                                     );
                                     context.pop();
                                   },
-                                  text: FTLocalizations.of(context).getText(
-                                    'b9fscyhj' /* Absolutely */,
+                                  text: AppLabels.of(context).get(
+                                    'delete_account.absolutely' /* Absolutely */,
                                   ),
                                   options: FTButtonOptions(
                                     padding: EdgeInsetsDirectional.fromSTEB(
@@ -211,8 +211,8 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                                   onPressed: () async {
                                     context.pop();
                                   },
-                                  text: FTLocalizations.of(context).getText(
-                                    'gjk9b5ge' /* Not quite */,
+                                  text: AppLabels.of(context).get(
+                                    'delete_account.not_quite' /* Not quite */,
                                   ),
                                   options: FTButtonOptions(
                                     padding: EdgeInsetsDirectional.fromSTEB(

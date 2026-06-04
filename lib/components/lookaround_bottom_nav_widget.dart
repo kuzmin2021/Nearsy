@@ -1,4 +1,4 @@
-﻿import '/floter/floter_theme.dart';
+import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
 import 'dart:ui';
@@ -114,8 +114,8 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                             height: 72.0,
                             alignment: AlignmentDirectional(0.0, 1.0),
                             child: Text(
-                              FTLocalizations.of(context).getText(
-                                'z78wpbqh' /* Profile */,
+                              AppLabels.of(context).get(
+                                'lookaround_bottom_nav.profile' /* Profile */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 1,
@@ -227,8 +227,8 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                             height: 72.0,
                             alignment: AlignmentDirectional(0.0, 1.0),
                             child: Text(
-                              FTLocalizations.of(context).getText(
-                                'eecxwhyi' /* People */,
+                              AppLabels.of(context).get(
+                                'lookaround_bottom_nav.people' /* People */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 1,
@@ -327,8 +327,8 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                             height: 72.0,
                             alignment: AlignmentDirectional(0.0, 1.0),
                             child: Text(
-                              FTLocalizations.of(context).getText(
-                                'd57j2g66' /* Nearby */,
+                              AppLabels.of(context).get(
+                                'lookaround_bottom_nav.nearby' /* Nearby */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 1,
@@ -427,8 +427,8 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                             height: 72.0,
                             alignment: AlignmentDirectional(0.0, 1.0),
                             child: Text(
-                              FTLocalizations.of(context).getText(
-                                '2e6burd6' /* Liked You */,
+                              AppLabels.of(context).get(
+                                'lookaround_bottom_nav.liked_you' /* Liked You */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 1,
@@ -527,8 +527,8 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                             height: 72.0,
                             alignment: AlignmentDirectional(0.0, 1.0),
                             child: Text(
-                              FTLocalizations.of(context).getText(
-                                'js52vjp7' /* Chats */,
+                              AppLabels.of(context).get(
+                                'lookaround_bottom_nav.chats' /* Chats */,
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 1,

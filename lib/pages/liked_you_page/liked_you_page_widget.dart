@@ -1,4 +1,4 @@
-﻿import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -82,8 +82,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  FTLocalizations.of(context).getText(
-                                    '3j3aqja2' /* Liked You */,
+                                  AppLabels.of(context).get(
+                                    'liked_you.title' /* Liked You */,
                                   ),
                                   style: FloterTheme.of(context)
                                       .titleLarge
@@ -148,8 +148,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       14.0, 8.0, 14.0, 8.0),
                                   child: Text(
-                                    FTLocalizations.of(context).getText(
-                                      'jlxojex8' /* All 3 */,
+                                    AppLabels.of(context).get(
+                                      'liked_you.all_3' /* All 3 */,
                                     ),
                                     maxLines: 1,
                                     style: FloterTheme.of(context)
@@ -196,8 +196,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       14.0, 8.0, 14.0, 8.0),
                                   child: Text(
-                                    FTLocalizations.of(context).getText(
-                                      'na4queqq' /* Filter matches 0 */,
+                                    AppLabels.of(context).get(
+                                      'liked_you.filter_matches_0' /* Filter matches 0 */,
                                     ),
                                     maxLines: 1,
                                     style: FloterTheme.of(context)
@@ -244,8 +244,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       14.0, 8.0, 14.0, 8.0),
                                   child: Text(
-                                    FTLocalizations.of(context).getText(
-                                      '76w4obvd' /* Outside 3 */,
+                                    AppLabels.of(context).get(
+                                      'liked_you.outside_3' /* Outside 3 */,
                                     ),
                                     maxLines: 1,
                                     style: FloterTheme.of(context)
@@ -313,8 +313,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                       ),
                                     ),
                                     Text(
-                                      FTLocalizations.of(context).getText(
-                                        'of1638tz' /* Fedor, 35 */,
+                                      AppLabels.of(context).get(
+                                        'skip' /* Fedor, 35 */,
                                       ),
                                       maxLines: 1,
                                       style: FloterTheme.of(context)
@@ -374,8 +374,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                       ),
                                     ),
                                     Text(
-                                      FTLocalizations.of(context).getText(
-                                        '4jkory6o' /* Evgeny, 41 */,
+                                      AppLabels.of(context).get(
+                                        'skip' /* Evgeny, 41 */,
                                       ),
                                       maxLines: 1,
                                       style: FloterTheme.of(context)
@@ -442,8 +442,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                       ),
                                     ),
                                     Text(
-                                      FTLocalizations.of(context).getText(
-                                        'ezi0nc1w' /* Gleb, 38 */,
+                                      AppLabels.of(context).get(
+                                        'skip' /* Gleb, 38 */,
                                       ),
                                       maxLines: 1,
                                       style: FloterTheme.of(context)
@@ -503,8 +503,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                       ),
                                     ),
                                     Text(
-                                      FTLocalizations.of(context).getText(
-                                        'vprag4kd' /* Maksim, 36 */,
+                                      AppLabels.of(context).get(
+                                        'skip' /* Maksim, 36 */,
                                       ),
                                       maxLines: 1,
                                       style: FloterTheme.of(context)

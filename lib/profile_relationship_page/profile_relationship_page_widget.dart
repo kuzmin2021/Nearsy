@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -217,8 +217,8 @@ class _ProfileRelationshipPageWidgetState
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'opwq6j63' /* My preferred relationship: */,
+                          AppLabels.of(context).get(
+                            'profile_relationship.my_preferred_relationship' /* My preferred relationship: */,
                           ),
                           maxLines: 2,
                           style:
@@ -253,8 +253,8 @@ class _ProfileRelationshipPageWidgetState
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'iielabgp' /* What are you looking for? */,
+                            AppLabels.of(context).get(
+                              'profile_relationship.what_are_you_looking_for' /* What are you looking for? */,
                             ),
                             style: FloterTheme.of(context)
                                 .bodyMedium

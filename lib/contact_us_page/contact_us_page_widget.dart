@@ -1,4 +1,4 @@
-﻿import '/floter/floter_icon_button.dart';
+import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
@@ -84,8 +84,8 @@ class _ContactUsPageWidgetState extends State<ContactUsPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            '09uhaw9d' /* Contact us */,
+                          AppLabels.of(context).get(
+                            'contact_us.title' /* Contact us */,
                           ),
                           maxLines: 2,
                           style:
@@ -111,8 +111,8 @@ class _ContactUsPageWidgetState extends State<ContactUsPageWidget> {
                     ].divide(SizedBox(width: 12.0)),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'ibpu77t9' /* Your email: abram@gmail.com */,
+                    AppLabels.of(context).get(
+                      'contact_us.your_email_abramgmailcom' /* Your email: abram@gmail.com */,
                     ),
                     style: FloterTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
@@ -145,8 +145,8 @@ class _ContactUsPageWidgetState extends State<ContactUsPageWidget> {
                     ),
                     obscureText: false,
                     decoration: InputDecoration(
-                      hintText: FTLocalizations.of(context).getText(
-                        '52ibkvmu' /* Let us know what you think... */,
+                      hintText: AppLabels.of(context).get(
+                        'contact_us.let_us_know_what_you_think' /* Let us know what you think... */,
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -208,8 +208,8 @@ class _ContactUsPageWidgetState extends State<ContactUsPageWidget> {
                       );
                       context.pop();
                     },
-                    text: FTLocalizations.of(context).getText(
-                      'il5r6uaf' /* Submit */,
+                    text: AppLabels.of(context).get(
+                      'contact_us.submit' /* Submit */,
                     ),
                     options: FTButtonOptions(
                       width: double.infinity,

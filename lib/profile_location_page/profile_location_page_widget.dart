@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -178,8 +178,8 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'g5g26gn2' /* My location: */,
+                          AppLabels.of(context).get(
+                            'profile_location.my_location' /* My location: */,
                           ),
                           maxLines: 2,
                           style:
@@ -231,8 +231,8 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                               Expanded(
                                 flex: 1,
                                 child: Text(
-                                  FTLocalizations.of(context).getText(
-                                    '68k2xtu0' /* Automatically detect my locati... */,
+                                  AppLabels.of(context).get(
+                                    'profile_location.automatically_detect_my_location_recommended' /* Automatically detect my locati... */,
                                   ),
                                   maxLines: 2,
                                   style: FloterTheme.of(context)
@@ -261,8 +261,8 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                             ].divide(SizedBox(width: 8.0)),
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'crtjb4jv' /* Detected location: Guboshlyops... */,
+                            AppLabels.of(context).get(
+                              'profile_location.detected_location_guboshlyopsk_zabuldygovo' /* Detected location: Guboshlyops... */,
                             ),
                             maxLines: 2,
                             style: FloterTheme.of(context)
@@ -286,8 +286,8 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                                 ),
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'f5vbot5y' /* Status in Nearby: Local */,
+                            AppLabels.of(context).get(
+                              'profile_location.status_in_nearby_local' /* Status in Nearby: Local */,
                             ),
                             style: FloterTheme.of(context)
                                 .bodyMedium
@@ -330,8 +330,8 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                               Expanded(
                                 flex: 1,
                                 child: Text(
-                                  FTLocalizations.of(context).getText(
-                                    'gttp7ffd' /* I will set my location manuall... */,
+                                  AppLabels.of(context).get(
+                                    'profile_location.i_will_set_my_location_manually' /* I will set my location manuall... */,
                                   ),
                                   maxLines: 1,
                                   style: FloterTheme.of(context)
@@ -386,8 +386,8 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                                 ),
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  hintText: FTLocalizations.of(context).getText(
-                                    '1s7qbre9' /* Select location... */,
+                                  hintText: AppLabels.of(context).get(
+                                    'profile_location.select_location' /* Select location... */,
                                   ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
@@ -440,8 +440,8 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                             ),
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '5ph0nmbb' /* In the Nearby section, others ... */,
+                            AppLabels.of(context).get(
+                              'profile_location.label_1' /* In the Nearby section, others ... */,
                             ),
                             maxLines: 5,
                             style:

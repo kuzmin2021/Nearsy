@@ -1,4 +1,4 @@
-﻿import '/floter/floter_icon_button.dart';
+import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
@@ -98,8 +98,8 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                       ),
                     ),
                     Text(
-                      FTLocalizations.of(context).getText(
-                        'clbiscd7' /* Kirill, 38 */,
+                      AppLabels.of(context).get(
+                        'skip' /* Kirill, 38 */,
                       ),
                       style: FloterTheme.of(context).titleMedium.override(
                             font: GoogleFonts.interTight(
@@ -138,8 +138,8 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 8.0, 16.0, 8.0),
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'wr4813k2' /* Chyokak? */,
+                          AppLabels.of(context).get(
+                            'chat.chyokak' /* Chyokak? */,
                           ),
                           style:
                               FloterTheme.of(context).bodyMedium.override(
@@ -180,8 +180,8 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 8.0, 16.0, 8.0),
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'y3thfetu' /* Normur */,
+                          AppLabels.of(context).get(
+                            'chat.normur' /* Normur */,
                           ),
                           style: FloterTheme.of(context)
                               .bodyMedium
@@ -209,8 +209,8 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                   ],
                 ),
                 Text(
-                  FTLocalizations.of(context).getText(
-                    '1vfihew0' /* Kirill is typing... */,
+                  AppLabels.of(context).get(
+                    'chat.kirill_is_typing' /* Kirill is typing... */,
                   ),
                   textAlign: TextAlign.center,
                   style: FloterTheme.of(context).bodySmall.override(
@@ -266,8 +266,8 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                         },
                         obscureText: false,
                         decoration: InputDecoration(
-                          hintText: FTLocalizations.of(context).getText(
-                            '3368xeok' /* Write a message */,
+                          hintText: AppLabels.of(context).get(
+                            'chat.write_a_message' /* Write a message */,
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(

@@ -1,4 +1,4 @@
-﻿import '/floter/floter_icon_button.dart';
+import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
@@ -83,8 +83,8 @@ class _SearchPreferencesPageWidgetState
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'r26bpflk' /* Search Preferences */,
+                          AppLabels.of(context).get(
+                            'search_preferences.title' /* Search Preferences */,
                           ),
                           maxLines: 2,
                           style:
@@ -110,8 +110,8 @@ class _SearchPreferencesPageWidgetState
                     ].divide(SizedBox(width: 12.0)),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      '1ceobegk' /* Who you want to date: */,
+                    AppLabels.of(context).get(
+                      'search_preferences.who_you_want_to_date' /* Who you want to date: */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -173,8 +173,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'ej9yk57d' /* Women */,
+                            AppLabels.of(context).get(
+                              'search_preferences.women' /* Women */,
                             ),
                             style: TextStyle(),
                           ),
@@ -218,8 +218,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'dy9g6y15' /* Men */,
+                            AppLabels.of(context).get(
+                              'search_preferences.men' /* Men */,
                             ),
                             style: TextStyle(),
                           ),
@@ -263,8 +263,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'a9s8whut' /* Other */,
+                            AppLabels.of(context).get(
+                              'search_preferences.other_gender' /* Other */,
                             ),
                             style: TextStyle(),
                           ),
@@ -278,8 +278,8 @@ class _SearchPreferencesPageWidgetState
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        FTLocalizations.of(context).getText(
-                          '3e8iu5qv' /* Age: */,
+                        AppLabels.of(context).get(
+                          'search_preferences.age' /* Age: */,
                         ),
                         style: FloterTheme.of(context).titleSmall.override(
                               font: GoogleFonts.interTight(
@@ -300,8 +300,8 @@ class _SearchPreferencesPageWidgetState
                             ),
                       ),
                       Text(
-                        FTLocalizations.of(context).getText(
-                          'qxhimjcb' /* Between 20 and 50 */,
+                        AppLabels.of(context).get(
+                          'search_preferences.between_20_and_50' /* Between 20 and 50 */,
                         ),
                         style: FloterTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.inter(
@@ -359,8 +359,8 @@ class _SearchPreferencesPageWidgetState
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        FTLocalizations.of(context).getText(
-                          'qx2es48d' /* Search radius: */,
+                        AppLabels.of(context).get(
+                          'search_preferences.search_radius' /* Search radius: */,
                         ),
                         style: FloterTheme.of(context).titleSmall.override(
                               font: GoogleFonts.interTight(
@@ -381,8 +381,8 @@ class _SearchPreferencesPageWidgetState
                             ),
                       ),
                       Text(
-                        FTLocalizations.of(context).getText(
-                          'ozz4jru3' /* Up to 161 kilometres away */,
+                        AppLabels.of(context).get(
+                          'search_preferences.up_to_161_kilometres_away' /* Up to 161 kilometres away */,
                         ),
                         style: FloterTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.inter(
@@ -435,8 +435,8 @@ class _SearchPreferencesPageWidgetState
                     ),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'zct3y2e7' /* Languages they know: */,
+                    AppLabels.of(context).get(
+                      'search_preferences.languages_they_know' /* Languages they know: */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -498,8 +498,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'rold44c7' /* Afar */,
+                            AppLabels.of(context).get(
+                              'search_preferences.afar' /* Afar */,
                             ),
                             style: TextStyle(),
                           ),
@@ -543,8 +543,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '0cps7xi2' /* Afrikaans */,
+                            AppLabels.of(context).get(
+                              'search_preferences.afrikaans' /* Afrikaans */,
                             ),
                             style: TextStyle(),
                           ),
@@ -588,8 +588,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'gw9mgb1k' /* Albanian */,
+                            AppLabels.of(context).get(
+                              'search_preferences.albanian' /* Albanian */,
                             ),
                             style: TextStyle(),
                           ),
@@ -633,8 +633,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '4o1b7hdw' /* Amharic */,
+                            AppLabels.of(context).get(
+                              'search_preferences.amharic' /* Amharic */,
                             ),
                             style: TextStyle(),
                           ),
@@ -678,8 +678,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'bl0kfji0' /* Arabic */,
+                            AppLabels.of(context).get(
+                              'search_preferences.arabic' /* Arabic */,
                             ),
                             style: TextStyle(),
                           ),
@@ -723,8 +723,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'k95dn1le' /* Armenian */,
+                            AppLabels.of(context).get(
+                              'search_preferences.armenian' /* Armenian */,
                             ),
                             style: TextStyle(),
                           ),
@@ -768,8 +768,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'ryyp6qis' /* Bengali */,
+                            AppLabels.of(context).get(
+                              'search_preferences.bengali' /* Bengali */,
                             ),
                             style: TextStyle(),
                           ),
@@ -813,8 +813,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'ajfq1v6c' /* Catalan */,
+                            AppLabels.of(context).get(
+                              'search_preferences.catalan' /* Catalan */,
                             ),
                             style: TextStyle(),
                           ),
@@ -823,8 +823,8 @@ class _SearchPreferencesPageWidgetState
                     ].divide(SizedBox(height: 8.0)),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'opjm711h' /* What are they looking for? */,
+                    AppLabels.of(context).get(
+                      'search_preferences.what_are_they_looking_for' /* What are they looking for? */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -886,8 +886,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '6vfvx1lg' /* Something serious */,
+                            AppLabels.of(context).get(
+                              'search_preferences.something_serious' /* Something serious */,
                             ),
                             style: TextStyle(),
                           ),
@@ -931,8 +931,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '261ma4hv' /* Just dating */,
+                            AppLabels.of(context).get(
+                              'search_preferences.just_dating' /* Just dating */,
                             ),
                             style: TextStyle(),
                           ),
@@ -976,8 +976,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'j7rnlwhp' /* Just fun */,
+                            AppLabels.of(context).get(
+                              'search_preferences.just_fun' /* Just fun */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1021,8 +1021,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'pkln3ugj' /* Open to anything */,
+                            AppLabels.of(context).get(
+                              'search_preferences.open_to_anything' /* Open to anything */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1066,8 +1066,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '4qwv2rlu' /* Not sure */,
+                            AppLabels.of(context).get(
+                              'search_preferences.not_sure' /* Not sure */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1076,8 +1076,8 @@ class _SearchPreferencesPageWidgetState
                     ].divide(SizedBox(height: 8.0)),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'bvwkn5e4' /* What are their beliefs? */,
+                    AppLabels.of(context).get(
+                      'search_preferences.what_are_their_beliefs' /* What are their beliefs? */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -1139,8 +1139,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'dwstzpd5' /* Agnostic */,
+                            AppLabels.of(context).get(
+                              'search_preferences.agnostic' /* Agnostic */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1184,8 +1184,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'b070wcti' /* Atheist */,
+                            AppLabels.of(context).get(
+                              'search_preferences.atheist' /* Atheist */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1229,8 +1229,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'do33iuna' /* Buddhist */,
+                            AppLabels.of(context).get(
+                              'search_preferences.buddhist' /* Buddhist */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1274,8 +1274,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'z6wm40k5' /* Christian */,
+                            AppLabels.of(context).get(
+                              'search_preferences.christian' /* Christian */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1319,8 +1319,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'thois5wg' /* Jewish */,
+                            AppLabels.of(context).get(
+                              'search_preferences.jewish' /* Jewish */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1364,8 +1364,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'q8p0cvld' /* Muslim */,
+                            AppLabels.of(context).get(
+                              'search_preferences.muslim' /* Muslim */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1409,8 +1409,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '1rb5ysd5' /* Other */,
+                            AppLabels.of(context).get(
+                              'search_preferences.other_beliefs' /* Other */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1419,8 +1419,8 @@ class _SearchPreferencesPageWidgetState
                     ].divide(SizedBox(height: 8.0)),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'f4in38tx' /* Do they exercise? */,
+                    AppLabels.of(context).get(
+                      'search_preferences.do_they_exercise' /* Do they exercise? */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -1482,8 +1482,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '5svn0y8u' /* Regularly */,
+                            AppLabels.of(context).get(
+                              'search_preferences.regularly' /* Regularly */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1527,8 +1527,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'y12tt6lp' /* Occasionally */,
+                            AppLabels.of(context).get(
+                              'search_preferences.occasionally' /* Occasionally */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1572,8 +1572,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'tk25c1vl' /* Rarely */,
+                            AppLabels.of(context).get(
+                              'search_preferences.rarely' /* Rarely */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1582,8 +1582,8 @@ class _SearchPreferencesPageWidgetState
                     ].divide(SizedBox(height: 8.0)),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'bh4cd9kz' /* Do they drink? */,
+                    AppLabels.of(context).get(
+                      'search_preferences.do_they_drink' /* Do they drink? */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -1645,8 +1645,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '133llaz7' /* Yes */,
+                            AppLabels.of(context).get(
+                              'search_preferences.yes_drink' /* Yes */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1690,8 +1690,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '7meo207v' /* Occasionally */,
+                            AppLabels.of(context).get(
+                              'search_preferences.occasionally_drink' /* Occasionally */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1735,8 +1735,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'sbyyyril' /* Rarely */,
+                            AppLabels.of(context).get(
+                              'search_preferences.rarely_drink' /* Rarely */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1780,8 +1780,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '4u2f7jk4' /* No */,
+                            AppLabels.of(context).get(
+                              'search_preferences.no_drink' /* No */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1790,8 +1790,8 @@ class _SearchPreferencesPageWidgetState
                     ].divide(SizedBox(height: 8.0)),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'qg5g2soy' /* Do they smoke? */,
+                    AppLabels.of(context).get(
+                      'search_preferences.do_they_smoke' /* Do they smoke? */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -1853,8 +1853,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '4fbc0b1p' /* Yes */,
+                            AppLabels.of(context).get(
+                              'search_preferences.yes_smoke' /* Yes */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1898,8 +1898,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'wpnpxctk' /* Sometimes */,
+                            AppLabels.of(context).get(
+                              'search_preferences.sometimes' /* Sometimes */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1943,8 +1943,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'hihnvmcy' /* No */,
+                            AppLabels.of(context).get(
+                              'search_preferences.no_smoke' /* No */,
                             ),
                             style: TextStyle(),
                           ),
@@ -1988,8 +1988,8 @@ class _SearchPreferencesPageWidgetState
                             width: 8.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'z9mkeadz' /* Trying to quit */,
+                            AppLabels.of(context).get(
+                              'search_preferences.trying_to_quit' /* Trying to quit */,
                             ),
                             style: TextStyle(),
                           ),
@@ -2002,8 +2002,8 @@ class _SearchPreferencesPageWidgetState
                       context.pushNamed(
                           NearbySearchPreferencesPageWidget.routeName);
                     },
-                    text: FTLocalizations.of(context).getText(
-                      'wwihxowg' /* Nearby visibility */,
+                    text: AppLabels.of(context).get(
+                      'search_preferences.nearby_visibility' /* Nearby visibility */,
                     ),
                     options: FTButtonOptions(
                       width: double.infinity,
@@ -2026,8 +2026,8 @@ class _SearchPreferencesPageWidgetState
                     onPressed: () async {
                       context.pop();
                     },
-                    text: FTLocalizations.of(context).getText(
-                      '5ru3ofbe' /* Apply filters */,
+                    text: AppLabels.of(context).get(
+                      'search_preferences.apply_filters' /* Apply filters */,
                     ),
                     options: FTButtonOptions(
                       width: double.infinity,

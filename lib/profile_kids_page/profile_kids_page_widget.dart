@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -214,8 +214,8 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'k4id6qhy' /* Kids: */,
+                          AppLabels.of(context).get(
+                            'profile_kids.kids' /* Kids: */,
                           ),
                           maxLines: 2,
                           style:

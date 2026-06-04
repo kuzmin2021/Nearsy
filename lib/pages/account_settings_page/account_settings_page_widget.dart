@@ -1,4 +1,4 @@
-﻿import '/auth/supabase_auth/auth_util.dart';
+import '/auth/supabase_auth/auth_util.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -81,8 +81,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         },
                       ),
                       Text(
-                        FTLocalizations.of(context).getText(
-                          'g8akwzb1' /* Account Settings */,
+                        AppLabels.of(context).get(
+                          'account_settings.title' /* Account Settings */,
                         ),
                         style:
                             FloterTheme.of(context).titleMedium.override(
@@ -116,8 +116,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            '7w151rh4' /* Member ID:  19074217 */,
+                          AppLabels.of(context).get(
+                            'account_settings.member_id_19074217' /* Member ID:  19074217 */,
                           ),
                           maxLines: 1,
                           style:
@@ -151,8 +151,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'oco1zpb0' /* Email:  abram@gmail.com */,
+                          AppLabels.of(context).get(
+                            'account_settings.email_abramgmailcom' /* Email:  abram@gmail.com */,
                           ),
                           maxLines: 1,
                           style:
@@ -181,8 +181,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         height: 48.0,
                         alignment: AlignmentDirectional(1.0, 0.0),
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            '0afjx8ko' /* Edit */,
+                          AppLabels.of(context).get(
+                            'account_settings.edit_email' /* Edit */,
                           ),
                           style:
                               FloterTheme.of(context).bodyMedium.override(
@@ -215,8 +215,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'qgxkprry' /* Phone:  13173849446 */,
+                          AppLabels.of(context).get(
+                            'account_settings.phone_13173849446' /* Phone:  13173849446 */,
                           ),
                           maxLines: 1,
                           style:
@@ -245,8 +245,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         height: 48.0,
                         alignment: AlignmentDirectional(1.0, 0.0),
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            '9tpm8z1d' /* Edit */,
+                          AppLabels.of(context).get(
+                            'account_settings.edit_phone' /* Edit */,
                           ),
                           style:
                               FloterTheme.of(context).bodyMedium.override(
@@ -279,8 +279,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'qncwd9eh' /* Password:  ******** */,
+                          AppLabels.of(context).get(
+                            'account_settings.password' /* Password:  ******** */,
                           ),
                           maxLines: 1,
                           style:
@@ -317,8 +317,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           height: 48.0,
                           alignment: AlignmentDirectional(1.0, 0.0),
                           child: Text(
-                            FTLocalizations.of(context).getText(
-                              'b15egb2c' /* Edit */,
+                            AppLabels.of(context).get(
+                              'account_settings.edit_password' /* Edit */,
                             ),
                             style: FloterTheme.of(context)
                                 .bodyMedium
@@ -353,8 +353,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            'u2lvgvo6' /* Email authentication */,
+                          AppLabels.of(context).get(
+                            'account_settings.email_authentication' /* Email authentication */,
                           ),
                           maxLines: 1,
                           style:
@@ -391,8 +391,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           height: 48.0,
                           alignment: AlignmentDirectional(1.0, 0.0),
                           child: Text(
-                            FTLocalizations.of(context).getText(
-                              'gu67jn9n' /* Manage */,
+                            AppLabels.of(context).get(
+                              'account_settings.manage' /* Manage */,
                             ),
                             style: FloterTheme.of(context)
                                 .bodyMedium
@@ -423,8 +423,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                     height: 17.0,
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'yw0s6dhx' /* Notifications */,
+                    AppLabels.of(context).get(
+                      'account_settings.notifications' /* Notifications */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -444,8 +444,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         ),
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      '8vqwop22' /*   Push Notifications */,
+                    AppLabels.of(context).get(
+                      'account_settings.push_notifications' /*   Push Notifications */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -511,8 +511,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         width: 8.0,
                       ),
                       Text(
-                        FTLocalizations.of(context).getText(
-                          '9kqemlf5' /* Matches */,
+                        AppLabels.of(context).get(
+                          'account_settings.matches' /* Matches */,
                         ),
                         style: TextStyle(),
                       ),
@@ -565,8 +565,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         width: 8.0,
                       ),
                       Text(
-                        FTLocalizations.of(context).getText(
-                          'eq1ydgxg' /* Messages */,
+                        AppLabels.of(context).get(
+                          'account_settings.messages' /* Messages */,
                         ),
                         style: TextStyle(),
                       ),
@@ -619,16 +619,16 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         width: 8.0,
                       ),
                       Text(
-                        FTLocalizations.of(context).getText(
-                          'gjwnz4hu' /* Liked you */,
+                        AppLabels.of(context).get(
+                          'account_settings.liked_you' /* Liked you */,
                         ),
                         style: TextStyle(),
                       ),
                     ],
                   ),
                   Text(
-                    FTLocalizations.of(context).getText(
-                      'uxq1n9vz' /*   Email Notifications */,
+                    AppLabels.of(context).get(
+                      'account_settings.email_notifications' /*   Email Notifications */,
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
@@ -694,8 +694,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         width: 8.0,
                       ),
                       Text(
-                        FTLocalizations.of(context).getText(
-                          '7y8nzvev' /* Matches */,
+                        AppLabels.of(context).get(
+                          'account_settings.matches_email' /* Matches */,
                         ),
                         style: TextStyle(),
                       ),
@@ -748,8 +748,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         width: 8.0,
                       ),
                       Text(
-                        FTLocalizations.of(context).getText(
-                          'i2lhqaqf' /* Messages */,
+                        AppLabels.of(context).get(
+                          'account_settings.messages_email' /* Messages */,
                         ),
                         style: TextStyle(),
                       ),
@@ -802,8 +802,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         width: 8.0,
                       ),
                       Text(
-                        FTLocalizations.of(context).getText(
-                          '42l47d1g' /* Liked you */,
+                        AppLabels.of(context).get(
+                          'account_settings.liked_you_email' /* Liked you */,
                         ),
                         style: TextStyle(),
                       ),
@@ -824,8 +824,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       height: 48.0,
                       alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Text(
-                        FTLocalizations.of(context).getText(
-                          '2jb9lnvs' /* Feedback */,
+                        AppLabels.of(context).get(
+                          'account_settings.feedback' /* Feedback */,
                         ),
                         style: FloterTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.inter(
@@ -860,8 +860,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       height: 48.0,
                       alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Text(
-                        FTLocalizations.of(context).getText(
-                          'lkylcqyl' /* Hide account */,
+                        AppLabels.of(context).get(
+                          'account_settings.hide_account' /* Hide account */,
                         ),
                         style: FloterTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.inter(
@@ -896,8 +896,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       height: 48.0,
                       alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Text(
-                        FTLocalizations.of(context).getText(
-                          'sea1s8fp' /* Delete account */,
+                        AppLabels.of(context).get(
+                          'account_settings.delete_account' /* Delete account */,
                         ),
                         style: FloterTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.inter(
@@ -934,8 +934,8 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                       context.goNamedAuth(
                           AuthPageWidget.routeName, context.mounted);
                     },
-                    text: FTLocalizations.of(context).getText(
-                      'cfrtj6zl' /* Log out */,
+                    text: AppLabels.of(context).get(
+                      'account_settings.log_out' /* Log out */,
                     ),
                     options: FTButtonOptions(
                       width: double.infinity,

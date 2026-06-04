@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -190,8 +190,8 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                       Expanded(
                         flex: 1,
                         child: Text(
-                          FTLocalizations.of(context).getText(
-                            '6totld84' /* About me: */,
+                          AppLabels.of(context).get(
+                            'profile_about_me.about_me' /* About me: */,
                           ),
                           maxLines: 2,
                           style:
@@ -226,8 +226,8 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'm5bix7wt' /* No pressure - leave it blank i... */,
+                            AppLabels.of(context).get(
+                              'profile_about_me.no_pressure_leave_it_blank_if_you_like' /* No pressure - leave it blank i... */,
                             ),
                             style: FloterTheme.of(context)
                                 .bodyMedium

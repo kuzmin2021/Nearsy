@@ -1,0 +1,362 @@
+{
+  "auth": {
+    "nearsy": "Nearsy",
+    "meet_near_keep_it_easy": "Meet near. Keep it easy",
+    "continue_with_email": "المتابعة بالبريد الإلكتروني",
+    "continue_with_phone": "Continue with phone",
+    "by_signing_up_you_agree_to_the_terms_of": "By signing up you agree to the Terms of",
+    "service_and_privacy_policy": "Service and Privacy Policy"
+  },
+  "profile": {
+    "title": "الملف الشخصي",
+    "name": "الاسم",
+    "catchphrase": "Catchphrase",
+    "about_me": "نبذة عني",
+    "gender": "الجنس",
+    "age": "العمر",
+    "height": "الطول",
+    "work": "العمل",
+    "education": "التعليم",
+    "kids": "الأطفال",
+    "preferred_relationships": "العلاقات المفضلة",
+    "beliefs": "المعتقدات",
+    "body_type": "نوع الجسم",
+    "exercise": "التمارين",
+    "drinking": "الشرب",
+    "smoking": "التدخين",
+    "profile_alt": "الملف الشخصي"
+  },
+  "people": {
+    "lookaround": "Lookaround",
+    "guess_what_i": "Guess what I",
+    "title": "الأشخاص"
+  },
+  "liked_you": {
+    "title": "أعجبوا بك",
+    "all_3": "All 3",
+    "filter_matches_0": "Filter matches 0",
+    "outside_3": "Outside 3",
+    "tab_label": "أعجبوا بك"
+  },
+  "matches": {
+    "chats": "الدردشات",
+    "you_normur": "You: Normur",
+    "you_how_big_is_your": "You: How big is your...",
+    "sure_see_you_at_bla": "Sure, see you at bla...",
+    "tab_label": "الدردشات"
+  },
+  "chat": {
+    "chyokak": "Chyokak?",
+    "normur": "Normur",
+    "kirill_is_typing": "Kirill is typing...",
+    "write_a_message": "Write a message"
+  },
+  "account_settings": {
+    "title": "إعدادات الحساب",
+    "edit_email": "تعديل",
+    "edit_phone": "تعديل",
+    "edit_password": "تعديل",
+    "email_authentication": "Email authentication",
+    "manage": "Manage",
+    "notifications": "الإشعارات",
+    "push_notifications": "Push Notifications",
+    "matches": "المطابقات",
+    "messages": "الرسائل",
+    "liked_you": "Liked you",
+    "email_notifications": "Email Notifications",
+    "matches_email": "المطابقات",
+    "messages_email": "الرسائل",
+    "liked_you_email": "Liked you",
+    "feedback": "ملاحظات",
+    "hide_account": "إخفاء الحساب",
+    "delete_account": "حذف الحساب",
+    "log_out": "تسجيل الخروج",
+    "chats": "الدردشات"
+  },
+  "search_preferences": {
+    "title": "تفضيلات البحث",
+    "who_you_want_to_date": "Who you want to date:",
+    "women": "Women",
+    "men": "Men",
+    "other_gender": "Other",
+    "age": "العمر:",
+    "between_20_and_50": "Between 20 and 50",
+    "search_radius": "Search radius:",
+    "up_to_161_kilometres_away": "Up to 161 kilometres away",
+    "languages_they_know": "Languages they know:",
+    "what_are_they_looking_for": "What are they looking for?",
+    "something_serious": "Something serious",
+    "just_dating": "Just dating",
+    "just_fun": "Just fun",
+    "open_to_anything": "Open to anything",
+    "not_sure": "Not sure",
+    "what_are_their_beliefs": "What are their beliefs?",
+    "agnostic": "Agnostic",
+    "atheist": "Atheist",
+    "buddhist": "Buddhist",
+    "christian": "Christian",
+    "jewish": "Jewish",
+    "muslim": "Muslim",
+    "other_beliefs": "Other",
+    "do_they_exercise": "Do they exercise?",
+    "regularly": "Regularly",
+    "occasionally": "Occasionally",
+    "rarely": "Rarely",
+    "do_they_drink": "Do they drink?",
+    "yes_drink": "نعم",
+    "occasionally_drink": "Occasionally",
+    "rarely_drink": "Rarely",
+    "no_drink": "لا",
+    "do_they_smoke": "Do they smoke?",
+    "yes_smoke": "نعم",
+    "sometimes": "Sometimes",
+    "no_smoke": "لا",
+    "trying_to_quit": "Trying to quit",
+    "nearby_visibility": "Nearby visibility",
+    "apply_filters": "Apply filters"
+  },
+  "nearby_search_preferences": {
+    "title": "Nearby Search Preferences",
+    "choose_how_visible_your_location_is_you_can_change_this_anytime": "Choose how visible your location is. You can change this anytime.",
+    "visibility_modes": "Visibility modes:",
+    "invisible": "Invisible",
+    "visible_while_using_the_app": "Visible while using the app",
+    "your_last_location": "Your last location",
+    "to_update_your_status_go_to_profile_settings_location": "To update your status, go to Profile Settings > Location.",
+    "save_visibility": "حفظ الظهور"
+  },
+  "chat_preferences": {
+    "title": "Chat Preferences",
+    "choose_who_can_message_you_you_can_change_this_anytime": "Choose who can message you. You can change this anytime.",
+    "availability_modes": "Availability modes:",
+    "unavailable": "Unavailable",
+    "matched_users_only": "Matched users only",
+    "available": "Available",
+    "stuff_i_could_talk_about_for_hours": "Stuff I could talk about for hours:",
+    "obscure_scifi_films_with_depressing_endings": "Obscure sci-fi films with depressing endings",
+    "save_chat_preferences": "Save chat preferences"
+  },
+  "contact_us": {
+    "title": "Contact us",
+    "let_us_know_what_you_think": "Let us know what you think...",
+    "submit": "إرسال"
+  },
+  "hide_account": {
+    "title": "إخفاء الحساب",
+    "hide": "Hide"
+  },
+  "delete_account": {
+    "title": "حذف الحساب",
+    "are_you_sure": "Are you sure?",
+    "absolutely": "Absolutely",
+    "not_quite": "Not quite"
+  },
+  "profile_about_me": {
+    "about_me": "نبذة عني:",
+    "no_pressure_leave_it_blank_if_you_like": "لا ضغط - اتركه فارغاً إذا أردت."
+  },
+  "profile_gender": {
+    "gender": "الجنس:"
+  },
+  "profile_age": {
+    "when_were_you_born": "متى وُلدت:",
+    "day": "اليوم",
+    "month": "الشهر",
+    "year": "السنة",
+    "optional": "اختياري",
+    "day_placeholder": "--",
+    "month_placeholder": "--",
+    "year_placeholder": "--"
+  },
+  "months": {
+    "january": "يناير",
+    "february": "فبراير",
+    "march": "مارس",
+    "april": "أبريل",
+    "may": "مايو",
+    "june": "يونيو",
+    "july": "يوليو",
+    "august": "أغسطس",
+    "september": "سبتمبر",
+    "october": "أكتوبر",
+    "november": "نوفمبر",
+    "december": "ديسمبر"
+  },
+  "profile_height": {
+    "my_height": "الطول:",
+    "enter_your_height": "أدخل طولك",
+    "ft": "ft",
+    "cm": "cm"
+  },
+  "profile_body_type": {
+    "my_body_type": "نوع الجسم:"
+  },
+  "profile_work": {
+    "my_work": "العمل:",
+    "what_do_you_do": "ماذا تعمل؟"
+  },
+  "profile_education": {
+    "my_education": "التعليم:",
+    "pick_the_closest_match": "اختر أقرب خيار"
+  },
+  "profile_kids": {
+    "kids": "الأطفال:"
+  },
+  "profile_relationship": {
+    "my_preferred_relationship": "العلاقات المفضلة:",
+    "what_are_you_looking_for": "ما الذي تبحث عنه؟"
+  },
+  "profile_religion": {
+    "my_beliefs": "المعتقدات:"
+  },
+  "profile_exercise": {
+    "exercise": "التمارين:",
+    "any_form_of_physical_activity": "أي شكل من النشاط البدني"
+  },
+  "profile_drinking": {
+    "my_drinking_habits": "الشرب:",
+    "choose_what_best_describes_your_alcohol_use": "اختر ما يصف استهلاكك للكحول بأفضل شكل."
+  },
+  "profile_smoking": {
+    "my_smoking_habits": "التدخين:",
+    "do_you_smoke": "هل تدخن؟"
+  },
+  "profile_location": {
+    "my_location": "My location:",
+    "automatically_detect_my_location_recommended": "Automatically detect my location (recommended)",
+    "status_in_nearby_local": "Status in Nearby: Local",
+    "i_will_set_my_location_manually": "I will set my location manually",
+    "select_location": "Select location..."
+  },
+  "nearby": {
+    "title": "بالقرب منك",
+    "filters": "الفلاتر",
+    "visibility": "Visibility",
+    "tab_label": "بالقرب منك"
+  },
+  "email_auth": {
+    "sign_in_with_email": "Sign in with email",
+    "use_your_email_and_password_or_create_a_new_account": "Use your email and password, or create a new account.",
+    "sign_in": "تسجيل الدخول",
+    "register": "تسجيل",
+    "email_address": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "repeat_password": "Repeat password",
+    "create_account": "إنشاء حساب",
+    "forgot_password": "Forgot password?",
+    "continue_button": "متابعة"
+  },
+  "phone_auth": {
+    "title": "Phone auth",
+    "phone_verification_is_not_implemented_yet": "Phone verification is not implemented yet."
+  },
+  "verify_number": {
+    "title": "Verify number",
+    "sms_verification_is_not_implemented_yet": "SMS verification is not implemented yet."
+  },
+  "reset_password": {
+    "title": "إعادة تعيين كلمة المرور",
+    "enter_your_email_and_we_will_send_a_password_reset_link": "Enter your email and we will send a password reset link.",
+    "email_address": "البريد الإلكتروني",
+    "send_reset_link": "Send reset link"
+  },
+  "update_password": {
+    "title": "تحديث كلمة المرور",
+    "choose_a_new_password_for_your_nearsy_account": "Choose a new password for your Nearsy account.",
+    "new_password": "New password",
+    "repeat_password": "Repeat password",
+    "submit_button": "تحديث كلمة المرور"
+  },
+  "lookaround_bottom_nav": {
+    "profile": "الملف الشخصي",
+    "people": "الأشخاص",
+    "nearby": "بالقرب منك",
+    "liked_you": "أعجبوا بك",
+    "chats": "الدردشات"
+  },
+  "profile_attributes": {
+    "gender": {
+      "woman": "Woman",
+      "man": "Man",
+      "non_binary": "Non-binary",
+      "other": "Other"
+    },
+    "education": {
+      "high_school": "High School",
+      "currently_studying": "Currently Studying",
+      "trade_qualification": "Trade Qualification",
+      "bachelors_degree": "Bachelor's Degree",
+      "masters_degree": "Master's Degree",
+      "doctorate_phd": "Doctorate / PhD",
+      "postgraduate": "Postgraduate",
+      "other": "Other",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "kids": {
+      "yes": "Have kids",
+      "no": "Don't have kids",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "relationship_type": {
+      "something_serious": "Something Serious",
+      "just_dating": "Just Dating",
+      "just_fun": "Just Fun",
+      "open_to_anything": "Open to Anything",
+      "not_sure": "Not Sure"
+    },
+    "religion": {
+      "agnostic": "Agnostic",
+      "atheist": "Atheist",
+      "buddhist": "Buddhist",
+      "christian": "Christian",
+      "hindu": "Hindu",
+      "jewish": "Jewish",
+      "muslim": "Muslim",
+      "sikh": "Sikh",
+      "spiritual": "Spiritual",
+      "other": "Other"
+    },
+    "body_type": {
+      "slim": "Slim",
+      "lean": "Lean",
+      "average": "Average",
+      "fit": "Fit",
+      "athletic": "Athletic",
+      "muscular": "Muscular",
+      "broad": "Broad",
+      "stocky": "Stocky",
+      "bigger": "Bigger",
+      "curvy": "Curvy",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "exercise": {
+      "regularly": "Regularly",
+      "occasionally": "Occasionally",
+      "rarely": "Rarely",
+      "never": "Never"
+    },
+    "drinking": {
+      "yes": "Yes",
+      "occasionally": "Occasionally",
+      "rarely": "Rarely",
+      "no": "No",
+      "stopped_for_now": "Stopped for now"
+    },
+    "smoking": {
+      "yes": "Yes",
+      "sometimes": "Sometimes",
+      "no": "No",
+      "trying_to_quit": "Trying to quit"
+    }
+  },
+  "languages": {
+    "afar": "Afar",
+    "afrikaans": "Afrikaans",
+    "albanian": "Albanian",
+    "amharic": "Amharic",
+    "arabic": "Arabic",
+    "armenian": "Armenian",
+    "bengali": "Bengali",
+    "catalan": "Catalan"
+  }
+}

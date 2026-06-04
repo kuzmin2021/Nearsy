@@ -1,4 +1,4 @@
-﻿import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -83,8 +83,8 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    FTLocalizations.of(context).getText(
-                                      'uoyiqj22' /* Nearby */,
+                                    AppLabels.of(context).get(
+                                      'nearby.title' /* Nearby */,
                                     ),
                                     style: FloterTheme.of(context)
                                         .titleLarge
@@ -145,8 +145,8 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    FTLocalizations.of(context).getText(
-                                      '885fe35y' /* Visible near Guboshlyopsk */,
+                                    AppLabels.of(context).get(
+                                      'nearby.visible_near_guboshlyopsk' /* Visible near Guboshlyopsk */,
                                     ),
                                     style: FloterTheme.of(context)
                                         .titleSmall
@@ -173,8 +173,8 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                         ),
                                   ),
                                   Text(
-                                    FTLocalizations.of(context).getText(
-                                      'xjya5wpl' /* Your profile is discoverable b... */,
+                                    AppLabels.of(context).get(
+                                      'nearby.label_1' /* Your profile is discoverable b... */,
                                     ),
                                     maxLines: 3,
                                     style: FloterTheme.of(context)
@@ -218,9 +218,9 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                                 SearchPreferencesPageWidget
                                                     .routeName);
                                           },
-                                          text: FTLocalizations.of(context)
-                                              .getText(
-                                            'd2x9fyd8' /* Filters */,
+                                          text: AppLabels.of(context)
+                                              .get(
+                                            'nearby.filters' /* Filters */,
                                           ),
                                           options: FTButtonOptions(
                                             width: double.infinity,
@@ -255,9 +255,9 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                                 NearbySearchPreferencesPageWidget
                                                     .routeName);
                                           },
-                                          text: FTLocalizations.of(context)
-                                              .getText(
-                                            'cs6sopfc' /* Visibility */,
+                                          text: AppLabels.of(context)
+                                              .get(
+                                            'nearby.visibility' /* Visibility */,
                                           ),
                                           options: FTButtonOptions(
                                             width: double.infinity,
@@ -320,8 +320,8 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                         ),
                                       ),
                                       Text(
-                                        FTLocalizations.of(context).getText(
-                                          '7ux3hs7f' /* Alex, 37 */,
+                                        AppLabels.of(context).get(
+                                          'skip' /* Alex, 37 */,
                                         ),
                                         maxLines: 1,
                                         style: FloterTheme.of(context)
@@ -383,8 +383,8 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                         ),
                                       ),
                                       Text(
-                                        FTLocalizations.of(context).getText(
-                                          'yjx5vp7b' /* Mikhail, 42 */,
+                                        AppLabels.of(context).get(
+                                          'skip' /* Mikhail, 42 */,
                                         ),
                                         maxLines: 1,
                                         style: FloterTheme.of(context)
@@ -453,8 +453,8 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                         ),
                                       ),
                                       Text(
-                                        FTLocalizations.of(context).getText(
-                                          'phargmkc' /* Roman, 34 */,
+                                        AppLabels.of(context).get(
+                                          'skip' /* Roman, 34 */,
                                         ),
                                         maxLines: 1,
                                         style: FloterTheme.of(context)
@@ -516,8 +516,8 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                         ),
                                       ),
                                       Text(
-                                        FTLocalizations.of(context).getText(
-                                          'sccjgfjq' /* Denis, 39 */,
+                                        AppLabels.of(context).get(
+                                          'skip' /* Denis, 39 */,
                                         ),
                                         maxLines: 1,
                                         style: FloterTheme.of(context)

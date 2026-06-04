@@ -1,0 +1,358 @@
+{
+  "auth": {
+    "nearsy": "Nearsy",
+    "meet_near_keep_it_easy": "Meet near. Keep it easy",
+    "continue_with_email": "Продолжить с email",
+    "continue_with_phone": "Continue with phone",
+    "by_signing_up_you_agree_to_the_terms_of": "By signing up you agree to the Terms of",
+    "service_and_privacy_policy": "Service and Privacy Policy"
+  },
+  "profile": {
+    "title": "Профиль",
+    "name": "Имя",
+    "catchphrase": "Catchphrase",
+    "about_me": "Обо мне",
+    "gender": "Пол",
+    "age": "Возраст",
+    "height": "Рост",
+    "work": "Работа",
+    "education": "Образование",
+    "kids": "Дети",
+    "preferred_relationships": "Предпочтения в отношениях",
+    "beliefs": "Взгляды",
+    "body_type": "Тип телосложения",
+    "exercise": "Спорт",
+    "drinking": "Алкоголь",
+    "smoking": "Курение",
+    "profile_alt": "Профиль"
+  },
+  "people": {
+    "lookaround": "Lookaround",
+    "guess_what_i": "Guess what I",
+    "title": "Люди"
+  },
+  "liked_you": {
+    "title": "Вы им понравились",
+    "all_3": "All 3",
+    "filter_matches_0": "Filter matches 0",
+    "outside_3": "Outside 3",
+    "tab_label": "Вы им понравились"
+  },
+  "matches": {
+    "chats": "Чаты",
+    "you_normur": "You: Normur",
+    "you_how_big_is_your": "You: How big is your...",
+    "sure_see_you_at_bla": "Sure, see you at bla...",
+    "tab_label": "Чаты"
+  },
+  "chat": {
+    "chyokak": "Chyokak?",
+    "normur": "Normur",
+    "kirill_is_typing": "Kirill is typing...",
+    "write_a_message": "Write a message"
+  },
+  "account_settings": {
+    "title": "Настройки аккаунта",
+    "edit_email": "Изменить",
+    "edit_phone": "Изменить",
+    "edit_password": "Изменить",
+    "email_authentication": "Email authentication",
+    "manage": "Manage",
+    "notifications": "Уведомления",
+    "push_notifications": "Push Notifications",
+    "matches": "Пары",
+    "messages": "Сообщения",
+    "liked_you": "Liked you",
+    "email_notifications": "Email Notifications",
+    "matches_email": "Пары",
+    "messages_email": "Сообщения",
+    "liked_you_email": "Liked you",
+    "feedback": "Обратная связь",
+    "hide_account": "Скрыть аккаунт",
+    "delete_account": "Удалить аккаунт",
+    "log_out": "Выйти",
+    "chats": "Чаты"
+  },
+  "search_preferences": {
+    "title": "Настройки поиска",
+    "who_you_want_to_date": "Who you want to date:",
+    "women": "Женщины",
+    "men": "Мужчины",
+    "other_gender": "Другой",
+    "age": "Возраст:",
+    "between_20_and_50": "От 20 до 50 лет",
+    "search_radius": "Search radius:",
+    "up_to_161_kilometres_away": "На расстоянии до 161 километра",
+    "languages_they_know": "Языки, которыми они владеют:",
+    "what_are_they_looking_for": "Что они ищут?",
+    "something_serious": "Что-то серьёзное",
+    "just_dating": "Просто свидания",
+    "just_fun": "Просто развлечение",
+    "open_to_anything": "Открыт для всего",
+    "not_sure": "Не уверен",
+    "what_are_their_beliefs": "Каковы их убеждения?",
+    "agnostic": "Агностик",
+    "atheist": "Атеист",
+    "buddhist": "буддист",
+    "christian": "христианин",
+    "jewish": "еврейский",
+    "muslim": "мусульманин",
+    "other_beliefs": "Другой",
+    "do_they_exercise": "Они занимаются спортом?",
+    "regularly": "Regularly",
+    "occasionally": "Изредка",
+    "rarely": "Rarely",
+    "do_they_drink": "Они пьют алкоголь?",
+    "yes_drink": "Да",
+    "occasionally_drink": "Изредка",
+    "rarely_drink": "Rarely",
+    "no_drink": "Нет",
+    "do_they_smoke": "Они курят?",
+    "yes_smoke": "Да",
+    "sometimes": "Иногда",
+    "no_smoke": "Нет",
+    "trying_to_quit": "Пытаюсь бросить",
+    "nearby_visibility": "Близость видимости",
+    "apply_filters": "Применить фильтры"
+  },
+  "nearby_search_preferences": {
+    "title": "Настройки поиска поблизости",
+    "visibility_modes": "Visibility modes:",
+    "invisible": "Невидимый",
+    "visible_while_using_the_app": "Отображается во время использования приложения.",
+    "your_last_location": "Ваше последнее местоположение",
+    "save_visibility": "Сохранить видимость"
+  },
+  "chat_preferences": {
+    "title": "Настройки чата",
+    "availability_modes": "Availability modes:",
+    "unavailable": "Недоступно",
+    "matched_users_only": "Только подходящие пользователи",
+    "available": "Доступный",
+    "stuff_i_could_talk_about_for_hours": "Об этом можно говорить часами:",
+    "save_chat_preferences": "Save chat preferences"
+  },
+  "contact_us": {
+    "title": "Contact us",
+    "let_us_know_what_you_think": "Поделитесь своим мнением...",
+    "submit": "Отправить"
+  },
+  "hide_account": {
+    "title": "Скрыть аккаунт",
+    "hide": "Hide"
+  },
+  "delete_account": {
+    "title": "Удалить аккаунт",
+    "are_you_sure": "Вы уверены?",
+    "absolutely": "Абсолютно",
+    "not_quite": "Не совсем"
+  },
+  "profile_about_me": {
+    "about_me": "Обо мне:",
+    "no_pressure_leave_it_blank_if_you_like": "Без давления - можно оставить пустым."
+  },
+  "profile_gender": {
+    "gender": "Пол:"
+  },
+  "profile_age": {
+    "when_were_you_born": "Когда вы родились:",
+    "day": "День",
+    "month": "Месяц",
+    "year": "Год",
+    "optional": "Необязательно",
+    "day_placeholder": "--",
+    "month_placeholder": "--",
+    "year_placeholder": "--"
+  },
+  "months": {
+    "january": "Январь",
+    "february": "Февраль",
+    "march": "Март",
+    "april": "Апрель",
+    "may": "Май",
+    "june": "Июнь",
+    "july": "Июль",
+    "august": "Август",
+    "september": "Сентябрь",
+    "october": "Октябрь",
+    "november": "Ноябрь",
+    "december": "Декабрь"
+  },
+  "profile_height": {
+    "my_height": "Рост:",
+    "enter_your_height": "Укажите рост",
+    "ft": "ft",
+    "cm": "cm"
+  },
+  "profile_body_type": {
+    "my_body_type": "Тип телосложения:"
+  },
+  "profile_work": {
+    "my_work": "Работа:",
+    "what_do_you_do": "Чем вы занимаетесь?"
+  },
+  "profile_education": {
+    "my_education": "Образование:",
+    "pick_the_closest_match": "Выберите ближайший вариант"
+  },
+  "profile_kids": {
+    "kids": "Дети:"
+  },
+  "profile_relationship": {
+    "my_preferred_relationship": "Предпочтения в отношениях:",
+    "what_are_you_looking_for": "Что вы ищете?"
+  },
+  "profile_religion": {
+    "my_beliefs": "Взгляды:"
+  },
+  "profile_exercise": {
+    "exercise": "Спорт:",
+    "any_form_of_physical_activity": "Любая физическая активность"
+  },
+  "profile_drinking": {
+    "my_drinking_habits": "Алкоголь:",
+    "choose_what_best_describes_your_alcohol_use": "Выберите, что лучше описывает употребление алкоголя."
+  },
+  "profile_smoking": {
+    "my_smoking_habits": "Курение:",
+    "do_you_smoke": "Вы курите?"
+  },
+  "profile_location": {
+    "my_location": "My location:",
+    "automatically_detect_my_location_recommended": "Automatically detect my location (recommended)",
+    "status_in_nearby_local": "Status in Nearby: Local",
+    "i_will_set_my_location_manually": "I will set my location manually",
+    "select_location": "Select location..."
+  },
+  "nearby": {
+    "title": "Рядом",
+    "filters": "Фильтры",
+    "visibility": "Visibility",
+    "tab_label": "Рядом"
+  },
+  "email_auth": {
+    "sign_in_with_email": "Sign in with email",
+    "use_your_email_and_password_or_create_a_new_account": "Use your email and password, or create a new account.",
+    "sign_in": "Войти",
+    "register": "Регистрация",
+    "email_address": "Адрес email",
+    "password": "Пароль",
+    "repeat_password": "Repeat password",
+    "create_account": "Создать аккаунт",
+    "forgot_password": "Forgot password?",
+    "continue_button": "Продолжить"
+  },
+  "phone_auth": {
+    "title": "Phone auth",
+    "phone_verification_is_not_implemented_yet": "Phone verification is not implemented yet."
+  },
+  "verify_number": {
+    "title": "Verify number",
+    "sms_verification_is_not_implemented_yet": "SMS verification is not implemented yet."
+  },
+  "reset_password": {
+    "title": "Сбросить пароль",
+    "enter_your_email_and_we_will_send_a_password_reset_link": "Enter your email and we will send a password reset link.",
+    "email_address": "Адрес email",
+    "send_reset_link": "Send reset link"
+  },
+  "update_password": {
+    "title": "Обновить пароль",
+    "choose_a_new_password_for_your_nearsy_account": "Choose a new password for your Nearsy account.",
+    "new_password": "New password",
+    "repeat_password": "Repeat password",
+    "submit_button": "Обновить пароль"
+  },
+  "lookaround_bottom_nav": {
+    "profile": "Профиль",
+    "people": "Люди",
+    "nearby": "Рядом",
+    "liked_you": "Вы им понравились",
+    "chats": "Чаты"
+  },
+  "profile_attributes": {
+    "gender": {
+      "woman": "Женщина",
+      "man": "Мужчина",
+      "non_binary": "Небинарный",
+      "other": "Другое"
+    },
+    "education": {
+      "high_school": "Средняя школа",
+      "currently_studying": "Учусь сейчас",
+      "trade_qualification": "Профессиональное образование",
+      "bachelors_degree": "Бакалавриат",
+      "masters_degree": "Магистратура",
+      "doctorate_phd": "Докторантура / PhD",
+      "postgraduate": "Постдипломное образование",
+      "other": "Другое",
+      "prefer_not_to_say": "Предпочитаю не говорить"
+    },
+    "kids": {
+      "yes": "Есть дети",
+      "no": "Нет детей",
+      "prefer_not_to_say": "Предпочитаю не говорить"
+    },
+    "relationship_type": {
+      "something_serious": "Серьезные отношения",
+      "just_dating": "Просто свидания",
+      "just_fun": "Просто веселье",
+      "open_to_anything": "Открыт(а) к разному",
+      "not_sure": "Не уверен(а)"
+    },
+    "religion": {
+      "agnostic": "Агностик",
+      "atheist": "Атеист",
+      "buddhist": "Буддизм",
+      "christian": "Христианство",
+      "hindu": "Индуизм",
+      "jewish": "Иудаизм",
+      "muslim": "Ислам",
+      "sikh": "Сикхизм",
+      "spiritual": "Духовные взгляды",
+      "other": "Другое"
+    },
+    "body_type": {
+      "slim": "Стройное",
+      "lean": "Подтянутое",
+      "average": "Среднее",
+      "fit": "В форме",
+      "athletic": "Спортивное",
+      "muscular": "Мускулистое",
+      "broad": "Крупное",
+      "stocky": "Плотное",
+      "bigger": "Больше среднего",
+      "curvy": "С формами",
+      "prefer_not_to_say": "Предпочитаю не говорить"
+    },
+    "exercise": {
+      "regularly": "Регулярно",
+      "occasionally": "Иногда",
+      "rarely": "Редко",
+      "never": "Никогда"
+    },
+    "drinking": {
+      "yes": "Да",
+      "occasionally": "Иногда",
+      "rarely": "Редко",
+      "no": "Нет",
+      "stopped_for_now": "Пока не пью"
+    },
+    "smoking": {
+      "yes": "Да",
+      "sometimes": "Иногда",
+      "no": "Нет",
+      "trying_to_quit": "Пытаюсь бросить"
+    }
+  },
+  "languages": {
+    "afar": "Афар",
+    "afrikaans": "африкаанс",
+    "albanian": "албанский",
+    "amharic": "амхарский",
+    "arabic": "арабский",
+    "armenian": "армянский",
+    "bengali": "бенгальский",
+    "catalan": "каталанский"
+  }
+}

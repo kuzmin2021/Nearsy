@@ -1,11 +1,10 @@
-﻿import '/auth/supabase_auth/auth_util.dart';
+import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -69,11 +68,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
             child: Stack(
               alignment: AlignmentDirectional(0.0, 0.0),
               children: [
-                CachedNetworkImage(
-                  fadeInDuration: Duration(milliseconds: 0),
-                  fadeOutDuration: Duration(milliseconds: 0),
-                  imageUrl:
-                      'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=85',
+                Image.asset(
+                  'assets/images/start_screen_bg.png',
                   width: double.infinity,
                   height: 926.0,
                   fit: BoxFit.cover,
@@ -133,8 +129,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                             height: 20.0,
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              '6hsbqooj' /* Sign in with email */,
+                            AppLabels.of(context).get(
+                              'email_auth.sign_in_with_email' /* Sign in with email */,
                             ),
                             style: FloterTheme.of(context)
                                 .headlineSmall
@@ -159,8 +155,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                 ),
                           ),
                           Text(
-                            FTLocalizations.of(context).getText(
-                              'sar6c7h6' /* Use your email and password, o... */,
+                            AppLabels.of(context).get(
+                              'email_auth.use_your_email_and_password_or_create_a_new_account' /* Use your email and password, o... */,
                             ),
                             maxLines: 2,
                             style: FloterTheme.of(context)
@@ -206,8 +202,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                         _model.emailMode = 'signIn';
                                         safeSetState(() {});
                                       },
-                                      text: FTLocalizations.of(context).getText(
-                                        'f4ef3w8u' /* Sign in */,
+                                      text: AppLabels.of(context).get(
+                                        'email_auth.sign_in' /* Sign in */,
                                       ),
                                       options: FTButtonOptions(
                                         width: double.infinity,
@@ -223,7 +219,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                               .primaryBackground,
                                         ),
                                         borderRadius:
-                                            BorderRadius.circular(12.0),
+                                            BorderRadius.circular(15.0),
                                       ),
                                     ),
                                   ),
@@ -234,8 +230,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                         _model.emailMode = 'register';
                                         safeSetState(() {});
                                       },
-                                      text: FTLocalizations.of(context).getText(
-                                        'p29jwoah' /* Register */,
+                                      text: AppLabels.of(context).get(
+                                        'email_auth.register' /* Register */,
                                       ),
                                       options: FTButtonOptions(
                                         width: double.infinity,
@@ -252,10 +248,10 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                         borderSide: BorderSide(
                                           color: FloterTheme.of(context)
                                               .primary,
-                                          width: 1.0,
+                                          width: 1.5,
                                         ),
                                         borderRadius:
-                                            BorderRadius.circular(12.0),
+                                            BorderRadius.circular(15.0),
                                       ),
                                     ),
                                   ),
@@ -276,8 +272,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelText:
-                                      FTLocalizations.of(context).getText(
-                                    '9qex9k1m' /* Email address */,
+                                      AppLabels.of(context).get(
+                                    'email_auth.email_address' /* Email address */,
                                   ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
@@ -346,8 +342,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                 obscureText: !_model.passwordFieldVisibility,
                                 decoration: InputDecoration(
                                   labelText:
-                                      FTLocalizations.of(context).getText(
-                                    'w4qsrbhk' /* Password */,
+                                      AppLabels.of(context).get(
+                                    'email_auth.password' /* Password */,
                                   ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
@@ -433,8 +429,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                       !_model.confirmPasswordFieldVisibility,
                                   decoration: InputDecoration(
                                     labelText:
-                                        FTLocalizations.of(context).getText(
-                                      'uw4ggeko' /* Repeat password */,
+                                        AppLabels.of(context).get(
+                                      'email_auth.repeat_password' /* Repeat password */,
                                     ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -553,8 +549,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
 
                                     _navigate();
                                   },
-                                  text: FTLocalizations.of(context).getText(
-                                    'zxxbmmbr' /* Continue */,
+                                  text: AppLabels.of(context).get(
+                                    'email_auth.continue_button' /* Continue */,
                                   ),
                                   options: FTButtonOptions(
                                     width: double.infinity,
@@ -568,7 +564,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                       color: FloterTheme.of(context)
                                           .primaryText,
                                     ),
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(15.0),
                                   ),
                                 ),
                               if (_model.emailMode == 'register')
@@ -677,8 +673,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
 
                                     safeSetState(() {});
                                   },
-                                  text: FTLocalizations.of(context).getText(
-                                    'vjud8ony' /* Create account */,
+                                  text: AppLabels.of(context).get(
+                                    'email_auth.create_account' /* Create account */,
                                   ),
                                   options: FTButtonOptions(
                                     width: double.infinity,
@@ -692,7 +688,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                       color: FloterTheme.of(context)
                                           .primaryText,
                                     ),
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderRadius: BorderRadius.circular(15.0),
                                   ),
                                 ),
                               if (_model.emailMode == 'signIn')
@@ -709,8 +705,8 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                     height: 48.0,
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
-                                      FTLocalizations.of(context).getText(
-                                        'v8872n7y' /* Forgot password? */,
+                                      AppLabels.of(context).get(
+                                        'email_auth.forgot_password' /* Forgot password? */,
                                       ),
                                       textAlign: TextAlign.center,
                                       style: FloterTheme.of(context)
