@@ -57,6 +57,7 @@
     "edit_phone": "Düzenle",
     "edit_password": "Düzenle",
     "email_authentication": "E-posta kimlik doğrulaması",
+    "two_factor_authentication": "İki faktörlü kimlik doğrulama",
     "manage": "Yönet",
     "notifications": "Bildirimler",
     "push_notifications": "Anında Bildirimler",

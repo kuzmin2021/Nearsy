@@ -57,6 +57,7 @@
     "edit_phone": "সম্পাদনা",
     "edit_password": "সম্পাদনা",
     "email_authentication": "ইমেল প্রমাণীকরণ",
+    "two_factor_authentication": "দুই-ধাপের প্রমাণীকরণ",
     "manage": "পরিচালনা করুন",
     "notifications": "নোটিফিকেশন",
     "push_notifications": "পুশ বিজ্ঞপ্তি",

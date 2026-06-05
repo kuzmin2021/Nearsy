@@ -57,6 +57,7 @@
     "edit_phone": "تعديل",
     "edit_password": "تعديل",
     "email_authentication": "مصادقة البريد الإلكتروني",
+    "two_factor_authentication": "المصادقة الثنائية",
     "manage": "يدير",
     "notifications": "الإشعارات",
     "push_notifications": "دفع الإخطارات",

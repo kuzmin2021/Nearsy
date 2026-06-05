@@ -175,7 +175,7 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
 
                           final value =
                               canonicalAttributeValue(_model.kids ?? '');
-                          final updateValue = value == 'i_have_kids';
+                          final updateValue = value;
 
                           try {
                             await SupaFlow.client.from('profiles').upsert({

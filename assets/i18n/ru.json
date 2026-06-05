@@ -57,6 +57,7 @@
     "edit_phone": "Изменить",
     "edit_password": "Изменить",
     "email_authentication": "Аутентификация по электронной почте",
+    "two_factor_authentication": "Двухфакторная аутентификация",
     "manage": "Управление",
     "notifications": "Уведомления",
     "push_notifications": "  Push Notifications",

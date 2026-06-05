@@ -1,0 +1,376 @@
+- generic [ref=e2]:
+  - region "Skip to main content":
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#__docusaurus_skipToContent_fallback"
+  - navigation "Main" [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Figma Developers" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]: Figma Developers
+        - generic [ref=e9]:
+          - button "Dev Mode" [ref=e10] [cursor=pointer]
+          - menu
+        - generic [ref=e11]:
+          - button "Code in Figma" [ref=e12] [cursor=pointer]
+          - menu
+        - generic [ref=e13]:
+          - button "Extensions" [ref=e14] [cursor=pointer]
+          - menu
+        - generic [ref=e15]:
+          - button "Integrations" [ref=e16] [cursor=pointer]
+          - menu
+        - link "Compare APIs" [ref=e17] [cursor=pointer]:
+          - /url: /compare-apis/
+      - generic [ref=e18]:
+        - link "My Apps(opens in new tab)" [ref=e19] [cursor=pointer]:
+          - /url: https://www.figma.com/developers/apps
+          - text: My Apps
+          - img "(opens in new tab)" [ref=e20]
+        - button "Search (Ctrl+K)" [ref=e23] [cursor=pointer]:
+          - generic [ref=e24]:
+            - img [ref=e25]
+            - generic [ref=e27]: Search
+          - generic [ref=e28]:
+            - img [ref=e30]
+            - generic [ref=e32]: K
+  - generic [ref=e35]:
+    - complementary [ref=e36]:
+      - navigation "Docs sidebar" [ref=e39]:
+        - list [ref=e40]:
+          - listitem [ref=e41]:
+            - generic "REST API" [ref=e44]
+            - list [ref=e45]:
+              - listitem [ref=e46]:
+                - link "Introduction" [ref=e47] [cursor=pointer]:
+                  - /url: /docs/rest-api/
+                  - generic "Introduction" [ref=e48]
+              - listitem [ref=e49]:
+                - button "Authentication" [expanded] [ref=e51] [cursor=pointer]:
+                  - generic "Authentication" [ref=e52]
+                - list [ref=e53]:
+                  - listitem [ref=e54]:
+                    - link "Authentication" [ref=e55] [cursor=pointer]:
+                      - /url: /docs/rest-api/authentication/
+                      - generic "Authentication" [ref=e56]
+                  - listitem [ref=e57]:
+                    - link "OAuth apps" [ref=e58] [cursor=pointer]:
+                      - /url: /docs/rest-api/oauth-apps/
+                      - generic "OAuth apps" [ref=e59]
+                  - listitem [ref=e60]:
+                    - link "Plan access tokens" [ref=e61] [cursor=pointer]:
+                      - /url: /docs/rest-api/plan-access-tokens/
+                      - generic "Plan access tokens" [ref=e62]
+                  - listitem [ref=e63]:
+                    - link "Personal access tokens" [ref=e64] [cursor=pointer]:
+                      - /url: /docs/rest-api/personal-access-tokens/
+                      - generic "Personal access tokens" [ref=e65]
+                  - listitem [ref=e66]:
+                    - link "Scopes" [ref=e67] [cursor=pointer]:
+                      - /url: /docs/rest-api/scopes/
+                      - generic "Scopes" [ref=e68]
+              - listitem [ref=e69]:
+                - link "Rate Limits" [ref=e70] [cursor=pointer]:
+                  - /url: /docs/rest-api/rate-limits/
+                  - generic "Rate Limits" [ref=e71]
+              - listitem [ref=e72]:
+                - button "Figma files" [ref=e74] [cursor=pointer]:
+                  - generic "Figma files" [ref=e75]
+              - listitem [ref=e76]:
+                - button "Comments" [ref=e78] [cursor=pointer]:
+                  - generic "Comments" [ref=e79]
+              - listitem [ref=e80]:
+                - button "Users" [ref=e82] [cursor=pointer]:
+                  - generic "Users" [ref=e83]
+              - listitem [ref=e84]:
+                - button "Version history" [ref=e86] [cursor=pointer]:
+                  - generic "Version history" [ref=e87]
+              - listitem [ref=e88]:
+                - button "Projects" [ref=e90] [cursor=pointer]:
+                  - generic "Projects" [ref=e91]
+              - listitem [ref=e92]:
+                - button "Components" [ref=e94] [cursor=pointer]:
+                  - generic "Components" [ref=e95]
+              - listitem [ref=e96]:
+                - button "Webhooks" [ref=e98] [cursor=pointer]:
+                  - generic "Webhooks" [ref=e99]
+              - listitem [ref=e100]:
+                - button "Activity logs" [ref=e102] [cursor=pointer]:
+                  - generic "Activity logs" [ref=e103]
+              - listitem [ref=e104]:
+                - button "Developer logs" [ref=e106] [cursor=pointer]:
+                  - generic "Developer logs" [ref=e107]
+              - listitem [ref=e108]:
+                - button "Discovery" [ref=e110] [cursor=pointer]:
+                  - generic "Discovery" [ref=e111]
+              - listitem [ref=e112]:
+                - button "Payments" [ref=e114] [cursor=pointer]:
+                  - generic "Payments" [ref=e115]
+              - listitem [ref=e116]:
+                - button "Variables" [ref=e118] [cursor=pointer]:
+                  - generic "Variables" [ref=e119]
+              - listitem [ref=e120]:
+                - button "Dev Resources" [ref=e122] [cursor=pointer]:
+                  - generic "Dev Resources" [ref=e123]
+              - listitem [ref=e124]:
+                - button "Library Analytics" [ref=e126] [cursor=pointer]:
+                  - generic "Library Analytics" [ref=e127]
+              - listitem [ref=e128]:
+                - button "oEmbed" [ref=e130] [cursor=pointer]:
+                  - generic "oEmbed" [ref=e131]
+              - listitem [ref=e132]:
+                - link "Errors" [ref=e133] [cursor=pointer]:
+                  - /url: /docs/rest-api/errors/
+                  - generic "Errors" [ref=e134]
+              - listitem [ref=e135]:
+                - button "SCIM API Reference" [ref=e137] [cursor=pointer]:
+                  - generic "SCIM API Reference" [ref=e138]
+              - listitem [ref=e139]:
+                - link "Changelog" [ref=e140] [cursor=pointer]:
+                  - /url: /docs/rest-api/changelog/
+                  - generic "Changelog" [ref=e141]
+    - main [ref=e142]:
+      - generic [ref=e144]:
+        - generic [ref=e146]:
+          - article [ref=e147]:
+            - navigation "Breadcrumbs" [ref=e148]:
+              - list [ref=e149]:
+                - listitem [ref=e150]:
+                  - link "Home page" [ref=e151] [cursor=pointer]:
+                    - /url: /
+                    - img [ref=e152]
+                - listitem [ref=e154]:
+                  - generic [ref=e155]: REST API
+                - listitem [ref=e156]:
+                  - generic [ref=e157]: Introduction
+            - generic [ref=e158]:
+              - heading "Introduction" [level=1] [ref=e160]
+              - paragraph [ref=e161]: Welcome to Figma, the world's first collaborative interface design tool. Figma allows designers to create and prototype their digital experiences - together in real-time and in one place - helping them turn their ideas and visions into products, faster. Figma's mission is to make design accessible to everyone. The Figma API is one of the ways we aim to do that.
+              - heading "What can I do with the Figma API?Direct link to What can I do with the Figma API?" [level=2] [ref=e162]:
+                - text: What can I do with the Figma API?
+                - link "Direct link to What can I do with the Figma API?" [ref=e163] [cursor=pointer]:
+                  - /url: "#what-can-i-do-with-the-figma-api"
+                  - text: "#"
+              - paragraph [ref=e164]: The Figma API supports access and interactions with Figma's different products. This gives you the ability to do things such as view and extract any objects or layers, and their properties from files, get usage data, or listen for events with webhooks, among other things.
+              - heading "How does it work?Direct link to How does it work?" [level=2] [ref=e165]:
+                - text: How does it work?
+                - link "Direct link to How does it work?" [ref=e166] [cursor=pointer]:
+                  - /url: "#how-does-it-work"
+                  - text: "#"
+              - paragraph [ref=e167]:
+                - text: The Figma API is based on the
+                - link "REST" [ref=e168] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Representational_state_transfer
+                - text: structure. We support authentication via
+                - link "access tokens" [ref=e169] [cursor=pointer]:
+                  - /url: /docs/rest-api/authentication/#access-tokens
+                - text: and
+                - link "OAuth2" [ref=e170] [cursor=pointer]:
+                  - /url: /docs/rest-api/authentication/#oauth-apps
+                - text: . Requests are made via
+                - strong [ref=e171]: HTTP endpoints
+                - text: "with clear functions and appropriate response codes. Endpoints allow you to perform a number of actions:"
+              - list [ref=e172]:
+                - listitem [ref=e173]:
+                  - text: "Make requests for different resources:"
+                  - list [ref=e174]:
+                    - listitem [ref=e175]:
+                      - link "Files" [ref=e176] [cursor=pointer]:
+                        - /url: /docs/rest-api/file-endpoints/
+                    - listitem [ref=e177]:
+                      - link "Images" [ref=e178] [cursor=pointer]:
+                        - /url: /docs/rest-api/file-endpoints/#get-images-endpoint
+                    - listitem [ref=e179]:
+                      - link "File versions" [ref=e180] [cursor=pointer]:
+                        - /url: /docs/rest-api/version-history-endpoints/
+                    - listitem [ref=e181]:
+                      - link "Users" [ref=e182] [cursor=pointer]:
+                        - /url: /docs/rest-api/users-endpoints/
+                    - listitem [ref=e183]:
+                      - link "Comments" [ref=e184] [cursor=pointer]:
+                        - /url: /docs/rest-api/comments-endpoints/
+                    - listitem [ref=e185]:
+                      - link "Projects" [ref=e186] [cursor=pointer]:
+                        - /url: /docs/rest-api/projects-endpoints/
+                    - listitem [ref=e187]:
+                      - link "Components and styles" [ref=e188] [cursor=pointer]:
+                        - /url: /docs/rest-api/component-endpoints/
+                - listitem [ref=e189]:
+                  - text: Work with
+                  - link "variables" [ref=e190] [cursor=pointer]:
+                    - /url: /docs/rest-api/variables-endpoints/
+                - listitem [ref=e191]:
+                  - text: Manage
+                  - link "dev resources" [ref=e192] [cursor=pointer]:
+                    - /url: /docs/rest-api/dev-resources-endpoints/
+                - listitem [ref=e193]:
+                  - text: "Get usage and analytics data:"
+                  - list [ref=e194]:
+                    - listitem [ref=e195]:
+                      - link "Activity logs" [ref=e196] [cursor=pointer]:
+                        - /url: /docs/rest-api/activity-logs-endpoints/
+                    - listitem [ref=e197]:
+                      - link "Text events" [ref=e198] [cursor=pointer]:
+                        - /url: /docs/rest-api/discovery-endpoints/
+                    - listitem [ref=e199]:
+                      - link "Library analytics" [ref=e200] [cursor=pointer]:
+                        - /url: /docs/rest-api/library-analytics-endpoints/
+                - listitem [ref=e201]:
+                  - text: Create and manage
+                  - link "webhooks" [ref=e202] [cursor=pointer]:
+                    - /url: /docs/rest-api/webhooks-endpoints/
+              - paragraph [ref=e203]:
+                - text: Once granted access, you can use the Figma API to inspect a
+                - strong [ref=e204]: JSON
+                - text: representation of the file. Every layer or object in a file will be represented within the file by a node (subtree). You will then be able to access and isolate the object and any properties associated with it. In addition to accessing files and layers, you will be able to GET and POST comments to files.
+              - heading "Base URLDirect link to Base URL" [level=3] [ref=e205]:
+                - text: Base URL
+                - link "Direct link to Base URL" [ref=e206] [cursor=pointer]:
+                  - /url: "#base-url"
+                  - text: "#"
+              - paragraph [ref=e207]:
+                - text: "All REST API endpoints use the same base URL:"
+                - code [ref=e208]: https://api.figma.com
+              - paragraph [ref=e209]:
+                - text: "For example:"
+                - code [ref=e210]: GET https://api.figma.com/v1/files/:key
+              - paragraph [ref=e211]:
+                - text: "For Figma for Government, the base URL is:"
+                - code [ref=e212]: https://api.figma-gov.com
+              - paragraph [ref=e213]:
+                - text: "For example:"
+                - code [ref=e214]: GET https://api.figma-gov.com/v1/activity_logs
+              - paragraph [ref=e217]:
+                - strong [ref=e218]: "Note:"
+                - text: The REST API documentation for endpoints generally refers to the common base URL,
+                - code [ref=e219]: https://api.figma.com
+                - text: . If you're a Figma for Government customer, replace the common base URL with the Figma for Government version.
+              - heading "Getting startedDirect link to Getting started" [level=2] [ref=e220]:
+                - text: Getting started
+                - link "Direct link to Getting started" [ref=e221] [cursor=pointer]:
+                  - /url: "#getting-started"
+                  - text: "#"
+              - paragraph [ref=e222]:
+                - text: If you’re not already using Figma, the first step is to sign up and
+                - link "create an account" [ref=e223] [cursor=pointer]:
+                  - /url: https://www.figma.com/signup
+                - text: .
+              - paragraph [ref=e224]:
+                - text: Once you have a Figma account, the next step is to authenticate with the API. This can be done using either
+                - link "OAuth2" [ref=e225] [cursor=pointer]:
+                  - /url: /docs/rest-api/authentication/#oauth-apps
+                - text: or
+                - link "access tokens" [ref=e226] [cursor=pointer]:
+                  - /url: /docs/rest-api/authentication/#access-tokens
+                - text: .
+              - paragraph [ref=e227]:
+                - text: You can then browse our endpoints and start making queries against the Figma API. We recommend starting with the basics by learning about
+                - link "Figma files" [ref=e228] [cursor=pointer]:
+                  - /url: /docs/rest-api/file-endpoints/
+                - text: ", before moving on to more advanced topics such as comments, users, version history, and projects."
+              - paragraph [ref=e229]:
+                - text: If you plan on building a fully-fledged app, that others can share and use, then you can register your app by heading to
+                - link "My apps" [ref=e230] [cursor=pointer]:
+                  - /url: https://www.figma.com/developers/apps
+                - text: in your Figma account.
+              - heading "OpenAPI specificationDirect link to OpenAPI specification" [level=2] [ref=e231]:
+                - text: OpenAPI specification
+                - link "Direct link to OpenAPI specification" [ref=e232] [cursor=pointer]:
+                  - /url: "#openapi-specification"
+                  - text: "#"
+              - paragraph [ref=e233]:
+                - text: The Figma REST API is fully described in an OpenAPI specification in the open source
+                - link "figma/rest-api-spec" [ref=e234] [cursor=pointer]:
+                  - /url: https://github.com/figma/rest-api-spec
+                - text: repository.
+              - paragraph [ref=e235]:
+                - text: OpenAPI is a specification for describing HTTP APIs in a language-agnostic manner. It has a large ecosystem of tools to let you generate API documentation, client SDKs, and more. We also provide custom Typescript types generated from the OpenAPI specification for those of you with Typescript codebases to make it easy to write type-safe code out of the box. For more information, see the
+                - link "README" [ref=e236] [cursor=pointer]:
+                  - /url: https://github.com/figma/rest-api-spec
+                - text: .
+          - navigation "Docs pages" [ref=e237]:
+            - link "Next Authentication" [ref=e238] [cursor=pointer]:
+              - /url: /docs/rest-api/authentication/
+              - generic [ref=e239]: Next
+              - generic [ref=e240]: Authentication
+        - list [ref=e243]:
+          - text: On this page
+          - listitem [ref=e244]:
+            - link "What can I do with the Figma API?" [ref=e245] [cursor=pointer]:
+              - /url: "#what-can-i-do-with-the-figma-api"
+          - listitem [ref=e246]:
+            - link "How does it work?" [ref=e247] [cursor=pointer]:
+              - /url: "#how-does-it-work"
+            - list [ref=e248]:
+              - listitem [ref=e249]:
+                - link "Base URL" [ref=e250] [cursor=pointer]:
+                  - /url: "#base-url"
+          - listitem [ref=e251]:
+            - link "Getting started" [ref=e252] [cursor=pointer]:
+              - /url: "#getting-started"
+          - listitem [ref=e253]:
+            - link "OpenAPI specification" [ref=e254] [cursor=pointer]:
+              - /url: "#openapi-specification"
+  - generic [ref=e255]:
+    - generic [ref=e256]:
+      - generic [ref=e257]: Was this page helpful?
+      - link "Leave us feedback" [ref=e259] [cursor=pointer]:
+        - /url: https://form.asana.com/?k=6r2Tos6p01DyVKGLeYJByg&d=10497086658021
+    - list [ref=e260]:
+      - listitem [ref=e261]:
+        - link "Community Forum" [ref=e262] [cursor=pointer]:
+          - /url: https://forum.figma.com/
+      - listitem [ref=e263]:
+        - link "Discord Server" [ref=e264] [cursor=pointer]:
+          - /url: https://discord.gg/xzQhe2Vcvx
+      - listitem [ref=e265]:
+        - link "GitHub Samples" [ref=e266] [cursor=pointer]:
+          - /url: https://github.com/figma/widget-samples
+  - contentinfo [ref=e267]:
+    - link [ref=e268] [cursor=pointer]:
+      - /url: https://www.figma.com
+      - img [ref=e269]
+    - generic [ref=e276]:
+      - link "FigJam" [ref=e277] [cursor=pointer]:
+        - /url: https://www.figma.com/figjam/
+      - link "Enterprise" [ref=e278] [cursor=pointer]:
+        - /url: https://www.figma.com/enterprise/
+      - link "Learn" [ref=e279] [cursor=pointer]:
+        - /url: https://help.figma.com/
+      - link "Education" [ref=e280] [cursor=pointer]:
+        - /url: https://www.figma.com/education/
+      - link "Careers" [ref=e281] [cursor=pointer]:
+        - /url: https://www.figma.com/careers/
+      - link "Pricing" [ref=e282] [cursor=pointer]:
+        - /url: https://www.figma.com/pricing/
+      - link "Developers" [ref=e283] [cursor=pointer]:
+        - /url: https://www.figma.com/developers
+      - link "Blog" [ref=e284] [cursor=pointer]:
+        - /url: https://www.figma.com/blog/
+      - link "Downloads" [ref=e285] [cursor=pointer]:
+        - /url: https://www.figma.com/downloads/
+      - link "Releases" [ref=e286] [cursor=pointer]:
+        - /url: https://www.figma.com/release-notes/
+      - link "Security" [ref=e287] [cursor=pointer]:
+        - /url: https://www.figma.com/security/
+      - link "Legal" [ref=e288] [cursor=pointer]:
+        - /url: https://www.figma.com/legal
+      - link "Contact" [ref=e289] [cursor=pointer]:
+        - /url: https://www.figma.com/contact/
+    - list [ref=e290]:
+      - listitem [ref=e291]:
+        - link [ref=e292] [cursor=pointer]:
+          - /url: https://twitter.com/figma
+          - img [ref=e293]
+      - listitem [ref=e295]:
+        - link [ref=e296] [cursor=pointer]:
+          - /url: https://www.youtube.com/figmadesign
+          - img [ref=e297]
+      - listitem [ref=e299]:
+        - link [ref=e300] [cursor=pointer]:
+          - /url: https://www.instagram.com/figma
+          - img [ref=e301]
+      - listitem [ref=e303]:
+        - link [ref=e304] [cursor=pointer]:
+          - /url: https://www.facebook.com/figmadesign
+          - img [ref=e305]

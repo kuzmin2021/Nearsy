@@ -57,6 +57,7 @@
     "edit_phone": "Modifier",
     "edit_password": "Modifier",
     "email_authentication": "Authentification par e-mail",
+    "two_factor_authentication": "Authentification à deux facteurs",
     "manage": "Gérer",
     "notifications": "Notifications",
     "push_notifications": "Notifications poussées",

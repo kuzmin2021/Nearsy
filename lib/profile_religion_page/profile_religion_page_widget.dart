@@ -35,7 +35,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       final userId = SupaFlow.client.auth.currentUser?.id;
       if (userId == null || userId.isEmpty) {
-        _model.beliefs = '';
+        _model.religion = '';
         safeSetState(() {});
         return;
       }
@@ -100,7 +100,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
       }
 
       final rawText = (profile?['religion'] as String?)?.trim() ?? '';
-      _model.beliefs = normalizeChoice(rawText);
+      _model.religion = normalizeChoice(rawText);
 
       safeSetState(() {});
     });
@@ -181,7 +181,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                           }
 
                           final value =
-                              canonicalAttributeValue(_model.beliefs ?? '');
+                              canonicalAttributeValue(_model.religion ?? '');
                           final updateValue = value;
 
                           try {
@@ -206,7 +206,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                             context.goNamed(
                               'ProfilePage',
                               queryParameters: {
-                                'beliefsOverride': serializeParam(
+                                'religionOverride': serializeParam(
                                   navigationValue,
                                   ParamType.String,
                                 ),
@@ -264,7 +264,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  _model.beliefs = 'agnostic';
+                                  _model.religion = 'agnostic';
                                   safeSetState(() {});
                                 },
                                 child: Container(
@@ -288,7 +288,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           alignment:
                                               AlignmentDirectional(0.0, 0.0),
                                           children: [
-                                            if (_model.beliefs == 'agnostic')
+                                            if (_model.religion == 'agnostic')
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
@@ -298,7 +298,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.beliefs == 'agnostic'))
+                                            if (!(_model.religion == 'agnostic'))
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
@@ -355,7 +355,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  _model.beliefs = 'atheist';
+                                  _model.religion = 'atheist';
                                   safeSetState(() {});
                                 },
                                 child: Container(
@@ -379,7 +379,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           alignment:
                                               AlignmentDirectional(0.0, 0.0),
                                           children: [
-                                            if (_model.beliefs == 'atheist')
+                                            if (_model.religion == 'atheist')
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
@@ -389,7 +389,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.beliefs == 'atheist'))
+                                            if (!(_model.religion == 'atheist'))
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
@@ -446,7 +446,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  _model.beliefs = 'buddhist';
+                                  _model.religion = 'buddhist';
                                   safeSetState(() {});
                                 },
                                 child: Container(
@@ -470,7 +470,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           alignment:
                                               AlignmentDirectional(0.0, 0.0),
                                           children: [
-                                            if (_model.beliefs == 'buddhist')
+                                            if (_model.religion == 'buddhist')
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
@@ -480,7 +480,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.beliefs == 'buddhist'))
+                                            if (!(_model.religion == 'buddhist'))
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
@@ -537,7 +537,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  _model.beliefs = 'christian';
+                                  _model.religion = 'christian';
                                   safeSetState(() {});
                                 },
                                 child: Container(
@@ -561,7 +561,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           alignment:
                                               AlignmentDirectional(0.0, 0.0),
                                           children: [
-                                            if (_model.beliefs == 'christian')
+                                            if (_model.religion == 'christian')
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
@@ -571,7 +571,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.beliefs ==
+                                            if (!(_model.religion ==
                                                 'christian'))
                                               Container(
                                                 child: Icon(
@@ -629,7 +629,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  _model.beliefs = 'hindu';
+                                  _model.religion = 'hindu';
                                   safeSetState(() {});
                                 },
                                 child: Container(
@@ -653,7 +653,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           alignment:
                                               AlignmentDirectional(0.0, 0.0),
                                           children: [
-                                            if (_model.beliefs == 'hindu')
+                                            if (_model.religion == 'hindu')
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
@@ -663,7 +663,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.beliefs == 'hindu'))
+                                            if (!(_model.religion == 'hindu'))
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
@@ -720,7 +720,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  _model.beliefs = 'jewish';
+                                  _model.religion = 'jewish';
                                   safeSetState(() {});
                                 },
                                 child: Container(
@@ -744,7 +744,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           alignment:
                                               AlignmentDirectional(0.0, 0.0),
                                           children: [
-                                            if (_model.beliefs == 'jewish')
+                                            if (_model.religion == 'jewish')
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
@@ -754,7 +754,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.beliefs == 'jewish'))
+                                            if (!(_model.religion == 'jewish'))
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
@@ -811,7 +811,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  _model.beliefs = 'muslim';
+                                  _model.religion = 'muslim';
                                   safeSetState(() {});
                                 },
                                 child: Container(
@@ -835,7 +835,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           alignment:
                                               AlignmentDirectional(0.0, 0.0),
                                           children: [
-                                            if (_model.beliefs == 'muslim')
+                                            if (_model.religion == 'muslim')
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
@@ -845,7 +845,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.beliefs == 'muslim'))
+                                            if (!(_model.religion == 'muslim'))
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
@@ -902,7 +902,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  _model.beliefs = 'sikh';
+                                  _model.religion = 'sikh';
                                   safeSetState(() {});
                                 },
                                 child: Container(
@@ -926,7 +926,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           alignment:
                                               AlignmentDirectional(0.0, 0.0),
                                           children: [
-                                            if (_model.beliefs == 'sikh')
+                                            if (_model.religion == 'sikh')
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
@@ -936,7 +936,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.beliefs == 'sikh'))
+                                            if (!(_model.religion == 'sikh'))
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
@@ -993,7 +993,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  _model.beliefs = 'spiritual';
+                                  _model.religion = 'spiritual';
                                   safeSetState(() {});
                                 },
                                 child: Container(
@@ -1017,7 +1017,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           alignment:
                                               AlignmentDirectional(0.0, 0.0),
                                           children: [
-                                            if (_model.beliefs == 'spiritual')
+                                            if (_model.religion == 'spiritual')
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
@@ -1027,7 +1027,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.beliefs ==
+                                            if (!(_model.religion ==
                                                 'spiritual'))
                                               Container(
                                                 child: Icon(
@@ -1085,7 +1085,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  _model.beliefs = 'other';
+                                  _model.religion = 'other';
                                   safeSetState(() {});
                                 },
                                 child: Container(
@@ -1109,7 +1109,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                           alignment:
                                               AlignmentDirectional(0.0, 0.0),
                                           children: [
-                                            if (_model.beliefs == 'other')
+                                            if (_model.religion == 'other')
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
@@ -1119,7 +1119,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.beliefs == 'other'))
+                                            if (!(_model.religion == 'other'))
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,

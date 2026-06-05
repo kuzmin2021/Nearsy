@@ -352,7 +352,7 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                         flex: 1,
                         child: Text(
                           AppLabels.of(context).get(
-                            'account_settings.email_authentication' /* Email authentication */,
+                            'account_settings.two_factor_authentication' /* Two-factor authentication */,
                           ),
                           maxLines: 1,
                           style:

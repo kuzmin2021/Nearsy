@@ -291,7 +291,7 @@ class _ProfileLanguagesPageWidgetState
                           try {
                             await SupaFlow.client.from('profiles').upsert({
                               'user_id': userId,
-                              'languages': updateValue,
+                              'languages': value,
                             }, onConflict: 'user_id');
                           } catch (error) {
                             if (context.mounted) {

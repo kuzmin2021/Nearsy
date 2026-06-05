@@ -1,4 +1,4 @@
-﻿import '/floter/floter_util.dart';
+import '/floter/floter_util.dart';
 import 'profile_religion_page_widget.dart' show ProfileReligionPageWidget;
 import 'package:flutter/material.dart';
 
@@ -6,7 +6,7 @@ class ProfileReligionPageModel
     extends FloterModel<ProfileReligionPageWidget> {
   ///  Local state fields for this page.
 
-  String? beliefs = '';
+  String? religion = '';
 
   @override
   void initState(BuildContext context) {}

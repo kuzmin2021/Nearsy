@@ -38,17 +38,11 @@ class ProfilesRow extends SupabaseDataRow {
   DateTime? get updatedAt => getField<DateTime>('updated_at');
   set updatedAt(DateTime? value) => setField<DateTime>('updated_at', value);
 
-  String? get about => getField<String>('about');
-  set about(String? value) => setField<String>('about', value);
-
   String? get gender => getField<String>('gender');
   set gender(String? value) => setField<String>('gender', value);
 
   String? get birthday => getField<String>('birthday');
   set birthday(String? value) => setField<String>('birthday', value);
-
-  String? get location => getField<String>('location');
-  set location(String? value) => setField<String>('location', value);
 
   String? get languages => getField<String>('languages');
   set languages(String? value) => setField<String>('languages', value);
@@ -68,9 +62,6 @@ class ProfilesRow extends SupabaseDataRow {
   String? get relationshipType => getField<String>('relationship_type');
   set relationshipType(String? value) =>
       setField<String>('relationship_type', value);
-
-  String? get beliefs => getField<String>('beliefs');
-  set beliefs(String? value) => setField<String>('beliefs', value);
 
   String? get bodyType => getField<String>('body_type');
   set bodyType(String? value) => setField<String>('body_type', value);

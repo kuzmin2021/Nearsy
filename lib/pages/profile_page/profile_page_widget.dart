@@ -26,7 +26,7 @@ class ProfilePageWidget extends StatefulWidget {
     String? educationOverride,
     String? kidsOverride,
     String? relationshipTypeOverride,
-    String? beliefsOverride,
+    String? religionOverride,
     String? bodyTypeOverride,
     String? exerciseOverride,
     String? drinkingOverride,
@@ -40,7 +40,7 @@ class ProfilePageWidget extends StatefulWidget {
         this.educationOverride = educationOverride ?? '',
         this.kidsOverride = kidsOverride ?? '',
         this.relationshipTypeOverride = relationshipTypeOverride ?? '',
-        this.beliefsOverride = beliefsOverride ?? '',
+        this.religionOverride = religionOverride ?? '',
         this.bodyTypeOverride = bodyTypeOverride ?? '',
         this.exerciseOverride = exerciseOverride ?? '',
         this.drinkingOverride = drinkingOverride ?? '',
@@ -64,7 +64,7 @@ class ProfilePageWidget extends StatefulWidget {
   final String relationshipTypeOverride;
 
   /// Fresh profile attribute value passed back after save.
-  final String beliefsOverride;
+  final String religionOverride;
 
   /// Fresh profile attribute value passed back after save.
   final String bodyTypeOverride;
@@ -256,8 +256,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
       _model.profileGender =
           localizeProfileAttribute('gender', profile?['gender']);
       _model.profileBirthday = cleanValue(profile?['birthday']);
-      _model.profileLocation =
-          cleanValue(profile?['location_label'] ?? profile?['location']);
+      _model.profileLocation = cleanValue(profile?['location_label']);
       _model.profileLanguages = cleanStringList(profile?['languages']);
       int? parseHeightCm(dynamic value) {
         if (value == null) {
@@ -555,9 +554,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       FloterTheme.of(context).primaryText,
                                   size: 38.0,
                                 ),
-                                onPressed: () {
-                                  print('OpenSettingsButton pressed ...');
-                                },
+                            onPressed: () {
+                              context.pushNamed(AccountSettingsPageWidget.routeName);
+                            },
                               ),
                             ],
                           ),
@@ -1656,6 +1655,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                             .from('user_photos')
                                                             .insert({
                                                           'user_id': userId,
+                                                          'photo_path':
+                                                              uploadedUrl,
+                                                          'storage_path':
+                                                              storagePath,
+                                                          'is_main': false,
+                                                          'position': nextSlot,
                                                           'photo_url':
                                                               uploadedUrl,
                                                           'slot': nextSlot,
@@ -2931,7 +2936,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           child: Text(
                                             functions.effectiveProfileAttribute(
                                                 'religion',
-                                                widget!.beliefsOverride,
+                                                widget!.religionOverride,
                                                 _model.profileBeliefs)!,
                                             textAlign: TextAlign.end,
                                             maxLines: 1,

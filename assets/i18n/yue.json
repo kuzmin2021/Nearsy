@@ -57,6 +57,7 @@
     "edit_phone": "編輯",
     "edit_password": "編輯",
     "email_authentication": "電郵驗證",
+    "two_factor_authentication": "雙重認證",
     "manage": "管理",
     "notifications": "通知",
     "push_notifications": "推送通知",

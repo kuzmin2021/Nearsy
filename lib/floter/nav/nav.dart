@@ -110,8 +110,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               'relationshipTypeOverride',
               ParamType.String,
             ),
-            beliefsOverride: params.getParam(
-              'beliefsOverride',
+            religionOverride: params.getParam(
+              'religionOverride',
               ParamType.String,
             ),
             bodyTypeOverride: params.getParam(

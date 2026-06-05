@@ -57,6 +57,7 @@
     "edit_phone": "編集",
     "edit_password": "編集",
     "email_authentication": "メール認証",
+    "two_factor_authentication": "二要素認証",
     "manage": "管理する",
     "notifications": "通知",
     "push_notifications": "プッシュ通知",

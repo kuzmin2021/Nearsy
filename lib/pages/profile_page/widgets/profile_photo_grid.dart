@@ -101,8 +101,8 @@ class ProfilePhotoGrid extends StatelessWidget {
     final rows = await _loadPhotoRows(userId);
     for (var index = 0; index < rows.length; index++) {
       final row = rows[index];
-      final id = (row['id'] as String?)?.trim() ?? '';
-      if (id.isEmpty) continue;
+      final id = row['id'];
+      if (id == null) continue;
 
       final nextSlot = index + 1;
       if (row['slot'] == nextSlot && row['order'] == nextSlot) {
@@ -114,6 +114,7 @@ class ProfilePhotoGrid extends StatelessWidget {
           .update({
             'slot': nextSlot,
             'order': nextSlot,
+            'position': nextSlot,
           })
           .eq('id', id)
           .eq('user_id', userId);
@@ -263,6 +264,10 @@ class ProfilePhotoGrid extends StatelessWidget {
       try {
         await SupaFlow.client.from('user_photos').insert({
           'user_id': userId,
+          'photo_path': uploadedUrl,
+          'storage_path': storagePath,
+          'is_main': false,
+          'position': nextSlot,
           'photo_url': uploadedUrl,
           'slot': nextSlot,
           'order': nextSlot,
