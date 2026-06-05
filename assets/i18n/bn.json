@@ -1,16 +1,16 @@
 {
   "auth": {
     "nearsy": "Nearsy",
-    "meet_near_keep_it_easy": "Meet near. Keep it easy",
+    "meet_near_keep_it_easy": "কাছাকাছি দেখা। এটা সহজ রাখুন",
     "continue_with_email": "ইমেল দিয়ে চালিয়ে যান",
-    "continue_with_phone": "Continue with phone",
-    "by_signing_up_you_agree_to_the_terms_of": "By signing up you agree to the Terms of",
-    "service_and_privacy_policy": "Service and Privacy Policy"
+    "continue_with_phone": "ফোন দিয়ে চালিয়ে যান",
+    "by_signing_up_you_agree_to_the_terms_of": "সাইন আপ করে আপনি এর শর্তাবলীতে সম্মত হন",
+    "service_and_privacy_policy": "পরিষেবা এবং গোপনীয়তা নীতি"
   },
   "profile": {
     "title": "প্রোফাইল",
     "name": "নাম",
-    "catchphrase": "Catchphrase",
+    "catchphrase": "ক্যাচফ্রেজ",
     "about_me": "আমার সম্পর্কে",
     "gender": "লিঙ্গ",
     "age": "বয়স",
@@ -33,9 +33,9 @@
   },
   "liked_you": {
     "title": "আপনাকে পছন্দ করেছে",
-    "all_3": "All 3",
-    "filter_matches_0": "Filter matches 0",
-    "outside_3": "Outside 3",
+    "all_3": "সব 3",
+    "filter_matches_0": "ফিল্টার মেলে 0",
+    "outside_3": "বাইরে 3",
     "tab_label": "আপনাকে পছন্দ করেছে"
   },
   "matches": {
@@ -49,24 +49,24 @@
     "chyokak": "Chyokak?",
     "normur": "Normur",
     "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "Write a message"
+    "write_a_message": "একটি বার্তা লিখুন"
   },
   "account_settings": {
     "title": "অ্যাকাউন্ট সেটিংস",
     "edit_email": "সম্পাদনা",
     "edit_phone": "সম্পাদনা",
     "edit_password": "সম্পাদনা",
-    "email_authentication": "Email authentication",
-    "manage": "Manage",
+    "email_authentication": "ইমেল প্রমাণীকরণ",
+    "manage": "পরিচালনা করুন",
     "notifications": "নোটিফিকেশন",
-    "push_notifications": "Push Notifications",
+    "push_notifications": "পুশ বিজ্ঞপ্তি",
     "matches": "ম্যাচ",
     "messages": "বার্তা",
-    "liked_you": "Liked you",
-    "email_notifications": "Email Notifications",
+    "liked_you": "তোমাকে পছন্দ হয়েছে",
+    "email_notifications": "ইমেল বিজ্ঞপ্তি",
     "matches_email": "ম্যাচ",
     "messages_email": "বার্তা",
-    "liked_you_email": "Liked you",
+    "liked_you_email": "তোমাকে পছন্দ হয়েছে",
     "feedback": "প্রতিক্রিয়া",
     "hide_account": "অ্যাকাউন্ট লুকান",
     "delete_account": "অ্যাকাউন্ট মুছুন",
@@ -75,81 +75,81 @@
   },
   "search_preferences": {
     "title": "অনুসন্ধান পছন্দ",
-    "who_you_want_to_date": "Who you want to date:",
-    "women": "Women",
-    "men": "Men",
-    "other_gender": "Other",
+    "who_you_want_to_date": "আপনি যাকে ডেট করতে চান:",
+    "women": "নারী",
+    "men": "পুরুষ",
+    "other_gender": "অন্যান্য",
     "age": "বয়স:",
-    "between_20_and_50": "Between 20 and 50",
-    "search_radius": "Search radius:",
-    "up_to_161_kilometres_away": "Up to 161 kilometres away",
-    "languages_they_know": "Languages they know:",
-    "what_are_they_looking_for": "What are they looking for?",
-    "something_serious": "Something serious",
-    "just_dating": "Just dating",
-    "just_fun": "Just fun",
-    "open_to_anything": "Open to anything",
-    "not_sure": "Not sure",
-    "what_are_their_beliefs": "What are their beliefs?",
-    "agnostic": "Agnostic",
-    "atheist": "Atheist",
-    "buddhist": "Buddhist",
-    "christian": "Christian",
-    "jewish": "Jewish",
-    "muslim": "Muslim",
-    "other_beliefs": "Other",
-    "do_they_exercise": "Do they exercise?",
-    "regularly": "Regularly",
-    "occasionally": "Occasionally",
-    "rarely": "Rarely",
-    "do_they_drink": "Do they drink?",
+    "between_20_and_50": "20 থেকে 50 এর মধ্যে",
+    "search_radius": "অনুসন্ধান ব্যাসার্ধ:",
+    "up_to_161_kilometres_away": "161 কিলোমিটার পর্যন্ত দূরে",
+    "languages_they_know": "তারা যে ভাষাগুলি জানে:",
+    "what_are_they_looking_for": "তারা কি খুঁজছেন?",
+    "something_serious": "সিরিয়াস কিছু",
+    "just_dating": "শুধু ডেটিং",
+    "just_fun": "শুধু মজা",
+    "open_to_anything": "যে কোন কিছুর জন্য উন্মুক্ত",
+    "not_sure": "নিশ্চিত নই",
+    "what_are_their_beliefs": "তাদের বিশ্বাস কি?",
+    "agnostic": "অজ্ঞেয়বাদী",
+    "atheist": "নাস্তিক",
+    "buddhist": "বৌদ্ধ",
+    "christian": "খ্রিস্টান",
+    "jewish": "ইহুদি",
+    "muslim": "মুসলিম",
+    "other_beliefs": "অন্যান্য",
+    "do_they_exercise": "তারা কি ব্যায়াম করেন?",
+    "regularly": "নিয়মিত",
+    "occasionally": "মাঝে মাঝে",
+    "rarely": "কদাচিৎ",
+    "do_they_drink": "তারা পান করেন?",
     "yes_drink": "হ্যাঁ",
-    "occasionally_drink": "Occasionally",
-    "rarely_drink": "Rarely",
+    "occasionally_drink": "মাঝে মাঝে",
+    "rarely_drink": "কদাচিৎ",
     "no_drink": "না",
-    "do_they_smoke": "Do they smoke?",
+    "do_they_smoke": "তারা কি ধূমপান করে?",
     "yes_smoke": "হ্যাঁ",
-    "sometimes": "Sometimes",
+    "sometimes": "মাঝে মাঝে",
     "no_smoke": "না",
-    "trying_to_quit": "Trying to quit",
-    "nearby_visibility": "Nearby visibility",
-    "apply_filters": "Apply filters"
+    "trying_to_quit": "ছেড়ে দেওয়ার চেষ্টা করছে",
+    "nearby_visibility": "কাছাকাছি দৃশ্যমানতা",
+    "apply_filters": "ফিল্টার প্রয়োগ করুন"
   },
   "nearby_search_preferences": {
-    "title": "Nearby Search Preferences",
-    "choose_how_visible_your_location_is_you_can_change_this_anytime": "Choose how visible your location is. You can change this anytime.",
-    "visibility_modes": "Visibility modes:",
-    "invisible": "Invisible",
-    "visible_while_using_the_app": "Visible while using the app",
-    "your_last_location": "Your last location",
-    "to_update_your_status_go_to_profile_settings_location": "To update your status, go to Profile Settings > Location.",
+    "title": "কাছাকাছি অনুসন্ধান পছন্দ",
+    "choose_how_visible_your_location_is_you_can_change_this_anytime": "আপনার অবস্থান কতটা দৃশ্যমান তা চয়ন করুন৷ আপনি যেকোনো সময় এটি পরিবর্তন করতে পারেন।",
+    "visibility_modes": "দৃশ্যমানতা মোড:",
+    "invisible": "অদৃশ্য",
+    "visible_while_using_the_app": "অ্যাপ ব্যবহার করার সময় দৃশ্যমান",
+    "your_last_location": "আপনার শেষ অবস্থান",
+    "to_update_your_status_go_to_profile_settings_location": "আপনার স্ট্যাটাস আপডেট করতে, প্রোফাইল সেটিংস > অবস্থানে যান।",
     "save_visibility": "দৃশ্যমানতা সংরক্ষণ করুন"
   },
   "chat_preferences": {
-    "title": "Chat Preferences",
-    "choose_who_can_message_you_you_can_change_this_anytime": "Choose who can message you. You can change this anytime.",
-    "availability_modes": "Availability modes:",
-    "unavailable": "Unavailable",
-    "matched_users_only": "Matched users only",
-    "available": "Available",
-    "stuff_i_could_talk_about_for_hours": "Stuff I could talk about for hours:",
-    "obscure_scifi_films_with_depressing_endings": "Obscure sci-fi films with depressing endings",
-    "save_chat_preferences": "Save chat preferences"
+    "title": "চ্যাট পছন্দ",
+    "choose_who_can_message_you_you_can_change_this_anytime": "কে আপনাকে বার্তা দিতে পারে তা চয়ন করুন৷ আপনি যেকোনো সময় এটি পরিবর্তন করতে পারেন।",
+    "availability_modes": "উপলব্ধতা মোড:",
+    "unavailable": "অনুপলব্ধ",
+    "matched_users_only": "শুধুমাত্র মিলে যাওয়া ব্যবহারকারী",
+    "available": "পাওয়া যায়",
+    "stuff_i_could_talk_about_for_hours": "আমি ঘন্টার পর ঘন্টা কথা বলতে পারি:",
+    "obscure_scifi_films_with_depressing_endings": "হতাশাজনক শেষ সহ অস্পষ্ট সাই-ফাই ফিল্ম",
+    "save_chat_preferences": "চ্যাট পছন্দ সংরক্ষণ করুন"
   },
   "contact_us": {
-    "title": "Contact us",
-    "let_us_know_what_you_think": "Let us know what you think...",
+    "title": "আমাদের সাথে যোগাযোগ করুন",
+    "let_us_know_what_you_think": "আপনি কি মনে করেন আমাদের জানান...",
     "submit": "জমা দিন"
   },
   "hide_account": {
     "title": "অ্যাকাউন্ট লুকান",
-    "hide": "Hide"
+    "hide": "লুকান"
   },
   "delete_account": {
     "title": "অ্যাকাউন্ট মুছুন",
-    "are_you_sure": "Are you sure?",
-    "absolutely": "Absolutely",
-    "not_quite": "Not quite"
+    "are_you_sure": "আপনি কি নিশ্চিত?",
+    "absolutely": "একেবারে",
+    "not_quite": "পুরোপুরি না"
   },
   "profile_about_me": {
     "about_me": "আমার সম্পর্কে:",
@@ -185,8 +185,8 @@
   "profile_height": {
     "my_height": "উচ্চতা:",
     "enter_your_height": "আপনার উচ্চতা লিখুন",
-    "ft": "ft",
-    "cm": "cm"
+    "ft": "ফুট",
+    "cm": "সেমি"
   },
   "profile_body_type": {
     "my_body_type": "শরীরের ধরন:"
@@ -222,49 +222,49 @@
     "do_you_smoke": "আপনি ধূমপান করেন?"
   },
   "profile_location": {
-    "my_location": "My location:",
-    "automatically_detect_my_location_recommended": "Automatically detect my location (recommended)",
-    "status_in_nearby_local": "Status in Nearby: Local",
-    "i_will_set_my_location_manually": "I will set my location manually",
-    "select_location": "Select location..."
+    "my_location": "আমার অবস্থান:",
+    "automatically_detect_my_location_recommended": "স্বয়ংক্রিয়ভাবে আমার অবস্থান সনাক্ত করুন (প্রস্তাবিত)",
+    "status_in_nearby_local": "কাছাকাছি অবস্থা: স্থানীয়",
+    "i_will_set_my_location_manually": "আমি ম্যানুয়ালি আমার অবস্থান সেট করব",
+    "select_location": "অবস্থান নির্বাচন করুন..."
   },
   "nearby": {
     "title": "কাছাকাছি",
     "filters": "ফিল্টার",
-    "visibility": "Visibility",
+    "visibility": "দৃশ্যমানতা",
     "tab_label": "কাছাকাছি"
   },
   "email_auth": {
-    "sign_in_with_email": "Sign in with email",
-    "use_your_email_and_password_or_create_a_new_account": "Use your email and password, or create a new account.",
+    "sign_in_with_email": "ইমেইল দিয়ে সাইন ইন করুন",
+    "use_your_email_and_password_or_create_a_new_account": "আপনার ইমেল এবং পাসওয়ার্ড ব্যবহার করুন, অথবা একটি নতুন অ্যাকাউন্ট তৈরি করুন.",
     "sign_in": "সাইন ইন",
     "register": "নিবন্ধন",
     "email_address": "ইমেল ঠিকানা",
     "password": "পাসওয়ার্ড",
-    "repeat_password": "Repeat password",
+    "repeat_password": "পাসওয়ার্ড পুনরাবৃত্তি করুন",
     "create_account": "অ্যাকাউন্ট তৈরি করুন",
-    "forgot_password": "Forgot password?",
+    "forgot_password": "পাসওয়ার্ড ভুলে গেছেন?",
     "continue_button": "চালিয়ে যান"
   },
   "phone_auth": {
-    "title": "Phone auth",
-    "phone_verification_is_not_implemented_yet": "Phone verification is not implemented yet."
+    "title": "ফোন প্রমাণ",
+    "phone_verification_is_not_implemented_yet": "ফোন যাচাইকরণ এখনও বাস্তবায়িত হয়নি।"
   },
   "verify_number": {
-    "title": "Verify number",
-    "sms_verification_is_not_implemented_yet": "SMS verification is not implemented yet."
+    "title": "নম্বর যাচাই করুন",
+    "sms_verification_is_not_implemented_yet": "এসএমএস যাচাইকরণ এখনও বাস্তবায়িত হয়নি।"
   },
   "reset_password": {
     "title": "পাসওয়ার্ড রিসেট করুন",
-    "enter_your_email_and_we_will_send_a_password_reset_link": "Enter your email and we will send a password reset link.",
+    "enter_your_email_and_we_will_send_a_password_reset_link": "আপনার ইমেল লিখুন এবং আমরা একটি পাসওয়ার্ড রিসেট লিঙ্ক পাঠাব।",
     "email_address": "ইমেল ঠিকানা",
-    "send_reset_link": "Send reset link"
+    "send_reset_link": "রিসেট লিঙ্ক পাঠান"
   },
   "update_password": {
     "title": "পাসওয়ার্ড আপডেট করুন",
-    "choose_a_new_password_for_your_nearsy_account": "Choose a new password for your Nearsy account.",
-    "new_password": "New password",
-    "repeat_password": "Repeat password",
+    "choose_a_new_password_for_your_nearsy_account": "আপনার Nearsy অ্যাকাউন্টের জন্য একটি নতুন পাসওয়ার্ড চয়ন করুন৷",
+    "new_password": "নতুন পাসওয়ার্ড",
+    "repeat_password": "পাসওয়ার্ড পুনরাবৃত্তি করুন",
     "submit_button": "পাসওয়ার্ড আপডেট করুন"
   },
   "lookaround_bottom_nav": {
@@ -276,87 +276,87 @@
   },
   "profile_attributes": {
     "gender": {
-      "woman": "Woman",
-      "man": "Man",
-      "non_binary": "Non-binary",
-      "other": "Other"
+      "woman": "নারী",
+      "man": "মানুষ",
+      "non_binary": "নন-বাইনারী",
+      "other": "অন্যান্য"
     },
     "education": {
-      "high_school": "High School",
-      "currently_studying": "Currently Studying",
-      "trade_qualification": "Trade Qualification",
-      "bachelors_degree": "Bachelor's Degree",
-      "masters_degree": "Master's Degree",
-      "doctorate_phd": "Doctorate / PhD",
-      "postgraduate": "Postgraduate",
-      "other": "Other",
-      "prefer_not_to_say": "Prefer not to say"
+      "high_school": "উচ্চ বিদ্যালয়",
+      "currently_studying": "বর্তমানে অধ্যয়নরত",
+      "trade_qualification": "বাণিজ্য যোগ্যতা",
+      "bachelors_degree": "ব্যাচেলর ডিগ্রী",
+      "masters_degree": "স্নাতকোত্তর ডিগ্রি",
+      "doctorate_phd": "ডক্টরেট/পিএইচডি",
+      "postgraduate": "স্নাতকোত্তর",
+      "other": "অন্যান্য",
+      "prefer_not_to_say": "না বলতে পছন্দ করেন"
     },
     "kids": {
-      "yes": "Have kids",
-      "no": "Don't have kids",
-      "prefer_not_to_say": "Prefer not to say"
+      "yes": "বাচ্চা আছে",
+      "no": "বাচ্চা নেই",
+      "prefer_not_to_say": "না বলতে পছন্দ করেন"
     },
     "relationship_type": {
-      "something_serious": "Something Serious",
-      "just_dating": "Just Dating",
-      "just_fun": "Just Fun",
-      "open_to_anything": "Open to Anything",
-      "not_sure": "Not Sure"
+      "something_serious": "সিরিয়াস কিছু",
+      "just_dating": "শুধু ডেটিং",
+      "just_fun": "শুধু মজা",
+      "open_to_anything": "যেকোনো কিছুর জন্য ওপেন",
+      "not_sure": "নিশ্চিত নট"
     },
     "religion": {
-      "agnostic": "Agnostic",
-      "atheist": "Atheist",
-      "buddhist": "Buddhist",
-      "christian": "Christian",
-      "hindu": "Hindu",
-      "jewish": "Jewish",
-      "muslim": "Muslim",
-      "sikh": "Sikh",
-      "spiritual": "Spiritual",
-      "other": "Other"
+      "agnostic": "অজ্ঞেয়বাদী",
+      "atheist": "নাস্তিক",
+      "buddhist": "বৌদ্ধ",
+      "christian": "খ্রিস্টান",
+      "hindu": "হিন্দু",
+      "jewish": "ইহুদি",
+      "muslim": "মুসলিম",
+      "sikh": "শিখ",
+      "spiritual": "আধ্যাত্মিক",
+      "other": "অন্যান্য"
     },
     "body_type": {
-      "slim": "Slim",
-      "lean": "Lean",
-      "average": "Average",
-      "fit": "Fit",
-      "athletic": "Athletic",
-      "muscular": "Muscular",
-      "broad": "Broad",
-      "stocky": "Stocky",
-      "bigger": "Bigger",
-      "curvy": "Curvy",
-      "prefer_not_to_say": "Prefer not to say"
+      "slim": "পাতলা",
+      "lean": "লীন",
+      "average": "গড়",
+      "fit": "ফিট",
+      "athletic": "অ্যাথলেটিক",
+      "muscular": "পেশীবহুল",
+      "broad": "বিস্তৃত",
+      "stocky": "স্টকি",
+      "bigger": "আরও বড়",
+      "curvy": "কার্ভি",
+      "prefer_not_to_say": "না বলতে পছন্দ করেন"
     },
     "exercise": {
-      "regularly": "Regularly",
-      "occasionally": "Occasionally",
-      "rarely": "Rarely",
-      "never": "Never"
+      "regularly": "নিয়মিত",
+      "occasionally": "মাঝে মাঝে",
+      "rarely": "কদাচিৎ",
+      "never": "কখনই না"
     },
     "drinking": {
-      "yes": "Yes",
-      "occasionally": "Occasionally",
-      "rarely": "Rarely",
-      "no": "No",
-      "stopped_for_now": "Stopped for now"
+      "yes": "হ্যাঁ",
+      "occasionally": "মাঝে মাঝে",
+      "rarely": "কদাচিৎ",
+      "no": "না",
+      "stopped_for_now": "আপাতত থেমে গেল"
     },
     "smoking": {
-      "yes": "Yes",
-      "sometimes": "Sometimes",
-      "no": "No",
-      "trying_to_quit": "Trying to quit"
+      "yes": "হ্যাঁ",
+      "sometimes": "মাঝে মাঝে",
+      "no": "না",
+      "trying_to_quit": "ছেড়ে দেওয়ার চেষ্টা করছে"
     }
   },
   "languages": {
-    "afar": "Afar",
-    "afrikaans": "Afrikaans",
-    "albanian": "Albanian",
-    "amharic": "Amharic",
-    "arabic": "Arabic",
-    "armenian": "Armenian",
-    "bengali": "Bengali",
-    "catalan": "Catalan"
+    "afar": "আফার",
+    "afrikaans": "আফ্রিকান",
+    "albanian": "আলবেনিয়ান",
+    "amharic": "আমহারিক",
+    "arabic": "আরবি",
+    "armenian": "আর্মেনিয়ান",
+    "bengali": "বাংলা",
+    "catalan": "কাতালান"
   }
 }

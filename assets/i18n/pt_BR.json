@@ -2,7 +2,7 @@
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Conheça perto. Mantenha as coisas fáceis",
-    "continue_with_email": "Continuar com email",
+    "continue_with_email": "Continuar com e-mail",
     "continue_with_phone": "Continuar com telefone",
     "by_signing_up_you_agree_to_the_terms_of": "Ao se inscrever você concorda com os Termos de",
     "service_and_privacy_policy": "Política de Serviço e Privacidade"
@@ -15,15 +15,15 @@
     "gender": "Gênero",
     "age": "Idade",
     "height": "Altura",
-    "work": "Trabalho",
+    "work": "Trabalhar",
     "education": "Educação",
-    "kids": "Filhos",
-    "preferred_relationships": "Relacionamentos preferidos",
+    "kids": "Crianças",
+    "preferred_relationships": "Relacionamentos preferenciais",
     "beliefs": "Crenças",
     "body_type": "Tipo de corpo",
     "exercise": "Exercício",
-    "drinking": "Bebida",
-    "smoking": "Fumo",
+    "drinking": "Beber",
+    "smoking": "Fumar",
     "profile_alt": "Perfil"
   },
   "people": {
@@ -32,18 +32,18 @@
     "title": "Pessoas"
   },
   "liked_you": {
-    "title": "Curtiram você",
+    "title": "Gostei de você",
     "all_3": "Todos os 3",
     "filter_matches_0": "Filtro corresponde a 0",
     "outside_3": "Fora 3",
-    "tab_label": "Curtiram você"
+    "tab_label": "Gostei de você"
   },
   "matches": {
-    "chats": "Conversas",
+    "chats": "Bate-papos",
     "you_normur": "You: Normur",
     "you_how_big_is_your": "You: How big is your...",
     "sure_see_you_at_bla": "Sure, see you at bla...",
-    "tab_label": "Conversas"
+    "tab_label": "Bate-papos"
   },
   "chat": {
     "chyokak": "Chyokak?",
@@ -52,7 +52,7 @@
     "write_a_message": "Escreva uma mensagem"
   },
   "account_settings": {
-    "title": "Configurações da conta",
+    "title": "Configurações de Conta",
     "edit_email": "Editar",
     "edit_phone": "Editar",
     "edit_password": "Editar",
@@ -67,14 +67,14 @@
     "matches_email": "Partidas",
     "messages_email": "Mensagens",
     "liked_you_email": "Gostei de você",
-    "feedback": "Comentários",
+    "feedback": "Opinião",
     "hide_account": "Ocultar conta",
     "delete_account": "Excluir conta",
     "log_out": "Sair",
-    "chats": "Conversas"
+    "chats": "Bate-papos"
   },
   "search_preferences": {
-    "title": "Preferências de busca",
+    "title": "Preferências de pesquisa",
     "who_you_want_to_date": "Com quem você quer namorar:",
     "women": "Mulheres",
     "men": "Homens",
@@ -93,10 +93,10 @@
     "what_are_their_beliefs": "Quais são suas crenças?",
     "agnostic": "Agnóstico",
     "atheist": "Ateu",
-    "buddhist": "Budista",
+    "buddhist": "budista",
     "christian": "cristão",
-    "jewish": "judeu",
-    "muslim": "Muçulmano",
+    "jewish": "judaico",
+    "muslim": "muçulmano",
     "other_beliefs": "Outro",
     "do_they_exercise": "Eles se exercitam?",
     "regularly": "Regularmente",
@@ -147,13 +147,13 @@
   },
   "delete_account": {
     "title": "Excluir conta",
-    "are_you_sure": "Você tem certeza?",
+    "are_you_sure": "Tem certeza?",
     "absolutely": "Absolutamente",
     "not_quite": "Não exatamente"
   },
   "profile_about_me": {
     "about_me": "Sobre mim:",
-    "no_pressure_leave_it_blank_if_you_like": "Sem pressão: deixe em branco se quiser."
+    "no_pressure_leave_it_blank_if_you_like": "Sem pressão – deixe em branco se quiser."
   },
   "profile_gender": {
     "gender": "Gênero:"
@@ -171,54 +171,54 @@
   "months": {
     "january": "Janeiro",
     "february": "Fevereiro",
-    "march": "Março",
-    "april": "Abril",
-    "may": "Maio",
+    "march": "Marchar",
+    "april": "abril",
+    "may": "Poderia",
     "june": "Junho",
     "july": "Julho",
     "august": "Agosto",
     "september": "Setembro",
-    "october": "Outubro",
-    "november": "Novembro",
-    "december": "Dezembro"
+    "october": "outubro",
+    "november": "novembro",
+    "december": "dezembro"
   },
   "profile_height": {
-    "my_height": "Altura:",
-    "enter_your_height": "Insira sua altura",
+    "my_height": "Minha altura:",
+    "enter_your_height": "Digite sua altura",
     "ft": "pés",
-    "cm": "centímetros"
+    "cm": "cm"
   },
   "profile_body_type": {
-    "my_body_type": "Tipo de corpo:"
+    "my_body_type": "Meu tipo de corpo:"
   },
   "profile_work": {
-    "my_work": "Trabalho:",
+    "my_work": "Meu trabalho:",
     "what_do_you_do": "O que você faz?"
   },
   "profile_education": {
-    "my_education": "Educação:",
-    "pick_the_closest_match": "Escolha a opção mais próxima"
+    "my_education": "Minha educação:",
+    "pick_the_closest_match": "Escolha a correspondência mais próxima"
   },
   "profile_kids": {
-    "kids": "Filhos:"
+    "kids": "Crianças:"
   },
   "profile_relationship": {
-    "my_preferred_relationship": "Relacionamentos preferidos:",
-    "what_are_you_looking_for": "O que você procura?"
+    "my_preferred_relationship": "Meu relacionamento preferido:",
+    "what_are_you_looking_for": "O que você está procurando?"
   },
   "profile_religion": {
-    "my_beliefs": "Crenças:"
+    "my_beliefs": "Minhas crenças:"
   },
   "profile_exercise": {
     "exercise": "Exercício:",
     "any_form_of_physical_activity": "Qualquer forma de atividade física"
   },
   "profile_drinking": {
-    "my_drinking_habits": "Bebida:",
-    "choose_what_best_describes_your_alcohol_use": "Escolha o que melhor descreve seu consumo de álcool."
+    "my_drinking_habits": "Meus hábitos de consumo:",
+    "choose_what_best_describes_your_alcohol_use": "Escolha o que melhor descreve seu uso de álcool."
   },
   "profile_smoking": {
-    "my_smoking_habits": "Fumo:",
+    "my_smoking_habits": "Meus hábitos de fumar:",
     "do_you_smoke": "Você fuma?"
   },
   "profile_location": {
@@ -229,20 +229,20 @@
     "select_location": "Selecione o local..."
   },
   "nearby": {
-    "title": "Perto",
+    "title": "Próximo",
     "filters": "Filtros",
     "visibility": "Visibilidade",
-    "tab_label": "Perto"
+    "tab_label": "Próximo"
   },
   "email_auth": {
     "sign_in_with_email": "Faça login com e-mail",
     "use_your_email_and_password_or_create_a_new_account": "Use seu e-mail e senha ou crie uma nova conta.",
     "sign_in": "Entrar",
-    "register": "Registrar",
+    "register": "Cadastre-se",
     "email_address": "Endereço de email",
     "password": "Senha",
     "repeat_password": "Repetir senha",
-    "create_account": "Criar conta",
+    "create_account": "Criar uma conta",
     "forgot_password": "Esqueceu sua senha?",
     "continue_button": "Continuar"
   },
@@ -263,16 +263,16 @@
   "update_password": {
     "title": "Atualizar senha",
     "choose_a_new_password_for_your_nearsy_account": "Escolha uma nova senha para sua conta Nearsy.",
-    "new_password": "Nova senha",
+    "new_password": "Nova Senha",
     "repeat_password": "Repetir senha",
     "submit_button": "Atualizar senha"
   },
   "lookaround_bottom_nav": {
     "profile": "Perfil",
     "people": "Pessoas",
-    "nearby": "Perto",
-    "liked_you": "Curtiram você",
-    "chats": "Conversas"
+    "nearby": "Próximo",
+    "liked_you": "Gostei de você",
+    "chats": "Bate-papos"
   },
   "profile_attributes": {
     "gender": {
@@ -282,10 +282,10 @@
       "other": "Outro"
     },
     "education": {
-      "high_school": "Ensino Médio",
+      "high_school": "Ensino médio",
       "currently_studying": "Atualmente estudando",
       "trade_qualification": "Qualificação Comercial",
-      "bachelors_degree": "Bacharelado",
+      "bachelors_degree": "Diploma de bacharel",
       "masters_degree": "Mestrado",
       "doctorate_phd": "Doutorado / Doutorado",
       "postgraduate": "Pós-graduação",
@@ -307,11 +307,11 @@
     "religion": {
       "agnostic": "Agnóstico",
       "atheist": "Ateu",
-      "buddhist": "Budista",
+      "buddhist": "budista",
       "christian": "cristão",
-      "hindu": "Hindu",
-      "jewish": "judeu",
-      "muslim": "Muçulmano",
+      "hindu": "hindu",
+      "jewish": "judaico",
+      "muslim": "muçulmano",
       "sikh": "Sikh",
       "spiritual": "Espiritual",
       "other": "Outro"
@@ -322,8 +322,8 @@
       "average": "Média",
       "fit": "Ajustar",
       "athletic": "Atlético",
-      "muscular": "Musculoso",
-      "broad": "Amplo",
+      "muscular": "Muscular",
+      "broad": "Largo",
       "stocky": "Atarracado",
       "bigger": "Maior",
       "curvy": "Curvilíneo",
@@ -351,12 +351,12 @@
   },
   "languages": {
     "afar": "Longe",
-    "afrikaans": "Africâner",
-    "albanian": "Albanês",
+    "afrikaans": "afrikaans",
+    "albanian": "albanês",
     "amharic": "amárico",
-    "arabic": "Árabe",
+    "arabic": "árabe",
     "armenian": "Armênio",
     "bengali": "bengali",
-    "catalan": "Catalão"
+    "catalan": "catalão"
   }
 }

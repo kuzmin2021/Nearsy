@@ -27,8 +27,8 @@ void main() async {
 
   await AppLabels.initialize();
   await AppLabels.loadTranslations(
-    AppLabels.getStoredLocale()?.languageCode ??
-          PlatformDispatcher.instance.locale.languageCode,
+    AppLabels.getStoredLocale()?.toString() ??
+        _localeCode(PlatformDispatcher.instance.locale),
   );
 
   final appState = FTAppState(); // Initialize FTAppState
@@ -38,6 +38,16 @@ void main() async {
     create: (context) => appState,
     child: MyApp(),
   ));
+}
+
+String _localeCode(Locale locale) {
+  if (locale.scriptCode != null && locale.scriptCode!.isNotEmpty) {
+    return '${locale.languageCode}_${locale.scriptCode}';
+  }
+  if (locale.countryCode != null && locale.countryCode!.isNotEmpty) {
+    return '${locale.languageCode}_${locale.countryCode}';
+  }
+  return locale.languageCode;
 }
 
 class MyApp extends StatefulWidget {
@@ -53,11 +63,18 @@ class _MyAppState extends State<MyApp> {
   Locale? _locale = AppLabels.getStoredLocale();
 
   static Locale _resolveLocale(String language) => language.contains('_')
-      ? Locale.fromSubtags(
-          languageCode: language.split('_').first,
-          scriptCode: language.split('_').last,
-        )
+      ? _localeFromParts(language.split('_').first, language.split('_').last)
       : Locale(language);
+
+  static Locale _localeFromParts(String languageCode, String localePart) {
+    if (localePart.length == 4) {
+      return Locale.fromSubtags(
+        languageCode: languageCode,
+        scriptCode: localePart,
+      );
+    }
+    return Locale(languageCode, localePart);
+  }
 
   ThemeMode _themeMode = FloterTheme.themeMode;
 
@@ -130,12 +147,14 @@ class _MyAppState extends State<MyApp> {
         Locale('bn'),
         Locale('ru'),
         Locale('pt'),
+        Locale('pt', 'BR'),
+        Locale('it'),
         Locale('ur'),
         Locale('id'),
         Locale('de'),
         Locale('ja'),
         Locale('pcm'),
-        Locale.fromSubtags(languageCode: 'ar', scriptCode: 'EG'),
+        Locale('ar', 'EG'),
         Locale('mr'),
         Locale('te'),
         Locale('tr'),

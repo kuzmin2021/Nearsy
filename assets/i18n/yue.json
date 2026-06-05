@@ -1,16 +1,16 @@
 {
   "auth": {
     "nearsy": "Nearsy",
-    "meet_near_keep_it_easy": "Meet near. Keep it easy",
+    "meet_near_keep_it_easy": "喺附近見面。保持輕鬆",
     "continue_with_email": "用電郵繼續",
-    "continue_with_phone": "Continue with phone",
-    "by_signing_up_you_agree_to_the_terms_of": "By signing up you agree to the Terms of",
-    "service_and_privacy_policy": "Service and Privacy Policy"
+    "continue_with_phone": "繼續用電話",
+    "by_signing_up_you_agree_to_the_terms_of": "申請即係你同意嘅條款",
+    "service_and_privacy_policy": "服務同私隱政策"
   },
   "profile": {
     "title": "個人檔案",
     "name": "姓名",
-    "catchphrase": "Catchphrase",
+    "catchphrase": "標語",
     "about_me": "關於我",
     "gender": "性別",
     "age": "年齡",
@@ -33,9 +33,9 @@
   },
   "liked_you": {
     "title": "鍾意你",
-    "all_3": "All 3",
-    "filter_matches_0": "Filter matches 0",
-    "outside_3": "Outside 3",
+    "all_3": "全部3",
+    "filter_matches_0": "篩選器匹配0",
+    "outside_3": "外面3",
     "tab_label": "鍾意你"
   },
   "matches": {
@@ -49,24 +49,24 @@
     "chyokak": "Chyokak?",
     "normur": "Normur",
     "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "Write a message"
+    "write_a_message": "寫個訊息"
   },
   "account_settings": {
     "title": "帳戶設定",
     "edit_email": "編輯",
     "edit_phone": "編輯",
     "edit_password": "編輯",
-    "email_authentication": "Email authentication",
-    "manage": "Manage",
+    "email_authentication": "電郵驗證",
+    "manage": "管理",
     "notifications": "通知",
-    "push_notifications": "Push Notifications",
+    "push_notifications": "推送通知",
     "matches": "配對",
     "messages": "訊息",
-    "liked_you": "Liked you",
-    "email_notifications": "Email Notifications",
+    "liked_you": "鍾意咗你",
+    "email_notifications": "電郵通知",
     "matches_email": "配對",
     "messages_email": "訊息",
-    "liked_you_email": "Liked you",
+    "liked_you_email": "鍾意咗你",
     "feedback": "意見",
     "hide_account": "隱藏帳戶",
     "delete_account": "刪除帳戶",
@@ -75,80 +75,81 @@
   },
   "search_preferences": {
     "title": "搜尋偏好",
-    "who_you_want_to_date": "Who you want to date:",
-    "women": "Women",
-    "men": "Men",
-    "other_gender": "Other",
+    "who_you_want_to_date": "你想同邊個拍拖：",
+    "women": "女人",
+    "men": "男人",
+    "other_gender": "其他",
     "age": "年齡:",
-    "between_20_and_50": "Between 20 and 50",
-    "search_radius": "Search radius:",
-    "up_to_161_kilometres_away": "Up to 161 kilometres away",
-    "languages_they_know": "Languages they know:",
-    "what_are_they_looking_for": "What are they looking for?",
-    "something_serious": "Something serious",
-    "just_dating": "Just dating",
-    "just_fun": "Just fun",
-    "open_to_anything": "Open to anything",
-    "not_sure": "Not sure",
-    "what_are_their_beliefs": "What are their beliefs?",
-    "agnostic": "Agnostic",
-    "atheist": "Atheist",
-    "buddhist": "Buddhist",
-    "christian": "Christian",
-    "jewish": "Jewish",
-    "muslim": "Muslim",
-    "other_beliefs": "Other",
-    "do_they_exercise": "Do they exercise?",
-    "regularly": "Regularly",
-    "occasionally": "Occasionally",
-    "rarely": "Rarely",
-    "do_they_drink": "Do they drink?",
+    "between_20_and_50": "至50之間",
+    "search_radius": "搜尋半徑：",
+    "up_to_161_kilometres_away": "最遠可達 161 公里",
+    "languages_they_know": "佢哋識嘅語言：",
+    "what_are_they_looking_for": "佢哋搵緊啲咩？",
+    "something_serious": "有啲嚴重嘅嘢",
+    "just_dating": "啱啱拍拖",
+    "just_fun": "只係好玩",
+    "open_to_anything": "對任何嘢都開放",
+    "not_sure": "唔肯定",
+    "what_are_their_beliefs": "佢哋嘅信念係點？",
+    "agnostic": "無神論者",
+    "atheist": "無神論者",
+    "buddhist": "佛教",
+    "christian": "基督徒",
+    "jewish": "猶太人",
+    "muslim": "穆斯林",
+    "other_beliefs": "其他",
+    "do_they_exercise": "佢哋做唔做運動？",
+    "regularly": "定期嘅",
+    "occasionally": "有時會",
+    "rarely": "好少",
+    "do_they_drink": "佢哋飲唔飲酒？",
     "yes_drink": "係",
-    "occasionally_drink": "Occasionally",
-    "rarely_drink": "Rarely",
+    "occasionally_drink": "有時會",
+    "rarely_drink": "好少",
     "no_drink": "唔係",
-    "do_they_smoke": "Do they smoke?",
+    "do_they_smoke": "佢哋食唔食煙？",
     "yes_smoke": "係",
-    "sometimes": "Sometimes",
+    "sometimes": "有時",
     "no_smoke": "唔係",
-    "trying_to_quit": "Trying to quit",
-    "nearby_visibility": "Nearby visibility",
-    "apply_filters": "Apply filters"
+    "trying_to_quit": "試圖戒毒",
+    "nearby_visibility": "附近嘅可見度",
+    "apply_filters": "套用篩選器"
   },
   "nearby_search_preferences": {
-    "title": "Nearby Search Preferences",
-    "visibility_modes": "Visibility modes:",
-    "invisible": "Invisible",
-    "visible_while_using_the_app": "Visible while using the app",
-    "your_last_location": "Your last location",
-    "to_update_your_status_go_to_profile_settings_location": "To update your status, go to Profile Settings > Location.",
+    "title": "附近嘅搜尋偏好設定",
+    "choose_how_visible_your_location_is_you_can_change_this_anytime": "揀你嘅位置有幾顯眼。你可以隨時改呢個。",
+    "visibility_modes": "可見度模式：",
+    "invisible": "隱形",
+    "visible_while_using_the_app": "用緊個應用程式嗰陣可以睇到",
+    "your_last_location": "你最後嘅位置",
+    "to_update_your_status_go_to_profile_settings_location": "如果要更新你嘅狀態，去個人檔案設定 > 位置。",
     "save_visibility": "儲存可見度"
   },
   "chat_preferences": {
-    "title": "Chat Preferences",
-    "choose_who_can_message_you_you_can_change_this_anytime": "Choose who can message you. You can change this anytime.",
-    "availability_modes": "Availability modes:",
-    "unavailable": "Unavailable",
-    "matched_users_only": "Matched users only",
-    "available": "Available",
-    "stuff_i_could_talk_about_for_hours": "Stuff I could talk about for hours:",
-    "obscure_scifi_films_with_depressing_endings": "Obscure sci-fi films with depressing endings",
-    "save_chat_preferences": "Save chat preferences"
+    "title": "即時通訊偏好設定",
+    "choose_who_can_message_you_you_can_change_this_anytime": "揀邊個可以發訊息畀你。你可以隨時改呢個。",
+    "availability_modes": "可用性模式：",
+    "unavailable": "唔可以用",
+    "matched_users_only": "只限匹配嘅使用者",
+    "available": "有位",
+    "stuff_i_could_talk_about_for_hours": "我可以講幾個鐘嘅嘢：",
+    "obscure_scifi_films_with_depressing_endings": "模糊嘅科幻電影，結局令人郁氣",
+    "save_chat_preferences": "儲存即時通訊偏好設定"
   },
   "contact_us": {
-    "title": "Contact us",
-    "let_us_know_what_you_think": "Let us know what you think...",
+    "title": "聯絡我哋",
+    "let_us_know_what_you_think": "話畀我哋知你點睇 ...",
     "submit": "提交"
   },
   "hide_account": {
     "title": "隱藏帳戶",
-    "hide": "Hide"
+    "hide": "隱藏"
   },
   "delete_account": {
     "title": "刪除帳戶",
-    "are_you_sure": "Are you sure?",
-    "absolutely": "Absolutely",
-    "not_quite": "Not quite"
+    "are_you_sure": "你肯定？",
+    "absolutely": "絕對係",
+    "not_quite": "唔係幾"
   },
   "profile_about_me": {
     "about_me": "關於我:",
@@ -184,8 +185,8 @@
   "profile_height": {
     "my_height": "身高:",
     "enter_your_height": "輸入你嘅身高",
-    "ft": "ft",
-    "cm": "cm"
+    "ft": "呎",
+    "cm": "厘米"
   },
   "profile_body_type": {
     "my_body_type": "身型:"
@@ -221,49 +222,49 @@
     "do_you_smoke": "你有無吸煙？"
   },
   "profile_location": {
-    "my_location": "My location:",
-    "automatically_detect_my_location_recommended": "Automatically detect my location (recommended)",
-    "status_in_nearby_local": "Status in Nearby: Local",
-    "i_will_set_my_location_manually": "I will set my location manually",
-    "select_location": "Select location..."
+    "my_location": "我嘅位置：",
+    "automatically_detect_my_location_recommended": "自動偵測我嘅位置（建議）",
+    "status_in_nearby_local": "喺附近嘅狀態：本地",
+    "i_will_set_my_location_manually": "我會手動設定我嘅位置",
+    "select_location": "揀位置 ..."
   },
   "nearby": {
     "title": "附近",
     "filters": "篩選",
-    "visibility": "Visibility",
+    "visibility": "可見度",
     "tab_label": "附近"
   },
   "email_auth": {
-    "sign_in_with_email": "Sign in with email",
-    "use_your_email_and_password_or_create_a_new_account": "Use your email and password, or create a new account.",
+    "sign_in_with_email": "用電郵登入",
+    "use_your_email_and_password_or_create_a_new_account": "用你嘅電郵同密碼，或者建立新帳戶。",
     "sign_in": "登入",
     "register": "註冊",
     "email_address": "電郵地址",
     "password": "密碼",
-    "repeat_password": "Repeat password",
+    "repeat_password": "重複密碼",
     "create_account": "建立帳戶",
-    "forgot_password": "Forgot password?",
+    "forgot_password": "唔記得密碼？",
     "continue_button": "繼續"
   },
   "phone_auth": {
-    "title": "Phone auth",
-    "phone_verification_is_not_implemented_yet": "Phone verification is not implemented yet."
+    "title": "電話認證",
+    "phone_verification_is_not_implemented_yet": "電話驗證仲未實行。"
   },
   "verify_number": {
-    "title": "Verify number",
-    "sms_verification_is_not_implemented_yet": "SMS verification is not implemented yet."
+    "title": "驗證號碼",
+    "sms_verification_is_not_implemented_yet": "短訊驗證仲未實施。"
   },
   "reset_password": {
     "title": "重設密碼",
-    "enter_your_email_and_we_will_send_a_password_reset_link": "Enter your email and we will send a password reset link.",
+    "enter_your_email_and_we_will_send_a_password_reset_link": "輸入你嘅電郵地址，我哋會傳送密碼重設連結。",
     "email_address": "電郵地址",
-    "send_reset_link": "Send reset link"
+    "send_reset_link": "傳送重設連結"
   },
   "update_password": {
     "title": "更新密碼",
-    "choose_a_new_password_for_your_nearsy_account": "Choose a new password for your Nearsy account.",
-    "new_password": "New password",
-    "repeat_password": "Repeat password",
+    "choose_a_new_password_for_your_nearsy_account": "為你嘅 Nearsy 帳戶揀個新密碼。",
+    "new_password": "新密碼",
+    "repeat_password": "重複密碼",
     "submit_button": "更新密碼"
   },
   "lookaround_bottom_nav": {
@@ -275,87 +276,87 @@
   },
   "profile_attributes": {
     "gender": {
-      "woman": "Woman",
-      "man": "Man",
-      "non_binary": "Non-binary",
-      "other": "Other"
+      "woman": "女人",
+      "man": "男人",
+      "non_binary": "非二進制",
+      "other": "其他"
     },
     "education": {
-      "high_school": "High School",
-      "currently_studying": "Currently Studying",
-      "trade_qualification": "Trade Qualification",
-      "bachelors_degree": "Bachelor's Degree",
-      "masters_degree": "Master's Degree",
-      "doctorate_phd": "Doctorate / PhD",
-      "postgraduate": "Postgraduate",
-      "other": "Other",
-      "prefer_not_to_say": "Prefer not to say"
+      "high_school": "高中",
+      "currently_studying": "而家讀緊書",
+      "trade_qualification": "貿易資格",
+      "bachelors_degree": "學士學位",
+      "masters_degree": "碩士學位",
+      "doctorate_phd": "博士 / 博士",
+      "postgraduate": "研究生",
+      "other": "其他",
+      "prefer_not_to_say": "寧願唔講"
     },
     "kids": {
-      "yes": "Have kids",
-      "no": "Don't have kids",
-      "prefer_not_to_say": "Prefer not to say"
+      "yes": "有小朋友",
+      "no": "唔好生仔",
+      "prefer_not_to_say": "寧願唔講"
     },
     "relationship_type": {
-      "something_serious": "Something Serious",
-      "just_dating": "Just Dating",
-      "just_fun": "Just Fun",
-      "open_to_anything": "Open to Anything",
-      "not_sure": "Not Sure"
+      "something_serious": "有啲嚴重嘅嘢",
+      "just_dating": "啱啱拍拖",
+      "just_fun": "只係好玩",
+      "open_to_anything": "開放畀任何嘢",
+      "not_sure": "唔肯定"
     },
     "religion": {
-      "agnostic": "Agnostic",
-      "atheist": "Atheist",
-      "buddhist": "Buddhist",
-      "christian": "Christian",
-      "hindu": "Hindu",
-      "jewish": "Jewish",
-      "muslim": "Muslim",
-      "sikh": "Sikh",
-      "spiritual": "Spiritual",
-      "other": "Other"
+      "agnostic": "無神論者",
+      "atheist": "無神論者",
+      "buddhist": "佛教",
+      "christian": "基督徒",
+      "hindu": "印度教",
+      "jewish": "猶太人",
+      "muslim": "穆斯林",
+      "sikh": "錫克教",
+      "spiritual": "精神上",
+      "other": "其他"
     },
     "body_type": {
-      "slim": "Slim",
-      "lean": "Lean",
-      "average": "Average",
-      "fit": "Fit",
-      "athletic": "Athletic",
-      "muscular": "Muscular",
-      "broad": "Broad",
-      "stocky": "Stocky",
-      "bigger": "Bigger",
-      "curvy": "Curvy",
-      "prefer_not_to_say": "Prefer not to say"
+      "slim": "瘦",
+      "lean": "傾斜",
+      "average": "平均",
+      "fit": "啱身",
+      "athletic": "運動型",
+      "muscular": "肌肉型",
+      "broad": "廣闊",
+      "stocky": "身材壯碩",
+      "bigger": "大啲",
+      "curvy": "曲線",
+      "prefer_not_to_say": "寧願唔講"
     },
     "exercise": {
-      "regularly": "Regularly",
-      "occasionally": "Occasionally",
-      "rarely": "Rarely",
-      "never": "Never"
+      "regularly": "定期嘅",
+      "occasionally": "有時會",
+      "rarely": "好少",
+      "never": "從來冇"
     },
     "drinking": {
-      "yes": "Yes",
-      "occasionally": "Occasionally",
-      "rarely": "Rarely",
-      "no": "No",
-      "stopped_for_now": "Stopped for now"
+      "yes": "係",
+      "occasionally": "有時會",
+      "rarely": "好少",
+      "no": "唔得",
+      "stopped_for_now": "暫時停咗"
     },
     "smoking": {
-      "yes": "Yes",
-      "sometimes": "Sometimes",
-      "no": "No",
-      "trying_to_quit": "Trying to quit"
+      "yes": "係",
+      "sometimes": "有時",
+      "no": "唔得",
+      "trying_to_quit": "試圖戒毒"
     }
   },
   "languages": {
-    "afar": "Afar",
-    "afrikaans": "Afrikaans",
-    "albanian": "Albanian",
-    "amharic": "Amharic",
-    "arabic": "Arabic",
-    "armenian": "Armenian",
-    "bengali": "Bengali",
-    "catalan": "Catalan"
+    "afar": "遠方",
+    "afrikaans": "南非荷兰文",
+    "albanian": "阿爾巴尼亞人",
+    "amharic": "阿姆哈拉文",
+    "arabic": "阿拉伯文",
+    "armenian": "亞美尼亞人",
+    "bengali": "孟加拉文",
+    "catalan": "加泰羅尼亞人"
   }
 }

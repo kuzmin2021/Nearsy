@@ -20,7 +20,9 @@ class AppLabels {
   }
 
   static Future<void> loadTranslations(String languageCode) async {
-    _currentLang = languageCode.split('_').first;
+    _currentLang = languages().contains(languageCode)
+        ? languageCode
+        : languageCode.split('_').first;
     await _load(_currentLang);
     if (_currentLang != 'en') await _load('en');
   }
@@ -40,15 +42,27 @@ class AppLabels {
     try {
       final locale = _prefs.getString(_kLocaleStorageKey) ??
           _prefs.getString('__locale_key__');
-      return locale != null && locale.isNotEmpty ? _resolveLocale(locale) : null;
+      return locale != null && locale.isNotEmpty
+          ? _resolveLocale(locale)
+          : null;
     } catch (_) {
       return null;
     }
   }
 
   static Locale _resolveLocale(String language) => language.contains('_')
-      ? Locale.fromSubtags(languageCode: language.split('_').first, scriptCode: language.split('_').last)
+      ? _localeFromParts(language.split('_').first, language.split('_').last)
       : Locale(language);
+
+  static Locale _localeFromParts(String languageCode, String localePart) {
+    if (localePart.length == 4) {
+      return Locale.fromSubtags(
+        languageCode: languageCode,
+        scriptCode: localePart,
+      );
+    }
+    return Locale(languageCode, localePart);
+  }
 
   static AppLabels of(BuildContext context) =>
       Localizations.of<AppLabels>(context, AppLabels)!;
@@ -57,12 +71,22 @@ class AppLabels {
     final parts = key.split('.');
     dynamic node = _cache[_currentLang];
     for (final part in parts) {
-      if (node is Map) { node = node[part]; } else { node = null; break; }
+      if (node is Map) {
+        node = node[part];
+      } else {
+        node = null;
+        break;
+      }
     }
     if (node is String && node.isNotEmpty) return node;
     node = _cache['en'];
     for (final part in parts) {
-      if (node is Map) { node = node[part]; } else { node = null; break; }
+      if (node is Map) {
+        node = node[part];
+      } else {
+        node = null;
+        break;
+      }
     }
     return node is String ? node : key;
   }
@@ -84,7 +108,27 @@ class AppLabels {
   }
 
   static List<String> languages() => [
-    'en', 'zh_Hans', 'hi', 'es', 'fr', 'ar', 'bn', 'ru', 'pt', 'ur',
-    'id', 'de', 'ja', 'pcm', 'ar_EG', 'mr', 'te', 'tr', 'ta', 'yue',
-  ];
+        'en',
+        'zh_Hans',
+        'hi',
+        'es',
+        'fr',
+        'ar',
+        'bn',
+        'ru',
+        'pt',
+        'pt_BR',
+        'it',
+        'ur',
+        'id',
+        'de',
+        'ja',
+        'pcm',
+        'ar_EG',
+        'mr',
+        'te',
+        'tr',
+        'ta',
+        'yue',
+      ];
 }

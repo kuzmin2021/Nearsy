@@ -1,16 +1,16 @@
 {
   "auth": {
     "nearsy": "Nearsy",
-    "meet_near_keep_it_easy": "Meet near. Keep it easy",
+    "meet_near_keep_it_easy": "لقاء قريب. اجعل الأمر سهلاً",
     "continue_with_email": "المتابعة بالبريد الإلكتروني",
-    "continue_with_phone": "Continue with phone",
-    "by_signing_up_you_agree_to_the_terms_of": "By signing up you agree to the Terms of",
-    "service_and_privacy_policy": "Service and Privacy Policy"
+    "continue_with_phone": "تواصل مع الهاتف",
+    "by_signing_up_you_agree_to_the_terms_of": "بالتسجيل فإنك توافق على شروط",
+    "service_and_privacy_policy": "سياسة الخدمة والخصوصية"
   },
   "profile": {
     "title": "الملف الشخصي",
     "name": "الاسم",
-    "catchphrase": "Catchphrase",
+    "catchphrase": "عبارة شعار",
     "about_me": "نبذة عني",
     "gender": "الجنس",
     "age": "العمر",
@@ -33,9 +33,9 @@
   },
   "liked_you": {
     "title": "أعجبوا بك",
-    "all_3": "All 3",
-    "filter_matches_0": "Filter matches 0",
-    "outside_3": "Outside 3",
+    "all_3": "الكل 3",
+    "filter_matches_0": "مرشح يطابق 0",
+    "outside_3": "خارج 3",
     "tab_label": "أعجبوا بك"
   },
   "matches": {
@@ -49,24 +49,24 @@
     "chyokak": "Chyokak?",
     "normur": "Normur",
     "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "Write a message"
+    "write_a_message": "اكتب رسالة"
   },
   "account_settings": {
     "title": "إعدادات الحساب",
     "edit_email": "تعديل",
     "edit_phone": "تعديل",
     "edit_password": "تعديل",
-    "email_authentication": "Email authentication",
-    "manage": "Manage",
+    "email_authentication": "مصادقة البريد الإلكتروني",
+    "manage": "يدير",
     "notifications": "الإشعارات",
-    "push_notifications": "Push Notifications",
+    "push_notifications": "دفع الإخطارات",
     "matches": "المطابقات",
     "messages": "الرسائل",
-    "liked_you": "Liked you",
-    "email_notifications": "Email Notifications",
+    "liked_you": "أعجبك",
+    "email_notifications": "إشعارات البريد الإلكتروني",
     "matches_email": "المطابقات",
     "messages_email": "الرسائل",
-    "liked_you_email": "Liked you",
+    "liked_you_email": "أعجبك",
     "feedback": "ملاحظات",
     "hide_account": "إخفاء الحساب",
     "delete_account": "حذف الحساب",
@@ -75,80 +75,81 @@
   },
   "search_preferences": {
     "title": "تفضيلات البحث",
-    "who_you_want_to_date": "Who you want to date:",
-    "women": "Women",
-    "men": "Men",
-    "other_gender": "Other",
+    "who_you_want_to_date": "من تريد مواعدته:",
+    "women": "نحيف",
+    "men": "الرجال",
+    "other_gender": "آخر",
     "age": "العمر:",
-    "between_20_and_50": "Between 20 and 50",
-    "search_radius": "Search radius:",
-    "up_to_161_kilometres_away": "Up to 161 kilometres away",
-    "languages_they_know": "Languages they know:",
-    "what_are_they_looking_for": "What are they looking for?",
-    "something_serious": "Something serious",
-    "just_dating": "Just dating",
-    "just_fun": "Just fun",
-    "open_to_anything": "Open to anything",
-    "not_sure": "Not sure",
-    "what_are_their_beliefs": "What are their beliefs?",
-    "agnostic": "Agnostic",
-    "atheist": "Atheist",
-    "buddhist": "Buddhist",
-    "christian": "Christian",
-    "jewish": "Jewish",
-    "muslim": "Muslim",
-    "other_beliefs": "Other",
-    "do_they_exercise": "Do they exercise?",
-    "regularly": "Regularly",
-    "occasionally": "Occasionally",
-    "rarely": "Rarely",
-    "do_they_drink": "Do they drink?",
+    "between_20_and_50": "بين 20 و50",
+    "search_radius": "نطاق البحث:",
+    "up_to_161_kilometres_away": "يصل إلى 161 كيلومترا",
+    "languages_they_know": "اللغات التي يعرفونها:",
+    "what_are_they_looking_for": "ما الذي يبحثون عنه؟",
+    "something_serious": "شيء خطير",
+    "just_dating": "مجرد مواعدة",
+    "just_fun": "مجرد متعة",
+    "open_to_anything": "مفتوحة على أي شيء",
+    "not_sure": "لست متأكدا",
+    "what_are_their_beliefs": "ما هي معتقداتهم؟",
+    "agnostic": "ملحد",
+    "atheist": "الملحد",
+    "buddhist": "بوذي",
+    "christian": "مسيحي",
+    "jewish": "يهودي",
+    "muslim": "مسلم",
+    "other_beliefs": "آخر",
+    "do_they_exercise": "هل يمارسون الرياضة؟",
+    "regularly": "بانتظام",
+    "occasionally": "أحياناً",
+    "rarely": "نادرًا",
+    "do_they_drink": "هل يشربون؟",
     "yes_drink": "أيوه",
-    "occasionally_drink": "Occasionally",
-    "rarely_drink": "Rarely",
+    "occasionally_drink": "أحياناً",
+    "rarely_drink": "نادرًا",
     "no_drink": "لأ",
-    "do_they_smoke": "Do they smoke?",
+    "do_they_smoke": "هل يدخنون؟",
     "yes_smoke": "أيوه",
-    "sometimes": "Sometimes",
+    "sometimes": "أحيانا",
     "no_smoke": "لأ",
-    "trying_to_quit": "Trying to quit",
-    "nearby_visibility": "Nearby visibility",
-    "apply_filters": "Apply filters"
+    "trying_to_quit": "تحاول الإقلاع عن التدخين",
+    "nearby_visibility": "الرؤية القريبة",
+    "apply_filters": "تطبيق المرشحات"
   },
   "nearby_search_preferences": {
-    "title": "Nearby Search Preferences",
-    "visibility_modes": "Visibility modes:",
-    "invisible": "Invisible",
-    "visible_while_using_the_app": "Visible while using the app",
-    "your_last_location": "Your last location",
-    "to_update_your_status_go_to_profile_settings_location": "To update your status, go to Profile Settings > Location.",
+    "title": "تفضيلات البحث القريبة",
+    "choose_how_visible_your_location_is_you_can_change_this_anytime": "اختر مدى وضوح موقعك. يمكنك تغيير هذا في أي وقت.",
+    "visibility_modes": "أوضاع الرؤية:",
+    "invisible": "خفي",
+    "visible_while_using_the_app": "مرئية أثناء استخدام التطبيق",
+    "your_last_location": "موقعك الأخير",
+    "to_update_your_status_go_to_profile_settings_location": "لتحديث حالتك، انتقل إلى إعدادات الملف الشخصي > الموقع.",
     "save_visibility": "حفظ الظهور"
   },
   "chat_preferences": {
-    "title": "Chat Preferences",
-    "choose_who_can_message_you_you_can_change_this_anytime": "Choose who can message you. You can change this anytime.",
-    "availability_modes": "Availability modes:",
-    "unavailable": "Unavailable",
-    "matched_users_only": "Matched users only",
-    "available": "Available",
-    "stuff_i_could_talk_about_for_hours": "Stuff I could talk about for hours:",
-    "obscure_scifi_films_with_depressing_endings": "Obscure sci-fi films with depressing endings",
-    "save_chat_preferences": "Save chat preferences"
+    "title": "تفضيلات الدردشة",
+    "choose_who_can_message_you_you_can_change_this_anytime": "اختر من يمكنه مراسلتك. يمكنك تغيير هذا في أي وقت.",
+    "availability_modes": "أوضاع التوفر:",
+    "unavailable": "غير متاح",
+    "matched_users_only": "المستخدمين المتطابقين فقط",
+    "available": "متاح",
+    "stuff_i_could_talk_about_for_hours": "الأشياء التي يمكنني التحدث عنها لساعات:",
+    "obscure_scifi_films_with_depressing_endings": "أفلام خيال علمي غامضة ذات نهايات محبطة",
+    "save_chat_preferences": "حفظ تفضيلات الدردشة"
   },
   "contact_us": {
-    "title": "Contact us",
-    "let_us_know_what_you_think": "Let us know what you think...",
+    "title": "اتصل بنا",
+    "let_us_know_what_you_think": "اسمحوا لنا أن نعرف ما هو رأيك...",
     "submit": "إرسال"
   },
   "hide_account": {
     "title": "إخفاء الحساب",
-    "hide": "Hide"
+    "hide": "يخفي"
   },
   "delete_account": {
     "title": "حذف الحساب",
-    "are_you_sure": "Are you sure?",
-    "absolutely": "Absolutely",
-    "not_quite": "Not quite"
+    "are_you_sure": "هل أنت متأكد؟",
+    "absolutely": "قطعاً",
+    "not_quite": "ليس تماما"
   },
   "profile_about_me": {
     "about_me": "نبذة عني:",
@@ -184,8 +185,8 @@
   "profile_height": {
     "my_height": "الطول:",
     "enter_your_height": "ادخل طولك",
-    "ft": "ft",
-    "cm": "cm"
+    "ft": "قدم",
+    "cm": "سم"
   },
   "profile_body_type": {
     "my_body_type": "نوع الجسم:"
@@ -221,49 +222,49 @@
     "do_you_smoke": "بتدخن؟"
   },
   "profile_location": {
-    "my_location": "My location:",
-    "automatically_detect_my_location_recommended": "Automatically detect my location (recommended)",
-    "status_in_nearby_local": "Status in Nearby: Local",
-    "i_will_set_my_location_manually": "I will set my location manually",
-    "select_location": "Select location..."
+    "my_location": "موقعي:",
+    "automatically_detect_my_location_recommended": "اكتشاف موقعي تلقائيًا (مستحسن)",
+    "status_in_nearby_local": "الحالة في مكان قريب: محلي",
+    "i_will_set_my_location_manually": "سأقوم بتعيين موقعي يدويًا",
+    "select_location": "تحديد الموقع..."
   },
   "nearby": {
     "title": "بالقرب منك",
     "filters": "الفلاتر",
-    "visibility": "Visibility",
+    "visibility": "الرؤية",
     "tab_label": "بالقرب منك"
   },
   "email_auth": {
-    "sign_in_with_email": "Sign in with email",
-    "use_your_email_and_password_or_create_a_new_account": "Use your email and password, or create a new account.",
+    "sign_in_with_email": "قم بتسجيل الدخول باستخدام البريد الإلكتروني",
+    "use_your_email_and_password_or_create_a_new_account": "استخدم بريدك الإلكتروني وكلمة المرور، أو قم بإنشاء حساب جديد.",
     "sign_in": "تسجيل الدخول",
     "register": "تسجيل",
     "email_address": "البريد الإلكتروني",
     "password": "كلمة المرور",
-    "repeat_password": "Repeat password",
+    "repeat_password": "كرر كلمة المرور",
     "create_account": "إنشاء حساب",
-    "forgot_password": "Forgot password?",
+    "forgot_password": "هل نسيت كلمة السر؟",
     "continue_button": "متابعة"
   },
   "phone_auth": {
-    "title": "Phone auth",
-    "phone_verification_is_not_implemented_yet": "Phone verification is not implemented yet."
+    "title": "مصادقة الهاتف",
+    "phone_verification_is_not_implemented_yet": "لم يتم تنفيذ التحقق من الهاتف بعد."
   },
   "verify_number": {
-    "title": "Verify number",
-    "sms_verification_is_not_implemented_yet": "SMS verification is not implemented yet."
+    "title": "التحقق من الرقم",
+    "sms_verification_is_not_implemented_yet": "لم يتم تنفيذ التحقق عبر الرسائل القصيرة بعد."
   },
   "reset_password": {
     "title": "إعادة تعيين كلمة المرور",
-    "enter_your_email_and_we_will_send_a_password_reset_link": "Enter your email and we will send a password reset link.",
+    "enter_your_email_and_we_will_send_a_password_reset_link": "أدخل بريدك الإلكتروني وسنرسل لك رابط إعادة تعيين كلمة المرور.",
     "email_address": "البريد الإلكتروني",
-    "send_reset_link": "Send reset link"
+    "send_reset_link": "إرسال رابط إعادة التعيين"
   },
   "update_password": {
     "title": "تحديث كلمة المرور",
-    "choose_a_new_password_for_your_nearsy_account": "Choose a new password for your Nearsy account.",
-    "new_password": "New password",
-    "repeat_password": "Repeat password",
+    "choose_a_new_password_for_your_nearsy_account": "اختر كلمة مرور جديدة لحساب Nearsy الخاص بك.",
+    "new_password": "كلمة المرور الجديدة",
+    "repeat_password": "كرر كلمة المرور",
     "submit_button": "تحديث كلمة المرور"
   },
   "lookaround_bottom_nav": {
@@ -275,87 +276,87 @@
   },
   "profile_attributes": {
     "gender": {
-      "woman": "Woman",
-      "man": "Man",
-      "non_binary": "Non-binary",
-      "other": "Other"
+      "woman": "امرأة",
+      "man": "رجل",
+      "non_binary": "غير ثنائي",
+      "other": "آخر"
     },
     "education": {
-      "high_school": "High School",
-      "currently_studying": "Currently Studying",
-      "trade_qualification": "Trade Qualification",
-      "bachelors_degree": "Bachelor's Degree",
-      "masters_degree": "Master's Degree",
-      "doctorate_phd": "Doctorate / PhD",
-      "postgraduate": "Postgraduate",
-      "other": "Other",
-      "prefer_not_to_say": "Prefer not to say"
+      "high_school": "مدرسة ثانوية",
+      "currently_studying": "يدرس حاليا",
+      "trade_qualification": "المؤهلات التجارية",
+      "bachelors_degree": "درجة البكالوريوس",
+      "masters_degree": "درجة الماجستير",
+      "doctorate_phd": "دكتوراه / دكتوراه",
+      "postgraduate": "الدراسات العليا",
+      "other": "آخر",
+      "prefer_not_to_say": "يفضل عدم القول"
     },
     "kids": {
-      "yes": "Have kids",
-      "no": "Don't have kids",
-      "prefer_not_to_say": "Prefer not to say"
+      "yes": "لديك أطفال",
+      "no": "ليس لديك أطفال",
+      "prefer_not_to_say": "يفضل عدم القول"
     },
     "relationship_type": {
-      "something_serious": "Something Serious",
-      "just_dating": "Just Dating",
-      "just_fun": "Just Fun",
-      "open_to_anything": "Open to Anything",
-      "not_sure": "Not Sure"
+      "something_serious": "شيء خطير",
+      "just_dating": "فقط التعارف",
+      "just_fun": "مجرد متعة",
+      "open_to_anything": "مفتوح لأي شيء",
+      "not_sure": "غير متأكد"
     },
     "religion": {
-      "agnostic": "Agnostic",
-      "atheist": "Atheist",
-      "buddhist": "Buddhist",
-      "christian": "Christian",
-      "hindu": "Hindu",
-      "jewish": "Jewish",
-      "muslim": "Muslim",
-      "sikh": "Sikh",
-      "spiritual": "Spiritual",
-      "other": "Other"
+      "agnostic": "ملحد",
+      "atheist": "الملحد",
+      "buddhist": "بوذي",
+      "christian": "مسيحي",
+      "hindu": "هندوسي",
+      "jewish": "يهودي",
+      "muslim": "مسلم",
+      "sikh": "السيخ",
+      "spiritual": "روحي",
+      "other": "آخر"
     },
     "body_type": {
-      "slim": "Slim",
-      "lean": "Lean",
-      "average": "Average",
-      "fit": "Fit",
-      "athletic": "Athletic",
-      "muscular": "Muscular",
-      "broad": "Broad",
-      "stocky": "Stocky",
-      "bigger": "Bigger",
-      "curvy": "Curvy",
-      "prefer_not_to_say": "Prefer not to say"
+      "slim": "نحيل",
+      "lean": "نحيف",
+      "average": "متوسط",
+      "fit": "ملائم",
+      "athletic": "رياضي",
+      "muscular": "عضلي",
+      "broad": "واسع",
+      "stocky": "ممتلئ الجسم",
+      "bigger": "أكبر",
+      "curvy": "متعرج",
+      "prefer_not_to_say": "يفضل عدم القول"
     },
     "exercise": {
-      "regularly": "Regularly",
-      "occasionally": "Occasionally",
-      "rarely": "Rarely",
-      "never": "Never"
+      "regularly": "بانتظام",
+      "occasionally": "أحياناً",
+      "rarely": "نادرًا",
+      "never": "أبداً"
     },
     "drinking": {
-      "yes": "Yes",
-      "occasionally": "Occasionally",
-      "rarely": "Rarely",
-      "no": "No",
-      "stopped_for_now": "Stopped for now"
+      "yes": "نعم",
+      "occasionally": "أحياناً",
+      "rarely": "نادرًا",
+      "no": "لا",
+      "stopped_for_now": "توقفت الآن"
     },
     "smoking": {
-      "yes": "Yes",
-      "sometimes": "Sometimes",
-      "no": "No",
-      "trying_to_quit": "Trying to quit"
+      "yes": "نعم",
+      "sometimes": "أحيانا",
+      "no": "لا",
+      "trying_to_quit": "تحاول الإقلاع عن التدخين"
     }
   },
   "languages": {
-    "afar": "Afar",
-    "afrikaans": "Afrikaans",
-    "albanian": "Albanian",
-    "amharic": "Amharic",
-    "arabic": "Arabic",
-    "armenian": "Armenian",
-    "bengali": "Bengali",
-    "catalan": "Catalan"
+    "afar": "بعيد",
+    "afrikaans": "الأفريكانية",
+    "albanian": "الألبانية",
+    "amharic": "الأمهرية",
+    "arabic": "عربي",
+    "armenian": "الأرمينية",
+    "bengali": "البنغالية",
+    "catalan": "الكاتالونية"
   }
 }

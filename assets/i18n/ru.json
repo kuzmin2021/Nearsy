@@ -1,16 +1,16 @@
 {
   "auth": {
     "nearsy": "Nearsy",
-    "meet_near_keep_it_easy": "Meet near. Keep it easy",
+    "meet_near_keep_it_easy": "Встречаемся рядом. Будь проще",
     "continue_with_email": "Продолжить с email",
-    "continue_with_phone": "Continue with phone",
-    "by_signing_up_you_agree_to_the_terms_of": "By signing up you agree to the Terms of",
-    "service_and_privacy_policy": "Service and Privacy Policy"
+    "continue_with_phone": "Продолжить по телефону",
+    "by_signing_up_you_agree_to_the_terms_of": "Регистрируясь, вы соглашаетесь с Условиями",
+    "service_and_privacy_policy": "Политика обслуживания и конфиденциальности"
   },
   "profile": {
     "title": "Профиль",
     "name": "Имя",
-    "catchphrase": "Catchphrase",
+    "catchphrase": "крылатая фраза",
     "about_me": "Обо мне",
     "gender": "Пол",
     "age": "Возраст",
@@ -33,9 +33,9 @@
   },
   "liked_you": {
     "title": "Вы им понравились",
-    "all_3": "All 3",
-    "filter_matches_0": "Filter matches 0",
-    "outside_3": "Outside 3",
+    "all_3": "Все 3",
+    "filter_matches_0": "Фильтровать совпадения 0",
+    "outside_3": "Снаружи 3",
     "tab_label": "Вы им понравились"
   },
   "matches": {
@@ -49,24 +49,24 @@
     "chyokak": "Chyokak?",
     "normur": "Normur",
     "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "Write a message"
+    "write_a_message": "Написать сообщение"
   },
   "account_settings": {
     "title": "Настройки аккаунта",
     "edit_email": "Изменить",
     "edit_phone": "Изменить",
     "edit_password": "Изменить",
-    "email_authentication": "Email authentication",
-    "manage": "Manage",
+    "email_authentication": "Аутентификация по электронной почте",
+    "manage": "Управление",
     "notifications": "Уведомления",
     "push_notifications": "  Push Notifications",
     "matches": "Пары",
     "messages": "Сообщения",
-    "liked_you": "Liked you",
+    "liked_you": "Ты мне понравился",
     "email_notifications": "  Email Notifications",
     "matches_email": "Пары",
     "messages_email": "Сообщения",
-    "liked_you_email": "Liked you",
+    "liked_you_email": "Ты мне понравился",
     "feedback": "Обратная связь",
     "hide_account": "Скрыть аккаунт",
     "delete_account": "Удалить аккаунт",
@@ -75,13 +75,13 @@
   },
   "search_preferences": {
     "title": "Настройки поиска",
-    "who_you_want_to_date": "Who you want to date:",
+    "who_you_want_to_date": "С кем ты хочешь встречаться:",
     "women": "Женщины",
     "men": "Мужчины",
     "other_gender": "Другой",
     "age": "Возраст:",
     "between_20_and_50": "От 20 до 50 лет",
-    "search_radius": "Search radius:",
+    "search_radius": "Радиус поиска:",
     "up_to_161_kilometres_away": "На расстоянии до 161 километра",
     "languages_they_know": "Языки, которыми они владеют:",
     "what_are_they_looking_for": "Что они ищут?",
@@ -99,13 +99,13 @@
     "muslim": "мусульманин",
     "other_beliefs": "Другой",
     "do_they_exercise": "Они занимаются спортом?",
-    "regularly": "Regularly",
+    "regularly": "Регулярно",
     "occasionally": "Изредка",
-    "rarely": "Rarely",
+    "rarely": "Редко",
     "do_they_drink": "Они пьют алкоголь?",
     "yes_drink": "Да",
     "occasionally_drink": "Изредка",
-    "rarely_drink": "Rarely",
+    "rarely_drink": "Редко",
     "no_drink": "Нет",
     "do_they_smoke": "Они курят?",
     "yes_smoke": "Да",
@@ -117,29 +117,33 @@
   },
   "nearby_search_preferences": {
     "title": "Настройки поиска поблизости",
-    "visibility_modes": "Visibility modes:",
+    "choose_how_visible_your_location_is_you_can_change_this_anytime": "Выберите, насколько видно ваше местоположение. Вы можете изменить это в любое время.",
+    "visibility_modes": "Режимы видимости:",
     "invisible": "Невидимый",
     "visible_while_using_the_app": "Отображается во время использования приложения.",
     "your_last_location": "Ваше последнее местоположение",
+    "to_update_your_status_go_to_profile_settings_location": "Чтобы обновить свой статус, перейдите в «Настройки профиля» > «Местоположение».",
     "save_visibility": "Сохранить видимость"
   },
   "chat_preferences": {
     "title": "Настройки чата",
-    "availability_modes": "Availability modes:",
+    "choose_who_can_message_you_you_can_change_this_anytime": "Выберите, кто может отправлять вам сообщения. Вы можете изменить это в любое время.",
+    "availability_modes": "Режимы доступности:",
     "unavailable": "Недоступно",
     "matched_users_only": "Только подходящие пользователи",
     "available": "Доступный",
     "stuff_i_could_talk_about_for_hours": "Об этом можно говорить часами:",
-    "save_chat_preferences": "Save chat preferences"
+    "obscure_scifi_films_with_depressing_endings": "Малоизвестные научно-фантастические фильмы с депрессивным финалом",
+    "save_chat_preferences": "Сохранить настройки чата"
   },
   "contact_us": {
-    "title": "Contact us",
+    "title": "Свяжитесь с нами",
     "let_us_know_what_you_think": "Поделитесь своим мнением...",
     "submit": "Отправить"
   },
   "hide_account": {
     "title": "Скрыть аккаунт",
-    "hide": "Hide"
+    "hide": "Скрыть"
   },
   "delete_account": {
     "title": "Удалить аккаунт",
@@ -157,12 +161,12 @@
   "profile_age": {
     "when_were_you_born": "Когда вы родились:",
     "day": "День",
-    "unused": "--",
     "month": "Месяц",
-    "unused_2": "--",
     "year": "Год",
-    "unused_3": "--",
-    "optional": "Необязательно"
+    "optional": "Необязательно",
+    "day_placeholder": "--",
+    "month_placeholder": "--",
+    "year_placeholder": "--"
   },
   "months": {
     "january": "Январь",
@@ -181,8 +185,8 @@
   "profile_height": {
     "my_height": "Рост:",
     "enter_your_height": "Укажите рост",
-    "ft": "ft",
-    "cm": "cm"
+    "ft": "футы",
+    "cm": "см"
   },
   "profile_body_type": {
     "my_body_type": "Тип телосложения:"
@@ -218,49 +222,49 @@
     "do_you_smoke": "Вы курите?"
   },
   "profile_location": {
-    "my_location": "My location:",
-    "automatically_detect_my_location_recommended": "Automatically detect my location (recommended)",
-    "status_in_nearby_local": "Status in Nearby: Local",
-    "i_will_set_my_location_manually": "I will set my location manually",
-    "select_location": "Select location..."
+    "my_location": "Мое местоположение:",
+    "automatically_detect_my_location_recommended": "Автоматически определять мое местоположение (рекомендуется)",
+    "status_in_nearby_local": "Статус поблизости: Местный",
+    "i_will_set_my_location_manually": "Я укажу свое местоположение вручную",
+    "select_location": "Выберите местоположение..."
   },
   "nearby": {
     "title": "Рядом",
     "filters": "Фильтры",
-    "visibility": "Visibility",
+    "visibility": "Видимость",
     "tab_label": "Рядом"
   },
   "email_auth": {
-    "sign_in_with_email": "Sign in with email",
-    "use_your_email_and_password_or_create_a_new_account": "Use your email and password, or create a new account.",
+    "sign_in_with_email": "Войти с помощью электронной почты",
+    "use_your_email_and_password_or_create_a_new_account": "Используйте свой адрес электронной почты и пароль или создайте новую учетную запись.",
     "sign_in": "Войти",
     "register": "Регистрация",
     "email_address": "Адрес email",
     "password": "Пароль",
-    "repeat_password": "Repeat password",
+    "repeat_password": "Повторите пароль",
     "create_account": "Создать аккаунт",
-    "forgot_password": "Forgot password?",
+    "forgot_password": "Забыли пароль?",
     "continue_button": "Продолжить"
   },
   "phone_auth": {
-    "title": "Phone auth",
-    "phone_verification_is_not_implemented_yet": "Phone verification is not implemented yet."
+    "title": "Авторизация по телефону",
+    "phone_verification_is_not_implemented_yet": "Проверка телефона пока не реализована."
   },
   "verify_number": {
-    "title": "Verify number",
-    "sms_verification_is_not_implemented_yet": "SMS verification is not implemented yet."
+    "title": "Подтвердить номер",
+    "sms_verification_is_not_implemented_yet": "СМС-верификация пока не реализована."
   },
   "reset_password": {
     "title": "Сбросить пароль",
-    "enter_your_email_and_we_will_send_a_password_reset_link": "Enter your email and we will send a password reset link.",
+    "enter_your_email_and_we_will_send_a_password_reset_link": "Введите свой адрес электронной почты, и мы вышлем ссылку для сброса пароля.",
     "email_address": "Адрес email",
-    "send_reset_link": "Send reset link"
+    "send_reset_link": "Отправить ссылку для сброса"
   },
   "update_password": {
     "title": "Обновить пароль",
-    "choose_a_new_password_for_your_nearsy_account": "Choose a new password for your Nearsy account.",
-    "new_password": "New password",
-    "repeat_password": "Repeat password",
+    "choose_a_new_password_for_your_nearsy_account": "Выберите новый пароль для своей учетной записи Nearsy.",
+    "new_password": "Новый пароль",
+    "repeat_password": "Повторите пароль",
     "submit_button": "Обновить пароль"
   },
   "lookaround_bottom_nav": {
