@@ -1389,8 +1389,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                   .isFilledProfilePhotoSlot(
                                                       profileGridSlotItem) ??
                                               true)
-                                            Container(
-                                              width: double.infinity,
+                                            Positioned.fill(
                                               child: Stack(
                                                 alignment: AlignmentDirectional(
                                                     1.0, -1.0),
@@ -1407,7 +1406,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                       imageUrl:
                                                           profileGridSlotItem,
                                                       width: double.infinity,
-                                                      height: 150.0,
+                                                      height: double.infinity,
                                                       fit: BoxFit.cover,
                                                     ),
                                                   ),
@@ -1576,10 +1575,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                             ),
                                           if (profileGridSlotItem ==
                                               '__add_photo__')
-                                            Container(
-                                              width: double.infinity,
+                                            Positioned.fill(
                                               child: Container(
-                                                height: 150.0,
                                                 decoration: BoxDecoration(
                                                   color: FloterTheme.of(
                                                           context)
@@ -1864,10 +1861,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                             ),
                                           if (profileGridSlotItem ==
                                               '__empty_photo__')
-                                            Container(
-                                              width: double.infinity,
+                                            Positioned.fill(
                                               child: Container(
-                                                height: 150.0,
                                                 decoration: BoxDecoration(
                                                   color: FloterTheme.of(
                                                           context)
