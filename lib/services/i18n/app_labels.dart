@@ -38,7 +38,8 @@ class AppLabels {
 
   static Locale? getStoredLocale() {
     try {
-      final locale = _prefs.getString(_kLocaleStorageKey);
+      final locale = _prefs.getString(_kLocaleStorageKey) ??
+          _prefs.getString('__locale_key__');
       return locale != null && locale.isNotEmpty ? _resolveLocale(locale) : null;
     } catch (_) {
       return null;
