@@ -742,6 +742,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                   children: [
                                     Expanded(
                                       child: Stack(
+                                        clipBehavior: Clip.none,
                                         alignment:
                                             AlignmentDirectional(1.0, -1.0),
                                         children: [
@@ -926,7 +927,10 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                               ),
                                             if (!(_model.profileMainPhotoUrl ==
                                                 ''))
-                                              InkWell(
+                                              Positioned(
+                                                top: -8.0,
+                                                right: -8.0,
+                                                child: InkWell(
                                                 splashColor: Colors.transparent,
                                                 focusColor: Colors.transparent,
                                                 hoverColor: Colors.transparent,
@@ -973,10 +977,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     color: FloterTheme.of(
                                                             context)
                                                         .primaryBackground,
-                                                    size: 30.0,
+                                                    size: 28.0,
                                                   ),
                                                 ),
                                               ),
+                                            ),
                                           ],
                                         ),
                                       ),
@@ -1382,6 +1387,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       width: double.infinity,
                                       height: double.infinity,
                                       child: Stack(
+                                        clipBehavior: Clip.none,
                                         alignment:
                                             AlignmentDirectional(0.0, 0.0),
                                         children: [
@@ -1391,6 +1397,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                               true)
                                             Positioned.fill(
                                               child: Stack(
+                                                clipBehavior: Clip.none,
                                                 alignment: AlignmentDirectional(
                                                     1.0, -1.0),
                                                 children: [
@@ -1410,7 +1417,10 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                       fit: BoxFit.cover,
                                                     ),
                                                   ),
-                                                  InkWell(
+                                                  Positioned(
+                                                    top: -8.0,
+                                                    right: -8.0,
+                                                    child: InkWell(
                                                     splashColor:
                                                         Colors.transparent,
                                                     focusColor:
@@ -1566,10 +1576,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                         color: FloterTheme
                                                                 .of(context)
                                                             .primaryBackground,
-                                                        size: 30.0,
+                                                        size: 28.0,
                                                       ),
                                                     ),
                                                   ),
+                                                ),
                                                 ],
                                               ),
                                             ),
