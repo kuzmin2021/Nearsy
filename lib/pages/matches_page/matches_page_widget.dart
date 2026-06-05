@@ -2,13 +2,10 @@ import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
-import '/floter/floter_widgets.dart';
-import 'dart:ui';
 import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'matches_page_model.dart';
 export 'matches_page_model.dart';
 

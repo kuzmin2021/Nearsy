@@ -1,13 +1,7 @@
-﻿import '/floter/floter_icon_button.dart';
-import '/floter/floter_theme.dart';
-import '/floter/floter_util.dart';
-import '/floter/floter_widgets.dart';
-import 'dart:ui';
+﻿import '/floter/floter_util.dart';
 import '/index.dart';
 import 'search_preferences_page_widget.dart' show SearchPreferencesPageWidget;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class SearchPreferencesPageModel
     extends FloterModel<SearchPreferencesPageWidget> {

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '/floter/floter_theme.dart';
-import '/floter/floter_util.dart';
 
 class ProfileTextEditor extends StatelessWidget {
   const ProfileTextEditor({

@@ -1,5 +1,3 @@
-import '/backend/supabase/supabase.dart';
-
 String cleanValue(dynamic value) {
   if (value == null) return '';
   if (value is String) return value.trim();

@@ -5,7 +5,6 @@ import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'auth_page_model.dart';
 export 'auth_page_model.dart';
 

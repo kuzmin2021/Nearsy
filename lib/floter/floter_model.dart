@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
-import 'floter_util.dart';
 
 Widget wrapWithModel<T extends FloterModel>({
   required T model,

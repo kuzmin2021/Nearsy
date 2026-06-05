@@ -1,6 +1,6 @@
 ﻿import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
+
 import '/core/config/app_config.dart';
-import '/floter/floter_util.dart';
 
 export 'database/database.dart';
 

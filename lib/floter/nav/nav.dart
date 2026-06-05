@@ -1,26 +1,16 @@
 ﻿import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
-import '/backend/schema/structs/index.dart';
-
-import '/backend/supabase/supabase.dart';
-
 import '/auth/base_auth_user_provider.dart';
-
-import '/main.dart';
+import '/backend/schema/structs/index.dart';
 import '/floter/floter_theme.dart';
-import '/floter/lat_lng.dart';
-import '/floter/place.dart';
 import '/floter/floter_util.dart';
-import 'serialization_util.dart';
-
 import '/index.dart';
 
 export 'package:go_router/go_router.dart';
+
 export 'serialization_util.dart';
 
 const kTransitionInfoKey = '__transition_info__';

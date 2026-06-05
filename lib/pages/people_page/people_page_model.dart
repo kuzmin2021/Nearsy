@@ -1,15 +1,8 @@
 ﻿import '/components/lookaround_bottom_nav_widget.dart';
-import '/floter/floter_swipeable_stack.dart';
-import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
-import '/floter/floter_widgets.dart';
-import 'dart:ui';
 import 'people_page_widget.dart' show PeoplePageWidget;
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class PeoplePageModel extends FloterModel<PeoplePageWidget> {
   ///  Local state fields for this page.

@@ -7,7 +7,6 @@ import '/floter/floter_util.dart';
 import 'email_auth.dart';
 
 import 'supabase_user_provider.dart';
-import '/floter/floter_util.dart';
 
 export '/auth/base_auth_user_provider.dart';
 

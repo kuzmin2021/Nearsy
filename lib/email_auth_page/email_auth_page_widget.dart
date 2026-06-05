@@ -1,15 +1,15 @@
+import 'package:easy_debounce/easy_debounce.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
-import 'dart:ui';
 import '/index.dart';
-import 'package:easy_debounce/easy_debounce.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'email_auth_page_model.dart';
+
 export 'email_auth_page_model.dart';
 
 /// Email sign-in and registration flow.

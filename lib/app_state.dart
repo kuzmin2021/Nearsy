@@ -1,9 +1,4 @@
 ﻿import 'package:flutter/material.dart';
-import '/backend/schema/structs/index.dart';
-import '/backend/api_requests/api_manager.dart';
-import 'backend/supabase/supabase.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'floter/floter_util.dart';
 
 class FTAppState extends ChangeNotifier {
   static FTAppState _instance = FTAppState._internal();

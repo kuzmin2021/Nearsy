@@ -1,5 +1,4 @@
 ﻿import 'package:provider/provider.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' show PlatformDispatcher;
 
@@ -16,7 +15,6 @@ import '/services/i18n/app_labels_delegate.dart';
 import 'floter/floter_util.dart';
 import 'floter/internationalization.dart';
 import 'floter/nav/nav.dart';
-import 'index.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

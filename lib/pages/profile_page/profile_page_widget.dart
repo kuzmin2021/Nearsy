@@ -4,7 +4,6 @@ import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
-import '/floter/floter_widgets.dart';
 import '/services/profile/profile_localization.dart';
 import 'dart:ui';
 import '/floter/custom_functions.dart' as functions;
@@ -16,8 +15,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
-import 'widgets/profile_photo_grid.dart';
 import 'profile_page_model.dart';
 export 'profile_page_model.dart';
 
