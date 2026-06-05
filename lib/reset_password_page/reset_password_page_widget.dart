@@ -169,7 +169,7 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
                             overflow: TextOverflow.ellipsis,
                           ),
                           Container(
-                            height: 12.0,
+                            height: 282.0,
                           ),
                           SizedBox(
                             height: 38.0,

@@ -181,7 +181,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                             overflow: TextOverflow.ellipsis,
                           ),
                           Container(
-                            height: 12.0,
+                            height: 246.0,
                           ),
                           Column(
                             mainAxisSize: MainAxisSize.min,

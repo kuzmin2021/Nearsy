@@ -138,7 +138,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                 ),
                           ),
                           Container(
-                            height: 44.0,
+                            height: 300.0,
                           ),
                           FTButtonWidget(
                             onPressed: () async {

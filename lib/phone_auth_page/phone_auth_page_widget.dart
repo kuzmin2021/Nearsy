@@ -162,37 +162,25 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                             overflow: TextOverflow.ellipsis,
                           ),
                           Container(
+                            height: 282.0,
+                          ),
+                          Container(
+                            height: 38.0,
+                            alignment: AlignmentDirectional.centerStart,
                             decoration: BoxDecoration(
-                              color: FloterTheme.of(context).primaryBackground,
-                              borderRadius: BorderRadius.circular(12.0),
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(18.0),
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  16.0, 0.0, 16.0, 0.0),
                               child: Text(
-                                AppLabels.of(context).get(
-                                  'phone_auth.phone_verification_is_not_implemented_yet' /* Phone verification is not impl... */,
+                                '+61 | Your phone number',
+                                style: GoogleFonts.inter(
+                                  color: Colors.black,
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w400,
                                 ),
-                                style: FloterTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
-                                      color:
-                                          FloterTheme.of(context).primaryText,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FloterTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
                               ),
                             ),
                           ),
