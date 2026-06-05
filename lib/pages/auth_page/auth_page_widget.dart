@@ -49,31 +49,33 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
         backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
-          child: Container(
-            width: double.infinity,
-            height: 926.0,
-            child: Stack(
-              alignment: AlignmentDirectional(0.0, 0.0),
-              children: [
-                Image.asset(
-                  'assets/images/start_screen_bg.png',
-                  width: double.infinity,
-                  height: 926.0,
-                  fit: BoxFit.cover,
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 926.0,
-                  decoration: BoxDecoration(
-                    color: Color(0x55FFFFFF),
-                  ),
-                  child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(42.0, 92.0, 42.0, 42.0),
-                    child: SingleChildScrollView(
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              return SizedBox(
+                width: double.infinity,
+                height: constraints.maxHeight,
+                child: Stack(
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  children: [
+                    Positioned.fill(
+                      child: Image.asset(
+                        'assets/images/start_screen_bg.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Positioned.fill(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color(0x55FFFFFF),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 92.0,
+                      left: 42.0,
+                      right: 42.0,
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Row(
@@ -137,9 +139,17 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                       .fontStyle,
                                 ),
                           ),
-                          Container(
-                            height: 300.0,
-                          ),
+                        ].divide(SizedBox(height: 16.0)),
+                      ),
+                    ),
+                    Positioned(
+                      left: 42.0,
+                      right: 42.0,
+                      bottom: constraints.maxHeight * 0.10,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
                           FTButtonWidget(
                             onPressed: () async {
                               context.pushNamed(EmailAuthPageWidget.routeName);
@@ -252,10 +262,10 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                         ].divide(SizedBox(height: 16.0)),
                       ),
                     ),
-                  ),
+                  ],
                 ),
-              ],
-            ),
+              );
+            },
           ),
         ),
       ),

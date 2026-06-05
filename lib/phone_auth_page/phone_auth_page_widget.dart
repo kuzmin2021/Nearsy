@@ -47,31 +47,33 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
         backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
-          child: Container(
-            width: double.infinity,
-            height: 926.0,
-            child: Stack(
-              alignment: AlignmentDirectional(0.0, 0.0),
-              children: [
-                Image.asset(
-                  'assets/images/start_screen_bg.png',
-                  width: double.infinity,
-                  height: 926.0,
-                  fit: BoxFit.cover,
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 926.0,
-                  decoration: BoxDecoration(
-                    color: Color(0x55FFFFFF),
-                  ),
-                  child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(42.0, 80.0, 42.0, 42.0),
-                    child: SingleChildScrollView(
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              return SizedBox(
+                width: double.infinity,
+                height: constraints.maxHeight,
+                child: Stack(
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  children: [
+                    Positioned.fill(
+                      child: Image.asset(
+                        'assets/images/start_screen_bg.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Positioned.fill(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color(0x55FFFFFF),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 80.0,
+                      left: 42.0,
+                      right: 42.0,
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Row(
@@ -161,36 +163,38 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                                 ),
                             overflow: TextOverflow.ellipsis,
                           ),
-                          Container(
-                            height: 282.0,
-                          ),
-                          Container(
-                            height: 38.0,
-                            alignment: AlignmentDirectional.centerStart,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(15.0),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 0.0, 16.0, 0.0),
-                              child: Text(
-                                '+61 | Your phone number',
-                                style: GoogleFonts.inter(
-                                  color: Colors.black,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            ),
-                          ),
                         ].divide(SizedBox(height: 16.0)),
                       ),
                     ),
-                  ),
+                    Positioned(
+                      left: 42.0,
+                      right: 42.0,
+                      bottom: constraints.maxHeight * 0.10,
+                      child: Container(
+                        height: 38.0,
+                        alignment: AlignmentDirectional.centerStart,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              16.0, 0.0, 16.0, 0.0),
+                          child: Text(
+                            '+61 | Your phone number',
+                            style: GoogleFonts.inter(
+                              color: Colors.black,
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              );
+            },
           ),
         ),
       ),
