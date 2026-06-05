@@ -726,10 +726,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                               ),
                             ],
                           ),
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                          IntrinsicHeight(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
                               Expanded(
                                 flex: 1,
@@ -739,21 +740,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                   crossAxisAlignment:
                                       CrossAxisAlignment.stretch,
                                   children: [
-                                    Container(
-                                      width: double.infinity,
-                                      alignment:
-                                          AlignmentDirectional(-1.0, -1.0),
-                                      child: Container(
-                                        width: 150.0,
-                                        height: 150.0,
-                                        child: Stack(
-                                          alignment:
-                                              AlignmentDirectional(1.0, -1.0),
-                                          children: [
+                                    Expanded(
+                                      child: Stack(
+                                        alignment:
+                                            AlignmentDirectional(1.0, -1.0),
+                                        children: [
                                             if (!(_model.profileMainPhotoUrl ==
                                                 ''))
-                                              Container(
-                                                width: 150.0,
+                                              Positioned.fill(
                                                 child: ClipRRect(
                                                   borderRadius:
                                                       BorderRadius.circular(
@@ -765,18 +759,16 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                         milliseconds: 0),
                                                     imageUrl: _model
                                                         .profileMainPhotoUrl!,
-                                                    width: 150.0,
-                                                    height: 150.0,
+                                                    width: double.infinity,
+                                                    height: double.infinity,
                                                     fit: BoxFit.cover,
                                                   ),
                                                 ),
                                               ),
                                             if (_model.profileMainPhotoUrl ==
                                                 '')
-                                              Container(
-                                                width: 150.0,
+                                              Positioned.fill(
                                                 child: Container(
-                                                  height: 150.0,
                                                   decoration: BoxDecoration(
                                                     color: FloterTheme.of(
                                                             context)
@@ -988,7 +980,6 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           ],
                                         ),
                                       ),
-                                    ),
                                   ].divide(SizedBox(height: 8.0)),
                                 ),
                               ),
@@ -1365,6 +1356,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                               ),
                             ].divide(SizedBox(width: 16.0)),
                           ),
+                        ),
                           Container(
                             width: double.infinity,
                             child: Builder(
