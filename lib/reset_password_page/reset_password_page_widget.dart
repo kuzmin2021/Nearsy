@@ -98,14 +98,12 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
                                   width: 42.0,
                                   height: 42.0,
                                   decoration: BoxDecoration(
-                                    color: FloterTheme.of(context)
-                                        .primaryBackground,
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    color: Color(0xFFC9B0FF),
+                                    borderRadius: BorderRadius.circular(15.0),
                                   ),
                                   child: Icon(
                                     Icons.arrow_back,
-                                    color: FloterTheme.of(context)
-                                        .primaryText,
+                                    color: Colors.black,
                                     size: 24.0,
                                   ),
                                 ),
@@ -135,8 +133,7 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
                                         .headlineSmall
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .headlineSmall
@@ -151,9 +148,7 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
                               'reset_password.enter_your_email_and_we_will_send_a_password_reset_link' /* Enter your email and we will s... */,
                             ),
                             maxLines: 2,
-                            style: FloterTheme.of(context)
-                                .bodyMedium
-                                .override(
+                            style: FloterTheme.of(context).bodyMedium.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodyMedium
@@ -162,8 +157,7 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FloterTheme.of(context)
-                                      .secondaryText,
+                                  color: FloterTheme.of(context).secondaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .bodyMedium
@@ -177,74 +171,74 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
                           Container(
                             height: 12.0,
                           ),
-                          TextFormField(
-                            controller: _model.resetEmailFieldTextController,
-                            focusNode: _model.resetEmailFieldFocusNode,
-                            onChanged: (_) => EasyDebounce.debounce(
-                              '_model.resetEmailFieldTextController',
-                              Duration(milliseconds: 2000),
-                              () async {
-                                _model.email =
-                                    _model.resetEmailFieldTextController.text;
-                                safeSetState(() {});
-                              },
+                          SizedBox(
+                            height: 38.0,
+                            child: TextFormField(
+                              controller: _model.resetEmailFieldTextController,
+                              focusNode: _model.resetEmailFieldFocusNode,
+                              onChanged: (_) => EasyDebounce.debounce(
+                                '_model.resetEmailFieldTextController',
+                                Duration(milliseconds: 2000),
+                                () async {
+                                  _model.email =
+                                      _model.resetEmailFieldTextController.text;
+                                  safeSetState(() {});
+                                },
+                              ),
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                hintText: AppLabels.of(context).get(
+                                  'reset_password.email_address' /* Email address */,
+                                ),
+                                hintStyle: GoogleFonts.inter(
+                                  color: Colors.black,
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                filled: true,
+                                fillColor: Colors.white,
+                              ),
+                              style: GoogleFonts.inter(
+                                color: Colors.black,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w400,
+                              ),
+                              maxLines: 1,
+                              keyboardType: TextInputType.emailAddress,
+                              validator: _model
+                                  .resetEmailFieldTextControllerValidator
+                                  .asValidator(context),
                             ),
-                            obscureText: false,
-                            decoration: InputDecoration(
-                              labelText: AppLabels.of(context).get(
-                                'reset_password.email_address' /* Email address */,
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              filled: true,
-                              prefixIcon: Icon(
-                                Icons.mail,
-                              ),
-                            ),
-                            style: TextStyle(),
-                            maxLines: null,
-                            keyboardType: TextInputType.emailAddress,
-                            validator: _model
-                                .resetEmailFieldTextControllerValidator
-                                .asValidator(context),
                           ),
                           FTButtonWidget(
                             onPressed: () async {
@@ -288,18 +282,23 @@ class _ResetPasswordPageWidgetState extends State<ResetPasswordPageWidget> {
                             text: AppLabels.of(context).get(
                               'reset_password.send_reset_link' /* Send reset link */,
                             ),
+                            iconData: Icons.arrow_forward,
                             options: FTButtonOptions(
                               width: double.infinity,
                               height: 48.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FloterTheme.of(context).primary,
-                              textStyle: TextStyle(
-                                color: FloterTheme.of(context)
-                                    .primaryBackground,
+                                  4.0, 0.0, 0.0, 0.0),
+                              color: Color(0xFFC9B0FF),
+                              textStyle: GoogleFonts.inter(
+                                color: Colors.black,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w500,
                               ),
+                              iconSize: 20.0,
+                              iconColor: Colors.black,
+                              iconAlignment: IconAlignment.end,
                               borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),

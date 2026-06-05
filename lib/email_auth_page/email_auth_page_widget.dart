@@ -33,11 +33,13 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
     super.initState();
     _model = createModel(context, () => EmailAuthPageModel());
 
-    _model.emailFieldTextController ??= TextEditingController(text: 'alx@test.ru');
+    _model.emailFieldTextController ??=
+        TextEditingController(text: 'alx@test.ru');
     _model.emailFieldFocusNode ??= FocusNode();
     _model.email = 'alx@test.ru';
 
-    _model.passwordFieldTextController ??= TextEditingController(text: 'Test1234!');
+    _model.passwordFieldTextController ??=
+        TextEditingController(text: 'Test1234!');
     _model.passwordFieldFocusNode ??= FocusNode();
     _model.password = 'Test1234!';
 
@@ -108,14 +110,12 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                   width: 42.0,
                                   height: 42.0,
                                   decoration: BoxDecoration(
-                                    color: FloterTheme.of(context)
-                                        .primaryBackground,
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    color: Color(0xFFC9B0FF),
+                                    borderRadius: BorderRadius.circular(15.0),
                                   ),
                                   child: Icon(
                                     Icons.arrow_back,
-                                    color: FloterTheme.of(context)
-                                        .primaryText,
+                                    color: Colors.black,
                                     size: 24.0,
                                   ),
                                 ),
@@ -145,8 +145,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                         .headlineSmall
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .headlineSmall
@@ -161,9 +160,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                               'email_auth.use_your_email_and_password_or_create_a_new_account' /* Use your email and password, o... */,
                             ),
                             maxLines: 2,
-                            style: FloterTheme.of(context)
-                                .bodyMedium
-                                .override(
+                            style: FloterTheme.of(context).bodyMedium.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodyMedium
@@ -172,8 +169,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FloterTheme.of(context)
-                                      .secondaryText,
+                                  color: FloterTheme.of(context).secondaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .bodyMedium
@@ -192,320 +188,271 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Expanded(
-                                    flex: 1,
-                                    child: FTButtonWidget(
-                                      onPressed: () async {
-                                        _model.emailMode = 'signIn';
-                                        safeSetState(() {});
-                                      },
-                                      text: AppLabels.of(context).get(
-                                        'email_auth.sign_in' /* Sign in */,
-                                      ),
-                                      options: FTButtonOptions(
-                                        width: double.infinity,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: FloterTheme.of(context)
-                                            .primary,
-                                        textStyle: TextStyle(
-                                          color: FloterTheme.of(context)
-                                              .primaryBackground,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 1,
-                                    child: FTButtonWidget(
-                                      onPressed: () async {
-                                        _model.emailMode = 'register';
-                                        safeSetState(() {});
-                                      },
-                                      text: AppLabels.of(context).get(
-                                        'email_auth.register' /* Register */,
-                                      ),
-                                      options: FTButtonOptions(
-                                        width: double.infinity,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: Colors.transparent,
-                                        textStyle: TextStyle(
-                                          color: FloterTheme.of(context)
-                                              .primary,
-                                        ),
-                                        borderSide: BorderSide(
-                                          color: FloterTheme.of(context)
-                                              .primary,
-                                          width: 1.5,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
-                                      ),
-                                    ),
-                                  ),
-                                ].divide(SizedBox(width: 10.0)),
-                              ),
-                              TextFormField(
-                                controller: _model.emailFieldTextController,
-                                focusNode: _model.emailFieldFocusNode,
-                                onChanged: (_) => EasyDebounce.debounce(
-                                  '_model.emailFieldTextController',
-                                  Duration(milliseconds: 2000),
-                                  () async {
-                                    _model.email =
-                                        _model.emailFieldTextController.text;
-                                    safeSetState(() {});
-                                  },
-                                ),
-                                obscureText: false,
-                                decoration: InputDecoration(
-                                  labelText:
-                                      AppLabels.of(context).get(
-                                    'email_auth.email_address' /* Email address */,
-                                  ),
-                                  enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(4.0),
-                                      topRight: Radius.circular(4.0),
-                                    ),
-                                  ),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(4.0),
-                                      topRight: Radius.circular(4.0),
-                                    ),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(4.0),
-                                      topRight: Radius.circular(4.0),
-                                    ),
-                                  ),
-                                  focusedErrorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(4.0),
-                                      topRight: Radius.circular(4.0),
-                                    ),
-                                  ),
-                                  filled: true,
-                                  prefixIcon: Icon(
-                                    Icons.mail,
-                                  ),
-                                ),
-                                style: TextStyle(),
-                                maxLines: null,
-                                keyboardType: TextInputType.emailAddress,
-                                validator: _model
-                                    .emailFieldTextControllerValidator
-                                    .asValidator(context),
-                              ),
-                              TextFormField(
-                                controller: _model.passwordFieldTextController,
-                                focusNode: _model.passwordFieldFocusNode,
-                                onChanged: (_) => EasyDebounce.debounce(
-                                  '_model.passwordFieldTextController',
-                                  Duration(milliseconds: 2000),
-                                  () async {
-                                    _model.password =
-                                        _model.passwordFieldTextController.text;
-                                    safeSetState(() {});
-                                  },
-                                ),
-                                obscureText: !_model.passwordFieldVisibility,
-                                decoration: InputDecoration(
-                                  labelText:
-                                      AppLabels.of(context).get(
-                                    'email_auth.password' /* Password */,
-                                  ),
-                                  enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(4.0),
-                                      topRight: Radius.circular(4.0),
-                                    ),
-                                  ),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(4.0),
-                                      topRight: Radius.circular(4.0),
-                                    ),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(4.0),
-                                      topRight: Radius.circular(4.0),
-                                    ),
-                                  ),
-                                  focusedErrorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(4.0),
-                                      topRight: Radius.circular(4.0),
-                                    ),
-                                  ),
-                                  filled: true,
-                                  prefixIcon: Icon(
-                                    Icons.lock,
-                                  ),
-                                  suffixIcon: InkWell(
-                                    onTap: () async {
-                                      safeSetState(() =>
-                                          _model.passwordFieldVisibility =
-                                              !_model.passwordFieldVisibility);
-                                    },
-                                    focusNode: FocusNode(skipTraversal: true),
-                                    child: Icon(
-                                      _model.passwordFieldVisibility
-                                          ? Icons.visibility_outlined
-                                          : Icons.visibility_off_outlined,
-                                      size: 22,
-                                    ),
-                                  ),
-                                ),
-                                style: TextStyle(),
-                                validator: _model
-                                    .passwordFieldTextControllerValidator
-                                    .asValidator(context),
-                              ),
-                              if (_model.emailMode == 'register')
-                                TextFormField(
-                                  controller:
-                                      _model.confirmPasswordFieldTextController,
-                                  focusNode:
-                                      _model.confirmPasswordFieldFocusNode,
+                              SizedBox(
+                                height: 38.0,
+                                child: TextFormField(
+                                  controller: _model.emailFieldTextController,
+                                  focusNode: _model.emailFieldFocusNode,
                                   onChanged: (_) => EasyDebounce.debounce(
-                                    '_model.confirmPasswordFieldTextController',
+                                    '_model.emailFieldTextController',
                                     Duration(milliseconds: 2000),
                                     () async {
-                                      _model.confirmPassword = _model
-                                          .confirmPasswordFieldTextController
-                                          .text;
+                                      _model.email =
+                                          _model.emailFieldTextController.text;
                                       safeSetState(() {});
                                     },
                                   ),
-                                  obscureText:
-                                      !_model.confirmPasswordFieldVisibility,
+                                  obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText:
-                                        AppLabels.of(context).get(
-                                      'email_auth.repeat_password' /* Repeat password */,
+                                    hintText: AppLabels.of(context).get(
+                                      'email_auth.email_address' /* Email address */,
+                                    ),
+                                    hintStyle: GoogleFonts.inter(
+                                      color: Colors.black,
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w400,
                                     ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
-                                      borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(4.0),
-                                        topRight: Radius.circular(4.0),
-                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
-                                      borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(4.0),
-                                        topRight: Radius.circular(4.0),
-                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
-                                      borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(4.0),
-                                        topRight: Radius.circular(4.0),
-                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
-                                      borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(4.0),
-                                        topRight: Radius.circular(4.0),
-                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
                                     ),
+                                    contentPadding:
+                                        EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 0.0, 16.0, 0.0),
                                     filled: true,
-                                    prefixIcon: Icon(
-                                      Icons.lock_reset,
+                                    fillColor: Colors.white,
+                                  ),
+                                  style: GoogleFonts.inter(
+                                    color: Colors.black,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                  maxLines: 1,
+                                  keyboardType: TextInputType.emailAddress,
+                                  validator: _model
+                                      .emailFieldTextControllerValidator
+                                      .asValidator(context),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 38.0,
+                                child: TextFormField(
+                                  controller:
+                                      _model.passwordFieldTextController,
+                                  focusNode: _model.passwordFieldFocusNode,
+                                  onChanged: (_) => EasyDebounce.debounce(
+                                    '_model.passwordFieldTextController',
+                                    Duration(milliseconds: 2000),
+                                    () async {
+                                      _model.password = _model
+                                          .passwordFieldTextController.text;
+                                      safeSetState(() {});
+                                    },
+                                  ),
+                                  obscureText: !_model.passwordFieldVisibility,
+                                  decoration: InputDecoration(
+                                    hintText: AppLabels.of(context).get(
+                                      'email_auth.password' /* Password */,
+                                    ),
+                                    hintStyle: GoogleFonts.inter(
+                                      color: Colors.black,
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                    enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                    errorBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                    focusedErrorBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                    contentPadding:
+                                        EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 0.0, 16.0, 0.0),
+                                    filled: true,
+                                    fillColor: Colors.white,
+                                    suffixIconConstraints: BoxConstraints(
+                                      minWidth: 42.0,
+                                      minHeight: 38.0,
                                     ),
                                     suffixIcon: InkWell(
                                       onTap: () async {
                                         safeSetState(() => _model
-                                                .confirmPasswordFieldVisibility =
-                                            !_model
-                                                .confirmPasswordFieldVisibility);
+                                                .passwordFieldVisibility =
+                                            !_model.passwordFieldVisibility);
                                       },
                                       focusNode: FocusNode(skipTraversal: true),
                                       child: Icon(
-                                        _model.confirmPasswordFieldVisibility
+                                        _model.passwordFieldVisibility
                                             ? Icons.visibility_outlined
                                             : Icons.visibility_off_outlined,
-                                        size: 22,
+                                        color: Colors.black,
+                                        size: 20,
                                       ),
                                     ),
                                   ),
-                                  style: TextStyle(),
+                                  style: GoogleFonts.inter(
+                                    color: Colors.black,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                  maxLines: 1,
                                   validator: _model
-                                      .confirmPasswordFieldTextControllerValidator
+                                      .passwordFieldTextControllerValidator
                                       .asValidator(context),
+                                ),
+                              ),
+                              if (_model.emailMode == 'register')
+                                SizedBox(
+                                  height: 38.0,
+                                  child: TextFormField(
+                                    controller: _model
+                                        .confirmPasswordFieldTextController,
+                                    focusNode:
+                                        _model.confirmPasswordFieldFocusNode,
+                                    onChanged: (_) => EasyDebounce.debounce(
+                                      '_model.confirmPasswordFieldTextController',
+                                      Duration(milliseconds: 2000),
+                                      () async {
+                                        _model.confirmPassword = _model
+                                            .confirmPasswordFieldTextController
+                                            .text;
+                                        safeSetState(() {});
+                                      },
+                                    ),
+                                    obscureText:
+                                        !_model.confirmPasswordFieldVisibility,
+                                    decoration: InputDecoration(
+                                      hintText: AppLabels.of(context).get(
+                                        'email_auth.repeat_password' /* Repeat password */,
+                                      ),
+                                      hintStyle: GoogleFonts.inter(
+                                        color: Colors.black,
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Color(0x00000000),
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(15.0),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Color(0x00000000),
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(15.0),
+                                      ),
+                                      errorBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Color(0x00000000),
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(15.0),
+                                      ),
+                                      focusedErrorBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: Color(0x00000000),
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(15.0),
+                                      ),
+                                      contentPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              16.0, 0.0, 16.0, 0.0),
+                                      filled: true,
+                                      fillColor: Colors.white,
+                                      suffixIconConstraints: BoxConstraints(
+                                        minWidth: 42.0,
+                                        minHeight: 38.0,
+                                      ),
+                                      suffixIcon: InkWell(
+                                        onTap: () async {
+                                          safeSetState(() => _model
+                                                  .confirmPasswordFieldVisibility =
+                                              !_model
+                                                  .confirmPasswordFieldVisibility);
+                                        },
+                                        focusNode:
+                                            FocusNode(skipTraversal: true),
+                                        child: Icon(
+                                          _model.confirmPasswordFieldVisibility
+                                              ? Icons.visibility_outlined
+                                              : Icons.visibility_off_outlined,
+                                          color: Colors.black,
+                                          size: 20,
+                                        ),
+                                      ),
+                                    ),
+                                    style: GoogleFonts.inter(
+                                      color: Colors.black,
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                    maxLines: 1,
+                                    validator: _model
+                                        .confirmPasswordFieldTextControllerValidator
+                                        .asValidator(context),
+                                  ),
                                 ),
                               if (_model.emailMode == 'signIn')
                                 FTButtonWidget(
                                   onPressed: () async {
                                     Function() _navigate = () {};
-                                    final email =
-                                        _model.emailFieldTextController.text
-                                            .trim();
+                                    final email = _model
+                                        .emailFieldTextController.text
+                                        .trim();
                                     final password =
                                         _model.passwordFieldTextController.text;
                                     _model.email = email;
@@ -561,18 +508,23 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                   text: AppLabels.of(context).get(
                                     'email_auth.continue_button' /* Continue */,
                                   ),
+                                  iconData: Icons.arrow_forward,
                                   options: FTButtonOptions(
                                     width: double.infinity,
                                     height: 48.0,
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xFFC2A7FF),
-                                    textStyle: TextStyle(
-                                      color: FloterTheme.of(context)
-                                          .primaryText,
+                                        4.0, 0.0, 0.0, 0.0),
+                                    color: Color(0xFFC9B0FF),
+                                    textStyle: GoogleFonts.inter(
+                                      color: Colors.black,
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w500,
                                     ),
+                                    iconSize: 20.0,
+                                    iconColor: Colors.black,
+                                    iconAlignment: IconAlignment.end,
                                     borderRadius: BorderRadius.circular(15.0),
                                   ),
                                 ),
@@ -580,14 +532,14 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                 FTButtonWidget(
                                   onPressed: () async {
                                     Function() _navigate = () {};
-                                    final email =
-                                        _model.emailFieldTextController.text
-                                            .trim();
+                                    final email = _model
+                                        .emailFieldTextController.text
+                                        .trim();
                                     final password =
                                         _model.passwordFieldTextController.text;
-                                    final confirmPassword =
-                                        _model.confirmPasswordFieldTextController
-                                            .text;
+                                    final confirmPassword = _model
+                                        .confirmPasswordFieldTextController
+                                        .text;
                                     _model.email = email;
                                     _model.password = password;
                                     _model.confirmPassword = confirmPassword;
@@ -630,15 +582,13 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                             ),
                                           );
                                         } else {
-                                          if (password ==
-                                              confirmPassword) {
+                                          if (password == confirmPassword) {
                                             FTAppState().profileIsOnboarded =
                                                 false;
                                             safeSetState(() {});
                                             GoRouter.of(context)
                                                 .prepareAuthEvent();
-                                            if (password !=
-                                                confirmPassword) {
+                                            if (password != confirmPassword) {
                                               ScaffoldMessenger.of(context)
                                                   .showSnackBar(
                                                 SnackBar(
@@ -696,37 +646,143 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                   text: AppLabels.of(context).get(
                                     'email_auth.create_account' /* Create account */,
                                   ),
+                                  iconData: Icons.arrow_forward,
                                   options: FTButtonOptions(
                                     width: double.infinity,
                                     height: 48.0,
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xFFC2A7FF),
-                                    textStyle: TextStyle(
-                                      color: FloterTheme.of(context)
-                                          .primaryText,
+                                        4.0, 0.0, 0.0, 0.0),
+                                    color: Color(0xFFC9B0FF),
+                                    textStyle: GoogleFonts.inter(
+                                      color: Colors.black,
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w500,
                                     ),
+                                    iconSize: 20.0,
+                                    iconColor: Colors.black,
+                                    iconAlignment: IconAlignment.end,
                                     borderRadius: BorderRadius.circular(15.0),
                                   ),
                                 ),
                               if (_model.emailMode == 'signIn')
+                                Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed(
+                                            ResetPasswordPageWidget.routeName);
+                                      },
+                                      child: Container(
+                                        height: 48.0,
+                                        alignment:
+                                            AlignmentDirectional.centerStart,
+                                        child: Text(
+                                          AppLabels.of(context).get(
+                                            'email_auth.forgot_password' /* Forgot password? */,
+                                          ),
+                                          textAlign: TextAlign.start,
+                                          style: FloterTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.inter(
+                                                  fontWeight:
+                                                      FloterTheme.of(context)
+                                                          .bodyMedium
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FloterTheme.of(context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                                color: FloterTheme.of(context)
+                                                    .primary,
+                                                letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FloterTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FloterTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                        ),
+                                      ),
+                                    ),
+                                    InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        _model.emailMode = 'register';
+                                        safeSetState(() {});
+                                      },
+                                      child: Container(
+                                        height: 48.0,
+                                        alignment:
+                                            AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          AppLabels.of(context).get(
+                                            'email_auth.register' /* Register */,
+                                          ),
+                                          textAlign: TextAlign.end,
+                                          style: FloterTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.inter(
+                                                  fontWeight:
+                                                      FloterTheme.of(context)
+                                                          .bodyMedium
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FloterTheme.of(context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                                color: FloterTheme.of(context)
+                                                    .primary,
+                                                letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FloterTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FloterTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              if (_model.emailMode == 'register')
                                 InkWell(
                                   splashColor: Colors.transparent,
                                   focusColor: Colors.transparent,
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed(
-                                        ResetPasswordPageWidget.routeName);
+                                    _model.emailMode = 'signIn';
+                                    safeSetState(() {});
                                   },
                                   child: Container(
                                     height: 48.0,
                                     alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       AppLabels.of(context).get(
-                                        'email_auth.forgot_password' /* Forgot password? */,
+                                        'email_auth.sign_in' /* Sign in */,
                                       ),
                                       textAlign: TextAlign.center,
                                       style: FloterTheme.of(context)
@@ -737,22 +793,19 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                                   FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                             ),
-                                            color: FloterTheme.of(context)
-                                                .primary,
+                                            color:
+                                                FloterTheme.of(context).primary,
                                             letterSpacing: 0.0,
-                                            fontWeight:
-                                                FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
+                                            fontWeight: FloterTheme.of(context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                            fontStyle: FloterTheme.of(context)
+                                                .bodyMedium
+                                                .fontStyle,
                                           ),
                                     ),
                                   ),

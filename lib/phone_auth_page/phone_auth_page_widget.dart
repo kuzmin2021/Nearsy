@@ -91,14 +91,12 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                                   width: 42.0,
                                   height: 42.0,
                                   decoration: BoxDecoration(
-                                    color: FloterTheme.of(context)
-                                        .primaryBackground,
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    color: Color(0xFFC9B0FF),
+                                    borderRadius: BorderRadius.circular(15.0),
                                   ),
                                   child: Icon(
                                     Icons.arrow_back,
-                                    color: FloterTheme.of(context)
-                                        .primaryText,
+                                    color: Colors.black,
                                     size: 24.0,
                                   ),
                                 ),
@@ -128,8 +126,7 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                                         .headlineSmall
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .headlineSmall
@@ -144,9 +141,7 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                               'phone_auth.label_1' /* This screen is kept in the app... */,
                             ),
                             maxLines: 2,
-                            style: FloterTheme.of(context)
-                                .bodyMedium
-                                .override(
+                            style: FloterTheme.of(context).bodyMedium.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodyMedium
@@ -155,8 +150,7 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FloterTheme.of(context)
-                                      .secondaryText,
+                                  color: FloterTheme.of(context).secondaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .bodyMedium
@@ -169,8 +163,7 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                              color: FloterTheme.of(context)
-                                  .primaryBackground,
+                              color: FloterTheme.of(context).primaryBackground,
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: Padding(
@@ -190,8 +183,8 @@ class _PhoneAuthPageWidgetState extends State<PhoneAuthPageWidget> {
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                      color: FloterTheme.of(context)
-                                          .primaryText,
+                                      color:
+                                          FloterTheme.of(context).primaryText,
                                       letterSpacing: 0.0,
                                       fontWeight: FloterTheme.of(context)
                                           .bodyMedium

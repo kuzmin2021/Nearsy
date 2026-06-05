@@ -101,14 +101,12 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                                   width: 42.0,
                                   height: 42.0,
                                   decoration: BoxDecoration(
-                                    color: FloterTheme.of(context)
-                                        .primaryBackground,
-                                    borderRadius: BorderRadius.circular(12.0),
+                                    color: Color(0xFFC9B0FF),
+                                    borderRadius: BorderRadius.circular(15.0),
                                   ),
                                   child: Icon(
                                     Icons.arrow_back,
-                                    color: FloterTheme.of(context)
-                                        .primaryText,
+                                    color: Colors.black,
                                     size: 24.0,
                                   ),
                                 ),
@@ -138,8 +136,7 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                                         .headlineSmall
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .headlineSmall
@@ -154,9 +151,7 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                               'update_password.choose_a_new_password_for_your_nearsy_account' /* Choose a new password for your... */,
                             ),
                             maxLines: 2,
-                            style: FloterTheme.of(context)
-                                .bodyMedium
-                                .override(
+                            style: FloterTheme.of(context).bodyMedium.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodyMedium
@@ -165,8 +160,7 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FloterTheme.of(context)
-                                      .secondaryText,
+                                  color: FloterTheme.of(context).secondaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .bodyMedium
@@ -180,173 +174,186 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                           Container(
                             height: 12.0,
                           ),
-                          TextFormField(
-                            controller:
-                                _model.updatePasswordFieldTextController,
-                            focusNode: _model.updatePasswordFieldFocusNode,
-                            onChanged: (_) => EasyDebounce.debounce(
-                              '_model.updatePasswordFieldTextController',
-                              Duration(milliseconds: 2000),
-                              () async {
-                                _model.password = _model
-                                    .updatePasswordFieldTextController.text;
-                                safeSetState(() {});
-                              },
-                            ),
-                            obscureText: !_model.updatePasswordFieldVisibility,
-                            decoration: InputDecoration(
-                              labelText: AppLabels.of(context).get(
-                                'update_password.new_password' /* New password */,
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              filled: true,
-                              prefixIcon: Icon(
-                                Icons.lock,
-                              ),
-                              suffixIcon: InkWell(
-                                onTap: () async {
-                                  safeSetState(() => _model
-                                          .updatePasswordFieldVisibility =
-                                      !_model.updatePasswordFieldVisibility);
+                          SizedBox(
+                            height: 38.0,
+                            child: TextFormField(
+                              controller:
+                                  _model.updatePasswordFieldTextController,
+                              focusNode: _model.updatePasswordFieldFocusNode,
+                              onChanged: (_) => EasyDebounce.debounce(
+                                '_model.updatePasswordFieldTextController',
+                                Duration(milliseconds: 2000),
+                                () async {
+                                  _model.password = _model
+                                      .updatePasswordFieldTextController.text;
+                                  safeSetState(() {});
                                 },
-                                focusNode: FocusNode(skipTraversal: true),
-                                child: Icon(
-                                  _model.updatePasswordFieldVisibility
-                                      ? Icons.visibility_outlined
-                                      : Icons.visibility_off_outlined,
-                                  size: 22,
+                              ),
+                              obscureText:
+                                  !_model.updatePasswordFieldVisibility,
+                              decoration: InputDecoration(
+                                hintText: AppLabels.of(context).get(
+                                  'update_password.new_password' /* New password */,
+                                ),
+                                hintStyle: GoogleFonts.inter(
+                                  color: Colors.black,
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                filled: true,
+                                fillColor: Colors.white,
+                                suffixIconConstraints: BoxConstraints(
+                                  minWidth: 42.0,
+                                  minHeight: 38.0,
+                                ),
+                                suffixIcon: InkWell(
+                                  onTap: () async {
+                                    safeSetState(() => _model
+                                            .updatePasswordFieldVisibility =
+                                        !_model.updatePasswordFieldVisibility);
+                                  },
+                                  focusNode: FocusNode(skipTraversal: true),
+                                  child: Icon(
+                                    _model.updatePasswordFieldVisibility
+                                        ? Icons.visibility_outlined
+                                        : Icons.visibility_off_outlined,
+                                    color: Colors.black,
+                                    size: 20,
+                                  ),
                                 ),
                               ),
+                              style: GoogleFonts.inter(
+                                color: Colors.black,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w400,
+                              ),
+                              maxLines: 1,
+                              validator: _model
+                                  .updatePasswordFieldTextControllerValidator
+                                  .asValidator(context),
                             ),
-                            style: TextStyle(),
-                            validator: _model
-                                .updatePasswordFieldTextControllerValidator
-                                .asValidator(context),
                           ),
-                          TextFormField(
-                            controller:
-                                _model.confirmUpdatePasswordFieldTextController,
-                            focusNode:
-                                _model.confirmUpdatePasswordFieldFocusNode,
-                            onChanged: (_) => EasyDebounce.debounce(
-                              '_model.confirmUpdatePasswordFieldTextController',
-                              Duration(milliseconds: 2000),
-                              () async {
-                                _model.confirmPassword = _model
-                                    .confirmUpdatePasswordFieldTextController
-                                    .text;
-                                safeSetState(() {});
-                              },
-                            ),
-                            obscureText:
-                                !_model.confirmUpdatePasswordFieldVisibility,
-                            decoration: InputDecoration(
-                              labelText: AppLabels.of(context).get(
-                                'update_password.repeat_password' /* Repeat password */,
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0x00000000),
-                                  width: 1.0,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
-                                ),
-                              ),
-                              filled: true,
-                              prefixIcon: Icon(
-                                Icons.lock_reset,
-                              ),
-                              suffixIcon: InkWell(
-                                onTap: () async {
-                                  safeSetState(() => _model
-                                          .confirmUpdatePasswordFieldVisibility =
-                                      !_model
-                                          .confirmUpdatePasswordFieldVisibility);
+                          SizedBox(
+                            height: 38.0,
+                            child: TextFormField(
+                              controller: _model
+                                  .confirmUpdatePasswordFieldTextController,
+                              focusNode:
+                                  _model.confirmUpdatePasswordFieldFocusNode,
+                              onChanged: (_) => EasyDebounce.debounce(
+                                '_model.confirmUpdatePasswordFieldTextController',
+                                Duration(milliseconds: 2000),
+                                () async {
+                                  _model.confirmPassword = _model
+                                      .confirmUpdatePasswordFieldTextController
+                                      .text;
+                                  safeSetState(() {});
                                 },
-                                focusNode: FocusNode(skipTraversal: true),
-                                child: Icon(
-                                  _model.confirmUpdatePasswordFieldVisibility
-                                      ? Icons.visibility_outlined
-                                      : Icons.visibility_off_outlined,
-                                  size: 22,
+                              ),
+                              obscureText:
+                                  !_model.confirmUpdatePasswordFieldVisibility,
+                              decoration: InputDecoration(
+                                hintText: AppLabels.of(context).get(
+                                  'update_password.repeat_password' /* Repeat password */,
+                                ),
+                                hintStyle: GoogleFonts.inter(
+                                  color: Colors.black,
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0x00000000),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                filled: true,
+                                fillColor: Colors.white,
+                                suffixIconConstraints: BoxConstraints(
+                                  minWidth: 42.0,
+                                  minHeight: 38.0,
+                                ),
+                                suffixIcon: InkWell(
+                                  onTap: () async {
+                                    safeSetState(() => _model
+                                            .confirmUpdatePasswordFieldVisibility =
+                                        !_model
+                                            .confirmUpdatePasswordFieldVisibility);
+                                  },
+                                  focusNode: FocusNode(skipTraversal: true),
+                                  child: Icon(
+                                    _model.confirmUpdatePasswordFieldVisibility
+                                        ? Icons.visibility_outlined
+                                        : Icons.visibility_off_outlined,
+                                    color: Colors.black,
+                                    size: 20,
+                                  ),
                                 ),
                               ),
+                              style: GoogleFonts.inter(
+                                color: Colors.black,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w400,
+                              ),
+                              maxLines: 1,
+                              validator: _model
+                                  .confirmUpdatePasswordFieldTextControllerValidator
+                                  .asValidator(context),
                             ),
-                            style: TextStyle(),
-                            validator: _model
-                                .confirmUpdatePasswordFieldTextControllerValidator
-                                .asValidator(context),
                           ),
                           FTButtonWidget(
                             onPressed: () async {
@@ -409,18 +416,23 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
                             text: AppLabels.of(context).get(
                               'update_password.submit_button' /* Update password */,
                             ),
+                            iconData: Icons.arrow_forward,
                             options: FTButtonOptions(
                               width: double.infinity,
                               height: 48.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FloterTheme.of(context).primary,
-                              textStyle: TextStyle(
-                                color: FloterTheme.of(context)
-                                    .primaryBackground,
+                                  4.0, 0.0, 0.0, 0.0),
+                              color: Color(0xFFC9B0FF),
+                              textStyle: GoogleFonts.inter(
+                                color: Colors.black,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w500,
                               ),
+                              iconSize: 20.0,
+                              iconColor: Colors.black,
+                              iconAlignment: IconAlignment.end,
                               borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),

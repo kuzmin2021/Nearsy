@@ -101,8 +101,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                             .headlineMedium
                                             .fontStyle,
                                       ),
-                                      color:
-                                          FloterTheme.of(context).primary,
+                                      color: FloterTheme.of(context).primary,
                                       letterSpacing: 0.0,
                                       fontWeight: FloterTheme.of(context)
                                           .headlineMedium
@@ -119,9 +118,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                               'auth.meet_near_keep_it_easy' /* Meet near. Keep it easy */,
                             ),
                             textAlign: TextAlign.center,
-                            style: FloterTheme.of(context)
-                                .titleLarge
-                                .override(
+                            style: FloterTheme.of(context).titleLarge.override(
                                   font: GoogleFonts.interTight(
                                     fontWeight: FloterTheme.of(context)
                                         .titleLarge
@@ -130,8 +127,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                         .titleLarge
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .titleLarge
@@ -148,6 +144,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                             onPressed: () async {
                               context.pushNamed(EmailAuthPageWidget.routeName);
                             },
+                            iconData: Icons.arrow_forward,
                             text: AppLabels.of(context).get(
                               'auth.continue_with_email' /* Continue with email */,
                             ),
@@ -157,15 +154,16 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: Colors.transparent,
-                              textStyle: TextStyle(
-                                color: FloterTheme.of(context).primary,
+                                  4.0, 0.0, 0.0, 0.0),
+                              color: Color(0xFFC9B0FF),
+                              textStyle: GoogleFonts.inter(
+                                color: Colors.black,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w500,
                               ),
-                              borderSide: BorderSide(
-                                color: FloterTheme.of(context).primary,
-                                width: 1.5,
-                              ),
+                              iconSize: 20.0,
+                              iconColor: Colors.black,
+                              iconAlignment: IconAlignment.end,
                               borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),
@@ -173,6 +171,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                             onPressed: () async {
                               context.pushNamed(PhoneAuthPageWidget.routeName);
                             },
+                            iconData: Icons.arrow_forward,
                             text: AppLabels.of(context).get(
                               'auth.continue_with_phone' /* Continue with phone */,
                             ),
@@ -182,15 +181,16 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: Colors.transparent,
-                              textStyle: TextStyle(
-                                color: FloterTheme.of(context).primary,
+                                  4.0, 0.0, 0.0, 0.0),
+                              color: Color(0xFFC9B0FF),
+                              textStyle: GoogleFonts.inter(
+                                color: Colors.black,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w500,
                               ),
-                              borderSide: BorderSide(
-                                color: FloterTheme.of(context).primary,
-                                width: 1.5,
-                              ),
+                              iconSize: 20.0,
+                              iconColor: Colors.black,
+                              iconAlignment: IconAlignment.end,
                               borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),
@@ -203,9 +203,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                             ),
                             textAlign: TextAlign.center,
                             maxLines: 1,
-                            style: FloterTheme.of(context)
-                                .bodySmall
-                                .override(
+                            style: FloterTheme.of(context).bodySmall.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodySmall
@@ -214,8 +212,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                         .bodySmall
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .bodySmall
@@ -232,9 +229,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                             ),
                             textAlign: TextAlign.center,
                             maxLines: 1,
-                            style: FloterTheme.of(context)
-                                .bodySmall
-                                .override(
+                            style: FloterTheme.of(context).bodySmall.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodySmall
