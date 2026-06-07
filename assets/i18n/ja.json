@@ -164,7 +164,10 @@
     "title": "アカウントを削除",
     "are_you_sure": "よろしいですか？",
     "absolutely": "絶対に",
-    "not_quite": "完全ではありません"
+    "not_quite": "完全ではありません",
+    "label_1": "アカウントデータを削除し、プロフィールを非表示にしてサインアウトします。",
+    "delete_success": "アカウントを削除しました。",
+    "delete_error": "アカウントを削除できませんでした。"
   },
   "profile_about_me": {
     "about_me": "自己紹介:",

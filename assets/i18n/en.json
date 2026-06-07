@@ -164,7 +164,10 @@
     "title": "Delete account",
     "are_you_sure": "Are you sure?",
     "absolutely": "Absolutely",
-    "not_quite": "Not quite"
+    "not_quite": "Not quite",
+    "label_1": "This will delete your account data, hide your profile, and sign you out.",
+    "delete_success": "Account deleted.",
+    "delete_error": "Could not delete account."
   },
   "profile_about_me": {
     "about_me": "About me:",

@@ -164,7 +164,10 @@
     "title": "Konto löschen",
     "are_you_sure": "Bist du sicher?",
     "absolutely": "Absolut",
-    "not_quite": "Nicht ganz"
+    "not_quite": "Nicht ganz",
+    "label_1": "Dadurch werden deine Kontodaten geloescht, dein Profil verborgen und du wirst abgemeldet.",
+    "delete_success": "Konto geloescht.",
+    "delete_error": "Konto konnte nicht geloescht werden."
   },
   "profile_about_me": {
     "about_me": "Über mich:",

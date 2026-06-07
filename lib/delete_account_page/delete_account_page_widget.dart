@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '/auth/supabase_auth/auth_util.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
-import '/floter/floter_widgets.dart';
+import '/index.dart';
 import 'delete_account_page_model.dart';
 
 export 'delete_account_page_model.dart';
@@ -25,6 +27,7 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
   late DeleteAccountPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  bool _isDeleting = false;
 
   @override
   void initState() {
@@ -39,6 +42,129 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
     super.dispose();
   }
 
+  TextStyle _titleStyle(BuildContext context) =>
+      FloterTheme.of(context).titleLarge.override(
+            font: GoogleFonts.inter(
+              fontWeight: FontWeight.w700,
+              fontStyle: FloterTheme.of(context).titleLarge.fontStyle,
+            ),
+            color: FloterTheme.of(context).primaryText,
+            fontSize: 24.0,
+            letterSpacing: 0.0,
+            fontWeight: FontWeight.w700,
+            fontStyle: FloterTheme.of(context).titleLarge.fontStyle,
+            lineHeight: 1.2,
+          );
+
+  TextStyle _bodyStyle(BuildContext context) =>
+      FloterTheme.of(context).bodyMedium.override(
+            font: GoogleFonts.inter(
+              fontWeight: FontWeight.w400,
+              fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+            ),
+            color: FloterTheme.of(context).primaryText,
+            fontSize: 14.0,
+            letterSpacing: 0.0,
+            fontWeight: FontWeight.w400,
+            fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+            lineHeight: 1.2,
+          );
+
+  TextStyle _buttonStyle(BuildContext context, {Color? color}) =>
+      FloterTheme.of(context).bodyMedium.override(
+            font: GoogleFonts.inter(
+              fontWeight: FontWeight.w500,
+              fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+            ),
+            color: color ?? FloterTheme.of(context).primaryText,
+            fontSize: 16.0,
+            letterSpacing: 0.0,
+            fontWeight: FontWeight.w500,
+            fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+          );
+
+  Future<void> _deleteAccount() async {
+    if (_isDeleting) {
+      return;
+    }
+    if (currentUserUid.isEmpty) {
+      _showSnackBar('delete_account.delete_error');
+      return;
+    }
+
+    safeSetState(() {
+      _isDeleting = true;
+    });
+    try {
+      await SupaFlow.client.rpc('delete_account_data_v2');
+      if (!mounted) {
+        return;
+      }
+      _showSnackBar('delete_account.delete_success');
+      FTAppState().profileIsOnboarded = false;
+      safeSetState(() {});
+      GoRouter.of(context).prepareAuthEvent();
+      await authManager.signOut();
+      if (!mounted) {
+        return;
+      }
+      GoRouter.of(context).clearRedirectLocation();
+      context.goNamedAuth(AuthPageWidget.routeName, context.mounted);
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+      _showSnackBar('delete_account.delete_error');
+    } finally {
+      if (mounted) {
+        safeSetState(() {
+          _isDeleting = false;
+        });
+      }
+    }
+  }
+
+  void _showSnackBar(String labelKey) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(AppLabels.of(context).get(labelKey)),
+        duration: const Duration(milliseconds: 3000),
+      ),
+    );
+  }
+
+  Widget _actionButton(
+    BuildContext context, {
+    required String label,
+    required Color color,
+    required Color textColor,
+    required VoidCallback? onTap,
+  }) =>
+      InkWell(
+        splashColor: Colors.transparent,
+        focusColor: Colors.transparent,
+        hoverColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        onTap: onTap,
+        child: Opacity(
+          opacity: onTap == null ? 0.6 : 1.0,
+          child: Container(
+            height: 48.0,
+            decoration: BoxDecoration(
+              color: color,
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            alignment: Alignment.center,
+            child: Text(
+              label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: _buttonStyle(context, color: textColor),
+            ),
+          ),
+        ),
+      );
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -52,12 +178,17 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(24.0, 44.0, 24.0, 28.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(
+              43.0,
+              29.0,
+              42.0,
+              28.0,
+            ),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -66,13 +197,12 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                     children: [
                       FloterIconButton(
                         borderRadius: 8.0,
-                        buttonSize: 40.0,
-                        fillColor:
-                            FloterTheme.of(context).primaryBackground,
+                        buttonSize: 48.0,
+                        fillColor: FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
                           color: FloterTheme.of(context).primaryText,
-                          size: 24.0,
+                          size: 32.0,
                         ),
                         onPressed: () async {
                           context.pop();
@@ -84,158 +214,71 @@ class _DeleteAccountPageWidgetState extends State<DeleteAccountPageWidget> {
                           AppLabels.of(context).get(
                             'delete_account.title' /* Delete account */,
                           ),
-                          maxLines: 2,
-                          style:
-                              FloterTheme.of(context).titleLarge.override(
-                                    font: GoogleFonts.interTight(
-                                      fontWeight: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontStyle,
-                                  ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: _titleStyle(context),
                         ),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
+                  const SizedBox(height: 28.0),
                   Text(
                     AppLabels.of(context).get(
                       'delete_account.label_1' /* This will permanently delete y... */,
                     ),
-                    style: FloterTheme.of(context).bodyMedium.override(
-                          font: GoogleFonts.inter(
-                            fontWeight: FloterTheme.of(context)
-                                .bodyMedium
-                                .fontWeight,
-                            fontStyle: FloterTheme.of(context)
-                                .bodyMedium
-                                .fontStyle,
+                    style: _bodyStyle(context),
+                  ),
+                  const SizedBox(height: 31.0),
+                  Center(
+                    child: Text(
+                      AppLabels.of(context).get(
+                        'delete_account.are_you_sure' /* Are you sure? */,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: _bodyStyle(context).override(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16.0,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 18.0),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Expanded(
+                        child: _actionButton(
+                          context,
+                          label: AppLabels.of(context).get(
+                            'delete_account.absolutely' /* Absolutely */,
                           ),
-                          letterSpacing: 0.0,
-                          fontWeight: FloterTheme.of(context)
-                              .bodyMedium
-                              .fontWeight,
-                          fontStyle:
-                              FloterTheme.of(context).bodyMedium.fontStyle,
+                          color: const Color(0xFFD9C6FF),
+                          textColor: FloterTheme.of(context).primaryText,
+                          onTap: _isDeleting
+                              ? null
+                              : () async {
+                                  await _deleteAccount();
+                                },
                         ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8.0),
-                      border: Border.all(
-                        color: FloterTheme.of(context).alternate,
-                        width: 1.0,
                       ),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            AppLabels.of(context).get(
-                              'delete_account.are_you_sure' /* Are you sure? */,
-                            ),
-                            style: FloterTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  font: GoogleFonts.interTight(
-                                    fontWeight: FloterTheme.of(context)
-                                        .titleSmall
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .titleSmall
-                                        .fontStyle,
-                                  ),
-                                  letterSpacing: 0.0,
-                                  fontWeight: FloterTheme.of(context)
-                                      .titleSmall
-                                      .fontWeight,
-                                  fontStyle: FloterTheme.of(context)
-                                      .titleSmall
-                                      .fontStyle,
-                                ),
+                      Expanded(
+                        child: _actionButton(
+                          context,
+                          label: AppLabels.of(context).get(
+                            'delete_account.not_quite' /* Not quite */,
                           ),
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Expanded(
-                                flex: 1,
-                                child: FTButtonWidget(
-                                  onPressed: () async {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        content: Text(
-                                          'Delete account action is ready for backend wiring',
-                                          style: TextStyle(),
-                                        ),
-                                        duration: Duration(milliseconds: 4000),
-                                      ),
-                                    );
-                                    context.pop();
-                                  },
-                                  text: AppLabels.of(context).get(
-                                    'delete_account.absolutely' /* Absolutely */,
-                                  ),
-                                  options: FTButtonOptions(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color:
-                                        FloterTheme.of(context).tertiary,
-                                    textStyle: TextStyle(
-                                      color: FloterTheme.of(context)
-                                          .primaryBackground,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                ),
-                              ),
-                              Expanded(
-                                flex: 1,
-                                child: FTButtonWidget(
-                                  onPressed: () async {
-                                    context.pop();
-                                  },
-                                  text: AppLabels.of(context).get(
-                                    'delete_account.not_quite' /* Not quite */,
-                                  ),
-                                  options: FTButtonOptions(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color:
-                                        FloterTheme.of(context).alternate,
-                                    textStyle: TextStyle(
-                                      color: FloterTheme.of(context)
-                                          .primaryText,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                ),
-                              ),
-                            ].divide(SizedBox(width: 10.0)),
-                          ),
-                        ].divide(SizedBox(height: 12.0)),
+                          color: FloterTheme.of(context).secondaryBackground,
+                          textColor: FloterTheme.of(context).primaryText,
+                          onTap: _isDeleting
+                              ? null
+                              : () {
+                                  context.pop();
+                                },
+                        ),
                       ),
-                    ),
+                    ].divide(const SizedBox(width: 10.0)),
                   ),
-                ].divide(SizedBox(height: 16.0)),
+                ],
               ),
             ),
           ),

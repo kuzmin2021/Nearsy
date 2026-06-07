@@ -164,7 +164,10 @@
     "title": "Hapus akun",
     "are_you_sure": "Apakah kamu yakin?",
     "absolutely": "Tentu saja",
-    "not_quite": "Kurang tepat"
+    "not_quite": "Kurang tepat",
+    "label_1": "Ini akan menghapus data akun, menyembunyikan profil, dan mengeluarkan kamu.",
+    "delete_success": "Akun dihapus.",
+    "delete_error": "Tidak dapat menghapus akun."
   },
   "profile_about_me": {
     "about_me": "Tentang saya:",

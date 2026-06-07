@@ -164,7 +164,10 @@
     "title": "删除账户",
     "are_you_sure": "你确定吗？",
     "absolutely": "绝对地",
-    "not_quite": "不完全是"
+    "not_quite": "不完全是",
+    "label_1": "这会删除你的账号数据，隐藏你的个人资料，并退出登录。",
+    "delete_success": "账号已删除。",
+    "delete_error": "无法删除账号。"
   },
   "profile_about_me": {
     "about_me": "关于我:",

@@ -164,7 +164,10 @@
     "title": "Eliminar cuenta",
     "are_you_sure": "¿Está seguro?",
     "absolutely": "Absolutamente",
-    "not_quite": "No exactamente"
+    "not_quite": "No exactamente",
+    "label_1": "Esto eliminara los datos de tu cuenta, ocultara tu perfil y cerrara tu sesion.",
+    "delete_success": "Cuenta eliminada.",
+    "delete_error": "No se pudo eliminar la cuenta."
   },
   "profile_about_me": {
     "about_me": "Sobre mí:",

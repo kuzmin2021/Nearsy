@@ -164,7 +164,10 @@
     "title": "Supprimer le compte",
     "are_you_sure": "Es-tu sûr?",
     "absolutely": "Absolument",
-    "not_quite": "Pas tout à fait"
+    "not_quite": "Pas tout à fait",
+    "label_1": "Cela supprimera les donnees de votre compte, masquera votre profil et vous deconnectera.",
+    "delete_success": "Compte supprime.",
+    "delete_error": "Impossible de supprimer le compte."
   },
   "profile_about_me": {
     "about_me": "À propos de moi:",

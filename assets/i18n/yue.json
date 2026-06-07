@@ -164,7 +164,10 @@
     "title": "刪除帳戶",
     "are_you_sure": "你肯定？",
     "absolutely": "絕對係",
-    "not_quite": "唔係幾"
+    "not_quite": "唔係幾",
+    "label_1": "呢個操作會刪除你嘅帳戶資料、隱藏你嘅個人資料，並登出。",
+    "delete_success": "帳戶已刪除。",
+    "delete_error": "無法刪除帳戶。"
   },
   "profile_about_me": {
     "about_me": "關於我:",

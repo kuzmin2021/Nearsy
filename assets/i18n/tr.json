@@ -164,7 +164,10 @@
     "title": "Hesabı sil",
     "are_you_sure": "Emin misin?",
     "absolutely": "Kesinlikle",
-    "not_quite": "Pek değil"
+    "not_quite": "Pek değil",
+    "label_1": "Bu islem hesap verilerini siler, profilini gizler ve oturumunu kapatir.",
+    "delete_success": "Hesap silindi.",
+    "delete_error": "Hesap silinemedi."
   },
   "profile_about_me": {
     "about_me": "Hakkımda:",

@@ -164,7 +164,10 @@
     "title": "Excluir conta",
     "are_you_sure": "Tem certeza?",
     "absolutely": "Absolutamente",
-    "not_quite": "Não exatamente"
+    "not_quite": "Não exatamente",
+    "label_1": "Isso excluirá os dados da sua conta, ocultará seu perfil e encerrará sua sessão.",
+    "delete_success": "Conta excluída.",
+    "delete_error": "Não foi possível excluir a conta."
   },
   "profile_about_me": {
     "about_me": "Sobre mim:",
