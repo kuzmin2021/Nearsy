@@ -53,6 +53,10 @@
   },
   "account_settings": {
     "title": "கணக்கு அமைப்புகள்",
+    "member_id": "உறுப்பினர் ID",
+    "email": "மின்னஞ்சல்",
+    "phone": "தொலைபேசி",
+    "password": "கடவுச்சொல்",
     "edit_email": "திருத்து",
     "edit_phone": "திருத்து",
     "edit_password": "திருத்து",

@@ -53,6 +53,10 @@
   },
   "account_settings": {
     "title": "アカウント設定",
+    "member_id": "メンバーID",
+    "email": "メール",
+    "phone": "電話番号",
+    "password": "パスワード",
     "edit_email": "編集",
     "edit_phone": "編集",
     "edit_password": "編集",

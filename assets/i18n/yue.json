@@ -53,6 +53,10 @@
   },
   "account_settings": {
     "title": "帳戶設定",
+    "member_id": "會員 ID",
+    "email": "電郵",
+    "phone": "電話",
+    "password": "密碼",
     "edit_email": "編輯",
     "edit_phone": "編輯",
     "edit_password": "編輯",

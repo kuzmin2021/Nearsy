@@ -53,6 +53,10 @@
   },
   "account_settings": {
     "title": "অ্যাকাউন্ট সেটিংস",
+    "member_id": "সদস্য ID",
+    "email": "ইমেল",
+    "phone": "ফোন",
+    "password": "পাসওয়ার্ড",
     "edit_email": "সম্পাদনা",
     "edit_phone": "সম্পাদনা",
     "edit_password": "সম্পাদনা",

@@ -53,6 +53,10 @@
   },
   "account_settings": {
     "title": "Account settings",
+    "member_id": "Member ID",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
     "edit_email": "Edit",
     "edit_phone": "Edit",
     "edit_password": "Edit",

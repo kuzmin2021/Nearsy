@@ -53,6 +53,10 @@
   },
   "account_settings": {
     "title": "Pengaturan akun",
+    "member_id": "ID anggota",
+    "email": "Email",
+    "phone": "Telepon",
+    "password": "Kata sandi",
     "edit_email": "Sunting",
     "edit_phone": "Sunting",
     "edit_password": "Sunting",

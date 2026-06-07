@@ -53,6 +53,10 @@
   },
   "account_settings": {
     "title": "Hesap ayarları",
+    "member_id": "Üye ID",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "password": "Şifre",
     "edit_email": "Düzenle",
     "edit_phone": "Düzenle",
     "edit_password": "Düzenle",

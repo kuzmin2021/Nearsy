@@ -53,6 +53,10 @@
   },
   "account_settings": {
     "title": "खाता सेटिंग्स",
+    "member_id": "सदस्य ID",
+    "email": "ईमेल",
+    "phone": "फ़ोन",
+    "password": "पासवर्ड",
     "edit_email": "संपादित करें",
     "edit_phone": "संपादित करें",
     "edit_password": "संपादित करें",

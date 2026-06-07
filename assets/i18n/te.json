@@ -53,6 +53,10 @@
   },
   "account_settings": {
     "title": "ఖాతా సెట్టింగులు",
+    "member_id": "సభ్య ID",
+    "email": "ఇమెయిల్",
+    "phone": "ఫోన్",
+    "password": "పాస్‌వర్డ్",
     "edit_email": "సవరించు",
     "edit_phone": "సవరించు",
     "edit_password": "సవరించు",

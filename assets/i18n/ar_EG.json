@@ -53,6 +53,10 @@
   },
   "account_settings": {
     "title": "إعدادات الحساب",
+    "member_id": "معرّف العضو",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "password": "كلمة المرور",
     "edit_email": "تعديل",
     "edit_phone": "تعديل",
     "edit_password": "تعديل",

@@ -53,6 +53,10 @@
   },
   "account_settings": {
     "title": "اکاؤنٹ کی ترتیبات",
+    "member_id": "ممبر ID",
+    "email": "ای میل",
+    "phone": "فون",
+    "password": "پاس ورڈ",
     "edit_email": "ترمیم کریں",
     "edit_phone": "ترمیم کریں",
     "edit_password": "ترمیم کریں",

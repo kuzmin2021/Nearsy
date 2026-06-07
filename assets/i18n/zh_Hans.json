@@ -53,6 +53,10 @@
   },
   "account_settings": {
     "title": "账户设置",
+    "member_id": "会员 ID",
+    "email": "电子邮件",
+    "phone": "电话",
+    "password": "密码",
     "edit_email": "编辑",
     "edit_phone": "编辑",
     "edit_password": "编辑",
