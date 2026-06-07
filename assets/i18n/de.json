@@ -152,7 +152,13 @@
   },
   "hide_account": {
     "title": "Konto verbergen",
-    "hide": "Verstecken"
+    "hide": "Verbergen",
+    "label_1": "Verberge dein Profil, wenn du niemanden kennenlernen moechtest - alles andere bleibt unveraendert.",
+    "already_hidden_label": "Dein Profil ist verborgen. Zeige es wieder, wenn du bereit bist, jemanden kennenzulernen.",
+    "unhide": "Anzeigen",
+    "hide_success": "Konto verborgen.",
+    "unhide_success": "Konto sichtbar.",
+    "save_error": "Konto konnte nicht aktualisiert werden."
   },
   "delete_account": {
     "title": "Konto löschen",

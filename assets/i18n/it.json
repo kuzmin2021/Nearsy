@@ -152,7 +152,13 @@
   },
   "hide_account": {
     "title": "Nascondi conto",
-    "hide": "Nascondere"
+    "hide": "Nascondi",
+    "label_1": "Nascondi il profilo quando non vuoi conoscere qualcuno; tutto il resto resta invariato.",
+    "already_hidden_label": "Il tuo profilo e nascosto. Mostralo di nuovo quando vuoi conoscere qualcuno.",
+    "unhide": "Mostra",
+    "hide_success": "Account nascosto.",
+    "unhide_success": "Account visibile.",
+    "save_error": "Impossibile aggiornare l account."
   },
   "delete_account": {
     "title": "Elimina account",

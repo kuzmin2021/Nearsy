@@ -152,7 +152,13 @@
   },
   "hide_account": {
     "title": "Sembunyikan akun",
-    "hide": "Sembunyikan"
+    "hide": "Sembunyikan",
+    "label_1": "Sembunyikan profil saat kamu tidak ingin bertemu seseorang; yang lain tetap sama.",
+    "already_hidden_label": "Profil kamu disembunyikan. Tampilkan lagi saat kamu siap bertemu seseorang.",
+    "unhide": "Tampilkan",
+    "hide_success": "Akun disembunyikan.",
+    "unhide_success": "Akun terlihat.",
+    "save_error": "Tidak dapat memperbarui akun."
   },
   "delete_account": {
     "title": "Hapus akun",

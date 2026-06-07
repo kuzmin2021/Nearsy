@@ -152,7 +152,13 @@
   },
   "hide_account": {
     "title": "隱藏帳戶",
-    "hide": "隱藏"
+    "hide": "隱藏",
+    "label_1": "唔想識新朋友嗰陣，可以隱藏你嘅個人資料，其他內容保持不變。",
+    "already_hidden_label": "你嘅個人資料已隱藏。準備好再識新朋友時可以重新顯示。",
+    "unhide": "顯示",
+    "hide_success": "帳戶已隱藏。",
+    "unhide_success": "帳戶已顯示。",
+    "save_error": "無法更新帳戶。"
   },
   "delete_account": {
     "title": "刪除帳戶",

@@ -152,7 +152,13 @@
   },
   "hide_account": {
     "title": "Hesabı gizle",
-    "hide": "Gizle"
+    "hide": "Gizle",
+    "label_1": "Biriyle tanismak istemedigin zaman profilini gizle; diger her sey ayni kalir.",
+    "already_hidden_label": "Profilin gizli. Tekrar tanismaya hazir oldugunda gorunur yap.",
+    "unhide": "Goster",
+    "hide_success": "Hesap gizlendi.",
+    "unhide_success": "Hesap gorunur.",
+    "save_error": "Hesap guncellenemedi."
   },
   "delete_account": {
     "title": "Hesabı sil",

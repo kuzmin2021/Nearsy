@@ -152,7 +152,13 @@
   },
   "hide_account": {
     "title": "Hide account",
-    "hide": "Hide"
+    "hide": "Hide",
+    "label_1": "Hide your profile when you're not looking to meet someone - everything else stays untouched.",
+    "already_hidden_label": "Your profile is hidden. Unhide it when you're ready to meet someone again.",
+    "unhide": "Unhide",
+    "hide_success": "Account hidden.",
+    "unhide_success": "Account visible.",
+    "save_error": "Could not update account."
   },
   "delete_account": {
     "title": "Delete account",

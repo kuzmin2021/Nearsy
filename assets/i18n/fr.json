@@ -152,7 +152,13 @@
   },
   "hide_account": {
     "title": "Masquer le compte",
-    "hide": "Cacher"
+    "hide": "Masquer",
+    "label_1": "Masquez votre profil quand vous ne cherchez pas a rencontrer quelqu un; le reste ne change pas.",
+    "already_hidden_label": "Votre profil est masque. Affichez-le a nouveau quand vous serez pret a rencontrer quelqu un.",
+    "unhide": "Afficher",
+    "hide_success": "Compte masque.",
+    "unhide_success": "Compte visible.",
+    "save_error": "Impossible de mettre a jour le compte."
   },
   "delete_account": {
     "title": "Supprimer le compte",

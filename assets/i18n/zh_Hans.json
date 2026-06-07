@@ -152,7 +152,13 @@
   },
   "hide_account": {
     "title": "隐藏账户",
-    "hide": "隐藏"
+    "hide": "隐藏",
+    "label_1": "不想认识新朋友时，可以隐藏你的个人资料，其他内容保持不变。",
+    "already_hidden_label": "你的个人资料已隐藏。准备好再次认识新朋友时可以重新显示。",
+    "unhide": "显示",
+    "hide_success": "账号已隐藏。",
+    "unhide_success": "账号已显示。",
+    "save_error": "无法更新账号。"
   },
   "delete_account": {
     "title": "删除账户",

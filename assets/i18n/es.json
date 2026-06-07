@@ -152,7 +152,13 @@
   },
   "hide_account": {
     "title": "Ocultar cuenta",
-    "hide": "Esconder"
+    "hide": "Ocultar",
+    "label_1": "Oculta tu perfil cuando no quieras conocer a nadie; todo lo demas queda igual.",
+    "already_hidden_label": "Tu perfil esta oculto. Vuelve a mostrarlo cuando quieras conocer gente otra vez.",
+    "unhide": "Mostrar",
+    "hide_success": "Cuenta oculta.",
+    "unhide_success": "Cuenta visible.",
+    "save_error": "No se pudo actualizar la cuenta."
   },
   "delete_account": {
     "title": "Eliminar cuenta",
