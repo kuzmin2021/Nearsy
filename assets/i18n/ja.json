@@ -144,7 +144,11 @@
   "contact_us": {
     "title": "お問い合わせ",
     "let_us_know_what_you_think": "ご意見をお聞かせください...",
-    "submit": "送信"
+    "submit": "送信",
+    "your_email": "あなたのメール",
+    "message_required": "メッセージを入力してください。",
+    "submit_success": "フィードバックありがとうございます。",
+    "submit_error": "フィードバックを送信できませんでした。"
   },
   "hide_account": {
     "title": "アカウントを非表示",

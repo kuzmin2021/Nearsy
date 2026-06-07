@@ -144,7 +144,11 @@
   "contact_us": {
     "title": "联系我们",
     "let_us_know_what_you_think": "让我们知道您的想法...",
-    "submit": "提交"
+    "submit": "提交",
+    "your_email": "您的电子邮件",
+    "message_required": "请输入消息。",
+    "submit_success": "感谢您的反馈。",
+    "submit_error": "无法发送反馈。"
   },
   "hide_account": {
     "title": "隐藏账户",

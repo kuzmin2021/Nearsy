@@ -144,7 +144,11 @@
   "contact_us": {
     "title": "聯絡我哋",
     "let_us_know_what_you_think": "話畀我哋知你點睇 ...",
-    "submit": "提交"
+    "submit": "提交",
+    "your_email": "你嘅電郵",
+    "message_required": "請輸入訊息。",
+    "submit_success": "多謝你嘅意見。",
+    "submit_error": "未能提交意見。"
   },
   "hide_account": {
     "title": "隱藏帳戶",

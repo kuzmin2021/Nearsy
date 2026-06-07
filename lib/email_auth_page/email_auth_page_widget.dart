@@ -34,9 +34,9 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
     _model = createModel(context, () => EmailAuthPageModel());
 
     _model.emailFieldTextController ??=
-        TextEditingController(text: 'alx@test.ru');
+        TextEditingController(text: 'ak@test.ru');
     _model.emailFieldFocusNode ??= FocusNode();
-    _model.email = 'alx@test.ru';
+    _model.email = 'ak@test.ru';
 
     _model.passwordFieldTextController ??=
         TextEditingController(text: 'Test1234!');

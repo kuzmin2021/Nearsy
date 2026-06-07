@@ -1,4 +1,5 @@
 import '/auth/supabase_auth/auth_util.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -24,11 +25,16 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
   late AccountSettingsPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  String _memberId = '';
+  String _accountEmail = '';
+  String _accountPhone = '';
+  bool _isLoadingAccountSettings = true;
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => AccountSettingsPageModel());
+    _loadAccountSettings();
   }
 
   @override
@@ -65,6 +71,100 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
             fontStyle: FloterTheme.of(context).titleSmall.fontStyle,
             lineHeight: 1.2,
           );
+
+  String _displayValue(String value) => value.trim().isNotEmpty ? value : '-';
+
+  Future<void> _loadAccountSettings() async {
+    final userId = currentUserUid;
+    if (userId.isEmpty) {
+      safeSetState(() {
+        _isLoadingAccountSettings = false;
+      });
+      return;
+    }
+
+    final authUser = SupaFlow.client.auth.currentUser;
+    try {
+      final profile = await SupaFlow.client
+          .from('profiles')
+          .select('id, email')
+          .eq('user_id', userId)
+          .maybeSingle();
+      final settings = await SupaFlow.client
+          .from('user_settings')
+          .select(
+            'push_matches, push_messages, push_liked_you, email_matches, email_messages, email_liked_you',
+          )
+          .eq('user_id', userId)
+          .maybeSingle();
+
+      if (!mounted) {
+        return;
+      }
+
+      safeSetState(() {
+        _memberId = (profile?['id'] ?? '').toString();
+        _accountEmail =
+            (authUser?.email ?? profile?['email'] ?? currentUserEmail)
+                .toString();
+        _accountPhone = (authUser?.phone ?? currentPhoneNumber).toString();
+
+        _model.pushMatches =
+            (settings?['push_matches'] as bool?) ?? _model.pushMatches;
+        _model.pushMessages =
+            (settings?['push_messages'] as bool?) ?? _model.pushMessages;
+        _model.pushLikedYou =
+            (settings?['push_liked_you'] as bool?) ?? _model.pushLikedYou;
+        _model.emailMatches =
+            (settings?['email_matches'] as bool?) ?? _model.emailMatches;
+        _model.emailMessages =
+            (settings?['email_messages'] as bool?) ?? _model.emailMessages;
+        _model.emailLikedYou =
+            (settings?['email_liked_you'] as bool?) ?? _model.emailLikedYou;
+
+        _model.pushMatchesToggleValue = _model.pushMatches;
+        _model.pushMessagesToggleValue = _model.pushMessages;
+        _model.pushLikedYouToggleValue = _model.pushLikedYou;
+        _model.emailMatchesToggleValue = _model.emailMatches;
+        _model.emailMessagesToggleValue = _model.emailMessages;
+        _model.emailLikedYouToggleValue = _model.emailLikedYou;
+        _isLoadingAccountSettings = false;
+      });
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+      safeSetState(() {
+        _accountEmail = currentUserEmail;
+        _accountPhone = currentPhoneNumber;
+        _isLoadingAccountSettings = false;
+      });
+    }
+  }
+
+  Future<void> _updateUserSetting(String column, bool value) async {
+    final userId = currentUserUid;
+    if (userId.isEmpty) {
+      return;
+    }
+
+    try {
+      await SupaFlow.client.from('user_settings').upsert({
+        'user_id': userId,
+        column: value,
+      });
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Could not save account setting.'),
+          duration: Duration(milliseconds: 3000),
+        ),
+      );
+    }
+  }
 
   Widget _header(BuildContext context) {
     return Row(
@@ -196,6 +296,7 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
     required bool value,
     required ValueChanged<bool> onChanged,
     required String label,
+    bool enabled = true,
   }) {
     return SizedBox(
       height: 32.0,
@@ -218,6 +319,9 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
               child: Checkbox(
                 value: value,
                 onChanged: (newValue) {
+                  if (!enabled) {
+                    return;
+                  }
                   if (newValue == null) {
                     return;
                   }
@@ -299,14 +403,14 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           label: AppLabels.of(context).get(
                             'account_settings.member_id' /* Member ID */,
                           ),
-                          value: '19074217',
+                          value: _displayValue(_memberId),
                         ),
                         _accountRow(
                           context,
                           label: AppLabels.of(context).get(
                             'account_settings.email' /* Email */,
                           ),
-                          value: 'abram@gmail.com',
+                          value: _displayValue(_accountEmail),
                           actionLabel: AppLabels.of(context).get(
                             'account_settings.edit_email' /* Edit */,
                           ),
@@ -316,7 +420,7 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           label: AppLabels.of(context).get(
                             'account_settings.phone' /* Phone */,
                           ),
-                          value: '13173849446',
+                          value: _displayValue(_accountPhone),
                           actionLabel: AppLabels.of(context).get(
                             'account_settings.edit_phone' /* Edit */,
                           ),
@@ -378,11 +482,13 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           label: AppLabels.of(context).get(
                             'account_settings.matches' /* Matches */,
                           ),
+                          enabled: !_isLoadingAccountSettings,
                           onChanged: (newValue) {
                             safeSetState(() {
                               _model.pushMatchesToggleValue = newValue;
                               _model.pushMatches = newValue;
                             });
+                            _updateUserSetting('push_matches', newValue);
                           },
                         ),
                         _checkboxRow(
@@ -392,11 +498,13 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           label: AppLabels.of(context).get(
                             'account_settings.messages' /* Messages */,
                           ),
+                          enabled: !_isLoadingAccountSettings,
                           onChanged: (newValue) {
                             safeSetState(() {
                               _model.pushMessagesToggleValue = newValue;
                               _model.pushMessages = newValue;
                             });
+                            _updateUserSetting('push_messages', newValue);
                           },
                         ),
                         _checkboxRow(
@@ -406,11 +514,13 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           label: AppLabels.of(context).get(
                             'account_settings.liked_you' /* Liked you */,
                           ),
+                          enabled: !_isLoadingAccountSettings,
                           onChanged: (newValue) {
                             safeSetState(() {
                               _model.pushLikedYouToggleValue = newValue;
                               _model.pushLikedYou = newValue;
                             });
+                            _updateUserSetting('push_liked_you', newValue);
                           },
                         ),
                         const SizedBox(height: 10.0),
@@ -433,11 +543,13 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           label: AppLabels.of(context).get(
                             'account_settings.matches_email' /* Matches */,
                           ),
+                          enabled: !_isLoadingAccountSettings,
                           onChanged: (newValue) {
                             safeSetState(() {
                               _model.emailMatchesToggleValue = newValue;
                               _model.emailMatches = newValue;
                             });
+                            _updateUserSetting('email_matches', newValue);
                           },
                         ),
                         _checkboxRow(
@@ -447,11 +559,13 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           label: AppLabels.of(context).get(
                             'account_settings.messages_email' /* Messages */,
                           ),
+                          enabled: !_isLoadingAccountSettings,
                           onChanged: (newValue) {
                             safeSetState(() {
                               _model.emailMessagesToggleValue = newValue;
                               _model.emailMessages = newValue;
                             });
+                            _updateUserSetting('email_messages', newValue);
                           },
                         ),
                         _checkboxRow(
@@ -461,11 +575,13 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           label: AppLabels.of(context).get(
                             'account_settings.liked_you_email' /* Liked you */,
                           ),
+                          enabled: !_isLoadingAccountSettings,
                           onChanged: (newValue) {
                             safeSetState(() {
                               _model.emailLikedYouToggleValue = newValue;
                               _model.emailLikedYou = newValue;
                             });
+                            _updateUserSetting('email_liked_you', newValue);
                           },
                         ),
                         const SizedBox(height: 38.0),

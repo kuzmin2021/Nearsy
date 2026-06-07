@@ -144,7 +144,11 @@
   "contact_us": {
     "title": "हमसे संपर्क करें",
     "let_us_know_what_you_think": "हमें बताएं कि आप क्या सोचते हैं...",
-    "submit": "सबमिट करें"
+    "submit": "सबमिट करें",
+    "your_email": "आपका ईमेल",
+    "message_required": "कृपया संदेश दर्ज करें।",
+    "submit_success": "आपकी प्रतिक्रिया के लिए धन्यवाद।",
+    "submit_error": "प्रतिक्रिया भेजी नहीं जा सकी।"
   },
   "hide_account": {
     "title": "खाता छिपाएँ",

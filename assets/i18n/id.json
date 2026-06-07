@@ -144,7 +144,11 @@
   "contact_us": {
     "title": "Hubungi kami",
     "let_us_know_what_you_think": "Beri tahu kami pendapat Anda...",
-    "submit": "Kirim"
+    "submit": "Kirim",
+    "your_email": "Email Anda",
+    "message_required": "Masukkan pesan.",
+    "submit_success": "Terima kasih atas masukan Anda.",
+    "submit_error": "Tidak dapat mengirim masukan."
   },
   "hide_account": {
     "title": "Sembunyikan akun",

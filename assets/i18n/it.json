@@ -144,7 +144,11 @@
   "contact_us": {
     "title": "Contattaci",
     "let_us_know_what_you_think": "Fateci sapere cosa ne pensate...",
-    "submit": "Invia"
+    "submit": "Invia",
+    "your_email": "La tua email",
+    "message_required": "Inserisci un messaggio.",
+    "submit_success": "Grazie per il tuo feedback.",
+    "submit_error": "Impossibile inviare il feedback."
   },
   "hide_account": {
     "title": "Nascondi conto",

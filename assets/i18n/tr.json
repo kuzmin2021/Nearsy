@@ -144,7 +144,11 @@
   "contact_us": {
     "title": "Bize ulaşın",
     "let_us_know_what_you_think": "Ne düşündüğünüzü bize bildirin...",
-    "submit": "Gönder"
+    "submit": "Gönder",
+    "your_email": "E-postanız",
+    "message_required": "Lütfen bir mesaj girin.",
+    "submit_success": "Geri bildiriminiz için teşekkürler.",
+    "submit_error": "Geri bildirim gönderilemedi."
   },
   "hide_account": {
     "title": "Hesabı gizle",

@@ -144,7 +144,11 @@
   "contact_us": {
     "title": "ہم سے رابطہ کریں۔",
     "let_us_know_what_you_think": "ہمیں بتائیں کہ آپ کیا سوچتے ہیں...",
-    "submit": "جمع کریں"
+    "submit": "جمع کریں",
+    "your_email": "آپ کا ای میل",
+    "message_required": "براہ کرم پیغام درج کریں۔",
+    "submit_success": "آپ کی رائے کا شکریہ۔",
+    "submit_error": "رائے بھیجی نہیں جا سکی۔"
   },
   "hide_account": {
     "title": "اکاؤنٹ چھپائیں",

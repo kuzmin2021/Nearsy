@@ -144,7 +144,11 @@
   "contact_us": {
     "title": "اتصل بنا",
     "let_us_know_what_you_think": "اسمحوا لنا أن نعرف ما هو رأيك...",
-    "submit": "إرسال"
+    "submit": "إرسال",
+    "your_email": "بريدك الإلكتروني",
+    "message_required": "يرجى إدخال رسالة.",
+    "submit_success": "شكرًا على ملاحظاتك.",
+    "submit_error": "تعذر إرسال الملاحظات."
   },
   "hide_account": {
     "title": "إخفاء الحساب",

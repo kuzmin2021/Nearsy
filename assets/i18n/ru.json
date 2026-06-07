@@ -144,7 +144,11 @@
   "contact_us": {
     "title": "Свяжитесь с нами",
     "let_us_know_what_you_think": "Поделитесь своим мнением...",
-    "submit": "Отправить"
+    "submit": "Отправить",
+    "your_email": "Ваш email",
+    "message_required": "Введите сообщение.",
+    "submit_success": "Спасибо за обратную связь.",
+    "submit_error": "Не удалось отправить обратную связь."
   },
   "hide_account": {
     "title": "Скрыть аккаунт",
