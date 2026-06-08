@@ -9,11 +9,6 @@ import '/floter/floter_util.dart';
 
 Future<void> loadCurrentProfileState() async {
   final userId = currentUserUid;
-  final emptySlots = <String>[
-    '__add_photo__',
-    '__empty_photo__',
-    '__empty_photo__'
-  ];
 
   bool validName(String? rawName) {
     final name = (rawName ?? '').trim();
@@ -55,6 +50,5 @@ Future<void> loadCurrentProfileState() async {
       break;
     }
   }
-  FTAppState().profileIsOnboarded =
-      validName(displayName) && (profile?.isOnboarded ?? false);
+  FTAppState().profileIsOnboarded = validName(displayName);
 }

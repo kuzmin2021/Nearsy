@@ -105,6 +105,60 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
+  bool _validProfileName(String? rawName) {
+    final name = (rawName ?? '').trim();
+    if (name.isEmpty || name.runes.length > 20) {
+      return false;
+    }
+    return RegExp(r'[A-Za-z\u0400-\u04FF]').hasMatch(name);
+  }
+
+  bool _applyProfileDisplayNameState(String rawValue) {
+    final value = rawValue.trim();
+    final isValid = _validProfileName(value);
+    _model.profileDisplayName = value;
+    _model.showProfileNameError = !isValid;
+    FTAppState().update(() {
+      FTAppState().profileIsOnboarded = isValid;
+    });
+    safeSetState(() {});
+    return isValid;
+  }
+
+  Future<void> _saveProfileDisplayName({
+    bool showInvalidSnackBar = false,
+  }) async {
+    final userId = SupaFlow.client.auth.currentUser?.id;
+    if (userId == null || userId.isEmpty) {
+      return;
+    }
+
+    final value =
+        _model.profileDisplayNameFieldTextController?.text.trim() ?? '';
+    final isValid = _applyProfileDisplayNameState(value);
+
+    try {
+      await SupaFlow.client.from('profiles').upsert({
+        'user_id': userId,
+        'display_name': value,
+      }, onConflict: 'user_id');
+    } catch (error) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Failed to save profile: $error')),
+        );
+      }
+      return;
+    }
+
+    if (!isValid && showInvalidSnackBar && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Name must be 1-20 characters and include letters.'),
+        ),
+      );
+    }
+  }
   @override
   void initState() {
     super.initState();
@@ -226,13 +280,6 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
             .toList();
       }
 
-      bool validName(String? rawName) {
-        final name = (rawName ?? '').trim();
-        if (name.isEmpty || name.runes.length > 20) {
-          return false;
-        }
-        return RegExp(r'[A-Za-z\u0400-\u04FF]').hasMatch(name);
-      }
 
       final profiles = await SupaFlow.client
           .from('profiles')
@@ -246,9 +293,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
       final profile = profiles.isNotEmpty ? profiles.first : null;
       final displayName = cleanValue(profile?['display_name']);
       final catchphrase = cleanValue(profile?['catchphrase']);
+      FTAppState().update(() {
+        FTAppState().profileIsOnboarded = _validProfileName(displayName);
+      });
       _model.profileDisplayName = displayName;
       _model.profileCatchphrase = catchphrase;
-      _model.showProfileNameError = !validName(displayName);
+      _model.showProfileNameError = !_validProfileName(displayName);
       _model.profileDisplayNameFieldTextController?.text = displayName;
       _model.profileCatchphraseFieldTextController?.text = catchphrase;
       _model.profileMainPhotoUrl = cleanValue(profile?['avatar_url']);
@@ -381,54 +431,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
         if (_model.profileDisplayNameFieldFocusNode?.hasFocus ?? false) {
           return;
         }
-        final userId = SupaFlow.client.auth.currentUser?.id;
-        if (userId == null || userId.isEmpty) {
-          return;
-        }
-        final value = _model.profileDisplayNameFieldTextController.text;
-        _model.profileDisplayName = value;
-        safeSetState(() {});
-
-        bool validName(String? rawName) {
-          final name = (rawName ?? '').trim();
-          if (name.isEmpty || name.runes.length > 20) {
-            return false;
-          }
-          return RegExp(r'[A-Za-z\u0400-\u04FF]').hasMatch(name);
-        }
-
-        if (validName(value)) {
-          _model.showProfileNameError = false;
-          safeSetState(() {});
-          try {
-            await SupaFlow.client.from('profiles').upsert({
-              'user_id': userId,
-              'display_name': value,
-              'is_onboarded': true,
-            }, onConflict: 'user_id');
-          } catch (error) {
-            if (context.mounted) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Failed to save profile: $error')),
-              );
-            }
-            return;
-          }
-          FTAppState().profileIsOnboarded = true;
-          safeSetState(() {});
-        } else {
-          _model.showProfileNameError = true;
-          FTAppState().profileIsOnboarded = false;
-          safeSetState(() {});
-          if (context.mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content:
-                    Text('Name must be 1-20 characters and include letters.'),
-              ),
-            );
-          }
-        }
+        await _saveProfileDisplayName();
       },
     );
     _model.profileCatchphraseFieldTextController ??= TextEditingController();
@@ -884,91 +887,24 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     .profileDisplayNameFieldTextController,
                                                 focusNode: _model
                                                     .profileDisplayNameFieldFocusNode,
-                                                onChanged: (_) =>
-                                                    EasyDebounce.debounce(
-                                                  '_model.profileDisplayNameFieldTextController',
-                                                  Duration(milliseconds: 2000),
-                                                  () async {
-                                                    _model.profileDisplayName =
-                                                        _model
-                                                            .profileDisplayNameFieldTextController
-                                                            .text;
-                                                    safeSetState(() {});
-                                                    if (functions
-                                                        .isValidProfileName(_model
-                                                            .profileDisplayNameFieldTextController
-                                                            .text)!) {
-                                                      _model.showProfileNameError =
-                                                          false;
-                                                      safeSetState(() {});
-                                                      FTAppState()
-                                                              .profileIsOnboarded =
-                                                          false;
-                                                      safeSetState(() {});
-                                                    } else {
-                                                      _model.showProfileNameError =
-                                                          true;
-                                                      safeSetState(() {});
-                                                      FTAppState()
-                                                              .profileIsOnboarded =
-                                                          false;
-                                                      safeSetState(() {});
-                                                    }
-                                                  },
-                                                ),
+                                                onChanged: (_) {
+                                                  _applyProfileDisplayNameState(
+                                                    _model.profileDisplayNameFieldTextController
+                                                            ?.text ??
+                                                        '',
+                                                  );
+                                                  EasyDebounce.debounce(
+                                                    '_model.profileDisplayNameFieldTextController',
+                                                    Duration(milliseconds: 2000),
+                                                    () async {
+                                                      await _saveProfileDisplayName();
+                                                    },
+                                                  );
+                                                },
                                                 onFieldSubmitted: (_) async {
-                                                  _model.profileDisplayName = _model
-                                                      .profileDisplayNameFieldTextController
-                                                      .text;
-                                                  safeSetState(() {});
-                                                  if (functions
-                                                      .isValidProfileName(_model
-                                                          .profileDisplayNameFieldTextController
-                                                          .text)!) {
-                                                    _model.showProfileNameError =
-                                                        false;
-                                                    safeSetState(() {});
-                                                    await ProfilesTable()
-                                                        .update(
-                                                      data: {
-                                                        'display_name': _model
-                                                            .profileDisplayNameFieldTextController
-                                                            .text,
-                                                        'is_onboarded': true,
-                                                      },
-                                                      matchingRows: (rows) =>
-                                                          rows.eqOrNull(
-                                                        'user_id',
-                                                        currentUserUid,
-                                                      ),
-                                                    );
-                                                    FTAppState()
-                                                            .profileIsOnboarded =
-                                                        true;
-                                                    safeSetState(() {});
-                                                  } else {
-                                                    _model.showProfileNameError =
-                                                        true;
-                                                    safeSetState(() {});
-                                                    FTAppState()
-                                                            .profileIsOnboarded =
-                                                        false;
-                                                    safeSetState(() {});
-                                                    ScaffoldMessenger.of(
-                                                            context)
-                                                        .showSnackBar(
-                                                      SnackBar(
-                                                        content: Text(
-                                                          'Name must be 1-20 characters and include letters.',
-                                                          style: TextStyle(),
-                                                        ),
-                                                        duration: Duration(
-                                                            milliseconds: 4000),
-                                                      ),
-                                                    );
-                                                  }
-
-                                                  safeSetState(() {});
+                                                  await _saveProfileDisplayName(
+                                                    showInvalidSnackBar: true,
+                                                  );
                                                 },
                                                 obscureText: false,
                                                 decoration: InputDecoration(

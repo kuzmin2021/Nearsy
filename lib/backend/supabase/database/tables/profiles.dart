@@ -32,9 +32,6 @@ class ProfilesRow extends SupabaseDataRow {
   String? get avatarUrl => getField<String>('avatar_url');
   set avatarUrl(String? value) => setField<String>('avatar_url', value);
 
-  bool? get isOnboarded => getField<bool>('is_onboarded');
-  set isOnboarded(bool? value) => setField<bool>('is_onboarded', value);
-
   DateTime? get updatedAt => getField<DateTime>('updated_at');
   set updatedAt(DateTime? value) => setField<DateTime>('updated_at', value);
 

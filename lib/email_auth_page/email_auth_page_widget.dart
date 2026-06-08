@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
+import '/custom_code/actions/index.dart' as actions;
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
@@ -494,8 +495,6 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                           ),
                                         );
                                       } else {
-                                        FTAppState().profileIsOnboarded = false;
-                                        safeSetState(() {});
                                         GoRouter.of(context).prepareAuthEvent();
 
                                         final user =
@@ -507,6 +506,7 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                         if (user == null) {
                                           return;
                                         }
+                                        await actions.loadCurrentProfileState();
 
                                         _navigate = () => context.goNamedAuth(
                                             ProfilePageWidget.routeName,
@@ -631,7 +631,6 @@ class _EmailAuthPageWidgetState extends State<EmailAuthPageWidget> {
                                               'email': currentUserEmail,
                                               'display_name': '',
                                               'catchphrase': '',
-                                              'is_onboarded': false,
                                             });
                                           } else {
                                             ScaffoldMessenger.of(context)

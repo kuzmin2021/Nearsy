@@ -65,8 +65,8 @@ npx supabase start       # запустить контейнеры
 
 ### Схема базы данных
 
-#### `profiles` (26 полей)
-`id, user_id, display_name, email, catchphrase, avatar_url, is_onboarded, updated_at, about, gender, birthday, location, location_label, languages, height, height_cm, is_metric, work, education, kids, relationship_type, beliefs, body_type, exercise, drinking, smoking, description, religion`
+#### `profiles` (25 полей)
+`id, user_id, display_name, email, catchphrase, avatar_url, updated_at, about, gender, birthday, location, location_label, languages, height, height_cm, is_metric, work, education, kids, relationship_type, beliefs, body_type, exercise, drinking, smoking, description, religion`
 
 Row-Level Security: пользователи читают/создают/обновляют только свой профиль.
 
