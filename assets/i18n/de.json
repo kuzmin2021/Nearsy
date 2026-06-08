@@ -376,5 +376,19 @@
     "armenian": "Armenisch",
     "bengali": "Bengali",
     "catalan": "katalanisch"
+  },
+  "account_email": {
+    "edit_title": "E-Mail bearbeiten",
+    "add_title": "E-Mail hinzufuegen",
+    "label_1": "Gib die E-Mail-Adresse ein, die du fuer dein Konto verwenden moechtest.",
+    "email_address": "E-Mail-Adresse",
+    "save": "Speichern",
+    "invalid_email": "Gib eine gueltige E-Mail-Adresse ein.",
+    "confirmation_sent": "Bestaetigungscode gesendet.",
+    "save_error": "E-Mail konnte nicht aktualisiert werden.",
+    "title": "E-Mail hinzufuegen und bestaetigen",
+    "your_email": "Deine E-Mail",
+    "code_label": "Gib den Code ein, den wir an deine E-Mail-Adresse gesendet haben. Er sollte innerhalb von 20 Sekunden ankommen.",
+    "resend_code": "Code erneut senden"
   }
 }

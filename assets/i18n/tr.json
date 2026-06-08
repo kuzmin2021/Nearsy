@@ -376,5 +376,19 @@
     "armenian": "Ermeni",
     "bengali": "Bengalce",
     "catalan": "Katalanca"
+  },
+  "account_email": {
+    "edit_title": "E-postayi duzenle",
+    "add_title": "E-posta ekle",
+    "label_1": "Hesabin icin kullanmak istedigin e-posta adresini gir.",
+    "email_address": "E-posta adresi",
+    "save": "Kaydet",
+    "invalid_email": "Gecerli bir e-posta adresi gir.",
+    "confirmation_sent": "Onay kodu gonderildi.",
+    "save_error": "E-posta guncellenemedi.",
+    "title": "E-postani ekle ve dogrula",
+    "your_email": "E-postan",
+    "code_label": "E-posta adresine gonderdigimiz kodu gir. 20 saniye icinde gelmeli.",
+    "resend_code": "Kodu tekrar gonder"
   }
 }

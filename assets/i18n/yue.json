@@ -376,5 +376,19 @@
     "armenian": "亞美尼亞人",
     "bengali": "孟加拉文",
     "catalan": "加泰羅尼亞人"
+  },
+  "account_email": {
+    "edit_title": "編輯電郵",
+    "add_title": "新增電郵",
+    "label_1": "輸入你想用於帳戶嘅電郵地址。",
+    "email_address": "電郵地址",
+    "save": "儲存",
+    "invalid_email": "請輸入有效嘅電郵地址。",
+    "confirmation_sent": "驗證碼已發送。",
+    "save_error": "無法更新電郵。",
+    "title": "新增並驗證電郵",
+    "your_email": "你嘅電郵",
+    "code_label": "輸入我哋發送到你電郵嘅驗證碼。應該會喺 20 秒內收到。",
+    "resend_code": "重新發送驗證碼"
   }
 }

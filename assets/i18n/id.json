@@ -376,5 +376,19 @@
     "armenian": "orang Armenia",
     "bengali": "bahasa Bengali",
     "catalan": "Katalan"
+  },
+  "account_email": {
+    "edit_title": "Edit email",
+    "add_title": "Tambah email",
+    "label_1": "Masukkan email yang ingin kamu gunakan untuk akunmu.",
+    "email_address": "Alamat email",
+    "save": "Simpan",
+    "invalid_email": "Masukkan alamat email yang valid.",
+    "confirmation_sent": "Kode konfirmasi dikirim.",
+    "save_error": "Tidak dapat memperbarui email.",
+    "title": "Tambah dan verifikasi email",
+    "your_email": "Email kamu",
+    "code_label": "Masukkan kode yang kami kirim ke email kamu. Kode akan tiba dalam 20 detik.",
+    "resend_code": "Kirim ulang kode"
   }
 }

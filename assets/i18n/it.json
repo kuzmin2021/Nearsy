@@ -376,5 +376,19 @@
     "armenian": "armeno",
     "bengali": "bengalese",
     "catalan": "catalano"
+  },
+  "account_email": {
+    "edit_title": "Modifica email",
+    "add_title": "Aggiungi email",
+    "label_1": "Inserisci l email che vuoi usare per il tuo account.",
+    "email_address": "Indirizzo email",
+    "save": "Salva",
+    "invalid_email": "Inserisci un indirizzo email valido.",
+    "confirmation_sent": "Codice di conferma inviato.",
+    "save_error": "Impossibile aggiornare l email.",
+    "title": "Aggiungi e verifica email",
+    "your_email": "La tua email",
+    "code_label": "Inserisci il codice inviato alla tua email. Dovrebbe arrivare entro 20 secondi.",
+    "resend_code": "Reinvia codice"
   }
 }

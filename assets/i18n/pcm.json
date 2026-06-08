@@ -376,5 +376,19 @@
     "armenian": "Armenian",
     "bengali": "Bengali",
     "catalan": "Catalan"
+  },
+  "account_email": {
+    "edit_title": "Edit email",
+    "add_title": "Add email",
+    "label_1": "Enter email address wey you wan use for your account.",
+    "email_address": "Email address",
+    "save": "Save",
+    "invalid_email": "Enter valid email address.",
+    "confirmation_sent": "Confirmation code sent.",
+    "save_error": "Could not update email.",
+    "title": "Add and Verify your email",
+    "your_email": "Your email",
+    "code_label": "Enter the code we send to your email address. E suppose arrive within 20s.",
+    "resend_code": "Resend code"
   }
 }

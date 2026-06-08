@@ -414,6 +414,9 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           actionLabel: AppLabels.of(context).get(
                             'account_settings.edit_email' /* Edit */,
                           ),
+                          onActionTap: () async {
+                            context.pushNamed(AccountEmailPageWidget.routeName);
+                          },
                         ),
                         _accountRow(
                           context,

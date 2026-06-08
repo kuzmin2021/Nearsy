@@ -376,5 +376,19 @@
     "armenian": "亚美尼亚语",
     "bengali": "孟加拉",
     "catalan": "加泰罗尼亚语"
+  },
+  "account_email": {
+    "edit_title": "编辑邮箱",
+    "add_title": "添加邮箱",
+    "label_1": "输入你想用于账号的邮箱地址。",
+    "email_address": "邮箱地址",
+    "save": "保存",
+    "invalid_email": "请输入有效的邮箱地址。",
+    "confirmation_sent": "验证码已发送。",
+    "save_error": "无法更新邮箱。",
+    "title": "添加并验证邮箱",
+    "your_email": "你的邮箱",
+    "code_label": "输入我们发送到你邮箱的验证码。验证码应在 20 秒内到达。",
+    "resend_code": "重新发送验证码"
   }
 }

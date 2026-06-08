@@ -376,5 +376,19 @@
     "armenian": "армянский",
     "bengali": "бенгальский",
     "catalan": "каталанский"
+  },
+  "account_email": {
+    "edit_title": "Изменить email",
+    "add_title": "Добавить email",
+    "label_1": "Введите адрес email, который хотите использовать для аккаунта.",
+    "email_address": "Адрес email",
+    "save": "Сохранить",
+    "invalid_email": "Введите корректный адрес email.",
+    "confirmation_sent": "Код подтверждения отправлен.",
+    "save_error": "Не удалось обновить email.",
+    "title": "Добавить и подтвердить email",
+    "your_email": "Ваш email",
+    "code_label": "Введите код, который мы отправили на ваш email. Он должен прийти в течение 20 секунд.",
+    "resend_code": "Отправить код повторно"
   }
 }

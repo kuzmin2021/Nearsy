@@ -376,5 +376,19 @@
     "armenian": "アルメニア語",
     "bengali": "ベンガル語",
     "catalan": "カタルーニャ語"
+  },
+  "account_email": {
+    "edit_title": "メールを編集",
+    "add_title": "メールを追加",
+    "label_1": "アカウントで使用するメールアドレスを入力してください。",
+    "email_address": "メールアドレス",
+    "save": "保存",
+    "invalid_email": "有効なメールアドレスを入力してください。",
+    "confirmation_sent": "確認コードを送信しました。",
+    "save_error": "メールを更新できませんでした。",
+    "title": "メールを追加して確認",
+    "your_email": "あなたのメール",
+    "code_label": "メールアドレスに送信したコードを入力してください。20秒以内に届くはずです。",
+    "resend_code": "コードを再送信"
   }
 }

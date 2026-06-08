@@ -213,6 +213,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => DeleteAccountPageWidget(),
         ),
         FTRoute(
+          name: AccountEmailPageWidget.routeName,
+          path: AccountEmailPageWidget.routePath,
+          builder: (context, params) => AccountEmailPageWidget(),
+        ),
+        FTRoute(
           name: ProfileAboutMePageWidget.routeName,
           path: ProfileAboutMePageWidget.routePath,
           builder: (context, params) => ProfileAboutMePageWidget(),
