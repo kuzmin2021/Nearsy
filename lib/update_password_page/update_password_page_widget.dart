@@ -1,15 +1,12 @@
 import '/auth/supabase_auth/auth_util.dart';
+import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
-import '/floter/floter_widgets.dart';
-import 'dart:ui';
-import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'update_password_page_model.dart';
 export 'update_password_page_model.dart';
 
-/// Lets a signed-in user set a new Supabase password.
 class UpdatePasswordPageWidget extends StatefulWidget {
   const UpdatePasswordPageWidget({super.key});
 
@@ -25,6 +22,17 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
   late UpdatePasswordPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  bool get _hasInput =>
+      (_model.updatePasswordFieldTextController.text.trim().isNotEmpty) &&
+      (_model.confirmUpdatePasswordFieldTextController.text.trim().isNotEmpty);
+
+  bool get _passwordsMismatch =>
+      _hasInput &&
+      _model.updatePasswordFieldTextController.text !=
+          _model.confirmUpdatePasswordFieldTextController.text;
+
+  bool get _canSubmit => _hasInput && !_passwordsMismatch;
 
   @override
   void initState() {
@@ -45,8 +53,53 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
     super.dispose();
   }
 
+  Future<void> _savePassword() async {
+    if (!_canSubmit) {
+      safeSetState(() {});
+      return;
+    }
+
+    final appLabels = AppLabels.of(context);
+    final password = _model.updatePasswordFieldTextController.text;
+
+    try {
+      await authManager.updatePassword(
+        newPassword: password,
+        context: context,
+      );
+
+      if (!mounted) {
+        return;
+      }
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            appLabels.get('update_password.password_updated'),
+          ),
+        ),
+      );
+      context.safePop();
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            appLabels.get('update_password.save_error'),
+          ),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    final appLabels = AppLabels.of(context);
+    final hasError = _passwordsMismatch;
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -54,396 +107,217 @@ class _UpdatePasswordPageWidgetState extends State<UpdatePasswordPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FloterTheme.of(context).primaryBackground,
+        backgroundColor: Colors.white,
         body: SafeArea(
           top: true,
-          child: Container(
-            width: double.infinity,
-            height: 926.0,
-            child: Stack(
-              alignment: AlignmentDirectional(0.0, 0.0),
+          bottom: false,
+          child: Padding(
+            padding:
+                const EdgeInsetsDirectional.fromSTEB(43.0, 29.0, 42.0, 0.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset(
-                  'assets/images/start_screen_bg.png',
-                  width: double.infinity,
-                  height: 926.0,
-                  fit: BoxFit.cover,
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 926.0,
-                  decoration: BoxDecoration(
-                    color: Color(0x66FFFFFF),
-                  ),
-                  child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(42.0, 80.0, 42.0, 42.0),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  context.pop();
-                                },
-                                child: Container(
-                                  width: 42.0,
-                                  height: 42.0,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFC9B0FF),
-                                    borderRadius: BorderRadius.circular(15.0),
-                                  ),
-                                  child: Icon(
-                                    Icons.arrow_back,
-                                    color: Colors.black,
-                                    size: 24.0,
-                                  ),
-                                ),
-                              ),
-                              Icon(
-                                Icons.favorite_border,
-                                color: FloterTheme.of(context).primary,
-                                size: 46.0,
-                              ),
-                            ],
-                          ),
-                          Container(
-                            height: 20.0,
-                          ),
-                          Text(
-                            AppLabels.of(context).get(
-                              'update_password.title' /* Update password */,
-                            ),
-                            style: FloterTheme.of(context)
-                                .headlineSmall
-                                .override(
-                                  font: GoogleFonts.interTight(
-                                    fontWeight: FloterTheme.of(context)
-                                        .headlineSmall
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .headlineSmall
-                                        .fontStyle,
-                                  ),
-                                  color: FloterTheme.of(context).primaryText,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FloterTheme.of(context)
-                                      .headlineSmall
-                                      .fontWeight,
-                                  fontStyle: FloterTheme.of(context)
-                                      .headlineSmall
-                                      .fontStyle,
-                                ),
-                          ),
-                          Text(
-                            AppLabels.of(context).get(
-                              'update_password.choose_a_new_password_for_your_nearsy_account' /* Choose a new password for your... */,
-                            ),
-                            maxLines: 2,
-                            style: FloterTheme.of(context).bodyMedium.override(
-                                  font: GoogleFonts.inter(
-                                    fontWeight: FloterTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                                  color: FloterTheme.of(context).secondaryText,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FloterTheme.of(context)
-                                      .bodyMedium
-                                      .fontWeight,
-                                  fontStyle: FloterTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
-                                ),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          Container(
-                            height: 12.0,
-                          ),
-                          SizedBox(
-                            height: 38.0,
-                            child: TextFormField(
-                              controller:
-                                  _model.updatePasswordFieldTextController,
-                              focusNode: _model.updatePasswordFieldFocusNode,
-                              onChanged: (_) => EasyDebounce.debounce(
-                                '_model.updatePasswordFieldTextController',
-                                Duration(milliseconds: 2000),
-                                () async {
-                                  _model.password = _model
-                                      .updatePasswordFieldTextController.text;
-                                  safeSetState(() {});
-                                },
-                              ),
-                              obscureText:
-                                  !_model.updatePasswordFieldVisibility,
-                              decoration: InputDecoration(
-                                hintText: AppLabels.of(context).get(
-                                  'update_password.new_password' /* New password */,
-                                ),
-                                hintStyle: GoogleFonts.inter(
-                                  color: Colors.black,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                contentPadding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 0.0, 16.0, 0.0),
-                                filled: true,
-                                fillColor: Colors.white,
-                                suffixIconConstraints: BoxConstraints(
-                                  minWidth: 42.0,
-                                  minHeight: 38.0,
-                                ),
-                                suffixIcon: InkWell(
-                                  onTap: () async {
-                                    safeSetState(() => _model
-                                            .updatePasswordFieldVisibility =
-                                        !_model.updatePasswordFieldVisibility);
-                                  },
-                                  focusNode: FocusNode(skipTraversal: true),
-                                  child: Icon(
-                                    _model.updatePasswordFieldVisibility
-                                        ? Icons.visibility_outlined
-                                        : Icons.visibility_off_outlined,
-                                    color: Colors.black,
-                                    size: 20,
-                                  ),
-                                ),
-                              ),
-                              style: GoogleFonts.inter(
-                                color: Colors.black,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w400,
-                              ),
-                              maxLines: 1,
-                              validator: _model
-                                  .updatePasswordFieldTextControllerValidator
-                                  .asValidator(context),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 38.0,
-                            child: TextFormField(
-                              controller: _model
-                                  .confirmUpdatePasswordFieldTextController,
-                              focusNode:
-                                  _model.confirmUpdatePasswordFieldFocusNode,
-                              onChanged: (_) => EasyDebounce.debounce(
-                                '_model.confirmUpdatePasswordFieldTextController',
-                                Duration(milliseconds: 2000),
-                                () async {
-                                  _model.confirmPassword = _model
-                                      .confirmUpdatePasswordFieldTextController
-                                      .text;
-                                  safeSetState(() {});
-                                },
-                              ),
-                              obscureText:
-                                  !_model.confirmUpdatePasswordFieldVisibility,
-                              decoration: InputDecoration(
-                                hintText: AppLabels.of(context).get(
-                                  'update_password.repeat_password' /* Repeat password */,
-                                ),
-                                hintStyle: GoogleFonts.inter(
-                                  color: Colors.black,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                contentPadding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 0.0, 16.0, 0.0),
-                                filled: true,
-                                fillColor: Colors.white,
-                                suffixIconConstraints: BoxConstraints(
-                                  minWidth: 42.0,
-                                  minHeight: 38.0,
-                                ),
-                                suffixIcon: InkWell(
-                                  onTap: () async {
-                                    safeSetState(() => _model
-                                            .confirmUpdatePasswordFieldVisibility =
-                                        !_model
-                                            .confirmUpdatePasswordFieldVisibility);
-                                  },
-                                  focusNode: FocusNode(skipTraversal: true),
-                                  child: Icon(
-                                    _model.confirmUpdatePasswordFieldVisibility
-                                        ? Icons.visibility_outlined
-                                        : Icons.visibility_off_outlined,
-                                    color: Colors.black,
-                                    size: 20,
-                                  ),
-                                ),
-                              ),
-                              style: GoogleFonts.inter(
-                                color: Colors.black,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w400,
-                              ),
-                              maxLines: 1,
-                              validator: _model
-                                  .confirmUpdatePasswordFieldTextControllerValidator
-                                  .asValidator(context),
-                            ),
-                          ),
-                          FTButtonWidget(
-                            onPressed: () async {
-                              Function() _navigate = () {};
-                              if (_model.password == '') {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text(
-                                      'Enter your new password.',
-                                      style: TextStyle(),
-                                    ),
-                                    duration: Duration(milliseconds: 4000),
-                                  ),
-                                );
-                              } else {
-                                if (_model.confirmPassword == '') {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: Text(
-                                        'Confirm your new password.',
-                                        style: TextStyle(),
-                                      ),
-                                      duration: Duration(milliseconds: 4000),
-                                    ),
-                                  );
-                                } else {
-                                  if (_model.password ==
-                                      _model.confirmPassword) {
-                                    await authManager.updatePassword(
-                                      newPassword: _model.password!,
-                                      context: context,
-                                    );
-                                    safeSetState(() {});
-
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        content: Text(
-                                          'Password updated.',
-                                          style: TextStyle(),
-                                        ),
-                                        duration: Duration(milliseconds: 4000),
-                                      ),
-                                    );
-                                  } else {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        content: Text(
-                                          'Passwords do not match.',
-                                          style: TextStyle(),
-                                        ),
-                                        duration: Duration(milliseconds: 4000),
-                                      ),
-                                    );
-                                  }
-                                }
-                              }
-
-                              _navigate();
-                            },
-                            text: AppLabels.of(context).get(
-                              'update_password.submit_button' /* Update password */,
-                            ),
-                            iconData: Icons.arrow_forward,
-                            options: FTButtonOptions(
-                              width: double.infinity,
-                              height: 48.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  4.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFFC9B0FF),
-                              textStyle: GoogleFonts.inter(
-                                color: Colors.black,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w500,
-                              ),
-                              iconSize: 20.0,
-                              iconColor: Colors.black,
-                              iconAlignment: IconAlignment.end,
-                              borderRadius: BorderRadius.circular(15.0),
-                            ),
-                          ),
-                        ].divide(SizedBox(height: 16.0)),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    FloterIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 12.0,
+                      buttonSize: 48.0,
+                      fillColor: FloterTheme.of(context).primaryBackground,
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: FloterTheme.of(context).primaryText,
+                        size: 32.0,
                       ),
+                      onPressed: () async {
+                        context.safePop();
+                      },
+                    ),
+                    const SizedBox(width: 21.0),
+                    Expanded(
+                      child: Text(
+                        appLabels.get('update_password.title'),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: GoogleFonts.inter(
+                          color: Colors.black,
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 0.0,
+                          height: 1.2,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 59.0),
+                Padding(
+                  padding: const EdgeInsetsDirectional.only(start: 34.0),
+                  child: SizedBox(
+                    width: 273.0,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        _PasswordInput(
+                          controller: _model.updatePasswordFieldTextController!,
+                          focusNode: _model.updatePasswordFieldFocusNode!,
+                          hintText: appLabels.get(
+                            'update_password.new_password',
+                          ),
+                          textInputAction: TextInputAction.next,
+                          borderColor: Colors.black,
+                          onChanged: (value) {
+                            _model.password = value;
+                            safeSetState(() {});
+                          },
+                        ),
+                        const SizedBox(height: 22.0),
+                        _PasswordInput(
+                          controller:
+                              _model.confirmUpdatePasswordFieldTextController!,
+                          focusNode:
+                              _model.confirmUpdatePasswordFieldFocusNode!,
+                          hintText: appLabels.get(
+                            'update_password.repeat_password',
+                          ),
+                          textInputAction: TextInputAction.done,
+                          borderColor: hasError
+                              ? FloterTheme.of(context).primary
+                              : Colors.black,
+                          onChanged: (value) {
+                            _model.confirmPassword = value;
+                            safeSetState(() {});
+                          },
+                          onSubmitted: (_) => _savePassword(),
+                        ),
+                        const SizedBox(height: 14.0),
+                        SizedBox(
+                          height: 24.0,
+                          child: hasError
+                              ? Text(
+                                  appLabels.get(
+                                    'update_password.passwords_do_not_match',
+                                  ),
+                                  style: GoogleFonts.inter(
+                                    color: FloterTheme.of(context).primary,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 0.0,
+                                    height: 1.2,
+                                  ),
+                                )
+                              : null,
+                        ),
+                        SizedBox(height: hasError ? 20.0 : 17.0),
+                        InkWell(
+                          borderRadius: BorderRadius.circular(15.0),
+                          onTap: _hasInput ? _savePassword : null,
+                          child: Container(
+                            width: 273.0,
+                            height: 48.0,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: _hasInput
+                                  ? Colors.white
+                                  : const Color(0xFFD9D9D9),
+                              borderRadius: BorderRadius.circular(15.0),
+                              border: _hasInput
+                                  ? Border.all(
+                                      color: Colors.black,
+                                      width: 0.5,
+                                    )
+                                  : null,
+                            ),
+                            child: Text(
+                              appLabels.get('update_password.submit_button'),
+                              style: GoogleFonts.inter(
+                                color: Colors.black,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w400,
+                                letterSpacing: 0.0,
+                                height: 1.2,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class _PasswordInput extends StatelessWidget {
+  const _PasswordInput({
+    required this.controller,
+    required this.focusNode,
+    required this.hintText,
+    required this.borderColor,
+    required this.onChanged,
+    required this.textInputAction,
+    this.onSubmitted,
+  });
+
+  final TextEditingController controller;
+  final FocusNode focusNode;
+  final String hintText;
+  final Color borderColor;
+  final ValueChanged<String> onChanged;
+  final TextInputAction textInputAction;
+  final ValueChanged<String>? onSubmitted;
+
+  @override
+  Widget build(BuildContext context) {
+    final border = OutlineInputBorder(
+      borderSide: BorderSide(
+        color: borderColor,
+        width: 0.5,
+      ),
+      borderRadius: BorderRadius.circular(15.0),
+    );
+
+    return SizedBox(
+      height: 38.0,
+      child: TextFormField(
+        controller: controller,
+        focusNode: focusNode,
+        obscureText: true,
+        textInputAction: textInputAction,
+        onChanged: onChanged,
+        onFieldSubmitted: onSubmitted,
+        cursorColor: FloterTheme.of(context).primary,
+        style: GoogleFonts.inter(
+          color: Colors.black,
+          fontSize: 16.0,
+          fontWeight: FontWeight.w400,
+          letterSpacing: 0.0,
+          height: 1.2,
+        ),
+        decoration: InputDecoration(
+          isDense: true,
+          hintText: hintText,
+          hintStyle: GoogleFonts.inter(
+            color: Colors.black,
+            fontSize: 16.0,
+            fontWeight: FontWeight.w400,
+            letterSpacing: 0.0,
+            height: 1.2,
+          ),
+          contentPadding:
+              const EdgeInsetsDirectional.fromSTEB(15.0, 9.0, 15.0, 9.0),
+          enabledBorder: border,
+          focusedBorder: border,
+          errorBorder: border,
+          focusedErrorBorder: border,
+          filled: true,
+          fillColor: Colors.white,
         ),
       ),
     );

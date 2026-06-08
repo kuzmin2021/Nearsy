@@ -78,6 +78,15 @@
     "log_out": "Log out",
     "chats": "Chats"
   },
+  "two_factor_auth": {
+    "title": "Set up two-factor authentication",
+    "intro": "Secure your account with both a code sent by text message and a code sent by email.",
+    "sms_title": "Verification by text message is enabled by default",
+    "sms_description": "We'll ask for a code every time you log in.",
+    "email_title": "Email authentication",
+    "email_description": "We'll ask for a code every time you log in.",
+    "email_required": "Add and verify your email address before enabling two-factor authentication."
+  },
   "search_preferences": {
     "title": "Search Preferences",
     "who_you_want_to_date": "Who you want to date:",
@@ -279,11 +288,14 @@
     "send_reset_link": "Send reset link"
   },
   "update_password": {
-    "title": "Update password",
+    "title": "Change your password",
     "choose_a_new_password_for_your_nearsy_account": "Choose a new password for your Nearsy account.",
-    "new_password": "New password",
-    "repeat_password": "Repeat password",
-    "submit_button": "Update password"
+    "new_password": "Your new password",
+    "repeat_password": "Enter again",
+    "submit_button": "Save",
+    "passwords_do_not_match": "Passwords do not match",
+    "password_updated": "Password updated.",
+    "save_error": "Could not update password."
   },
   "lookaround_bottom_nav": {
     "profile": "Profile",

@@ -21,6 +21,9 @@ export '/delete_account_page/delete_account_page_widget.dart'
     show DeleteAccountPageWidget;
 export '/account_email_page/account_email_page_widget.dart'
     show AccountEmailPageWidget;
+
+export '/two_factor_auth_page/two_factor_auth_page_widget.dart'
+    show TwoFactorAuthPageWidget;
 export '/profile_about_me_page/profile_about_me_page_widget.dart'
     show ProfileAboutMePageWidget;
 export '/profile_gender_page/profile_gender_page_widget.dart'

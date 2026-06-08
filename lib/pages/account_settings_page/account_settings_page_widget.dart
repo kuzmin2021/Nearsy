@@ -427,6 +427,7 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           actionLabel: AppLabels.of(context).get(
                             'account_settings.edit_phone' /* Edit */,
                           ),
+
                         ),
                         _accountRow(
                           context,
@@ -453,7 +454,9 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                             'account_settings.manage' /* Manage */,
                           ),
                           onActionTap: () async {
-                            context.pushNamed(EmailAuthPageWidget.routeName);
+                            context.pushNamed(
+                              TwoFactorAuthPageWidget.routeName,
+                            );
                           },
                         ),
                         const SizedBox(height: 30.0),
