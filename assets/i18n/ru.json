@@ -312,7 +312,7 @@
     },
     "kids": {
       "yes": "Да",
-      "no": "Нетй",
+      "no": "Нет",
       "prefer_not_to_say": "Предпочитаю не говорить"
     },
     "relationship_type": {
