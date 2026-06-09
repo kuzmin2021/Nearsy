@@ -29,7 +29,9 @@
   "people": {
     "lookaround": "Lookaround",
     "guess_what_i": "Guess what I",
-    "title": "People"
+    "title": "People",
+    "no_more_profiles": "That's everyone for now",
+    "empty_state": "You've seen all profiles matching your filters in this area. Try adjusting your filters or check back later - someone new might show up."
   },
   "liked_you": {
     "title": "Liked You",
