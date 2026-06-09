@@ -70,8 +70,7 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                       FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 40.0,
-                        fillColor:
-                            FloterTheme.of(context).primaryBackground,
+                        fillColor: FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
                           color: FloterTheme.of(context).primaryText,
@@ -88,24 +87,23 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                             'chat_preferences.title' /* Chat Preferences */,
                           ),
                           maxLines: 2,
-                          style:
-                              FloterTheme.of(context).titleLarge.override(
-                                    font: GoogleFonts.interTight(
-                                      fontWeight: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontStyle,
-                                  ),
+                          style: FloterTheme.of(context).titleLarge.override(
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontWeight,
+                                  fontStyle: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontStyle,
+                                ),
+                                letterSpacing: 0.0,
+                                fontWeight: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontWeight,
+                                fontStyle: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ].divide(SizedBox(width: 12.0)),
@@ -116,17 +114,14 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                     ),
                     style: FloterTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
-                            fontWeight: FloterTheme.of(context)
-                                .bodyMedium
-                                .fontWeight,
-                            fontStyle: FloterTheme.of(context)
-                                .bodyMedium
-                                .fontStyle,
+                            fontWeight:
+                                FloterTheme.of(context).bodyMedium.fontWeight,
+                            fontStyle:
+                                FloterTheme.of(context).bodyMedium.fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FloterTheme.of(context)
-                              .bodyMedium
-                              .fontWeight,
+                          fontWeight:
+                              FloterTheme.of(context).bodyMedium.fontWeight,
                           fontStyle:
                               FloterTheme.of(context).bodyMedium.fontStyle,
                         ),
@@ -137,17 +132,14 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FloterTheme.of(context)
-                                .titleSmall
-                                .fontWeight,
-                            fontStyle: FloterTheme.of(context)
-                                .titleSmall
-                                .fontStyle,
+                            fontWeight:
+                                FloterTheme.of(context).titleSmall.fontWeight,
+                            fontStyle:
+                                FloterTheme.of(context).titleSmall.fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FloterTheme.of(context)
-                              .titleSmall
-                              .fontWeight,
+                          fontWeight:
+                              FloterTheme.of(context).titleSmall.fontWeight,
                           fontStyle:
                               FloterTheme.of(context).titleSmall.fontStyle,
                         ),
@@ -177,8 +169,7 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 Icons.do_not_disturb_on,
-                                color:
-                                    FloterTheme.of(context).secondaryText,
+                                color: FloterTheme.of(context).secondaryText,
                                 size: 24.0,
                               ),
                             ),
@@ -188,9 +179,7 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 3,
-                              style: FloterTheme.of(context)
-                                  .bodySmall
-                                  .override(
+                              style: FloterTheme.of(context).bodySmall.override(
                                     font: GoogleFonts.inter(
                                       fontWeight: FloterTheme.of(context)
                                           .bodySmall
@@ -242,9 +231,7 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 3,
-                              style: FloterTheme.of(context)
-                                  .bodySmall
-                                  .override(
+                              style: FloterTheme.of(context).bodySmall.override(
                                     font: GoogleFonts.inter(
                                       fontWeight: FloterTheme.of(context)
                                           .bodySmall
@@ -286,8 +273,7 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 Icons.public,
-                                color:
-                                    FloterTheme.of(context).secondaryText,
+                                color: FloterTheme.of(context).secondaryText,
                                 size: 24.0,
                               ),
                             ),
@@ -297,9 +283,7 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 3,
-                              style: FloterTheme.of(context)
-                                  .bodySmall
-                                  .override(
+                              style: FloterTheme.of(context).bodySmall.override(
                                     font: GoogleFonts.inter(
                                       fontWeight: FloterTheme.of(context)
                                           .bodySmall
@@ -329,17 +313,14 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FloterTheme.of(context)
-                                .titleSmall
-                                .fontWeight,
-                            fontStyle: FloterTheme.of(context)
-                                .titleSmall
-                                .fontStyle,
+                            fontWeight:
+                                FloterTheme.of(context).titleSmall.fontWeight,
+                            fontStyle:
+                                FloterTheme.of(context).titleSmall.fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FloterTheme.of(context)
-                              .titleSmall
-                              .fontWeight,
+                          fontWeight:
+                              FloterTheme.of(context).titleSmall.fontWeight,
                           fontStyle:
                               FloterTheme.of(context).titleSmall.fontStyle,
                         ),

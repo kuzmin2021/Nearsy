@@ -1,4 +1,4 @@
-{
+﻿{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "相约近处。保持轻松",
@@ -311,8 +311,8 @@
       "prefer_not_to_say": "宁愿不说"
     },
     "kids": {
-      "yes": "有孩子",
-      "no": "没有孩子",
+      "yes": "是的",
+      "no": "不",
       "prefer_not_to_say": "宁愿不说"
     },
     "relationship_type": {
@@ -375,7 +375,7 @@
     "arabic": "阿拉伯",
     "armenian": "亚美尼亚语",
     "bengali": "孟加拉",
-    "catalan": "加泰罗尼亚语"
+    "catalan": "加泰罗尼亚语",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "编辑邮箱",

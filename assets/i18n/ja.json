@@ -1,4 +1,4 @@
-{
+﻿{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "近くで会いましょう。簡単にしてください",
@@ -311,8 +311,8 @@
       "prefer_not_to_say": "言わないほうがいい"
     },
     "kids": {
-      "yes": "子供がいる",
-      "no": "子供はいない",
+      "yes": "はい",
+      "no": "いいえ",
       "prefer_not_to_say": "言わないほうがいい"
     },
     "relationship_type": {
@@ -375,7 +375,7 @@
     "arabic": "アラビア語",
     "armenian": "アルメニア語",
     "bengali": "ベンガル語",
-    "catalan": "カタルーニャ語"
+    "catalan": "カタルーニャ語",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "メールを編集",

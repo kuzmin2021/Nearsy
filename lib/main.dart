@@ -15,9 +15,11 @@ import '/services/i18n/app_labels_delegate.dart';
 import 'floter/floter_util.dart';
 import 'floter/internationalization.dart';
 import 'floter/nav/nav.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  GoogleFonts.config.allowRuntimeFetching = false;
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 

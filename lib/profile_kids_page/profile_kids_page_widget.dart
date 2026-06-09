@@ -1,4 +1,4 @@
-import '/backend/supabase/supabase.dart';
+﻿import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -45,7 +45,7 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
           .eq('user_id', userId)
           .limit(1);
       final profile = profiles.isNotEmpty ? profiles.first : null;
-      const options = <String>['i_have_kids', 'i_dont_have_kids'];
+      const options = <String>['yes', 'no'];
       String normalizeChoice(dynamic rawValue) {
         final rawText = (rawValue?.toString() ?? '').trim();
         if (rawText.isEmpty) {
@@ -57,14 +57,8 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
             .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
             .replaceAll(RegExp(r'_+'), '_')
             .replaceAll(RegExp(r'^_|_$'), '');
-        const aliases = {
-          'female': 'woman',
-          'male': 'man',
-          'nonbinary': 'non_binary',
-          'bachelor_degree': 'bachelors_degree',
-          'master_degree': 'masters_degree',
-        };
-        final normalized = aliases[normalizedRaw] ?? normalizedRaw;
+        
+        final normalized = normalizedRaw;
         for (final option in options) {
           if (option.toLowerCase() == normalized) {
             return option;
@@ -72,14 +66,14 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
         }
         if (normalized == 'true') {
           for (final option in options) {
-            if (option.toLowerCase() == 'i_have_kids') {
+            if (option.toLowerCase() == 'yes') {
               return option;
             }
           }
         }
         if (normalized == 'false') {
           for (final option in options) {
-            if (option.toLowerCase() == 'i_dont_have_kids') {
+            if (option.toLowerCase() == 'no') {
               return option;
             }
           }
@@ -89,7 +83,7 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
 
       final rawValue = profile?['kids'];
       if (rawValue is bool) {
-        _model.kids = rawValue ? 'i_have_kids' : 'i_dont_have_kids';
+        _model.kids = rawValue ? 'yes' : 'no';
       } else {
         final rawText = (rawValue as String?)?.trim() ?? '';
         _model.kids = normalizeChoice(rawText);
@@ -134,8 +128,7 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
                       FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 64.0,
-                        fillColor:
-                            FloterTheme.of(context).primaryBackground,
+                        fillColor: FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
                           color: FloterTheme.of(context).primaryText,
@@ -163,14 +156,8 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
                                 .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
                                 .replaceAll(RegExp(r'_+'), '_')
                                 .replaceAll(RegExp(r'^_|_$'), '');
-                            const aliases = {
-                              'female': 'woman',
-                              'male': 'man',
-                              'nonbinary': 'non_binary',
-                              'bachelor_degree': 'bachelors_degree',
-                              'master_degree': 'masters_degree',
-                            };
-                            return aliases[normalized] ?? normalized;
+                            
+                            return normalized;
                           }
 
                           final value =
@@ -215,24 +202,23 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
                             'profile_kids.kids' /* Kids: */,
                           ),
                           maxLines: 2,
-                          style:
-                              FloterTheme.of(context).titleLarge.override(
-                                    font: GoogleFonts.interTight(
-                                      fontWeight: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontStyle,
-                                  ),
+                          style: FloterTheme.of(context).titleLarge.override(
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontWeight,
+                                  fontStyle: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontStyle,
+                                ),
+                                letterSpacing: 0.0,
+                                fontWeight: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontWeight,
+                                fontStyle: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ].divide(SizedBox(width: 8.0)),
@@ -257,7 +243,7 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  _model.kids = 'i_have_kids';
+                                  _model.kids = 'yes';
                                   safeSetState(() {});
                                 },
                                 child: Container(
@@ -281,22 +267,20 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
                                           alignment:
                                               AlignmentDirectional(0.0, 0.0),
                                           children: [
-                                            if (_model.kids == 'i_have_kids')
+                                            if (_model.kids == 'yes')
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.kids == 'i_have_kids'))
+                                            if (!(_model.kids == 'yes'))
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -308,20 +292,18 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
                                         flex: 1,
                                         child: Text(
                                           functions.effectiveProfileAttribute(
-                                              'kids', '', 'i_have_kids')!,
+                                              'kids', '', 'yes')!,
                                           maxLines: 1,
                                           style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -348,7 +330,7 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  _model.kids = 'i_dont_have_kids';
+                                  _model.kids = 'no';
                                   safeSetState(() {});
                                 },
                                 child: Container(
@@ -373,23 +355,21 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
                                               AlignmentDirectional(0.0, 0.0),
                                           children: [
                                             if (_model.kids ==
-                                                'i_dont_have_kids')
+                                                'no')
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
                                               ),
                                             if (!(_model.kids ==
-                                                'i_dont_have_kids'))
+                                                'no'))
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -401,20 +381,18 @@ class _ProfileKidsPageWidgetState extends State<ProfileKidsPageWidget> {
                                         flex: 1,
                                         child: Text(
                                           functions.effectiveProfileAttribute(
-                                              'kids', '', 'i_dont_have_kids')!,
+                                              'kids', '', 'no')!,
                                           maxLines: 1,
                                           style: FloterTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),

@@ -1,4 +1,4 @@
-{
+﻿{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "దగ్గర కలుస్తారు. సులభంగా ఉంచండి",
@@ -311,8 +311,8 @@
       "prefer_not_to_say": "చెప్పకూడదని ఇష్టపడతారు"
     },
     "kids": {
-      "yes": "పిల్లలను కలిగి ఉండండి",
-      "no": "పిల్లలు వద్దు",
+      "yes": "అవును",
+      "no": "నం",
       "prefer_not_to_say": "చెప్పకూడదని ఇష్టపడతారు"
     },
     "relationship_type": {
@@ -375,7 +375,7 @@
     "arabic": "అరబిక్",
     "armenian": "అర్మేనియన్",
     "bengali": "బెంగాలీ",
-    "catalan": "కాటలాన్"
+    "catalan": "కాటలాన్",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "ఇమెయిల్ సవరించు",

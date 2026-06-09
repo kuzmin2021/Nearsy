@@ -86,17 +86,14 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                       .titleLarge
                                       .override(
                                         font: GoogleFonts.interTight(
-                                          fontWeight:
-                                              FloterTheme.of(context)
-                                                  .titleLarge
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FloterTheme.of(context)
-                                                  .titleLarge
-                                                  .fontStyle,
+                                          fontWeight: FloterTheme.of(context)
+                                              .titleLarge
+                                              .fontWeight,
+                                          fontStyle: FloterTheme.of(context)
+                                              .titleLarge
+                                              .fontStyle,
                                         ),
-                                        color: FloterTheme.of(context)
-                                            .primary,
+                                        color: FloterTheme.of(context).primary,
                                         letterSpacing: 0.0,
                                         fontWeight: FloterTheme.of(context)
                                             .titleLarge
@@ -111,8 +108,8 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                             FloterIconButton(
                               borderRadius: 8.0,
                               buttonSize: 40.0,
-                              fillColor: FloterTheme.of(context)
-                                  .primaryBackground,
+                              fillColor:
+                                  FloterTheme.of(context).primaryBackground,
                               icon: Icon(
                                 Icons.tune,
                                 color: FloterTheme.of(context).primaryText,
@@ -181,13 +178,11 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                               .override(
                                                 font: GoogleFonts.interTight(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .titleSmall
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .titleSmall
                                                           .fontStyle,
                                                 ),
@@ -212,19 +207,16 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodySmall
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodySmall
                                                           .fontStyle,
                                                 ),
-                                                color:
-                                                    FloterTheme.of(context)
-                                                        .secondaryText,
+                                                color: FloterTheme.of(context)
+                                                    .secondaryText,
                                                 letterSpacing: 0.0,
                                                 fontWeight:
                                                     FloterTheme.of(context)
@@ -242,8 +234,8 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                   ),
                                   Icon(
                                     Icons.chat_bubble_outline,
-                                    color: FloterTheme.of(context)
-                                        .secondaryText,
+                                    color:
+                                        FloterTheme.of(context).secondaryText,
                                     size: 20.0,
                                   ),
                                   Icon(
@@ -307,10 +299,9 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                                   FloterTheme.of(context)
                                                       .titleSmall
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .titleSmall
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .titleSmall
+                                                  .fontStyle,
                                             ),
                                       ),
                                       Text(
@@ -331,18 +322,16 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                                         .bodySmall
                                                         .fontStyle,
                                               ),
-                                              color:
-                                                  FloterTheme.of(context)
-                                                      .secondaryText,
+                                              color: FloterTheme.of(context)
+                                                  .secondaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
                                                   FloterTheme.of(context)
                                                       .bodySmall
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodySmall
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodySmall
+                                                  .fontStyle,
                                             ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
@@ -351,8 +340,7 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                 ),
                                 Icon(
                                   Icons.chat_bubble_outline,
-                                  color: FloterTheme.of(context)
-                                      .secondaryText,
+                                  color: FloterTheme.of(context).secondaryText,
                                   size: 20.0,
                                 ),
                                 Icon(
@@ -415,10 +403,9 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                                   FloterTheme.of(context)
                                                       .titleSmall
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .titleSmall
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .titleSmall
+                                                  .fontStyle,
                                             ),
                                       ),
                                       Text(
@@ -439,18 +426,16 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                                         .bodySmall
                                                         .fontStyle,
                                               ),
-                                              color:
-                                                  FloterTheme.of(context)
-                                                      .secondaryText,
+                                              color: FloterTheme.of(context)
+                                                  .secondaryText,
                                               letterSpacing: 0.0,
                                               fontWeight:
                                                   FloterTheme.of(context)
                                                       .bodySmall
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodySmall
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodySmall
+                                                  .fontStyle,
                                             ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
@@ -459,8 +444,7 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                                 ),
                                 Icon(
                                   Icons.chat_bubble_outline,
-                                  color: FloterTheme.of(context)
-                                      .secondaryText,
+                                  color: FloterTheme.of(context).secondaryText,
                                   size: 20.0,
                                 ),
                                 Icon(

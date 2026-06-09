@@ -13,6 +13,29 @@ class SupaFlow {
   final _supabase = Supabase.instance.client;
   static SupabaseClient get client => instance._supabase;
 
+  static String publicPhotoUrl(String storagePath) {
+    final encodedPath =
+        storagePath.split('/').map(Uri.encodeComponent).join('/');
+    return '${AppConfig.supabaseUrl}/storage/v1/object/public/user_photos/$encodedPath';
+  }
+
+  static String? resolvePhotoUrl(dynamic raw) {
+    final path = raw is String ? raw.trim() : '';
+    if (path.isEmpty) return '';
+    if (path.startsWith('http')) return path;
+    return publicPhotoUrl(path);
+  }
+
+  static String? storagePathFromPhotoUrl(String photoUrl) {
+    final uri = Uri.tryParse(photoUrl.trim());
+    if (uri == null) return null;
+    const marker = '/storage/v1/object/public/user_photos/';
+    final index = uri.path.indexOf(marker);
+    if (index < 0) return null;
+    final encodedPath = uri.path.substring(index + marker.length);
+    return Uri.decodeComponent(encodedPath);
+  }
+
   static Future initialize() => Supabase.initialize(
         url: AppConfig.supabaseUrl,
         headers: {

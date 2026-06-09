@@ -33,8 +33,7 @@ class ProfileAttributeTile extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding:
-              const EdgeInsetsDirectional.fromSTEB(9, 11, 9, 11),
+          padding: const EdgeInsetsDirectional.fromSTEB(9, 11, 9, 11),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

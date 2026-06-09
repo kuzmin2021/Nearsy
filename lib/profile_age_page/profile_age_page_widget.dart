@@ -1,4 +1,4 @@
-import '/backend/supabase/supabase.dart';
+﻿import '/backend/supabase/supabase.dart';
 import '/floter/floter_drop_down.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
@@ -275,8 +275,7 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                       FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 64.0,
-                        fillColor:
-                            FloterTheme.of(context).primaryBackground,
+                        fillColor: FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
                           color: FloterTheme.of(context).primaryText,
@@ -304,14 +303,8 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                 .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
                                 .replaceAll(RegExp(r'_+'), '_')
                                 .replaceAll(RegExp(r'^_|_$'), '');
-                            const aliases = {
-                              'female': 'woman',
-                              'male': 'man',
-                              'nonbinary': 'non_binary',
-                              'bachelor_degree': 'bachelors_degree',
-                              'master_degree': 'masters_degree',
-                            };
-                            return aliases[normalized] ?? normalized;
+                            
+                            return normalized;
                           }
 
                           String cleanBirthdayPart(String? raw) {
@@ -596,24 +589,23 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                             'profile_age.when_were_you_born' /* When were you born: */,
                           ),
                           maxLines: 2,
-                          style:
-                              FloterTheme.of(context).titleLarge.override(
-                                    font: GoogleFonts.interTight(
-                                      fontWeight: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontStyle,
-                                  ),
+                          style: FloterTheme.of(context).titleLarge.override(
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontWeight,
+                                  fontStyle: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontStyle,
+                                ),
+                                letterSpacing: 0.0,
+                                fontWeight: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontWeight,
+                                fontStyle: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ].divide(SizedBox(width: 8.0)),
@@ -778,10 +770,9 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                                   FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                             ),
                                         icon: Icon(
                                           Icons.keyboard_arrow_down_rounded,
@@ -793,8 +784,7 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                             .secondaryBackground,
                                         elevation: 2.0,
                                         borderColor:
-                                            FloterTheme.of(context)
-                                                .alternate,
+                                            FloterTheme.of(context).alternate,
                                         borderWidth: 1.0,
                                         borderRadius: 8.0,
                                         margin: EdgeInsetsDirectional.fromSTEB(
@@ -803,8 +793,7 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                         isOverButton: false,
                                         isSearchable: false,
                                         isMultiSelect: false,
-                                        labelText:
-                                            AppLabels.of(context).get(
+                                        labelText: AppLabels.of(context).get(
                                           'profile_age.day' /* Day */,
                                         ),
                                         labelTextStyle: TextStyle(),
@@ -893,10 +882,9 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                                   FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                             ),
                                         icon: Icon(
                                           Icons.keyboard_arrow_down_rounded,
@@ -908,8 +896,7 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                             .secondaryBackground,
                                         elevation: 2.0,
                                         borderColor:
-                                            FloterTheme.of(context)
-                                                .alternate,
+                                            FloterTheme.of(context).alternate,
                                         borderWidth: 1.0,
                                         borderRadius: 8.0,
                                         margin: EdgeInsetsDirectional.fromSTEB(
@@ -918,8 +905,7 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                         isOverButton: false,
                                         isSearchable: false,
                                         isMultiSelect: false,
-                                        labelText:
-                                            AppLabels.of(context).get(
+                                        labelText: AppLabels.of(context).get(
                                           'profile_age.month' /* Month */,
                                         ),
                                         labelTextStyle: TextStyle(),
@@ -1272,10 +1258,9 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                                   FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                             ),
                                         icon: Icon(
                                           Icons.keyboard_arrow_down_rounded,
@@ -1287,8 +1272,7 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                             .secondaryBackground,
                                         elevation: 2.0,
                                         borderColor:
-                                            FloterTheme.of(context)
-                                                .alternate,
+                                            FloterTheme.of(context).alternate,
                                         borderWidth: 1.0,
                                         borderRadius: 8.0,
                                         margin: EdgeInsetsDirectional.fromSTEB(
@@ -1297,8 +1281,7 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                         isOverButton: false,
                                         isSearchable: false,
                                         isMultiSelect: false,
-                                        labelText:
-                                            AppLabels.of(context).get(
+                                        labelText: AppLabels.of(context).get(
                                           'profile_age.year' /* Year */,
                                         ),
                                         labelTextStyle: TextStyle(),
@@ -1314,14 +1297,12 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                                       .bodySmall
                                       .override(
                                         font: GoogleFonts.inter(
-                                          fontWeight:
-                                              FloterTheme.of(context)
-                                                  .bodySmall
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FloterTheme.of(context)
-                                                  .bodySmall
-                                                  .fontStyle,
+                                          fontWeight: FloterTheme.of(context)
+                                              .bodySmall
+                                              .fontWeight,
+                                          fontStyle: FloterTheme.of(context)
+                                              .bodySmall
+                                              .fontStyle,
                                         ),
                                         color: FloterTheme.of(context)
                                             .secondaryText,

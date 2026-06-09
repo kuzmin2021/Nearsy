@@ -54,7 +54,7 @@ class ProfileEditorShell extends StatelessWidget {
                           size: 48,
                         ),
                         onPressed:
-                          onBack ?? () async => Navigator.of(context).pop(),
+                            onBack ?? () async => Navigator.of(context).pop(),
                       ),
                       Expanded(
                         flex: 1,
@@ -76,8 +76,8 @@ class ProfileEditorShell extends StatelessWidget {
                   ),
                   if (subtitle != null)
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
-                          20, 0, 20, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                       child: Text(
                         subtitle!,
                         style: theme.bodyMedium.override(

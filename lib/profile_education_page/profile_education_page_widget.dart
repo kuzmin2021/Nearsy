@@ -1,4 +1,4 @@
-import '/backend/supabase/supabase.dart';
+﻿import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -67,14 +67,8 @@ class _ProfileEducationPageWidgetState
             .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
             .replaceAll(RegExp(r'_+'), '_')
             .replaceAll(RegExp(r'^_|_$'), '');
-        const aliases = {
-          'female': 'woman',
-          'male': 'man',
-          'nonbinary': 'non_binary',
-          'bachelor_degree': 'bachelors_degree',
-          'master_degree': 'masters_degree',
-        };
-        final normalized = aliases[normalizedRaw] ?? normalizedRaw;
+        
+        final normalized = normalizedRaw;
         for (final option in options) {
           if (option.toLowerCase() == normalized) {
             return option;
@@ -139,8 +133,7 @@ class _ProfileEducationPageWidgetState
                       FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 64.0,
-                        fillColor:
-                            FloterTheme.of(context).primaryBackground,
+                        fillColor: FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
                           color: FloterTheme.of(context).primaryText,
@@ -168,14 +161,8 @@ class _ProfileEducationPageWidgetState
                                 .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
                                 .replaceAll(RegExp(r'_+'), '_')
                                 .replaceAll(RegExp(r'^_|_$'), '');
-                            const aliases = {
-                              'female': 'woman',
-                              'male': 'man',
-                              'nonbinary': 'non_binary',
-                              'bachelor_degree': 'bachelors_degree',
-                              'master_degree': 'masters_degree',
-                            };
-                            return aliases[normalized] ?? normalized;
+                            
+                            return normalized;
                           }
 
                           final value =
@@ -220,24 +207,23 @@ class _ProfileEducationPageWidgetState
                             'profile_education.my_education' /* My education: */,
                           ),
                           maxLines: 2,
-                          style:
-                              FloterTheme.of(context).titleLarge.override(
-                                    font: GoogleFonts.interTight(
-                                      fontWeight: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontStyle,
-                                  ),
+                          style: FloterTheme.of(context).titleLarge.override(
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontWeight,
+                                  fontStyle: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontStyle,
+                                ),
+                                letterSpacing: 0.0,
+                                fontWeight: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontWeight,
+                                fontStyle: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ].divide(SizedBox(width: 8.0)),
@@ -255,9 +241,7 @@ class _ProfileEducationPageWidgetState
                             AppLabels.of(context).get(
                               'profile_education.pick_the_closest_match' /* Pick the closest match */,
                             ),
-                            style: FloterTheme.of(context)
-                                .bodyMedium
-                                .override(
+                            style: FloterTheme.of(context).bodyMedium.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodyMedium
@@ -266,8 +250,7 @@ class _ProfileEducationPageWidgetState
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .bodyMedium
@@ -317,8 +300,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -328,8 +310,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -348,13 +329,11 @@ class _ProfileEducationPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -410,8 +389,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -421,8 +399,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -443,13 +420,11 @@ class _ProfileEducationPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -505,8 +480,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -516,8 +490,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -538,13 +511,11 @@ class _ProfileEducationPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -600,8 +571,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -611,8 +581,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -633,13 +602,11 @@ class _ProfileEducationPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -695,8 +662,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -706,8 +672,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -728,13 +693,11 @@ class _ProfileEducationPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -790,8 +753,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -801,8 +763,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -823,13 +784,11 @@ class _ProfileEducationPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -884,8 +843,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -894,8 +852,7 @@ class _ProfileEducationPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -914,13 +871,11 @@ class _ProfileEducationPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),

@@ -133,8 +133,7 @@ class _HideAccountPageWidgetState extends State<HideAccountPageWidget> {
     try {
       await SupaFlow.client
           .from('profiles')
-          .update({'is_hidden': nextValue})
-          .eq('user_id', userId);
+          .update({'is_hidden': nextValue}).eq('user_id', userId);
       if (!mounted) {
         return;
       }
@@ -172,10 +171,10 @@ class _HideAccountPageWidgetState extends State<HideAccountPageWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final labelKey =
-        _isHidden ? 'hide_account.already_hidden_label' : 'hide_account.label_1';
-    final buttonKey =
-        _isHidden ? 'hide_account.unhide' : 'hide_account.hide';
+    final labelKey = _isHidden
+        ? 'hide_account.already_hidden_label'
+        : 'hide_account.label_1';
+    final buttonKey = _isHidden ? 'hide_account.unhide' : 'hide_account.hide';
 
     return GestureDetector(
       onTap: () {

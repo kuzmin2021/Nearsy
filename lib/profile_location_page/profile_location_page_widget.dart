@@ -1,4 +1,4 @@
-import '/backend/supabase/supabase.dart';
+﻿import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -109,8 +109,7 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                       FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 64.0,
-                        fillColor:
-                            FloterTheme.of(context).primaryBackground,
+                        fillColor: FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
                           color: FloterTheme.of(context).primaryText,
@@ -138,14 +137,8 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                                 .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
                                 .replaceAll(RegExp(r'_+'), '_')
                                 .replaceAll(RegExp(r'^_|_$'), '');
-                            const aliases = {
-                              'female': 'woman',
-                              'male': 'man',
-                              'nonbinary': 'non_binary',
-                              'bachelor_degree': 'bachelors_degree',
-                              'master_degree': 'masters_degree',
-                            };
-                            return aliases[normalized] ?? normalized;
+                            
+                            return normalized;
                           }
 
                           final value =
@@ -180,24 +173,23 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                             'profile_location.my_location' /* My location: */,
                           ),
                           maxLines: 2,
-                          style:
-                              FloterTheme.of(context).titleLarge.override(
-                                    font: GoogleFonts.interTight(
-                                      fontWeight: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontStyle,
-                                  ),
+                          style: FloterTheme.of(context).titleLarge.override(
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontWeight,
+                                  fontStyle: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontStyle,
+                                ),
+                                letterSpacing: 0.0,
+                                fontWeight: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontWeight,
+                                fontStyle: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ].divide(SizedBox(width: 8.0)),
@@ -237,14 +229,12 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.inter(
-                                          fontWeight:
-                                              FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
+                                          fontWeight: FloterTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FloterTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                         ),
                                         letterSpacing: 0.0,
                                         fontWeight: FloterTheme.of(context)
@@ -263,9 +253,7 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                               'profile_location.detected_location_guboshlyopsk_zabuldygovo' /* Detected location: Guboshlyops... */,
                             ),
                             maxLines: 2,
-                            style: FloterTheme.of(context)
-                                .bodyMedium
-                                .override(
+                            style: FloterTheme.of(context).bodyMedium.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodyMedium
@@ -287,9 +275,7 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                             AppLabels.of(context).get(
                               'profile_location.status_in_nearby_local' /* Status in Nearby: Local */,
                             ),
-                            style: FloterTheme.of(context)
-                                .bodyMedium
-                                .override(
+                            style: FloterTheme.of(context).bodyMedium.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodyMedium
@@ -298,8 +284,7 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FloterTheme.of(context)
-                                      .secondaryText,
+                                  color: FloterTheme.of(context).secondaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .bodyMedium
@@ -320,8 +305,7 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   Icons.check_box_outline_blank,
-                                  color: FloterTheme.of(context)
-                                      .secondaryText,
+                                  color: FloterTheme.of(context).secondaryText,
                                   size: 28.0,
                                 ),
                               ),
@@ -336,14 +320,12 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.inter(
-                                          fontWeight:
-                                              FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
+                                          fontWeight: FloterTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FloterTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                         ),
                                         letterSpacing: 0.0,
                                         fontWeight: FloterTheme.of(context)
@@ -361,8 +343,8 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                           Container(
                             height: 48.0,
                             decoration: BoxDecoration(
-                              color: FloterTheme.of(context)
-                                  .secondaryBackground,
+                              color:
+                                  FloterTheme.of(context).secondaryBackground,
                               borderRadius: BorderRadius.circular(4.0),
                             ),
                             child: Padding(
@@ -442,26 +424,24 @@ class _ProfileLocationPageWidgetState extends State<ProfileLocationPageWidget> {
                               'profile_location.label_1' /* In the Nearby section, others ... */,
                             ),
                             maxLines: 5,
-                            style:
-                                FloterTheme.of(context).bodySmall.override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FloterTheme.of(context)
-                                            .bodySmall
-                                            .fontWeight,
-                                        fontStyle: FloterTheme.of(context)
-                                            .bodySmall
-                                            .fontStyle,
-                                      ),
-                                      color: FloterTheme.of(context)
-                                          .secondaryText,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontStyle,
-                                    ),
+                            style: FloterTheme.of(context).bodySmall.override(
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FloterTheme.of(context)
+                                        .bodySmall
+                                        .fontWeight,
+                                    fontStyle: FloterTheme.of(context)
+                                        .bodySmall
+                                        .fontStyle,
+                                  ),
+                                  color: FloterTheme.of(context).secondaryText,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FloterTheme.of(context)
+                                      .bodySmall
+                                      .fontWeight,
+                                  fontStyle: FloterTheme.of(context)
+                                      .bodySmall
+                                      .fontStyle,
+                                ),
                           ),
                         ].divide(SizedBox(height: 18.0)),
                       ),

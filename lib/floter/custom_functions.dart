@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '/backend/supabase/supabase.dart';
@@ -106,14 +106,8 @@ String? effectiveProfileAttribute(
         .replaceAll(RegExp(r'[^a-z0-9\u0400-\u04FF]+'), '_')
         .replaceAll(RegExp(r'_+'), '_')
         .replaceAll(RegExp(r'^_|_$'), '');
-    const aliases = {
-      'female': 'woman',
-      'male': 'man',
-      'nonbinary': 'non_binary',
-      'bachelor_degree': 'bachelors_degree',
-      'master_degree': 'masters_degree',
-    };
-    return aliases[normalized] ?? normalized;
+    
+    return normalized;
   }
 
   final attr = clean(attribute);
@@ -393,10 +387,6 @@ String? effectiveProfileAttribute(
       'false': '\u041d\u0435\u0442 \u0434\u0435\u0442\u0435\u0439',
       'yes': '\u0415\u0441\u0442\u044c \u0434\u0435\u0442\u0438',
       'no': '\u041d\u0435\u0442 \u0434\u0435\u0442\u0435\u0439',
-      'i_have_kids': '\u0415\u0441\u0442\u044c \u0434\u0435\u0442\u0438',
-      'i_dont_have_kids': '\u041d\u0435\u0442 \u0434\u0435\u0442\u0435\u0439',
-      'i_have': '\u0415\u0441\u0442\u044c \u0434\u0435\u0442\u0438',
-      'i_dont_have': '\u041d\u0435\u0442 \u0434\u0435\u0442\u0435\u0439',
       'prefer_not_to_say':
           '\u041f\u0440\u0435\u0434\u043f\u043e\u0447\u0438\u0442\u0430\u044e \u043d\u0435 \u0433\u043e\u0432\u043e\u0440\u0438\u0442\u044c',
     },
@@ -547,7 +537,7 @@ bool? profileLanguageSelected(
           'norwegian',
       '\u0444\u0438\u043d\u0441\u043a\u0438\u0439': 'finnish',
     };
-    return aliases[normalized] ?? normalized;
+    return normalized;
   }
 
   final target = canonical(language);
@@ -613,7 +603,7 @@ String? profileLanguagesDisplay(List<String>? languages) {
           'norwegian',
       '\u0444\u0438\u043d\u0441\u043a\u0438\u0439': 'finnish',
     };
-    return aliases[normalized] ?? normalized;
+    return normalized;
   }
 
   String localeKey() {
@@ -791,7 +781,7 @@ String? profileLanguageLabel(String? language) {
           'norwegian',
       '\u0444\u0438\u043d\u0441\u043a\u0438\u0439': 'finnish',
     };
-    return aliases[normalized] ?? normalized;
+    return normalized;
   }
 
   String localeKey() {
@@ -982,7 +972,7 @@ String? profileLanguagesEffectiveDisplay(
           'norwegian',
       '\u0444\u0438\u043d\u0441\u043a\u0438\u0439': 'finnish',
     };
-    return aliases[normalized] ?? normalized;
+    return normalized;
   }
 
   List<String> parseItems(dynamic value) {

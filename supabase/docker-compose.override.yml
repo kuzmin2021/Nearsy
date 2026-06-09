@@ -1,0 +1,6 @@
+# Bind-mount storage to /data/supabase-storage instead of Docker volume
+# Requires: sudo mkdir -p /data/supabase-storage on remote
+services:
+  storage:
+    volumes:
+      - /data/supabase-storage:/var/lib/storage

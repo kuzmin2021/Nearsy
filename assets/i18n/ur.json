@@ -1,4 +1,4 @@
-{
+﻿{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "قریب سے ملو۔ اسے آسان رکھیں",
@@ -311,8 +311,8 @@
       "prefer_not_to_say": "نہ کہنے کو ترجیح دیں۔"
     },
     "kids": {
-      "yes": "بچے ہیں۔",
-      "no": "بچے نہیں ہیں۔",
+      "yes": "جی ہاں",
+      "no": "نہیں",
       "prefer_not_to_say": "نہ کہنے کو ترجیح دیں۔"
     },
     "relationship_type": {
@@ -375,7 +375,7 @@
     "arabic": "عربی",
     "armenian": "آرمینیائی",
     "bengali": "بنگالی",
-    "catalan": "کاتالان"
+    "catalan": "کاتالان",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "ای میل میں ترمیم کریں",

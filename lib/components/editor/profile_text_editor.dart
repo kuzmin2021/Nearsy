@@ -41,8 +41,7 @@ class ProfileTextEditor extends StatelessWidget {
                 borderRadius: BorderRadius.circular(4),
               ),
               child: Padding(
-                padding:
-                    const EdgeInsetsDirectional.fromSTEB(12, 8, 12, 8),
+                padding: const EdgeInsetsDirectional.fromSTEB(12, 8, 12, 8),
                 child: TextFormField(
                   controller: controller,
                   focusNode: focusNode,

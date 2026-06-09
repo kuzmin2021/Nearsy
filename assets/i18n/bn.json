@@ -1,4 +1,4 @@
-{
+﻿{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "কাছাকাছি দেখা। এটা সহজ রাখুন",
@@ -311,8 +311,8 @@
       "prefer_not_to_say": "না বলতে পছন্দ করেন"
     },
     "kids": {
-      "yes": "বাচ্চা আছে",
-      "no": "বাচ্চা নেই",
+      "yes": "হ্যাঁ",
+      "no": "না",
       "prefer_not_to_say": "না বলতে পছন্দ করেন"
     },
     "relationship_type": {
@@ -375,7 +375,7 @@
     "arabic": "আরবি",
     "armenian": "আর্মেনিয়ান",
     "bengali": "বাংলা",
-    "catalan": "কাতালান"
+    "catalan": "কাতালান",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "ইমেল সম্পাদনা করুন",

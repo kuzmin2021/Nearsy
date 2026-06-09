@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_util.dart';
 import '/index.dart';
@@ -54,7 +54,14 @@ class ProfilePageModel extends FloterModel<ProfilePageWidget> {
 
   String? profileSmoking = '';
 
-  List<String> profileGridSlots = ['__add_photo__', '__empty_photo__', '__empty_photo__', '__empty_photo__', '__empty_photo__', '__empty_photo__'];
+  List<String> profileGridSlots = [
+    '__add_photo__',
+    '__empty_photo__',
+    '__empty_photo__',
+    '__empty_photo__',
+    '__empty_photo__',
+    '__empty_photo__'
+  ];
   void addToProfileGridSlots(String item) => profileGridSlots.add(item);
   void removeFromProfileGridSlots(String item) => profileGridSlots.remove(item);
   void removeAtIndexFromProfileGridSlots(int index) =>

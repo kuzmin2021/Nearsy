@@ -6,4 +6,5 @@ export 'row.dart';
 export 'table.dart';
 
 export 'tables/profiles.dart';
+export 'tables/swipe_events.dart';
 export 'tables/user_photos.dart';

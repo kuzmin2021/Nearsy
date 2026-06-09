@@ -1,4 +1,4 @@
-import '/backend/supabase/supabase.dart';
+﻿import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -58,14 +58,8 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
             .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
             .replaceAll(RegExp(r'_+'), '_')
             .replaceAll(RegExp(r'^_|_$'), '');
-        const aliases = {
-          'female': 'woman',
-          'male': 'man',
-          'nonbinary': 'non_binary',
-          'bachelor_degree': 'bachelors_degree',
-          'master_degree': 'masters_degree',
-        };
-        final normalized = aliases[normalizedRaw] ?? normalizedRaw;
+        
+        final normalized = normalizedRaw;
         for (final option in options) {
           if (option.toLowerCase() == normalized) {
             return option;
@@ -130,8 +124,7 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                       FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 64.0,
-                        fillColor:
-                            FloterTheme.of(context).primaryBackground,
+                        fillColor: FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
                           color: FloterTheme.of(context).primaryText,
@@ -159,14 +152,8 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                 .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
                                 .replaceAll(RegExp(r'_+'), '_')
                                 .replaceAll(RegExp(r'^_|_$'), '');
-                            const aliases = {
-                              'female': 'woman',
-                              'male': 'man',
-                              'nonbinary': 'non_binary',
-                              'bachelor_degree': 'bachelors_degree',
-                              'master_degree': 'masters_degree',
-                            };
-                            return aliases[normalized] ?? normalized;
+                            
+                            return normalized;
                           }
 
                           final value =
@@ -211,24 +198,23 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                             'profile_smoking.my_smoking_habits' /* My smoking habits: */,
                           ),
                           maxLines: 2,
-                          style:
-                              FloterTheme.of(context).titleLarge.override(
-                                    font: GoogleFonts.interTight(
-                                      fontWeight: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontStyle,
-                                  ),
+                          style: FloterTheme.of(context).titleLarge.override(
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontWeight,
+                                  fontStyle: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontStyle,
+                                ),
+                                letterSpacing: 0.0,
+                                fontWeight: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontWeight,
+                                fontStyle: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ].divide(SizedBox(width: 8.0)),
@@ -246,9 +232,7 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                             AppLabels.of(context).get(
                               'profile_smoking.do_you_smoke' /* Do you smoke? */,
                             ),
-                            style: FloterTheme.of(context)
-                                .bodyMedium
-                                .override(
+                            style: FloterTheme.of(context).bodyMedium.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodyMedium
@@ -257,8 +241,7 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .bodyMedium
@@ -307,8 +290,7 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -317,8 +299,7 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -337,13 +318,11 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -398,8 +377,7 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -409,8 +387,7 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -429,13 +406,11 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -490,8 +465,7 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -500,8 +474,7 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -520,13 +493,11 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -582,8 +553,7 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -593,8 +563,7 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -613,13 +582,11 @@ class _ProfileSmokingPageWidgetState extends State<ProfileSmokingPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),

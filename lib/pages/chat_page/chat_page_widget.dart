@@ -104,17 +104,14 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                               fontWeight: FloterTheme.of(context)
                                   .titleMedium
                                   .fontWeight,
-                              fontStyle: FloterTheme.of(context)
-                                  .titleMedium
-                                  .fontStyle,
+                              fontStyle:
+                                  FloterTheme.of(context).titleMedium.fontStyle,
                             ),
                             letterSpacing: 0.0,
-                            fontWeight: FloterTheme.of(context)
-                                .titleMedium
-                                .fontWeight,
-                            fontStyle: FloterTheme.of(context)
-                                .titleMedium
-                                .fontStyle,
+                            fontWeight:
+                                FloterTheme.of(context).titleMedium.fontWeight,
+                            fontStyle:
+                                FloterTheme.of(context).titleMedium.fontStyle,
                           ),
                     ),
                   ].divide(SizedBox(width: 12.0)),
@@ -139,26 +136,25 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                           AppLabels.of(context).get(
                             'chat.chyokak' /* Chyokak? */,
                           ),
-                          style:
-                              FloterTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.inter(
-                                      fontWeight: FloterTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    color: FloterTheme.of(context)
-                                        .primaryBackground,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
+                          style: FloterTheme.of(context).bodyMedium.override(
+                                font: GoogleFonts.inter(
+                                  fontWeight: FloterTheme.of(context)
+                                      .bodyMedium
+                                      .fontWeight,
+                                  fontStyle: FloterTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
+                                ),
+                                color:
+                                    FloterTheme.of(context).primaryBackground,
+                                letterSpacing: 0.0,
+                                fontWeight: FloterTheme.of(context)
+                                    .bodyMedium
+                                    .fontWeight,
+                                fontStyle: FloterTheme.of(context)
+                                    .bodyMedium
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ),
@@ -181,9 +177,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                           AppLabels.of(context).get(
                             'chat.normur' /* Normur */,
                           ),
-                          style: FloterTheme.of(context)
-                              .bodyMedium
-                              .override(
+                          style: FloterTheme.of(context).bodyMedium.override(
                                 font: GoogleFonts.inter(
                                   fontWeight: FloterTheme.of(context)
                                       .bodyMedium
@@ -222,8 +216,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                         letterSpacing: 0.0,
                         fontWeight:
                             FloterTheme.of(context).bodySmall.fontWeight,
-                        fontStyle:
-                            FloterTheme.of(context).bodySmall.fontStyle,
+                        fontStyle: FloterTheme.of(context).bodySmall.fontStyle,
                       ),
                 ),
                 Expanded(

@@ -1,10 +1,9 @@
-﻿import '/floter/floter_util.dart';
+import '/floter/floter_util.dart';
 import '/index.dart';
 import 'update_password_page_widget.dart' show UpdatePasswordPageWidget;
 import 'package:flutter/material.dart';
 
-class UpdatePasswordPageModel
-    extends FloterModel<UpdatePasswordPageWidget> {
+class UpdatePasswordPageModel extends FloterModel<UpdatePasswordPageWidget> {
   ///  Local state fields for this page.
 
   String? password = '';

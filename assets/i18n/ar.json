@@ -1,4 +1,4 @@
-{
+﻿{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "لقاء قريب. اجعل الأمر سهلاً",
@@ -311,8 +311,8 @@
       "prefer_not_to_say": "يفضل عدم القول"
     },
     "kids": {
-      "yes": "لديك أطفال",
-      "no": "ليس لديك أطفال",
+      "yes": "نعم",
+      "no": "لا",
       "prefer_not_to_say": "يفضل عدم القول"
     },
     "relationship_type": {
@@ -375,7 +375,7 @@
     "arabic": "عربي",
     "armenian": "الأرمينية",
     "bengali": "البنغالية",
-    "catalan": "الكاتالونية"
+    "catalan": "الكاتالونية",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "تعديل البريد الإلكتروني",

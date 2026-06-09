@@ -1,8 +1,11 @@
+import 'dart:math' as math;
+
 import '/components/lookaround_bottom_nav_widget.dart';
+import '/floter/floter_icon_button.dart';
 import '/floter/floter_swipeable_stack.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
-import 'dart:ui';
+import '/services/profile/profile_localization.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
@@ -10,7 +13,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'people_page_model.dart';
 export 'people_page_model.dart';
 
-/// Shows discovery candidates and records pass/like actions.
 class PeoplePageWidget extends StatefulWidget {
   const PeoplePageWidget({super.key});
 
@@ -30,18 +32,32 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => PeoplePageModel());
+    _model.onStateChanged = () => safeSetState(() {});
   }
 
   @override
   void dispose() {
     _model.dispose();
-
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    final profile = _model.currentProfile;
+    final showEmptyState = !_model.isLoadingProfiles &&
+        _model.loadError.isEmpty &&
+        profile == null;
+    final nameText = () {
+      final name = profile?.displayName;
+      final age = profile?.age;
+      final display =
+          (name != null && name.trim().isNotEmpty) ? name.trim() : '[не указано]';
+      return '$display${age != null ? ', $age' : ''}';
+    }();
+    final hasPhrase =
+        profile?.catchphrase != null && profile!.catchphrase!.trim().isNotEmpty;
     return GestureDetector(
+      excludeFromSemantics: true,
       onTap: () {
         FocusScope.of(context).unfocus();
         FocusManager.instance.primaryFocus?.unfocus();
@@ -51,425 +67,546 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
         backgroundColor: FloterTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    alignment: AlignmentDirectional(0.0, 0.0),
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      child: Stack(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            alignment: AlignmentDirectional(-1.0, -1.0),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  32.0, 8.0, 0.0, 0.0),
-                              child: Container(
-                                child: Container(
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.favorite_border,
-                                        color: FloterTheme.of(context)
-                                            .primary,
-                                        size: 22.0,
-                                      ),
-                                      Text(
-                                        AppLabels.of(context).get(
-                                          'people.lookaround' /* Lookaround */,
-                                        ),
-                                        maxLines: 1,
-                                        style: FloterTheme.of(context)
-                                            .titleLarge
-                                            .override(
-                                              font: GoogleFonts.interTight(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .titleLarge
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .titleLarge
-                                                        .fontStyle,
-                                              ),
-                                              color:
-                                                  FloterTheme.of(context)
-                                                      .primary,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .titleLarge
-                                                      .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .titleLarge
-                                                      .fontStyle,
-                                            ),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ].divide(SizedBox(width: 4.0)),
-                                  ),
-                                ),
+          child: Column(
+            children: [
+              _topHeader(context),
+              Expanded(
+                child: LayoutBuilder(
+                  builder: (context, viewportConstraints) {
+                    if (showEmptyState) {
+                      return _buildEmptyState(context, viewportConstraints);
+                    }
+                    final viewportHeight = viewportConstraints.maxHeight;
+                    final contentWidth = viewportConstraints.maxWidth - 48;
+                    final naturalCardHeight = contentWidth / 0.57;
+                    final maxCardHeight =
+                        math.max(300.0, viewportHeight - 88.0);
+                    final cardHeight =
+                        math.min(naturalCardHeight, maxCardHeight);
+                    return SingleChildScrollView(
+                      physics: const BouncingScrollPhysics(),
+                      child: Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            const SizedBox(height: 14),
+                            Text(
+                              nameText,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: GoogleFonts.interTight(
+                                color: FloterTheme.of(context).primaryText,
+                                fontSize: 21,
+                                fontWeight: FontWeight.w900,
+                                letterSpacing: 0,
                               ),
                             ),
-                          ),
-                          Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            alignment: AlignmentDirectional(1.0, -1.0),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 44.0, 0.0),
-                              child: Container(
-                                child: Container(
-                                  child: Container(
-                                    width: 64.0,
-                                    height: 64.0,
-                                    alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: Icon(
-                                      Icons.settings,
-                                      color: FloterTheme.of(context)
-                                          .primaryText,
-                                      size: 42.0,
-                                    ),
-                                  ),
+                            if (hasPhrase) ...[
+                              const SizedBox(height: 2),
+                              Text(
+                                profile.catchphrase!.trim(),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: GoogleFonts.interTight(
+                                  color: FloterTheme.of(context).primaryText,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w900,
+                                  letterSpacing: 0,
                                 ),
                               ),
+                            ],
+                            const SizedBox(height: 11),
+                            SizedBox(
+                              height: cardHeight,
+                              child: _buildStack(context),
                             ),
-                          ),
-                          Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            alignment: AlignmentDirectional(-1.0, -1.0),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  32.0, 61.0, 0.0, 0.0),
-                              child: Container(
-                                child: Container(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        AppLabels.of(context).get(
-                                          'skip' /* Agrippina, 35 */,
-                                        ),
-                                        maxLines: 1,
-                                        style: FloterTheme.of(context)
-                                            .titleLarge
-                                            .override(
-                                              font: GoogleFonts.interTight(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .titleLarge
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .titleLarge
-                                                        .fontStyle,
-                                              ),
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .titleLarge
-                                                      .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .titleLarge
-                                                      .fontStyle,
-                                            ),
-                                      ),
-                                      Text(
-                                        AppLabels.of(context).get(
-                                          'people.guess_what_i' /* Guess what I'm thinking */,
-                                        ),
-                                        maxLines: 1,
-                                        style: FloterTheme.of(context)
-                                            .bodySmall
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodySmall
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodySmall
-                                                        .fontStyle,
-                                              ),
-                                              color:
-                                                  FloterTheme.of(context)
-                                                      .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodySmall
-                                                      .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodySmall
-                                                      .fontStyle,
-                                            ),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ].divide(SizedBox(height: 0.0)),
-                                  ),
+                            if (profile != null) ...[
+                              const SizedBox(height: 24),
+                              _buildDetailRows(context, profile),
+                              const SizedBox(height: 18),
+                            ],
+                            if (_model.loadError.isNotEmpty) ...[
+                              const SizedBox(height: 18),
+                              Text(
+                                'Could not load nearby profiles.',
+                                style: GoogleFonts.inter(
+                                  color: FloterTheme.of(context).error,
+                                  fontSize: 16,
                                 ),
                               ),
-                            ),
-                          ),
-                          Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            alignment: AlignmentDirectional(-1.0, -1.0),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 112.0, 24.0, 0.0),
-                              child: Container(
-                                child: Container(
-                                  child: FloterSwipeableStack(
-                                    onSwipeFn:
-                                        (candidateSwipeableStackIndex) {},
-                                    onLeftSwipe:
-                                        (candidateSwipeableStackIndex) {},
-                                    onRightSwipe:
-                                        (candidateSwipeableStackIndex) {},
-                                    onUpSwipe:
-                                        (candidateSwipeableStackIndex) {},
-                                    onDownSwipe:
-                                        (candidateSwipeableStackIndex) {},
-                                    itemBuilder: (context, index) {
-                                      return [
-                                        () => ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(15.0),
-                                              child: CachedNetworkImage(
-                                                fadeInDuration:
-                                                    Duration(milliseconds: 0),
-                                                fadeOutDuration:
-                                                    Duration(milliseconds: 0),
-                                                imageUrl:
-                                                    'https://www.figma.com/api/mcp/asset/091582c6-4bf1-44c4-85b1-a61c71bbad90',
-                                                width: double.infinity,
-                                                height: double.infinity,
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                        () => ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(15.0),
-                                              child: CachedNetworkImage(
-                                                fadeInDuration:
-                                                    Duration(milliseconds: 0),
-                                                fadeOutDuration:
-                                                    Duration(milliseconds: 0),
-                                                imageUrl:
-                                                    'https://www.figma.com/api/mcp/asset/d5452250-bd00-4450-b5eb-b084de000801',
-                                                width: double.infinity,
-                                                height: double.infinity,
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                        () => ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(15.0),
-                                              child: CachedNetworkImage(
-                                                fadeInDuration:
-                                                    Duration(milliseconds: 0),
-                                                fadeOutDuration:
-                                                    Duration(milliseconds: 0),
-                                                imageUrl:
-                                                    'https://www.figma.com/api/mcp/asset/abe7c9f2-da8a-491b-9a2c-40a4a9569dea',
-                                                width: double.infinity,
-                                                height: double.infinity,
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                      ][index]();
-                                    },
-                                    itemCount: 3,
-                                    controller: _model
-                                        .candidateSwipeableStackController,
-                                    loop: true,
-                                    cardDisplayCount: 3,
-                                    scale: 0.92,
-                                    threshold: 0.35,
-                                    maxAngle: 20.0,
-                                    backCardOffset: const Offset(0.0, 10.0),
-                                    allowedSwipeDirection:
-                                        AllowedSwipeDirection.symmetric(
-                                            horizontal: true),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            alignment: AlignmentDirectional(1.0, -1.0),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 55.0, 44.0, 0.0),
-                              child: Container(
-                                child: Container(
-                                  child: Container(
-                                    width: 55.0,
-                                    height: 55.0,
-                                    alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: Icon(
-                                      Icons.location_on,
-                                      color:
-                                          FloterTheme.of(context).primary,
-                                      size: 44.0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            alignment: AlignmentDirectional(0.0, 1.0),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 67.0),
-                              child: Container(
-                                child: Container(
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          _model.targetUserId =
-                                              'next-candidate';
-                                          safeSetState(() {});
-                                          ScaffoldMessenger.of(context)
-                                              .showSnackBar(
-                                            SnackBar(
-                                              content: Text(
-                                                'Passed. Showing the next nearby profile.',
-                                                style: TextStyle(),
-                                              ),
-                                              duration:
-                                                  Duration(milliseconds: 4000),
-                                            ),
-                                          );
-                                        },
-                                        child: Container(
-                                          width: 80.0,
-                                          height: 80.0,
-                                          decoration: BoxDecoration(
-                                            color: FloterTheme.of(context)
-                                                .primaryBackground,
-                                            borderRadius:
-                                                BorderRadius.circular(40.0),
-                                            border: Border.all(
-                                              color:
-                                                  FloterTheme.of(context)
-                                                      .alternate,
-                                              width: 1.0,
-                                            ),
-                                          ),
-                                          alignment:
-                                              AlignmentDirectional(0.0, 0.0),
-                                          child: Icon(
-                                            Icons.close,
-                                            color: FloterTheme.of(context)
-                                                .secondaryText,
-                                            size: 46.0,
-                                          ),
-                                        ),
-                                      ),
-                                      InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          _model.targetUserId =
-                                              'liked-candidate';
-                                          safeSetState(() {});
-                                          ScaffoldMessenger.of(context)
-                                              .showSnackBar(
-                                            SnackBar(
-                                              content: Text(
-                                                'Liked. Added to Liked You.',
-                                                style: TextStyle(),
-                                              ),
-                                              duration:
-                                                  Duration(milliseconds: 4000),
-                                            ),
-                                          );
-                                        },
-                                        child: Container(
-                                          width: 80.0,
-                                          height: 80.0,
-                                          decoration: BoxDecoration(
-                                            color: FloterTheme.of(context)
-                                                .primary,
-                                            borderRadius:
-                                                BorderRadius.circular(40.0),
-                                          ),
-                                          alignment:
-                                              AlignmentDirectional(0.0, 0.0),
-                                          child: Icon(
-                                            Icons.favorite,
-                                            color: FloterTheme.of(context)
-                                                .primaryBackground,
-                                            size: 44.0,
-                                          ),
-                                        ),
-                                      ),
-                                    ].divide(SizedBox(width: 84.0)),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+                            ],
+                          ],
+                        ),
                       ),
-                    ),
-                  ),
+                    );
+                  },
                 ),
-                wrapWithModel(
-                  model: _model.lookaroundBottomNavModel,
-                  updateCallback: () => safeSetState(() {}),
-                  child: LookaroundBottomNavWidget(
-                    activeTab: 'People',
-                  ),
-                ),
-              ],
+              ),
+              wrapWithModel(
+                model: _model.lookaroundBottomNavModel,
+                updateCallback: () => safeSetState(() {}),
+                child: const LookaroundBottomNavWidget(activeTab: 'People'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _topHeader(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsetsDirectional.fromSTEB(23, 12, 23, 12),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          ExcludeSemantics(
+            child: Image.asset(
+              'assets/images/nearsy_logo.png',
+              width: 123,
+              fit: BoxFit.contain,
             ),
           ),
+          FloterIconButton(
+            borderRadius: 8,
+            buttonSize: 44,
+            fillColor: FloterTheme.of(context).primaryBackground,
+            icon: Icon(
+              Icons.settings,
+              color: FloterTheme.of(context).primaryText,
+              size: 24,
+            ),
+            onPressed: () async {
+              await context.pushNamed('SearchPreferencesPage');
+              _model.refreshProfiles();
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildEmptyState(
+      BuildContext context, BoxConstraints viewportConstraints) {
+    final theme = FloterTheme.of(context);
+    return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
+      child: SizedBox(
+        height: math.max(viewportConstraints.maxHeight, 400),
+        child: Padding(
+          padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 54),
+              Text(
+                AppLabels.of(context).get('people.no_more_profiles'),
+                style: GoogleFonts.interTight(
+                  color: theme.primaryText,
+                  fontSize: 21,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 0,
+                ),
+              ),
+              const SizedBox(height: 18),
+              Text(
+                AppLabels.of(context).get('people.empty_state'),
+                style: GoogleFonts.inter(
+                  color: theme.primaryText,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  height: 1.4,
+                ),
+              ),
+              const SizedBox(height: 36),
+              GestureDetector(
+                onTap: () async {
+                  await context.pushNamed('SearchPreferencesPage');
+                  _model.refreshProfiles();
+                },
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 10,
+                  ),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFB6B8BA),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        AppLabels.of(context).get('nearby.filters'),
+                        style: GoogleFonts.inter(
+                          color: theme.primaryText,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildStack(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      clipBehavior: Clip.none,
+      child: FloterSwipeableStack(
+        onSwipeFn: (candidateSwipeableStackIndex) {},
+        onLeftSwipe: (candidateSwipeableStackIndex) {
+          _model.swipeLeft();
+        },
+        onRightSwipe: (candidateSwipeableStackIndex) {
+          _model.swipeRight();
+        },
+        onUpSwipe: (candidateSwipeableStackIndex) {},
+        onDownSwipe: (candidateSwipeableStackIndex) {},
+        itemBuilder: (context, index) {
+          return _ProfileCard(
+            key: ValueKey(index),
+            profile: _model.profiles.isEmpty
+                ? null
+                : _model.profiles[index % _model.profiles.length],
+            onTapPass: () =>
+                _model.candidateSwipeableStackController.swipeLeft(),
+            onTapLike: () =>
+                _model.candidateSwipeableStackController.swipeRight(),
+          );
+        },
+        itemCount: _model.profiles.isEmpty ? 3 : _model.profiles.length,
+        controller: _model.candidateSwipeableStackController,
+        loop: false,
+        cardDisplayCount: 3,
+        scale: 0.95,
+        threshold: 0.35,
+        maxAngle: 20,
+        backCardOffset: const Offset(0, 12),
+        allowedSwipeDirection:
+            AllowedSwipeDirection.symmetric(horizontal: true),
+        cardPadding: EdgeInsets.zero,
+      ),
+    );
+  }
+
+  Widget _buildDetailRow(
+    BuildContext context, {
+    required String label,
+    required String value,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 14),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Text(
+              label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: GoogleFonts.inter(
+                color: FloterTheme.of(context).primaryText,
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+          const SizedBox(width: 12),
+          Text(
+            value,
+            textAlign: TextAlign.right,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: GoogleFonts.inter(
+              color: FloterTheme.of(context).primaryText,
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDetailRows(BuildContext context, DiscoveryProfile profile) {
+    final description = profile.description?.trim() ?? '';
+    final catchphrase = profile.catchphrase?.trim() ?? '';
+    final aboutText = description.isNotEmpty ? description : catchphrase;
+
+    final rows = <Widget>[];
+
+    void addRow(String label, String value) {
+      if (value.trim().isEmpty) return;
+      rows.add(_buildDetailRow(context, label: label, value: value));
+    }
+
+    addRow(
+      AppLabels.of(context).get('profile.about_me'),
+      aboutText,
+    );
+
+    addRow(
+      AppLabels.of(context).get('profile.gender'),
+      AppLabels.staticProfileLabel(
+        'gender',
+        canonicalProfileAttribute(profile.gender),
+      ),
+    );
+    if (profile.age != null) {
+      addRow(AppLabels.of(context).get('profile.age'), profile.age.toString());
+    }
+    addRow(
+      AppLabels.of(context).get('people.location'),
+      profile.locationLabel ?? '',
+    );
+    addRow(
+      AppLabels.of(context).get('search_preferences.languages_they_know'),
+      (profile.languages ?? '')
+          .split(RegExp(r'[,;|/]'))
+          .map((s) {
+            final key = s.trim().toLowerCase();
+            final translated = AppLabels.of(context).get('languages.$key');
+            if (translated == 'languages.$key') {
+              return humanizeProfileValue(s.trim());
+            }
+            return translated;
+          })
+          .where((s) => s.isNotEmpty)
+          .join(', '),
+    );
+    addRow(
+      AppLabels.of(context).get('profile.height'),
+      profile.height ?? '',
+    );
+    addRow(
+      AppLabels.of(context).get('profile.work'),
+      profile.work ?? '',
+    );
+    addRow(
+      AppLabels.of(context).get('profile.education'),
+      localizeProfileAttribute('education', profile.education),
+    );
+    addRow(
+      AppLabels.of(context).get('profile.kids'),
+      localizeProfileAttribute('kids', profile.kids),
+    );
+    addRow(
+      AppLabels.of(context).get('profile.preferred_relationships'),
+      localizeProfileAttribute('relationship_type', profile.relationshipType),
+    );
+    addRow(
+      AppLabels.of(context).get('profile.beliefs'),
+      localizeProfileAttribute('religion', profile.religion),
+    );
+    addRow(
+      AppLabels.of(context).get('profile.body_type'),
+      localizeProfileAttribute('body_type', profile.bodyType),
+    );
+    addRow(
+      AppLabels.of(context).get('profile.drinking'),
+      localizeProfileAttribute('drinking', profile.drinking),
+    );
+    addRow(
+      AppLabels.of(context).get('profile.smoking'),
+      localizeProfileAttribute('smoking', profile.smoking),
+    );
+
+    if (rows.isEmpty) {
+      return const SizedBox.shrink();
+    }
+
+    final attributeSection = Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: rows.divide(
+        Container(
+          height: 0.5,
+          color: FloterTheme.of(context).alternate,
+        ),
+      ),
+    );
+
+    return attributeSection;
+  }
+}
+
+class _ProfileCard extends StatefulWidget {
+  const _ProfileCard({
+    super.key,
+    required this.profile,
+    this.onTapPass,
+    this.onTapLike,
+  });
+
+  final DiscoveryProfile? profile;
+  final VoidCallback? onTapPass;
+  final VoidCallback? onTapLike;
+
+  @override
+  State<_ProfileCard> createState() => _ProfileCardState();
+}
+
+class _ProfileCardState extends State<_ProfileCard> {
+  late final PageController _pageController;
+  int _currentPhoto = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final profile = widget.profile;
+    final theme = FloterTheme.of(context);
+
+    final photos = profile?.photos ?? <String>[];
+    final hasPhotos = photos.isNotEmpty;
+
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: BoxDecoration(
+        color: theme.secondaryBackground,
+        borderRadius: BorderRadius.circular(15),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          if (hasPhotos)
+            GestureDetector(
+              onTap: () {
+                if (photos.length <= 1) return;
+                if (_currentPhoto < photos.length - 1) {
+                  _pageController.nextPage(
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOut,
+                  );
+                } else {
+                  _pageController.animateToPage(
+                    0,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOut,
+                  );
+                }
+              },
+              child: PageView.builder(
+                controller: _pageController,
+                onPageChanged: (i) => setState(() => _currentPhoto = i),
+                itemCount: photos.length,
+                itemBuilder: (_, i) => CachedNetworkImage(
+                  fadeInDuration: const Duration(milliseconds: 300),
+                  fadeOutDuration: const Duration(milliseconds: 300),
+                  imageUrl: photos[i],
+                  fit: BoxFit.cover,
+                  placeholder: (_, __) =>
+                      Container(color: theme.secondaryBackground),
+                  errorWidget: (_, __, ___) =>
+                      Container(color: theme.secondaryBackground),
+                ),
+              ),
+            ),
+          if (!hasPhotos)
+            Container(
+              color: theme.secondaryBackground,
+              alignment: const AlignmentDirectional(0, 0),
+              child: Icon(
+                Icons.person,
+                size: 240,
+                color: theme.alternate,
+              ),
+            ),
+          if (hasPhotos && photos.length > 1)
+            Positioned(
+              top: 12,
+              left: 0,
+              right: 0,
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(photos.length, (i) {
+                  final isActive = i == _currentPhoto;
+                  return Container(
+                    width: isActive ? 24 : 8,
+                    height: 4,
+                    margin:
+                        const EdgeInsetsDirectional.only(start: 3, end: 3),
+                    decoration: BoxDecoration(
+                      color: isActive
+                          ? Colors.white
+                          : Colors.white.withValues(alpha: 0.5),
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                  );
+                }),
+              ),
+            ),
+          if (widget.onTapPass != null)
+            Positioned(
+              left: 79,
+              bottom: 7,
+              child: _buildSwipeButton(
+                'assets/images/swipe_left_icon.png',
+                widget.onTapPass,
+              ),
+            ),
+          if (widget.onTapLike != null)
+            Positioned(
+              right: 57,
+              bottom: 7,
+              child: _buildSwipeButton(
+                'assets/images/swipe_right_icon.png',
+                widget.onTapLike,
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSwipeButton(String assetPath, VoidCallback? onTap) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 80,
+        height: 80,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.12),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        alignment: Alignment.center,
+        child: Image.asset(
+          assetPath,
+          width: 48,
+          height: 48,
         ),
       ),
     );

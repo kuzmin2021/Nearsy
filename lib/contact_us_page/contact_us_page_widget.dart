@@ -200,8 +200,9 @@ class _ContactUsPageWidgetState extends State<ContactUsPageWidget> {
                                 fontSize: 24.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w700,
-                                fontStyle:
-                                    FloterTheme.of(context).titleLarge.fontStyle,
+                                fontStyle: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
                                 lineHeight: 1.2,
                               ),
                         ),

@@ -1,4 +1,4 @@
-import '/backend/supabase/supabase.dart';
+﻿import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -69,14 +69,8 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
             .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
             .replaceAll(RegExp(r'_+'), '_')
             .replaceAll(RegExp(r'^_|_$'), '');
-        const aliases = {
-          'female': 'woman',
-          'male': 'man',
-          'nonbinary': 'non_binary',
-          'bachelor_degree': 'bachelors_degree',
-          'master_degree': 'masters_degree',
-        };
-        final normalized = aliases[normalizedRaw] ?? normalizedRaw;
+        
+        final normalized = normalizedRaw;
         for (final option in options) {
           if (option.toLowerCase() == normalized) {
             return option;
@@ -141,8 +135,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                       FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 64.0,
-                        fillColor:
-                            FloterTheme.of(context).primaryBackground,
+                        fillColor: FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
                           color: FloterTheme.of(context).primaryText,
@@ -170,14 +163,8 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                 .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
                                 .replaceAll(RegExp(r'_+'), '_')
                                 .replaceAll(RegExp(r'^_|_$'), '');
-                            const aliases = {
-                              'female': 'woman',
-                              'male': 'man',
-                              'nonbinary': 'non_binary',
-                              'bachelor_degree': 'bachelors_degree',
-                              'master_degree': 'masters_degree',
-                            };
-                            return aliases[normalized] ?? normalized;
+                            
+                            return normalized;
                           }
 
                           final value =
@@ -222,24 +209,23 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                             'profile_religion.my_beliefs' /* My beliefs: */,
                           ),
                           maxLines: 2,
-                          style:
-                              FloterTheme.of(context).titleLarge.override(
-                                    font: GoogleFonts.interTight(
-                                      fontWeight: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontStyle,
-                                  ),
+                          style: FloterTheme.of(context).titleLarge.override(
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontWeight,
+                                  fontStyle: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontStyle,
+                                ),
+                                letterSpacing: 0.0,
+                                fontWeight: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontWeight,
+                                fontStyle: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ].divide(SizedBox(width: 8.0)),
@@ -292,18 +278,17 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.religion == 'agnostic'))
+                                            if (!(_model.religion ==
+                                                'agnostic'))
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -322,13 +307,11 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -383,8 +366,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -393,8 +375,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -413,13 +394,11 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -474,18 +453,17 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
                                               ),
-                                            if (!(_model.religion == 'buddhist'))
+                                            if (!(_model.religion ==
+                                                'buddhist'))
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -504,13 +482,11 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -565,8 +541,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -576,8 +551,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -596,13 +570,11 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -657,8 +629,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -667,8 +638,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -687,13 +657,11 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -748,8 +716,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -758,8 +725,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -778,13 +744,11 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -839,8 +803,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -849,8 +812,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -869,13 +831,11 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -930,8 +890,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -940,8 +899,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -960,13 +918,11 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -1021,8 +977,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -1032,8 +987,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -1052,13 +1006,11 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -1113,8 +1065,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_checked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -1123,8 +1074,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               Container(
                                                 child: Icon(
                                                   Icons.radio_button_unchecked,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -1143,13 +1093,11 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),

@@ -1,4 +1,4 @@
-import '/backend/supabase/supabase.dart';
+﻿import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -110,8 +110,7 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                       FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 64.0,
-                        fillColor:
-                            FloterTheme.of(context).primaryBackground,
+                        fillColor: FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
                           color: FloterTheme.of(context).primaryText,
@@ -139,14 +138,8 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                                 .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
                                 .replaceAll(RegExp(r'_+'), '_')
                                 .replaceAll(RegExp(r'^_|_$'), '');
-                            const aliases = {
-                              'female': 'woman',
-                              'male': 'man',
-                              'nonbinary': 'non_binary',
-                              'bachelor_degree': 'bachelors_degree',
-                              'master_degree': 'masters_degree',
-                            };
-                            return aliases[normalized] ?? normalized;
+                            
+                            return normalized;
                           }
 
                           final value =
@@ -192,24 +185,23 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                             'profile_about_me.about_me' /* About me: */,
                           ),
                           maxLines: 2,
-                          style:
-                              FloterTheme.of(context).titleLarge.override(
-                                    font: GoogleFonts.interTight(
-                                      fontWeight: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontStyle,
-                                  ),
+                          style: FloterTheme.of(context).titleLarge.override(
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontWeight,
+                                  fontStyle: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontStyle,
+                                ),
+                                letterSpacing: 0.0,
+                                fontWeight: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontWeight,
+                                fontStyle: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ].divide(SizedBox(width: 8.0)),
@@ -227,9 +219,7 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                             AppLabels.of(context).get(
                               'profile_about_me.no_pressure_leave_it_blank_if_you_like' /* No pressure - leave it blank i... */,
                             ),
-                            style: FloterTheme.of(context)
-                                .bodyMedium
-                                .override(
+                            style: FloterTheme.of(context).bodyMedium.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodyMedium
@@ -238,8 +228,7 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .bodyMedium
@@ -252,8 +241,8 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                           Container(
                             height: 210.0,
                             decoration: BoxDecoration(
-                              color: FloterTheme.of(context)
-                                  .secondaryBackground,
+                              color:
+                                  FloterTheme.of(context).secondaryBackground,
                               borderRadius: BorderRadius.circular(4.0),
                             ),
                             child: Padding(

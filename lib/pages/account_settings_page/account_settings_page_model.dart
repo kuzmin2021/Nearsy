@@ -1,10 +1,9 @@
-﻿import '/floter/floter_util.dart';
+import '/floter/floter_util.dart';
 import '/index.dart';
 import 'account_settings_page_widget.dart' show AccountSettingsPageWidget;
 import 'package:flutter/material.dart';
 
-class AccountSettingsPageModel
-    extends FloterModel<AccountSettingsPageWidget> {
+class AccountSettingsPageModel extends FloterModel<AccountSettingsPageWidget> {
   ///  Local state fields for this page.
 
   String? feedbackMessage = '';

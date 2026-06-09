@@ -134,16 +134,15 @@ CREATE OR REPLACE FUNCTION "public"."get_discovery_feed_v2"("p_limit" integer DE
         select jsonb_agg(
           jsonb_build_object(
             'id', up.id,
-            'path', coalesce(up.storage_path, up.photo_path),
-            'position', up.position,
-            'is_main', up.is_main
+            'path', up.photo_url,
+            'position', up.position
           )
           order by up.position
         )
         from public.user_photos up
         where up.user_id = p.user_id
           and up.deleted_at is null
-          and coalesce(up.storage_path, up.photo_path) is not null
+          and up.photo_url is not null
       ),
       '[]'::jsonb
     ),

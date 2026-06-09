@@ -1,4 +1,4 @@
-import 'dart:async';
+﻿import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -217,7 +217,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: AccountEmailPageWidget.routePath,
           builder: (context, params) => AccountEmailPageWidget(),
         ),
-
+        FTRoute(
+          name: AccountPhonePageWidget.routeName,
+          path: AccountPhonePageWidget.routePath,
+          builder: (context, params) => AccountPhonePageWidget(),
+        ),
         FTRoute(
           name: TwoFactorAuthPageWidget.routeName,
           path: TwoFactorAuthPageWidget.routePath,

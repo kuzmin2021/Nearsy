@@ -1,4 +1,4 @@
-{
+﻿{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Reunirse cerca. Mantenlo fácil",
@@ -311,8 +311,8 @@
       "prefer_not_to_say": "Prefiero no decir"
     },
     "kids": {
-      "yes": "tener hijos",
-      "no": "no tener hijos",
+      "yes": "si",
+      "no": "No",
       "prefer_not_to_say": "Prefiero no decir"
     },
     "relationship_type": {
@@ -375,7 +375,7 @@
     "arabic": "árabe",
     "armenian": "armenio",
     "bengali": "bengalí",
-    "catalan": "catalán"
+    "catalan": "catalán",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "Editar email",

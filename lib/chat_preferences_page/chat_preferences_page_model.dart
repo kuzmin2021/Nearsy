@@ -1,10 +1,9 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 import '/floter/floter_util.dart';
 import 'chat_preferences_page_widget.dart' show ChatPreferencesPageWidget;
 
-class ChatPreferencesPageModel
-    extends FloterModel<ChatPreferencesPageWidget> {
+class ChatPreferencesPageModel extends FloterModel<ChatPreferencesPageWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for ChatTopicsField widget.

@@ -34,20 +34,6 @@ class ProfilePhotoGrid extends StatelessWidget {
         slot != '__empty_photo__';
   }
 
-  static String _two(int value) => value.toString().padLeft(2, '0');
-  static String _six(int value) => value.toString().padLeft(6, '0');
-
-  static String _formatCreateDataTime(DateTime value) =>
-      '${value.year}-${_two(value.month)}-${_two(value.day)} '
-      '${_two(value.hour)}:${_two(value.minute)}:${_two(value.second)}.'
-      '${_six(value.millisecond * 1000 + value.microsecond)}';
-
-  static String _safeFileName(String rawName, String fallback) {
-    final name = rawName.trim().split('/').last.split('\\').last;
-    final safeName = name.replaceAll(RegExp(r'[^A-Za-z0-9._-]+'), '_');
-    return safeName.isEmpty ? fallback : safeName;
-  }
-
   static String? _storagePathFromPublicUrl(String photoUrl) {
     final uri = Uri.tryParse(photoUrl.trim());
     if (uri == null) return null;
@@ -91,7 +77,7 @@ class ProfilePhotoGrid extends StatelessWidget {
   Future<void> _refreshGrid(String userId) async {
     final rows = await _loadPhotoRows(userId);
     final urls = rows
-        .map((row) => (row['photo_url'] as String?)?.trim() ?? '')
+        .map((row) => SupaFlow.resolvePhotoUrl(row['photo_url']) ?? '')
         .where((url) => url.isNotEmpty)
         .toList();
     onGridPhotoChanged(_buildGridSlots(urls));
@@ -136,16 +122,15 @@ class ProfilePhotoGrid extends StatelessWidget {
     if (userId == null || userId.isEmpty) return;
 
     final createDataTime = DateTime.now().millisecondsSinceEpoch.toString();
-    final fileName = _safeFileName(pickedFile.name, 'main_photo.jpg');
-    final storagePath = '$userId/$createDataTime/$fileName';
+    final storagePath = '$userId/$createDataTime';
 
     try {
       final storageBucket = SupaFlow.client.storage.from('user_photos');
       await storageBucket.uploadBinary(storagePath, bytes);
-      final uploadedUrl = storageBucket.getPublicUrl(storagePath);
+      final uploadedUrl = SupaFlow.publicPhotoUrl(storagePath);
       await SupaFlow.client
           .from('profiles')
-          .update({'avatar_url': uploadedUrl}).eq('user_id', userId);
+          .update({'avatar_url': storagePath}).eq('user_id', userId);
       onMainPhotoChanged?.call(uploadedUrl);
     } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -192,7 +177,7 @@ class ProfilePhotoGrid extends StatelessWidget {
           .from('user_photos')
           .delete()
           .eq('user_id', userId)
-          .eq('photo_url', selectedUrl);
+          .eq('photo_url', storagePath ?? '');
 
       if (storagePath != null && storagePath.isNotEmpty) {
         await SupaFlow.client.storage.from('user_photos').remove([storagePath]);
@@ -245,9 +230,8 @@ class ProfilePhotoGrid extends StatelessWidget {
       orElse: () => existingUrls.length + 1,
     );
 
-    final fileName = _safeFileName(pickedFile.name, 'profile_photo.jpg');
-    final storagePath =
-        '$userId/${_formatCreateDataTime(DateTime.now())}/$fileName';
+    final createDataTime = DateTime.now().millisecondsSinceEpoch.toString();
+    final storagePath = '$userId/$createDataTime';
     final storageBucket = SupaFlow.client.storage.from('user_photos');
     var uploadedUrl = '';
 
@@ -256,7 +240,7 @@ class ProfilePhotoGrid extends StatelessWidget {
         storagePath,
         bytes,
       );
-      uploadedUrl = storageBucket.getPublicUrl(storagePath);
+      uploadedUrl = SupaFlow.publicPhotoUrl(storagePath);
       if (uploadedUrl.trim().isEmpty) {
         await storageBucket.remove([storagePath]);
         throw Exception('Uploaded photo URL is empty');
@@ -264,11 +248,8 @@ class ProfilePhotoGrid extends StatelessWidget {
       try {
         await SupaFlow.client.from('user_photos').insert({
           'user_id': userId,
-          'photo_path': uploadedUrl,
-          'storage_path': storagePath,
-          'is_main': false,
           'position': nextSlot,
-          'photo_url': uploadedUrl,
+          'photo_url': storagePath,
           'slot': nextSlot,
           'order': nextSlot,
         });

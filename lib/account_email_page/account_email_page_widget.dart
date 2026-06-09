@@ -165,7 +165,8 @@ class _AccountEmailPageWidgetState extends State<AccountEmailPageWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(43.0, 29.0, 42.0, 28.0),
+            padding:
+                const EdgeInsetsDirectional.fromSTEB(43.0, 29.0, 42.0, 28.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -230,8 +231,7 @@ class _AccountEmailPageWidgetState extends State<AccountEmailPageWidget> {
                               .primaryText
                               .withOpacity(0.5),
                         ),
-                        contentPadding:
-                            const EdgeInsetsDirectional.fromSTEB(
+                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                           16.0,
                           0.0,
                           16.0,

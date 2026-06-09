@@ -1,9 +1,8 @@
-﻿import '/floter/floter_util.dart';
+import '/floter/floter_util.dart';
 import 'profile_about_me_page_widget.dart' show ProfileAboutMePageWidget;
 import 'package:flutter/material.dart';
 
-class ProfileAboutMePageModel
-    extends FloterModel<ProfileAboutMePageWidget> {
+class ProfileAboutMePageModel extends FloterModel<ProfileAboutMePageWidget> {
   ///  Local state fields for this page.
 
   String? about = '';

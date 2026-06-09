@@ -1,4 +1,4 @@
-{
+﻿{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "அருகில் சந்திக்கவும். எளிதாக வைத்துக்கொள்ளுங்கள்",
@@ -311,8 +311,8 @@
       "prefer_not_to_say": "சொல்லாமல் இருக்க விருப்பம்"
     },
     "kids": {
-      "yes": "குழந்தைகள் வேண்டும்",
-      "no": "குழந்தைகள் வேண்டாம்",
+      "yes": "ஆம்",
+      "no": "இல்லை",
       "prefer_not_to_say": "சொல்லாமல் இருக்க விருப்பம்"
     },
     "relationship_type": {
@@ -375,7 +375,7 @@
     "arabic": "அரபு",
     "armenian": "ஆர்மேனியன்",
     "bengali": "பெங்காலி",
-    "catalan": "கற்றலான்"
+    "catalan": "கற்றலான்",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "மின்னஞ்சலை திருத்து",

@@ -88,26 +88,22 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                         .titleLarge
                                         .override(
                                           font: GoogleFonts.interTight(
-                                            fontWeight:
-                                                FloterTheme.of(context)
-                                                    .titleLarge
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FloterTheme.of(context)
-                                                    .titleLarge
-                                                    .fontStyle,
+                                            fontWeight: FloterTheme.of(context)
+                                                .titleLarge
+                                                .fontWeight,
+                                            fontStyle: FloterTheme.of(context)
+                                                .titleLarge
+                                                .fontStyle,
                                           ),
-                                          color: FloterTheme.of(context)
-                                              .primary,
+                                          color:
+                                              FloterTheme.of(context).primary,
                                           letterSpacing: 0.0,
-                                          fontWeight:
-                                              FloterTheme.of(context)
-                                                  .titleLarge
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FloterTheme.of(context)
-                                                  .titleLarge
-                                                  .fontStyle,
+                                          fontWeight: FloterTheme.of(context)
+                                              .titleLarge
+                                              .fontWeight,
+                                          fontStyle: FloterTheme.of(context)
+                                              .titleLarge
+                                              .fontStyle,
                                         ),
                                   ),
                                 ].divide(SizedBox(width: 4.0)),
@@ -115,12 +111,11 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                               FloterIconButton(
                                 borderRadius: 8.0,
                                 buttonSize: 40.0,
-                                fillColor: FloterTheme.of(context)
-                                    .primaryBackground,
+                                fillColor:
+                                    FloterTheme.of(context).primaryBackground,
                                 icon: Icon(
                                   Icons.tune,
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   size: 22.0,
                                 ),
                                 onPressed: () {
@@ -131,8 +126,8 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                              color: FloterTheme.of(context)
-                                  .secondaryBackground,
+                              color:
+                                  FloterTheme.of(context).secondaryBackground,
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             child: Padding(
@@ -150,24 +145,20 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                         .titleSmall
                                         .override(
                                           font: GoogleFonts.interTight(
-                                            fontWeight:
-                                                FloterTheme.of(context)
-                                                    .titleSmall
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FloterTheme.of(context)
-                                                    .titleSmall
-                                                    .fontStyle,
+                                            fontWeight: FloterTheme.of(context)
+                                                .titleSmall
+                                                .fontWeight,
+                                            fontStyle: FloterTheme.of(context)
+                                                .titleSmall
+                                                .fontStyle,
                                           ),
                                           letterSpacing: 0.0,
-                                          fontWeight:
-                                              FloterTheme.of(context)
-                                                  .titleSmall
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FloterTheme.of(context)
-                                                  .titleSmall
-                                                  .fontStyle,
+                                          fontWeight: FloterTheme.of(context)
+                                              .titleSmall
+                                              .fontWeight,
+                                          fontStyle: FloterTheme.of(context)
+                                              .titleSmall
+                                              .fontStyle,
                                         ),
                                   ),
                                   Text(
@@ -179,26 +170,22 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.inter(
-                                            fontWeight:
-                                                FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
+                                            fontWeight: FloterTheme.of(context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                            fontStyle: FloterTheme.of(context)
+                                                .bodyMedium
+                                                .fontStyle,
                                           ),
                                           color: FloterTheme.of(context)
                                               .secondaryText,
                                           letterSpacing: 0.0,
-                                          fontWeight:
-                                              FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
+                                          fontWeight: FloterTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FloterTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                         ),
                                     overflow: TextOverflow.ellipsis,
                                   ),
@@ -216,8 +203,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                                 SearchPreferencesPageWidget
                                                     .routeName);
                                           },
-                                          text: AppLabels.of(context)
-                                              .get(
+                                          text: AppLabels.of(context).get(
                                             'nearby.filters' /* Filters */,
                                           ),
                                           options: FTButtonOptions(
@@ -230,14 +216,12 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: Colors.transparent,
                                             textStyle: TextStyle(
-                                              color:
-                                                  FloterTheme.of(context)
-                                                      .primary,
+                                              color: FloterTheme.of(context)
+                                                  .primary,
                                             ),
                                             borderSide: BorderSide(
-                                              color:
-                                                  FloterTheme.of(context)
-                                                      .primary,
+                                              color: FloterTheme.of(context)
+                                                  .primary,
                                               width: 1.0,
                                             ),
                                             borderRadius:
@@ -253,8 +237,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                                 NearbySearchPreferencesPageWidget
                                                     .routeName);
                                           },
-                                          text: AppLabels.of(context)
-                                              .get(
+                                          text: AppLabels.of(context).get(
                                             'nearby.visibility' /* Visibility */,
                                           ),
                                           options: FTButtonOptions(
@@ -265,12 +248,11 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                             iconPadding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
-                                            color: FloterTheme.of(context)
-                                                .primary,
+                                            color:
+                                                FloterTheme.of(context).primary,
                                             textStyle: TextStyle(
-                                              color:
-                                                  FloterTheme.of(context)
-                                                      .primaryBackground,
+                                              color: FloterTheme.of(context)
+                                                  .primaryBackground,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -340,10 +322,9 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                                   FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                             ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
@@ -403,10 +384,9 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                                   FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                             ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
@@ -473,10 +453,9 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                                   FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                             ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
@@ -536,10 +515,9 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                                   FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                             ),
                                         overflow: TextOverflow.ellipsis,
                                       ),

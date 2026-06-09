@@ -38,72 +38,75 @@ class ProfileRadioSelector extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: options.map((option) {
-                final isSelected = currentValue == option.value;
-                return InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () => onChanged(option.value),
-                  child: Container(
-                    height: 48,
-                    decoration: BoxDecoration(
-                      color: theme.primaryBackground,
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 42,
-                          height: 42,
-                          alignment: const AlignmentDirectional(0, 0),
-                          child: Stack(
-                            alignment: const AlignmentDirectional(0, 0),
-                            children: [
-                              if (isSelected)
-                                Container(
-                                  child: Icon(
-                                    Icons.radio_button_checked,
-                                    color: theme.primary,
-                                    size: 28,
-                                  ),
-                                ),
-                              if (!isSelected)
-                                Container(
-                                  child: Icon(
-                                    Icons.radio_button_unchecked,
-                                    color: theme.secondaryText,
-                                    size: 28,
-                                  ),
-                                ),
-                            ],
-                          ),
+              children: options
+                  .map((option) {
+                    final isSelected = currentValue == option.value;
+                    return InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () => onChanged(option.value),
+                      child: Container(
+                        height: 48,
+                        decoration: BoxDecoration(
+                          color: theme.primaryBackground,
                         ),
-                        Expanded(
-                          flex: 1,
-                          child: Text(
-                            option.label,
-                            maxLines: 1,
-                            style: theme.bodyMedium.override(
-                              font: GoogleFonts.inter(
-                                fontWeight: theme.bodyMedium.fontWeight,
-                                fontStyle: theme.bodyMedium.fontStyle,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 42,
+                              height: 42,
+                              alignment: const AlignmentDirectional(0, 0),
+                              child: Stack(
+                                alignment: const AlignmentDirectional(0, 0),
+                                children: [
+                                  if (isSelected)
+                                    Container(
+                                      child: Icon(
+                                        Icons.radio_button_checked,
+                                        color: theme.primary,
+                                        size: 28,
+                                      ),
+                                    ),
+                                  if (!isSelected)
+                                    Container(
+                                      child: Icon(
+                                        Icons.radio_button_unchecked,
+                                        color: theme.secondaryText,
+                                        size: 28,
+                                      ),
+                                    ),
+                                ],
                               ),
-                              letterSpacing: 0,
-                              fontWeight: theme.bodyMedium.fontWeight,
-                              fontStyle: theme.bodyMedium.fontStyle,
                             ),
-                            overflow: TextOverflow.ellipsis,
-                          ),
+                            Expanded(
+                              flex: 1,
+                              child: Text(
+                                option.label,
+                                maxLines: 1,
+                                style: theme.bodyMedium.override(
+                                  font: GoogleFonts.inter(
+                                    fontWeight: theme.bodyMedium.fontWeight,
+                                    fontStyle: theme.bodyMedium.fontStyle,
+                                  ),
+                                  letterSpacing: 0,
+                                  fontWeight: theme.bodyMedium.fontWeight,
+                                  fontStyle: theme.bodyMedium.fontStyle,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ].divide(const SizedBox(width: 8)),
                         ),
-                      ].divide(const SizedBox(width: 8)),
-                    ),
-                  ),
-                );
-              }).toList().divide(const SizedBox(height: 0)),
+                      ),
+                    );
+                  })
+                  .toList()
+                  .divide(const SizedBox(height: 0)),
             ),
           ],
         ),

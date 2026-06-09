@@ -86,17 +86,14 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                       .titleLarge
                                       .override(
                                         font: GoogleFonts.interTight(
-                                          fontWeight:
-                                              FloterTheme.of(context)
-                                                  .titleLarge
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FloterTheme.of(context)
-                                                  .titleLarge
-                                                  .fontStyle,
+                                          fontWeight: FloterTheme.of(context)
+                                              .titleLarge
+                                              .fontWeight,
+                                          fontStyle: FloterTheme.of(context)
+                                              .titleLarge
+                                              .fontStyle,
                                         ),
-                                        color: FloterTheme.of(context)
-                                            .primary,
+                                        color: FloterTheme.of(context).primary,
                                         letterSpacing: 0.0,
                                         fontWeight: FloterTheme.of(context)
                                             .titleLarge
@@ -111,8 +108,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                             FloterIconButton(
                               borderRadius: 8.0,
                               buttonSize: 40.0,
-                              fillColor: FloterTheme.of(context)
-                                  .primaryBackground,
+                              fillColor:
+                                  FloterTheme.of(context).primaryBackground,
                               icon: Icon(
                                 Icons.tune,
                                 color: FloterTheme.of(context).primaryText,
@@ -153,26 +150,22 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                         .bodySmall
                                         .override(
                                           font: GoogleFonts.inter(
-                                            fontWeight:
-                                                FloterTheme.of(context)
-                                                    .bodySmall
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FloterTheme.of(context)
-                                                    .bodySmall
-                                                    .fontStyle,
+                                            fontWeight: FloterTheme.of(context)
+                                                .bodySmall
+                                                .fontWeight,
+                                            fontStyle: FloterTheme.of(context)
+                                                .bodySmall
+                                                .fontStyle,
                                           ),
                                           color: FloterTheme.of(context)
                                               .primaryBackground,
                                           letterSpacing: 0.0,
-                                          fontWeight:
-                                              FloterTheme.of(context)
-                                                  .bodySmall
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FloterTheme.of(context)
-                                                  .bodySmall
-                                                  .fontStyle,
+                                          fontWeight: FloterTheme.of(context)
+                                              .bodySmall
+                                              .fontWeight,
+                                          fontStyle: FloterTheme.of(context)
+                                              .bodySmall
+                                              .fontStyle,
                                         ),
                                     overflow: TextOverflow.ellipsis,
                                   ),
@@ -180,12 +173,11 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               ),
                               Container(
                                 decoration: BoxDecoration(
-                                  color: FloterTheme.of(context)
-                                      .primaryBackground,
+                                  color:
+                                      FloterTheme.of(context).primaryBackground,
                                   borderRadius: BorderRadius.circular(18.0),
                                   border: Border.all(
-                                    color:
-                                        FloterTheme.of(context).alternate,
+                                    color: FloterTheme.of(context).alternate,
                                     width: 1.0,
                                   ),
                                 ),
@@ -201,26 +193,22 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                         .bodySmall
                                         .override(
                                           font: GoogleFonts.inter(
-                                            fontWeight:
-                                                FloterTheme.of(context)
-                                                    .bodySmall
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FloterTheme.of(context)
-                                                    .bodySmall
-                                                    .fontStyle,
+                                            fontWeight: FloterTheme.of(context)
+                                                .bodySmall
+                                                .fontWeight,
+                                            fontStyle: FloterTheme.of(context)
+                                                .bodySmall
+                                                .fontStyle,
                                           ),
                                           color: FloterTheme.of(context)
                                               .primaryText,
                                           letterSpacing: 0.0,
-                                          fontWeight:
-                                              FloterTheme.of(context)
-                                                  .bodySmall
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FloterTheme.of(context)
-                                                  .bodySmall
-                                                  .fontStyle,
+                                          fontWeight: FloterTheme.of(context)
+                                              .bodySmall
+                                              .fontWeight,
+                                          fontStyle: FloterTheme.of(context)
+                                              .bodySmall
+                                              .fontStyle,
                                         ),
                                     overflow: TextOverflow.ellipsis,
                                   ),
@@ -228,12 +216,11 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               ),
                               Container(
                                 decoration: BoxDecoration(
-                                  color: FloterTheme.of(context)
-                                      .primaryBackground,
+                                  color:
+                                      FloterTheme.of(context).primaryBackground,
                                   borderRadius: BorderRadius.circular(18.0),
                                   border: Border.all(
-                                    color:
-                                        FloterTheme.of(context).alternate,
+                                    color: FloterTheme.of(context).alternate,
                                     width: 1.0,
                                   ),
                                 ),
@@ -249,26 +236,22 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                         .bodySmall
                                         .override(
                                           font: GoogleFonts.inter(
-                                            fontWeight:
-                                                FloterTheme.of(context)
-                                                    .bodySmall
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FloterTheme.of(context)
-                                                    .bodySmall
-                                                    .fontStyle,
+                                            fontWeight: FloterTheme.of(context)
+                                                .bodySmall
+                                                .fontWeight,
+                                            fontStyle: FloterTheme.of(context)
+                                                .bodySmall
+                                                .fontStyle,
                                           ),
                                           color: FloterTheme.of(context)
                                               .primaryText,
                                           letterSpacing: 0.0,
-                                          fontWeight:
-                                              FloterTheme.of(context)
-                                                  .bodySmall
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FloterTheme.of(context)
-                                                  .bodySmall
-                                                  .fontStyle,
+                                          fontWeight: FloterTheme.of(context)
+                                              .bodySmall
+                                              .fontWeight,
+                                          fontStyle: FloterTheme.of(context)
+                                              .bodySmall
+                                              .fontStyle,
                                         ),
                                     overflow: TextOverflow.ellipsis,
                                   ),
@@ -286,8 +269,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               flex: 1,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: FloterTheme.of(context)
-                                      .primaryBackground,
+                                  color:
+                                      FloterTheme.of(context).primaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 child: Column(
@@ -322,20 +305,17 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                                   FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                             ),
                                             letterSpacing: 0.0,
-                                            fontWeight:
-                                                FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
+                                            fontWeight: FloterTheme.of(context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                            fontStyle: FloterTheme.of(context)
+                                                .bodyMedium
+                                                .fontStyle,
                                           ),
                                       overflow: TextOverflow.ellipsis,
                                     ),
@@ -347,8 +327,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               flex: 1,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: FloterTheme.of(context)
-                                      .primaryBackground,
+                                  color:
+                                      FloterTheme.of(context).primaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 child: Column(
@@ -383,20 +363,17 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                                   FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                             ),
                                             letterSpacing: 0.0,
-                                            fontWeight:
-                                                FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
+                                            fontWeight: FloterTheme.of(context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                            fontStyle: FloterTheme.of(context)
+                                                .bodyMedium
+                                                .fontStyle,
                                           ),
                                       overflow: TextOverflow.ellipsis,
                                     ),
@@ -415,8 +392,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               flex: 1,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: FloterTheme.of(context)
-                                      .primaryBackground,
+                                  color:
+                                      FloterTheme.of(context).primaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 child: Column(
@@ -451,20 +428,17 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                                   FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                             ),
                                             letterSpacing: 0.0,
-                                            fontWeight:
-                                                FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
+                                            fontWeight: FloterTheme.of(context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                            fontStyle: FloterTheme.of(context)
+                                                .bodyMedium
+                                                .fontStyle,
                                           ),
                                       overflow: TextOverflow.ellipsis,
                                     ),
@@ -476,8 +450,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                               flex: 1,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: FloterTheme.of(context)
-                                      .primaryBackground,
+                                  color:
+                                      FloterTheme.of(context).primaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 child: Column(
@@ -512,20 +486,17 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                                   FloterTheme.of(context)
                                                       .bodyMedium
                                                       .fontWeight,
-                                              fontStyle:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
+                                              fontStyle: FloterTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                             ),
                                             letterSpacing: 0.0,
-                                            fontWeight:
-                                                FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
+                                            fontWeight: FloterTheme.of(context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                            fontStyle: FloterTheme.of(context)
+                                                .bodyMedium
+                                                .fontStyle,
                                           ),
                                       overflow: TextOverflow.ellipsis,
                                     ),

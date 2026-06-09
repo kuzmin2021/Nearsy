@@ -1,0 +1,3 @@
+# Override PostgreSQL port to avoid conflict with existing PG on :5432
+[db]
+port = 54322

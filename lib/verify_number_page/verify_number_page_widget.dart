@@ -97,8 +97,7 @@ class _VerifyNumberPageWidgetState extends State<VerifyNumberPageWidget> {
                                   ),
                                   child: Icon(
                                     Icons.arrow_back,
-                                    color: FloterTheme.of(context)
-                                        .primaryText,
+                                    color: FloterTheme.of(context).primaryText,
                                     size: 24.0,
                                   ),
                                 ),
@@ -128,8 +127,7 @@ class _VerifyNumberPageWidgetState extends State<VerifyNumberPageWidget> {
                                         .headlineSmall
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .headlineSmall
@@ -144,9 +142,7 @@ class _VerifyNumberPageWidgetState extends State<VerifyNumberPageWidget> {
                               'verify_number.label_1' /* This screen is kept in the app... */,
                             ),
                             maxLines: 2,
-                            style: FloterTheme.of(context)
-                                .bodyMedium
-                                .override(
+                            style: FloterTheme.of(context).bodyMedium.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodyMedium
@@ -155,8 +151,7 @@ class _VerifyNumberPageWidgetState extends State<VerifyNumberPageWidget> {
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color: FloterTheme.of(context)
-                                      .secondaryText,
+                                  color: FloterTheme.of(context).secondaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .bodyMedium
@@ -169,8 +164,7 @@ class _VerifyNumberPageWidgetState extends State<VerifyNumberPageWidget> {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                              color: FloterTheme.of(context)
-                                  .primaryBackground,
+                              color: FloterTheme.of(context).primaryBackground,
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: Padding(
@@ -190,8 +184,8 @@ class _VerifyNumberPageWidgetState extends State<VerifyNumberPageWidget> {
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                      color: FloterTheme.of(context)
-                                          .primaryText,
+                                      color:
+                                          FloterTheme.of(context).primaryText,
                                       letterSpacing: 0.0,
                                       fontWeight: FloterTheme.of(context)
                                           .bodyMedium

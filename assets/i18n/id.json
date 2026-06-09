@@ -1,4 +1,4 @@
-{
+﻿{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Bertemu dekat. Tetap mudah",
@@ -311,8 +311,8 @@
       "prefer_not_to_say": "Memilih untuk tidak mengatakannya"
     },
     "kids": {
-      "yes": "Punya anak",
-      "no": "Tidak punya anak",
+      "yes": "Ya",
+      "no": "Tidak",
       "prefer_not_to_say": "Memilih untuk tidak mengatakannya"
     },
     "relationship_type": {
@@ -375,7 +375,7 @@
     "arabic": "Arab",
     "armenian": "orang Armenia",
     "bengali": "bahasa Bengali",
-    "catalan": "Katalan"
+    "catalan": "Katalan",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "Edit email",

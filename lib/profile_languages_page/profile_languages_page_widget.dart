@@ -115,7 +115,7 @@ class _ProfileLanguagesPageWidgetState
                 'norwegian',
             '\u0444\u0438\u043d\u0441\u043a\u0438\u0439': 'finnish',
           };
-          return aliases[normalized] ?? normalized;
+          return normalized;
         }
 
         return output
@@ -165,8 +165,7 @@ class _ProfileLanguagesPageWidgetState
                       FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 64.0,
-                        fillColor:
-                            FloterTheme.of(context).primaryBackground,
+                        fillColor: FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
                           color: FloterTheme.of(context).primaryText,
@@ -194,14 +193,8 @@ class _ProfileLanguagesPageWidgetState
                                 .replaceAll(RegExp(r'[^a-z0-9]+'), '_')
                                 .replaceAll(RegExp(r'_+'), '_')
                                 .replaceAll(RegExp(r'^_|_$'), '');
-                            const aliases = {
-                              'female': 'woman',
-                              'male': 'man',
-                              'nonbinary': 'non_binary',
-                              'bachelor_degree': 'bachelors_degree',
-                              'master_degree': 'masters_degree',
-                            };
-                            return aliases[normalized] ?? normalized;
+                            
+                            return normalized;
                           }
 
                           String canonicalLanguage(dynamic rawValue) {
@@ -264,7 +257,7 @@ class _ProfileLanguagesPageWidgetState
                               '\u0444\u0438\u043d\u0441\u043a\u0438\u0439':
                                   'finnish',
                             };
-                            return aliases[normalized] ?? normalized;
+                            return normalized;
                           }
 
                           final rawValue = _model.languages;
@@ -324,24 +317,23 @@ class _ProfileLanguagesPageWidgetState
                         child: Text(
                           functions.profileLanguagesUiText('title')!,
                           maxLines: 2,
-                          style:
-                              FloterTheme.of(context).titleLarge.override(
-                                    font: GoogleFonts.interTight(
-                                      fontWeight: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontStyle,
-                                  ),
+                          style: FloterTheme.of(context).titleLarge.override(
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontWeight,
+                                  fontStyle: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontStyle,
+                                ),
+                                letterSpacing: 0.0,
+                                fontWeight: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontWeight,
+                                fontStyle: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ].divide(SizedBox(width: 8.0)),
@@ -357,9 +349,7 @@ class _ProfileLanguagesPageWidgetState
                         children: [
                           Text(
                             functions.profileLanguagesUiText('helper')!,
-                            style: FloterTheme.of(context)
-                                .bodyMedium
-                                .override(
+                            style: FloterTheme.of(context).bodyMedium.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodyMedium
@@ -368,8 +358,7 @@ class _ProfileLanguagesPageWidgetState
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .bodyMedium
@@ -429,8 +418,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -442,8 +430,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -462,13 +449,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -534,8 +519,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -547,8 +531,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -567,13 +550,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -639,8 +620,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -652,8 +632,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -672,13 +651,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -744,8 +721,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -757,8 +733,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -777,13 +752,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -849,8 +822,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -862,8 +834,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -882,13 +853,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -954,8 +923,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -967,8 +935,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -987,13 +954,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -1060,8 +1025,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -1073,8 +1037,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -1093,13 +1056,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -1165,8 +1126,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -1178,8 +1138,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -1198,13 +1157,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -1270,8 +1227,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -1283,8 +1239,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -1303,13 +1258,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -1375,8 +1328,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -1388,8 +1340,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -1408,13 +1359,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -1480,8 +1429,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -1493,8 +1441,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -1513,13 +1460,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -1585,8 +1530,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -1598,8 +1542,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -1618,13 +1561,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -1691,8 +1632,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -1704,8 +1644,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -1724,13 +1663,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -1796,8 +1733,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -1809,8 +1745,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -1829,13 +1764,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -1901,8 +1834,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -1914,8 +1846,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -1934,13 +1865,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -2006,8 +1935,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -2019,8 +1947,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -2039,13 +1966,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -2111,8 +2036,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -2124,8 +2048,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -2144,13 +2067,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -2216,8 +2137,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -2229,8 +2149,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -2249,13 +2168,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -2322,8 +2239,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -2335,8 +2251,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -2355,13 +2270,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
@@ -2427,8 +2340,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .primary,
                                                   size: 28.0,
                                                 ),
@@ -2440,8 +2352,7 @@ class _ProfileLanguagesPageWidgetState
                                               Container(
                                                 child: Icon(
                                                   Icons.check_box_outline_blank,
-                                                  color: FloterTheme.of(
-                                                          context)
+                                                  color: FloterTheme.of(context)
                                                       .secondaryText,
                                                   size: 28.0,
                                                 ),
@@ -2460,13 +2371,11 @@ class _ProfileLanguagesPageWidgetState
                                               .override(
                                                 font: GoogleFonts.inter(
                                                   fontWeight:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FloterTheme.of(
-                                                              context)
+                                                      FloterTheme.of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),

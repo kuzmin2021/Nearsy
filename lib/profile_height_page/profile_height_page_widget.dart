@@ -265,9 +265,7 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                               'profile_height.my_height' /* My height: */,
                             ),
                             maxLines: 1,
-                            style: FloterTheme.of(context)
-                                .titleMedium
-                                .override(
+                            style: FloterTheme.of(context).titleMedium.override(
                                   font: GoogleFonts.interTight(
                                     fontWeight: FloterTheme.of(context)
                                         .titleMedium
@@ -303,9 +301,7 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                               'profile_height.enter_your_height' /* Enter your height */,
                             ),
                             maxLines: 1,
-                            style: FloterTheme.of(context)
-                                .bodyMedium
-                                .override(
+                            style: FloterTheme.of(context).bodyMedium.override(
                                   font: GoogleFonts.inter(
                                     fontWeight: FloterTheme.of(context)
                                         .bodyMedium
@@ -314,8 +310,7 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FloterTheme.of(context).primaryText,
+                                  color: FloterTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
                                   fontWeight: FloterTheme.of(context)
                                       .bodyMedium
@@ -358,8 +353,8 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                      color: FloterTheme.of(context)
-                                          .primaryText,
+                                      color:
+                                          FloterTheme.of(context).primaryText,
                                       letterSpacing: 0.0,
                                       fontWeight: FloterTheme.of(context)
                                           .bodyMedium
@@ -451,9 +446,8 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                             borderRadius:
                                                 BorderRadius.circular(9.0),
                                             border: Border.all(
-                                              color:
-                                                  FloterTheme.of(context)
-                                                      .primaryText,
+                                              color: FloterTheme.of(context)
+                                                  .primaryText,
                                               width: 1.0,
                                             ),
                                           ),
@@ -468,9 +462,8 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                             borderRadius:
                                                 BorderRadius.circular(9.0),
                                             border: Border.all(
-                                              color:
-                                                  FloterTheme.of(context)
-                                                      .primaryText,
+                                              color: FloterTheme.of(context)
+                                                  .primaryText,
                                               width: 1.0,
                                             ),
                                           ),
@@ -485,15 +478,13 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                             width: 16.0,
                                             height: 16.0,
                                             decoration: BoxDecoration(
-                                              color:
-                                                  FloterTheme.of(context)
-                                                      .primaryBackground,
+                                              color: FloterTheme.of(context)
+                                                  .primaryBackground,
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
                                               border: Border.all(
-                                                color:
-                                                    FloterTheme.of(context)
-                                                        .primaryText,
+                                                color: FloterTheme.of(context)
+                                                    .primaryText,
                                                 width: 1.0,
                                               ),
                                             ),
@@ -509,15 +500,13 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                             width: 16.0,
                                             height: 16.0,
                                             decoration: BoxDecoration(
-                                              color:
-                                                  FloterTheme.of(context)
-                                                      .primaryBackground,
+                                              color: FloterTheme.of(context)
+                                                  .primaryBackground,
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
                                               border: Border.all(
-                                                color:
-                                                    FloterTheme.of(context)
-                                                        .primaryText,
+                                                color: FloterTheme.of(context)
+                                                    .primaryText,
                                                 width: 1.0,
                                               ),
                                             ),
@@ -542,8 +531,8 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                      color: FloterTheme.of(context)
-                                          .primaryText,
+                                      color:
+                                          FloterTheme.of(context).primaryText,
                                       letterSpacing: 0.0,
                                       fontWeight: FloterTheme.of(context)
                                           .bodyMedium
@@ -572,8 +561,7 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                             width: 166.0,
                             height: 56.0,
                             decoration: BoxDecoration(
-                              color: FloterTheme.of(context)
-                                  .primaryBackground,
+                              color: FloterTheme.of(context).primaryBackground,
                               borderRadius: BorderRadius.circular(5.0),
                               border: Border.all(
                                 color: FloterTheme.of(context).primaryText,

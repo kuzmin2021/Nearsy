@@ -67,8 +67,7 @@ class _NearbySearchPreferencesPageWidgetState
                       FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 40.0,
-                        fillColor:
-                            FloterTheme.of(context).primaryBackground,
+                        fillColor: FloterTheme.of(context).primaryBackground,
                         icon: Icon(
                           Icons.arrow_back,
                           color: FloterTheme.of(context).primaryText,
@@ -85,24 +84,23 @@ class _NearbySearchPreferencesPageWidgetState
                             'nearby_search_preferences.title' /* Nearby Search Preferences */,
                           ),
                           maxLines: 2,
-                          style:
-                              FloterTheme.of(context).titleLarge.override(
-                                    font: GoogleFonts.interTight(
-                                      fontWeight: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .titleLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .titleLarge
-                                        .fontStyle,
-                                  ),
+                          style: FloterTheme.of(context).titleLarge.override(
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontWeight,
+                                  fontStyle: FloterTheme.of(context)
+                                      .titleLarge
+                                      .fontStyle,
+                                ),
+                                letterSpacing: 0.0,
+                                fontWeight: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontWeight,
+                                fontStyle: FloterTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ].divide(SizedBox(width: 12.0)),
@@ -113,17 +111,14 @@ class _NearbySearchPreferencesPageWidgetState
                     ),
                     style: FloterTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
-                            fontWeight: FloterTheme.of(context)
-                                .bodyMedium
-                                .fontWeight,
-                            fontStyle: FloterTheme.of(context)
-                                .bodyMedium
-                                .fontStyle,
+                            fontWeight:
+                                FloterTheme.of(context).bodyMedium.fontWeight,
+                            fontStyle:
+                                FloterTheme.of(context).bodyMedium.fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FloterTheme.of(context)
-                              .bodyMedium
-                              .fontWeight,
+                          fontWeight:
+                              FloterTheme.of(context).bodyMedium.fontWeight,
                           fontStyle:
                               FloterTheme.of(context).bodyMedium.fontStyle,
                         ),
@@ -134,17 +129,14 @@ class _NearbySearchPreferencesPageWidgetState
                     ),
                     style: FloterTheme.of(context).titleSmall.override(
                           font: GoogleFonts.interTight(
-                            fontWeight: FloterTheme.of(context)
-                                .titleSmall
-                                .fontWeight,
-                            fontStyle: FloterTheme.of(context)
-                                .titleSmall
-                                .fontStyle,
+                            fontWeight:
+                                FloterTheme.of(context).titleSmall.fontWeight,
+                            fontStyle:
+                                FloterTheme.of(context).titleSmall.fontStyle,
                           ),
                           letterSpacing: 0.0,
-                          fontWeight: FloterTheme.of(context)
-                              .titleSmall
-                              .fontWeight,
+                          fontWeight:
+                              FloterTheme.of(context).titleSmall.fontWeight,
                           fontStyle:
                               FloterTheme.of(context).titleSmall.fontStyle,
                         ),
@@ -184,9 +176,7 @@ class _NearbySearchPreferencesPageWidgetState
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 3,
-                              style: FloterTheme.of(context)
-                                  .bodySmall
-                                  .override(
+                              style: FloterTheme.of(context).bodySmall.override(
                                     font: GoogleFonts.inter(
                                       fontWeight: FloterTheme.of(context)
                                           .bodySmall
@@ -228,8 +218,7 @@ class _NearbySearchPreferencesPageWidgetState
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 Icons.near_me,
-                                color:
-                                    FloterTheme.of(context).secondaryText,
+                                color: FloterTheme.of(context).secondaryText,
                                 size: 24.0,
                               ),
                             ),
@@ -239,9 +228,7 @@ class _NearbySearchPreferencesPageWidgetState
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 3,
-                              style: FloterTheme.of(context)
-                                  .bodySmall
-                                  .override(
+                              style: FloterTheme.of(context).bodySmall.override(
                                     font: GoogleFonts.inter(
                                       fontWeight: FloterTheme.of(context)
                                           .bodySmall
@@ -283,8 +270,7 @@ class _NearbySearchPreferencesPageWidgetState
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 Icons.my_location,
-                                color:
-                                    FloterTheme.of(context).secondaryText,
+                                color: FloterTheme.of(context).secondaryText,
                                 size: 24.0,
                               ),
                             ),
@@ -294,9 +280,7 @@ class _NearbySearchPreferencesPageWidgetState
                               ),
                               textAlign: TextAlign.center,
                               maxLines: 3,
-                              style: FloterTheme.of(context)
-                                  .bodySmall
-                                  .override(
+                              style: FloterTheme.of(context).bodySmall.override(
                                     font: GoogleFonts.inter(
                                       fontWeight: FloterTheme.of(context)
                                           .bodySmall
@@ -332,18 +316,15 @@ class _NearbySearchPreferencesPageWidgetState
                     ),
                     style: FloterTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
-                            fontWeight: FloterTheme.of(context)
-                                .bodyMedium
-                                .fontWeight,
-                            fontStyle: FloterTheme.of(context)
-                                .bodyMedium
-                                .fontStyle,
+                            fontWeight:
+                                FloterTheme.of(context).bodyMedium.fontWeight,
+                            fontStyle:
+                                FloterTheme.of(context).bodyMedium.fontStyle,
                           ),
                           color: FloterTheme.of(context).primary,
                           letterSpacing: 0.0,
-                          fontWeight: FloterTheme.of(context)
-                              .bodyMedium
-                              .fontWeight,
+                          fontWeight:
+                              FloterTheme.of(context).bodyMedium.fontWeight,
                           fontStyle:
                               FloterTheme.of(context).bodyMedium.fontStyle,
                         ),

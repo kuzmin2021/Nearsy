@@ -1,4 +1,4 @@
-{
+﻿{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Treffen Sie sich in der Nähe. Halten Sie es einfach",
@@ -311,8 +311,8 @@
       "prefer_not_to_say": "Sag es lieber nicht"
     },
     "kids": {
-      "yes": "Habe Kinder",
-      "no": "Habe keine Kinder",
+      "yes": "Ja",
+      "no": "Nein",
       "prefer_not_to_say": "Sag es lieber nicht"
     },
     "relationship_type": {
@@ -375,7 +375,7 @@
     "arabic": "Arabisch",
     "armenian": "Armenisch",
     "bengali": "Bengali",
-    "catalan": "katalanisch"
+    "catalan": "katalanisch",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "E-Mail bearbeiten",

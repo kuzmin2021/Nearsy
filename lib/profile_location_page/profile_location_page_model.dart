@@ -1,9 +1,8 @@
-﻿import '/floter/floter_util.dart';
+import '/floter/floter_util.dart';
 import 'profile_location_page_widget.dart' show ProfileLocationPageWidget;
 import 'package:flutter/material.dart';
 
-class ProfileLocationPageModel
-    extends FloterModel<ProfileLocationPageWidget> {
+class ProfileLocationPageModel extends FloterModel<ProfileLocationPageWidget> {
   ///  Local state fields for this page.
 
   String? location = '';

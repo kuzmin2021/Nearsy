@@ -1,4 +1,4 @@
-{
+﻿{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "喺附近見面。保持輕鬆",
@@ -311,8 +311,8 @@
       "prefer_not_to_say": "寧願唔講"
     },
     "kids": {
-      "yes": "有小朋友",
-      "no": "唔好生仔",
+      "yes": "係",
+      "no": "唔得",
       "prefer_not_to_say": "寧願唔講"
     },
     "relationship_type": {
@@ -375,7 +375,7 @@
     "arabic": "阿拉伯文",
     "armenian": "亞美尼亞人",
     "bengali": "孟加拉文",
-    "catalan": "加泰羅尼亞人"
+    "catalan": "加泰羅尼亞人",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "編輯電郵",

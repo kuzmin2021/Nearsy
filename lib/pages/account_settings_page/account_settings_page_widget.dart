@@ -427,7 +427,14 @@ class _AccountSettingsPageWidgetState extends State<AccountSettingsPageWidget> {
                           actionLabel: AppLabels.of(context).get(
                             'account_settings.edit_phone' /* Edit */,
                           ),
-
+                          onActionTap: () async {
+                            await context.pushNamed(
+                              AccountPhonePageWidget.routeName,
+                            );
+                            if (mounted) {
+                              await _loadAccountSettings();
+                            }
+                          },
                         ),
                         _accountRow(
                           context,
