@@ -1,4 +1,4 @@
-﻿import '../backend/supabase/supabase.dart';
+import '../backend/supabase/supabase.dart';
 import '../models/chat_models.dart';
 
 class ChatService {
@@ -14,7 +14,7 @@ class ChatService {
 
     final response = await _client
         .from('conversations')
-        .select('id, user1, user2, match_created_at, last_message_at, last_message_id')
+        .select('id, user1, user2, match_created_at, last_message_at, last_message_id, deleted_for')
         .or('user1.eq.$userId,user2.eq.$userId')
         .order('last_message_at', ascending: false);
 
@@ -22,6 +22,8 @@ class ChatService {
     final otherUserIds = <String>[];
 
     for (final row in response) {
+      final deletedFor = (row['deleted_for'] as List?)?.cast<String>() ?? [];
+      if (deletedFor.contains(userId)) continue;
       final user1 = row['user1'] as String? ?? '';
       final user2 = row['user2'] as String? ?? '';
       final otherId = user1 == userId ? user2 : user1;
@@ -56,6 +58,8 @@ class ChatService {
     }
 
     for (final row in response) {
+      final deletedFor = (row['deleted_for'] as List?)?.cast<String>() ?? [];
+      if (deletedFor.contains(userId)) continue;
       final user1 = row['user1'] as String? ?? '';
       final user2 = row['user2'] as String? ?? '';
       final otherId = user1 == userId ? user2 : user1;
@@ -337,20 +341,18 @@ class ChatService {
   }
 
   Future<void> blockUser(String blockerId, String blockedId) async {
-    try {
-      await _client.from('blocks').insert({
+    final exists = await _client.from('blocks').select('id').eq('blocker', blockerId).eq('blocked', blockedId).maybeSingle();
+    if (exists != null) return;
+    await _client.from('blocks').insert({
         'blocker': blockerId,
         'blocked': blockedId,
       });
-    } catch (_) {}
   }
 
   Future<void> deleteMatch(String user1, String user2) async {
-    try {
-      await _client
+    await _client
           .from('matches')
           .delete()
-          .or('(user1.eq.$user1,user2.eq.$user2),(user1.eq.$user2,user2.eq.$user1)');
-    } catch (_) {}
+          .or('and(user1.eq.' + user1 + ',user2.eq.' + user2 + '),and(user1.eq.' + user2 + ',user2.eq.' + user1 + ')');
   }
 }

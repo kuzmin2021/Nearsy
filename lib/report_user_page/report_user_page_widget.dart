@@ -66,9 +66,9 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
       );
       _showThankYouDialog();
       final chatService = ChatService();
-      await chatService.blockUser(reporterId, widget.reportedUserId);
-      await chatService.deleteConversation(widget.conversationId);
-      await chatService.deleteMatch(reporterId, widget.reportedUserId);
+      try { await chatService.blockUser(reporterId, widget.reportedUserId); } catch (e) { debugPrint('blockUser error: ' + e.toString()); }
+      try { await chatService.deleteConversation(widget.conversationId); } catch (e) { debugPrint('deleteConv error: ' + e.toString()); }
+      try { await chatService.deleteMatch(reporterId, widget.reportedUserId); } catch (e) { debugPrint('deleteMatch error: ' + e.toString()); }
     } catch (_) {}
     _isSubmitting = false;
     safeSetState(() {});
@@ -78,6 +78,7 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
     showDialog(
       context: context,
       barrierDismissible: false,
+      barrierColor: Colors.black,
       builder: (_) => Center(
         child: Container(
           width: 313,
@@ -188,7 +189,7 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
                           color: Colors.black,
                         ),
                         decoration: InputDecoration(
-                          border: InputBorder.none, enabledBorder: InputBorder.none, focusedBorder: InputBorder.none,
+                          border: InputBorder.none, enabledBorder: InputBorder.none, focusedBorder: InputBorder.none, errorBorder: InputBorder.none, focusedErrorBorder: InputBorder.none,
                           hintText: AppLabels.of(context)
                               .get('report_user.description_hint'),
                           hintStyle: GoogleFonts.inter(
