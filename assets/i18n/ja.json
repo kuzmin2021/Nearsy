@@ -1,4 +1,4 @@
-﻿{
+{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "近くで会いましょう。簡単にしてください",
@@ -42,7 +42,8 @@
     "chats": "チャット",    "tab_label": "チャット"
   },
   "chat": {
-    "write_a_message": "メッセージ"
+    "write_a_message": "メッセージ",
+    "no_messages": "メッセージはありません"
   },
   "account_settings": {
     "title": "アカウント設定",

@@ -19,6 +19,12 @@ class SupaFlow {
     return '${AppConfig.supabaseUrl}/storage/v1/object/public/user_photos/$encodedPath';
   }
 
+  static String chatPhotoUrl(String storagePath) {
+    final encodedPath =
+        storagePath.split('/').map(Uri.encodeComponent).join('/');
+    return '${AppConfig.supabaseUrl}/storage/v1/object/public/chat_photos/$encodedPath';
+  }
+
   static String? resolvePhotoUrl(dynamic raw) {
     final path = raw is String ? raw.trim() : '';
     if (path.isEmpty) return '';

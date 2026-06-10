@@ -1,4 +1,4 @@
-﻿{
+{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "相约近处。保持轻松",
@@ -42,7 +42,8 @@
     "chats": "聊天",    "tab_label": "聊天"
   },
   "chat": {
-    "write_a_message": "消息"
+    "write_a_message": "消息",
+    "no_messages": "没有消息"
   },
   "account_settings": {
     "title": "账户设置",

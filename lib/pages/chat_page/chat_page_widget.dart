@@ -1,11 +1,15 @@
-﻿import '/floter/floter_icon_button.dart';
+﻿import 'dart:typed_data';
+
+import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart' as emoji;
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'chat_page_model.dart';
 import '/models/chat_models.dart';
@@ -196,7 +200,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                                     fontSize: 15,
                                     fontWeight: FontWeight.w500,
                                     color: Colors.black,
-                                  ),
+                                  ).copyWith(fontFamilyFallback: const ['NotoColorEmoji']),
                                 ),
                               ),
                               const SizedBox(width: 8),
@@ -209,25 +213,37 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                           padding: msg.body.isNotEmpty
                               ? const EdgeInsets.only(top: 4)
                               : EdgeInsets.zero,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(6),
-                            child: CachedNetworkImage(
-                              imageUrl: msg.photoUrl!,
-                              width: 200,
-                              fit: BoxFit.cover,
-                              placeholder: (_, __) => const SizedBox(
-                                width: 200,
-                                height: 150,
-                                child: Center(
-                                    child: CircularProgressIndicator()),
-                              ),
-                              errorWidget: (_, __, ___) => Container(
-                                width: 200,
-                                height: 100,
-                                color: theme.secondaryBackground,
-                                child: const Icon(Icons.broken_image),
+                          child: GestureDetector(
+                            onTap: () => _showFullscreenPhoto(context, msg.photoUrl!),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(6),
+                              child: CachedNetworkImage(
+                                imageUrl: msg.photoUrl!,
+                                width: 120,
+                                height: 120,
+                                fit: BoxFit.cover,
+                                placeholder: (_, __) => const SizedBox(
+                                  width: 120,
+                                  height: 120,
+                                  child: Center(
+                                      child: CircularProgressIndicator()),
+                                ),
+                                errorWidget: (_, __, ___) => Container(
+                                  width: 120,
+                                  height: 120,
+                                  color: theme.secondaryBackground,
+                                  child: const Icon(Icons.broken_image),
+                                ),
                               ),
                             ),
+                          ),
+                        ),
+                      if (msg.photoUrl != null && msg.photoUrl!.isNotEmpty && msg.body.isEmpty)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4),
+                          child: Align(
+                            alignment: AlignmentDirectional.centerEnd,
+                            child: _buildTimeStamp(msg, timeStr),
                           ),
                         ),
                     ],
@@ -259,7 +275,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
             fontSize: 10,
             fontWeight: FontWeight.w500,
             color: const Color(0x80000000),
-          ),
+          ).copyWith(fontFamilyFallback: const ['NotoColorEmoji']),
         ),
       ],
     );
@@ -302,74 +318,178 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
     );
   }
 
-  Widget _buildInputBar(BuildContext context) {
-    return Container(
-      height: 38,
-      decoration: BoxDecoration(
-        color: const Color(0xFFfffffffa),
-        borderRadius: BorderRadius.circular(15),
-        border: Border.all(color: Colors.black, width: 1),
+  void _showAttachmentPicker(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Expanded(
-            child: TextFormField(
-              controller: _model.messageTextFieldTextController,
-              focusNode: _model.messageTextFieldFocusNode,
-              onChanged: (_) => EasyDebounce.debounce(
-                '_model.messageTextFieldTextController',
-                const Duration(milliseconds: 2000),
-                () async {
-                  _model.messageText =
-                      _model.messageTextFieldTextController.text;
-                  safeSetState(() {});
-                },
-              ),
-              onFieldSubmitted: (_) async {
-                await _model.sendMessage();
-                safeSetState(() {});
-              },
-              textInputAction: TextInputAction.send,
-              obscureText: false,
-              decoration: InputDecoration(
-                hintText: AppLabels.of(context).get('chat.write_a_message'),
-                hintStyle: GoogleFonts.inter(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w500,
-                  color: const Color(0x80000000),
+      builder: (ctx) {
+        return SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ListTile(
+                  leading: const Icon(Icons.photo_library, color: Color(0xFFC9B0FF)),
+                  title: const Text('Gallery'),
+                  onTap: () async {
+                    Navigator.pop(ctx);
+                    final result = await FilePicker.platform.pickFiles(
+                      type: FileType.image,
+                      allowMultiple: false,
+                      withData: true,
+                    );
+                    if (result == null || result.files.isEmpty) return;
+                    final file = result.files.single;
+                    if (file.bytes == null) return;
+                    await _model.sendPhoto(file.bytes!, file.name);
+                    safeSetState(() {});
+                  },
                 ),
-                enabledBorder: InputBorder.none,
-                focusedBorder: InputBorder.none,
-                contentPadding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 2),
-                filled: false,
-                isDense: true,
-              ),
-              textAlignVertical: TextAlignVertical.center,
-              style: GoogleFonts.inter(
-                fontSize: 15,
-                fontWeight: FontWeight.w500,
-                color: Colors.black,
-              ),
-              maxLines: null,
-              validator: _model
-                  .messageTextFieldTextControllerValidator
-                  .asValidator(context),
+                ListTile(
+                  leading: const Icon(Icons.camera_alt, color: Color(0xFFC9B0FF)),
+                  title: const Text('Camera'),
+                  onTap: () async {
+                    Navigator.pop(ctx);
+                    final picker = ImagePicker();
+                    final picked = await picker.pickImage(source: ImageSource.camera);
+                    if (picked == null) return;
+                    final bytes = await picked.readAsBytes();
+                    await _model.sendPhoto(bytes, picked.name);
+                    safeSetState(() {});
+                  },
+                ),
+              ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-            child: GestureDetector(
-              onTap: () => _showEmojiPicker(context),
-              child: const Icon(
-                Icons.emoji_emotions,
-                color: Color(0x80000000),
-                size: 24,
+        );
+      },
+    );
+  }
+
+  void _showFullscreenPhoto(BuildContext context, String photoUrl) {
+    showDialog(
+      context: context,
+      builder: (_) => Dialog.fullscreen(
+        backgroundColor: Colors.black,
+        child: Stack(
+          children: [
+            Center(
+              child: InteractiveViewer(
+                child: CachedNetworkImage(
+                  imageUrl: photoUrl,
+                  fit: BoxFit.contain,
+                  width: double.infinity,
+                  height: double.infinity,
+                  placeholder: (_, __) => const Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                  errorWidget: (_, __, ___) => const Icon(Icons.broken_image, size: 64, color: Colors.white),
+                ),
               ),
             ),
-          ),
-        ],
+            Positioned(
+              top: 40,
+              right: 16,
+              child: IconButton(
+                icon: const Icon(Icons.close, color: Colors.white, size: 32),
+                onPressed: () => Navigator.pop(context),
+              ),
+            ),
+          ],
+        ),
       ),
+    );
+  }
+
+  Widget _buildInputBar(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
+          child: GestureDetector(
+            onTap: () => _showAttachmentPicker(context),
+            child: const Icon(
+              Icons.attach_file,
+              color: Color(0x80000000),
+              size: 28,
+            ),
+          ),
+        ),
+        Expanded(
+          child: Container(
+            height: 38,
+            decoration: BoxDecoration(
+              color: const Color(0xFFfffffffa),
+              borderRadius: BorderRadius.circular(15),
+              border: Border.all(color: Colors.black, width: 1),
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: TextFormField(
+                    controller: _model.messageTextFieldTextController,
+                    focusNode: _model.messageTextFieldFocusNode,
+                    onChanged: (_) => EasyDebounce.debounce(
+                      '_model.messageTextFieldTextController',
+                      const Duration(milliseconds: 2000),
+                      () async {
+                        _model.messageText =
+                            _model.messageTextFieldTextController.text;
+                        safeSetState(() {});
+                      },
+                    ),
+                    onFieldSubmitted: (_) async {
+                      await _model.sendMessage();
+                      safeSetState(() {});
+                    },
+                    textInputAction: TextInputAction.send,
+                    obscureText: false,
+                    decoration: InputDecoration(
+                      hintText: AppLabels.of(context).get('chat.write_a_message'),
+                      hintStyle: GoogleFonts.inter(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                        color: const Color(0x80000000),
+                      ).copyWith(fontFamilyFallback: const ['NotoColorEmoji']),
+                      enabledBorder: InputBorder.none,
+                      focusedBorder: InputBorder.none,
+                      contentPadding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 2),
+                      filled: false,
+                      isDense: true,
+                    ),
+                    textAlignVertical: TextAlignVertical.center,
+                    style: GoogleFonts.inter(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                    ).copyWith(fontFamilyFallback: const ['NotoColorEmoji']),
+                    maxLines: null,
+                    validator: _model
+                        .messageTextFieldTextControllerValidator
+                        .asValidator(context),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                  child: GestureDetector(
+                    onTap: () => _showEmojiPicker(context),
+                    child: const Icon(
+                      Icons.emoji_emotions,
+                      color: Color(0x80000000),
+                      size: 24,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

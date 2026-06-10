@@ -1,4 +1,4 @@
-﻿{
+{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "কাছাকাছি দেখা। এটা সহজ রাখুন",
@@ -42,7 +42,8 @@
     "chats": "চ্যাট",    "tab_label": "চ্যাট"
   },
   "chat": {
-    "write_a_message": "বার্তা"
+    "write_a_message": "বার্তা",
+    "no_messages": "কোনও বার্তা নেই"
   },
   "account_settings": {
     "title": "অ্যাকাউন্ট সেটিংস",

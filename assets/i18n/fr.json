@@ -1,4 +1,4 @@
-﻿{
+{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Rendez-vous à proximité. Restez facile",
@@ -42,7 +42,8 @@
     "chats": "Discussions",    "tab_label": "Discussions"
   },
   "chat": {
-    "write_a_message": "Message"
+    "write_a_message": "Message",
+    "no_messages": "Aucun message"
   },
   "account_settings": {
     "title": "Paramètres du compte",

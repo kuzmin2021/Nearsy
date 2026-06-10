@@ -1,4 +1,4 @@
-﻿{
+{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Bertemu dekat. Tetap mudah",
@@ -42,7 +42,8 @@
     "chats": "Obrolan",    "tab_label": "Obrolan"
   },
   "chat": {
-    "write_a_message": "Pesan"
+    "write_a_message": "Pesan",
+    "no_messages": "Tidak ada pesan"
   },
   "account_settings": {
     "title": "Pengaturan akun",

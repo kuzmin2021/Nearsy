@@ -1,4 +1,4 @@
-﻿{
+{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "जवळ भेटा. सहज ठेवा",
@@ -42,7 +42,8 @@
     "chats": "चॅट",    "tab_label": "चॅट"
   },
   "chat": {
-    "write_a_message": "संदेश"
+    "write_a_message": "संदेश",
+    "no_messages": "कोणतेही संदेश नाहीत"
   },
   "account_settings": {
     "title": "खाते सेटिंग्ज",

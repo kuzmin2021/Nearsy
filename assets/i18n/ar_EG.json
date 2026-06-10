@@ -1,4 +1,4 @@
-﻿{
+{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "لقاء قريب. اجعل الأمر سهلاً",
@@ -42,7 +42,8 @@
     "chats": "الدردشات",    "tab_label": "الدردشات"
   },
   "chat": {
-    "write_a_message": "رسالة"
+    "write_a_message": "رسالة",
+    "no_messages": "لا توجد رسائل"
   },
   "account_settings": {
     "title": "إعدادات الحساب",

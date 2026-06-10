@@ -1,4 +1,4 @@
-﻿{
+{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Встречаемся рядом. Будь проще",
@@ -46,7 +46,8 @@
     "tab_label": "Чаты"
   },
   "chat": {
-    "write_a_message": "Сообщение"
+    "write_a_message": "Сообщение",
+    "no_messages": "Нет сообщений"
   },
   "account_settings": {
     "title": "Настройки аккаунта",

@@ -1,9 +1,11 @@
 ﻿import '/floter/floter_util.dart';
+import '/backend/supabase/supabase.dart';
 import '/models/chat_models.dart';
 import '/services/chat_service.dart';
 import 'chat_page_widget.dart' show ChatPageWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'dart:typed_data';
 
 class ChatPageModel extends FloterModel<ChatPageWidget> {
   VoidCallback? onStateChanged;
@@ -37,17 +39,15 @@ class ChatPageModel extends FloterModel<ChatPageWidget> {
 
   void _scrollToBottom() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _doScrollToBottom();
+      _doScrollToBottom(3);
     });
   }
 
-  void _doScrollToBottom() {
-    if (!scrollController.hasClients) return;
+  void _doScrollToBottom(int attempts) {
+    if (!scrollController.hasClients || attempts <= 0) return;
     scrollController.jumpTo(scrollController.position.maxScrollExtent);
     SchedulerBinding.instance.addPostFrameCallback((_) {
-      if (scrollController.hasClients) {
-        scrollController.jumpTo(scrollController.position.maxScrollExtent);
-      }
+      _doScrollToBottom(attempts - 1);
     });
   }
 
@@ -118,6 +118,20 @@ class ChatPageModel extends FloterModel<ChatPageWidget> {
     final sent = await _chatService.sendMessage(conversationId!, text);
     if (sent != null) {
       messages.add(sent);
+      onStateChanged?.call();
+      _scrollToBottom();
+    }
+  }
+
+  Future<void> sendPhoto(Uint8List bytes, String fileName) async {
+    if (conversationId == null) return;
+    final userId = SupaFlow.client.auth.currentUser?.id;
+    if (userId == null) return;
+    final storagePath = await _chatService.uploadChatPhoto(userId, bytes, fileName);
+    if (storagePath == null) return;
+    final message = await _chatService.sendPhoto(conversationId!, storagePath);
+    if (message != null) {
+      messages.add(message);
       onStateChanged?.call();
       _scrollToBottom();
     }

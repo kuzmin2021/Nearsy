@@ -156,7 +156,7 @@ class ChatService {
     final userId = _client.auth.currentUser?.id;
     if (userId == null) return null;
 
-    final photoUrl = SupaFlow.publicPhotoUrl(photoPath);
+    final photoUrl = SupaFlow.chatPhotoUrl(photoPath);
 
     final response = await _client.from('messages').insert({
       'conversation_id': conversationId,
@@ -185,7 +185,7 @@ class ChatService {
 
   Future<String?> uploadChatPhoto(String userId, dynamic fileBytes, String fileName) async {
     final timestamp = DateTime.now().millisecondsSinceEpoch;
-    final storagePath = 'chat_photos/$userId/$timestamp-$fileName';
+    final storagePath = '$userId/$timestamp-$fileName';
 
     final bucket = _client.storage.from('chat_photos');
     await bucket.uploadBinary(storagePath, fileBytes);

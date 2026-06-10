@@ -166,10 +166,12 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.light,
         useMaterial3: false,
+        fontFamilyFallback: const ['NotoColorEmoji'],
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         useMaterial3: false,
+        fontFamilyFallback: const ['NotoColorEmoji'],
       ),
       themeMode: _themeMode,
       routerConfig: _router,
