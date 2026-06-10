@@ -39,17 +39,10 @@
     "tab_label": "আপনাকে পছন্দ করেছে"
   },
   "matches": {
-    "chats": "চ্যাট",
-    "you_normur": "You: Normur",
-    "you_how_big_is_your": "You: How big is your...",
-    "sure_see_you_at_bla": "Sure, see you at bla...",
-    "tab_label": "চ্যাট"
+    "chats": "চ্যাট",    "tab_label": "চ্যাট"
   },
   "chat": {
-    "chyokak": "Chyokak?",
-    "normur": "Normur",
-    "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "একটি বার্তা লিখুন"
+    "write_a_message": "বার্তা"
   },
   "account_settings": {
     "title": "অ্যাকাউন্ট সেটিংস",

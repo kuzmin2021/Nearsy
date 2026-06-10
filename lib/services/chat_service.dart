@@ -103,7 +103,7 @@ class ChatService {
 
     final response = await _client
         .from('messages')
-        .select('id, conversation_id, sender_id, body, created_at, photo_url')
+        .select('id, conversation_id, sender_id, body, created_at, photo_url, read_at')
         .eq('conversation_id', conversationId)
         .order('created_at', ascending: true);
 
@@ -114,6 +114,9 @@ class ChatService {
         senderId: row['sender_id'] as String? ?? '',
         body: row['body'] as String? ?? '',
         photoUrl: row['photo_url'] as String?,
+        readAt: row['read_at'] != null
+            ? DateTime.tryParse(row['read_at'] as String)
+            : null,
         createdAt: row['created_at'] != null
             ? DateTime.parse(row['created_at'] as String)
             : DateTime.now(),
@@ -268,5 +271,68 @@ class ChatService {
   void unsubscribe() {
     _conversationsChannel?.unsubscribe();
     _conversationsChannel = null;
+  }
+
+  RealtimeChannel? _messagesChannel;
+
+  void subscribeToMessages(int conversationId, {
+    required void Function(Message) onNewMessage,
+    required void Function(Message) onReadReceipt,
+  }) {
+    unsubscribeFromMessages();
+    final userId = _client.auth.currentUser?.id;
+    if (userId == null) return;
+
+    _messagesChannel = _client
+        .channel('messages:$conversationId')
+        .onPostgresChanges(
+          event: PostgresChangeEvent.insert,
+          schema: 'public',
+          table: 'messages',
+          callback: (payload) {
+            final newRecord = payload.newRecord;
+            final msgConvId = newRecord['conversation_id'] as int?;
+            if (msgConvId == null) return;
+            if (msgConvId != conversationId) return;
+            final senderId = newRecord['sender_id'] as String? ?? '';
+            if (senderId == userId) return;
+            final msg = Message.fromMap(newRecord, currentUserId: userId);
+            onNewMessage(msg);
+          },
+        )
+        .onPostgresChanges(
+          event: PostgresChangeEvent.update,
+          schema: 'public',
+          table: 'messages',
+          callback: (payload) {
+            final newRecord = payload.newRecord;
+            final msgConvId = newRecord['conversation_id'] as int?;
+            if (msgConvId == null) return;
+            if (msgConvId != conversationId) return;
+            if (newRecord['read_at'] == null) return;
+            final senderId = newRecord['sender_id'] as String? ?? '';
+            if (senderId != userId) return;
+            final msg = Message.fromMap(newRecord, currentUserId: userId);
+            onReadReceipt(msg);
+          },
+        )
+        .subscribe();
+  }
+
+  Future<void> markMessagesAsRead(int conversationId) async {
+    final userId = _client.auth.currentUser?.id;
+    if (userId == null) return;
+    try {
+      await _client
+          .from('messages')
+          .update({'read_at': DateTime.now().toUtc().toIso8601String()})
+          .eq('conversation_id', conversationId)
+          .neq('sender_id', userId);
+    } catch (_) {}
+  }
+
+  void unsubscribeFromMessages() {
+    _messagesChannel?.unsubscribe();
+    _messagesChannel = null;
   }
 }

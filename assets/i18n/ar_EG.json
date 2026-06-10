@@ -39,17 +39,10 @@
     "tab_label": "أعجبوا بك"
   },
   "matches": {
-    "chats": "الدردشات",
-    "you_normur": "You: Normur",
-    "you_how_big_is_your": "You: How big is your...",
-    "sure_see_you_at_bla": "Sure, see you at bla...",
-    "tab_label": "الدردشات"
+    "chats": "الدردشات",    "tab_label": "الدردشات"
   },
   "chat": {
-    "chyokak": "Chyokak?",
-    "normur": "Normur",
-    "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "اكتب رسالة"
+    "write_a_message": "رسالة"
   },
   "account_settings": {
     "title": "إعدادات الحساب",

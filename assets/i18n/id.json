@@ -39,17 +39,10 @@
     "tab_label": "Menyukai Anda"
   },
   "matches": {
-    "chats": "Obrolan",
-    "you_normur": "You: Normur",
-    "you_how_big_is_your": "You: How big is your...",
-    "sure_see_you_at_bla": "Sure, see you at bla...",
-    "tab_label": "Obrolan"
+    "chats": "Obrolan",    "tab_label": "Obrolan"
   },
   "chat": {
-    "chyokak": "Chyokak?",
-    "normur": "Normur",
-    "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "Tulis pesan"
+    "write_a_message": "Pesan"
   },
   "account_settings": {
     "title": "Pengaturan akun",

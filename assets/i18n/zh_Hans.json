@@ -39,17 +39,10 @@
     "tab_label": "喜欢你的人"
   },
   "matches": {
-    "chats": "聊天",
-    "you_normur": "You: Normur",
-    "you_how_big_is_your": "You: How big is your...",
-    "sure_see_you_at_bla": "Sure, see you at bla...",
-    "tab_label": "聊天"
+    "chats": "聊天",    "tab_label": "聊天"
   },
   "chat": {
-    "chyokak": "Chyokak?",
-    "normur": "Normur",
-    "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "写留言"
+    "write_a_message": "消息"
   },
   "account_settings": {
     "title": "账户设置",

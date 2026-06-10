@@ -39,17 +39,10 @@
     "tab_label": "جنہیں آپ پسند آئے"
   },
   "matches": {
-    "chats": "چیٹس",
-    "you_normur": "You: Normur",
-    "you_how_big_is_your": "You: How big is your...",
-    "sure_see_you_at_bla": "Sure, see you at bla...",
-    "tab_label": "چیٹس"
+    "chats": "چیٹس",    "tab_label": "چیٹس"
   },
   "chat": {
-    "chyokak": "Chyokak?",
-    "normur": "Normur",
-    "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "ایک پیغام لکھیں۔"
+    "write_a_message": "پیغام"
   },
   "account_settings": {
     "title": "اکاؤنٹ کی ترتیبات",

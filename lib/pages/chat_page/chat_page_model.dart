@@ -28,6 +28,7 @@ class ChatPageModel extends FloterModel<ChatPageWidget> {
 
   @override
   void dispose() {
+    _chatService.unsubscribeFromMessages();
     messageTextFieldTextController.dispose();
     messageTextFieldFocusNode.dispose();
     scrollController.dispose();
@@ -48,9 +49,35 @@ class ChatPageModel extends FloterModel<ChatPageWidget> {
   void setConversationId(int? id) {
     conversationId = id;
     if (id != null) {
+      _subscribeToMessages();
       loadConversationDetails();
       loadMessages();
     }
+  }
+
+  void _subscribeToMessages() {
+    if (conversationId == null) return;
+    _chatService.subscribeToMessages(
+      conversationId!,
+      onNewMessage: (msg) {
+        messages.add(msg);
+        onStateChanged?.call();
+        _scrollToBottom();
+        _markMessagesAsRead();
+      },
+      onReadReceipt: (msg) {
+        final idx = messages.indexWhere((m) => m.id == msg.id);
+        if (idx != -1) {
+          messages[idx] = messages[idx].copyWith(readAt: msg.readAt);
+          onStateChanged?.call();
+        }
+      },
+    );
+  }
+
+  Future<void> _markMessagesAsRead() async {
+    if (conversationId == null) return;
+    await _chatService.markMessagesAsRead(conversationId!);
   }
 
   Future<void> loadConversationDetails() async {
@@ -70,10 +97,13 @@ class ChatPageModel extends FloterModel<ChatPageWidget> {
     onStateChanged?.call();
     try {
       messages = await _chatService.getMessages(conversationId!);
-    } catch (_) {}
+    } catch (e) {
+      debugPrint('ChatPageModel.loadMessages error: $e');
+    }
     isLoading = false;
     onStateChanged?.call();
     _scrollToBottom();
+    _markMessagesAsRead();
   }
 
   Future<void> sendMessage() async {

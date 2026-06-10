@@ -39,17 +39,10 @@
     "tab_label": "जिन्होंने आपको पसंद किया"
   },
   "matches": {
-    "chats": "चैट",
-    "you_normur": "You: Normur",
-    "you_how_big_is_your": "You: How big is your...",
-    "sure_see_you_at_bla": "Sure, see you at bla...",
-    "tab_label": "चैट"
+    "chats": "चैट",    "tab_label": "चैट"
   },
   "chat": {
-    "chyokak": "Chyokak?",
-    "normur": "Normur",
-    "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "एक संदेश लिखें"
+    "write_a_message": "संदेश"
   },
   "account_settings": {
     "title": "खाता सेटिंग्स",

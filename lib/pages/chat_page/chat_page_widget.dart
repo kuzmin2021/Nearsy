@@ -5,7 +5,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 import 'chat_page_model.dart';
+import '/models/chat_models.dart';
 export 'chat_page_model.dart';
 
 class ChatPageWidget extends StatefulWidget {
@@ -57,12 +59,12 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(20, 29, 20, 24),
+            padding: const EdgeInsetsDirectional.fromSTEB(20, 20, 20, 24),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                _buildHeader(context, theme),
+                _buildHeader(context),
                 const SizedBox(height: 16),
                 Expanded(
                   child: _model.isLoading
@@ -71,12 +73,16 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                           ? Center(
                               child: Text(
                                 AppLabels.of(context).get('chat.no_messages'),
-                                style: theme.bodyMedium,
+                                style: GoogleFonts.inter(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             )
-                          : _buildMessageList(context, theme),
+                          : _buildMessageList(context),
                 ),
-                _buildInputBar(context, theme),
+                const SizedBox(height: 8),
+                _buildInputBar(context),
               ],
             ),
           ),
@@ -85,7 +91,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
     );
   }
 
-  Widget _buildHeader(BuildContext context, FloterTheme theme) {
+  Widget _buildHeader(BuildContext context) {
     final nameParts = <String>[];
     if (_model.partnerName != null && _model.partnerName!.isNotEmpty) {
       nameParts.add(_model.partnerName!);
@@ -103,10 +109,10 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
         FloterIconButton(
           borderRadius: 8,
           buttonSize: 48,
-          fillColor: theme.primaryBackground,
-          icon: Icon(
+          fillColor: Colors.transparent,
+          icon: const Icon(
             Icons.arrow_back,
-            color: theme.primaryText,
+            color: Colors.black,
             size: 32,
           ),
           onPressed: () async {
@@ -119,77 +125,82 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
             fadeInDuration: Duration.zero,
             fadeOutDuration: Duration.zero,
             imageUrl: _model.partnerAvatar ?? '',
-            width: 64,
-            height: 64,
+            width: 48,
+            height: 48,
             fit: BoxFit.cover,
             placeholder: (_, __) => Container(
-              color: theme.secondaryBackground,
-              child: const Icon(Icons.person, size: 32),
+              color: FloterTheme.of(context).secondaryBackground,
+              child: const Icon(Icons.person, size: 24),
             ),
             errorWidget: (_, __, ___) => Container(
-              color: theme.secondaryBackground,
-              child: const Icon(Icons.person, size: 32),
+              color: FloterTheme.of(context).secondaryBackground,
+              child: const Icon(Icons.person, size: 24),
             ),
           ),
         ),
-        const SizedBox(width: 12),
+        const SizedBox(width: 15),
         Text(
           nameParts.join(', '),
-          style: theme.titleMedium.override(
-            font: GoogleFonts.interTight(
-              fontWeight: theme.titleMedium.fontWeight,
-              fontStyle: theme.titleMedium.fontStyle,
-            ),
-            letterSpacing: 0,
-            fontWeight: theme.titleMedium.fontWeight,
-            fontStyle: theme.titleMedium.fontStyle,
+          style: GoogleFonts.inter(
+            fontSize: 20,
+            fontWeight: FontWeight.w700,
+            color: Colors.black,
           ),
         ),
       ],
     );
   }
 
-  Widget _buildMessageList(BuildContext context, FloterTheme theme) {
+  Widget _buildMessageList(BuildContext context) {
     return ListView.builder(
       controller: _model.scrollController,
       reverse: false,
       itemCount: _model.messages.length,
       itemBuilder: (context, index) {
         final msg = _model.messages[index];
+        final timeStr = DateFormat('h:mma').format(msg.createdAt).toLowerCase();
+        final theme = FloterTheme.of(context);
+
         return Padding(
           padding: const EdgeInsets.only(bottom: 8),
           child: Row(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment:
-                msg.isOwn ? MainAxisAlignment.end : MainAxisAlignment.start,
+            mainAxisAlignment: msg.isOwn
+                ? MainAxisAlignment.end
+                : MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Container(
-                constraints:
-                    BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.7),
+                constraints: BoxConstraints(
+                    maxWidth: MediaQuery.of(context).size.width * 0.7),
                 decoration: BoxDecoration(
-                  color: msg.isOwn
-                      ? theme.primary
-                      : theme.secondaryBackground,
-                  borderRadius: BorderRadius.circular(8),
+                  color: msg.isOwn ? const Color(0xFFC9B0FF) : const Color(0xFFF1F1F1),
+                  borderRadius: BorderRadius.circular(15),
                 ),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16, 8, 16, 8),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 12),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       if (msg.body.isNotEmpty)
-                        Text(
-                          msg.body,
-                          style: theme.bodyMedium.override(
-                            font: GoogleFonts.inter(
-                              fontWeight: theme.bodyMedium.fontWeight,
-                              fontStyle: theme.bodyMedium.fontStyle,
-                            ),
-                            color: msg.isOwn
-                                ? theme.primaryBackground
-                                : theme.primaryText,
-                            letterSpacing: 0,
+                        IntrinsicHeight(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  msg.body,
+                                  style: GoogleFonts.inter(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              _buildTimeStamp(msg, timeStr),
+                            ],
                           ),
                         ),
                       if (msg.photoUrl != null && msg.photoUrl!.isNotEmpty)
@@ -229,84 +240,103 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
     );
   }
 
-  Widget _buildInputBar(BuildContext context, FloterTheme theme) {
+  Widget _buildTimeStamp(Message msg, String timeStr) {
     return Row(
-      mainAxisSize: MainAxisSize.max,
-      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Expanded(
-          child: TextFormField(
-            controller: _model.messageTextFieldTextController,
-            focusNode: _model.messageTextFieldFocusNode,
-            onChanged: (_) => EasyDebounce.debounce(
-              '_model.messageTextFieldTextController',
-              const Duration(milliseconds: 2000),
-              () async {
-                _model.messageText =
-                    _model.messageTextFieldTextController.text;
+        if (msg.isOwn) ...[
+          Icon(
+            Icons.check,
+            size: 10,
+            color: msg.isRead ? const Color(0xFF34C759) : const Color(0x80000000),
+          ),
+          const SizedBox(width: 3),
+        ],
+        Text(
+          timeStr,
+          style: GoogleFonts.inter(
+            fontSize: 10,
+            fontWeight: FontWeight.w500,
+            color: const Color(0x80000000),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildInputBar(BuildContext context) {
+    return Container(
+      height: 38,
+      decoration: BoxDecoration(
+        color: const Color(0xFFfffffffa),
+        borderRadius: BorderRadius.circular(15),
+        border: Border.all(color: Colors.black, width: 1),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            child: TextFormField(
+              controller: _model.messageTextFieldTextController,
+              focusNode: _model.messageTextFieldFocusNode,
+              onChanged: (_) => EasyDebounce.debounce(
+                '_model.messageTextFieldTextController',
+                const Duration(milliseconds: 2000),
+                () async {
+                  _model.messageText =
+                      _model.messageTextFieldTextController.text;
+                  safeSetState(() {});
+                },
+              ),
+              onFieldSubmitted: (_) async {
+                await _model.sendMessage();
+                safeSetState(() {});
+              },
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: AppLabels.of(context).get('chat.write_a_message'),
+                hintStyle: GoogleFonts.inter(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: const Color(0x80000000),
+                ),
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none,
+                contentPadding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 2),
+                filled: false,
+                isDense: true,
+              ),
+              textAlignVertical: TextAlignVertical.center,
+              style: GoogleFonts.inter(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+                color: Colors.black,
+              ),
+              maxLines: null,
+              validator: _model
+                  .messageTextFieldTextControllerValidator
+                  .asValidator(context),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 4, 0),
+            child: FloterIconButton(
+              borderRadius: 24,
+              buttonSize: 34,
+              fillColor: const Color(0xFF9400D3),
+              icon: const Icon(
+                Icons.arrow_upward_rounded,
+                color: Colors.white,
+                size: 18,
+              ),
+              onPressed: () async {
+                await _model.sendMessage();
                 safeSetState(() {});
               },
             ),
-            onFieldSubmitted: (_) async {
-              await _model.sendMessage();
-              safeSetState(() {});
-            },
-            obscureText: false,
-            decoration: InputDecoration(
-              hintText: AppLabels.of(context).get('chat.write_a_message'),
-              enabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: Color(0x00000000), width: 1),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(4),
-                  topRight: Radius.circular(4),
-                ),
-              ),
-              focusedBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: Color(0x00000000), width: 1),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(4),
-                  topRight: Radius.circular(4),
-                ),
-              ),
-              errorBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: Color(0x00000000), width: 1),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(4),
-                  topRight: Radius.circular(4),
-                ),
-              ),
-              focusedErrorBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: Color(0x00000000), width: 1),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(4),
-                  topRight: Radius.circular(4),
-                ),
-              ),
-              filled: true,
-            ),
-            style: const TextStyle(),
-            maxLines: null,
-            validator: _model
-                .messageTextFieldTextControllerValidator
-                .asValidator(context),
           ),
-        ),
-        const SizedBox(width: 10),
-        FloterIconButton(
-          borderRadius: 24,
-          buttonSize: 40,
-          fillColor: theme.primary,
-          icon: Icon(
-            Icons.send,
-            color: theme.primaryBackground,
-            size: 24,
-          ),
-          onPressed: () async {
-            await _model.sendMessage();
-            safeSetState(() {});
-          },
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

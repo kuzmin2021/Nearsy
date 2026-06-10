@@ -1,4 +1,4 @@
-{
+﻿{
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Встречаемся рядом. Будь проще",
@@ -43,16 +43,10 @@
    "matches": {
     "chats": "Чаты",
     "no_chats_yet": "Пока нет чатов",
-    "you_normur": "You: Normur",
-    "you_how_big_is_your": "You: How big is your...",
-    "sure_see_you_at_bla": "Sure, see you at bla...",
     "tab_label": "Чаты"
   },
   "chat": {
-    "chyokak": "Chyokak?",
-    "normur": "Normur",
-    "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "Написать сообщение"
+    "write_a_message": "Сообщение"
   },
   "account_settings": {
     "title": "Настройки аккаунта",

@@ -39,17 +39,10 @@
     "tab_label": "Seni beğenenler"
   },
   "matches": {
-    "chats": "Sohbetler",
-    "you_normur": "You: Normur",
-    "you_how_big_is_your": "You: How big is your...",
-    "sure_see_you_at_bla": "Sure, see you at bla...",
-    "tab_label": "Sohbetler"
+    "chats": "Sohbetler",    "tab_label": "Sohbetler"
   },
   "chat": {
-    "chyokak": "Chyokak?",
-    "normur": "Normur",
-    "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "Bir mesaj yaz"
+    "write_a_message": "Mesaj"
   },
   "account_settings": {
     "title": "Hesap ayarları",

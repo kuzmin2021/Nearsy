@@ -39,17 +39,10 @@
     "tab_label": "உங்களை விரும்பினர்"
   },
   "matches": {
-    "chats": "அரட்டைகள்",
-    "you_normur": "You: Normur",
-    "you_how_big_is_your": "You: How big is your...",
-    "sure_see_you_at_bla": "Sure, see you at bla...",
-    "tab_label": "அரட்டைகள்"
+    "chats": "அரட்டைகள்",    "tab_label": "அரட்டைகள்"
   },
   "chat": {
-    "chyokak": "Chyokak?",
-    "normur": "Normur",
-    "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "ஒரு செய்தியை எழுதுங்கள்"
+    "write_a_message": "செய்தி"
   },
   "account_settings": {
     "title": "கணக்கு அமைப்புகள்",

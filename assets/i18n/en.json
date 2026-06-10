@@ -43,16 +43,10 @@
   "matches": {
     "chats": "Chats",
     "no_chats_yet": "No conversations yet",
-    "you_normur": "You: Normur",
-    "you_how_big_is_your": "You: How big is your...",
-    "sure_see_you_at_bla": "Sure, see you at bla...",
     "tab_label": "Chats"
   },
   "chat": {
-    "chyokak": "Chyokak?",
-    "normur": "Normur",
-    "kirill_is_typing": "Kirill is typing...",
-    "write_a_message": "Write a message"
+    "write_a_message": "Message"
   },
   "account_settings": {
     "title": "Account Settings",
