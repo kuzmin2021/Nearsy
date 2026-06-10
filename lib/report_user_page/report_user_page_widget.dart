@@ -5,6 +5,7 @@ import '/auth/supabase_auth/auth_util.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
+import '/services/chat_service.dart';
 import '/services/report_service.dart';
 import 'report_user_page_model.dart';
 
@@ -64,6 +65,10 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
         details: details,
       );
       _showThankYouDialog();
+      final chatService = ChatService();
+      await chatService.blockUser(reporterId, widget.reportedUserId);
+      await chatService.deleteConversation(widget.conversationId);
+      await chatService.deleteMatch(reporterId, widget.reportedUserId);
     } catch (_) {}
     _isSubmitting = false;
     safeSetState(() {});
@@ -103,7 +108,7 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
                     context.pop(); // go back to chats
                   },
                   child: Container(
-                    width: 77,
+                    width: 100,
                     height: 34,
                     decoration: BoxDecoration(
                       color: const Color(0xFFB6B8BA),
@@ -166,8 +171,7 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
                   ),
                 ),
                 const SizedBox(height: 18),
-                Expanded(
-                  child: Container(
+                Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(color: Colors.black, width: 1),
@@ -176,16 +180,15 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
                       padding: const EdgeInsets.all(14),
                       child: TextFormField(
                         controller: _model.descriptionController,
-                        maxLines: null,
-                        expands: true,
-                        textAlignVertical: TextAlignVertical.top,
+                        maxLines: 10,
+                                                textAlignVertical: TextAlignVertical.top,
                         style: GoogleFonts.inter(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Colors.black,
                         ),
                         decoration: InputDecoration(
-                          border: InputBorder.none,
+                          border: InputBorder.none, enabledBorder: InputBorder.none, focusedBorder: InputBorder.none,
                           hintText: AppLabels.of(context)
                               .get('report_user.description_hint'),
                           hintStyle: GoogleFonts.inter(
@@ -197,7 +200,6 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
                         ),
                       ),
                     ),
-                  ),
                 ),
                 const SizedBox(height: 16),
                 Align(
@@ -205,7 +207,7 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
                   child: GestureDetector(
                     onTap: _isSubmitting ? null : _submitReport,
                     child: Container(
-                      width: 77,
+                      width: 100,
                       height: 34,
                       decoration: BoxDecoration(
                         color: const Color(0xFFB6B8BA),

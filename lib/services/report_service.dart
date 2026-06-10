@@ -12,6 +12,7 @@ class ReportService {
       'reported': reportedId,
       'conversation_id': conversationId,
       'details': details,
+      'reason': 'user_report',
       'status': 'pending',
     });
   }
