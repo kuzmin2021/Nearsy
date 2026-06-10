@@ -3,6 +3,7 @@ import '/models/chat_models.dart';
 import '/services/chat_service.dart';
 import 'chat_page_widget.dart' show ChatPageWidget;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 
 class ChatPageModel extends FloterModel<ChatPageWidget> {
   VoidCallback? onStateChanged;
@@ -36,12 +37,16 @@ class ChatPageModel extends FloterModel<ChatPageWidget> {
 
   void _scrollToBottom() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      _doScrollToBottom();
+    });
+  }
+
+  void _doScrollToBottom() {
+    if (!scrollController.hasClients) return;
+    scrollController.jumpTo(scrollController.position.maxScrollExtent);
+    SchedulerBinding.instance.addPostFrameCallback((_) {
       if (scrollController.hasClients) {
-        scrollController.animateTo(
-          scrollController.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeOut,
-        );
+        scrollController.jumpTo(scrollController.position.maxScrollExtent);
       }
     });
   }

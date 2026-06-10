@@ -3,6 +3,7 @@ import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
+import 'package:emoji_picker_flutter/emoji_picker_flutter.dart' as emoji;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -264,6 +265,43 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
     );
   }
 
+  void _showEmojiPicker(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      builder: (_) {
+        return SizedBox(
+          height: MediaQuery.of(context).size.height * 0.45,
+          child: emoji.EmojiPicker(
+            config: const emoji.Config(
+              categoryViewConfig: emoji.CategoryViewConfig(
+                recentTabBehavior: emoji.RecentTabBehavior.NONE,
+              ),
+            ),
+            onEmojiSelected: (category, emoji) {
+              final controller = _model.messageTextFieldTextController;
+              final text = controller.text;
+              final selection = controller.selection;
+              final start = selection.start < 0 ? text.length : selection.start;
+              final end = selection.end < 0 ? text.length : selection.end;
+              final newText = text.replaceRange(start, end, emoji.emoji);
+              controller.value = TextEditingValue(
+                text: newText,
+                selection: TextSelection.collapsed(
+                  offset: start + emoji.emoji.length,
+                ),
+              );
+              Navigator.pop(context);
+            },
+          ),
+        );
+      },
+    );
+  }
+
   Widget _buildInputBar(BuildContext context) {
     return Container(
       height: 38,
@@ -292,6 +330,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                 await _model.sendMessage();
                 safeSetState(() {});
               },
+              textInputAction: TextInputAction.send,
               obscureText: false,
               decoration: InputDecoration(
                 hintText: AppLabels.of(context).get('chat.write_a_message'),
@@ -319,36 +358,14 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
             ),
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 2, 0),
-            child: FloterIconButton(
-              borderRadius: 24,
-              buttonSize: 30,
-              fillColor: Colors.transparent,
-              icon: const Icon(
+            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+            child: GestureDetector(
+              onTap: () => _showEmojiPicker(context),
+              child: const Icon(
                 Icons.emoji_emotions,
                 color: Color(0x80000000),
-                size: 20,
+                size: 24,
               ),
-              onPressed: () {
-                _model.messageTextFieldFocusNode.requestFocus();
-              },
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 4, 0),
-            child: FloterIconButton(
-              borderRadius: 24,
-              buttonSize: 34,
-              fillColor: const Color(0xFFC9B0FF),
-              icon: const Icon(
-                Icons.arrow_upward_rounded,
-                color: Colors.white,
-                size: 18,
-              ),
-              onPressed: () async {
-                await _model.sendMessage();
-                safeSetState(() {});
-              },
             ),
           ),
         ],
