@@ -9,14 +9,12 @@ import 'lookaround_bottom_nav_model.dart';
 
 export 'lookaround_bottom_nav_model.dart';
 
-/// Reusable bottom navigation for the main Lookaround tabs.
 class LookaroundBottomNavWidget extends StatefulWidget {
   const LookaroundBottomNavWidget({
     super.key,
     String? activeTab,
   }) : this.activeTab = activeTab ?? 'Profile';
 
-  /// Currently selected main tab label.
   final String activeTab;
 
   @override
@@ -42,529 +40,118 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
   @override
   void dispose() {
     _model.maybeDispose();
-
     super.dispose();
+  }
+
+  Widget _navIcon(String tab, String prefix, double size) {
+    final isActive = widget.activeTab == tab;
+    return Container(
+      width: 72.0,
+      height: 58.0,
+      alignment: AlignmentDirectional(0.0, 0.0),
+      child: Image.asset(
+        isActive
+            ? 'assets/images/${prefix}_active.png'
+            : 'assets/images/${prefix}_inactive.png',
+        width: size,
+        height: size,
+      ),
+    );
+  }
+
+  Widget _navLabel(String i18nKey) {
+    return Container(
+      width: 64.0,
+      height: 72.0,
+      alignment: AlignmentDirectional(0.0, 1.0),
+      child: Text(
+        AppLabels.of(context).get(i18nKey),
+        textAlign: TextAlign.center,
+        maxLines: 1,
+        style: FloterTheme.of(context).bodySmall.override(
+              font: GoogleFonts.inter(
+                fontWeight: FloterTheme.of(context).bodySmall.fontWeight,
+                fontStyle: FloterTheme.of(context).bodySmall.fontStyle,
+              ),
+              color: FloterTheme.of(context).primaryText,
+              letterSpacing: 0.0,
+              fontWeight: FloterTheme.of(context).bodySmall.fontWeight,
+              fontStyle: FloterTheme.of(context).bodySmall.fontStyle,
+            ),
+        overflow: TextOverflow.ellipsis,
+      ),
+    );
+  }
+
+  Widget _buildTab(String tab, String prefix, double iconSize, String routeName, String i18nKey) {
+    return Expanded(
+      flex: 1,
+      child: Container(
+        height: 72.0,
+        alignment: AlignmentDirectional(0.0, 0.0),
+        child: InkWell(
+          splashColor: Colors.transparent,
+          focusColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          onTap: () async {
+            if (FTAppState().profileIsOnboarded) {
+              context.pushNamed(routeName);
+            } else {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Complete your name first.', style: TextStyle()),
+                  duration: Duration(milliseconds: 4000),
+                ),
+              );
+            }
+          },
+          child: Container(
+            width: 72.0,
+            height: 72.0,
+            child: Stack(
+              alignment: AlignmentDirectional(0.0, 0.0),
+              children: [
+                Container(
+                  width: 72.0,
+                  height: 72.0,
+                  alignment: AlignmentDirectional(0.0, -1.0),
+                  child: _navIcon(tab, prefix, iconSize),
+                ),
+                _navLabel(i18nKey),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FTAppState>();
-
     return Container(
       width: double.infinity,
       height: 72.0,
-      alignment: AlignmentDirectional(0.0, 1.0),
-      child: Container(
-        width: double.infinity,
-        height: 72.0,
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(
-              flex: 1,
-              child: Container(
-                height: 72.0,
-                alignment: AlignmentDirectional(0.0, 0.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    context.pushNamed(ProfilePageWidget.routeName);
-                  },
-                  child: Container(
-                    width: 64.0,
-                    height: 72.0,
-                    child: Container(
-                      width: 64.0,
-                      height: 72.0,
-                      child: Stack(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        children: [
-                          Container(
-                            width: 64.0,
-                            height: 72.0,
-                            alignment: AlignmentDirectional(0.0, -1.0),
-                            child: Container(
-                              width: 48.0,
-                              height: 48.0,
-                              child: Stack(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                children: [
-                                  Container(
-                                    width: 48.0,
-                                    height: 48.0,
-                                    alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: Icon(
-                                      Icons.person,
-                                      color: FloterTheme.of(context)
-                                          .secondaryText,
-                                      size: 34.0,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 64.0,
-                            height: 72.0,
-                            alignment: AlignmentDirectional(0.0, 1.0),
-                            child: Text(
-                              AppLabels.of(context).get(
-                                'lookaround_bottom_nav.profile' /* Profile */,
-                              ),
-                              textAlign: TextAlign.center,
-                              maxLines: 1,
-                              style: FloterTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    font: GoogleFonts.inter(
-                                      fontWeight: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontStyle,
-                                    ),
-                                    color: FloterTheme.of(context)
-                                        .primaryText,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontStyle,
-                                  ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                height: 72.0,
-                alignment: AlignmentDirectional(0.0, 0.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    if (FTAppState().profileIsOnboarded) {
-                      context.pushNamed(PeoplePageWidget.routeName);
-                    } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                            'Complete your name first.',
-                            style: TextStyle(),
-                          ),
-                          duration: Duration(milliseconds: 4000),
-                        ),
-                      );
-                    }
-                  },
-                  child: Container(
-                    width: 72.0,
-                    height: 72.0,
-                    child: Container(
-                      width: 72.0,
-                      height: 72.0,
-                      child: Stack(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        children: [
-                          Container(
-                            width: 72.0,
-                            height: 72.0,
-                            alignment: AlignmentDirectional(0.0, -1.0),
-                            child: Container(
-                              width: 72.0,
-                              height: 58.0,
-                              child: Stack(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                children: [
-                                  if (!(widget!.activeTab == 'People'))
-                                    Container(
-                                      width: 72.0,
-                                      height: 58.0,
-                                      alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: Icon(
-                                        Icons.groups,
-                                        color: FloterTheme.of(context)
-                                            .secondaryText,
-                                        size: 40.0,
-                                      ),
-                                    ),
-                                  if (widget!.activeTab == 'People')
-                                    Container(
-                                      width: 72.0,
-                                      height: 58.0,
-                                      alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: Icon(
-                                        Icons.groups,
-                                        color: FloterTheme.of(context)
-                                            .primary,
-                                        size: 40.0,
-                                      ),
-                                    ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 72.0,
-                            height: 72.0,
-                            alignment: AlignmentDirectional(0.0, 1.0),
-                            child: Text(
-                              AppLabels.of(context).get(
-                                'lookaround_bottom_nav.people' /* People */,
-                              ),
-                              textAlign: TextAlign.center,
-                              maxLines: 1,
-                              style: FloterTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    font: GoogleFonts.inter(
-                                      fontWeight: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontStyle,
-                                    ),
-                                    color: FloterTheme.of(context)
-                                        .primaryText,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontStyle,
-                                  ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                height: 72.0,
-                alignment: AlignmentDirectional(0.0, 0.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    if (FTAppState().profileIsOnboarded) {
-                      context.pushNamed(NearbyPageWidget.routeName);
-                    } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                            'Complete your name first.',
-                            style: TextStyle(),
-                          ),
-                          duration: Duration(milliseconds: 4000),
-                        ),
-                      );
-                    }
-                  },
-                  child: Container(
-                    width: 64.0,
-                    height: 72.0,
-                    child: Container(
-                      width: 64.0,
-                      height: 72.0,
-                      child: Stack(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        children: [
-                          Container(
-                            width: 64.0,
-                            height: 72.0,
-                            alignment: AlignmentDirectional(0.0, -1.0),
-                            child: Container(
-                              width: 52.0,
-                              height: 52.0,
-                              child: Stack(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                children: [
-                                  Container(
-                                    width: 52.0,
-                                    height: 52.0,
-                                    alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: Icon(
-                                      Icons.near_me,
-                                      color: FloterTheme.of(context)
-                                          .secondaryText,
-                                      size: 36.0,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 64.0,
-                            height: 72.0,
-                            alignment: AlignmentDirectional(0.0, 1.0),
-                            child: Text(
-                              AppLabels.of(context).get(
-                                'lookaround_bottom_nav.nearby' /* Nearby */,
-                              ),
-                              textAlign: TextAlign.center,
-                              maxLines: 1,
-                              style: FloterTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    font: GoogleFonts.inter(
-                                      fontWeight: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontStyle,
-                                    ),
-                                    color: FloterTheme.of(context)
-                                        .primaryText,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontStyle,
-                                  ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                height: 72.0,
-                alignment: AlignmentDirectional(0.0, 0.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    if (FTAppState().profileIsOnboarded) {
-                      context.pushNamed(LikedYouPageWidget.routeName);
-                    } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                            'Complete your name first.',
-                            style: TextStyle(),
-                          ),
-                          duration: Duration(milliseconds: 4000),
-                        ),
-                      );
-                    }
-                  },
-                  child: Container(
-                    width: 72.0,
-                    height: 72.0,
-                    child: Container(
-                      width: 72.0,
-                      height: 72.0,
-                      child: Stack(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        children: [
-                          Container(
-                            width: 72.0,
-                            height: 72.0,
-                            alignment: AlignmentDirectional(0.0, -1.0),
-                            child: Container(
-                              width: 72.0,
-                              height: 58.0,
-                              child: Stack(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                children: [
-                                  Container(
-                                    width: 72.0,
-                                    height: 58.0,
-                                    alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: Icon(
-                                      Icons.favorite,
-                                      color: FloterTheme.of(context)
-                                          .secondaryText,
-                                      size: 38.0,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 72.0,
-                            height: 72.0,
-                            alignment: AlignmentDirectional(0.0, 1.0),
-                            child: Text(
-                              AppLabels.of(context).get(
-                                'lookaround_bottom_nav.liked_you' /* Liked You */,
-                              ),
-                              textAlign: TextAlign.center,
-                              maxLines: 1,
-                              style: FloterTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    font: GoogleFonts.inter(
-                                      fontWeight: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontStyle,
-                                    ),
-                                    color: FloterTheme.of(context)
-                                        .primaryText,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontStyle,
-                                  ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                height: 72.0,
-                alignment: AlignmentDirectional(0.0, 0.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    if (FTAppState().profileIsOnboarded) {
-                      context.pushNamed(MatchesPageWidget.routeName);
-                    } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                            'Complete your name first.',
-                            style: TextStyle(),
-                          ),
-                          duration: Duration(milliseconds: 4000),
-                        ),
-                      );
-                    }
-                  },
-                  child: Container(
-                    width: 72.0,
-                    height: 72.0,
-                    child: Container(
-                      width: 72.0,
-                      height: 72.0,
-                      child: Stack(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        children: [
-                          Container(
-                            width: 72.0,
-                            height: 72.0,
-                            alignment: AlignmentDirectional(0.0, -1.0),
-                            child: Container(
-                              width: 72.0,
-                              height: 58.0,
-                              child: Stack(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                children: [
-                                  Container(
-                                    width: 72.0,
-                                    height: 58.0,
-                                    alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: Icon(
-                                      Icons.chat_bubble,
-                                      color: FloterTheme.of(context)
-                                          .secondaryText,
-                                      size: 36.0,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 72.0,
-                            height: 72.0,
-                            alignment: AlignmentDirectional(0.0, 1.0),
-                            child: Text(
-                              AppLabels.of(context).get(
-                                'lookaround_bottom_nav.chats' /* Chats */,
-                              ),
-                              textAlign: TextAlign.center,
-                              maxLines: 1,
-                              style: FloterTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    font: GoogleFonts.inter(
-                                      fontWeight: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontStyle,
-                                    ),
-                                    color: FloterTheme.of(context)
-                                        .primaryText,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontStyle,
-                                  ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
+      decoration: BoxDecoration(
+        color: FloterTheme.of(context).primaryBackground,
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 4.0,
+            color: Color(0x33000000),
+            offset: Offset(0.0, -2.0),
+          ),
+        ],
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          _buildTab('Profile', 'icon_nav_profile', 34.0, ProfilePageWidget.routeName, 'lookaround_bottom_nav.profile'),
+          _buildTab('People', 'icon_nav_people', 40.0, PeoplePageWidget.routeName, 'lookaround_bottom_nav.people'),
+          _buildTab('Nearby', 'icon_nav_nearby', 36.0, NearbyPageWidget.routeName, 'lookaround_bottom_nav.nearby'),
+          _buildTab('Liked You', 'icon_nav_liked', 34.0, LikedYouPageWidget.routeName, 'lookaround_bottom_nav.liked_you'),
+          _buildTab('Chats', 'icon_nav_chats', 34.0, MatchesPageWidget.routeName, 'lookaround_bottom_nav.chats'),
+        ],
       ),
     );
   }
