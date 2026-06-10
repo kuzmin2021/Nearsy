@@ -54,7 +54,8 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
   Future<void> _submitReport() async {
     final details = _model.descriptionController?.text.trim() ?? '';
     final reporterId = currentUserUid;
-    if (reporterId.isEmpty || details.isEmpty) return;
+    debugPrint('_submitReport: START');
+    if (reporterId.isEmpty || details.isEmpty) { debugPrint('_submitReport: ABORT'); return; }
     _isSubmitting = true;
     safeSetState(() {});
     try {
@@ -64,12 +65,15 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
         conversationId: widget.conversationId,
         details: details,
       );
+      debugPrint('_submitReport: report OK, showing dialog');
       _showThankYouDialog();
+      debugPrint('_submitReport: calling block/delete/match...');
       final chatService = ChatService();
       try { await chatService.blockUser(reporterId, widget.reportedUserId); } catch (e) { debugPrint('blockUser error: ' + e.toString()); }
       try { await chatService.deleteConversation(widget.conversationId); } catch (e) { debugPrint('deleteConv error: ' + e.toString()); }
       try { await chatService.deleteMatch(reporterId, widget.reportedUserId); } catch (e) { debugPrint('deleteMatch error: ' + e.toString()); }
-    } catch (_) {}
+    } catch (e) { debugPrint('_submitReport: OUTER=' + e.toString()); }
+    debugPrint('_submitReport: DONE');
     _isSubmitting = false;
     safeSetState(() {});
   }
@@ -78,17 +82,15 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
     showDialog(
       context: context,
       barrierDismissible: false,
-      barrierColor: Colors.black,
       builder: (_) => Center(
         child: Container(
           width: 313,
-          margin: const EdgeInsets.symmetric(horizontal: 24),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(15),
             border: Border.all(color: Colors.black, width: 1),
           ),
-          padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
+          padding: const EdgeInsets.fromLTRB(29, 17, 24, 19),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -101,15 +103,15 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
                   color: Colors.black,
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 19),
               Center(
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.pop(context); // close dialog
-                    context.pop(); // go back to chats
+                    Navigator.pop(context);
+                    context.pushNamed('MatchesPage');
                   },
                   child: Container(
-                    width: 100,
+                    width: 77,
                     height: 34,
                     decoration: BoxDecoration(
                       color: const Color(0xFFB6B8BA),
@@ -202,7 +204,7 @@ class _ReportUserPageWidgetState extends State<ReportUserPageWidget> {
                       ),
                     ),
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 19),
                 Align(
                   alignment: Alignment.centerRight,
                   child: GestureDetector(

@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart';
 import '../backend/supabase/supabase.dart';
 import '../models/chat_models.dart';
 
@@ -98,6 +100,7 @@ class ChatService {
       ));
     }
 
+    debugPrint('getConversations: returning ' + conversations.length.toString() + ' convs');
     return conversations;
   }
 

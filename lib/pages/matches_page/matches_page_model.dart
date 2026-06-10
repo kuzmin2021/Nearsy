@@ -1,4 +1,4 @@
-﻿import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_util.dart';
 import '/auth/supabase_auth/auth_util.dart';
 import '/models/chat_models.dart';
@@ -37,7 +37,9 @@ class MatchesPageModel extends FloterModel<MatchesPageWidget> {
     onStateChanged?.call();
 
     try {
+      debugPrint('loadConversations: loaded ' + conversations.length.toString() + ' convs');
       conversations = await _chatService.getConversations();
+      debugPrint('loadConversations: got ' + conversations.length.toString() + ' convs after filter');
       isLoading = false;
     } catch (e) {
       loadError = e.toString();
