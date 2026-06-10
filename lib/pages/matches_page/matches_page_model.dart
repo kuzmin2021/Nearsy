@@ -1,5 +1,6 @@
 ﻿import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_util.dart';
+import '/auth/supabase_auth/auth_util.dart';
 import '/models/chat_models.dart';
 import '/services/chat_service.dart';
 import 'matches_page_widget.dart' show MatchesPageWidget;
@@ -46,19 +47,25 @@ class MatchesPageModel extends FloterModel<MatchesPageWidget> {
   }
 
   Future<void> deleteConversation(Conversation c) async {
+    final userId = currentUserUid;
     try {
       await _chatService.deleteConversation(c.id);
+      final otherId = c.otherUserId(userId);
+      if (otherId != null) {
+        await _chatService.deleteMatch(userId, otherId);
+      }
       conversations.remove(c);
       onStateChanged?.call();
     } catch (_) {}
   }
 
   void blockUser(Conversation c) {
-    conversations.remove(c);
-    onStateChanged?.call();
-  }
-
-  void reportUser(Conversation c) {
+    final userId = currentUserUid;
+    final otherId = c.otherUserId(userId);
+    if (otherId != null) {
+      _chatService.blockUser(userId, otherId);
+      _chatService.deleteMatch(userId, otherId);
+    }
     conversations.remove(c);
     onStateChanged?.call();
   }

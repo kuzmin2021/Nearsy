@@ -148,6 +148,20 @@
     "obscure_scifi_films_with_depressing_endings": "Obscure sci-fi films with depressing endings",
     "save_chat_preferences": "Save chat preferences"
   },
+  "matches_block": {
+    "block_message": "The user will no longer be able to message you or view your profile",
+    "delete_message": "Delete this conversation",
+    "cancel": "Cancel",
+    "ok": "Ok",
+    "report_message": "Report this user"
+  },
+  "report_user": {
+    "title": "Tell us what happened",
+    "submit": "Submit",
+    "ok": "Ok",
+    "thank_you": "Thank you for your report. Our team has received it and will review the case shortly. If further information is required, we'll reach out to you via your email.",
+    "description_hint": "Describe what happened..."
+  },
   "contact_us": {
     "title": "Contact us",
     "let_us_know_what_you_think": "Let us know what you think...",

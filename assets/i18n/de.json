@@ -135,6 +135,20 @@
     "obscure_scifi_films_with_depressing_endings": "Obskure Science-Fiction-Filme mit deprimierenden Enden",
     "save_chat_preferences": "Chat-Einstellungen speichern"
   },
+  "matches_block": {
+    "block_message": "Der Benutzer kann Ihnen keine Nachrichten mehr senden oder Ihr Profil anzeigen",
+    "delete_message": "Diese Unterhaltung löschen",
+    "cancel": "Abbrechen",
+    "ok": "Ok",
+    "report_message": "Diesen Benutzer melden"
+  },
+  "report_user": {
+    "title": "Sagen Sie uns, was passiert ist",
+    "submit": "Senden",
+    "ok": "Ok",
+    "thank_you": "Vielen Dank für Ihre Meldung. Unser Team hat sie erhalten und wird den Fall in Kürze prüfen. Falls weitere Informationen erforderlich sind, werden wir Sie per E-Mail kontaktieren.",
+    "description_hint": "Beschreiben Sie, was passiert ist..."
+  },
   "contact_us": {
     "title": "Kontaktieren Sie uns",
     "let_us_know_what_you_think": "Teilen Sie uns Ihre Meinung mit...",

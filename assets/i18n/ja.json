@@ -135,6 +135,20 @@
     "obscure_scifi_films_with_depressing_endings": "憂鬱な結末を伴う無名の SF 映画",
     "save_chat_preferences": "チャット設定を保存する"
   },
+  "matches_block": {
+    "block_message": "このユーザーはあなたにメッセージを送信したり、プロフィールを表示したりできなくなります",
+    "delete_message": "この会話を削除",
+    "cancel": "キャンセル",
+    "ok": "OK",
+    "report_message": "このユーザーを報告"
+  },
+  "report_user": {
+    "title": "何が起こったか教えてください",
+    "submit": "送信",
+    "ok": "OK",
+    "thank_you": "ご報告ありがとうございます。チームが受け取り、近日中に確認いたします。追加情報が必要な場合は、メールにてご連絡いたします。",
+    "description_hint": "何が起こったか説明してください..."
+  },
   "contact_us": {
     "title": "お問い合わせ",
     "let_us_know_what_you_think": "ご意見をお聞かせください...",

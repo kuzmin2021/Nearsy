@@ -193,6 +193,20 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => NearbySearchPreferencesPageWidget(),
         ),
         FTRoute(
+          name: ReportUserPageWidget.routeName,
+          path: ReportUserPageWidget.routePath,
+          builder: (context, params) => ReportUserPageWidget(
+            conversationId: params.getParam(
+              'conversationId',
+              ParamType.int,
+            ),
+            reportedUserId: params.getParam(
+              'reportedUserId',
+              ParamType.String,
+            ) ?? '',
+          ),
+        ),
+        FTRoute(
           name: ChatPreferencesPageWidget.routeName,
           path: ChatPreferencesPageWidget.routePath,
           builder: (context, params) => ChatPreferencesPageWidget(),

@@ -135,6 +135,20 @@
     "obscure_scifi_films_with_depressing_endings": "İç karartıcı sonlara sahip belirsiz bilim kurgu filmleri",
     "save_chat_preferences": "Sohbet tercihlerini kaydet"
   },
+  "matches_block": {
+    "block_message": "Kullanıcı artık size mesaj gönderemez veya profilinizi görüntüleyemez",
+    "delete_message": "Bu sohbeti sil",
+    "cancel": "İptal",
+    "ok": "Tamam",
+    "report_message": "Bu kullanıcıyı şikayet et"
+  },
+  "report_user": {
+    "title": "Bize ne olduğunu anlatın",
+    "submit": "Gönder",
+    "ok": "Tamam",
+    "thank_you": "Bildiriminiz için teşekkür ederiz. Ekibimiz aldı ve davayı kısa sürede inceleyecek. Daha fazla bilgi gerekirse, size e-posta yoluyla ulaşacağız.",
+    "description_hint": "Ne olduğunu açıklayın..."
+  },
   "contact_us": {
     "title": "Bize ulaşın",
     "let_us_know_what_you_think": "Ne düşündüğünüzü bize bildirin...",

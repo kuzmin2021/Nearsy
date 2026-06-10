@@ -3,6 +3,7 @@ import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
+import '/auth/supabase_auth/auth_util.dart';
 import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -137,6 +138,93 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
     );
   }
 
+  void _showConfirmDialog({
+    required BuildContext context,
+    required String message,
+    required VoidCallback onOk,
+  }) {
+    showDialog(
+      context: context,
+      builder: (_) => Dialog(
+        backgroundColor: Colors.transparent,
+        child: Container(
+          width: 299,
+          margin: const EdgeInsets.symmetric(horizontal: 24),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(15),
+            border: Border.all(color: Colors.black, width: 1),
+          ),
+          padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                message,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.inter(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                ),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    onTap: () => Navigator.pop(context),
+                    child: Container(
+                      width: 77,
+                      height: 34,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFB6B8BA),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      alignment: Alignment.center,
+                      child: Text(
+                        AppLabels.of(context).get('matches_block.cancel'),
+                        style: GoogleFonts.inter(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 38),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                      onOk();
+                    },
+                    child: Container(
+                      width: 77,
+                      height: 34,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFB6B8BA),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      alignment: Alignment.center,
+                      child: Text(
+                        AppLabels.of(context).get('matches_block.ok'),
+                        style: GoogleFonts.inter(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _buildConversationItem(BuildContext context, Conversation conv) {
     final theme = FloterTheme.of(context);
     final currentUserId = SupaFlow.client.auth.currentUser?.id ?? '';
@@ -159,19 +247,44 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
         motion: const BehindMotion(),
         children: [
           SlidableAction(
-            onPressed: (_) => _model.blockUser(conv),
+            onPressed: (_) {
+              _showConfirmDialog(
+                context: context,
+                message: AppLabels.of(context).get('matches_block.block_message'),
+                onOk: () => _model.blockUser(conv),
+              );
+            },
             foregroundColor: const Color(0xFFF4442E),
             icon: Icons.block,
             label: 'Block',
           ),
           SlidableAction(
-            onPressed: (_) => _model.deleteConversation(conv),
+            onPressed: (_) {
+              _showConfirmDialog(
+                context: context,
+                message: AppLabels.of(context).get('matches_block.delete_message'),
+                onOk: () => _model.deleteConversation(conv),
+              );
+            },
             foregroundColor: const Color(0xFF9400D3),
             icon: Icons.delete_outline,
             label: 'Delete',
           ),
           SlidableAction(
-            onPressed: (_) => _model.reportUser(conv),
+            onPressed: (_) {
+              _showConfirmDialog(
+                context: context,
+                message: AppLabels.of(context).get('matches_block.report_message'),
+                onOk: () {
+                  final userId = currentUserUid;
+                  final otherId = conv.otherUserId(userId) ?? '';
+                  context.pushNamed('ReportUserPage', queryParameters: {
+                    'conversationId': conv.id.toString(),
+                    'reportedUserId': otherId,
+                  });
+                },
+              );
+            },
             foregroundColor: const Color(0xFF757575),
             icon: Icons.report_outlined,
             label: 'Report',

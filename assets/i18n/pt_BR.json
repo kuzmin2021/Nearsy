@@ -135,6 +135,20 @@
     "obscure_scifi_films_with_depressing_endings": "Filmes obscuros de ficção científica com finais deprimentes",
     "save_chat_preferences": "Salvar preferências de bate-papo"
   },
+  "matches_block": {
+    "block_message": "O usuário não poderá mais enviar mensagens ou visualizar seu perfil",
+    "delete_message": "Excluir esta conversa",
+    "cancel": "Cancelar",
+    "ok": "Ok",
+    "report_message": "Denunciar este usuário"
+  },
+  "report_user": {
+    "title": "Conte-nos o que aconteceu",
+    "submit": "Enviar",
+    "ok": "Ok",
+    "thank_you": "Obrigado pelo seu relatório. Nossa equipe o recebeu e analisará o caso em breve. Se forem necessárias mais informações, entraremos em contato por e-mail.",
+    "description_hint": "Descreva o que aconteceu..."
+  },
   "contact_us": {
     "title": "Contate-nos",
     "let_us_know_what_you_think": "Deixe-nos saber o que você pensa...",

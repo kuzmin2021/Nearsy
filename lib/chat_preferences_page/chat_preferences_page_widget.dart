@@ -30,9 +30,7 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ChatPreferencesPageModel());
-    if (_model.selectedMode == null) {
-      _model.selectedMode = 'unavailable';
-    }
+    _model.onStateChanged = () => safeSetState(() {});
   }
 
   @override
@@ -52,8 +50,7 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
     return Expanded(
       child: GestureDetector(
         onTap: () {
-          _model.selectedMode = mode;
-          safeSetState(() {});
+          _model.saveChatMode(mode);
         },
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -104,7 +101,9 @@ class _ChatPreferencesPageWidgetState extends State<ChatPreferencesPageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: theme.primaryBackground,
-        body: SafeArea(
+        body: _model.isLoading
+            ? const Center(child: CircularProgressIndicator())
+            : SafeArea(
           top: true,
           child: Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(24, 24, 24, 28),

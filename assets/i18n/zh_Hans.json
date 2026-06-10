@@ -135,6 +135,20 @@
     "obscure_scifi_films_with_depressing_endings": "结局令人沮丧的晦涩科幻电影",
     "save_chat_preferences": "保存聊天首选项"
   },
+  "matches_block": {
+    "block_message": "该用户将无法再向您发送消息或查看您的个人资料",
+    "delete_message": "删除此对话",
+    "cancel": "取消",
+    "ok": "确定",
+    "report_message": "举报此用户"
+  },
+  "report_user": {
+    "title": "告诉我们发生了什么",
+    "submit": "提交",
+    "ok": "确定",
+    "thank_you": "感谢您的举报。我们的团队已收到，并将尽快审核此案。如需更多信息，我们将通过电子邮件与您联系。",
+    "description_hint": "描述发生了什么..."
+  },
   "contact_us": {
     "title": "联系我们",
     "let_us_know_what_you_think": "让我们知道您的想法...",

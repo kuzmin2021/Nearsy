@@ -135,6 +135,20 @@
     "obscure_scifi_films_with_depressing_endings": "Film di fantascienza oscuri con finali deprimenti",
     "save_chat_preferences": "Salva le preferenze della chat"
   },
+  "matches_block": {
+    "block_message": "L'utente non potrà più inviarti messaggi o visualizzare il tuo profilo",
+    "delete_message": "Elimina questa conversazione",
+    "cancel": "Annulla",
+    "ok": "Ok",
+    "report_message": "Segnala questo utente"
+  },
+  "report_user": {
+    "title": "Dicci cosa è successo",
+    "submit": "Invia",
+    "ok": "Ok",
+    "thank_you": "Grazie per la tua segnalazione. Il nostro team l'ha ricevuta ed esaminerà il caso a breve. Se sono necessarie ulteriori informazioni, ti contatteremo via email.",
+    "description_hint": "Descrivi cosa è successo..."
+  },
   "contact_us": {
     "title": "Contattaci",
     "let_us_know_what_you_think": "Fateci sapere cosa ne pensate...",

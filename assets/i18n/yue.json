@@ -135,6 +135,20 @@
     "obscure_scifi_films_with_depressing_endings": "模糊嘅科幻電影，結局令人郁氣",
     "save_chat_preferences": "儲存即時通訊偏好設定"
   },
+  "matches_block": {
+    "block_message": "呢個用戶將無法再向你發送訊息或查看你嘅個人資料",
+    "delete_message": "刪除此對話",
+    "cancel": "取消",
+    "ok": "確定",
+    "report_message": "舉報此用戶"
+  },
+  "report_user": {
+    "title": "話俾我哋知發生咗乜事",
+    "submit": "提交",
+    "ok": "確定",
+    "thank_you": "多謝你嘅報告。我哋團隊已經收到，會盡快審查個案。如果需要更多資料，我哋會透過電郵聯絡你。",
+    "description_hint": "描述發生咗乜事..."
+  },
   "contact_us": {
     "title": "聯絡我哋",
     "let_us_know_what_you_think": "話畀我哋知你點睇 ...",

@@ -14,6 +14,8 @@ export '/nearby_search_preferences_page/nearby_search_preferences_page_widget.da
     show NearbySearchPreferencesPageWidget;
 export '/chat_preferences_page/chat_preferences_page_widget.dart'
     show ChatPreferencesPageWidget;
+export '/report_user_page/report_user_page_widget.dart'
+    show ReportUserPageWidget;
 export '/contact_us_page/contact_us_page_widget.dart' show ContactUsPageWidget;
 export '/hide_account_page/hide_account_page_widget.dart'
     show HideAccountPageWidget;

@@ -135,6 +135,20 @@
     "obscure_scifi_films_with_depressing_endings": "Film fiksi ilmiah yang tidak jelas dengan akhir yang menyedihkan",
     "save_chat_preferences": "Simpan preferensi obrolan"
   },
+  "matches_block": {
+    "block_message": "Pengguna tidak lagi dapat mengirim pesan atau melihat profil Anda",
+    "delete_message": "Hapus percakapan ini",
+    "cancel": "Batal",
+    "ok": "Ok",
+    "report_message": "Laporkan pengguna ini"
+  },
+  "report_user": {
+    "title": "Ceritakan apa yang terjadi",
+    "submit": "Kirim",
+    "ok": "Ok",
+    "thank_you": "Terima kasih atas laporan Anda. Tim kami telah menerimanya dan akan meninjau kasus ini segera. Jika diperlukan informasi lebih lanjut, kami akan menghubungi Anda melalui email.",
+    "description_hint": "Jelaskan apa yang terjadi..."
+  },
   "contact_us": {
     "title": "Hubungi kami",
     "let_us_know_what_you_think": "Beri tahu kami pendapat Anda...",

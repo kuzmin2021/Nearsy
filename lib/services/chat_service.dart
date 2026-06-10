@@ -335,4 +335,22 @@ class ChatService {
     _messagesChannel?.unsubscribe();
     _messagesChannel = null;
   }
+
+  Future<void> blockUser(String blockerId, String blockedId) async {
+    try {
+      await _client.from('blocks').insert({
+        'blocker': blockerId,
+        'blocked': blockedId,
+      });
+    } catch (_) {}
+  }
+
+  Future<void> deleteMatch(String user1, String user2) async {
+    try {
+      await _client
+          .from('matches')
+          .delete()
+          .or('(user1.eq.$user1,user2.eq.$user2),(user1.eq.$user2,user2.eq.$user1)');
+    } catch (_) {}
+  }
 }
