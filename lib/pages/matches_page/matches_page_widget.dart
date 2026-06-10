@@ -160,22 +160,19 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
         children: [
           SlidableAction(
             onPressed: (_) => _model.blockUser(conv),
-            backgroundColor: const Color(0xFFF4442E),
-            foregroundColor: Colors.white,
+            foregroundColor: const Color(0xFFF4442E),
             icon: Icons.block,
             label: 'Block',
           ),
           SlidableAction(
             onPressed: (_) => _model.deleteConversation(conv),
-            backgroundColor: const Color(0xFF9400D3),
-            foregroundColor: Colors.white,
+            foregroundColor: const Color(0xFF9400D3),
             icon: Icons.delete_outline,
             label: 'Delete',
           ),
           SlidableAction(
             onPressed: (_) => _model.reportUser(conv),
-            backgroundColor: const Color(0xFF757575),
-            foregroundColor: Colors.white,
+            foregroundColor: const Color(0xFF757575),
             icon: Icons.report_outlined,
             label: 'Report',
           ),
@@ -246,31 +243,15 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                   ],
                 ),
               ),
-              Stack(
-                alignment: Alignment.topRight,
-                children: [
-                  Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
-                    child: Icon(
-                      Icons.chat_bubble_outline,
-                      size: 24,
-                      color: const Color(0x80000000),
-                    ),
-                  ),
-                  if (conv.isUnread)
-                    Positioned(
-                      top: 0,
-                      right: 0,
-                      child: Container(
-                        width: 6,
-                        height: 6,
-                        decoration: const BoxDecoration(
-                          color: Color(0xFFF4442E),
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                    ),
-                ],
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(4, 0, 0, 0),
+                child: Image.asset(
+                  conv.isUnread
+                      ? 'assets/images/icon_chat_unread.png'
+                      : 'assets/images/icon_chat_read.png',
+                  height: 32,
+                  fit: BoxFit.fitHeight,
+                ),
               ),
             ],
           ),
