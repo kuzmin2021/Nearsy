@@ -129,8 +129,8 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
             color: theme.primaryText,
             size: 24,
           ),
-          onPressed: () async {
-            await context.pushNamed('AccountSettingsPage');
+            onPressed: () async {
+            await context.pushNamed('ChatPreferencesPage');
           },
         ),
       ],
