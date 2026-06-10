@@ -319,11 +319,27 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
             ),
           ),
           Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 2, 0),
+            child: FloterIconButton(
+              borderRadius: 24,
+              buttonSize: 30,
+              fillColor: Colors.transparent,
+              icon: const Icon(
+                Icons.emoji_emotions,
+                color: Color(0x80000000),
+                size: 20,
+              ),
+              onPressed: () {
+                _model.messageTextFieldFocusNode.requestFocus();
+              },
+            ),
+          ),
+          Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 4, 0),
             child: FloterIconButton(
               borderRadius: 24,
               buttonSize: 34,
-              fillColor: const Color(0xFF9400D3),
+              fillColor: const Color(0xFFC9B0FF),
               icon: const Icon(
                 Icons.arrow_upward_rounded,
                 color: Colors.white,
