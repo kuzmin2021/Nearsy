@@ -1,7 +1,6 @@
-import '/floter/floter_icon_button.dart';
+﻿import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
-import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +8,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'chat_page_model.dart';
 export 'chat_page_model.dart';
 
-/// Displays and sends messages in one conversation.
 class ChatPageWidget extends StatefulWidget {
   const ChatPageWidget({
     super.key,
@@ -34,20 +32,20 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ChatPageModel());
-
-    _model.messageTextFieldTextController ??= TextEditingController();
-    _model.messageTextFieldFocusNode ??= FocusNode();
+    _model.onStateChanged = () => safeSetState(() {});
+    _model.setConversationId(widget.conversationId);
   }
 
   @override
   void dispose() {
     _model.dispose();
-
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    final theme = FloterTheme.of(context);
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -55,290 +53,260 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FloterTheme.of(context).primaryBackground,
+        backgroundColor: theme.primaryBackground,
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 29.0, 20.0, 24.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20, 29, 20, 24),
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    FloterIconButton(
-                      borderRadius: 8.0,
-                      buttonSize: 48.0,
-                      fillColor: FloterTheme.of(context).primaryBackground,
-                      icon: Icon(
-                        Icons.arrow_back,
-                        color: FloterTheme.of(context).primaryText,
-                        size: 32.0,
-                      ),
-                      onPressed: () async {
-                        context.pop();
-                      },
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(32.0),
-                      child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 0),
-                        fadeOutDuration: Duration(milliseconds: 0),
-                        imageUrl:
-                            'https://www.figma.com/api/mcp/asset/20dbdff4-2d1c-4bf5-849e-179720053bfe',
-                        width: 64.0,
-                        height: 64.0,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Text(
-                      AppLabels.of(context).get(
-                        'skip' /* Kirill, 38 */,
-                      ),
-                      style: FloterTheme.of(context).titleMedium.override(
-                            font: GoogleFonts.interTight(
-                              fontWeight: FloterTheme.of(context)
-                                  .titleMedium
-                                  .fontWeight,
-                              fontStyle:
-                                  FloterTheme.of(context).titleMedium.fontStyle,
-                            ),
-                            letterSpacing: 0.0,
-                            fontWeight:
-                                FloterTheme.of(context).titleMedium.fontWeight,
-                            fontStyle:
-                                FloterTheme.of(context).titleMedium.fontStyle,
-                          ),
-                    ),
-                  ].divide(SizedBox(width: 12.0)),
-                ),
-                Container(
-                  height: 8.0,
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: FloterTheme.of(context).primary,
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            16.0, 8.0, 16.0, 8.0),
-                        child: Text(
-                          AppLabels.of(context).get(
-                            'chat.chyokak' /* Chyokak? */,
-                          ),
-                          style: FloterTheme.of(context).bodyMedium.override(
-                                font: GoogleFonts.inter(
-                                  fontWeight: FloterTheme.of(context)
-                                      .bodyMedium
-                                      .fontWeight,
-                                  fontStyle: FloterTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
-                                ),
-                                color:
-                                    FloterTheme.of(context).primaryBackground,
-                                letterSpacing: 0.0,
-                                fontWeight: FloterTheme.of(context)
-                                    .bodyMedium
-                                    .fontWeight,
-                                fontStyle: FloterTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: FloterTheme.of(context).secondaryBackground,
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            16.0, 8.0, 16.0, 8.0),
-                        child: Text(
-                          AppLabels.of(context).get(
-                            'chat.normur' /* Normur */,
-                          ),
-                          style: FloterTheme.of(context).bodyMedium.override(
-                                font: GoogleFonts.inter(
-                                  fontWeight: FloterTheme.of(context)
-                                      .bodyMedium
-                                      .fontWeight,
-                                  fontStyle: FloterTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
-                                ),
-                                color: FloterTheme.of(context).primaryText,
-                                letterSpacing: 0.0,
-                                fontWeight: FloterTheme.of(context)
-                                    .bodyMedium
-                                    .fontWeight,
-                                fontStyle: FloterTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Text(
-                  AppLabels.of(context).get(
-                    'chat.kirill_is_typing' /* Kirill is typing... */,
-                  ),
-                  textAlign: TextAlign.center,
-                  style: FloterTheme.of(context).bodySmall.override(
-                        font: GoogleFonts.inter(
-                          fontWeight:
-                              FloterTheme.of(context).bodySmall.fontWeight,
-                          fontStyle:
-                              FloterTheme.of(context).bodySmall.fontStyle,
-                        ),
-                        color: FloterTheme.of(context).secondaryText,
-                        letterSpacing: 0.0,
-                        fontWeight:
-                            FloterTheme.of(context).bodySmall.fontWeight,
-                        fontStyle: FloterTheme.of(context).bodySmall.fontStyle,
-                      ),
-                ),
+                _buildHeader(context, theme),
+                const SizedBox(height: 16),
                 Expanded(
-                  flex: 1,
-                  child: Container(),
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: TextFormField(
-                        controller: _model.messageTextFieldTextController,
-                        focusNode: _model.messageTextFieldFocusNode,
-                        onChanged: (_) => EasyDebounce.debounce(
-                          '_model.messageTextFieldTextController',
-                          Duration(milliseconds: 2000),
-                          () async {
-                            _model.messageText =
-                                _model.messageTextFieldTextController.text;
-                            safeSetState(() {});
-                          },
-                        ),
-                        onFieldSubmitted: (_) async {
-                          _model.messageText = '';
-                          safeSetState(() {});
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text(
-                                'Message sent',
-                                style: TextStyle(),
+                  child: _model.isLoading
+                      ? const Center(child: CircularProgressIndicator())
+                      : _model.messages.isEmpty
+                          ? Center(
+                              child: Text(
+                                AppLabels.of(context).get('chat.no_messages'),
+                                style: theme.bodyMedium,
                               ),
-                              duration: Duration(milliseconds: 4000),
-                            ),
-                          );
-                        },
-                        obscureText: false,
-                        decoration: InputDecoration(
-                          hintText: AppLabels.of(context).get(
-                            'chat.write_a_message' /* Write a message */,
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0x00000000),
-                              width: 1.0,
-                            ),
-                            borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(4.0),
-                              topRight: Radius.circular(4.0),
-                            ),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0x00000000),
-                              width: 1.0,
-                            ),
-                            borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(4.0),
-                              topRight: Radius.circular(4.0),
-                            ),
-                          ),
-                          errorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0x00000000),
-                              width: 1.0,
-                            ),
-                            borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(4.0),
-                              topRight: Radius.circular(4.0),
-                            ),
-                          ),
-                          focusedErrorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0x00000000),
-                              width: 1.0,
-                            ),
-                            borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(4.0),
-                              topRight: Radius.circular(4.0),
-                            ),
-                          ),
-                          filled: true,
-                        ),
-                        style: TextStyle(),
-                        maxLines: null,
-                        validator: _model
-                            .messageTextFieldTextControllerValidator
-                            .asValidator(context),
-                      ),
-                    ),
-                    FloterIconButton(
-                      borderRadius: 24.0,
-                      buttonSize: 40.0,
-                      fillColor: FloterTheme.of(context).primary,
-                      icon: Icon(
-                        Icons.send,
-                        color: FloterTheme.of(context).primaryBackground,
-                        size: 24.0,
-                      ),
-                      onPressed: () async {
-                        _model.messageText = '';
-                        safeSetState(() {});
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text(
-                              'Message sent',
-                              style: TextStyle(),
-                            ),
-                            duration: Duration(milliseconds: 4000),
-                          ),
-                        );
-                      },
-                    ),
-                  ].divide(SizedBox(width: 10.0)),
+                            )
+                          : _buildMessageList(context, theme),
                 ),
-              ].divide(SizedBox(height: 16.0)),
+                _buildInputBar(context, theme),
+              ],
             ),
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildHeader(BuildContext context, FloterTheme theme) {
+    final nameParts = <String>[];
+    if (_model.partnerName != null && _model.partnerName!.isNotEmpty) {
+      nameParts.add(_model.partnerName!);
+      if (_model.partnerAge != null) {
+        nameParts.add('${_model.partnerAge}');
+      }
+    } else {
+      nameParts.add(AppLabels.of(context).get('skip'));
+    }
+
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        FloterIconButton(
+          borderRadius: 8,
+          buttonSize: 48,
+          fillColor: theme.primaryBackground,
+          icon: Icon(
+            Icons.arrow_back,
+            color: theme.primaryText,
+            size: 32,
+          ),
+          onPressed: () async {
+            context.pop();
+          },
+        ),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(32),
+          child: CachedNetworkImage(
+            fadeInDuration: Duration.zero,
+            fadeOutDuration: Duration.zero,
+            imageUrl: _model.partnerAvatar ?? '',
+            width: 64,
+            height: 64,
+            fit: BoxFit.cover,
+            placeholder: (_, __) => Container(
+              color: theme.secondaryBackground,
+              child: const Icon(Icons.person, size: 32),
+            ),
+            errorWidget: (_, __, ___) => Container(
+              color: theme.secondaryBackground,
+              child: const Icon(Icons.person, size: 32),
+            ),
+          ),
+        ),
+        const SizedBox(width: 12),
+        Text(
+          nameParts.join(', '),
+          style: theme.titleMedium.override(
+            font: GoogleFonts.interTight(
+              fontWeight: theme.titleMedium.fontWeight,
+              fontStyle: theme.titleMedium.fontStyle,
+            ),
+            letterSpacing: 0,
+            fontWeight: theme.titleMedium.fontWeight,
+            fontStyle: theme.titleMedium.fontStyle,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildMessageList(BuildContext context, FloterTheme theme) {
+    return ListView.builder(
+      controller: _model.scrollController,
+      reverse: false,
+      itemCount: _model.messages.length,
+      itemBuilder: (context, index) {
+        final msg = _model.messages[index];
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 8),
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment:
+                msg.isOwn ? MainAxisAlignment.end : MainAxisAlignment.start,
+            children: [
+              Container(
+                constraints:
+                    BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.7),
+                decoration: BoxDecoration(
+                  color: msg.isOwn
+                      ? theme.primary
+                      : theme.secondaryBackground,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(16, 8, 16, 8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      if (msg.body.isNotEmpty)
+                        Text(
+                          msg.body,
+                          style: theme.bodyMedium.override(
+                            font: GoogleFonts.inter(
+                              fontWeight: theme.bodyMedium.fontWeight,
+                              fontStyle: theme.bodyMedium.fontStyle,
+                            ),
+                            color: msg.isOwn
+                                ? theme.primaryBackground
+                                : theme.primaryText,
+                            letterSpacing: 0,
+                          ),
+                        ),
+                      if (msg.photoUrl != null && msg.photoUrl!.isNotEmpty)
+                        Padding(
+                          padding: msg.body.isNotEmpty
+                              ? const EdgeInsets.only(top: 4)
+                              : EdgeInsets.zero,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(6),
+                            child: CachedNetworkImage(
+                              imageUrl: msg.photoUrl!,
+                              width: 200,
+                              fit: BoxFit.cover,
+                              placeholder: (_, __) => const SizedBox(
+                                width: 200,
+                                height: 150,
+                                child: Center(
+                                    child: CircularProgressIndicator()),
+                              ),
+                              errorWidget: (_, __, ___) => Container(
+                                width: 200,
+                                height: 100,
+                                color: theme.secondaryBackground,
+                                child: const Icon(Icons.broken_image),
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildInputBar(BuildContext context, FloterTheme theme) {
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Expanded(
+          child: TextFormField(
+            controller: _model.messageTextFieldTextController,
+            focusNode: _model.messageTextFieldFocusNode,
+            onChanged: (_) => EasyDebounce.debounce(
+              '_model.messageTextFieldTextController',
+              const Duration(milliseconds: 2000),
+              () async {
+                _model.messageText =
+                    _model.messageTextFieldTextController.text;
+                safeSetState(() {});
+              },
+            ),
+            onFieldSubmitted: (_) async {
+              await _model.sendMessage();
+              safeSetState(() {});
+            },
+            obscureText: false,
+            decoration: InputDecoration(
+              hintText: AppLabels.of(context).get('chat.write_a_message'),
+              enabledBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: Color(0x00000000), width: 1),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(4),
+                  topRight: Radius.circular(4),
+                ),
+              ),
+              focusedBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: Color(0x00000000), width: 1),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(4),
+                  topRight: Radius.circular(4),
+                ),
+              ),
+              errorBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: Color(0x00000000), width: 1),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(4),
+                  topRight: Radius.circular(4),
+                ),
+              ),
+              focusedErrorBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: Color(0x00000000), width: 1),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(4),
+                  topRight: Radius.circular(4),
+                ),
+              ),
+              filled: true,
+            ),
+            style: const TextStyle(),
+            maxLines: null,
+            validator: _model
+                .messageTextFieldTextControllerValidator
+                .asValidator(context),
+          ),
+        ),
+        const SizedBox(width: 10),
+        FloterIconButton(
+          borderRadius: 24,
+          buttonSize: 40,
+          fillColor: theme.primary,
+          icon: Icon(
+            Icons.send,
+            color: theme.primaryBackground,
+            size: 24,
+          ),
+          onPressed: () async {
+            await _model.sendMessage();
+            safeSetState(() {});
+          },
+        ),
+      ],
     );
   }
 }

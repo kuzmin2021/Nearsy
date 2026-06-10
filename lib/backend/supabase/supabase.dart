@@ -26,6 +26,16 @@ class SupaFlow {
     return publicPhotoUrl(path);
   }
 
+  static bool isValidPhotoUrl(String? url) {
+    if (url == null || url.isEmpty) return false;
+    if (url.contains('figma.com/api/mcp/asset')) return false;
+    return true;
+  }
+
+  static String? safePhotoUrl(String? url) {
+    return isValidPhotoUrl(url) ? url : null;
+  }
+
   static String? storagePathFromPhotoUrl(String photoUrl) {
     final uri = Uri.tryParse(photoUrl.trim());
     if (uri == null) return null;

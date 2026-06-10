@@ -1,4 +1,4 @@
-import '/components/lookaround_bottom_nav_widget.dart';
+﻿import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -293,7 +293,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                           fadeOutDuration:
                                               Duration(milliseconds: 0),
                                           imageUrl:
-                                              'https://www.figma.com/api/mcp/asset/d5452250-bd00-4450-b5eb-b084de000801',
+                                              '',
                                           width: double.infinity,
                                           height: 230.0,
                                           fit: BoxFit.cover,
@@ -355,7 +355,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                           fadeOutDuration:
                                               Duration(milliseconds: 0),
                                           imageUrl:
-                                              'https://www.figma.com/api/mcp/asset/abe7c9f2-da8a-491b-9a2c-40a4a9569dea',
+                                              '',
                                           width: double.infinity,
                                           height: 230.0,
                                           fit: BoxFit.cover,
@@ -424,7 +424,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                           fadeOutDuration:
                                               Duration(milliseconds: 0),
                                           imageUrl:
-                                              'https://www.figma.com/api/mcp/asset/fe773ad3-348a-49a7-947f-b79a5d8c4f82',
+                                              '',
                                           width: double.infinity,
                                           height: 230.0,
                                           fit: BoxFit.cover,
@@ -486,7 +486,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                                           fadeOutDuration:
                                               Duration(milliseconds: 0),
                                           imageUrl:
-                                              'https://www.figma.com/api/mcp/asset/01b4e54c-459a-4795-93a0-eaa3c7d03d76',
+                                              '',
                                           width: double.infinity,
                                           height: 230.0,
                                           fit: BoxFit.cover,

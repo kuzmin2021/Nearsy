@@ -1,4 +1,4 @@
-name: lookaround_m_v_p
+﻿name: lookaround_m_v_p
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -176,4 +176,5 @@ flutter:
           weight: 600
         - asset: assets/fonts/InterTight-Black.ttf
           weight: 900
+
 

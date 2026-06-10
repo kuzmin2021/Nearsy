@@ -2,14 +2,15 @@ import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
+import '/backend/supabase/supabase.dart';
 import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '/models/chat_models.dart';
 import 'matches_page_model.dart';
 export 'matches_page_model.dart';
 
-/// Lists matched conversations and opens chat threads.
 class MatchesPageWidget extends StatefulWidget {
   const MatchesPageWidget({super.key});
 
@@ -29,449 +30,253 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => MatchesPageModel());
+    _model.onStateChanged = () => safeSetState(() {});
   }
 
   @override
   void dispose() {
     _model.dispose();
-
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        FocusScope.of(context).unfocus();
-        FocusManager.instance.primaryFocus?.unfocus();
-      },
-      child: Scaffold(
-        key: scaffoldKey,
-        backgroundColor: FloterTheme.of(context).primaryBackground,
-        body: SafeArea(
-          top: true,
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
+    final theme = FloterTheme.of(context);
+
+    return Scaffold(
+      key: scaffoldKey,
+      backgroundColor: theme.primaryBackground,
+      body: SafeArea(
+        top: true,
+        child: Column(
+          children: [
+            Expanded(
+              child: _model.isLoading
+                  ? const Center(child: CircularProgressIndicator())
+                  : _model.conversations.isEmpty
+                      ? _buildEmptyState(context, theme)
+                      : _buildConversationList(context, theme),
+            ),
+            wrapWithModel(
+              model: _model.lookaroundBottomNavModel,
+              updateCallback: () => safeSetState(() {}),
+              child: const LookaroundBottomNavWidget(activeTab: 'Chats'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildEmptyState(BuildContext context, dynamic theme) {
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            AppLabels.of(context).get('matches.no_chats_yet'),
+            style: GoogleFonts.inter(
+              color: theme.secondaryText,
+              fontSize: 16,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildConversationList(BuildContext context, dynamic theme) {
+    return Padding(
+      padding: const EdgeInsetsDirectional.fromSTEB(23, 36, 23, 0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          _buildHeader(context, theme),
+          const SizedBox(height: 24),
+          Expanded(
+            child: ListView.separated(
+              itemCount: _model.conversations.length,
+              separatorBuilder: (_, __) => const SizedBox(height: 6),
+              itemBuilder: (context, index) =>
+                  _buildConversationItem(context, _model.conversations[index]),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildHeader(BuildContext context, dynamic theme) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(
+          AppLabels.of(context).get('matches.chats'),
+          style: GoogleFonts.interTight(
+            color: const Color(0xFF9400D3),
+            fontSize: 24,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        FloterIconButton(
+          borderRadius: 8,
+          buttonSize: 40,
+          fillColor: theme.primaryBackground,
+          icon: Icon(
+            Icons.settings,
+            color: theme.primaryText,
+            size: 24,
+          ),
+          onPressed: () async {
+            await context.pushNamed('AccountSettingsPage');
+          },
+        ),
+      ],
+    );
+  }
+
+  Widget _buildConversationItem(BuildContext context, Conversation conv) {
+    final theme = FloterTheme.of(context);
+    final currentUserId = SupaFlow.client.auth.currentUser?.id ?? '';
+    final nameText = StringBuffer(conv.otherUserName ?? '');
+    if (conv.otherUserAge != null) {
+      nameText.write(', ${conv.otherUserAge}');
+    }
+
+    final lastMsgText = () {
+      final body = conv.lastMessageBody ?? '';
+      if (body.isEmpty) return '';
+      if (conv.lastMessageSenderId == currentUserId) {
+        return 'You: $body';
+      }
+      return body;
+    }();
+
+    return Container(
+      height: 90,
+      padding: const EdgeInsetsDirectional.fromSTEB(9, 0, 0, 0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(25),
+            child: CachedNetworkImage(
+              fadeInDuration: Duration.zero,
+              fadeOutDuration: Duration.zero,
+              imageUrl: SupaFlow.safePhotoUrl(conv.otherUserAvatar) ?? '',
+              width: 80,
+              height: 80,
+              fit: BoxFit.cover,
+              placeholder: (_, __) => Container(
+                color: theme.secondaryBackground,
+                child: const Icon(Icons.person, size: 40),
+              ),
+              errorWidget: (_, __, ___) => Container(
+                color: theme.secondaryBackground,
+                child: const Icon(Icons.person, size: 40),
+              ),
+            ),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
             child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(
-                  flex: 1,
-                  child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(23.0, 36.0, 23.0, 24.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(
-                                  AppLabels.of(context).get(
-                                    'matches.chats' /* Chats */,
-                                  ),
-                                  style: FloterTheme.of(context)
-                                      .titleLarge
-                                      .override(
-                                        font: GoogleFonts.interTight(
-                                          fontWeight: FloterTheme.of(context)
-                                              .titleLarge
-                                              .fontWeight,
-                                          fontStyle: FloterTheme.of(context)
-                                              .titleLarge
-                                              .fontStyle,
-                                        ),
-                                        color: FloterTheme.of(context).primary,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FloterTheme.of(context)
-                                            .titleLarge
-                                            .fontWeight,
-                                        fontStyle: FloterTheme.of(context)
-                                            .titleLarge
-                                            .fontStyle,
-                                      ),
-                                ),
-                              ].divide(SizedBox(width: 4.0)),
-                            ),
-                            FloterIconButton(
-                              borderRadius: 8.0,
-                              buttonSize: 40.0,
-                              fillColor:
-                                  FloterTheme.of(context).primaryBackground,
-                              icon: Icon(
-                                Icons.tune,
-                                color: FloterTheme.of(context).primaryText,
-                                size: 22.0,
-                              ),
-                              onPressed: () async {
-                                context.pushNamed(
-                                    ChatPreferencesPageWidget.routeName);
-                              },
-                            ),
-                          ],
-                        ),
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed(
-                              ChatPageWidget.routeName,
-                              queryParameters: {
-                                'conversationId': serializeParam(
-                                  _model.conversationId,
-                                  ParamType.int,
-                                ),
-                              }.withoutNulls,
-                            );
-                          },
-                          child: Container(
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 8.0, 0.0, 8.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(32.0),
-                                    child: CachedNetworkImage(
-                                      fadeInDuration: Duration(milliseconds: 0),
-                                      fadeOutDuration:
-                                          Duration(milliseconds: 0),
-                                      imageUrl:
-                                          'https://www.figma.com/api/mcp/asset/20dbdff4-2d1c-4bf5-849e-179720053bfe',
-                                      width: 64.0,
-                                      height: 64.0,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 1,
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          AppLabels.of(context).get(
-                                            'skip' /* Kirill, 38 */,
-                                          ),
-                                          style: FloterTheme.of(context)
-                                              .titleSmall
-                                              .override(
-                                                font: GoogleFonts.interTight(
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .titleSmall
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .titleSmall
-                                                          .fontStyle,
-                                                ),
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .titleSmall
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .titleSmall
-                                                        .fontStyle,
-                                              ),
-                                        ),
-                                        Text(
-                                          AppLabels.of(context).get(
-                                            'matches.you_normur' /* You: Normur */,
-                                          ),
-                                          maxLines: 1,
-                                          style: FloterTheme.of(context)
-                                              .bodySmall
-                                              .override(
-                                                font: GoogleFonts.inter(
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodySmall
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodySmall
-                                                          .fontStyle,
-                                                ),
-                                                color: FloterTheme.of(context)
-                                                    .secondaryText,
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodySmall
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodySmall
-                                                        .fontStyle,
-                                              ),
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
-                                      ].divide(SizedBox(height: 4.0)),
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.chat_bubble_outline,
-                                    color:
-                                        FloterTheme.of(context).secondaryText,
-                                    size: 20.0,
-                                  ),
-                                  Icon(
-                                    Icons.notifications,
-                                    color: FloterTheme.of(context).primary,
-                                    size: 20.0,
-                                  ),
-                                ].divide(SizedBox(width: 12.0)),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 8.0, 0.0, 8.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(32.0),
-                                  child: CachedNetworkImage(
-                                    fadeInDuration: Duration(milliseconds: 0),
-                                    fadeOutDuration: Duration(milliseconds: 0),
-                                    imageUrl:
-                                        'https://www.figma.com/api/mcp/asset/fe773ad3-348a-49a7-947f-b79a5d8c4f82',
-                                    width: 64.0,
-                                    height: 64.0,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Expanded(
-                                  flex: 1,
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        AppLabels.of(context).get(
-                                          'skip' /* Fyodor, 45 */,
-                                        ),
-                                        style: FloterTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              font: GoogleFonts.interTight(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .titleSmall
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .titleSmall
-                                                        .fontStyle,
-                                              ),
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .titleSmall
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .titleSmall
-                                                  .fontStyle,
-                                            ),
-                                      ),
-                                      Text(
-                                        AppLabels.of(context).get(
-                                          'matches.you_how_big_is_your' /* You: How big is your... */,
-                                        ),
-                                        maxLines: 1,
-                                        style: FloterTheme.of(context)
-                                            .bodySmall
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodySmall
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodySmall
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .secondaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodySmall
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodySmall
-                                                  .fontStyle,
-                                            ),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ].divide(SizedBox(height: 4.0)),
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.chat_bubble_outline,
-                                  color: FloterTheme.of(context).secondaryText,
-                                  size: 20.0,
-                                ),
-                                Icon(
-                                  Icons.notifications,
-                                  color: FloterTheme.of(context).primary,
-                                  size: 20.0,
-                                ),
-                              ].divide(SizedBox(width: 12.0)),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 8.0, 0.0, 8.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(32.0),
-                                  child: CachedNetworkImage(
-                                    fadeInDuration: Duration(milliseconds: 0),
-                                    fadeOutDuration: Duration(milliseconds: 0),
-                                    imageUrl:
-                                        'https://www.figma.com/api/mcp/asset/01b4e54c-459a-4795-93a0-eaa3c7d03d76',
-                                    width: 64.0,
-                                    height: 64.0,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Expanded(
-                                  flex: 1,
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        AppLabels.of(context).get(
-                                          'skip' /* Stepan, 29 */,
-                                        ),
-                                        style: FloterTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              font: GoogleFonts.interTight(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .titleSmall
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .titleSmall
-                                                        .fontStyle,
-                                              ),
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .titleSmall
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .titleSmall
-                                                  .fontStyle,
-                                            ),
-                                      ),
-                                      Text(
-                                        AppLabels.of(context).get(
-                                          'matches.sure_see_you_at_bla' /* Sure, see you at bla... */,
-                                        ),
-                                        maxLines: 1,
-                                        style: FloterTheme.of(context)
-                                            .bodySmall
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodySmall
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodySmall
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .secondaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodySmall
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodySmall
-                                                  .fontStyle,
-                                            ),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ].divide(SizedBox(height: 4.0)),
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.chat_bubble_outline,
-                                  color: FloterTheme.of(context).secondaryText,
-                                  size: 20.0,
-                                ),
-                                Icon(
-                                  Icons.notifications,
-                                  color: FloterTheme.of(context).primary,
-                                  size: 20.0,
-                                ),
-                              ].divide(SizedBox(width: 12.0)),
-                            ),
-                          ),
-                        ),
-                      ].divide(SizedBox(height: 18.0)),
-                    ),
+                Text(
+                  nameText.toString(),
+                  style: GoogleFonts.interTight(
+                    color: theme.primaryText,
+                    fontSize: 16,
+                    fontWeight:
+                        conv.isUnread ? FontWeight.w700 : FontWeight.w400,
                   ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                wrapWithModel(
-                  model: _model.lookaroundBottomNavModel,
-                  updateCallback: () => safeSetState(() {}),
-                  child: LookaroundBottomNavWidget(
-                    activeTab: 'Chats',
+                const SizedBox(height: 5),
+                Text(
+                  lastMsgText,
+                  style: GoogleFonts.inter(
+                    color: theme.secondaryText,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
                   ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
           ),
-        ),
+          Stack(
+            alignment: Alignment.topRight,
+            children: [
+              IconButton(
+                onPressed: () async {
+                  await context.pushNamed(
+                    ChatPageWidget.routeName,
+                    queryParameters: {
+                      'conversationId': serializeParam(conv.id, ParamType.int),
+                    }.withoutNulls,
+                  );
+                },
+                icon: const Icon(Icons.chat_bubble_outline, size: 28),
+                color: theme.secondaryText,
+                padding: EdgeInsets.zero,
+                constraints: const BoxConstraints(
+                  minWidth: 62,
+                  minHeight: 62,
+                ),
+              ),
+              if (conv.isUnread)
+                Positioned(
+                  top: 4,
+                  right: 10,
+                  child: Container(
+                    width: 6,
+                    height: 6,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFFF4442E),
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          _buildActionButtons(context, conv, theme),
+        ],
       ),
+    );
+  }
+
+  Widget _buildActionButtons(
+      BuildContext context, Conversation conv, dynamic theme) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        IconButton(
+          onPressed: () => _model.deleteConversation(conv),
+          icon: const Icon(Icons.block, size: 22),
+          color: theme.secondaryText,
+          padding: EdgeInsets.zero,
+          constraints: const BoxConstraints(minWidth: 64, minHeight: 62),
+        ),
+        IconButton(
+          onPressed: () => _model.deleteConversation(conv),
+          icon: const Icon(Icons.delete_outline, size: 22),
+          color: theme.secondaryText,
+          padding: EdgeInsets.zero,
+          constraints: const BoxConstraints(minWidth: 64, minHeight: 62),
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.report_outlined, size: 22),
+          color: theme.secondaryText,
+          padding: EdgeInsets.zero,
+          constraints: const BoxConstraints(minWidth: 64, minHeight: 62),
+        ),
+      ],
     );
   }
 }

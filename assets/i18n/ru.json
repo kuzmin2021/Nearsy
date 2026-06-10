@@ -40,8 +40,9 @@
     "outside_3": "Снаружи 3",
     "tab_label": "Вы им понравились"
   },
-  "matches": {
+   "matches": {
     "chats": "Чаты",
+    "no_chats_yet": "Пока нет чатов",
     "you_normur": "You: Normur",
     "you_how_big_is_your": "You: How big is your...",
     "sure_see_you_at_bla": "Sure, see you at bla...",

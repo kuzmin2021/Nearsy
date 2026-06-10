@@ -1,4 +1,4 @@
-import '/components/lookaround_bottom_nav_widget.dart';
+﻿import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -286,7 +286,7 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                         fadeOutDuration:
                                             Duration(milliseconds: 0),
                                         imageUrl:
-                                            'https://www.figma.com/api/mcp/asset/20dbdff4-2d1c-4bf5-849e-179720053bfe',
+                                            '',
                                         width: double.infinity,
                                         height: 230.0,
                                         fit: BoxFit.cover,
@@ -344,7 +344,7 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                         fadeOutDuration:
                                             Duration(milliseconds: 0),
                                         imageUrl:
-                                            'https://www.figma.com/api/mcp/asset/fe773ad3-348a-49a7-947f-b79a5d8c4f82',
+                                            '',
                                         width: double.infinity,
                                         height: 230.0,
                                         fit: BoxFit.cover,
@@ -409,7 +409,7 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                         fadeOutDuration:
                                             Duration(milliseconds: 0),
                                         imageUrl:
-                                            'https://www.figma.com/api/mcp/asset/01b4e54c-459a-4795-93a0-eaa3c7d03d76',
+                                            '',
                                         width: double.infinity,
                                         height: 230.0,
                                         fit: BoxFit.cover,
@@ -467,7 +467,7 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                         fadeOutDuration:
                                             Duration(milliseconds: 0),
                                         imageUrl:
-                                            'https://www.figma.com/api/mcp/asset/6cd2b1e4-87e3-4e64-abef-2d36b48fb9f0',
+                                            '',
                                         width: double.infinity,
                                         height: 230.0,
                                         fit: BoxFit.cover,
