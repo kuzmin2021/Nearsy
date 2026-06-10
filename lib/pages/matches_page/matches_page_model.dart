@@ -52,4 +52,14 @@ class MatchesPageModel extends FloterModel<MatchesPageWidget> {
       onStateChanged?.call();
     } catch (_) {}
   }
+
+  void blockUser(Conversation c) {
+    conversations.remove(c);
+    onStateChanged?.call();
+  }
+
+  void reportUser(Conversation c) {
+    conversations.remove(c);
+    onStateChanged?.call();
+  }
 }

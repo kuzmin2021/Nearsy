@@ -7,6 +7,7 @@ import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import '/models/chat_models.dart';
 import 'matches_page_model.dart';
 export 'matches_page_model.dart';
@@ -153,130 +154,128 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
       return body;
     }();
 
-    return Container(
-      height: 90,
-      padding: const EdgeInsetsDirectional.fromSTEB(9, 0, 0, 0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
+    return Slidable(
+      endActionPane: ActionPane(
+        motion: const BehindMotion(),
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(25),
-            child: CachedNetworkImage(
-              fadeInDuration: Duration.zero,
-              fadeOutDuration: Duration.zero,
-              imageUrl: SupaFlow.safePhotoUrl(conv.otherUserAvatar) ?? '',
-              width: 80,
-              height: 80,
-              fit: BoxFit.cover,
-              placeholder: (_, __) => Container(
-                color: theme.secondaryBackground,
-                child: const Icon(Icons.person, size: 40),
-              ),
-              errorWidget: (_, __, ___) => Container(
-                color: theme.secondaryBackground,
-                child: const Icon(Icons.person, size: 40),
-              ),
-            ),
+          SlidableAction(
+            onPressed: (_) => _model.blockUser(conv),
+            backgroundColor: const Color(0xFFF4442E),
+            foregroundColor: Colors.white,
+            icon: Icons.block,
+            label: 'Block',
           ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  nameText.toString(),
-                  style: GoogleFonts.interTight(
-                    color: theme.primaryText,
-                    fontSize: 16,
-                    fontWeight:
-                        conv.isUnread ? FontWeight.w700 : FontWeight.w400,
-                  ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                const SizedBox(height: 5),
-                Text(
-                  lastMsgText,
-                  style: GoogleFonts.inter(
-                    color: theme.secondaryText,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                  ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ],
-            ),
+          SlidableAction(
+            onPressed: (_) => _model.deleteConversation(conv),
+            backgroundColor: const Color(0xFF9400D3),
+            foregroundColor: Colors.white,
+            icon: Icons.delete_outline,
+            label: 'Delete',
           ),
-          Stack(
-            alignment: Alignment.topRight,
-            children: [
-              IconButton(
-                onPressed: () async {
-                  await context.pushNamed(
-                    ChatPageWidget.routeName,
-                    queryParameters: {
-                      'conversationId': serializeParam(conv.id, ParamType.int),
-                    }.withoutNulls,
-                  );
-                },
-                icon: const Icon(Icons.chat_bubble_outline, size: 28),
-                color: theme.secondaryText,
-                padding: EdgeInsets.zero,
-                constraints: const BoxConstraints(
-                  minWidth: 62,
-                  minHeight: 62,
-                ),
-              ),
-              if (conv.isUnread)
-                Positioned(
-                  top: 4,
-                  right: 10,
-                  child: Container(
-                    width: 6,
-                    height: 6,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFF4442E),
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                ),
-            ],
+          SlidableAction(
+            onPressed: (_) => _model.reportUser(conv),
+            backgroundColor: const Color(0xFF757575),
+            foregroundColor: Colors.white,
+            icon: Icons.report_outlined,
+            label: 'Report',
           ),
-          _buildActionButtons(context, conv, theme),
         ],
       ),
-    );
-  }
-
-  Widget _buildActionButtons(
-      BuildContext context, Conversation conv, dynamic theme) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        IconButton(
-          onPressed: () => _model.deleteConversation(conv),
-          icon: const Icon(Icons.block, size: 22),
-          color: theme.secondaryText,
-          padding: EdgeInsets.zero,
-          constraints: const BoxConstraints(minWidth: 64, minHeight: 62),
+      child: InkWell(
+        onTap: () async {
+          await context.pushNamed(
+            ChatPageWidget.routeName,
+            queryParameters: {
+              'conversationId': serializeParam(conv.id, ParamType.int),
+            }.withoutNulls,
+          );
+        },
+        child: Container(
+          height: 90,
+          padding: const EdgeInsetsDirectional.fromSTEB(9, 0, 4, 0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(25),
+                child: CachedNetworkImage(
+                  fadeInDuration: Duration.zero,
+                  fadeOutDuration: Duration.zero,
+                  imageUrl: SupaFlow.safePhotoUrl(conv.otherUserAvatar) ?? '',
+                  width: 80,
+                  height: 80,
+                  fit: BoxFit.cover,
+                  placeholder: (_, __) => Container(
+                    color: theme.secondaryBackground,
+                    child: const Icon(Icons.person, size: 40),
+                  ),
+                  errorWidget: (_, __, ___) => Container(
+                    color: theme.secondaryBackground,
+                    child: const Icon(Icons.person, size: 40),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      nameText.toString(),
+                      style: GoogleFonts.inter(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight:
+                            conv.isUnread ? FontWeight.w700 : FontWeight.w400,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      lastMsgText,
+                      style: GoogleFonts.inter(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
+              ),
+              Stack(
+                alignment: Alignment.topRight,
+                children: [
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
+                    child: Icon(
+                      Icons.chat_bubble_outline,
+                      size: 24,
+                      color: const Color(0x80000000),
+                    ),
+                  ),
+                  if (conv.isUnread)
+                    Positioned(
+                      top: 0,
+                      right: 0,
+                      child: Container(
+                        width: 6,
+                        height: 6,
+                        decoration: const BoxDecoration(
+                          color: Color(0xFFF4442E),
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+            ],
+          ),
         ),
-        IconButton(
-          onPressed: () => _model.deleteConversation(conv),
-          icon: const Icon(Icons.delete_outline, size: 22),
-          color: theme.secondaryText,
-          padding: EdgeInsets.zero,
-          constraints: const BoxConstraints(minWidth: 64, minHeight: 62),
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.report_outlined, size: 22),
-          color: theme.secondaryText,
-          padding: EdgeInsets.zero,
-          constraints: const BoxConstraints(minWidth: 64, minHeight: 62),
-        ),
-      ],
+      ),
     );
   }
 }
