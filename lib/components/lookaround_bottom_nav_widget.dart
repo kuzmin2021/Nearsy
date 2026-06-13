@@ -59,10 +59,10 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
     );
   }
 
-  Widget _navLabel(String i18nKey) {
+  Widget _navLabel(String i18nKey, {bool isActive = false}) {
     return Container(
       width: 64.0,
-      height: 72.0,
+      padding: const EdgeInsets.only(top: 2),
       alignment: AlignmentDirectional(0.0, 1.0),
       child: Text(
         AppLabels.of(context).get(i18nKey),
@@ -70,12 +70,12 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
         maxLines: 1,
         style: FloterTheme.of(context).bodySmall.override(
               font: GoogleFonts.inter(
-                fontWeight: FloterTheme.of(context).bodySmall.fontWeight,
+                fontWeight: isActive ? FontWeight.w700 : (FloterTheme.of(context).bodySmall.fontWeight ?? FontWeight.w400),
                 fontStyle: FloterTheme.of(context).bodySmall.fontStyle,
               ),
               color: FloterTheme.of(context).primaryText,
               letterSpacing: 0.0,
-              fontWeight: FloterTheme.of(context).bodySmall.fontWeight,
+              fontWeight: isActive ? FontWeight.w700 : (FloterTheme.of(context).bodySmall.fontWeight ?? FontWeight.w400),
               fontStyle: FloterTheme.of(context).bodySmall.fontStyle,
             ),
         overflow: TextOverflow.ellipsis,
@@ -83,7 +83,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
     );
   }
 
-  Widget _buildTab(String tab, String prefix, double iconSize, String routeName, String i18nKey) {
+  Widget _buildTab(String tab, String prefix, double iconSize, String routeName, String i18nKey, {double labelWidth = 64.0, double iconWidth = 72.0}) {
     return Expanded(
       flex: 1,
       child: Container(
@@ -116,9 +116,14 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
                   width: 72.0,
                   height: 72.0,
                   alignment: AlignmentDirectional(0.0, -1.0),
-                  child: _navIcon(tab, prefix, iconSize),
+                  child: Container(
+                    width: iconWidth,
+                    height: 58.0,
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: _navIcon(tab, prefix, iconSize),
+                  ),
                 ),
-                _navLabel(i18nKey),
+                _navLabel(i18nKey, isActive: widget.activeTab == tab),
               ],
             ),
           ),
@@ -132,25 +137,16 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
     return Container(
       width: double.infinity,
       height: 72.0,
-      decoration: BoxDecoration(
-        color: FloterTheme.of(context).primaryBackground,
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 4.0,
-            color: Color(0x33000000),
-            offset: Offset(0.0, -2.0),
-          ),
-        ],
-      ),
+      color: FloterTheme.of(context).primaryBackground,
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _buildTab('Profile', 'icon_nav_profile', 34.0, ProfilePageWidget.routeName, 'lookaround_bottom_nav.profile'),
-          _buildTab('People', 'icon_nav_people', 40.0, PeoplePageWidget.routeName, 'lookaround_bottom_nav.people'),
-          _buildTab('Nearby', 'icon_nav_nearby', 36.0, NearbyPageWidget.routeName, 'lookaround_bottom_nav.nearby'),
-          _buildTab('Liked You', 'icon_nav_liked', 34.0, LikedYouPageWidget.routeName, 'lookaround_bottom_nav.liked_you'),
-          _buildTab('Chats', 'icon_nav_chats', 34.0, MatchesPageWidget.routeName, 'lookaround_bottom_nav.chats'),
+          _buildTab('Profile', 'icon_nav_profile', 48.0, ProfilePageWidget.routeName, 'lookaround_bottom_nav.profile'),
+          _buildTab('People', 'icon_nav_people', 48.0, PeoplePageWidget.routeName, 'lookaround_bottom_nav.people'),
+          _buildTab('Nearby', 'icon_nav_nearby', 52.0, NearbyPageWidget.routeName, 'lookaround_bottom_nav.nearby'),
+          _buildTab('Liked You', 'icon_nav_liked', 48.0, LikedYouPageWidget.routeName, 'lookaround_bottom_nav.liked_you'),
+          _buildTab('Chats', 'icon_nav_chats', 48.0, MatchesPageWidget.routeName, 'lookaround_bottom_nav.chats'),
         ],
       ),
     );

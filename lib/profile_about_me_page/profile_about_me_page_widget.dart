@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -247,7 +247,7 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                             ),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 8.0, 12.0, 8.0),
+                                  4.0, 4.0, 4.0, 4.0),
                               child: TextFormField(
                                 controller:
                                     _model.profileAboutMeFieldTextController,
