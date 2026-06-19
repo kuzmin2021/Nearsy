@@ -5,10 +5,10 @@ class AppConfig {
   static String get supabaseUrl {
     const envUrl = String.fromEnvironment(
       'SUPABASE_URL',
-      defaultValue: 'http://127.0.0.1:54321',
+      defaultValue: 'http://2.26.64.30:8000',
     );
 
-    if (envUrl != 'http://127.0.0.1:54321') {
+    if (envUrl != 'http://2.26.64.30:8000') {
       return envUrl;
     }
 
@@ -35,7 +35,7 @@ class AppConfig {
 
   static const String supabaseAnonKey = String.fromEnvironment(
     'SUPABASE_ANON_KEY',
-    defaultValue: 'sb_publishable_ACJWlzQHlZjBrEguHvfOxg_3BJgxAaH',
+    defaultValue: 'sb_publishable_5EDmvk5KX_9MhjP6JrUmTc_R1jPVaq2',
   );
 
   static const String supabaseSecretKey = String.fromEnvironment(
