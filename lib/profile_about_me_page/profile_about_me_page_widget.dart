@@ -239,7 +239,6 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                                 ),
                           ),
                           Container(
-                            height: 210.0,
                             decoration: BoxDecoration(
                               color:
                                   FloterTheme.of(context).secondaryBackground,
