@@ -1743,38 +1743,56 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                           .fontStyle,
                                                 ),
                                           ),
-                                          Text(
-                                            functions.effectiveProfileAttribute(
-                                                'about',
-                                                widget!.aboutOverride,
-                                                _model.profileAbout)!,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
+                                          Builder(
+                                            builder: (context) {
+                                              final value =
+                                                  functions.effectiveProfileAttribute(
+                                                      'about',
+                                                      widget!.aboutOverride,
+                                                      _model.profileAbout);
+                                              if (value == null ||
+                                                  value.isEmpty) {
+                                                return const SizedBox.shrink();
+                                              }
+                                              return Padding(
+                                                padding:
+                                                    const EdgeInsets.only(
+                                                        top: 8.0),
+                                                child: Text(
+                                                  value,
+                                                  style: FloterTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FloterTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FloterTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        color:
+                                                            FloterTheme.of(context)
+                                                                .primaryText,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FloterTheme.of(context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FloterTheme.of(context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
                                                 ),
+                                              );
+                                            },
                                           ),
-                                        ].divide(SizedBox(height: 8.0)),
+                                        ],
                                       ),
                                     ),
                                     Container(
@@ -1860,44 +1878,38 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 150.0,
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Text(
-                                            functions.effectiveProfileAttribute(
+                                        Builder(
+                                          builder: (context) {
+                                            final value = functions.effectiveProfileAttribute(
                                                 'gender',
                                                 widget!.genderOverride,
-                                                _model.profileGender)!,
-                                            textAlign: TextAlign.end,
-                                            maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
+                                                _model.profileGender);
+                                            if (value == null || value.isEmpty) {
+                                              return const SizedBox.shrink();
+                                            }
+                                            return Container(
+                                              width: 150.0,
+                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              child: Text(
+                                                value,
+                                                textAlign: TextAlign.end,
+                                                maxLines: 1,
+                                                style: FloterTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                      ),
+                                                      color: FloterTheme.of(context).primaryText,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                    ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            );
+                                          },
                                         ),
                                         Icon(
                                           Icons.chevron_right,
@@ -1977,44 +1989,38 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 150.0,
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Text(
-                                            functions.effectiveProfileAttribute(
+                                        Builder(
+                                          builder: (context) {
+                                            final value = functions.effectiveProfileAttribute(
                                                 'birthday',
                                                 widget!.birthdayOverride,
-                                                _model.profileBirthday)!,
-                                            textAlign: TextAlign.end,
-                                            maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
+                                                _model.profileBirthday);
+                                            if (value == null || value.isEmpty) {
+                                              return const SizedBox.shrink();
+                                            }
+                                            return Container(
+                                              width: 150.0,
+                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              child: Text(
+                                                value,
+                                                textAlign: TextAlign.end,
+                                                maxLines: 1,
+                                                style: FloterTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                      ),
+                                                      color: FloterTheme.of(context).primaryText,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                    ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            );
+                                          },
                                         ),
                                         Icon(
                                           Icons.chevron_right,
@@ -2210,44 +2216,38 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 150.0,
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Text(
-                                            functions.effectiveProfileAttribute(
+                                        Builder(
+                                          builder: (context) {
+                                            final value = functions.effectiveProfileAttribute(
                                                 'height',
                                                 widget!.heightOverride,
-                                                _model.profileHeight)!,
-                                            textAlign: TextAlign.end,
-                                            maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
+                                                _model.profileHeight);
+                                            if (value == null || value.isEmpty) {
+                                              return const SizedBox.shrink();
+                                            }
+                                            return Container(
+                                              width: 150.0,
+                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              child: Text(
+                                                value,
+                                                textAlign: TextAlign.end,
+                                                maxLines: 1,
+                                                style: FloterTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                      ),
+                                                      color: FloterTheme.of(context).primaryText,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                    ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            );
+                                          },
                                         ),
                                         Icon(
                                           Icons.chevron_right,
@@ -2328,44 +2328,38 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 150.0,
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Text(
-                                            functions.effectiveProfileAttribute(
+                                        Builder(
+                                          builder: (context) {
+                                            final value = functions.effectiveProfileAttribute(
                                                 'work',
                                                 widget!.workOverride,
-                                                _model.profileWork)!,
-                                            textAlign: TextAlign.end,
-                                            maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
+                                                _model.profileWork);
+                                            if (value == null || value.isEmpty) {
+                                              return const SizedBox.shrink();
+                                            }
+                                            return Container(
+                                              width: 150.0,
+                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              child: Text(
+                                                value,
+                                                textAlign: TextAlign.end,
+                                                maxLines: 1,
+                                                style: FloterTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                      ),
+                                                      color: FloterTheme.of(context).primaryText,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                    ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            );
+                                          },
                                         ),
                                         Icon(
                                           Icons.chevron_right,
@@ -2446,44 +2440,38 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 150.0,
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Text(
-                                            functions.effectiveProfileAttribute(
+                                        Builder(
+                                          builder: (context) {
+                                            final value = functions.effectiveProfileAttribute(
                                                 'education',
                                                 widget!.educationOverride,
-                                                _model.profileEducation)!,
-                                            textAlign: TextAlign.end,
-                                            maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
+                                                _model.profileEducation);
+                                            if (value == null || value.isEmpty) {
+                                              return const SizedBox.shrink();
+                                            }
+                                            return Container(
+                                              width: 150.0,
+                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              child: Text(
+                                                value,
+                                                textAlign: TextAlign.end,
+                                                maxLines: 1,
+                                                style: FloterTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                      ),
+                                                      color: FloterTheme.of(context).primaryText,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                    ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            );
+                                          },
                                         ),
                                         Icon(
                                           Icons.chevron_right,
@@ -2564,44 +2552,38 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 150.0,
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Text(
-                                            functions.effectiveProfileAttribute(
+                                        Builder(
+                                          builder: (context) {
+                                            final value = functions.effectiveProfileAttribute(
                                                 'kids',
                                                 widget!.kidsOverride,
-                                                _model.profileKids)!,
-                                            textAlign: TextAlign.end,
-                                            maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
+                                                _model.profileKids);
+                                            if (value == null || value.isEmpty) {
+                                              return const SizedBox.shrink();
+                                            }
+                                            return Container(
+                                              width: 150.0,
+                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              child: Text(
+                                                value,
+                                                textAlign: TextAlign.end,
+                                                maxLines: 1,
+                                                style: FloterTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                      ),
+                                                      color: FloterTheme.of(context).primaryText,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                    ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            );
+                                          },
                                         ),
                                         Icon(
                                           Icons.chevron_right,
@@ -2682,46 +2664,40 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 150.0,
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Text(
-                                            functions.effectiveProfileAttribute(
+                                        Builder(
+                                          builder: (context) {
+                                            final value = functions.effectiveProfileAttribute(
                                                 'relationship_type',
                                                 widget!
                                                     .relationshipTypeOverride,
                                                 _model
-                                                    .profileRelationshipType)!,
-                                            textAlign: TextAlign.end,
-                                            maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
+                                                    .profileRelationshipType);
+                                            if (value == null || value.isEmpty) {
+                                              return const SizedBox.shrink();
+                                            }
+                                            return Container(
+                                              width: 150.0,
+                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              child: Text(
+                                                value,
+                                                textAlign: TextAlign.end,
+                                                maxLines: 1,
+                                                style: FloterTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                      ),
+                                                      color: FloterTheme.of(context).primaryText,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                    ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            );
+                                          },
                                         ),
                                         Icon(
                                           Icons.chevron_right,
@@ -2802,44 +2778,38 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 150.0,
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Text(
-                                            functions.effectiveProfileAttribute(
+                                        Builder(
+                                          builder: (context) {
+                                            final value = functions.effectiveProfileAttribute(
                                                 'religion',
                                                 widget!.religionOverride,
-                                                _model.profileBeliefs)!,
-                                            textAlign: TextAlign.end,
-                                            maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
+                                                _model.profileBeliefs);
+                                            if (value == null || value.isEmpty) {
+                                              return const SizedBox.shrink();
+                                            }
+                                            return Container(
+                                              width: 150.0,
+                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              child: Text(
+                                                value,
+                                                textAlign: TextAlign.end,
+                                                maxLines: 1,
+                                                style: FloterTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                      ),
+                                                      color: FloterTheme.of(context).primaryText,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                    ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            );
+                                          },
                                         ),
                                         Icon(
                                           Icons.chevron_right,
@@ -2920,44 +2890,38 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 150.0,
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Text(
-                                            functions.effectiveProfileAttribute(
+                                        Builder(
+                                          builder: (context) {
+                                            final value = functions.effectiveProfileAttribute(
                                                 'body_type',
                                                 widget!.bodyTypeOverride,
-                                                _model.profileBodyType)!,
-                                            textAlign: TextAlign.end,
-                                            maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
+                                                _model.profileBodyType);
+                                            if (value == null || value.isEmpty) {
+                                              return const SizedBox.shrink();
+                                            }
+                                            return Container(
+                                              width: 150.0,
+                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              child: Text(
+                                                value,
+                                                textAlign: TextAlign.end,
+                                                maxLines: 1,
+                                                style: FloterTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                      ),
+                                                      color: FloterTheme.of(context).primaryText,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                    ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            );
+                                          },
                                         ),
                                         Icon(
                                           Icons.chevron_right,
@@ -3038,44 +3002,38 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 150.0,
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Text(
-                                            functions.effectiveProfileAttribute(
+                                        Builder(
+                                          builder: (context) {
+                                            final value = functions.effectiveProfileAttribute(
                                                 'exercise',
                                                 widget!.exerciseOverride,
-                                                _model.profileExercise)!,
-                                            textAlign: TextAlign.end,
-                                            maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
+                                                _model.profileExercise);
+                                            if (value == null || value.isEmpty) {
+                                              return const SizedBox.shrink();
+                                            }
+                                            return Container(
+                                              width: 150.0,
+                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              child: Text(
+                                                value,
+                                                textAlign: TextAlign.end,
+                                                maxLines: 1,
+                                                style: FloterTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                      ),
+                                                      color: FloterTheme.of(context).primaryText,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                    ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            );
+                                          },
                                         ),
                                         Icon(
                                           Icons.chevron_right,
@@ -3156,44 +3114,38 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 150.0,
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Text(
-                                            functions.effectiveProfileAttribute(
+                                        Builder(
+                                          builder: (context) {
+                                            final value = functions.effectiveProfileAttribute(
                                                 'drinking',
                                                 widget!.drinkingOverride,
-                                                _model.profileDrinking)!,
-                                            textAlign: TextAlign.end,
-                                            maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
+                                                _model.profileDrinking);
+                                            if (value == null || value.isEmpty) {
+                                              return const SizedBox.shrink();
+                                            }
+                                            return Container(
+                                              width: 150.0,
+                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              child: Text(
+                                                value,
+                                                textAlign: TextAlign.end,
+                                                maxLines: 1,
+                                                style: FloterTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                      ),
+                                                      color: FloterTheme.of(context).primaryText,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                    ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            );
+                                          },
                                         ),
                                         Icon(
                                           Icons.chevron_right,
@@ -3274,44 +3226,38 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 150.0,
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Text(
-                                            functions.effectiveProfileAttribute(
+                                        Builder(
+                                          builder: (context) {
+                                            final value = functions.effectiveProfileAttribute(
                                                 'smoking',
                                                 widget!.smokingOverride,
-                                                _model.profileSmoking)!,
-                                            textAlign: TextAlign.end,
-                                            maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
+                                                _model.profileSmoking);
+                                            if (value == null || value.isEmpty) {
+                                              return const SizedBox.shrink();
+                                            }
+                                            return Container(
+                                              width: 150.0,
+                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              child: Text(
+                                                value,
+                                                textAlign: TextAlign.end,
+                                                maxLines: 1,
+                                                style: FloterTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                      ),
+                                                      color: FloterTheme.of(context).primaryText,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
+                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
+                                                    ),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            );
+                                          },
                                         ),
                                         Icon(
                                           Icons.chevron_right,

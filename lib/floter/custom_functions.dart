@@ -114,11 +114,11 @@ String? effectiveProfileAttribute(
   final overrideText = clean(overrideValue);
   final loadedText = clean(loadedValue);
   if (overrideText == '__cleared_profile_attribute__') {
-    return '';
+    return null;
   }
   final value = overrideText.isNotEmpty ? overrideText : loadedText;
   if (value.isEmpty) {
-    return '';
+    return null;
   }
 
   int monthNumber(String month) {

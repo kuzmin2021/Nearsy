@@ -38,14 +38,14 @@ String localizeProfileAttribute(String attribute, dynamic rawValue,
   return humanizeProfileValue(value);
 }
 
-String effectiveProfileAttribute(
+String? effectiveProfileAttribute(
     String? attribute, String? overrideValue, String? loadedValue,
     {String? localeKey}) {
   final attr = _clean(attribute);
   final overrideText = _clean(overrideValue);
   final loadedText = _clean(loadedValue);
-  if (overrideText == '__cleared_profile_attribute__') return '';
+  if (overrideText == '__cleared_profile_attribute__') return null;
   final value = overrideText.isNotEmpty ? overrideText : loadedText;
-  if (value.isEmpty) return '';
+  if (value.isEmpty) return null;
   return localizeProfileAttribute(attr, value, localeKey: localeKey);
 }
