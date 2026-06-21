@@ -36,6 +36,10 @@
     "all_3": "全部3",
     "filter_matches_0": "篩選器匹配0",
     "outside_3": "外面3",
+    "all_filter": "全部",
+    "matches_filter": "匹配",
+    "outside_filter": "外面",
+    "empty": "仲未有人讚好",
     "tab_label": "鍾意你"
   },
   "matches": {

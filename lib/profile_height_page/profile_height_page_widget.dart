@@ -219,7 +219,7 @@ class _ProfileHeightPageWidgetState extends State<ProfileHeightPageWidget> {
                                   'height_cm': updateValue,
                                   'height': displayValue,
                                   'is_metric': currentIsMetric,
-                                }, onConflict: 'user_id');
+                                }, onConflict: 'user_id', defaultToNull: false);
                               } catch (error) {
                                 if (context.mounted) {
                                   ScaffoldMessenger.of(context).showSnackBar(

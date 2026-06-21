@@ -36,6 +36,10 @@
     "all_3": "Alle 3",
     "filter_matches_0": "Filter entspricht 0",
     "outside_3": "Draußen 3",
+    "all_filter": "Alle",
+    "matches_filter": "Treffer",
+    "outside_filter": "Außerhalb",
+    "empty": "Noch keine Likes",
     "tab_label": "Mögen dich"
   },
   "matches": {

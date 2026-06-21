@@ -555,7 +555,7 @@ class _ProfileAgePageWidgetState extends State<ProfileAgePageWidget> {
                             await SupaFlow.client.from('profiles').upsert({
                               'user_id': userId,
                               'birthday': updateValue,
-                            }, onConflict: 'user_id');
+                            }, onConflict: 'user_id', defaultToNull: false);
                           } catch (error) {
                             if (context.mounted) {
                               ScaffoldMessenger.of(context).showSnackBar(

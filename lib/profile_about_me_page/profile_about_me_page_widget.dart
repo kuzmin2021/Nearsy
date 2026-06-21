@@ -151,7 +151,7 @@ class _ProfileAboutMePageWidgetState extends State<ProfileAboutMePageWidget> {
                             await SupaFlow.client.from('profiles').upsert({
                               'user_id': userId,
                               'description': updateValue,
-                            }, onConflict: 'user_id');
+                            }, onConflict: 'user_id', defaultToNull: false);
                           } catch (error) {
                             if (context.mounted) {
                               ScaffoldMessenger.of(context).showSnackBar(

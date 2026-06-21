@@ -36,6 +36,10 @@
     "all_3": "3つすべて",
     "filter_matches_0": "フィルターは 0 と一致します",
     "outside_3": "外側3",
+    "all_filter": "すべて",
+    "matches_filter": "一致",
+    "outside_filter": "範囲外",
+    "empty": "まだいいねはありません",
     "tab_label": "あなたをいいね"
   },
   "matches": {

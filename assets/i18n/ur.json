@@ -36,6 +36,10 @@
     "all_3": "تمام 3",
     "filter_matches_0": "فلٹر میچ 0",
     "outside_3": "باہر 3",
+    "all_filter": "سب",
+    "matches_filter": "مماثل",
+    "outside_filter": "باہر",
+    "empty": "ابھی تک کوئی لائک نہیں",
     "tab_label": "جنہیں آپ پسند آئے"
   },
   "matches": {

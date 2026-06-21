@@ -1,6 +1,7 @@
 import '/components/lookaround_bottom_nav_widget.dart';
 import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
+import '/app_state.dart';
 import 'people_page_widget.dart' show PeoplePageWidget;
 import 'dart:async';
 import 'package:flutter/material.dart';
@@ -58,6 +59,7 @@ class DiscoveryProfile {
 
 class PeoplePageModel extends FloterModel<PeoplePageWidget> {
   VoidCallback? onStateChanged;
+  void Function(String userId, String matchName, String matchPhoto)? onMatchFound;
 
   bool isLoadingProfiles = true;
   String loadError = '';
@@ -191,6 +193,40 @@ class PeoplePageModel extends FloterModel<PeoplePageWidget> {
     if (profile == null) return;
     persistSwipe(profile.userId, 'like');
     _afterSwipe(profile.userId);
+    _checkAndCreateMatch(profile.userId, profile.displayName, profile.avatarUrl);
+  }
+
+  Future<void> _checkAndCreateMatch(
+    String targetUserId,
+    String targetName,
+    String? targetPhotoUrl,
+  ) async {
+    final userId = SupaFlow.client.auth.currentUser?.id;
+    if (userId == null || targetUserId.isEmpty) return;
+
+    try {
+      final response = await SupaFlow.client
+          .from('swipe_events')
+          .select('id')
+          .eq('user_id', targetUserId)
+          .eq('target_user_id', userId)
+          .eq('action', 'like')
+          .limit(1);
+      final rows = response as List<dynamic>? ?? [];
+      if (rows.isEmpty) return;
+
+      final users = [userId, targetUserId]..sort();
+      await SupaFlow.client.from('conversations').insert({
+        'user1': users[0],
+        'user2': users[1],
+      });
+      FTAppState().updateLastCheckedMatchAt(DateTime.now().toUtc());
+      onMatchFound?.call(
+        targetUserId,
+        targetName,
+        targetPhotoUrl ?? '',
+      );
+    } catch (_) {}
   }
 
   void undoSwipe() {

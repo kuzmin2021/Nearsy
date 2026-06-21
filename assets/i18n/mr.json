@@ -36,6 +36,10 @@
     "all_3": "सर्व ३",
     "filter_matches_0": "फिल्टर जुळते 0",
     "outside_3": "बाहेर ३",
+    "all_filter": "सर्व",
+    "matches_filter": "जुळणारे",
+    "outside_filter": "बाहेर",
+    "empty": "अजून लाइक नाहीत",
     "tab_label": "ज्यांना तुम्ही आवडलात"
   },
   "matches": {

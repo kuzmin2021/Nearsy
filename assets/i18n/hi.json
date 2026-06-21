@@ -36,6 +36,10 @@
     "all_3": "सभी 3",
     "filter_matches_0": "फ़िल्टर 0 से मेल खाता है",
     "outside_3": "बाहर 3",
+    "all_filter": "सभी",
+    "matches_filter": "मिलान",
+    "outside_filter": "बाहर",
+    "empty": "अभी तक कोई लाइक नहीं",
     "tab_label": "जिन्होंने आपको पसंद किया"
   },
   "matches": {

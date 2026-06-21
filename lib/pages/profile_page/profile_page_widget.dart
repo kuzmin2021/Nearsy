@@ -141,7 +141,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
       await SupaFlow.client.from('profiles').upsert({
         'user_id': userId,
         'display_name': value,
-      }, onConflict: 'user_id');
+      }, onConflict: 'user_id', defaultToNull: false);
     } catch (error) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -453,7 +453,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
           await SupaFlow.client.from('profiles').upsert({
             'user_id': userId,
             'catchphrase': value,
-          }, onConflict: 'user_id');
+          }, onConflict: 'user_id', defaultToNull: false);
         } catch (error) {
           if (context.mounted) {
             ScaffoldMessenger.of(context).showSnackBar(

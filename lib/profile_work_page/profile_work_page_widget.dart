@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -6,6 +6,7 @@ import 'dart:ui';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'profile_work_page_model.dart';
 export 'profile_work_page_model.dart';
@@ -149,7 +150,7 @@ class _ProfileWorkPageWidgetState extends State<ProfileWorkPageWidget> {
                             await SupaFlow.client.from('profiles').upsert({
                               'user_id': userId,
                               'work': updateValue,
-                            }, onConflict: 'user_id');
+                            }, onConflict: 'user_id', defaultToNull: false);
                           } catch (error) {
                             if (context.mounted) {
                               ScaffoldMessenger.of(context).showSnackBar(
@@ -237,7 +238,6 @@ class _ProfileWorkPageWidgetState extends State<ProfileWorkPageWidget> {
                                 ),
                           ),
                           Container(
-                            height: 48.0,
                             decoration: BoxDecoration(
                               color:
                                   FloterTheme.of(context).secondaryBackground,
@@ -245,7 +245,7 @@ class _ProfileWorkPageWidgetState extends State<ProfileWorkPageWidget> {
                             ),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 8.0, 12.0, 8.0),
+                                  4.0, 4.0, 4.0, 4.0),
                               child: TextFormField(
                                 controller:
                                     _model.profileWorkFieldTextController,
@@ -305,6 +305,10 @@ class _ProfileWorkPageWidgetState extends State<ProfileWorkPageWidget> {
                                   filled: true,
                                 ),
                                 style: TextStyle(),
+                                maxLines: 5,
+                                maxLength: 200,
+                                maxLengthEnforcement:
+                                    MaxLengthEnforcement.enforced,
                                 validator: _model
                                     .profileWorkFieldTextControllerValidator
                                     .asValidator(context),

@@ -38,6 +38,10 @@
     "all_3": "Все 3",
     "filter_matches_0": "Фильтровать совпадения 0",
     "outside_3": "Снаружи 3",
+    "all_filter": "Все",
+    "matches_filter": "Совпадения",
+    "outside_filter": "Вне",
+    "empty": "Пока нет лайков",
     "tab_label": "Вы им понравились"
   },
    "matches": {

@@ -12,6 +12,7 @@ import '/backend/supabase/supabase.dart';
 import '/floter/floter_theme.dart';
 import '/services/i18n/app_labels.dart';
 import '/services/i18n/app_labels_delegate.dart';
+import '/services/notification_service.dart';
 import 'floter/floter_util.dart';
 import 'floter/internationalization.dart';
 import 'floter/nav/nav.dart';
@@ -61,7 +62,7 @@ class MyApp extends StatefulWidget {
       context.findAncestorStateOfType<_MyAppState>()!;
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   Locale? _locale = AppLabels.getStoredLocale();
 
   static Locale _resolveLocale(String language) => language.contains('_')
@@ -101,6 +102,8 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
 
+    WidgetsBinding.instance.addObserver(this);
+
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
     userStream = lookaroundMVPSupabaseUserStream()
@@ -112,6 +115,21 @@ class _MyAppState extends State<MyApp> {
       Duration(milliseconds: 1000),
       () => _appStateNotifier.stopShowingSplashImage(),
     );
+
+    NotificationService().initialize();
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      NotificationService().checkUnseenMatches();
+    }
   }
 
   void setLocale(String language) {

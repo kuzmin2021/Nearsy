@@ -1,4 +1,4 @@
-﻿import '/backend/supabase/supabase.dart';
+import '/backend/supabase/supabase.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -175,7 +175,7 @@ class _ProfileReligionPageWidgetState extends State<ProfileReligionPageWidget> {
                             await SupaFlow.client.from('profiles').upsert({
                               'user_id': userId,
                               'religion': updateValue,
-                            }, onConflict: 'user_id');
+                            }, onConflict: 'user_id', defaultToNull: false);
                           } catch (error) {
                             if (context.mounted) {
                               ScaffoldMessenger.of(context).showSnackBar(

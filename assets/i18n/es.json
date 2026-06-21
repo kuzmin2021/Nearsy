@@ -36,6 +36,10 @@
     "all_3": "Los 3",
     "filter_matches_0": "Filtrar coincidencias 0",
     "outside_3": "afuera 3",
+    "all_filter": "Todos",
+    "matches_filter": "Coincidencias",
+    "outside_filter": "Fuera",
+    "empty": "Aún no hay likes",
     "tab_label": "Te dieron like"
   },
   "matches": {

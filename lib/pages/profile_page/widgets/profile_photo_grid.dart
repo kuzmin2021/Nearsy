@@ -1,6 +1,8 @@
+import 'dart:typed_data';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '/backend/supabase/supabase.dart';
 import '/floter/floter_theme.dart';
@@ -107,30 +109,78 @@ class ProfilePhotoGrid extends StatelessWidget {
     }
   }
 
-  Future<void> _uploadMainPhoto(BuildContext context) async {
+  Future<Uint8List?> _pickFromGallery() async {
     final result = await FilePicker.platform.pickFiles(
       type: FileType.image,
       allowMultiple: false,
       withData: true,
     );
-    if (result == null || result.files.isEmpty) return;
-    final pickedFile = result.files.single;
-    final bytes = pickedFile.bytes;
+    if (result == null || result.files.isEmpty) return null;
+    return result.files.single.bytes;
+  }
+
+  Future<Uint8List?> _pickFromCamera() async {
+    final picker = ImagePicker();
+    final picked = await picker.pickImage(
+      source: ImageSource.camera,
+      maxWidth: 1024,
+      maxHeight: 1024,
+      imageQuality: 85,
+    );
+    if (picked == null) return null;
+    return await picked.readAsBytes();
+  }
+
+  Future<Uint8List?> _pickPhotoBytes(BuildContext context) async {
+    final source = await showDialog<String>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Add photo'),
+        content: const Text('Choose source'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, 'camera'),
+            child: const Text('Camera'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, 'gallery'),
+            child: const Text('Gallery'),
+          ),
+        ],
+      ),
+    );
+
+    if (source == 'camera') return await _pickFromCamera();
+    if (source == 'gallery') return await _pickFromGallery();
+    return null;
+  }
+
+  Future<String?> _uploadBytesToStorage(Uint8List bytes) async {
+    final userId = SupaFlow.client.auth.currentUser?.id;
+    if (userId == null || userId.isEmpty) return null;
+
+    final createDataTime = DateTime.now().millisecondsSinceEpoch.toString();
+    final storagePath = '$userId/$createDataTime';
+
+    final storageBucket = SupaFlow.client.storage.from('user_photos');
+    await storageBucket.uploadBinary(storagePath, bytes);
+    return storagePath;
+  }
+
+  Future<void> _uploadMainPhoto(BuildContext context) async {
+    final bytes = await _pickPhotoBytes(context);
     if (bytes == null || bytes.isEmpty) return;
 
     final userId = SupaFlow.client.auth.currentUser?.id;
     if (userId == null || userId.isEmpty) return;
 
-    final createDataTime = DateTime.now().millisecondsSinceEpoch.toString();
-    final storagePath = '$userId/$createDataTime';
-
     try {
-      final storageBucket = SupaFlow.client.storage.from('user_photos');
-      await storageBucket.uploadBinary(storagePath, bytes);
-      final uploadedUrl = SupaFlow.publicPhotoUrl(storagePath);
+      final storagePath = await _uploadBytesToStorage(bytes);
+      if (storagePath == null) return;
       await SupaFlow.client
           .from('profiles')
           .update({'avatar_url': storagePath}).eq('user_id', userId);
+      final uploadedUrl = SupaFlow.publicPhotoUrl(storagePath);
       onMainPhotoChanged?.call(uploadedUrl);
     } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -193,14 +243,7 @@ class ProfilePhotoGrid extends StatelessWidget {
   }
 
   Future<void> _uploadGridPhoto(BuildContext context) async {
-    final result = await FilePicker.platform.pickFiles(
-      type: FileType.image,
-      allowMultiple: false,
-      withData: true,
-    );
-    if (result == null || result.files.isEmpty) return;
-    final pickedFile = result.files.single;
-    final bytes = pickedFile.bytes;
+    final bytes = await _pickPhotoBytes(context);
     if (bytes == null || bytes.isEmpty) return;
 
     final userId = SupaFlow.client.auth.currentUser?.id;
@@ -230,33 +273,16 @@ class ProfilePhotoGrid extends StatelessWidget {
       orElse: () => existingUrls.length + 1,
     );
 
-    final createDataTime = DateTime.now().millisecondsSinceEpoch.toString();
-    final storagePath = '$userId/$createDataTime';
-    final storageBucket = SupaFlow.client.storage.from('user_photos');
-    var uploadedUrl = '';
-
     try {
-      await storageBucket.uploadBinary(
-        storagePath,
-        bytes,
-      );
-      uploadedUrl = SupaFlow.publicPhotoUrl(storagePath);
-      if (uploadedUrl.trim().isEmpty) {
-        await storageBucket.remove([storagePath]);
-        throw Exception('Uploaded photo URL is empty');
-      }
-      try {
-        await SupaFlow.client.from('user_photos').insert({
-          'user_id': userId,
-          'position': nextSlot,
-          'photo_url': storagePath,
-          'slot': nextSlot,
-          'order': nextSlot,
-        });
-      } catch (error) {
-        await storageBucket.remove([storagePath]);
-        rethrow;
-      }
+      final storagePath = await _uploadBytesToStorage(bytes);
+      if (storagePath == null) return;
+      await SupaFlow.client.from('user_photos').insert({
+        'user_id': userId,
+        'position': nextSlot,
+        'photo_url': storagePath,
+        'slot': nextSlot,
+        'order': nextSlot,
+      });
       await _refreshGrid(userId);
     } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(

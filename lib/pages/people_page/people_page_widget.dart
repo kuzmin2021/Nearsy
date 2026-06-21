@@ -1,11 +1,14 @@
 import 'dart:math' as math;
 
 import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/match_celebration_overlay.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_swipeable_stack.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
+import '/backend/supabase/supabase.dart';
 import '/services/profile/profile_localization.dart';
+import '/pages/matches_page/matches_page_widget.dart' show MatchesPageWidget;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
@@ -33,6 +36,19 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
     super.initState();
     _model = createModel(context, () => PeoplePageModel());
     _model.onStateChanged = () => safeSetState(() {});
+    _model.onMatchFound = (userId, name, photoUrl) {
+      final myProfile = SupaFlow.client.auth.currentUser;
+      final myPhoto = myProfile?.userMetadata?['avatar_url']?.toString() ?? '';
+      showMatchCelebration(
+        context,
+        myPhotoUrl: myPhoto,
+        theirPhotoUrl: photoUrl,
+        theirName: name,
+        onSayHello: () {
+          context.pushNamed(MatchesPageWidget.routeName);
+        },
+      );
+    };
   }
 
   @override

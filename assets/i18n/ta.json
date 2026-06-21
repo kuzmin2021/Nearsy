@@ -36,6 +36,10 @@
     "all_3": "அனைத்தும் 3",
     "filter_matches_0": "வடிப்பான் பொருத்தம் 0",
     "outside_3": "வெளியே 3",
+    "all_filter": "அனைத்தும்",
+    "matches_filter": "பொருந்தியவை",
+    "outside_filter": "வெளியே",
+    "empty": "இன்னும் லைக் இல்லை",
     "tab_label": "உங்களை விரும்பினர்"
   },
   "matches": {

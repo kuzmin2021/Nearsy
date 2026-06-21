@@ -36,6 +36,10 @@
     "all_3": "Todos os 3",
     "filter_matches_0": "Filtro corresponde a 0",
     "outside_3": "Fora 3",
+    "all_filter": "Todos",
+    "matches_filter": "Correspondências",
+    "outside_filter": "Fora",
+    "empty": "Nenhum like ainda",
     "tab_label": "Gostei de você"
   },
   "matches": {
