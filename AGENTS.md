@@ -18,7 +18,7 @@ This is a Flutter mobile/web app generated from FlutterFlow and customized with 
 Use `--dart-define` for runtime configuration, for example:
 
 ```bash
-flutter run --dart-define=SUPABASE_URL=http://2.26.64.30:8000 --dart-define=SUPABASE_ANON_KEY=sb_publishable_xxx
+flutter run --dart-define=SUPABASE_URL=http://thecashcow.xyz:8000 --dart-define=SUPABASE_ANON_KEY=sb_publishable_xxx
 ```
 
 ## Coding Style & Naming Conventions

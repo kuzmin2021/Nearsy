@@ -5,10 +5,10 @@ class AppConfig {
   static String get supabaseUrl {
     const envUrl = String.fromEnvironment(
       'SUPABASE_URL',
-      defaultValue: 'http://2.26.64.30:8000',
+      defaultValue: 'http://thecashcow.xyz:8000',
     );
 
-    if (envUrl != 'http://2.26.64.30:8000') {
+    if (envUrl != 'http://thecashcow.xyz:8000') {
       return envUrl;
     }
 
