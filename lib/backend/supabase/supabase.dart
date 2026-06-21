@@ -1,4 +1,5 @@
-﻿import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
+﻿import 'package:flutter/foundation.dart';
+import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
 
 import '/core/config/app_config.dart';
 
@@ -52,14 +53,19 @@ class SupaFlow {
     return Uri.decodeComponent(encodedPath);
   }
 
-  static Future initialize() => Supabase.initialize(
-        url: AppConfig.supabaseUrl,
-        headers: {
-          'X-Client-Info': 'flutterflow',
-        },
-        anonKey: AppConfig.supabaseAnonKey,
-        debug: false,
-        authOptions:
-            FlutterAuthClientOptions(authFlowType: AuthFlowType.implicit),
-      );
+  static Future initialize() {
+    final url = AppConfig.supabaseUrl;
+    debugPrint('Supabase URL: $url');
+
+    return Supabase.initialize(
+      url: url,
+      headers: {
+        'X-Client-Info': 'flutterflow',
+      },
+      anonKey: AppConfig.supabaseAnonKey,
+      debug: false,
+      authOptions:
+          FlutterAuthClientOptions(authFlowType: AuthFlowType.implicit),
+    );
+  }
 }
