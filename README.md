@@ -1,4 +1,4 @@
-# Lookaround MVP (Nearsy)
+# Nearsy
 
 Tinder-подобное мобильное приложение для знакомств. «Meet near. Keep it easy.»
 
