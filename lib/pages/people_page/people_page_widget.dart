@@ -174,7 +174,7 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
 
   Widget _topHeader(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(23, 12, 23, 12),
+      padding: const EdgeInsetsDirectional.fromSTEB(23, 36, 23, 12),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
