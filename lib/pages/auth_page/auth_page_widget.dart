@@ -163,52 +163,26 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                       right: 32.0,
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.favorite_border,
-                                color: FloterTheme.of(context).primary,
-                                size: 62.0,
-                              ),
-                              Flexible(
-                                child: Text(
-                                  labels.get('auth.nearsy'),
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: FloterTheme.of(context)
-                                      .headlineMedium
-                                      .override(
-                                        font: GoogleFonts.interTight(
-                                          fontWeight: FontWeight.w700,
-                                        ),
-                                        color: FloterTheme.of(context).primary,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                ),
-                              ),
-                            ].divide(const SizedBox(width: 12.0)),
+                          Image.asset(
+                            'assets/images/nearsy_logo.png',
+                            width: constraints.maxWidth * 0.65,
+                            fit: BoxFit.contain,
                           ),
                           Text(
                             labels.get('auth.meet_near_keep_it_easy'),
                             textAlign: TextAlign.center,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
-                            style: FloterTheme.of(context).titleLarge.override(
-                                  font: GoogleFonts.interTight(
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                  color: FloterTheme.of(context).primaryText,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w600,
-                                ),
+                            style: GoogleFonts.inter(
+                              color: const Color(0xFF000000),
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              letterSpacing: 0.0,
+                            ),
                           ),
-                        ].divide(const SizedBox(height: 12.0)),
+                        ].divide(const SizedBox(height: 4.0)),
                       ),
                     ),
                     Positioned(
@@ -272,7 +246,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.inter(
                                     color: const Color(0xFF626262),
-                                    fontSize: 20.0,
+                              fontSize: 24.0,
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
