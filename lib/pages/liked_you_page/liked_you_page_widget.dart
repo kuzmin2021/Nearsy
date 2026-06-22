@@ -1,6 +1,5 @@
 import '/components/nearsy_bottom_nav_widget.dart';
 import '/components/match_celebration_overlay.dart';
-import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
@@ -254,7 +253,7 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                     children: [
                       Row(
                         mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Row(
@@ -289,21 +288,6 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                     ),
                               ),
                             ].divide(const SizedBox(width: 4.0)),
-                          ),
-                          FloterIconButton(
-                            borderRadius: 8.0,
-                            buttonSize: 40.0,
-                            fillColor:
-                                FloterTheme.of(context).primaryBackground,
-                            icon: Icon(
-                              Icons.tune,
-                              color: FloterTheme.of(context).primaryText,
-                              size: 22.0,
-                            ),
-                            onPressed: () async {
-                              context.pushNamed(
-                                  SearchPreferencesPageWidget.routeName);
-                            },
                           ),
                         ],
                       ),

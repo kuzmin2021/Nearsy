@@ -508,50 +508,42 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    25.0, 0.0, 0.0, 0.0),
-                                child: Container(
-                                  child: Container(
-                                    child: Text(
-                                      AppLabels.of(context).get(
-                                        'profile.title' /* Profile */,
-                                      ),
-                                      style: FloterTheme.of(context)
-                                          .titleLarge
-                                          .override(
-                                            font: GoogleFonts.interTight(
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .titleLarge
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .titleLarge
-                                                  .fontStyle,
-                                            ),
-                                            color:
-                                                FloterTheme.of(context).primary,
-                                            letterSpacing: 0.0,
-                                            fontWeight: FloterTheme.of(context)
+                              Text(
+                                AppLabels.of(context).get(
+                                  'profile.title' /* Profile */,
+                                ),
+                                style: FloterTheme.of(context)
+                                    .titleLarge
+                                    .override(
+                                      font: GoogleFonts.interTight(
+                                        fontWeight:
+                                            FloterTheme.of(context)
                                                 .titleLarge
                                                 .fontWeight,
-                                            fontStyle: FloterTheme.of(context)
-                                                .titleLarge
-                                                .fontStyle,
-                                          ),
+                                        fontStyle: FloterTheme.of(context)
+                                            .titleLarge
+                                            .fontStyle,
+                                      ),
+                                      color:
+                                          FloterTheme.of(context).primary,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FloterTheme.of(context)
+                                          .titleLarge
+                                          .fontWeight,
+                                      fontStyle: FloterTheme.of(context)
+                                          .titleLarge
+                                          .fontStyle,
                                     ),
-                                  ),
-                                ),
                               ),
                               FloterIconButton(
                                 borderRadius: 8.0,
                                 buttonSize: 54.0,
                                 fillColor:
                                     FloterTheme.of(context).primaryBackground,
-                                icon: Icon(
-                                  Icons.settings,
+                               icon: Icon(
+                                  Icons.tune,
                                   color: FloterTheme.of(context).primaryText,
-                                  size: 38.0,
+                                  size: 22.0,
                                 ),
                                 onPressed: () {
                                   context.pushNamed(

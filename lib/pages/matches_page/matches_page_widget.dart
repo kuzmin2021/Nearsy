@@ -54,7 +54,7 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
           children: [
             Expanded(
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(48, 36, 23, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(23, 36, 23, 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -123,13 +123,13 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
         ),
         FloterIconButton(
           borderRadius: 8,
-          buttonSize: 64,
+          buttonSize: 40,
           fillColor: theme.primaryBackground,
-          icon: Icon(
-            Icons.settings,
-            color: theme.primaryText,
-            size: 28,
-          ),
+            icon: Icon(
+              Icons.tune,
+              color: theme.primaryText,
+              size: 22,
+            ),
             onPressed: () async {
             await context.pushNamed('ChatPreferencesPage');
           },

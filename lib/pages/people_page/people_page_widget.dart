@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import '/components/nearsy_bottom_nav_widget.dart';
 import '/components/match_celebration_overlay.dart';
+import '/floter/floter_icon_button.dart';
 import '/floter/floter_swipeable_stack.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -173,7 +174,7 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
 
   Widget _topHeader(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(32, 36, 23, 12),
+      padding: const EdgeInsetsDirectional.fromSTEB(23, 36, 23, 12),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -187,17 +188,19 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
               fontWeight: FontWeight.w700,
             ),
           ),
-          GestureDetector(
-            onTap: () async {
+          FloterIconButton(
+            borderRadius: 8,
+            buttonSize: 40,
+            fillColor: FloterTheme.of(context).primaryBackground,
+            icon: Icon(
+              Icons.tune,
+              color: FloterTheme.of(context).primaryText,
+              size: 22,
+            ),
+            onPressed: () async {
               await context.pushNamed('SearchPreferencesPage');
               _model.refreshProfiles();
             },
-            child: Image.asset(
-              'assets/images/settings_icon.png',
-              width: 64,
-              height: 64,
-              fit: BoxFit.contain,
-            ),
           ),
         ],
       ),
