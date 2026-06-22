@@ -1,28 +1,35 @@
-﻿import 'package:provider/provider.dart';
-import 'package:flutter/material.dart';
+﻿import 'dart:async';
+import 'dart:io';
 import 'dart:ui' show PlatformDispatcher;
 
+import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
-import 'auth/supabase_auth/supabase_user_provider.dart';
 import 'auth/supabase_auth/auth_util.dart';
-
+import 'auth/supabase_auth/supabase_user_provider.dart';
 import '/backend/supabase/supabase.dart';
+import '/core/config/app_config.dart';
+import '/custom_code/actions/index.dart' as actions;
 import '/floter/floter_theme.dart';
+import '/services/auth_profile_service.dart';
 import '/services/i18n/app_labels.dart';
 import '/services/i18n/app_labels_delegate.dart';
 import '/services/notification_service.dart';
 import 'floter/floter_util.dart';
 import 'floter/internationalization.dart';
 import 'floter/nav/nav.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   GoogleFonts.config.allowRuntimeFetching = false;
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
+
+  final supabaseHost = Uri.parse(AppConfig.supabaseUrl).host;
+  HttpOverrides.global = _DevHttpOverrides(supabaseHost);
 
   await SupaFlow.initialize();
 
@@ -109,6 +116,12 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     userStream = nearsySupabaseUserStream()
       ..listen((user) {
         _appStateNotifier.update(user);
+        if (user.loggedIn) {
+          unawaited(() async {
+            await ensureCurrentUserProfile();
+            await actions.loadCurrentProfileState();
+          }());
+        }
       });
     jwtTokenStream.listen((_) {});
     Future.delayed(
@@ -194,5 +207,18 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       themeMode: _themeMode,
       routerConfig: _router,
     );
+  }
+}
+
+class _DevHttpOverrides extends HttpOverrides {
+  _DevHttpOverrides(this._trustedHost);
+  final String _trustedHost;
+
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback = (cert, host, port) {
+        return host == _trustedHost;
+      };
   }
 }
