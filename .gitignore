@@ -54,6 +54,9 @@ app.*.map.json
 /android/local_maven_repo/
 /ios/Flutter/ephemeral/
 
+# Environment
+.env
+
 # Supabase local development
 supabase/.branches/
 supabase/.temp/
