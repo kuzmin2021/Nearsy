@@ -15,7 +15,7 @@ class AppConfig {
       return 'http://10.0.2.2:54321';
     }
 
-    return 'http://thecashcow.xyz:8000';
+    return 'https://thecashcow.xyz:8000';
   }
 
   static bool get _isAndroidEmulator {
