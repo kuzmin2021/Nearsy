@@ -39,7 +39,7 @@
     "all_filter": "All",
     "matches_filter": "Filter matches",
     "outside_filter": "Outside",
-    "empty": "No likes yet",
+    "empty_title": "Nothing yet— but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "No likes yet",
     "tab_label": "People wey like you"
   },
   "matches": {

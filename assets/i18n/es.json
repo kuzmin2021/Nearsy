@@ -39,7 +39,7 @@
     "all_filter": "Todos",
     "matches_filter": "Coincidencias",
     "outside_filter": "Fuera",
-    "empty": "Aún no hay likes",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Aún no hay likes",
     "tab_label": "Te dieron like"
   },
   "matches": {

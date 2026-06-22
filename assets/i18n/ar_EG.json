@@ -39,7 +39,7 @@
     "all_filter": "الكل",
     "matches_filter": "المطابقات",
     "outside_filter": "خارج",
-    "empty": "لا توجد إعجابات بعد",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "لا توجد إعجابات بعد",
     "tab_label": "أعجبوا بك"
   },
   "matches": {

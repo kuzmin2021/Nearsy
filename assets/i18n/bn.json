@@ -39,7 +39,7 @@
     "all_filter": "সব",
     "matches_filter": "মিল",
     "outside_filter": "বাইরে",
-    "empty": "এখনও কোনো লাইক নেই",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "এখনও কোনো লাইক নেই",
     "tab_label": "আপনাকে পছন্দ করেছে"
   },
   "matches": {

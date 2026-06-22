@@ -39,7 +39,7 @@
     "all_filter": "全部",
     "matches_filter": "匹配",
     "outside_filter": "外",
-    "empty": "还没有人点赞",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "还没有人点赞",
     "tab_label": "喜欢你的人"
   },
   "matches": {

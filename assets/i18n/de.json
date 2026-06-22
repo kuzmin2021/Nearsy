@@ -39,7 +39,7 @@
     "all_filter": "Alle",
     "matches_filter": "Treffer",
     "outside_filter": "Außerhalb",
-    "empty": "Noch keine Likes",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Noch keine Likes",
     "tab_label": "Mögen dich"
   },
   "matches": {

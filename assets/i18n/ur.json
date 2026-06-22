@@ -39,7 +39,7 @@
     "all_filter": "سب",
     "matches_filter": "مماثل",
     "outside_filter": "باہر",
-    "empty": "ابھی تک کوئی لائک نہیں",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "ابھی تک کوئی لائک نہیں",
     "tab_label": "جنہیں آپ پسند آئے"
   },
   "matches": {

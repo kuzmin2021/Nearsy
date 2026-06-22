@@ -39,7 +39,7 @@
     "all_filter": "सभी",
     "matches_filter": "मिलान",
     "outside_filter": "बाहर",
-    "empty": "अभी तक कोई लाइक नहीं",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "अभी तक कोई लाइक नहीं",
     "tab_label": "जिन्होंने आपको पसंद किया"
   },
   "matches": {

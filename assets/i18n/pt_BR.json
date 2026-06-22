@@ -39,7 +39,7 @@
     "all_filter": "Todos",
     "matches_filter": "Correspondências",
     "outside_filter": "Fora",
-    "empty": "Nenhum like ainda",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Nenhum like ainda",
     "tab_label": "Gostei de você"
   },
   "matches": {

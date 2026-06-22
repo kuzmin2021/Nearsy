@@ -354,18 +354,31 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
     }
 
     if (_model.profiles.isEmpty) {
-      return Center(
-        child: Text(
-          AppLabels.of(context).get('liked_you.empty'),
-          style: FloterTheme.of(context).bodyMedium.override(
-                font: GoogleFonts.inter(
-                  fontWeight:
-                      FloterTheme.of(context).bodyMedium.fontWeight,
-                  fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                ),
-                color: FloterTheme.of(context).secondaryText,
-                letterSpacing: 0.0,
+      return Padding(
+        padding: const EdgeInsetsDirectional.fromSTEB(18, 40, 18, 0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              AppLabels.of(context).get('liked_you.empty_title'),
+              style: GoogleFonts.inter(
+                color: FloterTheme.of(context).primaryText,
+                fontSize: 21,
+                fontWeight: FontWeight.w600,
               ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              AppLabels.of(context).get('liked_you.empty_body'),
+              style: GoogleFonts.inter(
+                color: FloterTheme.of(context).primaryText,
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                height: 1.4,
+              ),
+            ),
+          ],
         ),
       );
     }

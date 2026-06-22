@@ -39,7 +39,7 @@
     "all_filter": "Semua",
     "matches_filter": "Cocok",
     "outside_filter": "Di luar",
-    "empty": "Belum ada suka",
+    "empty_title": "Nothing yet— but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Belum ada suka",
     "tab_label": "Menyukai Anda"
   },
   "matches": {

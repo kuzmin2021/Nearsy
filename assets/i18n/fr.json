@@ -39,7 +39,7 @@
     "all_filter": "Tous",
     "matches_filter": "Correspondances",
     "outside_filter": "Hors",
-    "empty": "Pas encore de likes",
+    "empty_title": "Nothing yet— but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Pas encore de likes",
     "tab_label": "Vous aiment"
   },
   "matches": {

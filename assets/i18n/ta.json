@@ -39,7 +39,7 @@
     "all_filter": "அனைத்தும்",
     "matches_filter": "பொருந்தியவை",
     "outside_filter": "வெளியே",
-    "empty": "இன்னும் லைக் இல்லை",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "இன்னும் லைக் இல்லை",
     "tab_label": "உங்களை விரும்பினர்"
   },
   "matches": {
