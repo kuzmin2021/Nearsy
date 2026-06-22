@@ -45,40 +45,38 @@ class _NearsyBottomNavWidgetState extends State<NearsyBottomNavWidget> {
 
   Widget _navIcon(String tab, String prefix, double size) {
     final isActive = widget.activeTab == tab;
-    return Container(
-      width: 72.0,
-      height: 58.0,
-      alignment: AlignmentDirectional(0.0, 0.0),
-      child: Image.asset(
-        isActive
-            ? 'assets/images/${prefix}_active.png'
-            : 'assets/images/${prefix}_inactive.png',
-        width: size,
-        height: size,
-      ),
+    return Image.asset(
+      isActive
+          ? 'assets/images/${prefix}_active.png'
+          : 'assets/images/${prefix}_inactive.png',
+      width: size,
+      height: size,
     );
   }
 
   Widget _navLabel(String i18nKey, {bool isActive = false}) {
-    return Container(
-      width: 64.0,
-      padding: const EdgeInsets.only(top: 2),
-      alignment: AlignmentDirectional(0.0, 1.0),
-      child: Text(
-        AppLabels.of(context).get(i18nKey),
-        textAlign: TextAlign.center,
-        maxLines: 1,
-        style: FloterTheme.of(context).bodySmall.override(
-              font: GoogleFonts.inter(
+    return Transform.translate(
+      offset: const Offset(0, -10),
+      child: Container(
+        width: 64.0,
+        padding: const EdgeInsets.only(top: 2, bottom: 3),
+        alignment: AlignmentDirectional(0.0, 1.0),
+        child: Text(
+          AppLabels.of(context).get(i18nKey),
+          textAlign: TextAlign.center,
+          maxLines: 1,
+          style: FloterTheme.of(context).bodySmall.override(
+                font: GoogleFonts.inter(
+                  fontWeight: isActive ? FontWeight.w700 : (FloterTheme.of(context).bodySmall.fontWeight ?? FontWeight.w400),
+                  fontStyle: FloterTheme.of(context).bodySmall.fontStyle,
+                ),
+                color: FloterTheme.of(context).primaryText,
+                letterSpacing: 0.0,
                 fontWeight: isActive ? FontWeight.w700 : (FloterTheme.of(context).bodySmall.fontWeight ?? FontWeight.w400),
                 fontStyle: FloterTheme.of(context).bodySmall.fontStyle,
               ),
-              color: FloterTheme.of(context).primaryText,
-              letterSpacing: 0.0,
-              fontWeight: isActive ? FontWeight.w700 : (FloterTheme.of(context).bodySmall.fontWeight ?? FontWeight.w400),
-              fontStyle: FloterTheme.of(context).bodySmall.fontStyle,
-            ),
-        overflow: TextOverflow.ellipsis,
+          overflow: TextOverflow.ellipsis,
+        ),
       ),
     );
   }
@@ -111,17 +109,10 @@ class _NearsyBottomNavWidgetState extends State<NearsyBottomNavWidget> {
             height: 72.0,
             child: Stack(
               alignment: AlignmentDirectional(0.0, 0.0),
-              children: [
-                Container(
-                  width: 72.0,
-                  height: 72.0,
+               children: [
+                Align(
                   alignment: AlignmentDirectional(0.0, -1.0),
-                  child: Container(
-                    width: iconWidth,
-                    height: 58.0,
-                    alignment: AlignmentDirectional(0.0, 0.0),
-                    child: _navIcon(tab, prefix, iconSize),
-                  ),
+                  child: _navIcon(tab, prefix, iconSize),
                 ),
                 _navLabel(i18nKey, isActive: widget.activeTab == tab),
               ],
