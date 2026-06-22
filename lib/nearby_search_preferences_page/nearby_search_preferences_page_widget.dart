@@ -2,13 +2,11 @@ import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'nearby_search_preferences_page_model.dart';
 export 'nearby_search_preferences_page_model.dart';
 
-/// Figma visibility mode preferences for nearby discovery.
 class NearbySearchPreferencesPageWidget extends StatefulWidget {
   const NearbySearchPreferencesPageWidget({super.key});
 
@@ -29,18 +27,22 @@ class _NearbySearchPreferencesPageWidgetState
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => NearbySearchPreferencesPageModel());
+    _model =
+        createModel(context, () => NearbySearchPreferencesPageModel());
+    _model.onStateChanged = () => safeSetState(() {});
   }
 
   @override
   void dispose() {
     _model.dispose();
-
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    final theme = FloterTheme.of(context);
+    final labels = AppLabels.of(context);
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -48,11 +50,12 @@ class _NearbySearchPreferencesPageWidgetState
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FloterTheme.of(context).primaryBackground,
+        backgroundColor: theme.primaryBackground,
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(24.0, 44.0, 24.0, 28.0),
+            padding:
+                const EdgeInsetsDirectional.fromSTEB(24.0, 44.0, 24.0, 28.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -67,292 +70,228 @@ class _NearbySearchPreferencesPageWidgetState
                       FloterIconButton(
                         borderRadius: 8.0,
                         buttonSize: 40.0,
-                        fillColor: FloterTheme.of(context).primaryBackground,
+                        fillColor: theme.primaryBackground,
                         icon: Icon(
-                          Icons.arrow_back,
-                          color: FloterTheme.of(context).primaryText,
+                          Icons.close,
+                          color: theme.primaryText,
                           size: 24.0,
                         ),
                         onPressed: () async {
                           context.pop();
                         },
                       ),
-                      Expanded(
-                        flex: 1,
-                        child: Text(
-                          AppLabels.of(context).get(
-                            'nearby_search_preferences.title' /* Nearby Search Preferences */,
+                      const SizedBox(width: 12.0),
+                      Text(
+                        labels.get('nearby_search_preferences.title'),
+                        style: theme.titleLarge.override(
+                          font: GoogleFonts.interTight(
+                            fontWeight: theme.titleLarge.fontWeight,
+                            fontStyle: theme.titleLarge.fontStyle,
                           ),
-                          maxLines: 2,
-                          style: FloterTheme.of(context).titleLarge.override(
-                                font: GoogleFonts.interTight(
-                                  fontWeight: FloterTheme.of(context)
-                                      .titleLarge
-                                      .fontWeight,
-                                  fontStyle: FloterTheme.of(context)
-                                      .titleLarge
-                                      .fontStyle,
-                                ),
-                                letterSpacing: 0.0,
-                                fontWeight: FloterTheme.of(context)
-                                    .titleLarge
-                                    .fontWeight,
-                                fontStyle: FloterTheme.of(context)
-                                    .titleLarge
-                                    .fontStyle,
-                              ),
+                          letterSpacing: 0.0,
+                          fontWeight: theme.titleLarge.fontWeight,
+                          fontStyle: theme.titleLarge.fontStyle,
                         ),
                       ),
-                    ].divide(SizedBox(width: 12.0)),
+                    ],
                   ),
+                  const SizedBox(height: 16.0),
                   Text(
-                    AppLabels.of(context).get(
-                      'nearby_search_preferences.choose_how_visible_your_location_is_you_can_change_this_anytime' /* Choose how visible your locati... */,
+                    labels.get(
+                      'nearby_search_preferences.choose_how_visible_your_location_is_you_can_change_this_anytime',
                     ),
-                    style: FloterTheme.of(context).bodyMedium.override(
-                          font: GoogleFonts.inter(
-                            fontWeight:
-                                FloterTheme.of(context).bodyMedium.fontWeight,
-                            fontStyle:
-                                FloterTheme.of(context).bodyMedium.fontStyle,
-                          ),
-                          letterSpacing: 0.0,
-                          fontWeight:
-                              FloterTheme.of(context).bodyMedium.fontWeight,
-                          fontStyle:
-                              FloterTheme.of(context).bodyMedium.fontStyle,
-                        ),
+                    style: theme.bodyMedium.override(
+                      font: GoogleFonts.inter(
+                        fontWeight: theme.bodyMedium.fontWeight,
+                        fontStyle: theme.bodyMedium.fontStyle,
+                      ),
+                      letterSpacing: 0.0,
+                      fontWeight: theme.bodyMedium.fontWeight,
+                      fontStyle: theme.bodyMedium.fontStyle,
+                    ),
                   ),
+                  const SizedBox(height: 16.0),
                   Text(
-                    AppLabels.of(context).get(
-                      'nearby_search_preferences.visibility_modes' /* Visibility modes: */,
+                    labels.get(
+                      'nearby_search_preferences.visibility_modes',
                     ),
-                    style: FloterTheme.of(context).titleSmall.override(
-                          font: GoogleFonts.interTight(
-                            fontWeight:
-                                FloterTheme.of(context).titleSmall.fontWeight,
-                            fontStyle:
-                                FloterTheme.of(context).titleSmall.fontStyle,
-                          ),
-                          letterSpacing: 0.0,
-                          fontWeight:
-                              FloterTheme.of(context).titleSmall.fontWeight,
-                          fontStyle:
-                              FloterTheme.of(context).titleSmall.fontStyle,
-                        ),
+                    style: theme.titleSmall.override(
+                      font: GoogleFonts.interTight(
+                        fontWeight: theme.titleSmall.fontWeight,
+                        fontStyle: theme.titleSmall.fontStyle,
+                      ),
+                      letterSpacing: 0.0,
+                      fontWeight: theme.titleSmall.fontWeight,
+                      fontStyle: theme.titleSmall.fontStyle,
+                    ),
                   ),
+                  const SizedBox(height: 16.0),
                   Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Expanded(
-                        flex: 1,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 54.0,
-                              height: 54.0,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(27.0),
-                                border: Border.all(
-                                  color: FloterTheme.of(context).primary,
-                                  width: 4.0,
-                                ),
-                              ),
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: Icon(
-                                Icons.location_off,
-                                color: FloterTheme.of(context).secondary,
-                                size: 24.0,
-                              ),
-                            ),
-                            Text(
-                              AppLabels.of(context).get(
-                                'nearby_search_preferences.invisible' /* Invisible */,
-                              ),
-                              textAlign: TextAlign.center,
-                              maxLines: 3,
-                              style: FloterTheme.of(context).bodySmall.override(
-                                    font: GoogleFonts.inter(
-                                      fontWeight: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontStyle,
-                                  ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ].divide(SizedBox(height: 6.0)),
-                        ),
+                      _buildModeOption(
+                        context,
+                        icon: Icons.location_off,
+                        label: labels.get(
+                            'nearby_search_preferences.invisible'),
+                        isSelected: _model.selectedMode ==
+                            NearbySearchPreferencesPageModel.invisibleValue,
+                        onTap: () {
+                          setState(() {
+                            _model.selectedMode =
+                                NearbySearchPreferencesPageModel
+                                    .invisibleValue;
+                          });
+                        },
                       ),
-                      Expanded(
-                        flex: 1,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 54.0,
-                              height: 54.0,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(27.0),
-                                border: Border.all(
-                                  color: FloterTheme.of(context).alternate,
-                                  width: 4.0,
-                                ),
-                              ),
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: Icon(
-                                Icons.near_me,
-                                color: FloterTheme.of(context).secondaryText,
-                                size: 24.0,
-                              ),
-                            ),
-                            Text(
-                              AppLabels.of(context).get(
-                                'nearby_search_preferences.visible_while_using_the_app' /* Visible while using the app */,
-                              ),
-                              textAlign: TextAlign.center,
-                              maxLines: 3,
-                              style: FloterTheme.of(context).bodySmall.override(
-                                    font: GoogleFonts.inter(
-                                      fontWeight: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontStyle,
-                                  ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ].divide(SizedBox(height: 6.0)),
+                      _buildModeOption(
+                        context,
+                        icon: Icons.near_me,
+                        label: labels.get(
+                          'nearby_search_preferences.visible_while_using_the_app',
                         ),
+                        isSelected: _model.selectedMode ==
+                            NearbySearchPreferencesPageModel.visibleValue,
+                        onTap: () {
+                          setState(() {
+                            _model.selectedMode =
+                                NearbySearchPreferencesPageModel.visibleValue;
+                          });
+                        },
                       ),
-                      Expanded(
-                        flex: 1,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 54.0,
-                              height: 54.0,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(27.0),
-                                border: Border.all(
-                                  color: FloterTheme.of(context).alternate,
-                                  width: 4.0,
-                                ),
-                              ),
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: Icon(
-                                Icons.my_location,
-                                color: FloterTheme.of(context).secondaryText,
-                                size: 24.0,
-                              ),
-                            ),
-                            Text(
-                              AppLabels.of(context).get(
-                                'nearby_search_preferences.your_last_location' /* Your last location */,
-                              ),
-                              textAlign: TextAlign.center,
-                              maxLines: 3,
-                              style: FloterTheme.of(context).bodySmall.override(
-                                    font: GoogleFonts.inter(
-                                      fontWeight: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontWeight,
-                                      fontStyle: FloterTheme.of(context)
-                                          .bodySmall
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontWeight,
-                                    fontStyle: FloterTheme.of(context)
-                                        .bodySmall
-                                        .fontStyle,
-                                  ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ].divide(SizedBox(height: 6.0)),
+                      _buildModeOption(
+                        context,
+                        icon: Icons.my_location,
+                        label: labels.get(
+                          'nearby_search_preferences.your_last_location',
                         ),
+                        isSelected: _model.selectedMode ==
+                            NearbySearchPreferencesPageModel.visibleValue,
+                        onTap: () {
+                          setState(() {
+                            _model.selectedMode =
+                                NearbySearchPreferencesPageModel.visibleValue;
+                          });
+                        },
                       ),
                     ],
                   ),
+                  const SizedBox(height: 16.0),
                   Text(
-                    AppLabels.of(context).get(
-                      'nearby_search_preferences.you_appear_as_local_guboshlyopsk_zabuldogovo' /* You appear as: Local Guboshlyo... */,
-                    ),
-                    style: TextStyle(),
+                    () {
+                      final loc = _model.locationLabel;
+                      if (loc.isNotEmpty) {
+                        return labels.get(
+                      'nearby_search_preferences.you_appear_as_local',
+                    ).replaceAll('{location}', _model.locationLabel);
+                      }
+                      return labels.get(
+                        'nearby_search_preferences.you_appear_as_local_guboshlyopsk_zabuldogovo',
+                      );
+                    }(),
+                    style: const TextStyle(),
                   ),
+                  const SizedBox(height: 16.0),
                   Text(
-                    AppLabels.of(context).get(
-                      'nearby_search_preferences.to_update_your_status_go_to_profile_settings_location' /* To update your status, go to P... */,
+                    labels.get(
+                      'nearby_search_preferences.to_update_your_status_go_to_profile_settings_location',
                     ),
-                    style: FloterTheme.of(context).bodyMedium.override(
-                          font: GoogleFonts.inter(
-                            fontWeight:
-                                FloterTheme.of(context).bodyMedium.fontWeight,
-                            fontStyle:
-                                FloterTheme.of(context).bodyMedium.fontStyle,
-                          ),
-                          color: FloterTheme.of(context).primary,
-                          letterSpacing: 0.0,
-                          fontWeight:
-                              FloterTheme.of(context).bodyMedium.fontWeight,
-                          fontStyle:
-                              FloterTheme.of(context).bodyMedium.fontStyle,
-                        ),
+                    style: theme.bodyMedium.override(
+                      font: GoogleFonts.inter(
+                        fontWeight: theme.bodyMedium.fontWeight,
+                        fontStyle: theme.bodyMedium.fontStyle,
+                      ),
+                      color: theme.primary,
+                      letterSpacing: 0.0,
+                      fontWeight: theme.bodyMedium.fontWeight,
+                      fontStyle: theme.bodyMedium.fontStyle,
+                    ),
                   ),
+                  const SizedBox(height: 16.0),
                   FTButtonWidget(
                     onPressed: () async {
+                      await _model.saveVisibilityMode();
                       context.pop();
                     },
-                    text: AppLabels.of(context).get(
-                      'nearby_search_preferences.save_visibility' /* Save visibility */,
+                    text: labels.get(
+                      'nearby_search_preferences.save_visibility',
                     ),
                     options: FTButtonOptions(
                       width: double.infinity,
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FloterTheme.of(context).primary,
-                      textStyle: TextStyle(
-                        color: FloterTheme.of(context).primaryBackground,
-                      ),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 0.0, 0.0, 0.0),
+                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 0.0, 0.0, 0.0),
+                      color: theme.primary,
+                      textStyle: TextStyle(color: theme.primaryBackground),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
-                ].divide(SizedBox(height: 16.0)),
+                ],
               ),
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildModeOption(
+    BuildContext context, {
+    required IconData icon,
+    required String label,
+    required bool isSelected,
+    required VoidCallback onTap,
+  }) {
+    final theme = FloterTheme.of(context);
+    final borderColor = isSelected ? theme.primary : theme.alternate;
+    final iconColor = isSelected ? theme.primary : theme.secondaryText;
+
+    return Expanded(
+      flex: 1,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: 54.0,
+              height: 54.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(27.0),
+                border: Border.all(
+                  color: borderColor,
+                  width: 4.0,
+                ),
+              ),
+              alignment: const AlignmentDirectional(0.0, 0.0),
+              child: Icon(
+                icon,
+                color: iconColor,
+                size: 24.0,
+              ),
+            ),
+            const SizedBox(height: 6.0),
+            Text(
+              label,
+              textAlign: TextAlign.center,
+              maxLines: 3,
+              style: theme.bodySmall.override(
+                font: GoogleFonts.inter(
+                  fontWeight: theme.bodySmall.fontWeight,
+                  fontStyle: theme.bodySmall.fontStyle,
+                ),
+                letterSpacing: 0.0,
+                fontWeight: theme.bodySmall.fontWeight,
+                fontStyle: theme.bodySmall.fontStyle,
+              ),
+              overflow: TextOverflow.ellipsis,
+            ),
+          ],
         ),
       ),
     );
