@@ -378,6 +378,35 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                 height: 1.4,
               ),
             ),
+            const SizedBox(height: 36),
+            GestureDetector(
+              onTap: () async {
+                context.pushNamed('SearchPreferencesPage');
+              },
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 10,
+                ),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFB6B8BA),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      AppLabels.of(context).get('nearby.filters'),
+                      style: GoogleFonts.inter(
+                        color: FloterTheme.of(context).primaryText,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       );
