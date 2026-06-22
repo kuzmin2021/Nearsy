@@ -132,7 +132,9 @@
     "visible_while_using_the_app": "Отображается во время использования приложения.",
     "your_last_location": "Ваше последнее местоположение",
     "to_update_your_status_go_to_profile_settings_location": "Чтобы обновить свой статус, перейдите в «Настройки профиля» > «Местоположение».",
-    "save_visibility": "Сохранить видимость"
+    "save_visibility": "Сохранить видимость",
+    "you_appear_as_local_guboshlyopsk_zabuldogovo": "Вы отображаетесь как: местный житель Губошлёпск Забулдыгово",
+    "you_appear_as_local": "Вы отображаетесь как: местный житель {location}"
   },
   "chat_preferences": {
     "title": "Настройки чата",
@@ -268,7 +270,14 @@
     "title": "Рядом",
     "filters": "Фильтры",
     "visibility": "Видимость",
-    "tab_label": "Рядом"
+    "tab_label": "Рядом",
+    "visible_near": "Виден в районе {location}",
+    "hidden": "Скрыт",
+    "discoverable_description": "Ваш профиль виден людям в радиусе 25 км. Вы можете изменить видимость или фильтры в любое время.",
+    "hidden_description": "Ваш профиль не отображается во вкладке «Рядом». Измените видимость, чтобы появиться здесь.",
+    "no_one_nearby": "Пока никого рядом нет",
+    "retry": "Повторить",
+    "unknown_location": "Не указано"
   },
   "email_auth": {
     "sign_in_with_email": "Войти с помощью электронной почты",

@@ -141,7 +141,9 @@
     "visible_while_using_the_app": "Visible while using the app",
     "your_last_location": "Your last location",
     "to_update_your_status_go_to_profile_settings_location": "To update your status, go to Profile Settings > Location.",
-    "save_visibility": "Save visibility"
+    "save_visibility": "Save visibility",
+    "you_appear_as_local_guboshlyopsk_zabuldogovo": "You appear as: Local Guboshlyopsk Zabuldogovo",
+    "you_appear_as_local": "You appear as: Local {location}"
   },
   "chat_preferences": {
     "title": "Chat Preferences",
@@ -277,7 +279,14 @@
     "title": "Nearby",
     "filters": "Filters",
     "visibility": "Visibility",
-    "tab_label": "Nearby"
+    "tab_label": "Nearby",
+    "visible_near": "Visible near {location}",
+    "hidden": "Hidden",
+    "discoverable_description": "Your profile is discoverable by people within 25 km. Adjust visibility or filters anytime.",
+    "hidden_description": "Your profile is not visible in Nearby. Change visibility to appear here.",
+    "no_one_nearby": "No one nearby yet",
+    "retry": "Retry",
+    "unknown_location": "Unknown location"
   },
   "email_auth": {
     "sign_in_with_email": "Sign in with email",
