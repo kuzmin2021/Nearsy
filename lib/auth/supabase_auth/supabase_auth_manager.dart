@@ -1,5 +1,6 @@
 ﻿import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '/auth/auth_manager.dart';
 import '/backend/supabase/supabase.dart';
@@ -10,7 +11,8 @@ import 'supabase_user_provider.dart';
 
 export '/auth/base_auth_user_provider.dart';
 
-class SupabaseAuthManager extends AuthManager with EmailSignInManager {
+class SupabaseAuthManager extends AuthManager
+    with EmailSignInManager, GoogleSignInManager, AppleSignInManager {
   @override
   Future signOut() {
     return SupaFlow.client.auth.signOut();
@@ -120,6 +122,47 @@ class SupabaseAuthManager extends AuthManager with EmailSignInManager {
         context,
         () => emailCreateAccountFunc(email, password),
       );
+
+  @override
+  Future<BaseAuthUser?> signInWithGoogle(BuildContext context) =>
+      _signInWithOAuth(context, OAuthProvider.google);
+
+  @override
+  Future<BaseAuthUser?> signInWithApple(BuildContext context) =>
+      _signInWithOAuth(context, OAuthProvider.apple);
+
+  Future<BaseAuthUser?> _signInWithOAuth(
+    BuildContext context,
+    OAuthProvider provider,
+  ) async {
+    try {
+      final launched = await SupaFlow.client.auth.signInWithOAuth(
+        provider,
+        redirectTo: kIsWeb ? Uri.base.origin : 'nearsy://nearsy.com',
+      );
+      if (!launched) {
+        ScaffoldMessenger.of(context).hideCurrentSnackBar();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Could not start social sign in.')),
+        );
+        return null;
+      }
+
+      final user = SupaFlow.client.auth.currentUser;
+      final authUser = user == null ? null : NearsySupabaseUser(user);
+      if (authUser != null) {
+        currentUser = authUser;
+        AppStateNotifier.instance.update(authUser);
+      }
+      return authUser;
+    } on AuthException catch (e) {
+      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error: ${e.message!}')),
+      );
+      return null;
+    }
+  }
 
   /// Tries to sign in or create an account using Supabase Auth.
   /// Returns the User object if sign in was successful.
