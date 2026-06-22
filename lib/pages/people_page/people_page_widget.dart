@@ -2,7 +2,6 @@ import 'dart:math' as math;
 
 import '/components/nearsy_bottom_nav_widget.dart';
 import '/components/match_celebration_overlay.dart';
-import '/floter/floter_icon_button.dart';
 import '/floter/floter_swipeable_stack.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -180,27 +179,25 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ExcludeSemantics(
-            child: Image.asset(
-              'assets/images/nearsy_logo.png',
-              width: 124,
-              height: 36,
-              fit: BoxFit.contain,
+          Text(
+            AppLabels.of(context).get('people.title'),
+            style: GoogleFonts.inter(
+              color: const Color(0xFF9400D3),
+              fontSize: 24,
+              fontWeight: FontWeight.w700,
             ),
           ),
-          FloterIconButton(
-            borderRadius: 8,
-            buttonSize: 64,
-            fillColor: FloterTheme.of(context).primaryBackground,
-            icon: Icon(
-              Icons.settings,
-              color: FloterTheme.of(context).primaryText,
-              size: 28,
-            ),
-            onPressed: () async {
+          GestureDetector(
+            onTap: () async {
               await context.pushNamed('SearchPreferencesPage');
               _model.refreshProfiles();
             },
+            child: Image.asset(
+              'assets/images/settings_icon.png',
+              width: 64,
+              height: 64,
+              fit: BoxFit.contain,
+            ),
           ),
         ],
       ),
