@@ -53,11 +53,23 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
         child: Column(
           children: [
             Expanded(
-              child: _model.isLoading
-                  ? const Center(child: CircularProgressIndicator())
-                  : _model.conversations.isEmpty
-                      ? _buildEmptyState(context, theme)
-                      : _buildConversationList(context, theme),
+              child: Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(48, 36, 23, 0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    _buildHeader(context, theme),
+                    const SizedBox(height: 24),
+                    Expanded(
+                      child: _model.isLoading
+                          ? const Center(child: CircularProgressIndicator())
+                          : _model.conversations.isEmpty
+                              ? _buildEmptyState(context, theme)
+                              : _buildConversationList(context),
+                    ),
+                  ],
+                ),
+              ),
             ),
             wrapWithModel(
               model: _model.nearsyBottomNavModel,
@@ -87,24 +99,12 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
     );
   }
 
-  Widget _buildConversationList(BuildContext context, dynamic theme) {
-    return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(48, 36, 23, 0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          _buildHeader(context, theme),
-          const SizedBox(height: 24),
-          Expanded(
-            child: ListView.separated(
-              itemCount: _model.conversations.length,
-              separatorBuilder: (_, __) => const SizedBox(height: 6),
-              itemBuilder: (context, index) =>
-                  _buildConversationItem(context, _model.conversations[index]),
-            ),
-          ),
-        ],
-      ),
+  Widget _buildConversationList(BuildContext context) {
+    return ListView.separated(
+      itemCount: _model.conversations.length,
+      separatorBuilder: (_, __) => const SizedBox(height: 6),
+      itemBuilder: (context, index) =>
+          _buildConversationItem(context, _model.conversations[index]),
     );
   }
 
