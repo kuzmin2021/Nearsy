@@ -1,4 +1,4 @@
-﻿import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/nearsy_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -533,9 +533,9 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
                   ),
                 ),
                 wrapWithModel(
-                  model: _model.lookaroundBottomNavModel,
+                  model: _model.nearsyBottomNavModel,
                   updateCallback: () => safeSetState(() {}),
-                  child: LookaroundBottomNavWidget(
+                  child: NearsyBottomNavWidget(
                     activeTab: 'Nearby',
                   ),
                 ),

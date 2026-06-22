@@ -1,4 +1,4 @@
-﻿import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/nearsy_bottom_nav_widget.dart';
 import '/components/match_celebration_overlay.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
@@ -331,9 +331,9 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                 ),
               ),
               wrapWithModel(
-                model: _model.lookaroundBottomNavModel,
+                model: _model.nearsyBottomNavModel,
                 updateCallback: () => safeSetState(() {}),
-                child: const LookaroundBottomNavWidget(
+                child: const NearsyBottomNavWidget(
                   activeTab: 'Liked You',
                 ),
               ),

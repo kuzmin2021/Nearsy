@@ -27,7 +27,7 @@
     "profile_alt": "Perfil"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "Pessoas"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "Repetir senha",
     "submit_button": "Atualizar senha"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "Perfil",
     "people": "Pessoas",
     "nearby": "Perto",

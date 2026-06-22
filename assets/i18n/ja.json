@@ -27,7 +27,7 @@
     "profile_alt": "プロフィール"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "人"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "パスワードを繰り返す",
     "submit_button": "パスワードを更新"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "プロフィール",
     "people": "人",
     "nearby": "近く",

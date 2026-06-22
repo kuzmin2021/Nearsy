@@ -27,7 +27,7 @@
     "profile_alt": "Profil"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "Kişiler"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "Şifreyi tekrarla",
     "submit_button": "Şifreyi güncelle"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "Profil",
     "people": "Kişiler",
     "nearby": "Yakında",

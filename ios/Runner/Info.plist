@@ -49,10 +49,10 @@
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
-        <string>lookaroundmvp.com</string>
+        <string>nearsy.com</string>
         <key>CFBundleURLSchemes</key>
         <array>
-        <string>lookaroundmvp</string>
+        <string>nearsy</string>
         </array>
         </dict>
     </array>

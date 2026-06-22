@@ -27,7 +27,7 @@
     "profile_alt": "प्रोफाइल"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "लोक"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "पासवर्डची पुनरावृत्ती करा",
     "submit_button": "पासवर्ड अपडेट करा"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "प्रोफाइल",
     "people": "लोक",
     "nearby": "जवळपास",

@@ -27,7 +27,7 @@
     "profile_alt": "個人檔案"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "人"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "重複密碼",
     "submit_button": "更新密碼"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "個人檔案",
     "people": "人",
     "nearby": "附近",

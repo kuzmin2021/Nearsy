@@ -27,7 +27,7 @@
     "profile_alt": "Профиль"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I\\",
     "title": "Люди",
     "no_more_profiles": "Пока это все",
@@ -301,7 +301,7 @@
     "repeat_password": "Повторите пароль",
     "submit_button": "Обновить пароль"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "Профиль",
     "people": "Люди",
     "nearby": "Рядом",

@@ -129,7 +129,7 @@ class SupabaseAuthManager extends AuthManager with EmailSignInManager {
   ) async {
     try {
       final user = await signInFunc();
-      final authUser = user == null ? null : LookaroundMVPSupabaseUser(user);
+      final authUser = user == null ? null : NearsySupabaseUser(user);
 
       // Update currentUser here in case user info needs to be used immediately
       // after a user is signed in. This should be handled by the user stream,

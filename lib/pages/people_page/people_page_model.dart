@@ -1,4 +1,4 @@
-import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/nearsy_bottom_nav_widget.dart';
 import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/app_state.dart';
@@ -68,20 +68,20 @@ class PeoplePageModel extends FloterModel<PeoplePageWidget> {
   List<String> swipedUserIds = [];
 
   late CardSwiperController candidateSwipeableStackController;
-  late LookaroundBottomNavModel lookaroundBottomNavModel;
+  late NearsyBottomNavModel nearsyBottomNavModel;
 
   @override
   void initState(BuildContext context) {
     candidateSwipeableStackController = CardSwiperController();
-    lookaroundBottomNavModel =
-        createModel(context, () => LookaroundBottomNavModel());
+    nearsyBottomNavModel =
+        createModel(context, () => NearsyBottomNavModel());
     _loadProfiles();
   }
 
   @override
   void dispose() {
     candidateSwipeableStackController.dispose();
-    lookaroundBottomNavModel.dispose();
+    nearsyBottomNavModel.dispose();
   }
 
   void refreshProfiles() {

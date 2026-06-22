@@ -27,7 +27,7 @@
     "profile_alt": "个人资料"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "用户"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "重复密码",
     "submit_button": "更新密码"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "个人资料",
     "people": "用户",
     "nearby": "附近",

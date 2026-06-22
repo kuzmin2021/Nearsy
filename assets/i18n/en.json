@@ -27,7 +27,7 @@
     "profile_alt": "Profile"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "People",
     "no_more_profiles": "That's everyone for now",
@@ -313,7 +313,7 @@
     "password_updated": "Password updated.",
     "save_error": "Could not update password."
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "Profile",
     "people": "People",
     "nearby": "Nearby",

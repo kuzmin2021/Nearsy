@@ -5,12 +5,12 @@ import 'package:provider/provider.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/index.dart';
-import 'lookaround_bottom_nav_model.dart';
+import 'nearsy_bottom_nav_model.dart';
 
-export 'lookaround_bottom_nav_model.dart';
+export 'nearsy_bottom_nav_model.dart';
 
-class LookaroundBottomNavWidget extends StatefulWidget {
-  const LookaroundBottomNavWidget({
+class NearsyBottomNavWidget extends StatefulWidget {
+  const NearsyBottomNavWidget({
     super.key,
     String? activeTab,
   }) : this.activeTab = activeTab ?? 'Profile';
@@ -18,12 +18,12 @@ class LookaroundBottomNavWidget extends StatefulWidget {
   final String activeTab;
 
   @override
-  State<LookaroundBottomNavWidget> createState() =>
-      _LookaroundBottomNavWidgetState();
+  State<NearsyBottomNavWidget> createState() =>
+      _NearsyBottomNavWidgetState();
 }
 
-class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
-  late LookaroundBottomNavModel _model;
+class _NearsyBottomNavWidgetState extends State<NearsyBottomNavWidget> {
+  late NearsyBottomNavModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -34,7 +34,7 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => LookaroundBottomNavModel());
+    _model = createModel(context, () => NearsyBottomNavModel());
   }
 
   @override
@@ -142,11 +142,11 @@ class _LookaroundBottomNavWidgetState extends State<LookaroundBottomNavWidget> {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _buildTab('Profile', 'icon_nav_profile', 48.0, ProfilePageWidget.routeName, 'lookaround_bottom_nav.profile'),
-          _buildTab('People', 'icon_nav_people', 48.0, PeoplePageWidget.routeName, 'lookaround_bottom_nav.people'),
-          _buildTab('Nearby', 'icon_nav_nearby', 52.0, NearbyPageWidget.routeName, 'lookaround_bottom_nav.nearby'),
-          _buildTab('Liked You', 'icon_nav_liked', 48.0, LikedYouPageWidget.routeName, 'lookaround_bottom_nav.liked_you'),
-          _buildTab('Chats', 'icon_nav_chats', 48.0, MatchesPageWidget.routeName, 'lookaround_bottom_nav.chats'),
+          _buildTab('Profile', 'icon_nav_profile', 48.0, ProfilePageWidget.routeName, 'nearsy_bottom_nav.profile'),
+          _buildTab('People', 'icon_nav_people', 48.0, PeoplePageWidget.routeName, 'nearsy_bottom_nav.people'),
+          _buildTab('Nearby', 'icon_nav_nearby', 52.0, NearbyPageWidget.routeName, 'nearsy_bottom_nav.nearby'),
+          _buildTab('Liked You', 'icon_nav_liked', 48.0, LikedYouPageWidget.routeName, 'nearsy_bottom_nav.liked_you'),
+          _buildTab('Chats', 'icon_nav_chats', 48.0, MatchesPageWidget.routeName, 'nearsy_bottom_nav.chats'),
         ],
       ),
     );

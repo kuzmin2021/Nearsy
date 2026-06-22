@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '/floter/floter_util.dart';
-import 'lookaround_bottom_nav_widget.dart' show LookaroundBottomNavWidget;
+import 'nearsy_bottom_nav_widget.dart' show NearsyBottomNavWidget;
 
-class LookaroundBottomNavModel extends FloterModel<LookaroundBottomNavWidget> {
+class NearsyBottomNavModel extends FloterModel<NearsyBottomNavWidget> {
   @override
   void initState(BuildContext context) {}
 

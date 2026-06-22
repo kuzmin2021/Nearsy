@@ -1,4 +1,4 @@
-﻿import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/nearsy_bottom_nav_widget.dart';
 import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/app_state.dart';
@@ -47,19 +47,19 @@ class LikedYouPageModel extends FloterModel<LikedYouPageWidget> {
 
   static const _pageSize = 20;
 
-  late LookaroundBottomNavModel lookaroundBottomNavModel;
+  late NearsyBottomNavModel nearsyBottomNavModel;
 
   @override
   void initState(BuildContext context) {
-    lookaroundBottomNavModel =
-        createModel(context, () => LookaroundBottomNavModel());
+    nearsyBottomNavModel =
+        createModel(context, () => NearsyBottomNavModel());
     loadLikes();
     loadCounts();
   }
 
   @override
   void dispose() {
-    lookaroundBottomNavModel.dispose();
+    nearsyBottomNavModel.dispose();
   }
 
   Future<void> loadLikes({bool append = false}) async {

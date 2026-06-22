@@ -5,8 +5,8 @@ import '../base_auth_user_provider.dart';
 
 export '../base_auth_user_provider.dart';
 
-class LookaroundMVPSupabaseUser extends BaseAuthUser {
-  LookaroundMVPSupabaseUser(this.user);
+class NearsySupabaseUser extends BaseAuthUser {
+  NearsySupabaseUser(this.user);
   User? user;
   bool get loggedIn => user != null;
 
@@ -66,7 +66,7 @@ class LookaroundMVPSupabaseUser extends BaseAuthUser {
 /// [SupaFlow.client.auth.onAuthStateChange] does not yield any values until the
 /// user is already authenticated. So we add a default null user to the stream,
 /// if we need to interact with the [currentUser] before logging in.
-Stream<BaseAuthUser> lookaroundMVPSupabaseUserStream() {
+Stream<BaseAuthUser> nearsySupabaseUserStream() {
   final supabaseAuthStream = SupaFlow.client.auth.onAuthStateChange.debounce(
       (authState) => authState.event == AuthChangeEvent.tokenRefreshed
           ? TimerStream(authState, Duration(seconds: 1))
@@ -76,7 +76,7 @@ Stream<BaseAuthUser> lookaroundMVPSupabaseUserStream() {
           : supabaseAuthStream)
       .map<BaseAuthUser>(
     (authState) {
-      currentUser = LookaroundMVPSupabaseUser(authState?.session?.user);
+      currentUser = NearsySupabaseUser(authState?.session?.user);
       return currentUser!;
     },
   );

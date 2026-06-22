@@ -1,6 +1,6 @@
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
-import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/nearsy_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -3278,9 +3278,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                   ),
                 ),
                 wrapWithModel(
-                  model: _model.lookaroundBottomNavModel,
+                  model: _model.nearsyBottomNavModel,
                   updateCallback: () => safeSetState(() {}),
-                  child: LookaroundBottomNavWidget(
+                  child: NearsyBottomNavWidget(
                     activeTab: 'Profile',
                   ),
                 ),

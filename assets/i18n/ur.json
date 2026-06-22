@@ -27,7 +27,7 @@
     "profile_alt": "پروفائل"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "لوگ"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "پاس ورڈ دہرائیں۔",
     "submit_button": "پاس ورڈ اپ ڈیٹ کریں"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "پروفائل",
     "people": "لوگ",
     "nearby": "قریب",

@@ -27,7 +27,7 @@
     "profile_alt": "الملف الشخصي"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "الأشخاص"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "كرر كلمة المرور",
     "submit_button": "تحديث كلمة المرور"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "الملف الشخصي",
     "people": "الأشخاص",
     "nearby": "بالقرب منك",

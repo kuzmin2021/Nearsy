@@ -27,7 +27,7 @@
     "profile_alt": "ప్రొఫైల్"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "వ్యక్తులు"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "పాస్వర్డ్ను పునరావృతం చేయండి",
     "submit_button": "పాస్‌వర్డ్ నవీకరించు"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "ప్రొఫైల్",
     "people": "వ్యక్తులు",
     "nearby": "దగ్గరలో",

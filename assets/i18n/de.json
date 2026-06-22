@@ -27,7 +27,7 @@
     "profile_alt": "Profil"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "Leute"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "Passwort wiederholen",
     "submit_button": "Passwort aktualisieren"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "Profil",
     "people": "Leute",
     "nearby": "In der Nähe",

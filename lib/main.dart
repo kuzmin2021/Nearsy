@@ -106,7 +106,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
-    userStream = lookaroundMVPSupabaseUserStream()
+    userStream = nearsySupabaseUserStream()
       ..listen((user) {
         _appStateNotifier.update(user);
       });
@@ -147,7 +147,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'Lookaround MVP',
+      title: 'Nearsy',
       localizationsDelegates: [
         AppLabelsDelegate(),
         GlobalMaterialLocalizations.delegate,

@@ -1,5 +1,5 @@
 import '/backend/supabase/supabase.dart';
-import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/nearsy_bottom_nav_widget.dart';
 import '/floter/floter_util.dart';
 import '/index.dart';
 import 'profile_page_widget.dart' show ProfilePageWidget;
@@ -89,13 +89,13 @@ class ProfilePageModel extends FloterModel<ProfilePageWidget> {
       profileCatchphraseFieldTextControllerValidator;
   // Stores action output result for [Backend Call - Update Row(s)] action in ProfileCatchphraseField widget.
   List<ProfilesRow>? updatedProfileCatchphraseSubmit;
-  // Model for LookaroundBottomNav.
-  late LookaroundBottomNavModel lookaroundBottomNavModel;
+  // Model for NearsyBottomNav.
+  late NearsyBottomNavModel nearsyBottomNavModel;
 
   @override
   void initState(BuildContext context) {
-    lookaroundBottomNavModel =
-        createModel(context, () => LookaroundBottomNavModel());
+    nearsyBottomNavModel =
+        createModel(context, () => NearsyBottomNavModel());
   }
 
   @override
@@ -106,6 +106,6 @@ class ProfilePageModel extends FloterModel<ProfilePageWidget> {
     profileCatchphraseFieldFocusNode?.dispose();
     profileCatchphraseFieldTextController?.dispose();
 
-    lookaroundBottomNavModel.dispose();
+    nearsyBottomNavModel.dispose();
   }
 }

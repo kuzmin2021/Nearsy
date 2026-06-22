@@ -27,7 +27,7 @@
     "profile_alt": "প্রোফাইল"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "মানুষ"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "পাসওয়ার্ড পুনরাবৃত্তি করুন",
     "submit_button": "পাসওয়ার্ড আপডেট করুন"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "প্রোফাইল",
     "people": "মানুষ",
     "nearby": "কাছাকাছি",

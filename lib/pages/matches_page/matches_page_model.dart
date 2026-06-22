@@ -1,4 +1,4 @@
-import '/components/lookaround_bottom_nav_widget.dart';
+import '/components/nearsy_bottom_nav_widget.dart';
 import '/floter/floter_util.dart';
 import '/auth/supabase_auth/auth_util.dart';
 import '/models/chat_models.dart';
@@ -14,21 +14,21 @@ class MatchesPageModel extends FloterModel<MatchesPageWidget> {
   bool isLoading = true;
   String loadError = '';
 
-  late LookaroundBottomNavModel lookaroundBottomNavModel;
+  late NearsyBottomNavModel nearsyBottomNavModel;
 
   final _chatService = ChatService();
 
   @override
   void initState(BuildContext context) {
-    lookaroundBottomNavModel =
-        createModel(context, () => LookaroundBottomNavModel());
+    nearsyBottomNavModel =
+        createModel(context, () => NearsyBottomNavModel());
     loadConversations();
   }
 
   @override
   void dispose() {
     _chatService.unsubscribe();
-    lookaroundBottomNavModel.dispose();
+    nearsyBottomNavModel.dispose();
   }
 
   Future<void> loadConversations() async {

@@ -1,4 +1,4 @@
-package com.mycompany.lookaroundmvp
+package com.mycompany.nearsy
 
 import io.flutter.embedding.android.FlutterActivity
 

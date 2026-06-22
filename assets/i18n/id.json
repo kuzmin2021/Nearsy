@@ -27,7 +27,7 @@
     "profile_alt": "Profil"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "Orang"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "Ulangi kata sandi",
     "submit_button": "Perbarui kata sandi"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "Profil",
     "people": "Orang",
     "nearby": "Terdekat",

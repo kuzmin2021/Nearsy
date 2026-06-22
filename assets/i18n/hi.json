@@ -27,7 +27,7 @@
     "profile_alt": "प्रोफ़ाइल"
   },
   "people": {
-    "lookaround": "Lookaround",
+    "nearsy": "Nearsy",
     "guess_what_i": "Guess what I",
     "title": "लोग"
   },
@@ -297,7 +297,7 @@
     "repeat_password": "पासवर्ड दोहराएँ",
     "submit_button": "पासवर्ड अपडेट करें"
   },
-  "lookaround_bottom_nav": {
+  "nearsy_bottom_nav": {
     "profile": "प्रोफ़ाइल",
     "people": "लोग",
     "nearby": "पास में",
