@@ -39,7 +39,7 @@
     "all_filter": "Todos",
     "matches_filter": "Coincidencias",
     "outside_filter": "Fuera",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Aún no hay likes",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Aún no hay likes",
     "tab_label": "Te dieron like"
   },
   "matches": {
@@ -274,7 +274,17 @@
     "repeat_password": "repetir contraseña",
     "create_account": "Crear cuenta",
     "forgot_password": "¿Olvidaste tu contraseña?",
-    "continue_button": "Continuar"
+    "continue_button": "Continuar",
+    "or_sign_up_with": "O regístrate con",
+    "or_sign_in_with": "O inicia sesión con",
+    "continue_with_google": "Continuar con Google",
+    "continue_with_apple": "Continuar con Apple",
+    "already_have_account": "¿Ya tienes una cuenta?",
+    "dont_have_account": "¿No tienes una cuenta?",
+    "sign_in_here": "Inicia sesión aquí",
+    "sign_up_here": "Regístrate aquí",
+    "enter_email": "Ingresa tu correo electrónico.",
+    "enter_password": "Ingresa tu contraseña."
   },
   "phone_auth": {
     "title": "autenticación telefónica",
@@ -387,7 +397,10 @@
     "arabic": "árabe",
     "armenian": "armenio",
     "bengali": "bengalí",
-    "catalan": "catalán",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
+    "catalan": "catalán",
+    "english": "English",
+    "russian": "Russian",
+    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "Editar email",

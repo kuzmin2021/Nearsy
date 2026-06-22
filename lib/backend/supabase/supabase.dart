@@ -1,7 +1,4 @@
-﻿import 'dart:io';
-
-import 'package:flutter/foundation.dart';
-import 'package:http/io_client.dart';
+﻿import 'package:flutter/foundation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
 
 import '/core/config/app_config.dart';
@@ -60,10 +57,6 @@ class SupaFlow {
     final url = AppConfig.supabaseUrl;
     debugPrint('Supabase URL: $url');
 
-    final host = Uri.parse(url).host;
-    final ioClient = HttpClient()
-      ..badCertificateCallback = (cert, h, port) => h == host;
-
     return Supabase.initialize(
       url: url,
       headers: {
@@ -71,7 +64,6 @@ class SupaFlow {
       },
       anonKey: AppConfig.supabaseAnonKey,
       debug: false,
-      httpClient: IOClient(ioClient),
       authOptions:
           FlutterAuthClientOptions(authFlowType: AuthFlowType.implicit),
     );

@@ -39,7 +39,7 @@
     "all_filter": "All",
     "matches_filter": "Filter matches",
     "outside_filter": "Outside",
-    "empty_title": "Nothing yet— but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "No likes yet",
+    "empty_title": "Nothing yetï¿½ but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "No likes yet",
     "tab_label": "People wey like you"
   },
   "matches": {
@@ -274,7 +274,17 @@
     "repeat_password": "Repeat password",
     "create_account": "Create account",
     "forgot_password": "Forgot password?",
-    "continue_button": "Continue"
+    "continue_button": "Continue",
+    "or_sign_up_with": "Or sign up with",
+    "or_sign_in_with": "Or sign in with",
+    "continue_with_google": "Continue with Google",
+    "continue_with_apple": "Continue with Apple",
+    "already_have_account": "You already get account?",
+    "dont_have_account": "You no get account?",
+    "sign_in_here": "Sign in here",
+    "sign_up_here": "Sign up here",
+    "enter_email": "Put your email address.",
+    "enter_password": "Put your password."
   },
   "phone_auth": {
     "title": "Phone login",
@@ -387,7 +397,10 @@
     "arabic": "Arabic",
     "armenian": "Armenian",
     "bengali": "Bengali",
-    "catalan": "Catalan",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
+    "catalan": "Catalan",
+    "english": "English",
+    "russian": "Russian",
+    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "Edit email",

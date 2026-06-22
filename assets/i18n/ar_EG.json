@@ -39,7 +39,7 @@
     "all_filter": "الكل",
     "matches_filter": "المطابقات",
     "outside_filter": "خارج",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "لا توجد إعجابات بعد",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "لا توجد إعجابات بعد",
     "tab_label": "أعجبوا بك"
   },
   "matches": {
@@ -274,7 +274,17 @@
     "repeat_password": "كرر كلمة المرور",
     "create_account": "إنشاء حساب",
     "forgot_password": "هل نسيت كلمة السر؟",
-    "continue_button": "متابعة"
+    "continue_button": "متابعة",
+    "or_sign_up_with": "أو سجّل باستخدام",
+    "or_sign_in_with": "أو سجّل الدخول باستخدام",
+    "continue_with_google": "المتابعة باستخدام Google",
+    "continue_with_apple": "المتابعة باستخدام Apple",
+    "already_have_account": "عندك حساب بالفعل؟",
+    "dont_have_account": "معندكش حساب؟",
+    "sign_in_here": "سجّل الدخول هنا",
+    "sign_up_here": "سجّل هنا",
+    "enter_email": "أدخل عنوان بريدك الإلكتروني.",
+    "enter_password": "أدخل كلمة المرور."
   },
   "phone_auth": {
     "title": "مصادقة الهاتف",
@@ -387,7 +397,10 @@
     "arabic": "عربي",
     "armenian": "الأرمينية",
     "bengali": "البنغالية",
-    "catalan": "الكاتالونية",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
+    "catalan": "الكاتالونية",
+    "english": "English",
+    "russian": "Russian",
+    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "تعديل البريد الإلكتروني",

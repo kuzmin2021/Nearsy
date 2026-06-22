@@ -1,5 +1,4 @@
 ﻿import 'dart:async';
-import 'dart:io';
 import 'dart:ui' show PlatformDispatcher;
 
 import 'package:flutter/material.dart';
@@ -11,7 +10,6 @@ import 'package:provider/provider.dart';
 import 'auth/supabase_auth/auth_util.dart';
 import 'auth/supabase_auth/supabase_user_provider.dart';
 import '/backend/supabase/supabase.dart';
-import '/core/config/app_config.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/floter/floter_theme.dart';
 import '/services/auth_profile_service.dart';
@@ -28,9 +26,6 @@ void main() async {
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
-  final supabaseHost = Uri.parse(AppConfig.supabaseUrl).host;
-  HttpOverrides.global = _DevHttpOverrides(supabaseHost);
-
   await SupaFlow.initialize();
 
   await FloterTheme.initialize();
@@ -41,7 +36,7 @@ void main() async {
         _localeCode(PlatformDispatcher.instance.locale),
   );
 
-  final appState = FTAppState(); // Initialize FTAppState
+  final appState = FTAppState();
   await appState.initializePersistedState();
 
   runApp(ChangeNotifierProvider(
@@ -207,18 +202,5 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       themeMode: _themeMode,
       routerConfig: _router,
     );
-  }
-}
-
-class _DevHttpOverrides extends HttpOverrides {
-  _DevHttpOverrides(this._trustedHost);
-  final String _trustedHost;
-
-  @override
-  HttpClient createHttpClient(SecurityContext? context) {
-    return super.createHttpClient(context)
-      ..badCertificateCallback = (cert, host, port) {
-        return host == _trustedHost;
-      };
   }
 }

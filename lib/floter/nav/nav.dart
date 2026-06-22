@@ -326,16 +326,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: EmailAuthPageWidget.routePath,
           builder: (context, params) => EmailAuthPageWidget(),
         ),
-        FTRoute(
-          name: PhoneAuthPageWidget.routeName,
-          path: PhoneAuthPageWidget.routePath,
-          builder: (context, params) => PhoneAuthPageWidget(),
-        ),
-        FTRoute(
-          name: VerifyNumberPageWidget.routeName,
-          path: VerifyNumberPageWidget.routePath,
-          builder: (context, params) => VerifyNumberPageWidget(),
-        ),
+
         FTRoute(
           name: ResetPasswordPageWidget.routeName,
           path: ResetPasswordPageWidget.routePath,

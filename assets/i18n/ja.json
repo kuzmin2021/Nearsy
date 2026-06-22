@@ -39,7 +39,7 @@
     "all_filter": "すべて",
     "matches_filter": "一致",
     "outside_filter": "範囲外",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "まだいいねはありません",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "まだいいねはありません",
     "tab_label": "あなたをいいね"
   },
   "matches": {
@@ -274,7 +274,17 @@
     "repeat_password": "パスワードを繰り返す",
     "create_account": "アカウント作成",
     "forgot_password": "パスワードをお忘れですか?",
-    "continue_button": "続ける"
+    "continue_button": "続ける",
+    "or_sign_up_with": "または次で登録",
+    "or_sign_in_with": "または次でサインイン",
+    "continue_with_google": "Googleで続ける",
+    "continue_with_apple": "Appleで続ける",
+    "already_have_account": "すでにアカウントをお持ちですか？",
+    "dont_have_account": "アカウントをお持ちではありませんか？",
+    "sign_in_here": "こちらからサインイン",
+    "sign_up_here": "こちらから登録",
+    "enter_email": "メールアドレスを入力してください。",
+    "enter_password": "パスワードを入力してください。"
   },
   "phone_auth": {
     "title": "電話認証",
@@ -387,7 +397,10 @@
     "arabic": "アラビア語",
     "armenian": "アルメニア語",
     "bengali": "ベンガル語",
-    "catalan": "カタルーニャ語",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
+    "catalan": "カタルーニャ語",
+    "english": "English",
+    "russian": "Russian",
+    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "メールを編集",

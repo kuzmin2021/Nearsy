@@ -39,7 +39,7 @@
     "all_filter": "Semua",
     "matches_filter": "Cocok",
     "outside_filter": "Di luar",
-    "empty_title": "Nothing yet— but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Belum ada suka",
+    "empty_title": "Nothing yetï¿½ but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Belum ada suka",
     "tab_label": "Menyukai Anda"
   },
   "matches": {
@@ -274,7 +274,17 @@
     "repeat_password": "Ulangi kata sandi",
     "create_account": "Buat akun",
     "forgot_password": "Lupa kata sandi?",
-    "continue_button": "Lanjutkan"
+    "continue_button": "Lanjutkan",
+    "or_sign_up_with": "Atau daftar dengan",
+    "or_sign_in_with": "Atau masuk dengan",
+    "continue_with_google": "Lanjutkan dengan Google",
+    "continue_with_apple": "Lanjutkan dengan Apple",
+    "already_have_account": "Sudah punya akun?",
+    "dont_have_account": "Belum punya akun?",
+    "sign_in_here": "Masuk di sini",
+    "sign_up_here": "Daftar di sini",
+    "enter_email": "Masukkan alamat email Anda.",
+    "enter_password": "Masukkan kata sandi Anda."
   },
   "phone_auth": {
     "title": "Otentikasi telepon",
@@ -387,7 +397,10 @@
     "arabic": "Arab",
     "armenian": "orang Armenia",
     "bengali": "bahasa Bengali",
-    "catalan": "Katalan",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
+    "catalan": "Katalan",
+    "english": "English",
+    "russian": "Russian",
+    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "Edit email",

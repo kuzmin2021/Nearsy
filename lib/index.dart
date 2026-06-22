@@ -59,9 +59,7 @@ export '/profile_location_page/profile_location_page_widget.dart'
     show ProfileLocationPageWidget;
 export '/nearby_page/nearby_page_widget.dart' show NearbyPageWidget;
 export '/email_auth_page/email_auth_page_widget.dart' show EmailAuthPageWidget;
-export '/phone_auth_page/phone_auth_page_widget.dart' show PhoneAuthPageWidget;
-export '/verify_number_page/verify_number_page_widget.dart'
-    show VerifyNumberPageWidget;
+
 export '/reset_password_page/reset_password_page_widget.dart'
     show ResetPasswordPageWidget;
 export '/update_password_page/update_password_page_widget.dart'

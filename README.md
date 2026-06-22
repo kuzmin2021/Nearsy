@@ -29,7 +29,7 @@ flutter run -d chrome
 
 ```bash
 flutter run \
-  --dart-define=SUPABASE_URL=https://thecashcow.xyz:8443 \
+  --dart-define=SUPABASE_URL=http://thecashcow.xyz:8000 \
   --dart-define=SUPABASE_ANON_KEY=sb_publishable_xxx
 ```
 

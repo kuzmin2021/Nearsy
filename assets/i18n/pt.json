@@ -39,7 +39,7 @@
     "all_filter": "Todos",
     "matches_filter": "Correspondências",
     "outside_filter": "Fora",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Nenhum like ainda",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Nenhum like ainda",
     "tab_label": "Curtiram você"
   },
   "matches": {
@@ -274,7 +274,17 @@
     "repeat_password": "Repetir senha",
     "create_account": "Criar conta",
     "forgot_password": "Esqueceu sua senha?",
-    "continue_button": "Continuar"
+    "continue_button": "Continuar",
+    "or_sign_up_with": "Ou cadastre-se com",
+    "or_sign_in_with": "Ou entre com",
+    "continue_with_google": "Continuar com Google",
+    "continue_with_apple": "Continuar com Apple",
+    "already_have_account": "Já tem uma conta?",
+    "dont_have_account": "Não tem uma conta?",
+    "sign_in_here": "Entre aqui",
+    "sign_up_here": "Cadastre-se aqui",
+    "enter_email": "Digite seu e-mail.",
+    "enter_password": "Digite sua senha."
   },
   "phone_auth": {
     "title": "Autenticação de telefone",
@@ -387,7 +397,10 @@
     "arabic": "Árabe",
     "armenian": "Armênio",
     "bengali": "bengali",
-    "catalan": "Catalão",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
+    "catalan": "Catalão",
+    "english": "English",
+    "russian": "Russian",
+    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "Editar email",

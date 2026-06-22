@@ -39,7 +39,7 @@
     "all_filter": "全部",
     "matches_filter": "匹配",
     "outside_filter": "外",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "还没有人点赞",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "还没有人点赞",
     "tab_label": "喜欢你的人"
   },
   "matches": {
@@ -274,7 +274,17 @@
     "repeat_password": "重复密码",
     "create_account": "创建账户",
     "forgot_password": "忘记密码？",
-    "continue_button": "继续"
+    "continue_button": "继续",
+    "or_sign_up_with": "或使用以下方式注册",
+    "or_sign_in_with": "或使用以下方式登录",
+    "continue_with_google": "使用 Google 继续",
+    "continue_with_apple": "使用 Apple 继续",
+    "already_have_account": "已有账号？",
+    "dont_have_account": "还没有账号？",
+    "sign_in_here": "在这里登录",
+    "sign_up_here": "在这里注册",
+    "enter_email": "请输入你的电子邮件地址。",
+    "enter_password": "请输入你的密码。"
   },
   "phone_auth": {
     "title": "电话验证",
@@ -387,7 +397,10 @@
     "arabic": "阿拉伯",
     "armenian": "亚美尼亚语",
     "bengali": "孟加拉",
-    "catalan": "加泰罗尼亚语",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
+    "catalan": "加泰罗尼亚语",
+    "english": "English",
+    "russian": "Russian",
+    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "编辑邮箱",

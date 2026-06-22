@@ -289,7 +289,17 @@
     "repeat_password": "Повторите пароль",
     "create_account": "Создать аккаунт",
     "forgot_password": "Забыли пароль?",
-    "continue_button": "Продолжить"
+    "continue_button": "Продолжить",
+    "or_sign_up_with": "Или зарегистрируйтесь через",
+    "or_sign_in_with": "Или войдите через",
+    "continue_with_google": "Продолжить с Google",
+    "continue_with_apple": "Продолжить с Apple",
+    "already_have_account": "Уже есть аккаунт?",
+    "dont_have_account": "Нет аккаунта?",
+    "sign_in_here": "Войти здесь",
+    "sign_up_here": "Зарегистрироваться здесь",
+    "enter_email": "Введите адрес электронной почты.",
+    "enter_password": "Введите пароль."
   },
   "phone_auth": {
     "title": "Авторизация по телефону",

@@ -39,7 +39,7 @@
     "all_filter": "Tümü",
     "matches_filter": "Eşleşenler",
     "outside_filter": "Dışında",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Henüz beğeni yok",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Henüz beğeni yok",
     "tab_label": "Seni beğenenler"
   },
   "matches": {
@@ -274,7 +274,17 @@
     "repeat_password": "Şifreyi tekrarla",
     "create_account": "Hesap oluştur",
     "forgot_password": "Şifrenizi mi unuttunuz?",
-    "continue_button": "Devam et"
+    "continue_button": "Devam et",
+    "or_sign_up_with": "Veya şununla kaydol",
+    "or_sign_in_with": "Veya şununla giriş yap",
+    "continue_with_google": "Google ile devam et",
+    "continue_with_apple": "Apple ile devam et",
+    "already_have_account": "Zaten hesabın var mı?",
+    "dont_have_account": "Hesabın yok mu?",
+    "sign_in_here": "Buradan giriş yap",
+    "sign_up_here": "Buradan kaydol",
+    "enter_email": "E-posta adresini gir.",
+    "enter_password": "Şifreni gir."
   },
   "phone_auth": {
     "title": "Telefon kimlik doğrulaması",
@@ -387,7 +397,10 @@
     "arabic": "Arapça",
     "armenian": "Ermeni",
     "bengali": "Bengalce",
-    "catalan": "Katalanca",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
+    "catalan": "Katalanca",
+    "english": "English",
+    "russian": "Russian",
+    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "E-postayi duzenle",

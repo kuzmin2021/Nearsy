@@ -39,7 +39,7 @@
     "all_filter": "সব",
     "matches_filter": "মিল",
     "outside_filter": "বাইরে",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "এখনও কোনো লাইক নেই",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "এখনও কোনো লাইক নেই",
     "tab_label": "আপনাকে পছন্দ করেছে"
   },
   "matches": {
@@ -274,7 +274,17 @@
     "repeat_password": "পাসওয়ার্ড পুনরাবৃত্তি করুন",
     "create_account": "অ্যাকাউন্ট তৈরি করুন",
     "forgot_password": "পাসওয়ার্ড ভুলে গেছেন?",
-    "continue_button": "চালিয়ে যান"
+    "continue_button": "চালিয়ে যান",
+    "or_sign_up_with": "অথবা এটি দিয়ে সাইন আপ করুন",
+    "or_sign_in_with": "অথবা এটি দিয়ে সাইন ইন করুন",
+    "continue_with_google": "Google দিয়ে চালিয়ে যান",
+    "continue_with_apple": "Apple দিয়ে চালিয়ে যান",
+    "already_have_account": "ইতিমধ্যে অ্যাকাউন্ট আছে?",
+    "dont_have_account": "অ্যাকাউন্ট নেই?",
+    "sign_in_here": "এখানে সাইন ইন করুন",
+    "sign_up_here": "এখানে সাইন আপ করুন",
+    "enter_email": "আপনার ইমেল ঠিকানা লিখুন।",
+    "enter_password": "আপনার পাসওয়ার্ড লিখুন।"
   },
   "phone_auth": {
     "title": "ফোন প্রমাণ",
@@ -387,7 +397,10 @@
     "arabic": "আরবি",
     "armenian": "আর্মেনিয়ান",
     "bengali": "বাংলা",
-    "catalan": "কাতালান",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
+    "catalan": "কাতালান",
+    "english": "English",
+    "russian": "Russian",
+    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "ইমেল সম্পাদনা করুন",

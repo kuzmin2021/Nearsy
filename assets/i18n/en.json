@@ -41,12 +41,12 @@
     "all_filter": "All",
     "matches_filter": "Filter matches",
     "outside_filter": "Outside",
-    "empty_title": "Nothing yet — but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "No likes yet",
+    "empty_title": "Nothing yet ï¿½ but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "No likes yet",
     "tab_label": "Liked You"
   },
   "matches": {
     "chats": "Chats",
-    "no_chats_title": "Still quiet here — which just means nothing’s complicated.",
+    "no_chats_title": "Still quiet here ï¿½ which just means nothingï¿½s complicated.",
     "no_chats_body": "Start a chat or wait for the right one to say something.",
     "no_chats_yet": "No conversations yet",
     "tab_label": "Chats"
@@ -298,7 +298,17 @@
     "repeat_password": "Repeat password",
     "create_account": "Create account",
     "forgot_password": "Forgot password?",
-    "continue_button": "Continue"
+    "continue_button": "Continue",
+    "or_sign_up_with": "Or sign up with",
+    "or_sign_in_with": "Or sign in with",
+    "continue_with_google": "Continue with Google",
+    "continue_with_apple": "Continue with Apple",
+    "already_have_account": "Already have an account?",
+    "dont_have_account": "Don\u0027t have an account?",
+    "sign_in_here": "Sign in here",
+    "sign_up_here": "Sign up here",
+    "enter_email": "Enter your email address.",
+    "enter_password": "Enter your password."
   },
   "phone_auth": {
     "title": "Phone auth",

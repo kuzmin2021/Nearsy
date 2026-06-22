@@ -39,7 +39,7 @@
     "all_filter": "سب",
     "matches_filter": "مماثل",
     "outside_filter": "باہر",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "ابھی تک کوئی لائک نہیں",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "ابھی تک کوئی لائک نہیں",
     "tab_label": "جنہیں آپ پسند آئے"
   },
   "matches": {
@@ -274,7 +274,17 @@
     "repeat_password": "پاس ورڈ دہرائیں۔",
     "create_account": "اکاؤنٹ بنائیں",
     "forgot_password": "پاس ورڈ بھول گئے؟",
-    "continue_button": "جاری رکھیں"
+    "continue_button": "جاری رکھیں",
+    "or_sign_up_with": "یا اس سے سائن اپ کریں",
+    "or_sign_in_with": "یا اس سے سائن ان کریں",
+    "continue_with_google": "Google کے ساتھ جاری رکھیں",
+    "continue_with_apple": "Apple کے ساتھ جاری رکھیں",
+    "already_have_account": "کیا آپ کا اکاؤنٹ پہلے سے موجود ہے؟",
+    "dont_have_account": "کیا آپ کا اکاؤنٹ نہیں ہے؟",
+    "sign_in_here": "یہاں سائن ان کریں",
+    "sign_up_here": "یہاں سائن اپ کریں",
+    "enter_email": "اپنا ای میل پتہ درج کریں۔",
+    "enter_password": "اپنا پاس ورڈ درج کریں۔"
   },
   "phone_auth": {
     "title": "فون کی تصدیق",
@@ -387,7 +397,10 @@
     "arabic": "عربی",
     "armenian": "آرمینیائی",
     "bengali": "بنگالی",
-    "catalan": "کاتالان",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
+    "catalan": "کاتالان",
+    "english": "English",
+    "russian": "Russian",
+    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "ای میل میں ترمیم کریں",

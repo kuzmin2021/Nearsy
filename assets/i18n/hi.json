@@ -39,7 +39,7 @@
     "all_filter": "सभी",
     "matches_filter": "मिलान",
     "outside_filter": "बाहर",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "अभी तक कोई लाइक नहीं",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "अभी तक कोई लाइक नहीं",
     "tab_label": "जिन्होंने आपको पसंद किया"
   },
   "matches": {
@@ -274,7 +274,17 @@
     "repeat_password": "पासवर्ड दोहराएँ",
     "create_account": "खाता बनाएँ",
     "forgot_password": "पासवर्ड भूल गए?",
-    "continue_button": "जारी रखें"
+    "continue_button": "जारी रखें",
+    "or_sign_up_with": "या इससे साइन अप करें",
+    "or_sign_in_with": "या इससे साइन इन करें",
+    "continue_with_google": "Google से जारी रखें",
+    "continue_with_apple": "Apple से जारी रखें",
+    "already_have_account": "पहले से खाता है?",
+    "dont_have_account": "खाता नहीं है?",
+    "sign_in_here": "यहां साइन इन करें",
+    "sign_up_here": "यहां साइन अप करें",
+    "enter_email": "अपना ईमेल पता दर्ज करें।",
+    "enter_password": "अपना पासवर्ड दर्ज करें।"
   },
   "phone_auth": {
     "title": "फ़ोन प्रमाणीकरण",
@@ -387,7 +397,10 @@
     "arabic": "अरबी",
     "armenian": "अर्मेनियाई",
     "bengali": "बंगाली",
-    "catalan": "कैटलन",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
+    "catalan": "कैटलन",
+    "english": "English",
+    "russian": "Russian",
+    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "ईमेल संपादित करें",

@@ -39,7 +39,7 @@
     "all_filter": "அனைத்தும்",
     "matches_filter": "பொருந்தியவை",
     "outside_filter": "வெளியே",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "இன்னும் லைக் இல்லை",
+    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "இன்னும் லைக் இல்லை",
     "tab_label": "உங்களை விரும்பினர்"
   },
   "matches": {
@@ -274,7 +274,17 @@
     "repeat_password": "கடவுச்சொல்லை மீண்டும் செய்யவும்",
     "create_account": "கணக்கை உருவாக்கு",
     "forgot_password": "கடவுச்சொல் மறந்துவிட்டதா?",
-    "continue_button": "தொடரவும்"
+    "continue_button": "தொடரவும்",
+    "or_sign_up_with": "அல்லது இதன் மூலம் பதிவு செய்யவும்",
+    "or_sign_in_with": "அல்லது இதன் மூலம் உள்நுழையவும்",
+    "continue_with_google": "Google மூலம் தொடரவும்",
+    "continue_with_apple": "Apple மூலம் தொடரவும்",
+    "already_have_account": "ஏற்கனவே கணக்கு உள்ளதா?",
+    "dont_have_account": "கணக்கு இல்லையா?",
+    "sign_in_here": "இங்கே உள்நுழையவும்",
+    "sign_up_here": "இங்கே பதிவு செய்யவும்",
+    "enter_email": "உங்கள் மின்னஞ்சல் முகவரியை உள்ளிடவும்.",
+    "enter_password": "உங்கள் கடவுச்சொல்லை உள்ளிடவும்."
   },
   "phone_auth": {
     "title": "தொலைபேசி அங்கீகாரம்",
@@ -387,7 +397,10 @@
     "arabic": "அரபு",
     "armenian": "ஆர்மேனியன்",
     "bengali": "பெங்காலி",
-    "catalan": "கற்றலான்",`n    "english": "English",`n    "russian": "Russian",`n    "ukrainian": "Ukrainian"
+    "catalan": "கற்றலான்",
+    "english": "English",
+    "russian": "Russian",
+    "ukrainian": "Ukrainian"
   },
   "account_email": {
     "edit_title": "மின்னஞ்சலை திருத்து",
