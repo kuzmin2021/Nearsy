@@ -89,7 +89,7 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
 
   Widget _buildConversationList(BuildContext context, dynamic theme) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(23, 36, 23, 0),
+      padding: const EdgeInsetsDirectional.fromSTEB(48, 36, 23, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -115,7 +115,7 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
       children: [
         Text(
           AppLabels.of(context).get('matches.chats'),
-          style: GoogleFonts.interTight(
+          style: GoogleFonts.inter(
             color: const Color(0xFF9400D3),
             fontSize: 24,
             fontWeight: FontWeight.w700,
@@ -123,12 +123,12 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
         ),
         FloterIconButton(
           borderRadius: 8,
-          buttonSize: 40,
+          buttonSize: 64,
           fillColor: theme.primaryBackground,
           icon: Icon(
             Icons.settings,
             color: theme.primaryText,
-            size: 24,
+            size: 28,
           ),
             onPressed: () async {
             await context.pushNamed('ChatPreferencesPage');
