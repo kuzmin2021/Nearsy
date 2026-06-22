@@ -46,6 +46,8 @@
   },
   "matches": {
     "chats": "Chats",
+    "no_chats_title": "Still quiet here — which just means nothing’s complicated.",
+    "no_chats_body": "Start a chat or wait for the right one to say something.",
     "no_chats_yet": "No conversations yet",
     "tab_label": "Chats"
   },

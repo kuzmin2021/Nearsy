@@ -83,15 +83,28 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
   }
 
   Widget _buildEmptyState(BuildContext context, dynamic theme) {
-    return Center(
+    return Padding(
+      padding: const EdgeInsetsDirectional.fromSTEB(41, 40, 41, 0),
       child: Column(
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            AppLabels.of(context).get('matches.no_chats_yet'),
+            AppLabels.of(context).get('matches.no_chats_title'),
             style: GoogleFonts.inter(
-              color: theme.secondaryText,
-              fontSize: 16,
+              color: theme.primaryText,
+              fontSize: 21,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            AppLabels.of(context).get('matches.no_chats_body'),
+            style: GoogleFonts.inter(
+              color: theme.primaryText,
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+              height: 1.4,
             ),
           ),
         ],
