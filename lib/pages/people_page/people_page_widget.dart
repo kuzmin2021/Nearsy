@@ -174,7 +174,7 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
 
   Widget _topHeader(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(23, 36, 23, 12),
+      padding: const EdgeInsetsDirectional.fromSTEB(32, 36, 23, 12),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -183,18 +183,19 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
           ExcludeSemantics(
             child: Image.asset(
               'assets/images/nearsy_logo.png',
-              width: 123,
+              width: 124,
+              height: 36,
               fit: BoxFit.contain,
             ),
           ),
           FloterIconButton(
             borderRadius: 8,
-            buttonSize: 44,
+            buttonSize: 64,
             fillColor: FloterTheme.of(context).primaryBackground,
             icon: Icon(
               Icons.settings,
               color: FloterTheme.of(context).primaryText,
-              size: 24,
+              size: 28,
             ),
             onPressed: () async {
               await context.pushNamed('SearchPreferencesPage');
