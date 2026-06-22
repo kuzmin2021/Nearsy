@@ -1719,29 +1719,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                               'profile.about_me' /* About me */,
                                             ),
                                             maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
+                                            style: GoogleFonts.inter(
+                                              fontSize: 16.0,
+                                              fontWeight: FontWeight.w700,
+                                              color: Colors.black,
+                                              height: 1.0,
+                                            ),
                                           ),
                                           Builder(
                                             builder: (context) {
@@ -1760,34 +1743,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                         top: 8.0),
                                                 child: Text(
                                                   value,
-                                                  style: FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        font: GoogleFonts.inter(
-                                                          fontWeight:
-                                                              FloterTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FloterTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                        color:
-                                                            FloterTheme.of(context)
-                                                                .primaryText,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FloterTheme.of(context)
-                                                                .bodyMedium
-                                                                .fontWeight,
-                                                        fontStyle:
-                                                            FloterTheme.of(context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
+                                                  style: GoogleFonts.inter(
+                                                    fontSize: 16.0,
+                                                    fontWeight: FontWeight.w400,
+                                                    color: Colors.black,
+                                                    height: 1.0,
+                                                  ),
                                                 ),
                                               );
                                             },
@@ -1844,30 +1805,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           'profile.gender' /* Gender */,
                                         ),
                                         maxLines: 2,
-                                        style: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                            ),
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          height: 1.0,
+                                        ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
@@ -1894,18 +1837,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 value,
                                                 textAlign: TextAlign.end,
                                                 maxLines: 1,
-                                                style: FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                      ),
-                                                      color: FloterTheme.of(context).primaryText,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                    ),
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.black,
+                                                  height: 1.0,
+                                                ),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             );
@@ -1955,30 +1892,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           'profile.age' /* Age */,
                                         ),
                                         maxLines: 2,
-                                        style: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                            ),
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          height: 1.0,
+                                        ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
@@ -2005,18 +1924,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 value,
                                                 textAlign: TextAlign.end,
                                                 maxLines: 1,
-                                                style: FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                      ),
-                                                      color: FloterTheme.of(context).primaryText,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                    ),
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.black,
+                                                  height: 1.0,
+                                                ),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             );
@@ -2073,29 +1986,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                             functions.profileLanguagesUiText(
                                                 'section')!,
                                             maxLines: 1,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
+                                            style: GoogleFonts.inter(
+                                              fontSize: 16.0,
+                                              fontWeight: FontWeight.w700,
+                                              color: Colors.black,
+                                              height: 1.0,
+                                            ),
                                           ),
                                           Text(
                                             functions.profileLanguagesEffectiveDisplay(
@@ -2103,31 +1999,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     .toList(),
                                                 widget!.languagesOverride)!,
                                             maxLines: 8,
-                                            style: FloterTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  font: GoogleFonts.inter(
-                                                    fontWeight:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontWeight,
-                                                    fontStyle:
-                                                        FloterTheme.of(context)
-                                                            .bodyMedium
-                                                            .fontStyle,
-                                                  ),
-                                                  color: FloterTheme.of(context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FloterTheme.of(context)
-                                                          .bodyMedium
-                                                          .fontStyle,
-                                                ),
+                                            style: GoogleFonts.inter(
+                                              fontSize: 16.0,
+                                              fontWeight: FontWeight.w400,
+                                              color: Colors.black,
+                                              height: 1.0,
+                                            ),
                                             overflow: TextOverflow.ellipsis,
                                           ),
                                         ].divide(SizedBox(height: 8.0)),
@@ -2182,30 +2059,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           'profile.height' /* Height */,
                                         ),
                                         maxLines: 2,
-                                        style: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                            ),
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          height: 1.0,
+                                        ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
@@ -2232,18 +2091,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 value,
                                                 textAlign: TextAlign.end,
                                                 maxLines: 1,
-                                                style: FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                      ),
-                                                      color: FloterTheme.of(context).primaryText,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                    ),
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.black,
+                                                  height: 1.0,
+                                                ),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             );
@@ -2294,30 +2147,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           'profile.work' /* Work */,
                                         ),
                                         maxLines: 2,
-                                        style: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                            ),
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          height: 1.0,
+                                        ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
@@ -2344,18 +2179,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 value,
                                                 textAlign: TextAlign.end,
                                                 maxLines: 1,
-                                                style: FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                      ),
-                                                      color: FloterTheme.of(context).primaryText,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                    ),
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.black,
+                                                  height: 1.0,
+                                                ),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             );
@@ -2406,30 +2235,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           'profile.education' /* Education */,
                                         ),
                                         maxLines: 2,
-                                        style: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                            ),
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          height: 1.0,
+                                        ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
@@ -2456,18 +2267,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 value,
                                                 textAlign: TextAlign.end,
                                                 maxLines: 1,
-                                                style: FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                      ),
-                                                      color: FloterTheme.of(context).primaryText,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                    ),
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.black,
+                                                  height: 1.0,
+                                                ),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             );
@@ -2518,30 +2323,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           'profile.kids' /* Kids */,
                                         ),
                                         maxLines: 2,
-                                        style: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                            ),
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          height: 1.0,
+                                        ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
@@ -2568,18 +2355,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 value,
                                                 textAlign: TextAlign.end,
                                                 maxLines: 1,
-                                                style: FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                      ),
-                                                      color: FloterTheme.of(context).primaryText,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                    ),
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.black,
+                                                  height: 1.0,
+                                                ),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             );
@@ -2630,30 +2411,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           'profile.preferred_relationships' /* Preferred relationships */,
                                         ),
                                         maxLines: 2,
-                                        style: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                            ),
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          height: 1.0,
+                                        ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
@@ -2682,18 +2445,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 value,
                                                 textAlign: TextAlign.end,
                                                 maxLines: 1,
-                                                style: FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                      ),
-                                                      color: FloterTheme.of(context).primaryText,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                    ),
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.black,
+                                                  height: 1.0,
+                                                ),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             );
@@ -2744,30 +2501,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           'profile.beliefs' /* Beliefs */,
                                         ),
                                         maxLines: 2,
-                                        style: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                            ),
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          height: 1.0,
+                                        ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
@@ -2794,18 +2533,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 value,
                                                 textAlign: TextAlign.end,
                                                 maxLines: 1,
-                                                style: FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                      ),
-                                                      color: FloterTheme.of(context).primaryText,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                    ),
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.black,
+                                                  height: 1.0,
+                                                ),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             );
@@ -2856,30 +2589,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           'profile.body_type' /* Body type */,
                                         ),
                                         maxLines: 2,
-                                        style: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                            ),
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          height: 1.0,
+                                        ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
@@ -2906,18 +2621,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 value,
                                                 textAlign: TextAlign.end,
                                                 maxLines: 1,
-                                                style: FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                      ),
-                                                      color: FloterTheme.of(context).primaryText,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                    ),
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.black,
+                                                  height: 1.0,
+                                                ),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             );
@@ -2968,30 +2677,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           'profile.exercise' /* Exercise */,
                                         ),
                                         maxLines: 2,
-                                        style: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                            ),
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          height: 1.0,
+                                        ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
@@ -3018,18 +2709,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 value,
                                                 textAlign: TextAlign.end,
                                                 maxLines: 1,
-                                                style: FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                      ),
-                                                      color: FloterTheme.of(context).primaryText,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                    ),
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.black,
+                                                  height: 1.0,
+                                                ),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             );
@@ -3080,30 +2765,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           'profile.drinking' /* Drinking */,
                                         ),
                                         maxLines: 2,
-                                        style: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                            ),
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          height: 1.0,
+                                        ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
@@ -3130,18 +2797,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 value,
                                                 textAlign: TextAlign.end,
                                                 maxLines: 1,
-                                                style: FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                      ),
-                                                      color: FloterTheme.of(context).primaryText,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                    ),
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.black,
+                                                  height: 1.0,
+                                                ),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             );
@@ -3192,30 +2853,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           'profile.smoking' /* Smoking */,
                                         ),
                                         maxLines: 2,
-                                        style: FloterTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FloterTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: FloterTheme.of(context)
-                                                  .primaryText,
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FloterTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle: FloterTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                            ),
+                                        style: GoogleFonts.inter(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          height: 1.0,
+                                        ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
@@ -3242,18 +2885,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 value,
                                                 textAlign: TextAlign.end,
                                                 maxLines: 1,
-                                                style: FloterTheme.of(context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                        fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                      ),
-                                                      color: FloterTheme.of(context).primaryText,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight: FloterTheme.of(context).bodyMedium.fontWeight,
-                                                      fontStyle: FloterTheme.of(context).bodyMedium.fontStyle,
-                                                    ),
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.black,
+                                                  height: 1.0,
+                                                ),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             );
