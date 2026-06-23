@@ -130,189 +130,193 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FloterTheme.of(context).primaryBackground,
-        body: SafeArea(
-          top: true,
-          child: LayoutBuilder(
-            builder: (context, constraints) {
-              return SizedBox(
-                width: double.infinity,
-                height: constraints.maxHeight,
-                child: Stack(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
-                  children: [
-                    Positioned.fill(
-                      child: Image.asset(
-                        'assets/images/start_screen_bg.png',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Positioned.fill(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          color: Color(0x66FFFFFF),
+        body: Stack(
+          children: [
+            Positioned.fill(
+              child: Image.asset(
+                'assets/images/start_screen_bg.png',
+                fit: BoxFit.cover,
+              ),
+            ),
+            Positioned.fill(
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Color(0x66FFFFFF),
+                ),
+              ),
+            ),
+            SafeArea(
+              top: true,
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  return SizedBox(
+                    width: double.infinity,
+                    height: constraints.maxHeight,
+                    child: Stack(
+                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      children: [
+                        Positioned(
+                          top: 68.0,
+                          left: 32.0,
+                          right: 32.0,
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/images/nearsy_logo.png',
+                                width: constraints.maxWidth * 0.65,
+                                fit: BoxFit.contain,
+                              ),
+                              Text(
+                                labels.get('auth.meet_near_keep_it_easy'),
+                                textAlign: TextAlign.center,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: GoogleFonts.inter(
+                                  color: const Color(0xFF000000),
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w400,
+                                  letterSpacing: 0.0,
+                                ),
+                              ),
+                            ].divide(const SizedBox(height: 4.0)),
+                          ),
                         ),
-                      ),
-                    ),
-                    Positioned(
-                      top: 68.0,
-                      left: 32.0,
-                      right: 32.0,
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assets/images/nearsy_logo.png',
-                            width: constraints.maxWidth * 0.65,
-                            fit: BoxFit.contain,
-                          ),
-                          Text(
-                            labels.get('auth.meet_near_keep_it_easy'),
-                            textAlign: TextAlign.center,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: GoogleFonts.inter(
-                              color: const Color(0xFF000000),
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.w400,
-                              letterSpacing: 0.0,
-                            ),
-                          ),
-                        ].divide(const SizedBox(height: 4.0)),
-                      ),
-                    ),
-                    Positioned(
-                      left: 36.0,
-                      right: 36.0,
-                      bottom: constraints.maxHeight * 0.055,
-                      child: Center(
-                        child: ConstrainedBox(
-                          constraints: BoxConstraints(
-                            maxHeight: constraints.maxHeight * 0.68,
-                            maxWidth: 420.0,
-                          ),
-                          child: SingleChildScrollView(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                _AuthTextField(
-                                  controller: _model.emailFieldTextController!,
-                                  focusNode: _model.emailFieldFocusNode!,
-                                  hintText:
-                                      labels.get('email_auth.email_address'),
-                                  keyboardType: TextInputType.emailAddress,
-                                  onChanged: (value) => _model.email = value,
-                                ),
-                                _AuthTextField(
-                                  controller:
-                                      _model.passwordFieldTextController!,
-                                  focusNode: _model.passwordFieldFocusNode!,
-                                  hintText: labels.get('email_auth.password'),
-                                  obscureText: !_model.passwordFieldVisibility,
-                                  onChanged: (value) => _model.password = value,
-                                  suffixIcon: InkWell(
-                                    onTap: () async {
-                                      safeSetState(
-                                        () => _model.passwordFieldVisibility =
-                                            !_model.passwordFieldVisibility,
-                                      );
-                                    },
-                                    focusNode: FocusNode(skipTraversal: true),
-                                    child: Icon(
-                                      _model.passwordFieldVisibility
-                                          ? Icons.visibility_outlined
-                                          : Icons.visibility_off_outlined,
-                                      color: const Color(0xFF6A6A6A),
-                                      size: 24.0,
+                        Positioned(
+                          left: 36.0,
+                          right: 36.0,
+                          bottom: constraints.maxHeight * 0.055,
+                          child: Center(
+                            child: ConstrainedBox(
+                              constraints: BoxConstraints(
+                                maxHeight: constraints.maxHeight * 0.68,
+                                maxWidth: 420.0,
+                              ),
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                                  children: [
+                                    _AuthTextField(
+                                      controller: _model.emailFieldTextController!,
+                                      focusNode: _model.emailFieldFocusNode!,
+                                      hintText:
+                                          labels.get('email_auth.email_address'),
+                                      keyboardType: TextInputType.emailAddress,
+                                      onChanged: (value) => _model.email = value,
                                     ),
-                                  ),
-                                ),
-                                _PrimaryAuthButton(
-                                  text: _isRegister
-                                      ? labels.get('email_auth.create_account')
-                                      : labels.get('email_auth.sign_in'),
-                                  onTap: _submitEmailAuth,
-                                ),
-                                Text(
-                                  _isRegister
-                                      ? labels.get('email_auth.or_sign_up_with')
-                                      : labels
-                                          .get('email_auth.or_sign_in_with'),
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.inter(
-                                    color: const Color(0xFF626262),
-                              fontSize: 24.0,
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                                _SocialAuthButton(
-                                  icon: FontAwesomeIcons.google,
-                                  text: labels
-                                      .get('email_auth.continue_with_google'),
-                                  onTap: () => _submitSocialAuth(
-                                    authManager.signInWithGoogle,
-                                  ),
-                                ),
-                                _SocialAuthButton(
-                                  icon: FontAwesomeIcons.apple,
-                                  text: labels
-                                      .get('email_auth.continue_with_apple'),
-                                  onTap: () => _submitSocialAuth(
-                                    authManager.signInWithApple,
-                                  ),
-                                ),
-                                if (!_isRegister)
-                                  InkWell(
-                                    splashColor: Colors.transparent,
-                                    focusColor: Colors.transparent,
-                                    hoverColor: Colors.transparent,
-                                    highlightColor: Colors.transparent,
-                                    onTap: () async {
-                                      context.pushNamed(
-                                        ResetPasswordPageWidget.routeName,
-                                      );
-                                    },
-                                    child: Container(
-                                      height: 32.0,
-                                      alignment: AlignmentDirectional.center,
-                                      child: Text(
-                                        labels
-                                            .get('email_auth.forgot_password'),
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.inter(
-                                          color:
-                                              FloterTheme.of(context).primary,
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w600,
+                                    _AuthTextField(
+                                      controller:
+                                          _model.passwordFieldTextController!,
+                                      focusNode: _model.passwordFieldFocusNode!,
+                                      hintText: labels.get('email_auth.password'),
+                                      obscureText: !_model.passwordFieldVisibility,
+                                      onChanged: (value) => _model.password = value,
+                                      suffixIcon: InkWell(
+                                        onTap: () async {
+                                          safeSetState(
+                                            () => _model.passwordFieldVisibility =
+                                                !_model.passwordFieldVisibility,
+                                          );
+                                        },
+                                        focusNode: FocusNode(skipTraversal: true),
+                                        child: Icon(
+                                          _model.passwordFieldVisibility
+                                              ? Icons.visibility_outlined
+                                              : Icons.visibility_off_outlined,
+                                          color: const Color(0xFF6A6A6A),
+                                          size: 24.0,
                                         ),
                                       ),
                                     ),
-                                  ),
-                                _ModeSwitch(
-                                  prefix: _isRegister
-                                      ? labels.get(
-                                          'email_auth.already_have_account',
-                                        )
-                                      : labels.get(
-                                          'email_auth.dont_have_account',
+                                    _PrimaryAuthButton(
+                                      text: _isRegister
+                                          ? labels.get('email_auth.create_account')
+                                          : labels.get('email_auth.sign_in'),
+                                      onTap: _submitEmailAuth,
+                                    ),
+                                    Text(
+                                      _isRegister
+                                          ? labels.get('email_auth.or_sign_up_with')
+                                          : labels
+                                              .get('email_auth.or_sign_in_with'),
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.inter(
+                                        color: const Color(0xFF626262),
+                                  fontSize: 24.0,
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                    ),
+                                    _SocialAuthButton(
+                                      icon: FontAwesomeIcons.google,
+                                      text: labels
+                                          .get('email_auth.continue_with_google'),
+                                      onTap: () => _submitSocialAuth(
+                                        authManager.signInWithGoogle,
+                                      ),
+                                    ),
+                                    _SocialAuthButton(
+                                      icon: FontAwesomeIcons.apple,
+                                      text: labels
+                                          .get('email_auth.continue_with_apple'),
+                                      onTap: () => _submitSocialAuth(
+                                        authManager.signInWithApple,
+                                      ),
+                                    ),
+                                    if (!_isRegister)
+                                      InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          context.pushNamed(
+                                            ResetPasswordPageWidget.routeName,
+                                          );
+                                        },
+                                        child: Container(
+                                          height: 32.0,
+                                          alignment: AlignmentDirectional.center,
+                                          child: Text(
+                                            labels
+                                                .get('email_auth.forgot_password'),
+                                            textAlign: TextAlign.center,
+                                            style: GoogleFonts.inter(
+                                              color:
+                                                  FloterTheme.of(context).primary,
+                                              fontSize: 14.0,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                          ),
                                         ),
-                                  actionText: _isRegister
-                                      ? labels.get('email_auth.sign_in_here')
-                                      : labels.get('email_auth.sign_up_here'),
-                                  onTap: _toggleMode,
+                                      ),
+                                    _ModeSwitch(
+                                      prefix: _isRegister
+                                          ? labels.get(
+                                              'email_auth.already_have_account',
+                                            )
+                                          : labels.get(
+                                              'email_auth.dont_have_account',
+                                            ),
+                                      actionText: _isRegister
+                                          ? labels.get('email_auth.sign_in_here')
+                                          : labels.get('email_auth.sign_up_here'),
+                                      onTap: _toggleMode,
+                                    ),
+                                  ].divide(const SizedBox(height: 14.0)),
                                 ),
-                              ].divide(const SizedBox(height: 14.0)),
+                              ),
                             ),
                           ),
                         ),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
-              );
-            },
-          ),
+                  );
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
