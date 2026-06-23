@@ -1,4 +1,5 @@
-{
+﻿{
+  "connection.offline_message": "इंटरनेट कनेक्शन नाही. कृपया तुमचे नेटवर्क तपासा.",
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "जवळ भेटा. सहज ठेवा",

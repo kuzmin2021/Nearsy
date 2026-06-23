@@ -1,4 +1,5 @@
-{
+﻿{
+  "connection.offline_message": "Pas de connexion Internet. Veuillez vérifier votre réseau.",
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Rendez-vous à proximité. Restez facile",

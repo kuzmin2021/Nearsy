@@ -1,4 +1,5 @@
-{
+﻿{
+  "connection.offline_message": "No internet connection. Abeg check your network.",
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Meet nearby. Make am easy",

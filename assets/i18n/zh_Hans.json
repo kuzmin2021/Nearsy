@@ -1,4 +1,5 @@
-{
+﻿{
+  "connection.offline_message": "无网络连接。请检查您的网络。",
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "相约近处。保持轻松",

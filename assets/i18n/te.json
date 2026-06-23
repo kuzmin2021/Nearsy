@@ -1,4 +1,5 @@
-{
+﻿{
+  "connection.offline_message": "ఇంటర్‌నెట్‌ కనెక్షన్ లేదు. దయచేసి మీ నెట్‌వర్క్‌ని తనిఖీ చేయండి.",
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "దగ్గర కలుస్తారు. సులభంగా ఉంచండి",

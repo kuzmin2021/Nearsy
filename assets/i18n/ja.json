@@ -1,4 +1,5 @@
-{
+﻿{
+  "connection.offline_message": "インターネット接続がありません。ネットワークを確認してください。",
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "近くで会いましょう。簡単にしてください",

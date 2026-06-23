@@ -11,9 +11,11 @@ import 'package:provider/provider.dart';
 import 'auth/supabase_auth/auth_util.dart';
 import 'auth/supabase_auth/supabase_user_provider.dart';
 import '/backend/supabase/supabase.dart';
+import '/components/offline_barrier.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/floter/floter_theme.dart';
 import '/services/auth_profile_service.dart';
+import '/services/connectivity_service.dart';
 import '/services/i18n/app_labels.dart';
 import '/services/i18n/app_labels_delegate.dart';
 import '/services/notification_service.dart';
@@ -45,8 +47,11 @@ void main() async {
   final appState = FTAppState();
   await appState.initializePersistedState();
 
-  runApp(ChangeNotifierProvider(
-    create: (context) => appState,
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (context) => appState),
+      ChangeNotifierProvider(create: (_) => ConnectivityService()..init()),
+    ],
     child: MyApp(),
   ));
 }
@@ -207,6 +212,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       ),
       themeMode: _themeMode,
       routerConfig: _router,
+      builder: (context, child) => OfflineBarrier(child: child!),
     );
   }
 }
