@@ -676,7 +676,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                                 bytes);
                                                         uploadedUrl =
                                                             SupaFlow
-                                                                .publicPhotoUrl(
+                                                                .userPhotoUrl(
                                                                     storagePath);
                                                          await SupaFlow.client
                                                             .from('profiles')
@@ -686,7 +686,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                         }).eq('user_id',
                                                                 userId);
                                                         _model.profileMainPhotoUrl =
-                                                            SupaFlow.publicPhotoUrl(
+                                                            SupaFlow.userPhotoUrl(
                                                                 storagePath);
                                                         safeSetState(() {});
                                                       } catch (error) {
@@ -1580,7 +1580,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                               bytes);
                                                       uploadedUrl =
                                                           SupaFlow
-                                                              .publicPhotoUrl(
+                                                              .userPhotoUrl(
                                                                   storagePath);
                                                       if (uploadedUrl
                                                           .trim()

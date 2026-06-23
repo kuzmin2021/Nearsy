@@ -153,7 +153,7 @@ class PeoplePageModel extends FloterModel<PeoplePageWidget> {
           if (item is Map<String, dynamic>) {
             final path = item['path'] as String?;
             if (path == null || path.isEmpty) return null;
-            return SupaFlow.publicPhotoUrl(path);
+            return SupaFlow.userPhotoUrl(path);
           }
           return null;
         })

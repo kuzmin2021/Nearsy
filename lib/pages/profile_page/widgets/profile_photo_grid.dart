@@ -180,7 +180,7 @@ class ProfilePhotoGrid extends StatelessWidget {
       await SupaFlow.client
           .from('profiles')
           .update({'avatar_url': storagePath}).eq('user_id', userId);
-      final uploadedUrl = SupaFlow.publicPhotoUrl(storagePath);
+      final uploadedUrl = SupaFlow.userPhotoUrl(storagePath);
       onMainPhotoChanged?.call(uploadedUrl);
     } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(
