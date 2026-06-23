@@ -106,6 +106,7 @@ dependencies:
 
 dev_dependencies:
   flutter_lints: 4.0.0
+  flutter_launcher_icons: ^0.14.3
   lints: 4.0.0
   flutter_test:
     sdk: flutter
@@ -183,5 +184,22 @@ flutter:
     - family: NotoColorEmoji
       fonts:
         - asset: assets/fonts/NotoColorEmoji.ttf
+
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "assets/icon/app_icon.png"
+    background_color: "#FFFFFF"
+  windows:
+    generate: true
+    image_path: "assets/icon/app_icon.png"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "assets/icon/app_icon.png"
 
 
