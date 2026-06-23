@@ -1,10 +1,7 @@
 ﻿import 'dart:async';
 import 'dart:ui' show PlatformDispatcher;
 
-import 'dart:io';
-
 import 'package:app_links/app_links.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
@@ -26,9 +23,6 @@ import 'floter/nav/nav.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  if (!kIsWeb) {
-    HttpOverrides.global = SupaFlowHttpOverrides();
-  }
   GoogleFonts.config.allowRuntimeFetching = false;
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();

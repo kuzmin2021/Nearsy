@@ -9,7 +9,6 @@ import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/services/profile/profile_localization.dart';
 import '/pages/matches_page/matches_page_widget.dart' show MatchesPageWidget;
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -532,15 +531,11 @@ class _ProfileCardState extends State<_ProfileCard> {
                 controller: _pageController,
                 onPageChanged: (i) => setState(() => _currentPhoto = i),
                 itemCount: photos.length,
-                itemBuilder: (_, i) => CachedNetworkImage(
+                itemBuilder: (_, i) => SupaPhoto(
                   fadeInDuration: const Duration(milliseconds: 300),
                   fadeOutDuration: const Duration(milliseconds: 300),
-                  imageUrl: photos[i],
+                  imageSource: photos[i],
                   fit: BoxFit.cover,
-                  placeholder: (_, __) =>
-                      Container(color: theme.secondaryBackground),
-                  errorWidget: (_, __, ___) =>
-                      Container(color: theme.secondaryBackground),
                 ),
               ),
             ),

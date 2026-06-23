@@ -4,7 +4,6 @@ import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/index.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'liked_you_page_model.dart';
@@ -134,10 +133,8 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
             alignment: AlignmentDirectional(0.0, 0.0),
             children: [
               if (hasPhoto)
-                CachedNetworkImage(
-                  fadeInDuration: Duration.zero,
-                  fadeOutDuration: Duration.zero,
-                  imageUrl: photoUrl,
+                SupaPhoto(
+                  imageSource: photoUrl,
                   width: double.infinity,
                   height: 230.0,
                   fit: BoxFit.cover,

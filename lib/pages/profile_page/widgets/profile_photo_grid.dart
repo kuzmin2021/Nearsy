@@ -1,5 +1,4 @@
 import 'dart:typed_data';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -335,10 +334,8 @@ class ProfilePhotoGrid extends StatelessWidget {
               Positioned.fill(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
-                  child: CachedNetworkImage(
-                    fadeInDuration: const Duration(milliseconds: 0),
-                    fadeOutDuration: const Duration(milliseconds: 0),
-                    imageUrl: mainPhotoUrl!,
+                  child: SupaPhoto(
+                    imageSource: mainPhotoUrl!,
                     width: double.infinity,
                     height: double.infinity,
                     fit: BoxFit.cover,
@@ -427,10 +424,8 @@ class ProfilePhotoGrid extends StatelessWidget {
                       Positioned.fill(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
-                          child: CachedNetworkImage(
-                            fadeInDuration: const Duration(milliseconds: 0),
-                            fadeOutDuration: const Duration(milliseconds: 0),
-                            imageUrl: slot,
+                          child: SupaPhoto(
+                            imageSource: slot,
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,

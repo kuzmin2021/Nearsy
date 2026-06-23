@@ -1,6 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '/backend/supabase/supabase.dart';
 
 class MatchCelebrationWidget extends StatefulWidget {
   const MatchCelebrationWidget({
@@ -117,13 +118,11 @@ class _MatchCelebrationWidgetState extends State<MatchCelebrationWidget>
         child: const Icon(Icons.person, size: 64, color: Colors.grey),
       );
     }
-    return CachedNetworkImage(
-      imageUrl: url,
+    return SupaPhoto(
+      imageSource: url,
       width: size,
       height: size,
       fit: BoxFit.cover,
-      fadeInDuration: Duration.zero,
-      fadeOutDuration: Duration.zero,
     );
   }
 

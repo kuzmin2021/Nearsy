@@ -3,7 +3,6 @@
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart' as emoji;
 import 'package:file_picker/file_picker.dart';
@@ -13,6 +12,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'chat_page_model.dart';
 import '/models/chat_models.dart';
+
+import '/backend/supabase/supabase.dart';
 export 'chat_page_model.dart';
 
 class ChatPageWidget extends StatefulWidget {
@@ -126,18 +127,16 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
         ),
         ClipRRect(
           borderRadius: BorderRadius.circular(32),
-          child: CachedNetworkImage(
-            fadeInDuration: Duration.zero,
-            fadeOutDuration: Duration.zero,
-            imageUrl: _model.partnerAvatar ?? '',
+          child: SupaPhoto(
+            imageSource: _model.partnerAvatar,
             width: 48,
             height: 48,
             fit: BoxFit.cover,
-            placeholder: (_, __) => Container(
+            placeholder: Container(
               color: FloterTheme.of(context).secondaryBackground,
               child: const Icon(Icons.person, size: 24),
             ),
-            errorWidget: (_, __, ___) => Container(
+            errorWidget: Container(
               color: FloterTheme.of(context).secondaryBackground,
               child: const Icon(Icons.person, size: 24),
             ),
@@ -217,18 +216,18 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                             onTap: () => _showFullscreenPhoto(context, msg.photoUrl!),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(6),
-                              child: CachedNetworkImage(
-                                imageUrl: msg.photoUrl!,
+                              child: SupaPhoto(
+                                imageSource: msg.photoUrl!,
                                 width: 120,
                                 height: 120,
                                 fit: BoxFit.cover,
-                                placeholder: (_, __) => const SizedBox(
+                                placeholder: const SizedBox(
                                   width: 120,
                                   height: 120,
                                   child: Center(
                                       child: CircularProgressIndicator()),
                                 ),
-                                errorWidget: (_, __, ___) => Container(
+                                errorWidget: Container(
                                   width: 120,
                                   height: 120,
                                   color: theme.secondaryBackground,
@@ -378,15 +377,15 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
           children: [
             Center(
               child: InteractiveViewer(
-                child: CachedNetworkImage(
-                  imageUrl: photoUrl,
+                child: SupaPhoto(
+                  imageSource: photoUrl,
                   fit: BoxFit.contain,
                   width: double.infinity,
                   height: double.infinity,
-                  placeholder: (_, __) => const Center(
+                  placeholder: const Center(
                     child: CircularProgressIndicator(),
                   ),
-                  errorWidget: (_, __, ___) => const Icon(Icons.broken_image, size: 64, color: Colors.white),
+                  errorWidget: const Icon(Icons.broken_image, size: 64, color: Colors.white),
                 ),
               ),
             ),

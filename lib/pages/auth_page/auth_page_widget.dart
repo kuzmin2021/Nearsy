@@ -130,22 +130,20 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FloterTheme.of(context).primaryBackground,
-        body: Stack(
-          children: [
-            Positioned.fill(
-              child: Image.asset(
-                'assets/images/start_screen_bg.png',
-                fit: BoxFit.cover,
-              ),
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/start_screen_bg.png'),
+              fit: BoxFit.cover,
             ),
-            Positioned.fill(
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Color(0x66FFFFFF),
-                ),
-              ),
-            ),
-            SafeArea(
+          ),
+          child: Container(
+            width: double.infinity,
+            height: double.infinity,
+            color: const Color(0x66FFFFFF),
+            child: SafeArea(
               top: true,
               child: LayoutBuilder(
                 builder: (context, constraints) {
@@ -311,14 +309,14 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                           ),
                         ),
                       ],
-                    ),
-                  );
-                },
-              ),
-            ),
-          ],
+                ),
+              );
+            },
+          ),
         ),
       ),
+    ),
+  ),
     );
   }
 }

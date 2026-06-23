@@ -8,7 +8,6 @@ import '/services/profile/profile_localization.dart';
 import 'dart:ui';
 import '/floter/custom_functions.dart' as functions;
 import '/index.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
@@ -579,12 +578,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           8.0),
-                                                  child: CachedNetworkImage(
-                                                    fadeInDuration: Duration(
-                                                        milliseconds: 0),
-                                                    fadeOutDuration: Duration(
-                                                        milliseconds: 0),
-                                                    imageUrl: _model
+                                                  child: SupaPhoto(
+                                                    imageSource: _model
                                                         .profileMainPhotoUrl!,
                                                     width: double.infinity,
                                                     height: double.infinity,
@@ -1186,12 +1181,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             8.0),
-                                                    child: CachedNetworkImage(
-                                                      fadeInDuration: Duration(
-                                                          milliseconds: 0),
-                                                      fadeOutDuration: Duration(
-                                                          milliseconds: 0),
-                                                      imageUrl:
+                                                    child: SupaPhoto(
+                                                      imageSource:
                                                           profileGridSlotItem,
                                                       width: double.infinity,
                                                       height: double.infinity,

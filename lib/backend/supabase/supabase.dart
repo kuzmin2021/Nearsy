@@ -1,37 +1,11 @@
-﻿import 'dart:io';
-
-import 'package:flutter/foundation.dart';
+﻿import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
 
 import '/core/config/app_config.dart';
+import '/floter/floter_theme.dart';
 
 export 'database/database.dart';
-
-class SupaFlowHttpOverrides extends HttpOverrides {
-  @override
-  HttpClient createHttpClient(SecurityContext? context) {
-    return super.createHttpClient(context)
-      ..badCertificateCallback = (cert, host, port) => true;
-  }
-
-  @override
-  HttpClientRequest handleOverrideRequest(
-    HttpClient client,
-    Uri url,
-    String method,
-    HttpClientRequest request,
-  ) {
-    if (url.host == Uri.parse(AppConfig.supabaseUrl).host &&
-        url.path.contains('/storage/v1/')) {
-      final token = SupaFlow.client.auth.currentSession?.accessToken;
-      if (token != null) {
-        request.headers.set('Authorization', 'Bearer $token');
-      }
-      request.headers.set('apikey', AppConfig.supabaseAnonKey);
-    }
-    return request;
-  }
-}
 
 class SupaFlow {
   SupaFlow._();
@@ -42,31 +16,48 @@ class SupaFlow {
   final _supabase = Supabase.instance.client;
   static SupabaseClient get client => instance._supabase;
 
+  static final Map<String, String> _signedUrlCache = {};
+
+  static Future<String> signedPhotoUrl(String bucket, String storagePath) async {
+    final cacheKey = '$bucket:$storagePath';
+    if (_signedUrlCache.containsKey(cacheKey)) {
+      return _signedUrlCache[cacheKey]!;
+    }
+    final encoded = storagePath.split('/').map(Uri.encodeComponent).join('/');
+    final signed = await client.storage
+        .from(bucket)
+        .createSignedUrl(encoded, 604800);
+    _signedUrlCache[cacheKey] = signed;
+    return signed;
+  }
+
   static String userPhotoUrl(String storagePath) {
     final encodedPath =
         storagePath.split('/').map(Uri.encodeComponent).join('/');
-    return '${AppConfig.supabaseUrl}/storage/v1/object/authenticated/user_photos/$encodedPath';
+    return '${AppConfig.supabaseUrl}/storage/v1/object/public/user_photos/$encodedPath';
   }
 
   static String chatPhotoUrl(String storagePath) {
     final encodedPath =
         storagePath.split('/').map(Uri.encodeComponent).join('/');
-    return '${AppConfig.supabaseUrl}/storage/v1/object/authenticated/chat_photos/$encodedPath';
+    return '${AppConfig.supabaseUrl}/storage/v1/object/public/chat_photos/$encodedPath';
   }
 
-  static Map<String, String> get authHeaders {
-    final token = client.auth.currentSession?.accessToken;
-    return {
-      if (token != null) 'Authorization': 'Bearer $token',
-      'apikey': AppConfig.supabaseAnonKey,
-    };
+  static Future<String> resolveDisplayUrl(dynamic raw) async {
+    final path = raw is String ? raw.trim() : '';
+    if (path.isEmpty) return '';
+    if (path.startsWith('http') && !path.contains('/storage/v1/')) {
+      return path;
+    }
+    final storagePath = storagePathFromPhotoUrl(path) ?? path;
+    if (path.contains('chat_photos') || storagePath.contains('chat_photos')) {
+      return signedPhotoUrl('chat_photos', storagePath);
+    }
+    return signedPhotoUrl('user_photos', storagePath);
   }
 
   static String? resolvePhotoUrl(dynamic raw) {
-    final path = raw is String ? raw.trim() : '';
-    if (path.isEmpty) return '';
-    if (path.startsWith('http')) return path;
-    return userPhotoUrl(path);
+    return raw is String ? raw.trim() : null;
   }
 
   static bool isValidPhotoUrl(String? url) {
@@ -82,9 +73,15 @@ class SupaFlow {
   static String? storagePathFromPhotoUrl(String photoUrl) {
     final uri = Uri.tryParse(photoUrl.trim());
     if (uri == null) return null;
-    const markerPublic = '/storage/v1/object/public/user_photos/';
-    const markerAuth = '/storage/v1/object/authenticated/user_photos/';
-    for (final marker in [markerAuth, markerPublic]) {
+    const markers = [
+      '/storage/v1/object/public/user_photos/',
+      '/storage/v1/object/authenticated/user_photos/',
+      '/storage/v1/object/sign/user_photos/',
+      '/storage/v1/object/public/chat_photos/',
+      '/storage/v1/object/authenticated/chat_photos/',
+      '/storage/v1/object/sign/chat_photos/',
+    ];
+    for (final marker in markers) {
       final index = uri.path.indexOf(marker);
       if (index >= 0) {
         final encodedPath = uri.path.substring(index + marker.length);
@@ -107,6 +104,58 @@ class SupaFlow {
       debug: false,
       authOptions:
           FlutterAuthClientOptions(authFlowType: AuthFlowType.implicit),
+    );
+  }
+}
+
+class SupaPhoto extends StatelessWidget {
+  const SupaPhoto({
+    super.key,
+    required this.imageSource,
+    this.width,
+    this.height,
+    this.fit = BoxFit.cover,
+    this.placeholder,
+    this.errorWidget,
+    this.fadeInDuration = Duration.zero,
+    this.fadeOutDuration = Duration.zero,
+  });
+
+  final dynamic imageSource;
+  final double? width;
+  final double? height;
+  final BoxFit fit;
+  final Widget? placeholder;
+  final Widget? errorWidget;
+  final Duration fadeInDuration;
+  final Duration fadeOutDuration;
+
+  @override
+  Widget build(BuildContext context) {
+    final defaultPlaceholder = placeholder ??
+        Container(color: FloterTheme.of(context).secondaryBackground);
+    final defaultError = errorWidget ?? defaultPlaceholder;
+
+    if (imageSource == null ||
+        (imageSource is String && (imageSource as String).isEmpty)) {
+      return defaultPlaceholder;
+    }
+
+    return FutureBuilder<String>(
+      future: SupaFlow.resolveDisplayUrl(imageSource),
+      builder: (_, snap) {
+        if (!snap.hasData) return defaultPlaceholder;
+        return CachedNetworkImage(
+          imageUrl: snap.data!,
+          width: width,
+          height: height,
+          fit: fit,
+          fadeInDuration: fadeInDuration,
+          fadeOutDuration: fadeOutDuration,
+          placeholder: (_, __) => defaultPlaceholder,
+          errorWidget: (_, __, ___) => defaultError,
+        );
+      },
     );
   }
 }

@@ -5,7 +5,6 @@ import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/auth/supabase_auth/auth_util.dart';
 import '/index.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -321,18 +320,16 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(25),
-                child: CachedNetworkImage(
-                  fadeInDuration: Duration.zero,
-                  fadeOutDuration: Duration.zero,
-                  imageUrl: SupaFlow.safePhotoUrl(conv.otherUserAvatar) ?? '',
+                child: SupaPhoto(
+                  imageSource: conv.otherUserAvatar,
                   width: 80,
                   height: 80,
                   fit: BoxFit.cover,
-                  placeholder: (_, __) => Container(
+                  placeholder: Container(
                     color: theme.secondaryBackground,
                     child: const Icon(Icons.person, size: 40),
                   ),
-                  errorWidget: (_, __, ___) => Container(
+                  errorWidget: Container(
                     color: theme.secondaryBackground,
                     child: const Icon(Icons.person, size: 40),
                   ),

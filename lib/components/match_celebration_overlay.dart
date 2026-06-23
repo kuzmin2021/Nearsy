@@ -1,7 +1,8 @@
 import '/floter/floter_theme.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '/backend/supabase/supabase.dart';
 
 class MatchCelebrationOverlay extends StatefulWidget {
   const MatchCelebrationOverlay({
@@ -241,11 +242,11 @@ class _MatchCelebrationOverlayState extends State<MatchCelebrationOverlay>
         child: const Icon(Icons.person, size: 48.0, color: Colors.white54),
       );
     }
-    return CachedNetworkImage(
-      imageUrl: url,
+    return SupaPhoto(
+      imageSource: url,
       fit: BoxFit.cover,
       fadeInDuration: const Duration(milliseconds: 300),
-      errorWidget: (_, __, ___) => Container(
+      errorWidget: Container(
         color: Colors.white.withValues(alpha: 0.3),
         child: const Icon(Icons.person, size: 48.0, color: Colors.white54),
       ),

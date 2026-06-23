@@ -5,10 +5,11 @@ import '/floter/floter_util.dart';
 import '/floter/floter_widgets.dart';
 import '/pages/people_page/people_page_model.dart' show DiscoveryProfile;
 import '/index.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'nearby_page_model.dart';
+
+import '/backend/supabase/supabase.dart';
 export 'nearby_page_model.dart';
 
 class NearbyPageWidget extends StatefulWidget {
@@ -349,16 +350,12 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
           ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
             child: hasPhotos
-                ? CachedNetworkImage(
-                    fadeInDuration: Duration.zero,
-                    fadeOutDuration: Duration.zero,
-                    imageUrl: profile.photos.first,
+                ? SupaPhoto(
+                    imageSource: profile.photos.first,
                     width: double.infinity,
                     height: 230.0,
                     fit: BoxFit.cover,
-                    placeholder: (_, __) =>
-                        Container(color: theme.secondaryBackground),
-                    errorWidget: (_, __, ___) => Container(
+                    errorWidget: Container(
                       color: theme.secondaryBackground,
                       child: Icon(Icons.person,
                           size: 60, color: theme.alternate),
