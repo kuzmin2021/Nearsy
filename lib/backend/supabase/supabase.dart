@@ -1,9 +1,12 @@
 ﻿import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
 
+import '/backend/supabase/offline_aware_http_client.dart';
 import '/core/config/app_config.dart';
 import '/floter/floter_theme.dart';
+import '/services/connectivity_service.dart';
 
 export 'database/database.dart';
 
@@ -91,7 +94,7 @@ class SupaFlow {
     return null;
   }
 
-  static Future initialize() {
+  static Future initialize(ConnectivityService connectivityService) {
     final url = AppConfig.supabaseUrl;
     debugPrint('Supabase URL: $url');
 
@@ -102,6 +105,10 @@ class SupaFlow {
       },
       anonKey: AppConfig.supabaseAnonKey,
       debug: false,
+      httpClient: OfflineAwareHttpClient(
+        http.Client(),
+        connectivityService,
+      ),
       authOptions:
           FlutterAuthClientOptions(authFlowType: AuthFlowType.implicit),
     );

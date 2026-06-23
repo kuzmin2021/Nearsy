@@ -29,7 +29,8 @@ void main() async {
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
-  await SupaFlow.initialize();
+  final connectivityService = ConnectivityService();
+  await SupaFlow.initialize(connectivityService);
 
   final appLinks = AppLinks();
   appLinks.uriLinkStream.listen((uri) {
@@ -50,7 +51,7 @@ void main() async {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (context) => appState),
-      ChangeNotifierProvider(create: (_) => ConnectivityService()..init()),
+      ChangeNotifierProvider(create: (_) => connectivityService),
     ],
     child: MyApp(),
   ));
