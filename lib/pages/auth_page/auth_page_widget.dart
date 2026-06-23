@@ -37,9 +37,11 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
     _model = createModel(context, () => AuthPageModel());
 
     _model.emailFieldTextController ??= TextEditingController();
+    _model.emailFieldTextController!.text = 'ak@test.ru';
     _model.emailFieldFocusNode ??= FocusNode();
 
     _model.passwordFieldTextController ??= TextEditingController();
+    _model.passwordFieldTextController!.text = 'Test123!';
     _model.passwordFieldFocusNode ??= FocusNode();
   }
 
