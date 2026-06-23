@@ -1,5 +1,7 @@
 ﻿{
-  "connection.offline_message": "Нет подключения к интернету. Проверьте сеть.",
+    "connection": {
+    "offline_message": "Нет подключения к интернету. Проверьте сеть."
+  },
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Встречаемся рядом. Будь проще",

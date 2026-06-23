@@ -1,5 +1,7 @@
 ﻿{
-  "connection.offline_message": "لا يوجد اتصال بالإنترنت. يرجى التحقق من الشبكة.",
+    "connection": {
+    "offline_message": "لا يوجد اتصال بالإنترنت. يرجى التحقق من الشبكة."
+  },
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "لقاء قريب. اجعل الأمر سهلاً",

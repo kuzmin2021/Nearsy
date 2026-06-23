@@ -1,5 +1,7 @@
 ﻿{
-  "connection.offline_message": "İnternet bağlantısı yok. Lütfen ağınızı kontrol edin.",
+    "connection": {
+    "offline_message": "İnternet bağlantısı yok. Lütfen ağınızı kontrol edin."
+  },
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Yakında buluşalım. Sakin ol",

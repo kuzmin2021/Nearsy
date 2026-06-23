@@ -1,5 +1,7 @@
 ﻿{
-  "connection.offline_message": "कोई इंटरनेट कनेक्शन नहीं। कृपया अपना नेटवर्क जांचें।",
+    "connection": {
+    "offline_message": "कोई इंटरनेट कनेक्शन नहीं। कृपया अपना नेटवर्क जांचें।"
+  },
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "पास मिलो. इसे आसान रखें",

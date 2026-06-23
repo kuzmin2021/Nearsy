@@ -1,5 +1,7 @@
 ﻿{
-  "connection.offline_message": "冇網絡連接。請檢查你嘅網絡。",
+    "connection": {
+    "offline_message": "冇網絡連接。請檢查你嘅網絡。"
+  },
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "喺附近見面。保持輕鬆",

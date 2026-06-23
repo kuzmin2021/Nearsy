@@ -1,5 +1,7 @@
 ﻿{
-  "connection.offline_message": "کوئی انٹرنیٹ کنکشن نہیں۔ براہ کرم اپنا نیٹ ورک چیک کریں۔",
+    "connection": {
+    "offline_message": "کوئی انٹرنیٹ کنکشن نہیں۔ براہ کرم اپنا نیٹ ورک چیک کریں۔"
+  },
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "قریب سے ملو۔ اسے آسان رکھیں",

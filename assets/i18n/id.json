@@ -1,5 +1,7 @@
 ﻿{
-  "connection.offline_message": "Tidak ada koneksi internet. Silakan periksa jaringan Anda.",
+    "connection": {
+    "offline_message": "Tidak ada koneksi internet. Silakan periksa jaringan Anda."
+  },
   "auth": {
     "nearsy": "Nearsy",
     "meet_near_keep_it_easy": "Bertemu dekat. Tetap mudah",
