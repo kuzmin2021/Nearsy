@@ -95,11 +95,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
     }
     safeSetState(() => _model.socialAuthInProgress = true);
 
-    GoRouter.of(context).prepareAuthEvent();
-    final user = await signIn(context);
-    if (user != null) {
-      await _finishAuth();
-    }
+    await signIn(context);
 
     if (mounted) {
       safeSetState(() => _model.socialAuthInProgress = false);

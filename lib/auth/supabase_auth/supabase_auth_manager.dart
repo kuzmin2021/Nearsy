@@ -138,23 +138,15 @@ class SupabaseAuthManager extends AuthManager
     try {
       final launched = await SupaFlow.client.auth.signInWithOAuth(
         provider,
-        redirectTo: kIsWeb ? Uri.base.origin : 'nearsy://nearsy.com',
+        redirectTo: kIsWeb ? Uri.base.origin : 'nearsy://nearsy.online',
       );
       if (!launched) {
         ScaffoldMessenger.of(context).hideCurrentSnackBar();
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Could not start social sign in.')),
         );
-        return null;
       }
-
-      final user = SupaFlow.client.auth.currentUser;
-      final authUser = user == null ? null : NearsySupabaseUser(user);
-      if (authUser != null) {
-        currentUser = authUser;
-        AppStateNotifier.instance.update(authUser);
-      }
-      return authUser;
+      return null;
     } on AuthException catch (e) {
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(

@@ -60,3 +60,4 @@ app.*.map.json
 # Supabase local development
 supabase/.branches/
 supabase/.temp/
+supabase/ssl/

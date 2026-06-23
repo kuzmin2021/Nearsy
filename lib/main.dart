@@ -1,6 +1,7 @@
 ﻿import 'dart:async';
 import 'dart:ui' show PlatformDispatcher;
 
+import 'package:app_links/app_links.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
@@ -27,6 +28,11 @@ void main() async {
   usePathUrlStrategy();
 
   await SupaFlow.initialize();
+
+  final appLinks = AppLinks();
+  appLinks.uriLinkStream.listen((uri) {
+    SupaFlow.client.auth.getSessionFromUrl(uri);
+  });
 
   await FloterTheme.initialize();
 

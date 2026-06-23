@@ -1,6 +1,3 @@
-import 'package:flutter/foundation.dart';
-import 'dart:io' show Platform;
-
 class AppConfig {
   static String get supabaseUrl {
     const envUrl = String.fromEnvironment('SUPABASE_URL');
@@ -9,25 +6,7 @@ class AppConfig {
       return envUrl;
     }
 
-    if (!kIsWeb &&
-        defaultTargetPlatform == TargetPlatform.android &&
-        _isAndroidEmulator) {
-      return 'http://10.0.2.2:54321';
-    }
-
-    return 'http://thecashcow.xyz:8000';
-  }
-
-  static bool get _isAndroidEmulator {
-    if (!Platform.isAndroid) {
-      return false;
-    }
-
-    final details = Platform.operatingSystemVersion.toLowerCase();
-    return details.contains('sdk_gphone') ||
-        details.contains('emulator') ||
-        details.contains('android sdk built for x86') ||
-        details.contains('generic');
+    return 'https://nearsy.online';
   }
 
   static String get supabaseAnonKey {

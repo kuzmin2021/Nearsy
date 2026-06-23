@@ -29,7 +29,7 @@ flutter run -d chrome
 
 ```bash
 flutter run \
-  --dart-define=SUPABASE_URL=http://thecashcow.xyz:8000 \
+  --dart-define=SUPABASE_URL=https://nearsy.online \
   --dart-define=SUPABASE_ANON_KEY=sb_publishable_xxx
 ```
 
@@ -51,7 +51,7 @@ npx supabase start       # запустить контейнеры
 
 | Сервис | URL |
 |---|---|
-| REST API | `http://thecashcow.xyz:8000` |
+| REST API | `https://nearsy.online` |
 | Studio (UI) | `http://127.0.0.1:54323` |
 | Postgres | `postgresql://postgres:postgres@127.0.0.1:54322/postgres` |
 | Mailpit | `http://127.0.0.1:54324` |
