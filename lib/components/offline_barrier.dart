@@ -32,17 +32,15 @@ class OfflineBarrier extends StatelessWidget {
 
   Widget _buildBanner(BuildContext context) {
     final labels = AppLabels.of(context);
-    final theme = FloterTheme.of(context);
 
     return Positioned(
-      top: 0,
+      bottom: 0,
       left: 0,
       right: 0,
       child: SafeArea(
-        bottom: false,
+        top: false,
         child: Material(
-          elevation: 4,
-          color: theme.error,
+          color: Colors.red.shade700,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             child: Row(
