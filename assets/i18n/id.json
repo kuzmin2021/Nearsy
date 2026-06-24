@@ -1,422 +1,427 @@
 ﻿{
-    "connection": {
-    "offline_message": "Tidak ada koneksi internet. Silakan periksa jaringan Anda."
-  },
-  "auth": {
-    "nearsy": "Nearsy",
-    "meet_near_keep_it_easy": "Bertemu dekat. Tetap mudah",
-    "continue_with_email": "Lanjutkan dengan email",
-    "continue_with_phone": "Lanjutkan dengan telepon",
-    "by_signing_up_you_agree_to_the_terms_of": "Dengan mendaftar, Anda menyetujui Ketentuan",
-    "service_and_privacy_policy": "Layanan dan Kebijakan Privasi"
-  },
-  "profile": {
-    "title": "Profil",
-    "name": "Nama",
-    "catchphrase": "Frase menarik",
-    "about_me": "Tentang saya",
-    "gender": "Jenis Kelamin",
-    "age": "Usia",
-    "height": "Tinggi",
-    "work": "Pekerjaan",
-    "education": "Pendidikan",
-    "kids": "Anak",
-    "preferred_relationships": "Hubungan yang diinginkan",
-    "beliefs": "Keyakinan",
-    "body_type": "Tipe tubuh",
-    "exercise": "Olahraga",
-    "drinking": "Minum alkohol",
-    "smoking": "Merokok",
-    "profile_alt": "Profil"
-  },
-  "people": {
-    "nearsy": "Nearsy",
-    "guess_what_i": "Guess what I",
-    "title": "Orang"
-  },
-  "liked_you": {
-    "title": "Menyukai Anda",
-    "all_3": "Semua 3",
-    "filter_matches_0": "Filter cocok dengan 0",
-    "outside_3": "Di luar 3",
-    "all_filter": "Semua",
-    "matches_filter": "Cocok",
-    "outside_filter": "Di luar",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Belum ada suka",
-    "tab_label": "Menyukai Anda"
-  },
-  "matches": {
-    "chats": "Obrolan",    "tab_label": "Obrolan"
-  },
-  "chat": {
-    "write_a_message": "Pesan",
-    "no_messages": "Tidak ada pesan"
-  },
-  "account_settings": {
-    "title": "Pengaturan akun",
-    "member_id": "ID anggota",
-    "email": "Email",
-    "phone": "Telepon",
-    "password": "Kata sandi",
-    "edit_email": "Sunting",
-    "edit_phone": "Sunting",
-    "edit_password": "Sunting",
-    "email_authentication": "Otentikasi email",
-    "two_factor_authentication": "Autentikasi dua faktor",
-    "manage": "Kelola",
-    "notifications": "Notifikasi",
-    "push_notifications": "Pemberitahuan Dorong",
-    "matches": "Match",
-    "messages": "Pesan",
-    "liked_you": "Menyukaimu",
-    "email_notifications": "Pemberitahuan Email",
-    "matches_email": "Match",
-    "messages_email": "Pesan",
-    "liked_you_email": "Menyukaimu",
-    "feedback": "Masukan",
-    "hide_account": "Sembunyikan akun",
-    "delete_account": "Hapus akun",
-    "log_out": "Keluar",
-    "chats": "Obrolan"
-  },
-  "search_preferences": {
-    "title": "Preferensi pencarian",
-    "who_you_want_to_date": "Siapa yang ingin Anda kencani:",
-    "women": "Wanita",
-    "men": "Laki-laki",
-    "other_gender": "Lainnya",
-    "age": "Usia:",
-    "between_20_and_50": "Antara 20 dan 50",
-    "search_radius": "Radius pencarian:",
-    "up_to_161_kilometres_away": "Hingga 161 kilometer jauhnya",
-    "languages_they_know": "Bahasa yang mereka tahu:",
-    "what_are_they_looking_for": "Apa yang mereka cari?",
-    "something_serious": "Sesuatu yang serius",
-    "just_dating": "Hanya berkencan",
-    "just_fun": "Menyenangkan sekali",
-    "open_to_anything": "Terbuka untuk apa pun",
-    "not_sure": "Tidak yakin",
-    "what_are_their_beliefs": "Apa keyakinan mereka?",
-    "agnostic": "Agnostik",
-    "atheist": "Ateis",
-    "buddhist": "Budha",
-    "christian": "Kristen",
-    "jewish": "Yahudi",
-    "muslim": "Muslim",
-    "other_beliefs": "Lainnya",
-    "do_they_exercise": "Apakah mereka berolahraga?",
-    "regularly": "Secara teratur",
-    "occasionally": "Kadang-kadang",
-    "rarely": "Jarang",
-    "do_they_drink": "Apakah mereka minum?",
-    "yes_drink": "Ya",
-    "occasionally_drink": "Kadang-kadang",
-    "rarely_drink": "Jarang",
-    "no_drink": "Tidak",
-    "do_they_smoke": "Apakah mereka merokok?",
-    "yes_smoke": "Ya",
-    "sometimes": "Terkadang",
-    "no_smoke": "Tidak",
-    "trying_to_quit": "Mencoba untuk berhenti",
-    "nearby_visibility": "Visibilitas terdekat",
-    "apply_filters": "Terapkan filter"
-  },
-  "nearby_search_preferences": {
-    "title": "Preferensi Pencarian Terdekat",
-    "choose_how_visible_your_location_is_you_can_change_this_anytime": "Pilih seberapa terlihat lokasi Anda. Anda dapat mengubahnya kapan saja.",
-    "visibility_modes": "Mode visibilitas:",
-    "invisible": "Tak terlihat",
-    "visible_while_using_the_app": "Terlihat saat menggunakan aplikasi",
-    "your_last_location": "Lokasi terakhir Anda",
-    "to_update_your_status_go_to_profile_settings_location": "Untuk memperbarui status Anda, buka Pengaturan Profil > Lokasi.",
-    "save_visibility": "Simpan visibilitas"
-  },
-  "chat_preferences": {
-    "title": "Preferensi Obrolan",
-    "choose_who_can_message_you_you_can_change_this_anytime": "Pilih siapa yang dapat mengirimi Anda pesan. Anda dapat mengubahnya kapan saja.",
-    "availability_modes": "Mode ketersediaan:",
-    "unavailable": "Tidak tersedia",
-    "matched_users_only": "Hanya pengguna yang cocok",
-    "available": "Tersedia",
-    "stuff_i_could_talk_about_for_hours": "Hal-hal yang dapat saya bicarakan selama berjam-jam:",
-    "obscure_scifi_films_with_depressing_endings": "Film fiksi ilmiah yang tidak jelas dengan akhir yang menyedihkan",
-    "save_chat_preferences": "Simpan preferensi obrolan"
-  },
-  "matches_block": {
-    "block_message": "Pengguna tidak lagi dapat mengirim pesan atau melihat profil Anda",
-    "delete_message": "Hapus percakapan ini",
-    "cancel": "Batal",
-    "ok": "Ok",
-    "report_message": "Laporkan pengguna ini"
-  },
-  "report_user": {
-    "title": "Ceritakan apa yang terjadi",
-    "submit": "Kirim",
-    "ok": "Ok",
-    "thank_you": "Terima kasih atas laporan Anda. Tim kami telah menerimanya dan akan meninjau kasus ini segera. Jika diperlukan informasi lebih lanjut, kami akan menghubungi Anda melalui email.",
-    "description_hint": "Jelaskan apa yang terjadi..."
-  },
-  "contact_us": {
-    "title": "Hubungi kami",
-    "let_us_know_what_you_think": "Beri tahu kami pendapat Anda...",
-    "submit": "Kirim",
-    "your_email": "Email Anda",
-    "message_required": "Masukkan pesan.",
-    "submit_success": "Terima kasih atas masukan Anda.",
-    "submit_error": "Tidak dapat mengirim masukan."
-  },
-  "hide_account": {
-    "title": "Sembunyikan akun",
-    "hide": "Sembunyikan",
-    "label_1": "Sembunyikan profil saat kamu tidak ingin bertemu seseorang; yang lain tetap sama.",
-    "already_hidden_label": "Profil kamu disembunyikan. Tampilkan lagi saat kamu siap bertemu seseorang.",
-    "unhide": "Tampilkan",
-    "hide_success": "Akun disembunyikan.",
-    "unhide_success": "Akun terlihat.",
-    "save_error": "Tidak dapat memperbarui akun."
-  },
-  "delete_account": {
-    "title": "Hapus akun",
-    "are_you_sure": "Apakah kamu yakin?",
-    "absolutely": "Tentu saja",
-    "not_quite": "Kurang tepat",
-    "label_1": "Ini akan menghapus data akun, menyembunyikan profil, dan mengeluarkan kamu.",
-    "delete_success": "Akun dihapus.",
-    "delete_error": "Tidak dapat menghapus akun."
-  },
-  "profile_about_me": {
-    "about_me": "Tentang saya:",
-    "no_pressure_leave_it_blank_if_you_like": "Tidak perlu dipaksa - biarkan kosong jika mau."
-  },
-  "profile_gender": {
-    "gender": "Jenis Kelamin:"
-  },
-  "profile_age": {
-    "when_were_you_born": "Kapan Anda lahir:",
-    "day": "Hari",
-    "month": "Bulan",
-    "year": "Tahun",
-    "optional": "Opsional",
-    "day_placeholder": "--",
-    "month_placeholder": "--",
-    "year_placeholder": "--"
-  },
-  "months": {
-    "january": "Januari",
-    "february": "Februari",
-    "march": "Maret",
-    "april": "April",
-    "may": "Mei",
-    "june": "Juni",
-    "july": "Juli",
-    "august": "Agustus",
-    "september": "September",
-    "october": "Oktober",
-    "november": "November",
-    "december": "Desember"
-  },
-  "profile_height": {
-    "my_height": "Tinggi:",
-    "enter_your_height": "Masukkan tinggi badan Anda",
-    "ft": "kaki",
-    "cm": "cm"
-  },
-  "profile_body_type": {
-    "my_body_type": "Tipe tubuh:"
-  },
-  "profile_work": {
-    "my_work": "Pekerjaan:",
-    "what_do_you_do": "Apa pekerjaan Anda?"
-  },
-  "profile_education": {
-    "my_education": "Pendidikan:",
-    "pick_the_closest_match": "Pilih yang paling sesuai"
-  },
-  "profile_kids": {
-    "kids": "Anak:"
-  },
-  "profile_relationship": {
-    "my_preferred_relationship": "Hubungan yang diinginkan:",
-    "what_are_you_looking_for": "Apa yang Anda cari?"
-  },
-  "profile_religion": {
-    "my_beliefs": "Keyakinan:"
-  },
-  "profile_exercise": {
-    "exercise": "Olahraga:",
-    "any_form_of_physical_activity": "Aktivitas fisik dalam bentuk apa pun"
-  },
-  "profile_drinking": {
-    "my_drinking_habits": "Minum alkohol:",
-    "choose_what_best_describes_your_alcohol_use": "Pilih yang paling menggambarkan penggunaan alkohol Anda."
-  },
-  "profile_smoking": {
-    "my_smoking_habits": "Merokok:",
-    "do_you_smoke": "Apakah Anda merokok?"
-  },
-  "profile_location": {
-    "my_location": "Lokasi saya:",
-    "automatically_detect_my_location_recommended": "Deteksi lokasi saya secara otomatis (disarankan)",
-    "status_in_nearby_local": "Status di Terdekat: Lokal",
-    "i_will_set_my_location_manually": "Saya akan mengatur lokasi saya secara manual",
-    "select_location": "Pilih lokasi..."
-  },
-  "nearby": {
-    "title": "Terdekat",
-    "filters": "Filter",
-    "visibility": "Visibilitas",
-    "tab_label": "Terdekat"
-  },
-  "email_auth": {
-    "sign_in_with_email": "Masuk dengan email",
-    "use_your_email_and_password_or_create_a_new_account": "Gunakan email dan kata sandi Anda, atau buat akun baru.",
-    "sign_in": "Masuk",
-    "register": "Daftar",
-    "email_address": "Alamat email",
-    "password": "Kata sandi",
-    "repeat_password": "Ulangi kata sandi",
-    "create_account": "Buat akun",
-    "forgot_password": "Lupa kata sandi?",
-    "continue_button": "Lanjutkan",
-    "or_sign_up_with": "Atau daftar dengan",
-    "or_sign_in_with": "Atau masuk dengan",
-    "continue_with_google": "Lanjutkan dengan Google",
-    "continue_with_apple": "Lanjutkan dengan Apple",
-    "already_have_account": "Sudah punya akun?",
-    "dont_have_account": "Belum punya akun?",
-    "sign_in_here": "Masuk di sini",
-    "sign_up_here": "Daftar di sini",
-    "enter_email": "Masukkan alamat email Anda.",
-    "enter_password": "Masukkan kata sandi Anda."
-  },
-  "phone_auth": {
-    "title": "Otentikasi telepon",
-    "phone_verification_is_not_implemented_yet": "Verifikasi telepon belum diterapkan."
-  },
-  "verify_number": {
-    "title": "Verifikasi nomor",
-    "sms_verification_is_not_implemented_yet": "Verifikasi SMS belum diterapkan."
-  },
-  "reset_password": {
-    "title": "Atur ulang kata sandi",
-    "enter_your_email_and_we_will_send_a_password_reset_link": "Masukkan email Anda dan kami akan mengirimkan tautan pengaturan ulang kata sandi.",
-    "email_address": "Alamat email",
-    "send_reset_link": "Kirim tautan setel ulang"
-  },
-  "update_password": {
-    "title": "Perbarui kata sandi",
-    "choose_a_new_password_for_your_nearsy_account": "Pilih kata sandi baru untuk akun Nearsy Anda.",
-    "new_password": "Kata sandi baru",
-    "repeat_password": "Ulangi kata sandi",
-    "submit_button": "Perbarui kata sandi"
-  },
-  "nearsy_bottom_nav": {
-    "profile": "Profil",
-    "people": "Orang",
-    "nearby": "Terdekat",
-    "liked_you": "Menyukai Anda",
-    "chats": "Obrolan"
-  },
-  "profile_attributes": {
-    "gender": {
-      "woman": "Wanita",
-      "man": "Bung",
-      "non_binary": "Non-biner",
-      "other": "Lainnya"
-    },
-    "education": {
-      "high_school": "SMA",
-      "currently_studying": "Sedang Belajar",
-      "trade_qualification": "Kualifikasi Perdagangan",
-      "bachelors_degree": "Gelar Sarjana",
-      "masters_degree": "Gelar Master",
-      "doctorate_phd": "Doktor/PhD",
-      "postgraduate": "Pascasarjana",
-      "other": "Lainnya",
-      "prefer_not_to_say": "Memilih untuk tidak mengatakannya"
-    },
-    "kids": {
-      "yes": "Ya",
-      "no": "Tidak",
-      "prefer_not_to_say": "Memilih untuk tidak mengatakannya"
-    },
-    "relationship_type": {
-      "something_serious": "Sesuatu yang Serius",
-      "just_dating": "Hanya Berkencan",
-      "just_fun": "Hanya Menyenangkan",
-      "open_to_anything": "Terbuka untuk Apa Pun",
-      "not_sure": "Tidak yakin"
-    },
-    "religion": {
-      "agnostic": "Agnostik",
-      "atheist": "Ateis",
-      "buddhist": "Budha",
-      "christian": "Kristen",
-      "hindu": "Hindu",
-      "jewish": "Yahudi",
-      "muslim": "Muslim",
-      "sikh": "Sikh",
-      "spiritual": "Rohani",
-      "other": "Lainnya"
-    },
-    "body_type": {
-      "slim": "Ramping",
-      "lean": "Bersandar",
-      "average": "Rata-rata",
-      "fit": "Cocok",
-      "athletic": "Atletik",
-      "muscular": "Berotot",
-      "broad": "Luas",
-      "stocky": "kekar",
-      "bigger": "Lebih besar",
-      "curvy": "Melengkung",
-      "prefer_not_to_say": "Memilih untuk tidak mengatakannya"
-    },
-    "exercise": {
-      "regularly": "Secara teratur",
-      "occasionally": "Kadang-kadang",
-      "rarely": "Jarang",
-      "never": "Tidak pernah"
-    },
-    "drinking": {
-      "yes": "Ya",
-      "occasionally": "Kadang-kadang",
-      "rarely": "Jarang",
-      "no": "Tidak",
-      "stopped_for_now": "Berhenti untuk saat ini"
-    },
-    "smoking": {
-      "yes": "Ya",
-      "sometimes": "Terkadang",
-      "no": "Tidak",
-      "trying_to_quit": "Mencoba untuk berhenti"
-    }
-  },
-  "languages": {
-    "afar": "Jauh",
-    "afrikaans": "Afrikaans",
-    "albanian": "Albania",
-    "amharic": "Amharik",
-    "arabic": "Arab",
-    "armenian": "orang Armenia",
-    "bengali": "bahasa Bengali",
-    "catalan": "Katalan",
-    "english": "English",
-    "russian": "Russian",
-    "ukrainian": "Ukrainian"
-  },
-  "account_email": {
-    "edit_title": "Edit email",
-    "add_title": "Tambah email",
-    "label_1": "Masukkan email yang ingin kamu gunakan untuk akunmu.",
-    "email_address": "Alamat email",
-    "save": "Simpan",
-    "invalid_email": "Masukkan alamat email yang valid.",
-    "confirmation_sent": "Kode konfirmasi dikirim.",
-    "save_error": "Tidak dapat memperbarui email.",
-    "title": "Tambah dan verifikasi email",
-    "your_email": "Email kamu",
-    "code_label": "Masukkan kode yang kami kirim ke email kamu. Kode akan tiba dalam 20 detik.",
-    "resend_code": "Kirim ulang kode"
-  }
+    "connection":  {
+                       "offline_message":  "Tidak ada koneksi internet. Silakan periksa jaringan Anda."
+                   },
+    "auth":  {
+                 "nearsy":  "Nearsy",
+                 "meet_near_keep_it_easy":  "Bertemu dekat. Tetap mudah",
+                 "continue_with_email":  "Lanjutkan dengan email",
+                 "continue_with_phone":  "Lanjutkan dengan telepon",
+                 "by_signing_up_you_agree_to_the_terms_of":  "Dengan mendaftar, Anda menyetujui Ketentuan",
+                 "service_and_privacy_policy":  "Layanan dan Kebijakan Privasi"
+             },
+    "profile":  {
+                    "title":  "Profil",
+                    "name":  "Nama",
+                    "catchphrase":  "Frase menarik",
+                    "about_me":  "Tentang saya",
+                    "gender":  "Jenis Kelamin",
+                    "age":  "Usia",
+                    "height":  "Tinggi",
+                    "work":  "Pekerjaan",
+                    "education":  "Pendidikan",
+                    "kids":  "Anak",
+                    "preferred_relationships":  "Hubungan yang diinginkan",
+                    "beliefs":  "Keyakinan",
+                    "body_type":  "Tipe tubuh",
+                    "exercise":  "Olahraga",
+                    "drinking":  "Minum alkohol",
+                    "smoking":  "Merokok",
+                    "profile_alt":  "Profil"
+                },
+    "people":  {
+                   "nearsy":  "Nearsy",
+                   "guess_what_i":  "Guess what I",
+                   "title":  "Orang"
+               },
+    "liked_you":  {
+                      "title":  "Menyukai Anda",
+                      "all_3":  "Semua 3",
+                      "filter_matches_0":  "Filter cocok dengan 0",
+                      "outside_3":  "Di luar 3",
+                      "all_filter":  "Semua",
+                      "matches_filter":  "Cocok",
+                      "outside_filter":  "Di luar",
+                      "empty_title":  "Nothing yet� but on the bright side, no baggage.",
+                      "empty_body":  "Adjust your filters or show up in Nearby to help the right people find you.",
+                      "empty":  "Belum ada suka",
+                      "tab_label":  "Menyukai Anda"
+                  },
+    "matches":  {
+                    "chats":  "Obrolan",
+                    "tab_label":  "Obrolan"
+                },
+    "chat":  {
+                 "write_a_message":  "Pesan",
+                 "no_messages":  "Tidak ada pesan"
+             },
+    "account_settings":  {
+                             "title":  "Pengaturan akun",
+                             "member_id":  "ID anggota",
+                             "email":  "Email",
+                             "phone":  "Telepon",
+                             "password":  "Kata sandi",
+                             "edit_email":  "Sunting",
+                             "edit_phone":  "Sunting",
+                             "edit_password":  "Sunting",
+                             "email_authentication":  "Otentikasi email",
+                             "two_factor_authentication":  "Autentikasi dua faktor",
+                             "manage":  "Kelola",
+                             "notifications":  "Notifikasi",
+                             "push_notifications":  "Pemberitahuan Dorong",
+                             "matches":  "Match",
+                             "messages":  "Pesan",
+                             "liked_you":  "Menyukaimu",
+                             "email_notifications":  "Pemberitahuan Email",
+                             "matches_email":  "Match",
+                             "messages_email":  "Pesan",
+                             "liked_you_email":  "Menyukaimu",
+                             "feedback":  "Masukan",
+                             "hide_account":  "Sembunyikan akun",
+                             "delete_account":  "Hapus akun",
+                             "log_out":  "Keluar",
+                             "chats":  "Obrolan"
+                         },
+    "search_preferences":  {
+                               "title":  "Preferensi pencarian",
+                               "who_you_want_to_date":  "Siapa yang ingin Anda kencani:",
+                               "women":  "Wanita",
+                               "men":  "Laki-laki",
+                               "other_gender":  "Lainnya",
+                               "age":  "Usia:",
+                               "between_20_and_50":  "Antara 20 dan 50",
+                               "search_radius":  "Radius pencarian:",
+                               "up_to_161_kilometres_away":  "Hingga 161 kilometer jauhnya",
+                               "languages_they_know":  "Bahasa yang mereka tahu:",
+                               "what_are_they_looking_for":  "Apa yang mereka cari?",
+                               "something_serious":  "Sesuatu yang serius",
+                               "just_dating":  "Hanya berkencan",
+                               "just_fun":  "Menyenangkan sekali",
+                               "open_to_anything":  "Terbuka untuk apa pun",
+                               "not_sure":  "Tidak yakin",
+                               "what_are_their_beliefs":  "Apa keyakinan mereka?",
+                               "agnostic":  "Agnostik",
+                               "atheist":  "Ateis",
+                               "buddhist":  "Budha",
+                               "christian":  "Kristen",
+                               "jewish":  "Yahudi",
+                               "muslim":  "Muslim",
+                               "other_beliefs":  "Lainnya",
+                               "do_they_exercise":  "Apakah mereka berolahraga?",
+                               "regularly":  "Secara teratur",
+                               "occasionally":  "Kadang-kadang",
+                               "rarely":  "Jarang",
+                               "do_they_drink":  "Apakah mereka minum?",
+                               "yes_drink":  "Ya",
+                               "occasionally_drink":  "Kadang-kadang",
+                               "rarely_drink":  "Jarang",
+                               "no_drink":  "Tidak",
+                               "do_they_smoke":  "Apakah mereka merokok?",
+                               "yes_smoke":  "Ya",
+                               "sometimes":  "Terkadang",
+                               "no_smoke":  "Tidak",
+                               "trying_to_quit":  "Mencoba untuk berhenti",
+                               "nearby_visibility":  "Visibilitas terdekat",
+                               "apply_filters":  "Terapkan filter"
+                           },
+    "nearby_search_preferences":  {
+                                      "title":  "Preferensi Pencarian Terdekat",
+                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "Pilih seberapa terlihat lokasi Anda. Anda dapat mengubahnya kapan saja.",
+                                      "visibility_modes":  "Mode visibilitas:",
+                                      "invisible":  "Tak terlihat",
+                                      "visible_while_using_the_app":  "Terlihat saat menggunakan aplikasi",
+                                      "your_last_location":  "Lokasi terakhir Anda",
+                                      "to_update_your_status_go_to_profile_settings_location":  "Untuk memperbarui status Anda, buka Pengaturan Profil \u003e Lokasi.",
+                                      "save_visibility":  "Simpan visibilitas",
+                                      "search_radius":  "Radius pencarian:"
+                                  },
+    "chat_preferences":  {
+                             "title":  "Preferensi Obrolan",
+                             "choose_who_can_message_you_you_can_change_this_anytime":  "Pilih siapa yang dapat mengirimi Anda pesan. Anda dapat mengubahnya kapan saja.",
+                             "availability_modes":  "Mode ketersediaan:",
+                             "unavailable":  "Tidak tersedia",
+                             "matched_users_only":  "Hanya pengguna yang cocok",
+                             "available":  "Tersedia",
+                             "stuff_i_could_talk_about_for_hours":  "Hal-hal yang dapat saya bicarakan selama berjam-jam:",
+                             "obscure_scifi_films_with_depressing_endings":  "Film fiksi ilmiah yang tidak jelas dengan akhir yang menyedihkan",
+                             "save_chat_preferences":  "Simpan preferensi obrolan"
+                         },
+    "matches_block":  {
+                          "block_message":  "Pengguna tidak lagi dapat mengirim pesan atau melihat profil Anda",
+                          "delete_message":  "Hapus percakapan ini",
+                          "cancel":  "Batal",
+                          "ok":  "Ok",
+                          "report_message":  "Laporkan pengguna ini"
+                      },
+    "report_user":  {
+                        "title":  "Ceritakan apa yang terjadi",
+                        "submit":  "Kirim",
+                        "ok":  "Ok",
+                        "thank_you":  "Terima kasih atas laporan Anda. Tim kami telah menerimanya dan akan meninjau kasus ini segera. Jika diperlukan informasi lebih lanjut, kami akan menghubungi Anda melalui email.",
+                        "description_hint":  "Jelaskan apa yang terjadi..."
+                    },
+    "contact_us":  {
+                       "title":  "Hubungi kami",
+                       "let_us_know_what_you_think":  "Beri tahu kami pendapat Anda...",
+                       "submit":  "Kirim",
+                       "your_email":  "Email Anda",
+                       "message_required":  "Masukkan pesan.",
+                       "submit_success":  "Terima kasih atas masukan Anda.",
+                       "submit_error":  "Tidak dapat mengirim masukan."
+                   },
+    "hide_account":  {
+                         "title":  "Sembunyikan akun",
+                         "hide":  "Sembunyikan",
+                         "label_1":  "Sembunyikan profil saat kamu tidak ingin bertemu seseorang; yang lain tetap sama.",
+                         "already_hidden_label":  "Profil kamu disembunyikan. Tampilkan lagi saat kamu siap bertemu seseorang.",
+                         "unhide":  "Tampilkan",
+                         "hide_success":  "Akun disembunyikan.",
+                         "unhide_success":  "Akun terlihat.",
+                         "save_error":  "Tidak dapat memperbarui akun."
+                     },
+    "delete_account":  {
+                           "title":  "Hapus akun",
+                           "are_you_sure":  "Apakah kamu yakin?",
+                           "absolutely":  "Tentu saja",
+                           "not_quite":  "Kurang tepat",
+                           "label_1":  "Ini akan menghapus data akun, menyembunyikan profil, dan mengeluarkan kamu.",
+                           "delete_success":  "Akun dihapus.",
+                           "delete_error":  "Tidak dapat menghapus akun."
+                       },
+    "profile_about_me":  {
+                             "about_me":  "Tentang saya:",
+                             "no_pressure_leave_it_blank_if_you_like":  "Tidak perlu dipaksa - biarkan kosong jika mau."
+                         },
+    "profile_gender":  {
+                           "gender":  "Jenis Kelamin:"
+                       },
+    "profile_age":  {
+                        "when_were_you_born":  "Kapan Anda lahir:",
+                        "day":  "Hari",
+                        "month":  "Bulan",
+                        "year":  "Tahun",
+                        "optional":  "Opsional",
+                        "day_placeholder":  "--",
+                        "month_placeholder":  "--",
+                        "year_placeholder":  "--"
+                    },
+    "months":  {
+                   "january":  "Januari",
+                   "february":  "Februari",
+                   "march":  "Maret",
+                   "april":  "April",
+                   "may":  "Mei",
+                   "june":  "Juni",
+                   "july":  "Juli",
+                   "august":  "Agustus",
+                   "september":  "September",
+                   "october":  "Oktober",
+                   "november":  "November",
+                   "december":  "Desember"
+               },
+    "profile_height":  {
+                           "my_height":  "Tinggi:",
+                           "enter_your_height":  "Masukkan tinggi badan Anda",
+                           "ft":  "kaki",
+                           "cm":  "cm"
+                       },
+    "profile_body_type":  {
+                              "my_body_type":  "Tipe tubuh:"
+                          },
+    "profile_work":  {
+                         "my_work":  "Pekerjaan:",
+                         "what_do_you_do":  "Apa pekerjaan Anda?"
+                     },
+    "profile_education":  {
+                              "my_education":  "Pendidikan:",
+                              "pick_the_closest_match":  "Pilih yang paling sesuai"
+                          },
+    "profile_kids":  {
+                         "kids":  "Anak:"
+                     },
+    "profile_relationship":  {
+                                 "my_preferred_relationship":  "Hubungan yang diinginkan:",
+                                 "what_are_you_looking_for":  "Apa yang Anda cari?"
+                             },
+    "profile_religion":  {
+                             "my_beliefs":  "Keyakinan:"
+                         },
+    "profile_exercise":  {
+                             "exercise":  "Olahraga:",
+                             "any_form_of_physical_activity":  "Aktivitas fisik dalam bentuk apa pun"
+                         },
+    "profile_drinking":  {
+                             "my_drinking_habits":  "Minum alkohol:",
+                             "choose_what_best_describes_your_alcohol_use":  "Pilih yang paling menggambarkan penggunaan alkohol Anda."
+                         },
+    "profile_smoking":  {
+                            "my_smoking_habits":  "Merokok:",
+                            "do_you_smoke":  "Apakah Anda merokok?"
+                        },
+    "profile_location":  {
+                             "my_location":  "Lokasi saya:",
+                             "automatically_detect_my_location_recommended":  "Deteksi lokasi saya secara otomatis (disarankan)",
+                             "status_in_nearby_local":  "Status di Terdekat: Lokal",
+                             "i_will_set_my_location_manually":  "Saya akan mengatur lokasi saya secara manual",
+                             "select_location":  "Pilih lokasi..."
+                         },
+    "nearby":  {
+                   "title":  "Terdekat",
+                   "filters":  "Filter",
+                   "visibility":  "Visibilitas",
+                   "tab_label":  "Terdekat",
+                   "unknown_location":  "You\u0027re off the map. Allow location access and try again."
+               },
+    "email_auth":  {
+                       "sign_in_with_email":  "Masuk dengan email",
+                       "use_your_email_and_password_or_create_a_new_account":  "Gunakan email dan kata sandi Anda, atau buat akun baru.",
+                       "sign_in":  "Masuk",
+                       "register":  "Daftar",
+                       "email_address":  "Alamat email",
+                       "password":  "Kata sandi",
+                       "repeat_password":  "Ulangi kata sandi",
+                       "create_account":  "Buat akun",
+                       "forgot_password":  "Lupa kata sandi?",
+                       "continue_button":  "Lanjutkan",
+                       "or_sign_up_with":  "Atau daftar dengan",
+                       "or_sign_in_with":  "Atau masuk dengan",
+                       "continue_with_google":  "Lanjutkan dengan Google",
+                       "continue_with_apple":  "Lanjutkan dengan Apple",
+                       "already_have_account":  "Sudah punya akun?",
+                       "dont_have_account":  "Belum punya akun?",
+                       "sign_in_here":  "Masuk di sini",
+                       "sign_up_here":  "Daftar di sini",
+                       "enter_email":  "Masukkan alamat email Anda.",
+                       "enter_password":  "Masukkan kata sandi Anda."
+                   },
+    "phone_auth":  {
+                       "title":  "Otentikasi telepon",
+                       "phone_verification_is_not_implemented_yet":  "Verifikasi telepon belum diterapkan."
+                   },
+    "verify_number":  {
+                          "title":  "Verifikasi nomor",
+                          "sms_verification_is_not_implemented_yet":  "Verifikasi SMS belum diterapkan."
+                      },
+    "reset_password":  {
+                           "title":  "Atur ulang kata sandi",
+                           "enter_your_email_and_we_will_send_a_password_reset_link":  "Masukkan email Anda dan kami akan mengirimkan tautan pengaturan ulang kata sandi.",
+                           "email_address":  "Alamat email",
+                           "send_reset_link":  "Kirim tautan setel ulang"
+                       },
+    "update_password":  {
+                            "title":  "Perbarui kata sandi",
+                            "choose_a_new_password_for_your_nearsy_account":  "Pilih kata sandi baru untuk akun Nearsy Anda.",
+                            "new_password":  "Kata sandi baru",
+                            "repeat_password":  "Ulangi kata sandi",
+                            "submit_button":  "Perbarui kata sandi"
+                        },
+    "nearsy_bottom_nav":  {
+                              "profile":  "Profil",
+                              "people":  "Orang",
+                              "nearby":  "Terdekat",
+                              "liked_you":  "Menyukai Anda",
+                              "chats":  "Obrolan"
+                          },
+    "profile_attributes":  {
+                               "gender":  {
+                                              "woman":  "Wanita",
+                                              "man":  "Bung",
+                                              "non_binary":  "Non-biner",
+                                              "other":  "Lainnya"
+                                          },
+                               "education":  {
+                                                 "high_school":  "SMA",
+                                                 "currently_studying":  "Sedang Belajar",
+                                                 "trade_qualification":  "Kualifikasi Perdagangan",
+                                                 "bachelors_degree":  "Gelar Sarjana",
+                                                 "masters_degree":  "Gelar Master",
+                                                 "doctorate_phd":  "Doktor/PhD",
+                                                 "postgraduate":  "Pascasarjana",
+                                                 "other":  "Lainnya",
+                                                 "prefer_not_to_say":  "Memilih untuk tidak mengatakannya"
+                                             },
+                               "kids":  {
+                                            "yes":  "Ya",
+                                            "no":  "Tidak",
+                                            "prefer_not_to_say":  "Memilih untuk tidak mengatakannya"
+                                        },
+                               "relationship_type":  {
+                                                         "something_serious":  "Sesuatu yang Serius",
+                                                         "just_dating":  "Hanya Berkencan",
+                                                         "just_fun":  "Hanya Menyenangkan",
+                                                         "open_to_anything":  "Terbuka untuk Apa Pun",
+                                                         "not_sure":  "Tidak yakin"
+                                                     },
+                               "religion":  {
+                                                "agnostic":  "Agnostik",
+                                                "atheist":  "Ateis",
+                                                "buddhist":  "Budha",
+                                                "christian":  "Kristen",
+                                                "hindu":  "Hindu",
+                                                "jewish":  "Yahudi",
+                                                "muslim":  "Muslim",
+                                                "sikh":  "Sikh",
+                                                "spiritual":  "Rohani",
+                                                "other":  "Lainnya"
+                                            },
+                               "body_type":  {
+                                                 "slim":  "Ramping",
+                                                 "lean":  "Bersandar",
+                                                 "average":  "Rata-rata",
+                                                 "fit":  "Cocok",
+                                                 "athletic":  "Atletik",
+                                                 "muscular":  "Berotot",
+                                                 "broad":  "Luas",
+                                                 "stocky":  "kekar",
+                                                 "bigger":  "Lebih besar",
+                                                 "curvy":  "Melengkung",
+                                                 "prefer_not_to_say":  "Memilih untuk tidak mengatakannya"
+                                             },
+                               "exercise":  {
+                                                "regularly":  "Secara teratur",
+                                                "occasionally":  "Kadang-kadang",
+                                                "rarely":  "Jarang",
+                                                "never":  "Tidak pernah"
+                                            },
+                               "drinking":  {
+                                                "yes":  "Ya",
+                                                "occasionally":  "Kadang-kadang",
+                                                "rarely":  "Jarang",
+                                                "no":  "Tidak",
+                                                "stopped_for_now":  "Berhenti untuk saat ini"
+                                            },
+                               "smoking":  {
+                                               "yes":  "Ya",
+                                               "sometimes":  "Terkadang",
+                                               "no":  "Tidak",
+                                               "trying_to_quit":  "Mencoba untuk berhenti"
+                                           }
+                           },
+    "languages":  {
+                      "afar":  "Jauh",
+                      "afrikaans":  "Afrikaans",
+                      "albanian":  "Albania",
+                      "amharic":  "Amharik",
+                      "arabic":  "Arab",
+                      "armenian":  "orang Armenia",
+                      "bengali":  "bahasa Bengali",
+                      "catalan":  "Katalan",
+                      "english":  "English",
+                      "russian":  "Russian",
+                      "ukrainian":  "Ukrainian"
+                  },
+    "account_email":  {
+                          "edit_title":  "Edit email",
+                          "add_title":  "Tambah email",
+                          "label_1":  "Masukkan email yang ingin kamu gunakan untuk akunmu.",
+                          "email_address":  "Alamat email",
+                          "save":  "Simpan",
+                          "invalid_email":  "Masukkan alamat email yang valid.",
+                          "confirmation_sent":  "Kode konfirmasi dikirim.",
+                          "save_error":  "Tidak dapat memperbarui email.",
+                          "title":  "Tambah dan verifikasi email",
+                          "your_email":  "Email kamu",
+                          "code_label":  "Masukkan kode yang kami kirim ke email kamu. Kode akan tiba dalam 20 detik.",
+                          "resend_code":  "Kirim ulang kode"
+                      }
 }

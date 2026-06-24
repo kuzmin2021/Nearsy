@@ -2,14 +2,12 @@ import '/components/nearsy_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
-import '/floter/floter_widgets.dart';
-import '/pages/people_page/people_page_model.dart' show DiscoveryProfile;
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'nearby_page_model.dart';
 
-import '/backend/supabase/supabase.dart';
 export 'nearby_page_model.dart';
 
 class NearbyPageWidget extends StatefulWidget {
@@ -43,9 +41,6 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
   @override
   Widget build(BuildContext context) {
     final theme = FloterTheme.of(context);
-    final visibleLabel = _model.locationLabel.isNotEmpty
-        ? _model.locationLabel
-        : AppLabels.of(context).get('nearby.unknown_location');
 
     return GestureDetector(
       onTap: () {
@@ -62,31 +57,19 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              Padding(
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 8.0),
+                child: _buildHeader(context, theme),
+              ),
               Expanded(
                 flex: 1,
-                child: Padding(
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(23.0, 36.0, 23.0, 24.0),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        _buildHeader(context, theme),
-                        const SizedBox(height: 18),
-                        _buildStatusCard(context, theme, visibleLabel),
-                        const SizedBox(height: 18),
-                        _buildNearbyGrid(context, theme),
-                      ],
-                    ),
-                  ),
-                ),
+                child: _buildMap(context, theme),
               ),
               wrapWithModel(
                 model: _model.nearsyBottomNavModel,
                 updateCallback: () => safeSetState(() {}),
-                child: NearsyBottomNavWidget(
+                child: const NearsyBottomNavWidget(
                   activeTab: 'Nearby',
                 ),
               ),
@@ -110,291 +93,103 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
           children: [
             Text(
               AppLabels.of(context).get('nearby.title'),
-              style: theme.titleLarge.override(
-                font: GoogleFonts.interTight(
-                  fontWeight: theme.titleLarge.fontWeight,
-                  fontStyle: theme.titleLarge.fontStyle,
-                ),
+              style: GoogleFonts.inter(
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
                 color: theme.primary,
-                letterSpacing: 0.0,
-                fontWeight: theme.titleLarge.fontWeight,
-                fontStyle: theme.titleLarge.fontStyle,
               ),
             ),
           ].divide(const SizedBox(width: 4.0)),
         ),
-        FloterIconButton(
-          borderRadius: 8.0,
-          buttonSize: 40.0,
-          fillColor: theme.primaryBackground,
-          icon: Icon(
-            Icons.tune,
-            color: theme.primaryText,
-            size: 22.0,
-          ),
-          onPressed: () async {
-            await context.pushNamed(SearchPreferencesPageWidget.routeName);
-            _model.refreshAll();
-          },
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            FloterIconButton(
+              borderRadius: 8.0,
+              buttonSize: 40.0,
+              fillColor: theme.primaryBackground,
+              icon: Icon(
+                Icons.tune,
+                color: theme.primaryText,
+                size: 22.0,
+              ),
+              onPressed: () async {
+                await context
+                    .pushNamed(NearbySearchPreferencesPageWidget.routeName);
+                _model.refreshAll();
+              },
+            ),
+          ],
         ),
       ],
     );
   }
 
-  Widget _buildStatusCard(
-      BuildContext context, FloterTheme theme, String visibleLabel) {
-    final visibilityText = _model.isVisible
-        ? AppLabels.of(context)
-            .get('nearby.visible_near')
-            .replaceAll('{location}', visibleLabel)
-        : AppLabels.of(context).get('nearby.hidden');
-
-    final descriptionText = _model.isVisible
-        ? AppLabels.of(context).get('nearby.discoverable_description')
-        : AppLabels.of(context).get('nearby.hidden_description');
-
-    return Container(
-      decoration: BoxDecoration(
-        color: theme.secondaryBackground,
-        borderRadius: BorderRadius.circular(8.0),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              visibilityText,
-              style: theme.titleSmall.override(
-                font: GoogleFonts.interTight(
-                  fontWeight: theme.titleSmall.fontWeight,
-                  fontStyle: theme.titleSmall.fontStyle,
-                ),
-                letterSpacing: 0.0,
-                fontWeight: theme.titleSmall.fontWeight,
-                fontStyle: theme.titleSmall.fontStyle,
-              ),
-            ),
-            Text(
-              descriptionText,
-              maxLines: 3,
-              style: theme.bodyMedium.override(
-                font: GoogleFonts.inter(
-                  fontWeight: theme.bodyMedium.fontWeight,
-                  fontStyle: theme.bodyMedium.fontStyle,
-                ),
-                color: theme.secondaryText,
-                letterSpacing: 0.0,
-                fontWeight: theme.bodyMedium.fontWeight,
-                fontStyle: theme.bodyMedium.fontStyle,
-              ),
-              overflow: TextOverflow.ellipsis,
-            ),
-            const SizedBox(height: 10.0),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: FTButtonWidget(
-                    onPressed: () async {
-                      await context
-                          .pushNamed(SearchPreferencesPageWidget.routeName);
-                      _model.refreshAll();
-                    },
-                    text: AppLabels.of(context).get('nearby.filters'),
-                    options: FTButtonOptions(
-                      width: double.infinity,
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      color: Colors.transparent,
-                      textStyle: TextStyle(color: theme.primary),
-                      borderSide: BorderSide(
-                        color: theme.primary,
-                        width: 1.0,
-                      ),
-                      borderRadius: BorderRadius.circular(8.0),
+  Widget _buildMap(BuildContext context, FloterTheme theme) {
+    if (_model.currentLocation == null) {
+      return Center(
+        child: _model.isLoadingProfiles
+            ? const CircularProgressIndicator()
+            : Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.location_off,
+                      size: 48, color: theme.secondaryText),
+                  const SizedBox(height: 12),
+                  Text(
+                    AppLabels.of(context).get('nearby.unknown_location'),
+                    style: GoogleFonts.inter(
+                      color: theme.secondaryText,
+                      fontSize: 14,
                     ),
                   ),
-                ),
-                const SizedBox(width: 10.0),
-                Expanded(
-                  flex: 1,
-                  child: FTButtonWidget(
-                    onPressed: () async {
-                      await context.pushNamed(
-                          NearbySearchPreferencesPageWidget.routeName);
-                      _model.refreshAll();
-                    },
-                    text: AppLabels.of(context).get('nearby.visibility'),
-                    options: FTButtonOptions(
-                      width: double.infinity,
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      color: theme.primary,
-                      textStyle: TextStyle(color: theme.primaryBackground),
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildNearbyGrid(BuildContext context, FloterTheme theme) {
-    if (_model.isLoadingProfiles) {
-      return const Padding(
-        padding: EdgeInsets.symmetric(vertical: 48.0),
-        child: Center(child: CircularProgressIndicator()),
+                ],
+              ),
       );
     }
 
-    if (_model.loadError.isNotEmpty) {
-      return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 24.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(Icons.error_outline, size: 48, color: theme.error),
-            const SizedBox(height: 12),
-            Text(
-              _model.loadError,
-              textAlign: TextAlign.center,
-              style: GoogleFonts.inter(
-                color: theme.error,
-                fontSize: 14,
-              ),
-            ),
-            const SizedBox(height: 16),
-            FTButtonWidget(
-              onPressed: () => _model.refreshAll(),
-              text: AppLabels.of(context)
-                  .get('nearby.retry'),
-              options: FTButtonOptions(
-                color: theme.primary,
-                textStyle: TextStyle(color: theme.primaryBackground),
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
-    if (_model.profiles.isEmpty) {
-      return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 48.0),
-        child: Center(
-          child: Text(
-            AppLabels.of(context)
-                .get('nearby.no_one_nearby'),
-            style: GoogleFonts.interTight(
-              color: theme.secondaryText,
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-            ),
+    return Padding(
+      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(15.0),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.black, width: 1.0),
+            borderRadius: BorderRadius.circular(15.0),
           ),
-        ),
-      );
-    }
-
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 20.0,
-        mainAxisSpacing: 20.0,
-        childAspectRatio: 0.62,
-      ),
-      itemCount: _model.profiles.length,
-      itemBuilder: (context, index) {
-        return _buildProfileCard(context, theme, _model.profiles[index]);
-      },
-    );
-  }
-
-  Widget _buildProfileCard(
-      BuildContext context, FloterTheme theme, DiscoveryProfile profile) {
-    final nameAge = () {
-      final name = profile.displayName;
-      final display = name.trim().isNotEmpty ? name.trim() : '...';
-      final age = profile.age;
-      return age != null ? '$display, $age' : display;
-    }();
-
-    final distanceText = profile.distanceKm != null
-        ? '${profile.distanceKm!.toStringAsFixed(1)} km'
-        : '';
-
-    final hasPhotos = profile.photos.isNotEmpty;
-
-    return Container(
-      decoration: BoxDecoration(
-        color: theme.primaryBackground,
-        borderRadius: BorderRadius.circular(8.0),
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8.0),
-            child: hasPhotos
-                ? SupaPhoto(
-                    imageSource: profile.photos.first,
-                    width: double.infinity,
-                    height: 230.0,
-                    fit: BoxFit.cover,
-                    errorWidget: Container(
-                      color: theme.secondaryBackground,
-                      child: Icon(Icons.person,
-                          size: 60, color: theme.alternate),
-                    ),
-                  )
-                : Container(
-                    height: 230.0,
-                    color: theme.secondaryBackground,
-                    child: Icon(Icons.person,
-                        size: 60, color: theme.alternate),
-                  ),
-          ),
-          const SizedBox(height: 6.0),
-          Text(
-            nameAge,
-            maxLines: 1,
-            style: theme.bodyMedium.override(
-              font: GoogleFonts.inter(
-                fontWeight: theme.bodyMedium.fontWeight,
-                fontStyle: theme.bodyMedium.fontStyle,
-              ),
-              fontWeight: FontWeight.w600,
-            ),
-            overflow: TextOverflow.ellipsis,
-          ),
-          if (distanceText.isNotEmpty)
-            Text(
-              distanceText,
-              maxLines: 1,
-              style: theme.bodySmall.override(
-                font: GoogleFonts.inter(
-                  fontWeight: theme.bodySmall.fontWeight,
-                  fontStyle: theme.bodySmall.fontStyle,
+          child: Stack(
+            children: [
+              GoogleMap(
+                initialCameraPosition: CameraPosition(
+                  target: _model.currentLocation!,
+                  zoom: 12.0,
                 ),
-                color: theme.secondaryText,
+                circles: _model.circles,
+                markers: _model.markers,
+                onMapCreated: _model.onMapCreated,
+                myLocationEnabled: true,
+                myLocationButtonEnabled: false,
+                zoomControlsEnabled: false,
               ),
-              overflow: TextOverflow.ellipsis,
-            ),
-        ],
+              Positioned(
+                bottom: 16.0,
+                right: 16.0,
+                child: FloterIconButton(
+                  borderRadius: 16.0,
+                  buttonSize: 44.0,
+                  fillColor: Colors.white,
+                  icon: Icon(
+                    Icons.my_location,
+                    color: theme.primaryText,
+                    size: 24.0,
+                  ),
+                  onPressed: () => _model.centerOnUser(),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

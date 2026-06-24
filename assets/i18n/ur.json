@@ -1,422 +1,427 @@
 ﻿{
-    "connection": {
-    "offline_message": "کوئی انٹرنیٹ کنکشن نہیں۔ براہ کرم اپنا نیٹ ورک چیک کریں۔"
-  },
-  "auth": {
-    "nearsy": "Nearsy",
-    "meet_near_keep_it_easy": "قریب سے ملو۔ اسے آسان رکھیں",
-    "continue_with_email": "ای میل سے جاری رکھیں",
-    "continue_with_phone": "فون کے ساتھ جاری رکھیں",
-    "by_signing_up_you_agree_to_the_terms_of": "سائن اپ کرکے آپ کی شرائط سے اتفاق کرتے ہیں۔",
-    "service_and_privacy_policy": "سروس اور رازداری کی پالیسی"
-  },
-  "profile": {
-    "title": "پروفائل",
-    "name": "نام",
-    "catchphrase": "کیچ فریس",
-    "about_me": "میرے بارے میں",
-    "gender": "جنس",
-    "age": "عمر",
-    "height": "قد",
-    "work": "کام",
-    "education": "تعلیم",
-    "kids": "بچے",
-    "preferred_relationships": "پسندیدہ تعلقات",
-    "beliefs": "عقائد",
-    "body_type": "جسمانی ساخت",
-    "exercise": "ورزش",
-    "drinking": "شراب نوشی",
-    "smoking": "تمباکو نوشی",
-    "profile_alt": "پروفائل"
-  },
-  "people": {
-    "nearsy": "Nearsy",
-    "guess_what_i": "Guess what I",
-    "title": "لوگ"
-  },
-  "liked_you": {
-    "title": "جنہیں آپ پسند آئے",
-    "all_3": "تمام 3",
-    "filter_matches_0": "فلٹر میچ 0",
-    "outside_3": "باہر 3",
-    "all_filter": "سب",
-    "matches_filter": "مماثل",
-    "outside_filter": "باہر",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "ابھی تک کوئی لائک نہیں",
-    "tab_label": "جنہیں آپ پسند آئے"
-  },
-  "matches": {
-    "chats": "چیٹس",    "tab_label": "چیٹس"
-  },
-  "chat": {
-    "write_a_message": "پیغام",
-    "no_messages": "کوئی پیغام نہیں"
-  },
-  "account_settings": {
-    "title": "اکاؤنٹ کی ترتیبات",
-    "member_id": "ممبر ID",
-    "email": "ای میل",
-    "phone": "فون",
-    "password": "پاس ورڈ",
-    "edit_email": "ترمیم کریں",
-    "edit_phone": "ترمیم کریں",
-    "edit_password": "ترمیم کریں",
-    "email_authentication": "ای میل کی توثیق",
-    "two_factor_authentication": "دو عنصر کی تصدیق",
-    "manage": "انتظام کریں۔",
-    "notifications": "اطلاعات",
-    "push_notifications": "پش اطلاعات",
-    "matches": "میچز",
-    "messages": "پیغامات",
-    "liked_you": "آپ کو پسند آیا",
-    "email_notifications": "ای میل اطلاعات",
-    "matches_email": "میچز",
-    "messages_email": "پیغامات",
-    "liked_you_email": "آپ کو پسند آیا",
-    "feedback": "رائے",
-    "hide_account": "اکاؤنٹ چھپائیں",
-    "delete_account": "اکاؤنٹ حذف کریں",
-    "log_out": "لاگ آؤٹ",
-    "chats": "چیٹس"
-  },
-  "search_preferences": {
-    "title": "تلاش کی ترجیحات",
-    "who_you_want_to_date": "آپ کس کو ڈیٹ کرنا چاہتے ہیں:",
-    "women": "خواتین",
-    "men": "مرد",
-    "other_gender": "دیگر",
-    "age": "عمر:",
-    "between_20_and_50": "20 اور 50 کے درمیان",
-    "search_radius": "تلاش کا رداس:",
-    "up_to_161_kilometres_away": "161 کلومیٹر دور تک",
-    "languages_they_know": "وہ زبانیں جو وہ جانتے ہیں:",
-    "what_are_they_looking_for": "وہ کیا ڈھونڈ رہے ہیں؟",
-    "something_serious": "کچھ سنجیدہ",
-    "just_dating": "بس ڈیٹنگ",
-    "just_fun": "بس تفریح",
-    "open_to_anything": "کسی بھی چیز کے لئے کھولیں۔",
-    "not_sure": "یقین نہیں۔",
-    "what_are_their_beliefs": "ان کے عقائد کیا ہیں؟",
-    "agnostic": "اگنوسٹک",
-    "atheist": "ملحد",
-    "buddhist": "بدھسٹ",
-    "christian": "عیسائی",
-    "jewish": "یہودی",
-    "muslim": "مسلمان",
-    "other_beliefs": "دیگر",
-    "do_they_exercise": "کیا وہ ورزش کرتے ہیں؟",
-    "regularly": "باقاعدگی سے",
-    "occasionally": "کبھی کبھار",
-    "rarely": "شاذ و نادر ہی",
-    "do_they_drink": "کیا وہ پیتے ہیں؟",
-    "yes_drink": "ہاں",
-    "occasionally_drink": "کبھی کبھار",
-    "rarely_drink": "شاذ و نادر ہی",
-    "no_drink": "نہیں",
-    "do_they_smoke": "کیا وہ سگریٹ نوشی کرتے ہیں؟",
-    "yes_smoke": "ہاں",
-    "sometimes": "کبھی کبھی",
-    "no_smoke": "نہیں",
-    "trying_to_quit": "چھوڑنے کی کوشش کر رہا ہے۔",
-    "nearby_visibility": "قریبی مرئیت",
-    "apply_filters": "فلٹرز لگائیں۔"
-  },
-  "nearby_search_preferences": {
-    "title": "قریبی تلاش کی ترجیحات",
-    "choose_how_visible_your_location_is_you_can_change_this_anytime": "منتخب کریں کہ آپ کا مقام کتنا مرئی ہے۔ آپ اسے کسی بھی وقت تبدیل کر سکتے ہیں۔",
-    "visibility_modes": "مرئیت کے طریقے:",
-    "invisible": "غیر مرئی",
-    "visible_while_using_the_app": "ایپ استعمال کرتے وقت نظر آتا ہے۔",
-    "your_last_location": "آپ کا آخری مقام",
-    "to_update_your_status_go_to_profile_settings_location": "اپنی حیثیت کو اپ ڈیٹ کرنے کے لیے، پروفائل کی ترتیبات > مقام پر جائیں۔",
-    "save_visibility": "مرئیت محفوظ کریں"
-  },
-  "chat_preferences": {
-    "title": "چیٹ کی ترجیحات",
-    "choose_who_can_message_you_you_can_change_this_anytime": "منتخب کریں کہ کون آپ کو پیغام بھیج سکتا ہے۔ آپ اسے کسی بھی وقت تبدیل کر سکتے ہیں۔",
-    "availability_modes": "دستیابی کے طریقے:",
-    "unavailable": "دستیاب نہیں۔",
-    "matched_users_only": "صرف مماثل صارفین",
-    "available": "دستیاب ہے۔",
-    "stuff_i_could_talk_about_for_hours": "وہ چیزیں جن کے بارے میں میں گھنٹوں بات کر سکتا ہوں:",
-    "obscure_scifi_films_with_depressing_endings": "مایوس کن انجام کے ساتھ غیر واضح سائنس فائی فلمیں۔",
-    "save_chat_preferences": "چیٹ کی ترجیحات کو محفوظ کریں۔"
-  },
-  "matches_block": {
-    "block_message": "یہ صارف اب آپ کو پیغام نہیں بھیج سکے گا یا آپ کی پروفائل نہیں دیکھ سکے گا",
-    "delete_message": "اس گفتگو کو حذف کریں",
-    "cancel": "منسوخ",
-    "ok": "ٹھیک ہے",
-    "report_message": "اس صارف کی رپورٹ کریں"
-  },
-  "report_user": {
-    "title": "ہمیں بتائیں کہ کیا ہوا",
-    "submit": "جمع کریں",
-    "ok": "ٹھیک ہے",
-    "thank_you": "آپ کی رپورٹ کے لیے شکریہ۔ ہماری ٹیم نے اسے موصول کر لیا ہے اور جلد ہی کیس کا جائزہ لے گی۔ اگر مزید معلومات کی ضرورت ہوئی تو ہم ای میل کے ذریعہ آپ سے رابطہ کریں گے۔",
-    "description_hint": "بیان کریں کہ کیا ہوا..."
-  },
-  "contact_us": {
-    "title": "ہم سے رابطہ کریں۔",
-    "let_us_know_what_you_think": "ہمیں بتائیں کہ آپ کیا سوچتے ہیں...",
-    "submit": "جمع کریں",
-    "your_email": "آپ کا ای میل",
-    "message_required": "براہ کرم پیغام درج کریں۔",
-    "submit_success": "آپ کی رائے کا شکریہ۔",
-    "submit_error": "رائے بھیجی نہیں جا سکی۔"
-  },
-  "hide_account": {
-    "title": "اکاؤنٹ چھپائیں",
-    "hide": "چھپائیں",
-    "label_1": "جب آپ کسی سے ملنا نہ چاہیں تو اپنا پروفائل چھپا دیں؛ باقی سب ویسا ہی رہے گا۔",
-    "already_hidden_label": "آپ کا پروفائل چھپا ہوا ہے۔ جب دوبارہ ملنے کے لیے تیار ہوں تو اسے دکھائیں۔",
-    "unhide": "دکھائیں",
-    "hide_success": "اکاؤنٹ چھپا دیا گیا۔",
-    "unhide_success": "اکاؤنٹ نظر آ رہا ہے۔",
-    "save_error": "اکاؤنٹ اپ ڈیٹ نہیں ہو سکا۔"
-  },
-  "delete_account": {
-    "title": "اکاؤنٹ حذف کریں",
-    "are_you_sure": "کیا آپ کو یقین ہے؟",
-    "absolutely": "بالکل",
-    "not_quite": "بالکل نہیں۔",
-    "label_1": "یہ آپ کے اکاؤنٹ کا ڈیٹا حذف کرے گا، پروفائل چھپائے گا، اور آپ کو سائن آؤٹ کرے گا۔",
-    "delete_success": "اکاؤنٹ حذف کر دیا گیا۔",
-    "delete_error": "اکاؤنٹ حذف نہیں ہو سکا۔"
-  },
-  "profile_about_me": {
-    "about_me": "میرے بارے میں:",
-    "no_pressure_leave_it_blank_if_you_like": "کوئی دباؤ نہیں - چاہیں تو خالی چھوڑ دیں۔"
-  },
-  "profile_gender": {
-    "gender": "جنس:"
-  },
-  "profile_age": {
-    "when_were_you_born": "آپ کب پیدا ہوئے:",
-    "day": "دن",
-    "month": "مہینہ",
-    "year": "سال",
-    "optional": "اختیاری",
-    "day_placeholder": "--",
-    "month_placeholder": "--",
-    "year_placeholder": "--"
-  },
-  "months": {
-    "january": "جنوری",
-    "february": "فروری",
-    "march": "مارچ",
-    "april": "اپریل",
-    "may": "مئی",
-    "june": "جون",
-    "july": "جولائی",
-    "august": "اگست",
-    "september": "ستمبر",
-    "october": "اکتوبر",
-    "november": "نومبر",
-    "december": "دسمبر"
-  },
-  "profile_height": {
-    "my_height": "قد:",
-    "enter_your_height": "اپنا قد درج کریں",
-    "ft": "فٹ",
-    "cm": "سینٹی میٹر"
-  },
-  "profile_body_type": {
-    "my_body_type": "جسمانی ساخت:"
-  },
-  "profile_work": {
-    "my_work": "کام:",
-    "what_do_you_do": "آپ کیا کرتے ہیں؟"
-  },
-  "profile_education": {
-    "my_education": "تعلیم:",
-    "pick_the_closest_match": "سب سے قریب ترین ملاپ چنیں"
-  },
-  "profile_kids": {
-    "kids": "بچے:"
-  },
-  "profile_relationship": {
-    "my_preferred_relationship": "پسندیدہ تعلقات:",
-    "what_are_you_looking_for": "آپ کیا تلاش کر رہے ہیں؟"
-  },
-  "profile_religion": {
-    "my_beliefs": "عقائد:"
-  },
-  "profile_exercise": {
-    "exercise": "ورزش:",
-    "any_form_of_physical_activity": "کسی بھی قسم کی جسمانی سرگرمی"
-  },
-  "profile_drinking": {
-    "my_drinking_habits": "شراب نوشی:",
-    "choose_what_best_describes_your_alcohol_use": "اپنے شراب کے استعمال کی بہترین وضاحت چنیں۔"
-  },
-  "profile_smoking": {
-    "my_smoking_habits": "تمباکو نوشی:",
-    "do_you_smoke": "کیا آپ سگریٹ پیتے ہیں؟"
-  },
-  "profile_location": {
-    "my_location": "میرا مقام:",
-    "automatically_detect_my_location_recommended": "خود بخود میرے مقام کا پتہ لگائیں (تجویز کردہ)",
-    "status_in_nearby_local": "قریبی میں حیثیت: مقامی",
-    "i_will_set_my_location_manually": "میں اپنا مقام دستی طور پر سیٹ کروں گا۔",
-    "select_location": "مقام منتخب کریں..."
-  },
-  "nearby": {
-    "title": "قریب",
-    "filters": "فلٹرز",
-    "visibility": "مرئیت",
-    "tab_label": "قریب"
-  },
-  "email_auth": {
-    "sign_in_with_email": "ای میل کے ساتھ سائن ان کریں۔",
-    "use_your_email_and_password_or_create_a_new_account": "اپنا ای میل اور پاس ورڈ استعمال کریں، یا نیا اکاؤنٹ بنائیں۔",
-    "sign_in": "سائن ان",
-    "register": "رجسٹر کریں",
-    "email_address": "ای میل پتہ",
-    "password": "پاس ورڈ",
-    "repeat_password": "پاس ورڈ دہرائیں۔",
-    "create_account": "اکاؤنٹ بنائیں",
-    "forgot_password": "پاس ورڈ بھول گئے؟",
-    "continue_button": "جاری رکھیں",
-    "or_sign_up_with": "یا اس سے سائن اپ کریں",
-    "or_sign_in_with": "یا اس سے سائن ان کریں",
-    "continue_with_google": "Google کے ساتھ جاری رکھیں",
-    "continue_with_apple": "Apple کے ساتھ جاری رکھیں",
-    "already_have_account": "کیا آپ کا اکاؤنٹ پہلے سے موجود ہے؟",
-    "dont_have_account": "کیا آپ کا اکاؤنٹ نہیں ہے؟",
-    "sign_in_here": "یہاں سائن ان کریں",
-    "sign_up_here": "یہاں سائن اپ کریں",
-    "enter_email": "اپنا ای میل پتہ درج کریں۔",
-    "enter_password": "اپنا پاس ورڈ درج کریں۔"
-  },
-  "phone_auth": {
-    "title": "فون کی تصدیق",
-    "phone_verification_is_not_implemented_yet": "فون کی تصدیق ابھی تک لاگو نہیں ہوئی ہے۔"
-  },
-  "verify_number": {
-    "title": "نمبر کی تصدیق کریں۔",
-    "sms_verification_is_not_implemented_yet": "ایس ایم ایس کی تصدیق ابھی تک نافذ نہیں ہوئی ہے۔"
-  },
-  "reset_password": {
-    "title": "پاس ورڈ ری سیٹ کریں",
-    "enter_your_email_and_we_will_send_a_password_reset_link": "اپنا ای میل درج کریں اور ہم پاس ورڈ دوبارہ ترتیب دینے کا لنک بھیجیں گے۔",
-    "email_address": "ای میل پتہ",
-    "send_reset_link": "ری سیٹ لنک بھیجیں۔"
-  },
-  "update_password": {
-    "title": "پاس ورڈ اپ ڈیٹ کریں",
-    "choose_a_new_password_for_your_nearsy_account": "اپنے Nearsy اکاؤنٹ کے لیے ایک نیا پاس ورڈ منتخب کریں۔",
-    "new_password": "نیا پاس ورڈ",
-    "repeat_password": "پاس ورڈ دہرائیں۔",
-    "submit_button": "پاس ورڈ اپ ڈیٹ کریں"
-  },
-  "nearsy_bottom_nav": {
-    "profile": "پروفائل",
-    "people": "لوگ",
-    "nearby": "قریب",
-    "liked_you": "جنہیں آپ پسند آئے",
-    "chats": "چیٹس"
-  },
-  "profile_attributes": {
-    "gender": {
-      "woman": "عورت",
-      "man": "آدمی",
-      "non_binary": "غیر بائنری",
-      "other": "دیگر"
-    },
-    "education": {
-      "high_school": "ہائی سکول",
-      "currently_studying": "فی الحال زیر تعلیم",
-      "trade_qualification": "تجارتی اہلیت",
-      "bachelors_degree": "بیچلر ڈگری",
-      "masters_degree": "ماسٹر ڈگری",
-      "doctorate_phd": "ڈاکٹریٹ/پی ایچ ڈی",
-      "postgraduate": "پوسٹ گریجویٹ",
-      "other": "دیگر",
-      "prefer_not_to_say": "نہ کہنے کو ترجیح دیں۔"
-    },
-    "kids": {
-      "yes": "جی ہاں",
-      "no": "نہیں",
-      "prefer_not_to_say": "نہ کہنے کو ترجیح دیں۔"
-    },
-    "relationship_type": {
-      "something_serious": "کچھ سنجیدہ",
-      "just_dating": "بس ڈیٹنگ",
-      "just_fun": "بس تفریح",
-      "open_to_anything": "کسی بھی چیز کے لیے کھولیں۔",
-      "not_sure": "یقین نہیں ہے۔"
-    },
-    "religion": {
-      "agnostic": "اگنوسٹک",
-      "atheist": "ملحد",
-      "buddhist": "بدھسٹ",
-      "christian": "عیسائی",
-      "hindu": "ہندو",
-      "jewish": "یہودی",
-      "muslim": "مسلمان",
-      "sikh": "سکھ",
-      "spiritual": "روحانی",
-      "other": "دیگر"
-    },
-    "body_type": {
-      "slim": "پتلا",
-      "lean": "دبلا",
-      "average": "اوسط",
-      "fit": "فٹ",
-      "athletic": "ایتھلیٹک",
-      "muscular": "عضلاتی",
-      "broad": "وسیع",
-      "stocky": "اسٹاکی",
-      "bigger": "بڑا",
-      "curvy": "منحنی",
-      "prefer_not_to_say": "نہ کہنے کو ترجیح دیں۔"
-    },
-    "exercise": {
-      "regularly": "باقاعدگی سے",
-      "occasionally": "کبھی کبھار",
-      "rarely": "شاذ و نادر ہی",
-      "never": "کبھی نہیں۔"
-    },
-    "drinking": {
-      "yes": "جی ہاں",
-      "occasionally": "کبھی کبھار",
-      "rarely": "شاذ و نادر ہی",
-      "no": "نہیں",
-      "stopped_for_now": "فی الحال رک گیا۔"
-    },
-    "smoking": {
-      "yes": "جی ہاں",
-      "sometimes": "کبھی کبھی",
-      "no": "نہیں",
-      "trying_to_quit": "چھوڑنے کی کوشش کر رہا ہے۔"
-    }
-  },
-  "languages": {
-    "afar": "افار",
-    "afrikaans": "افریقی",
-    "albanian": "البانوی",
-    "amharic": "امہاری",
-    "arabic": "عربی",
-    "armenian": "آرمینیائی",
-    "bengali": "بنگالی",
-    "catalan": "کاتالان",
-    "english": "English",
-    "russian": "Russian",
-    "ukrainian": "Ukrainian"
-  },
-  "account_email": {
-    "edit_title": "ای میل میں ترمیم کریں",
-    "add_title": "ای میل شامل کریں",
-    "label_1": "وہ ای میل درج کریں جسے آپ اپنے اکاؤنٹ کے لیے استعمال کرنا چاہتے ہیں۔",
-    "email_address": "ای میل پتہ",
-    "save": "محفوظ کریں",
-    "invalid_email": "درست ای میل پتہ درج کریں۔",
-    "confirmation_sent": "تصدیقی کوڈ بھیج دیا گیا۔",
-    "save_error": "ای میل اپ ڈیٹ نہیں ہو سکا۔",
-    "title": "ای میل شامل اور تصدیق کریں",
-    "your_email": "آپ کا ای میل",
-    "code_label": "وہ کوڈ درج کریں جو ہم نے آپ کے ای میل پر بھیجا ہے۔ یہ 20 سیکنڈ میں پہنچ جانا چاہیے۔",
-    "resend_code": "کوڈ دوبارہ بھیجیں"
-  }
+    "connection":  {
+                       "offline_message":  "کوئی انٹرنیٹ کنکشن نہیں۔ براہ کرم اپنا نیٹ ورک چیک کریں۔"
+                   },
+    "auth":  {
+                 "nearsy":  "Nearsy",
+                 "meet_near_keep_it_easy":  "قریب سے ملو۔ اسے آسان رکھیں",
+                 "continue_with_email":  "ای میل سے جاری رکھیں",
+                 "continue_with_phone":  "فون کے ساتھ جاری رکھیں",
+                 "by_signing_up_you_agree_to_the_terms_of":  "سائن اپ کرکے آپ کی شرائط سے اتفاق کرتے ہیں۔",
+                 "service_and_privacy_policy":  "سروس اور رازداری کی پالیسی"
+             },
+    "profile":  {
+                    "title":  "پروفائل",
+                    "name":  "نام",
+                    "catchphrase":  "کیچ فریس",
+                    "about_me":  "میرے بارے میں",
+                    "gender":  "جنس",
+                    "age":  "عمر",
+                    "height":  "قد",
+                    "work":  "کام",
+                    "education":  "تعلیم",
+                    "kids":  "بچے",
+                    "preferred_relationships":  "پسندیدہ تعلقات",
+                    "beliefs":  "عقائد",
+                    "body_type":  "جسمانی ساخت",
+                    "exercise":  "ورزش",
+                    "drinking":  "شراب نوشی",
+                    "smoking":  "تمباکو نوشی",
+                    "profile_alt":  "پروفائل"
+                },
+    "people":  {
+                   "nearsy":  "Nearsy",
+                   "guess_what_i":  "Guess what I",
+                   "title":  "لوگ"
+               },
+    "liked_you":  {
+                      "title":  "جنہیں آپ پسند آئے",
+                      "all_3":  "تمام 3",
+                      "filter_matches_0":  "فلٹر میچ 0",
+                      "outside_3":  "باہر 3",
+                      "all_filter":  "سب",
+                      "matches_filter":  "مماثل",
+                      "outside_filter":  "باہر",
+                      "empty_title":  "Nothing yet� but on the bright side, no baggage.",
+                      "empty_body":  "Adjust your filters or show up in Nearby to help the right people find you.",
+                      "empty":  "ابھی تک کوئی لائک نہیں",
+                      "tab_label":  "جنہیں آپ پسند آئے"
+                  },
+    "matches":  {
+                    "chats":  "چیٹس",
+                    "tab_label":  "چیٹس"
+                },
+    "chat":  {
+                 "write_a_message":  "پیغام",
+                 "no_messages":  "کوئی پیغام نہیں"
+             },
+    "account_settings":  {
+                             "title":  "اکاؤنٹ کی ترتیبات",
+                             "member_id":  "ممبر ID",
+                             "email":  "ای میل",
+                             "phone":  "فون",
+                             "password":  "پاس ورڈ",
+                             "edit_email":  "ترمیم کریں",
+                             "edit_phone":  "ترمیم کریں",
+                             "edit_password":  "ترمیم کریں",
+                             "email_authentication":  "ای میل کی توثیق",
+                             "two_factor_authentication":  "دو عنصر کی تصدیق",
+                             "manage":  "انتظام کریں۔",
+                             "notifications":  "اطلاعات",
+                             "push_notifications":  "پش اطلاعات",
+                             "matches":  "میچز",
+                             "messages":  "پیغامات",
+                             "liked_you":  "آپ کو پسند آیا",
+                             "email_notifications":  "ای میل اطلاعات",
+                             "matches_email":  "میچز",
+                             "messages_email":  "پیغامات",
+                             "liked_you_email":  "آپ کو پسند آیا",
+                             "feedback":  "رائے",
+                             "hide_account":  "اکاؤنٹ چھپائیں",
+                             "delete_account":  "اکاؤنٹ حذف کریں",
+                             "log_out":  "لاگ آؤٹ",
+                             "chats":  "چیٹس"
+                         },
+    "search_preferences":  {
+                               "title":  "تلاش کی ترجیحات",
+                               "who_you_want_to_date":  "آپ کس کو ڈیٹ کرنا چاہتے ہیں:",
+                               "women":  "خواتین",
+                               "men":  "مرد",
+                               "other_gender":  "دیگر",
+                               "age":  "عمر:",
+                               "between_20_and_50":  "20 اور 50 کے درمیان",
+                               "search_radius":  "تلاش کا رداس:",
+                               "up_to_161_kilometres_away":  "161 کلومیٹر دور تک",
+                               "languages_they_know":  "وہ زبانیں جو وہ جانتے ہیں:",
+                               "what_are_they_looking_for":  "وہ کیا ڈھونڈ رہے ہیں؟",
+                               "something_serious":  "کچھ سنجیدہ",
+                               "just_dating":  "بس ڈیٹنگ",
+                               "just_fun":  "بس تفریح",
+                               "open_to_anything":  "کسی بھی چیز کے لئے کھولیں۔",
+                               "not_sure":  "یقین نہیں۔",
+                               "what_are_their_beliefs":  "ان کے عقائد کیا ہیں؟",
+                               "agnostic":  "اگنوسٹک",
+                               "atheist":  "ملحد",
+                               "buddhist":  "بدھسٹ",
+                               "christian":  "عیسائی",
+                               "jewish":  "یہودی",
+                               "muslim":  "مسلمان",
+                               "other_beliefs":  "دیگر",
+                               "do_they_exercise":  "کیا وہ ورزش کرتے ہیں؟",
+                               "regularly":  "باقاعدگی سے",
+                               "occasionally":  "کبھی کبھار",
+                               "rarely":  "شاذ و نادر ہی",
+                               "do_they_drink":  "کیا وہ پیتے ہیں؟",
+                               "yes_drink":  "ہاں",
+                               "occasionally_drink":  "کبھی کبھار",
+                               "rarely_drink":  "شاذ و نادر ہی",
+                               "no_drink":  "نہیں",
+                               "do_they_smoke":  "کیا وہ سگریٹ نوشی کرتے ہیں؟",
+                               "yes_smoke":  "ہاں",
+                               "sometimes":  "کبھی کبھی",
+                               "no_smoke":  "نہیں",
+                               "trying_to_quit":  "چھوڑنے کی کوشش کر رہا ہے۔",
+                               "nearby_visibility":  "قریبی مرئیت",
+                               "apply_filters":  "فلٹرز لگائیں۔"
+                           },
+    "nearby_search_preferences":  {
+                                      "title":  "قریبی تلاش کی ترجیحات",
+                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "منتخب کریں کہ آپ کا مقام کتنا مرئی ہے۔ آپ اسے کسی بھی وقت تبدیل کر سکتے ہیں۔",
+                                      "visibility_modes":  "مرئیت کے طریقے:",
+                                      "invisible":  "غیر مرئی",
+                                      "visible_while_using_the_app":  "ایپ استعمال کرتے وقت نظر آتا ہے۔",
+                                      "your_last_location":  "آپ کا آخری مقام",
+                                      "to_update_your_status_go_to_profile_settings_location":  "اپنی حیثیت کو اپ ڈیٹ کرنے کے لیے، پروفائل کی ترتیبات \u003e مقام پر جائیں۔",
+                                      "save_visibility":  "مرئیت محفوظ کریں",
+                                      "search_radius":  "تلاش کا رداس:"
+                                  },
+    "chat_preferences":  {
+                             "title":  "چیٹ کی ترجیحات",
+                             "choose_who_can_message_you_you_can_change_this_anytime":  "منتخب کریں کہ کون آپ کو پیغام بھیج سکتا ہے۔ آپ اسے کسی بھی وقت تبدیل کر سکتے ہیں۔",
+                             "availability_modes":  "دستیابی کے طریقے:",
+                             "unavailable":  "دستیاب نہیں۔",
+                             "matched_users_only":  "صرف مماثل صارفین",
+                             "available":  "دستیاب ہے۔",
+                             "stuff_i_could_talk_about_for_hours":  "وہ چیزیں جن کے بارے میں میں گھنٹوں بات کر سکتا ہوں:",
+                             "obscure_scifi_films_with_depressing_endings":  "مایوس کن انجام کے ساتھ غیر واضح سائنس فائی فلمیں۔",
+                             "save_chat_preferences":  "چیٹ کی ترجیحات کو محفوظ کریں۔"
+                         },
+    "matches_block":  {
+                          "block_message":  "یہ صارف اب آپ کو پیغام نہیں بھیج سکے گا یا آپ کی پروفائل نہیں دیکھ سکے گا",
+                          "delete_message":  "اس گفتگو کو حذف کریں",
+                          "cancel":  "منسوخ",
+                          "ok":  "ٹھیک ہے",
+                          "report_message":  "اس صارف کی رپورٹ کریں"
+                      },
+    "report_user":  {
+                        "title":  "ہمیں بتائیں کہ کیا ہوا",
+                        "submit":  "جمع کریں",
+                        "ok":  "ٹھیک ہے",
+                        "thank_you":  "آپ کی رپورٹ کے لیے شکریہ۔ ہماری ٹیم نے اسے موصول کر لیا ہے اور جلد ہی کیس کا جائزہ لے گی۔ اگر مزید معلومات کی ضرورت ہوئی تو ہم ای میل کے ذریعہ آپ سے رابطہ کریں گے۔",
+                        "description_hint":  "بیان کریں کہ کیا ہوا..."
+                    },
+    "contact_us":  {
+                       "title":  "ہم سے رابطہ کریں۔",
+                       "let_us_know_what_you_think":  "ہمیں بتائیں کہ آپ کیا سوچتے ہیں...",
+                       "submit":  "جمع کریں",
+                       "your_email":  "آپ کا ای میل",
+                       "message_required":  "براہ کرم پیغام درج کریں۔",
+                       "submit_success":  "آپ کی رائے کا شکریہ۔",
+                       "submit_error":  "رائے بھیجی نہیں جا سکی۔"
+                   },
+    "hide_account":  {
+                         "title":  "اکاؤنٹ چھپائیں",
+                         "hide":  "چھپائیں",
+                         "label_1":  "جب آپ کسی سے ملنا نہ چاہیں تو اپنا پروفائل چھپا دیں؛ باقی سب ویسا ہی رہے گا۔",
+                         "already_hidden_label":  "آپ کا پروفائل چھپا ہوا ہے۔ جب دوبارہ ملنے کے لیے تیار ہوں تو اسے دکھائیں۔",
+                         "unhide":  "دکھائیں",
+                         "hide_success":  "اکاؤنٹ چھپا دیا گیا۔",
+                         "unhide_success":  "اکاؤنٹ نظر آ رہا ہے۔",
+                         "save_error":  "اکاؤنٹ اپ ڈیٹ نہیں ہو سکا۔"
+                     },
+    "delete_account":  {
+                           "title":  "اکاؤنٹ حذف کریں",
+                           "are_you_sure":  "کیا آپ کو یقین ہے؟",
+                           "absolutely":  "بالکل",
+                           "not_quite":  "بالکل نہیں۔",
+                           "label_1":  "یہ آپ کے اکاؤنٹ کا ڈیٹا حذف کرے گا، پروفائل چھپائے گا، اور آپ کو سائن آؤٹ کرے گا۔",
+                           "delete_success":  "اکاؤنٹ حذف کر دیا گیا۔",
+                           "delete_error":  "اکاؤنٹ حذف نہیں ہو سکا۔"
+                       },
+    "profile_about_me":  {
+                             "about_me":  "میرے بارے میں:",
+                             "no_pressure_leave_it_blank_if_you_like":  "کوئی دباؤ نہیں - چاہیں تو خالی چھوڑ دیں۔"
+                         },
+    "profile_gender":  {
+                           "gender":  "جنس:"
+                       },
+    "profile_age":  {
+                        "when_were_you_born":  "آپ کب پیدا ہوئے:",
+                        "day":  "دن",
+                        "month":  "مہینہ",
+                        "year":  "سال",
+                        "optional":  "اختیاری",
+                        "day_placeholder":  "--",
+                        "month_placeholder":  "--",
+                        "year_placeholder":  "--"
+                    },
+    "months":  {
+                   "january":  "جنوری",
+                   "february":  "فروری",
+                   "march":  "مارچ",
+                   "april":  "اپریل",
+                   "may":  "مئی",
+                   "june":  "جون",
+                   "july":  "جولائی",
+                   "august":  "اگست",
+                   "september":  "ستمبر",
+                   "october":  "اکتوبر",
+                   "november":  "نومبر",
+                   "december":  "دسمبر"
+               },
+    "profile_height":  {
+                           "my_height":  "قد:",
+                           "enter_your_height":  "اپنا قد درج کریں",
+                           "ft":  "فٹ",
+                           "cm":  "سینٹی میٹر"
+                       },
+    "profile_body_type":  {
+                              "my_body_type":  "جسمانی ساخت:"
+                          },
+    "profile_work":  {
+                         "my_work":  "کام:",
+                         "what_do_you_do":  "آپ کیا کرتے ہیں؟"
+                     },
+    "profile_education":  {
+                              "my_education":  "تعلیم:",
+                              "pick_the_closest_match":  "سب سے قریب ترین ملاپ چنیں"
+                          },
+    "profile_kids":  {
+                         "kids":  "بچے:"
+                     },
+    "profile_relationship":  {
+                                 "my_preferred_relationship":  "پسندیدہ تعلقات:",
+                                 "what_are_you_looking_for":  "آپ کیا تلاش کر رہے ہیں؟"
+                             },
+    "profile_religion":  {
+                             "my_beliefs":  "عقائد:"
+                         },
+    "profile_exercise":  {
+                             "exercise":  "ورزش:",
+                             "any_form_of_physical_activity":  "کسی بھی قسم کی جسمانی سرگرمی"
+                         },
+    "profile_drinking":  {
+                             "my_drinking_habits":  "شراب نوشی:",
+                             "choose_what_best_describes_your_alcohol_use":  "اپنے شراب کے استعمال کی بہترین وضاحت چنیں۔"
+                         },
+    "profile_smoking":  {
+                            "my_smoking_habits":  "تمباکو نوشی:",
+                            "do_you_smoke":  "کیا آپ سگریٹ پیتے ہیں؟"
+                        },
+    "profile_location":  {
+                             "my_location":  "میرا مقام:",
+                             "automatically_detect_my_location_recommended":  "خود بخود میرے مقام کا پتہ لگائیں (تجویز کردہ)",
+                             "status_in_nearby_local":  "قریبی میں حیثیت: مقامی",
+                             "i_will_set_my_location_manually":  "میں اپنا مقام دستی طور پر سیٹ کروں گا۔",
+                             "select_location":  "مقام منتخب کریں..."
+                         },
+    "nearby":  {
+                   "title":  "قریب",
+                   "filters":  "فلٹرز",
+                   "visibility":  "مرئیت",
+                   "tab_label":  "قریب",
+                   "unknown_location":  "You\u0027re off the map. Allow location access and try again."
+               },
+    "email_auth":  {
+                       "sign_in_with_email":  "ای میل کے ساتھ سائن ان کریں۔",
+                       "use_your_email_and_password_or_create_a_new_account":  "اپنا ای میل اور پاس ورڈ استعمال کریں، یا نیا اکاؤنٹ بنائیں۔",
+                       "sign_in":  "سائن ان",
+                       "register":  "رجسٹر کریں",
+                       "email_address":  "ای میل پتہ",
+                       "password":  "پاس ورڈ",
+                       "repeat_password":  "پاس ورڈ دہرائیں۔",
+                       "create_account":  "اکاؤنٹ بنائیں",
+                       "forgot_password":  "پاس ورڈ بھول گئے؟",
+                       "continue_button":  "جاری رکھیں",
+                       "or_sign_up_with":  "یا اس سے سائن اپ کریں",
+                       "or_sign_in_with":  "یا اس سے سائن ان کریں",
+                       "continue_with_google":  "Google کے ساتھ جاری رکھیں",
+                       "continue_with_apple":  "Apple کے ساتھ جاری رکھیں",
+                       "already_have_account":  "کیا آپ کا اکاؤنٹ پہلے سے موجود ہے؟",
+                       "dont_have_account":  "کیا آپ کا اکاؤنٹ نہیں ہے؟",
+                       "sign_in_here":  "یہاں سائن ان کریں",
+                       "sign_up_here":  "یہاں سائن اپ کریں",
+                       "enter_email":  "اپنا ای میل پتہ درج کریں۔",
+                       "enter_password":  "اپنا پاس ورڈ درج کریں۔"
+                   },
+    "phone_auth":  {
+                       "title":  "فون کی تصدیق",
+                       "phone_verification_is_not_implemented_yet":  "فون کی تصدیق ابھی تک لاگو نہیں ہوئی ہے۔"
+                   },
+    "verify_number":  {
+                          "title":  "نمبر کی تصدیق کریں۔",
+                          "sms_verification_is_not_implemented_yet":  "ایس ایم ایس کی تصدیق ابھی تک نافذ نہیں ہوئی ہے۔"
+                      },
+    "reset_password":  {
+                           "title":  "پاس ورڈ ری سیٹ کریں",
+                           "enter_your_email_and_we_will_send_a_password_reset_link":  "اپنا ای میل درج کریں اور ہم پاس ورڈ دوبارہ ترتیب دینے کا لنک بھیجیں گے۔",
+                           "email_address":  "ای میل پتہ",
+                           "send_reset_link":  "ری سیٹ لنک بھیجیں۔"
+                       },
+    "update_password":  {
+                            "title":  "پاس ورڈ اپ ڈیٹ کریں",
+                            "choose_a_new_password_for_your_nearsy_account":  "اپنے Nearsy اکاؤنٹ کے لیے ایک نیا پاس ورڈ منتخب کریں۔",
+                            "new_password":  "نیا پاس ورڈ",
+                            "repeat_password":  "پاس ورڈ دہرائیں۔",
+                            "submit_button":  "پاس ورڈ اپ ڈیٹ کریں"
+                        },
+    "nearsy_bottom_nav":  {
+                              "profile":  "پروفائل",
+                              "people":  "لوگ",
+                              "nearby":  "قریب",
+                              "liked_you":  "جنہیں آپ پسند آئے",
+                              "chats":  "چیٹس"
+                          },
+    "profile_attributes":  {
+                               "gender":  {
+                                              "woman":  "عورت",
+                                              "man":  "آدمی",
+                                              "non_binary":  "غیر بائنری",
+                                              "other":  "دیگر"
+                                          },
+                               "education":  {
+                                                 "high_school":  "ہائی سکول",
+                                                 "currently_studying":  "فی الحال زیر تعلیم",
+                                                 "trade_qualification":  "تجارتی اہلیت",
+                                                 "bachelors_degree":  "بیچلر ڈگری",
+                                                 "masters_degree":  "ماسٹر ڈگری",
+                                                 "doctorate_phd":  "ڈاکٹریٹ/پی ایچ ڈی",
+                                                 "postgraduate":  "پوسٹ گریجویٹ",
+                                                 "other":  "دیگر",
+                                                 "prefer_not_to_say":  "نہ کہنے کو ترجیح دیں۔"
+                                             },
+                               "kids":  {
+                                            "yes":  "جی ہاں",
+                                            "no":  "نہیں",
+                                            "prefer_not_to_say":  "نہ کہنے کو ترجیح دیں۔"
+                                        },
+                               "relationship_type":  {
+                                                         "something_serious":  "کچھ سنجیدہ",
+                                                         "just_dating":  "بس ڈیٹنگ",
+                                                         "just_fun":  "بس تفریح",
+                                                         "open_to_anything":  "کسی بھی چیز کے لیے کھولیں۔",
+                                                         "not_sure":  "یقین نہیں ہے۔"
+                                                     },
+                               "religion":  {
+                                                "agnostic":  "اگنوسٹک",
+                                                "atheist":  "ملحد",
+                                                "buddhist":  "بدھسٹ",
+                                                "christian":  "عیسائی",
+                                                "hindu":  "ہندو",
+                                                "jewish":  "یہودی",
+                                                "muslim":  "مسلمان",
+                                                "sikh":  "سکھ",
+                                                "spiritual":  "روحانی",
+                                                "other":  "دیگر"
+                                            },
+                               "body_type":  {
+                                                 "slim":  "پتلا",
+                                                 "lean":  "دبلا",
+                                                 "average":  "اوسط",
+                                                 "fit":  "فٹ",
+                                                 "athletic":  "ایتھلیٹک",
+                                                 "muscular":  "عضلاتی",
+                                                 "broad":  "وسیع",
+                                                 "stocky":  "اسٹاکی",
+                                                 "bigger":  "بڑا",
+                                                 "curvy":  "منحنی",
+                                                 "prefer_not_to_say":  "نہ کہنے کو ترجیح دیں۔"
+                                             },
+                               "exercise":  {
+                                                "regularly":  "باقاعدگی سے",
+                                                "occasionally":  "کبھی کبھار",
+                                                "rarely":  "شاذ و نادر ہی",
+                                                "never":  "کبھی نہیں۔"
+                                            },
+                               "drinking":  {
+                                                "yes":  "جی ہاں",
+                                                "occasionally":  "کبھی کبھار",
+                                                "rarely":  "شاذ و نادر ہی",
+                                                "no":  "نہیں",
+                                                "stopped_for_now":  "فی الحال رک گیا۔"
+                                            },
+                               "smoking":  {
+                                               "yes":  "جی ہاں",
+                                               "sometimes":  "کبھی کبھی",
+                                               "no":  "نہیں",
+                                               "trying_to_quit":  "چھوڑنے کی کوشش کر رہا ہے۔"
+                                           }
+                           },
+    "languages":  {
+                      "afar":  "افار",
+                      "afrikaans":  "افریقی",
+                      "albanian":  "البانوی",
+                      "amharic":  "امہاری",
+                      "arabic":  "عربی",
+                      "armenian":  "آرمینیائی",
+                      "bengali":  "بنگالی",
+                      "catalan":  "کاتالان",
+                      "english":  "English",
+                      "russian":  "Russian",
+                      "ukrainian":  "Ukrainian"
+                  },
+    "account_email":  {
+                          "edit_title":  "ای میل میں ترمیم کریں",
+                          "add_title":  "ای میل شامل کریں",
+                          "label_1":  "وہ ای میل درج کریں جسے آپ اپنے اکاؤنٹ کے لیے استعمال کرنا چاہتے ہیں۔",
+                          "email_address":  "ای میل پتہ",
+                          "save":  "محفوظ کریں",
+                          "invalid_email":  "درست ای میل پتہ درج کریں۔",
+                          "confirmation_sent":  "تصدیقی کوڈ بھیج دیا گیا۔",
+                          "save_error":  "ای میل اپ ڈیٹ نہیں ہو سکا۔",
+                          "title":  "ای میل شامل اور تصدیق کریں",
+                          "your_email":  "آپ کا ای میل",
+                          "code_label":  "وہ کوڈ درج کریں جو ہم نے آپ کے ای میل پر بھیجا ہے۔ یہ 20 سیکنڈ میں پہنچ جانا چاہیے۔",
+                          "resend_code":  "کوڈ دوبارہ بھیجیں"
+                      }
 }

@@ -1,422 +1,427 @@
 ﻿{
-    "connection": {
-    "offline_message": "İnternet bağlantısı yok. Lütfen ağınızı kontrol edin."
-  },
-  "auth": {
-    "nearsy": "Nearsy",
-    "meet_near_keep_it_easy": "Yakında buluşalım. Sakin ol",
-    "continue_with_email": "E-posta ile devam et",
-    "continue_with_phone": "Telefonla devam et",
-    "by_signing_up_you_agree_to_the_terms_of": "Kaydolarak Şartları kabul etmiş olursunuz",
-    "service_and_privacy_policy": "Hizmet ve Gizlilik Politikası"
-  },
-  "profile": {
-    "title": "Profil",
-    "name": "Ad",
-    "catchphrase": "Slogan",
-    "about_me": "Hakkımda",
-    "gender": "Cinsiyet",
-    "age": "Yaş",
-    "height": "Boy",
-    "work": "İş",
-    "education": "Eğitim",
-    "kids": "Çocuklar",
-    "preferred_relationships": "Tercih edilen ilişkiler",
-    "beliefs": "İnançlar",
-    "body_type": "Vücut tipi",
-    "exercise": "Egzersiz",
-    "drinking": "Alkol",
-    "smoking": "Sigara",
-    "profile_alt": "Profil"
-  },
-  "people": {
-    "nearsy": "Nearsy",
-    "guess_what_i": "Guess what I",
-    "title": "Kişiler"
-  },
-  "liked_you": {
-    "title": "Seni beğenenler",
-    "all_3": "Hepsi 3",
-    "filter_matches_0": "Filtre eşleşmeleri 0",
-    "outside_3": "3'ün dışında",
-    "all_filter": "Tümü",
-    "matches_filter": "Eşleşenler",
-    "outside_filter": "Dışında",
-    "empty_title": "Nothing yet� but on the bright side, no baggage.","empty_body": "Adjust your filters or show up in Nearby to help the right people find you.","empty": "Henüz beğeni yok",
-    "tab_label": "Seni beğenenler"
-  },
-  "matches": {
-    "chats": "Sohbetler",    "tab_label": "Sohbetler"
-  },
-  "chat": {
-    "write_a_message": "Mesaj",
-    "no_messages": "Mesaj yok"
-  },
-  "account_settings": {
-    "title": "Hesap ayarları",
-    "member_id": "Üye ID",
-    "email": "E-posta",
-    "phone": "Telefon",
-    "password": "Şifre",
-    "edit_email": "Düzenle",
-    "edit_phone": "Düzenle",
-    "edit_password": "Düzenle",
-    "email_authentication": "E-posta kimlik doğrulaması",
-    "two_factor_authentication": "İki faktörlü kimlik doğrulama",
-    "manage": "Yönet",
-    "notifications": "Bildirimler",
-    "push_notifications": "Anında Bildirimler",
-    "matches": "Eşleşmeler",
-    "messages": "Mesajlar",
-    "liked_you": "Senden hoşlandım",
-    "email_notifications": "E-posta Bildirimleri",
-    "matches_email": "Eşleşmeler",
-    "messages_email": "Mesajlar",
-    "liked_you_email": "Senden hoşlandım",
-    "feedback": "Geri bildirim",
-    "hide_account": "Hesabı gizle",
-    "delete_account": "Hesabı sil",
-    "log_out": "Çıkış yap",
-    "chats": "Sohbetler"
-  },
-  "search_preferences": {
-    "title": "Arama tercihleri",
-    "who_you_want_to_date": "Kiminle çıkmak istiyorsun:",
-    "women": "Kadınlar",
-    "men": "Erkekler",
-    "other_gender": "Diğer",
-    "age": "Yaş:",
-    "between_20_and_50": "20 ila 50 arası",
-    "search_radius": "Arama yarıçapı:",
-    "up_to_161_kilometres_away": "161 kilometreye kadar uzaklık",
-    "languages_they_know": "Bildikleri diller:",
-    "what_are_they_looking_for": "Ne arıyorlar?",
-    "something_serious": "Ciddi bir şey",
-    "just_dating": "Sadece çıkıyorum",
-    "just_fun": "Sadece eğlence",
-    "open_to_anything": "Her şeye açık",
-    "not_sure": "Emin değilim",
-    "what_are_their_beliefs": "İnançları neler?",
-    "agnostic": "Agnostik",
-    "atheist": "ateist",
-    "buddhist": "Budist",
-    "christian": "Hıristiyan",
-    "jewish": "Yahudi",
-    "muslim": "Müslüman",
-    "other_beliefs": "Diğer",
-    "do_they_exercise": "Egzersiz yapıyorlar mı?",
-    "regularly": "Düzenli olarak",
-    "occasionally": "Ara sıra",
-    "rarely": "nadiren",
-    "do_they_drink": "İçiyorlar mı?",
-    "yes_drink": "Evet",
-    "occasionally_drink": "Ara sıra",
-    "rarely_drink": "nadiren",
-    "no_drink": "Hayır",
-    "do_they_smoke": "Sigara içiyorlar mı?",
-    "yes_smoke": "Evet",
-    "sometimes": "Bazen",
-    "no_smoke": "Hayır",
-    "trying_to_quit": "Bırakmaya çalışıyorum",
-    "nearby_visibility": "Yakındaki görünürlük",
-    "apply_filters": "Filtreleri uygula"
-  },
-  "nearby_search_preferences": {
-    "title": "Yakındaki Arama Tercihleri",
-    "choose_how_visible_your_location_is_you_can_change_this_anytime": "Konumunuzun ne kadar görünür olacağını seçin. Bunu istediğiniz zaman değiştirebilirsiniz.",
-    "visibility_modes": "Görünürlük modları:",
-    "invisible": "Görünmez",
-    "visible_while_using_the_app": "Uygulamayı kullanırken görünür",
-    "your_last_location": "Son konumunuz",
-    "to_update_your_status_go_to_profile_settings_location": "Durumunuzu güncellemek için Profil Ayarları > Konum'a gidin.",
-    "save_visibility": "Görünürlüğü kaydet"
-  },
-  "chat_preferences": {
-    "title": "Sohbet Tercihleri",
-    "choose_who_can_message_you_you_can_change_this_anytime": "Size kimlerin mesaj gönderebileceğini seçin. Bunu istediğiniz zaman değiştirebilirsiniz.",
-    "availability_modes": "Kullanılabilirlik modları:",
-    "unavailable": "Kullanılamıyor",
-    "matched_users_only": "Yalnızca eşleşen kullanıcılar",
-    "available": "Mevcut",
-    "stuff_i_could_talk_about_for_hours": "Saatlerce konuşabileceğim şeyler:",
-    "obscure_scifi_films_with_depressing_endings": "İç karartıcı sonlara sahip belirsiz bilim kurgu filmleri",
-    "save_chat_preferences": "Sohbet tercihlerini kaydet"
-  },
-  "matches_block": {
-    "block_message": "Kullanıcı artık size mesaj gönderemez veya profilinizi görüntüleyemez",
-    "delete_message": "Bu sohbeti sil",
-    "cancel": "İptal",
-    "ok": "Tamam",
-    "report_message": "Bu kullanıcıyı şikayet et"
-  },
-  "report_user": {
-    "title": "Bize ne olduğunu anlatın",
-    "submit": "Gönder",
-    "ok": "Tamam",
-    "thank_you": "Bildiriminiz için teşekkür ederiz. Ekibimiz aldı ve davayı kısa sürede inceleyecek. Daha fazla bilgi gerekirse, size e-posta yoluyla ulaşacağız.",
-    "description_hint": "Ne olduğunu açıklayın..."
-  },
-  "contact_us": {
-    "title": "Bize ulaşın",
-    "let_us_know_what_you_think": "Ne düşündüğünüzü bize bildirin...",
-    "submit": "Gönder",
-    "your_email": "E-postanız",
-    "message_required": "Lütfen bir mesaj girin.",
-    "submit_success": "Geri bildiriminiz için teşekkürler.",
-    "submit_error": "Geri bildirim gönderilemedi."
-  },
-  "hide_account": {
-    "title": "Hesabı gizle",
-    "hide": "Gizle",
-    "label_1": "Biriyle tanismak istemedigin zaman profilini gizle; diger her sey ayni kalir.",
-    "already_hidden_label": "Profilin gizli. Tekrar tanismaya hazir oldugunda gorunur yap.",
-    "unhide": "Goster",
-    "hide_success": "Hesap gizlendi.",
-    "unhide_success": "Hesap gorunur.",
-    "save_error": "Hesap guncellenemedi."
-  },
-  "delete_account": {
-    "title": "Hesabı sil",
-    "are_you_sure": "Emin misin?",
-    "absolutely": "Kesinlikle",
-    "not_quite": "Pek değil",
-    "label_1": "Bu islem hesap verilerini siler, profilini gizler ve oturumunu kapatir.",
-    "delete_success": "Hesap silindi.",
-    "delete_error": "Hesap silinemedi."
-  },
-  "profile_about_me": {
-    "about_me": "Hakkımda:",
-    "no_pressure_leave_it_blank_if_you_like": "Baski yok - istersen bos birakabilirsin."
-  },
-  "profile_gender": {
-    "gender": "Cinsiyet:"
-  },
-  "profile_age": {
-    "when_were_you_born": "Ne zaman doğdun:",
-    "day": "Gün",
-    "month": "Ay",
-    "year": "Yıl",
-    "optional": "İsteğe bağlı",
-    "day_placeholder": "--",
-    "month_placeholder": "--",
-    "year_placeholder": "--"
-  },
-  "months": {
-    "january": "Ocak",
-    "february": "Şubat",
-    "march": "Mart",
-    "april": "Nisan",
-    "may": "Mayıs",
-    "june": "Haziran",
-    "july": "Temmuz",
-    "august": "Ağustos",
-    "september": "Eylül",
-    "october": "Ekim",
-    "november": "Kasım",
-    "december": "Aralık"
-  },
-  "profile_height": {
-    "my_height": "Boy:",
-    "enter_your_height": "Boyunu gir",
-    "ft": "ft",
-    "cm": "santimetre"
-  },
-  "profile_body_type": {
-    "my_body_type": "Vücut tipi:"
-  },
-  "profile_work": {
-    "my_work": "İş:",
-    "what_do_you_do": "Ne is yapiyorsun?"
-  },
-  "profile_education": {
-    "my_education": "Eğitim:",
-    "pick_the_closest_match": "En yakin secenegi sec"
-  },
-  "profile_kids": {
-    "kids": "Çocuklar:"
-  },
-  "profile_relationship": {
-    "my_preferred_relationship": "Tercih edilen ilişkiler:",
-    "what_are_you_looking_for": "Ne arıyorsun?"
-  },
-  "profile_religion": {
-    "my_beliefs": "İnançlar:"
-  },
-  "profile_exercise": {
-    "exercise": "Egzersiz:",
-    "any_form_of_physical_activity": "Her turlu fiziksel aktivite"
-  },
-  "profile_drinking": {
-    "my_drinking_habits": "Alkol:",
-    "choose_what_best_describes_your_alcohol_use": "Alkol kullanimini en iyi anlatan secenegi sec."
-  },
-  "profile_smoking": {
-    "my_smoking_habits": "Sigara:",
-    "do_you_smoke": "Sigara iciyor musun?"
-  },
-  "profile_location": {
-    "my_location": "Konumum:",
-    "automatically_detect_my_location_recommended": "Konumumu otomatik olarak algıla (önerilir)",
-    "status_in_nearby_local": "Yakınlardaki Durum: Yerel",
-    "i_will_set_my_location_manually": "Konumumu manuel olarak ayarlayacağım",
-    "select_location": "Konum seçin..."
-  },
-  "nearby": {
-    "title": "Yakında",
-    "filters": "Filtreler",
-    "visibility": "Görünürlük",
-    "tab_label": "Yakında"
-  },
-  "email_auth": {
-    "sign_in_with_email": "E-postayla oturum açın",
-    "use_your_email_and_password_or_create_a_new_account": "E-postanızı ve şifrenizi kullanın veya yeni bir hesap oluşturun.",
-    "sign_in": "Giriş yap",
-    "register": "Kaydol",
-    "email_address": "E-posta adresi",
-    "password": "Şifre",
-    "repeat_password": "Şifreyi tekrarla",
-    "create_account": "Hesap oluştur",
-    "forgot_password": "Şifrenizi mi unuttunuz?",
-    "continue_button": "Devam et",
-    "or_sign_up_with": "Veya şununla kaydol",
-    "or_sign_in_with": "Veya şununla giriş yap",
-    "continue_with_google": "Google ile devam et",
-    "continue_with_apple": "Apple ile devam et",
-    "already_have_account": "Zaten hesabın var mı?",
-    "dont_have_account": "Hesabın yok mu?",
-    "sign_in_here": "Buradan giriş yap",
-    "sign_up_here": "Buradan kaydol",
-    "enter_email": "E-posta adresini gir.",
-    "enter_password": "Şifreni gir."
-  },
-  "phone_auth": {
-    "title": "Telefon kimlik doğrulaması",
-    "phone_verification_is_not_implemented_yet": "Telefon doğrulaması henüz uygulanmadı."
-  },
-  "verify_number": {
-    "title": "Numarayı doğrula",
-    "sms_verification_is_not_implemented_yet": "SMS doğrulaması henüz uygulanmadı."
-  },
-  "reset_password": {
-    "title": "Şifreyi sıfırla",
-    "enter_your_email_and_we_will_send_a_password_reset_link": "E-postanızı girin, size bir şifre sıfırlama bağlantısı göndereceğiz.",
-    "email_address": "E-posta adresi",
-    "send_reset_link": "Sıfırlama bağlantısını gönder"
-  },
-  "update_password": {
-    "title": "Şifreyi güncelle",
-    "choose_a_new_password_for_your_nearsy_account": "Nearsy hesabınız için yeni bir şifre seçin.",
-    "new_password": "Yeni şifre",
-    "repeat_password": "Şifreyi tekrarla",
-    "submit_button": "Şifreyi güncelle"
-  },
-  "nearsy_bottom_nav": {
-    "profile": "Profil",
-    "people": "Kişiler",
-    "nearby": "Yakında",
-    "liked_you": "Seni beğenenler",
-    "chats": "Sohbetler"
-  },
-  "profile_attributes": {
-    "gender": {
-      "woman": "Kadın",
-      "man": "adam",
-      "non_binary": "İkili olmayan",
-      "other": "Diğer"
-    },
-    "education": {
-      "high_school": "Lise",
-      "currently_studying": "Şu anda Çalışıyorum",
-      "trade_qualification": "Ticaret Yeterliliği",
-      "bachelors_degree": "Lisans Derecesi",
-      "masters_degree": "Yüksek Lisans Derecesi",
-      "doctorate_phd": "Doktora / Doktora",
-      "postgraduate": "Lisansüstü",
-      "other": "Diğer",
-      "prefer_not_to_say": "Söylememeyi tercih ederim"
-    },
-    "kids": {
-      "yes": "Evet",
-      "no": "Hayır",
-      "prefer_not_to_say": "Söylememeyi tercih ederim"
-    },
-    "relationship_type": {
-      "something_serious": "Ciddi bir şey",
-      "just_dating": "Sadece Arkadaşlık",
-      "just_fun": "Sadece Eğlence",
-      "open_to_anything": "Her şeye açık",
-      "not_sure": "Emin değilim"
-    },
-    "religion": {
-      "agnostic": "Agnostik",
-      "atheist": "ateist",
-      "buddhist": "Budist",
-      "christian": "Hıristiyan",
-      "hindu": "Hindu",
-      "jewish": "Yahudi",
-      "muslim": "Müslüman",
-      "sikh": "Sih",
-      "spiritual": "Manevi",
-      "other": "Diğer"
-    },
-    "body_type": {
-      "slim": "İnce",
-      "lean": "Yalın",
-      "average": "Ortalama",
-      "fit": "Uygun",
-      "athletic": "Atletik",
-      "muscular": "Kaslı",
-      "broad": "Geniş",
-      "stocky": "tıknaz",
-      "bigger": "Daha büyük",
-      "curvy": "düzgün vücutlu",
-      "prefer_not_to_say": "Söylememeyi tercih ederim"
-    },
-    "exercise": {
-      "regularly": "Düzenli olarak",
-      "occasionally": "Ara sıra",
-      "rarely": "nadiren",
-      "never": "Asla"
-    },
-    "drinking": {
-      "yes": "Evet",
-      "occasionally": "Ara sıra",
-      "rarely": "nadiren",
-      "no": "Hayır",
-      "stopped_for_now": "Şimdilik durduruldu"
-    },
-    "smoking": {
-      "yes": "Evet",
-      "sometimes": "Bazen",
-      "no": "Hayır",
-      "trying_to_quit": "Bırakmaya çalışıyorum"
-    }
-  },
-  "languages": {
-    "afar": "Uzak",
-    "afrikaans": "Afrikaans",
-    "albanian": "Arnavut",
-    "amharic": "Amharca",
-    "arabic": "Arapça",
-    "armenian": "Ermeni",
-    "bengali": "Bengalce",
-    "catalan": "Katalanca",
-    "english": "English",
-    "russian": "Russian",
-    "ukrainian": "Ukrainian"
-  },
-  "account_email": {
-    "edit_title": "E-postayi duzenle",
-    "add_title": "E-posta ekle",
-    "label_1": "Hesabin icin kullanmak istedigin e-posta adresini gir.",
-    "email_address": "E-posta adresi",
-    "save": "Kaydet",
-    "invalid_email": "Gecerli bir e-posta adresi gir.",
-    "confirmation_sent": "Onay kodu gonderildi.",
-    "save_error": "E-posta guncellenemedi.",
-    "title": "E-postani ekle ve dogrula",
-    "your_email": "E-postan",
-    "code_label": "E-posta adresine gonderdigimiz kodu gir. 20 saniye icinde gelmeli.",
-    "resend_code": "Kodu tekrar gonder"
-  }
+    "connection":  {
+                       "offline_message":  "İnternet bağlantısı yok. Lütfen ağınızı kontrol edin."
+                   },
+    "auth":  {
+                 "nearsy":  "Nearsy",
+                 "meet_near_keep_it_easy":  "Yakında buluşalım. Sakin ol",
+                 "continue_with_email":  "E-posta ile devam et",
+                 "continue_with_phone":  "Telefonla devam et",
+                 "by_signing_up_you_agree_to_the_terms_of":  "Kaydolarak Şartları kabul etmiş olursunuz",
+                 "service_and_privacy_policy":  "Hizmet ve Gizlilik Politikası"
+             },
+    "profile":  {
+                    "title":  "Profil",
+                    "name":  "Ad",
+                    "catchphrase":  "Slogan",
+                    "about_me":  "Hakkımda",
+                    "gender":  "Cinsiyet",
+                    "age":  "Yaş",
+                    "height":  "Boy",
+                    "work":  "İş",
+                    "education":  "Eğitim",
+                    "kids":  "Çocuklar",
+                    "preferred_relationships":  "Tercih edilen ilişkiler",
+                    "beliefs":  "İnançlar",
+                    "body_type":  "Vücut tipi",
+                    "exercise":  "Egzersiz",
+                    "drinking":  "Alkol",
+                    "smoking":  "Sigara",
+                    "profile_alt":  "Profil"
+                },
+    "people":  {
+                   "nearsy":  "Nearsy",
+                   "guess_what_i":  "Guess what I",
+                   "title":  "Kişiler"
+               },
+    "liked_you":  {
+                      "title":  "Seni beğenenler",
+                      "all_3":  "Hepsi 3",
+                      "filter_matches_0":  "Filtre eşleşmeleri 0",
+                      "outside_3":  "3\u0027ün dışında",
+                      "all_filter":  "Tümü",
+                      "matches_filter":  "Eşleşenler",
+                      "outside_filter":  "Dışında",
+                      "empty_title":  "Nothing yet� but on the bright side, no baggage.",
+                      "empty_body":  "Adjust your filters or show up in Nearby to help the right people find you.",
+                      "empty":  "Henüz beğeni yok",
+                      "tab_label":  "Seni beğenenler"
+                  },
+    "matches":  {
+                    "chats":  "Sohbetler",
+                    "tab_label":  "Sohbetler"
+                },
+    "chat":  {
+                 "write_a_message":  "Mesaj",
+                 "no_messages":  "Mesaj yok"
+             },
+    "account_settings":  {
+                             "title":  "Hesap ayarları",
+                             "member_id":  "Üye ID",
+                             "email":  "E-posta",
+                             "phone":  "Telefon",
+                             "password":  "Şifre",
+                             "edit_email":  "Düzenle",
+                             "edit_phone":  "Düzenle",
+                             "edit_password":  "Düzenle",
+                             "email_authentication":  "E-posta kimlik doğrulaması",
+                             "two_factor_authentication":  "İki faktörlü kimlik doğrulama",
+                             "manage":  "Yönet",
+                             "notifications":  "Bildirimler",
+                             "push_notifications":  "Anında Bildirimler",
+                             "matches":  "Eşleşmeler",
+                             "messages":  "Mesajlar",
+                             "liked_you":  "Senden hoşlandım",
+                             "email_notifications":  "E-posta Bildirimleri",
+                             "matches_email":  "Eşleşmeler",
+                             "messages_email":  "Mesajlar",
+                             "liked_you_email":  "Senden hoşlandım",
+                             "feedback":  "Geri bildirim",
+                             "hide_account":  "Hesabı gizle",
+                             "delete_account":  "Hesabı sil",
+                             "log_out":  "Çıkış yap",
+                             "chats":  "Sohbetler"
+                         },
+    "search_preferences":  {
+                               "title":  "Arama tercihleri",
+                               "who_you_want_to_date":  "Kiminle çıkmak istiyorsun:",
+                               "women":  "Kadınlar",
+                               "men":  "Erkekler",
+                               "other_gender":  "Diğer",
+                               "age":  "Yaş:",
+                               "between_20_and_50":  "20 ila 50 arası",
+                               "search_radius":  "Arama yarıçapı:",
+                               "up_to_161_kilometres_away":  "161 kilometreye kadar uzaklık",
+                               "languages_they_know":  "Bildikleri diller:",
+                               "what_are_they_looking_for":  "Ne arıyorlar?",
+                               "something_serious":  "Ciddi bir şey",
+                               "just_dating":  "Sadece çıkıyorum",
+                               "just_fun":  "Sadece eğlence",
+                               "open_to_anything":  "Her şeye açık",
+                               "not_sure":  "Emin değilim",
+                               "what_are_their_beliefs":  "İnançları neler?",
+                               "agnostic":  "Agnostik",
+                               "atheist":  "ateist",
+                               "buddhist":  "Budist",
+                               "christian":  "Hıristiyan",
+                               "jewish":  "Yahudi",
+                               "muslim":  "Müslüman",
+                               "other_beliefs":  "Diğer",
+                               "do_they_exercise":  "Egzersiz yapıyorlar mı?",
+                               "regularly":  "Düzenli olarak",
+                               "occasionally":  "Ara sıra",
+                               "rarely":  "nadiren",
+                               "do_they_drink":  "İçiyorlar mı?",
+                               "yes_drink":  "Evet",
+                               "occasionally_drink":  "Ara sıra",
+                               "rarely_drink":  "nadiren",
+                               "no_drink":  "Hayır",
+                               "do_they_smoke":  "Sigara içiyorlar mı?",
+                               "yes_smoke":  "Evet",
+                               "sometimes":  "Bazen",
+                               "no_smoke":  "Hayır",
+                               "trying_to_quit":  "Bırakmaya çalışıyorum",
+                               "nearby_visibility":  "Yakındaki görünürlük",
+                               "apply_filters":  "Filtreleri uygula"
+                           },
+    "nearby_search_preferences":  {
+                                      "title":  "Yakındaki Arama Tercihleri",
+                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "Konumunuzun ne kadar görünür olacağını seçin. Bunu istediğiniz zaman değiştirebilirsiniz.",
+                                      "visibility_modes":  "Görünürlük modları:",
+                                      "invisible":  "Görünmez",
+                                      "visible_while_using_the_app":  "Uygulamayı kullanırken görünür",
+                                      "your_last_location":  "Son konumunuz",
+                                      "to_update_your_status_go_to_profile_settings_location":  "Durumunuzu güncellemek için Profil Ayarları \u003e Konum\u0027a gidin.",
+                                      "save_visibility":  "Görünürlüğü kaydet",
+                                      "search_radius":  "Arama yarıçapı:"
+                                  },
+    "chat_preferences":  {
+                             "title":  "Sohbet Tercihleri",
+                             "choose_who_can_message_you_you_can_change_this_anytime":  "Size kimlerin mesaj gönderebileceğini seçin. Bunu istediğiniz zaman değiştirebilirsiniz.",
+                             "availability_modes":  "Kullanılabilirlik modları:",
+                             "unavailable":  "Kullanılamıyor",
+                             "matched_users_only":  "Yalnızca eşleşen kullanıcılar",
+                             "available":  "Mevcut",
+                             "stuff_i_could_talk_about_for_hours":  "Saatlerce konuşabileceğim şeyler:",
+                             "obscure_scifi_films_with_depressing_endings":  "İç karartıcı sonlara sahip belirsiz bilim kurgu filmleri",
+                             "save_chat_preferences":  "Sohbet tercihlerini kaydet"
+                         },
+    "matches_block":  {
+                          "block_message":  "Kullanıcı artık size mesaj gönderemez veya profilinizi görüntüleyemez",
+                          "delete_message":  "Bu sohbeti sil",
+                          "cancel":  "İptal",
+                          "ok":  "Tamam",
+                          "report_message":  "Bu kullanıcıyı şikayet et"
+                      },
+    "report_user":  {
+                        "title":  "Bize ne olduğunu anlatın",
+                        "submit":  "Gönder",
+                        "ok":  "Tamam",
+                        "thank_you":  "Bildiriminiz için teşekkür ederiz. Ekibimiz aldı ve davayı kısa sürede inceleyecek. Daha fazla bilgi gerekirse, size e-posta yoluyla ulaşacağız.",
+                        "description_hint":  "Ne olduğunu açıklayın..."
+                    },
+    "contact_us":  {
+                       "title":  "Bize ulaşın",
+                       "let_us_know_what_you_think":  "Ne düşündüğünüzü bize bildirin...",
+                       "submit":  "Gönder",
+                       "your_email":  "E-postanız",
+                       "message_required":  "Lütfen bir mesaj girin.",
+                       "submit_success":  "Geri bildiriminiz için teşekkürler.",
+                       "submit_error":  "Geri bildirim gönderilemedi."
+                   },
+    "hide_account":  {
+                         "title":  "Hesabı gizle",
+                         "hide":  "Gizle",
+                         "label_1":  "Biriyle tanismak istemedigin zaman profilini gizle; diger her sey ayni kalir.",
+                         "already_hidden_label":  "Profilin gizli. Tekrar tanismaya hazir oldugunda gorunur yap.",
+                         "unhide":  "Goster",
+                         "hide_success":  "Hesap gizlendi.",
+                         "unhide_success":  "Hesap gorunur.",
+                         "save_error":  "Hesap guncellenemedi."
+                     },
+    "delete_account":  {
+                           "title":  "Hesabı sil",
+                           "are_you_sure":  "Emin misin?",
+                           "absolutely":  "Kesinlikle",
+                           "not_quite":  "Pek değil",
+                           "label_1":  "Bu islem hesap verilerini siler, profilini gizler ve oturumunu kapatir.",
+                           "delete_success":  "Hesap silindi.",
+                           "delete_error":  "Hesap silinemedi."
+                       },
+    "profile_about_me":  {
+                             "about_me":  "Hakkımda:",
+                             "no_pressure_leave_it_blank_if_you_like":  "Baski yok - istersen bos birakabilirsin."
+                         },
+    "profile_gender":  {
+                           "gender":  "Cinsiyet:"
+                       },
+    "profile_age":  {
+                        "when_were_you_born":  "Ne zaman doğdun:",
+                        "day":  "Gün",
+                        "month":  "Ay",
+                        "year":  "Yıl",
+                        "optional":  "İsteğe bağlı",
+                        "day_placeholder":  "--",
+                        "month_placeholder":  "--",
+                        "year_placeholder":  "--"
+                    },
+    "months":  {
+                   "january":  "Ocak",
+                   "february":  "Şubat",
+                   "march":  "Mart",
+                   "april":  "Nisan",
+                   "may":  "Mayıs",
+                   "june":  "Haziran",
+                   "july":  "Temmuz",
+                   "august":  "Ağustos",
+                   "september":  "Eylül",
+                   "october":  "Ekim",
+                   "november":  "Kasım",
+                   "december":  "Aralık"
+               },
+    "profile_height":  {
+                           "my_height":  "Boy:",
+                           "enter_your_height":  "Boyunu gir",
+                           "ft":  "ft",
+                           "cm":  "santimetre"
+                       },
+    "profile_body_type":  {
+                              "my_body_type":  "Vücut tipi:"
+                          },
+    "profile_work":  {
+                         "my_work":  "İş:",
+                         "what_do_you_do":  "Ne is yapiyorsun?"
+                     },
+    "profile_education":  {
+                              "my_education":  "Eğitim:",
+                              "pick_the_closest_match":  "En yakin secenegi sec"
+                          },
+    "profile_kids":  {
+                         "kids":  "Çocuklar:"
+                     },
+    "profile_relationship":  {
+                                 "my_preferred_relationship":  "Tercih edilen ilişkiler:",
+                                 "what_are_you_looking_for":  "Ne arıyorsun?"
+                             },
+    "profile_religion":  {
+                             "my_beliefs":  "İnançlar:"
+                         },
+    "profile_exercise":  {
+                             "exercise":  "Egzersiz:",
+                             "any_form_of_physical_activity":  "Her turlu fiziksel aktivite"
+                         },
+    "profile_drinking":  {
+                             "my_drinking_habits":  "Alkol:",
+                             "choose_what_best_describes_your_alcohol_use":  "Alkol kullanimini en iyi anlatan secenegi sec."
+                         },
+    "profile_smoking":  {
+                            "my_smoking_habits":  "Sigara:",
+                            "do_you_smoke":  "Sigara iciyor musun?"
+                        },
+    "profile_location":  {
+                             "my_location":  "Konumum:",
+                             "automatically_detect_my_location_recommended":  "Konumumu otomatik olarak algıla (önerilir)",
+                             "status_in_nearby_local":  "Yakınlardaki Durum: Yerel",
+                             "i_will_set_my_location_manually":  "Konumumu manuel olarak ayarlayacağım",
+                             "select_location":  "Konum seçin..."
+                         },
+    "nearby":  {
+                   "title":  "Yakında",
+                   "filters":  "Filtreler",
+                   "visibility":  "Görünürlük",
+                   "tab_label":  "Yakında",
+                   "unknown_location":  "You\u0027re off the map. Allow location access and try again."
+               },
+    "email_auth":  {
+                       "sign_in_with_email":  "E-postayla oturum açın",
+                       "use_your_email_and_password_or_create_a_new_account":  "E-postanızı ve şifrenizi kullanın veya yeni bir hesap oluşturun.",
+                       "sign_in":  "Giriş yap",
+                       "register":  "Kaydol",
+                       "email_address":  "E-posta adresi",
+                       "password":  "Şifre",
+                       "repeat_password":  "Şifreyi tekrarla",
+                       "create_account":  "Hesap oluştur",
+                       "forgot_password":  "Şifrenizi mi unuttunuz?",
+                       "continue_button":  "Devam et",
+                       "or_sign_up_with":  "Veya şununla kaydol",
+                       "or_sign_in_with":  "Veya şununla giriş yap",
+                       "continue_with_google":  "Google ile devam et",
+                       "continue_with_apple":  "Apple ile devam et",
+                       "already_have_account":  "Zaten hesabın var mı?",
+                       "dont_have_account":  "Hesabın yok mu?",
+                       "sign_in_here":  "Buradan giriş yap",
+                       "sign_up_here":  "Buradan kaydol",
+                       "enter_email":  "E-posta adresini gir.",
+                       "enter_password":  "Şifreni gir."
+                   },
+    "phone_auth":  {
+                       "title":  "Telefon kimlik doğrulaması",
+                       "phone_verification_is_not_implemented_yet":  "Telefon doğrulaması henüz uygulanmadı."
+                   },
+    "verify_number":  {
+                          "title":  "Numarayı doğrula",
+                          "sms_verification_is_not_implemented_yet":  "SMS doğrulaması henüz uygulanmadı."
+                      },
+    "reset_password":  {
+                           "title":  "Şifreyi sıfırla",
+                           "enter_your_email_and_we_will_send_a_password_reset_link":  "E-postanızı girin, size bir şifre sıfırlama bağlantısı göndereceğiz.",
+                           "email_address":  "E-posta adresi",
+                           "send_reset_link":  "Sıfırlama bağlantısını gönder"
+                       },
+    "update_password":  {
+                            "title":  "Şifreyi güncelle",
+                            "choose_a_new_password_for_your_nearsy_account":  "Nearsy hesabınız için yeni bir şifre seçin.",
+                            "new_password":  "Yeni şifre",
+                            "repeat_password":  "Şifreyi tekrarla",
+                            "submit_button":  "Şifreyi güncelle"
+                        },
+    "nearsy_bottom_nav":  {
+                              "profile":  "Profil",
+                              "people":  "Kişiler",
+                              "nearby":  "Yakında",
+                              "liked_you":  "Seni beğenenler",
+                              "chats":  "Sohbetler"
+                          },
+    "profile_attributes":  {
+                               "gender":  {
+                                              "woman":  "Kadın",
+                                              "man":  "adam",
+                                              "non_binary":  "İkili olmayan",
+                                              "other":  "Diğer"
+                                          },
+                               "education":  {
+                                                 "high_school":  "Lise",
+                                                 "currently_studying":  "Şu anda Çalışıyorum",
+                                                 "trade_qualification":  "Ticaret Yeterliliği",
+                                                 "bachelors_degree":  "Lisans Derecesi",
+                                                 "masters_degree":  "Yüksek Lisans Derecesi",
+                                                 "doctorate_phd":  "Doktora / Doktora",
+                                                 "postgraduate":  "Lisansüstü",
+                                                 "other":  "Diğer",
+                                                 "prefer_not_to_say":  "Söylememeyi tercih ederim"
+                                             },
+                               "kids":  {
+                                            "yes":  "Evet",
+                                            "no":  "Hayır",
+                                            "prefer_not_to_say":  "Söylememeyi tercih ederim"
+                                        },
+                               "relationship_type":  {
+                                                         "something_serious":  "Ciddi bir şey",
+                                                         "just_dating":  "Sadece Arkadaşlık",
+                                                         "just_fun":  "Sadece Eğlence",
+                                                         "open_to_anything":  "Her şeye açık",
+                                                         "not_sure":  "Emin değilim"
+                                                     },
+                               "religion":  {
+                                                "agnostic":  "Agnostik",
+                                                "atheist":  "ateist",
+                                                "buddhist":  "Budist",
+                                                "christian":  "Hıristiyan",
+                                                "hindu":  "Hindu",
+                                                "jewish":  "Yahudi",
+                                                "muslim":  "Müslüman",
+                                                "sikh":  "Sih",
+                                                "spiritual":  "Manevi",
+                                                "other":  "Diğer"
+                                            },
+                               "body_type":  {
+                                                 "slim":  "İnce",
+                                                 "lean":  "Yalın",
+                                                 "average":  "Ortalama",
+                                                 "fit":  "Uygun",
+                                                 "athletic":  "Atletik",
+                                                 "muscular":  "Kaslı",
+                                                 "broad":  "Geniş",
+                                                 "stocky":  "tıknaz",
+                                                 "bigger":  "Daha büyük",
+                                                 "curvy":  "düzgün vücutlu",
+                                                 "prefer_not_to_say":  "Söylememeyi tercih ederim"
+                                             },
+                               "exercise":  {
+                                                "regularly":  "Düzenli olarak",
+                                                "occasionally":  "Ara sıra",
+                                                "rarely":  "nadiren",
+                                                "never":  "Asla"
+                                            },
+                               "drinking":  {
+                                                "yes":  "Evet",
+                                                "occasionally":  "Ara sıra",
+                                                "rarely":  "nadiren",
+                                                "no":  "Hayır",
+                                                "stopped_for_now":  "Şimdilik durduruldu"
+                                            },
+                               "smoking":  {
+                                               "yes":  "Evet",
+                                               "sometimes":  "Bazen",
+                                               "no":  "Hayır",
+                                               "trying_to_quit":  "Bırakmaya çalışıyorum"
+                                           }
+                           },
+    "languages":  {
+                      "afar":  "Uzak",
+                      "afrikaans":  "Afrikaans",
+                      "albanian":  "Arnavut",
+                      "amharic":  "Amharca",
+                      "arabic":  "Arapça",
+                      "armenian":  "Ermeni",
+                      "bengali":  "Bengalce",
+                      "catalan":  "Katalanca",
+                      "english":  "English",
+                      "russian":  "Russian",
+                      "ukrainian":  "Ukrainian"
+                  },
+    "account_email":  {
+                          "edit_title":  "E-postayi duzenle",
+                          "add_title":  "E-posta ekle",
+                          "label_1":  "Hesabin icin kullanmak istedigin e-posta adresini gir.",
+                          "email_address":  "E-posta adresi",
+                          "save":  "Kaydet",
+                          "invalid_email":  "Gecerli bir e-posta adresi gir.",
+                          "confirmation_sent":  "Onay kodu gonderildi.",
+                          "save_error":  "E-posta guncellenemedi.",
+                          "title":  "E-postani ekle ve dogrula",
+                          "your_email":  "E-postan",
+                          "code_label":  "E-posta adresine gonderdigimiz kodu gir. 20 saniye icinde gelmeli.",
+                          "resend_code":  "Kodu tekrar gonder"
+                      }
 }

@@ -1,7 +1,6 @@
 import '/components/nearsy_bottom_nav_widget.dart';
 import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
-import '/app_state.dart';
 import 'people_page_widget.dart' show PeoplePageWidget;
 import 'dart:async';
 import 'package:flutter/material.dart';
@@ -31,6 +30,9 @@ class DiscoveryProfile {
     this.smoking,
     this.height,
     this.languages,
+    this.latitude,
+    this.longitude,
+    this.presenceType,
   });
 
   final int profileId;
@@ -54,68 +56,27 @@ class DiscoveryProfile {
   final String? smoking;
   final String? height;
   final String? languages;
+  final double? latitude;
+  final double? longitude;
+  final String? presenceType;
   final List<String> photos;
-}
 
-class PeoplePageModel extends FloterModel<PeoplePageWidget> {
-  VoidCallback? onStateChanged;
-  void Function(String userId, String matchName, String matchPhoto)? onMatchFound;
-
-  bool isLoadingProfiles = true;
-  String loadError = '';
-  List<DiscoveryProfile> profiles = [];
-  int currentProfileIndex = 0;
-  List<String> swipedUserIds = [];
-
-  late CardSwiperController candidateSwipeableStackController;
-  late NearsyBottomNavModel nearsyBottomNavModel;
-
-  @override
-  void initState(BuildContext context) {
-    candidateSwipeableStackController = CardSwiperController();
-    nearsyBottomNavModel =
-        createModel(context, () => NearsyBottomNavModel());
-    _loadProfiles();
-  }
-
-  @override
-  void dispose() {
-    candidateSwipeableStackController.dispose();
-    nearsyBottomNavModel.dispose();
-  }
-
-  void refreshProfiles() {
-    _loadProfiles();
-  }
-
-  Future<void> _loadProfiles() async {
-    isLoadingProfiles = true;
-    loadError = '';
-    onStateChanged?.call();
-
-    try {
-      final response = await SupaFlow.client
-          .rpc('get_discovery_feed_v2', params: {'p_limit': 20, 'p_offset': 0});
-
-      final rows = response as List<dynamic>? ?? [];
-      profiles = rows.map((r) => _parseProfile(r as Map<String, dynamic>)).toList();
-      currentProfileIndex = 0;
-      swipedUserIds.clear();
-      isLoadingProfiles = false;
-    } catch (e) {
-      loadError = e.toString();
-      isLoadingProfiles = false;
-    }
-    onStateChanged?.call();
-  }
-
-  DiscoveryProfile _parseProfile(Map<String, dynamic> row) {
-    final rawPhotos =
-        row['photos'] is String ? jsonDecode(row['photos'] as String) : row['photos'];
-    final photoList = _resolvePhotos(rawPhotos);
+  factory DiscoveryProfile.fromRow(Map<String, dynamic> row) {
     final avatarUrl = SupaFlow.resolvePhotoUrl(row['avatar_url']);
-    if (avatarUrl != null && avatarUrl.isNotEmpty && !photoList.contains(avatarUrl)) {
-      photoList.insert(0, avatarUrl);
+
+    final rawPhotos = row['photos'];
+    List<String> photoList;
+    if (rawPhotos != null) {
+      final parsed = rawPhotos is String ? jsonDecode(rawPhotos) : rawPhotos;
+      photoList = _resolvePhotosStatic(parsed);
+      if (avatarUrl != null &&
+          avatarUrl.isNotEmpty &&
+          !photoList.contains(avatarUrl)) {
+        photoList.insert(0, avatarUrl);
+      }
+    } else {
+      photoList =
+          avatarUrl != null && avatarUrl.isNotEmpty ? [avatarUrl] : [];
     }
 
     return DiscoveryProfile(
@@ -140,11 +101,14 @@ class PeoplePageModel extends FloterModel<PeoplePageWidget> {
       smoking: row['smoking'] as String?,
       height: row['height'] as String?,
       languages: row['languages'] as String?,
+      latitude: (row['latitude'] as num?)?.toDouble(),
+      longitude: (row['longitude'] as num?)?.toDouble(),
+      presenceType: row['presence_type'] as String?,
       photos: photoList,
     );
   }
 
-  List<String> _resolvePhotos(dynamic photosData) {
+  static List<String> _resolvePhotosStatic(dynamic photosData) {
     if (photosData == null) return [];
     final List<dynamic> items = photosData is List ? photosData : [];
     return items
@@ -159,6 +123,60 @@ class PeoplePageModel extends FloterModel<PeoplePageWidget> {
         })
         .whereType<String>()
         .toList();
+  }
+}
+
+class PeoplePageModel extends FloterModel<PeoplePageWidget> {
+  VoidCallback? onStateChanged;
+  void Function(String userId, String matchName, String matchPhoto)?
+      onMatchFound;
+
+  bool isLoadingProfiles = true;
+  String loadError = '';
+  List<DiscoveryProfile> profiles = [];
+  int currentProfileIndex = 0;
+  List<String> swipedUserIds = [];
+
+  late CardSwiperController candidateSwipeableStackController;
+  late NearsyBottomNavModel nearsyBottomNavModel;
+
+  @override
+  void initState(BuildContext context) {
+    candidateSwipeableStackController = CardSwiperController();
+    nearsyBottomNavModel = createModel(context, () => NearsyBottomNavModel());
+    _loadProfiles();
+  }
+
+  @override
+  void dispose() {
+    candidateSwipeableStackController.dispose();
+    nearsyBottomNavModel.dispose();
+  }
+
+  void refreshProfiles() {
+    _loadProfiles();
+  }
+
+  Future<void> _loadProfiles() async {
+    isLoadingProfiles = true;
+    loadError = '';
+    onStateChanged?.call();
+
+    try {
+      final response = await SupaFlow.client
+          .rpc('get_discovery_feed_v2', params: {'p_limit': 20, 'p_offset': 0});
+
+      final rows = response as List<dynamic>? ?? [];
+      profiles =
+          rows.map((r) => DiscoveryProfile.fromRow(r as Map<String, dynamic>)).toList();
+      currentProfileIndex = 0;
+      swipedUserIds.clear();
+      isLoadingProfiles = false;
+    } catch (e) {
+      loadError = e.toString();
+      isLoadingProfiles = false;
+    }
+    onStateChanged?.call();
   }
 
   Future<void> persistSwipe(String targetUserId, String action) async {
@@ -193,7 +211,8 @@ class PeoplePageModel extends FloterModel<PeoplePageWidget> {
     if (profile == null) return;
     persistSwipe(profile.userId, 'like');
     _afterSwipe(profile.userId);
-    _checkAndCreateMatch(profile.userId, profile.displayName, profile.avatarUrl);
+    _checkAndCreateMatch(
+        profile.userId, profile.displayName, profile.avatarUrl);
   }
 
   Future<void> _checkAndCreateMatch(

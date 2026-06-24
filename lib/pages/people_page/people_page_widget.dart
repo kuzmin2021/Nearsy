@@ -7,6 +7,7 @@ import '/floter/floter_swipeable_stack.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
+import '/floter/custom_functions.dart' as functions;
 import '/services/profile/profile_localization.dart';
 import '/pages/matches_page/matches_page_widget.dart' show MatchesPageWidget;
 import 'package:flutter/material.dart';
@@ -390,18 +391,13 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
     );
     addRow(
       AppLabels.of(context).get('search_preferences.languages_they_know'),
-      (profile.languages ?? '')
-          .split(RegExp(r'[,;|/]'))
-          .map((s) {
-            final key = s.trim().toLowerCase();
-            final translated = AppLabels.of(context).get('languages.$key');
-            if (translated == 'languages.$key') {
-              return humanizeProfileValue(s.trim());
-            }
-            return translated;
-          })
-          .where((s) => s.isNotEmpty)
-          .join(', '),
+      functions.profileLanguagesDisplay(
+        (profile.languages ?? '')
+            .split(RegExp(r'[,;|/]'))
+            .map((s) => s.trim())
+            .where((s) => s.isNotEmpty)
+            .toList(),
+      ) ?? '',
     );
     addRow(
       AppLabels.of(context).get('profile.height'),

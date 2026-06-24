@@ -47,7 +47,7 @@ class _NearbySearchPreferencesPageWidgetState
 
     _isExiting = true;
     try {
-      await _model.saveVisibilityMode();
+      await _model.saveSettings();
       if (!mounted) {
         return;
       }
