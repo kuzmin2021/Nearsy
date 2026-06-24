@@ -120,14 +120,18 @@ class ProfilePhotoGrid extends StatelessWidget {
 
   Future<Uint8List?> _pickFromCamera() async {
     final picker = ImagePicker();
-    final picked = await picker.pickImage(
-      source: ImageSource.camera,
-      maxWidth: 1024,
-      maxHeight: 1024,
-      imageQuality: 85,
-    );
-    if (picked == null) return null;
-    return await picked.readAsBytes();
+    try {
+      final picked = await picker.pickImage(
+        source: ImageSource.camera,
+        maxWidth: 1024,
+        maxHeight: 1024,
+        imageQuality: 85,
+      );
+      if (picked == null) return null;
+      return await picked.readAsBytes();
+    } catch (_) {
+      return null;
+    }
   }
 
   Future<Uint8List?> _pickPhotoBytes(BuildContext context) async {
@@ -149,9 +153,21 @@ class ProfilePhotoGrid extends StatelessWidget {
       ),
     );
 
-    if (source == 'camera') return await _pickFromCamera();
-    if (source == 'gallery') return await _pickFromGallery();
-    return null;
+    try {
+      if (source == 'camera') return await _pickFromCamera();
+      if (source == 'gallery') return await _pickFromGallery();
+      return null;
+    } catch (_) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Camera access denied. Enable it in Settings.'),
+            duration: Duration(seconds: 3),
+          ),
+        );
+      }
+      return null;
+    }
   }
 
   Future<String?> _uploadBytesToStorage(Uint8List bytes) async {

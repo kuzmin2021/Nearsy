@@ -72,6 +72,10 @@
 
 
 
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Nearsy needs photo library access to select images for your profile and chats.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Nearsy needs camera access to take profile photos and share images in chat.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

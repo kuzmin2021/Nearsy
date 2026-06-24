@@ -353,11 +353,22 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                   onTap: () async {
                     Navigator.pop(ctx);
                     final picker = ImagePicker();
-                    final picked = await picker.pickImage(source: ImageSource.camera);
-                    if (picked == null) return;
-                    final bytes = await picked.readAsBytes();
-                    await _model.sendPhoto(bytes, picked.name);
-                    safeSetState(() {});
+                    try {
+                      final picked = await picker.pickImage(source: ImageSource.camera);
+                      if (picked == null) return;
+                      final bytes = await picked.readAsBytes();
+                      await _model.sendPhoto(bytes, picked.name);
+                      safeSetState(() {});
+                    } catch (_) {
+                      if (context.mounted) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Camera access denied. Enable it in Settings.'),
+                            duration: Duration(seconds: 3),
+                          ),
+                        );
+                      }
+                    }
                   },
                 ),
               ],
