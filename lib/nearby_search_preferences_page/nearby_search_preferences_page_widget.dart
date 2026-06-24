@@ -1,7 +1,6 @@
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
-import '/floter/floter_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'nearby_search_preferences_page_model.dart';
@@ -27,8 +26,7 @@ class _NearbySearchPreferencesPageWidgetState
   @override
   void initState() {
     super.initState();
-    _model =
-        createModel(context, () => NearbySearchPreferencesPageModel());
+    _model = createModel(context, () => NearbySearchPreferencesPageModel());
     _model.onStateChanged = () => safeSetState(() {});
   }
 
@@ -69,12 +67,12 @@ class _NearbySearchPreferencesPageWidgetState
                     children: [
                       FloterIconButton(
                         borderRadius: 8.0,
-                        buttonSize: 40.0,
+                        buttonSize: 64.0,
                         fillColor: theme.primaryBackground,
                         icon: Icon(
-                          Icons.close,
+                          Icons.arrow_back,
                           color: theme.primaryText,
-                          size: 24.0,
+                          size: 48.0,
                         ),
                         onPressed: () async {
                           context.pop();
@@ -131,27 +129,28 @@ class _NearbySearchPreferencesPageWidgetState
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      _buildModeOption(
+                      _buildIconButton(
                         context,
-                        icon: Icons.location_off,
-                        label: labels.get(
-                            'nearby_search_preferences.invisible'),
+                        activeAsset: 'assets/images/point_hidden_icon.png',
+                        inactiveAsset:
+                            'assets/images/point_hidden_icon_inactive.png',
+                        selectedRingColor: Colors.red,
                         isSelected: _model.selectedMode ==
                             NearbySearchPreferencesPageModel.invisibleValue,
                         onTap: () {
                           setState(() {
                             _model.selectedMode =
-                                NearbySearchPreferencesPageModel
-                                    .invisibleValue;
+                                NearbySearchPreferencesPageModel.invisibleValue;
                           });
                         },
                       ),
-                      _buildModeOption(
+                      _buildIconButton(
                         context,
-                        icon: Icons.near_me,
-                        label: labels.get(
-                          'nearby_search_preferences.visible_while_using_the_app',
-                        ),
+                        activeAsset:
+                            'assets/images/point_shown_while_phone_on_icon.png',
+                        inactiveAsset:
+                            'assets/images/point_shown_while_phone_on_icon_inactive.png',
+                        selectedRingColor: theme.primary,
                         isSelected: _model.selectedMode ==
                             NearbySearchPreferencesPageModel.visibleValue,
                         onTap: () {
@@ -161,73 +160,53 @@ class _NearbySearchPreferencesPageWidgetState
                           });
                         },
                       ),
-                      _buildModeOption(
+                      _buildIconButton(
                         context,
-                        icon: Icons.my_location,
-                        label: labels.get(
-                          'nearby_search_preferences.your_last_location',
-                        ),
+                        activeAsset:
+                            'assets/images/point_shown_always_icon.png',
+                        inactiveAsset:
+                            'assets/images/point_shown_always_icon_inactive.png',
+                        selectedRingColor: Colors.green,
                         isSelected: _model.selectedMode ==
-                            NearbySearchPreferencesPageModel.visibleValue,
+                            NearbySearchPreferencesPageModel.frozenValue,
                         onTap: () {
                           setState(() {
                             _model.selectedMode =
-                                NearbySearchPreferencesPageModel.visibleValue;
+                                NearbySearchPreferencesPageModel.frozenValue;
                           });
                         },
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16.0),
-                  Text(
-                    () {
-                      final loc = _model.locationLabel;
-                      if (loc.isNotEmpty) {
-                        return labels.get(
-                      'nearby_search_preferences.you_appear_as_local',
-                    ).replaceAll('{location}', _model.locationLabel);
-                      }
-                      return labels.get(
-                        'nearby_search_preferences.you_appear_as_local_guboshlyopsk_zabuldogovo',
-                      );
-                    }(),
-                    style: const TextStyle(),
-                  ),
-                  const SizedBox(height: 16.0),
-                  Text(
-                    labels.get(
-                      'nearby_search_preferences.to_update_your_status_go_to_profile_settings_location',
-                    ),
-                    style: theme.bodyMedium.override(
-                      font: GoogleFonts.inter(
-                        fontWeight: theme.bodyMedium.fontWeight,
-                        fontStyle: theme.bodyMedium.fontStyle,
+                  const SizedBox(height: 6.0),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _buildLabel(
+                        context,
+                        labels.get('nearby_search_preferences.invisible'),
+                        isSelected: _model.selectedMode ==
+                            NearbySearchPreferencesPageModel.invisibleValue,
                       ),
-                      color: theme.primary,
-                      letterSpacing: 0.0,
-                      fontWeight: theme.bodyMedium.fontWeight,
-                      fontStyle: theme.bodyMedium.fontStyle,
-                    ),
-                  ),
-                  const SizedBox(height: 16.0),
-                  FTButtonWidget(
-                    onPressed: () async {
-                      await _model.saveVisibilityMode();
-                      context.pop();
-                    },
-                    text: labels.get(
-                      'nearby_search_preferences.save_visibility',
-                    ),
-                    options: FTButtonOptions(
-                      width: double.infinity,
-                      padding: const EdgeInsetsDirectional.fromSTEB(
-                          0.0, 0.0, 0.0, 0.0),
-                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                          0.0, 0.0, 0.0, 0.0),
-                      color: theme.primary,
-                      textStyle: TextStyle(color: theme.primaryBackground),
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
+                      _buildLabel(
+                        context,
+                        labels.get(
+                          'nearby_search_preferences.visible_while_using_the_app',
+                        ),
+                        isSelected: _model.selectedMode ==
+                            NearbySearchPreferencesPageModel.visibleValue,
+                      ),
+                      _buildLabel(
+                        context,
+                        labels.get(
+                          'nearby_search_preferences.your_last_location',
+                        ),
+                        isSelected: _model.selectedMode ==
+                            NearbySearchPreferencesPageModel.frozenValue,
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -238,61 +217,77 @@ class _NearbySearchPreferencesPageWidgetState
     );
   }
 
-  Widget _buildModeOption(
+  Widget _buildIconButton(
     BuildContext context, {
-    required IconData icon,
-    required String label,
+    required String activeAsset,
+    required String inactiveAsset,
+    required Color selectedRingColor,
     required bool isSelected,
     required VoidCallback onTap,
   }) {
-    final theme = FloterTheme.of(context);
-    final borderColor = isSelected ? theme.primary : theme.alternate;
-    final iconColor = isSelected ? theme.primary : theme.secondaryText;
+    const iconSize = 72.0;
+    const selectedRingInset = 11.0;
+
+    final icon = Image.asset(
+      isSelected ? activeAsset : inactiveAsset,
+      width: iconSize,
+      height: iconSize,
+      fit: BoxFit.contain,
+    );
 
     return Expanded(
       flex: 1,
       child: GestureDetector(
         onTap: onTap,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              width: 54.0,
-              height: 54.0,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(27.0),
-                border: Border.all(
-                  color: borderColor,
-                  width: 4.0,
-                ),
-              ),
-              alignment: const AlignmentDirectional(0.0, 0.0),
-              child: Icon(
-                icon,
-                color: iconColor,
-                size: 24.0,
-              ),
-            ),
-            const SizedBox(height: 6.0),
-            Text(
-              label,
-              textAlign: TextAlign.center,
-              maxLines: 3,
-              style: theme.bodySmall.override(
-                font: GoogleFonts.inter(
-                  fontWeight: theme.bodySmall.fontWeight,
-                  fontStyle: theme.bodySmall.fontStyle,
-                ),
-                letterSpacing: 0.0,
-                fontWeight: theme.bodySmall.fontWeight,
-                fontStyle: theme.bodySmall.fontStyle,
-              ),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ],
+        child: SizedBox(
+          width: iconSize,
+          height: iconSize,
+          child: Center(
+            child: isSelected
+                ? Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      icon,
+                      Positioned.fill(
+                        left: selectedRingInset,
+                        top: selectedRingInset,
+                        right: selectedRingInset,
+                        bottom: selectedRingInset,
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: selectedRingColor,
+                              width: 5.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
+                : icon,
+          ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildLabel(BuildContext context, String text,
+      {bool isSelected = false}) {
+    final theme = FloterTheme.of(context);
+
+    return Expanded(
+      flex: 1,
+      child: Text(
+        text,
+        textAlign: TextAlign.center,
+        maxLines: 3,
+        style: GoogleFonts.inter(
+          fontSize: 16.0,
+          fontWeight: isSelected ? FontWeight.w700 : FontWeight.w400,
+          color: theme.primaryText,
+        ),
+        overflow: TextOverflow.ellipsis,
       ),
     );
   }
