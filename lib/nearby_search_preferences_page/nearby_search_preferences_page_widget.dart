@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -22,6 +24,8 @@ class _NearbySearchPreferencesPageWidgetState
   late NearbySearchPreferencesPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  bool _isExiting = false;
+  bool _allowPop = false;
 
   @override
   void initState() {
@@ -36,179 +40,223 @@ class _NearbySearchPreferencesPageWidgetState
     super.dispose();
   }
 
+  Future<void> _saveAndExit() async {
+    if (_isExiting) {
+      return;
+    }
+
+    _isExiting = true;
+    try {
+      await _model.saveVisibilityMode();
+      if (!mounted) {
+        return;
+      }
+      safeSetState(() {
+        _allowPop = true;
+      });
+      await Future<void>.delayed(Duration.zero);
+      if (!mounted) {
+        return;
+      }
+      Navigator.of(context).pop();
+    } catch (error) {
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Failed to save nearby visibility: $error'),
+          duration: const Duration(milliseconds: 3000),
+        ),
+      );
+      _isExiting = false;
+      _allowPop = false;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = FloterTheme.of(context);
     final labels = AppLabels.of(context);
 
-    return GestureDetector(
-      onTap: () {
-        FocusScope.of(context).unfocus();
-        FocusManager.instance.primaryFocus?.unfocus();
+    return PopScope(
+      canPop: _allowPop,
+      onPopInvokedWithResult: (didPop, _) {
+        if (didPop || _isExiting) {
+          return;
+        }
+        unawaited(_saveAndExit());
       },
-      child: Scaffold(
-        key: scaffoldKey,
-        backgroundColor: theme.primaryBackground,
-        body: SafeArea(
-          top: true,
-          child: Padding(
-            padding:
-                const EdgeInsetsDirectional.fromSTEB(24.0, 44.0, 24.0, 28.0),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      FloterIconButton(
-                        borderRadius: 8.0,
-                        buttonSize: 64.0,
-                        fillColor: theme.primaryBackground,
-                        icon: Icon(
-                          Icons.arrow_back,
-                          color: theme.primaryText,
-                          size: 48.0,
+      child: GestureDetector(
+        onTap: () {
+          FocusScope.of(context).unfocus();
+          FocusManager.instance.primaryFocus?.unfocus();
+        },
+        child: Scaffold(
+          key: scaffoldKey,
+          backgroundColor: theme.primaryBackground,
+          body: SafeArea(
+            top: true,
+            child: Padding(
+              padding:
+                  const EdgeInsetsDirectional.fromSTEB(24.0, 44.0, 24.0, 28.0),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        FloterIconButton(
+                          borderRadius: 8.0,
+                          buttonSize: 64.0,
+                          fillColor: theme.primaryBackground,
+                          icon: Icon(
+                            Icons.arrow_back,
+                            color: theme.primaryText,
+                            size: 48.0,
+                          ),
+                          onPressed: () async {
+                            await _saveAndExit();
+                          },
                         ),
-                        onPressed: () async {
-                          context.pop();
-                        },
-                      ),
-                      const SizedBox(width: 12.0),
-                      Text(
-                        labels.get('nearby_search_preferences.title'),
-                        style: theme.titleLarge.override(
-                          font: GoogleFonts.interTight(
+                        const SizedBox(width: 12.0),
+                        Text(
+                          labels.get('nearby_search_preferences.title'),
+                          style: theme.titleLarge.override(
+                            font: GoogleFonts.interTight(
+                              fontWeight: theme.titleLarge.fontWeight,
+                              fontStyle: theme.titleLarge.fontStyle,
+                            ),
+                            letterSpacing: 0.0,
                             fontWeight: theme.titleLarge.fontWeight,
                             fontStyle: theme.titleLarge.fontStyle,
                           ),
-                          letterSpacing: 0.0,
-                          fontWeight: theme.titleLarge.fontWeight,
-                          fontStyle: theme.titleLarge.fontStyle,
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 16.0),
-                  Text(
-                    labels.get(
-                      'nearby_search_preferences.choose_how_visible_your_location_is_you_can_change_this_anytime',
+                      ],
                     ),
-                    style: theme.bodyMedium.override(
-                      font: GoogleFonts.inter(
+                    const SizedBox(height: 16.0),
+                    Text(
+                      labels.get(
+                        'nearby_search_preferences.choose_how_visible_your_location_is_you_can_change_this_anytime',
+                      ),
+                      style: theme.bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: theme.bodyMedium.fontWeight,
+                          fontStyle: theme.bodyMedium.fontStyle,
+                        ),
+                        letterSpacing: 0.0,
                         fontWeight: theme.bodyMedium.fontWeight,
                         fontStyle: theme.bodyMedium.fontStyle,
                       ),
-                      letterSpacing: 0.0,
-                      fontWeight: theme.bodyMedium.fontWeight,
-                      fontStyle: theme.bodyMedium.fontStyle,
                     ),
-                  ),
-                  const SizedBox(height: 16.0),
-                  Text(
-                    labels.get(
-                      'nearby_search_preferences.visibility_modes',
-                    ),
-                    style: theme.titleSmall.override(
-                      font: GoogleFonts.interTight(
+                    const SizedBox(height: 16.0),
+                    Text(
+                      labels.get(
+                        'nearby_search_preferences.visibility_modes',
+                      ),
+                      style: theme.titleSmall.override(
+                        font: GoogleFonts.interTight(
+                          fontWeight: theme.titleSmall.fontWeight,
+                          fontStyle: theme.titleSmall.fontStyle,
+                        ),
+                        letterSpacing: 0.0,
                         fontWeight: theme.titleSmall.fontWeight,
                         fontStyle: theme.titleSmall.fontStyle,
                       ),
-                      letterSpacing: 0.0,
-                      fontWeight: theme.titleSmall.fontWeight,
-                      fontStyle: theme.titleSmall.fontStyle,
                     ),
-                  ),
-                  const SizedBox(height: 16.0),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      _buildIconButton(
-                        context,
-                        activeAsset: 'assets/images/point_hidden_icon.png',
-                        inactiveAsset:
-                            'assets/images/point_hidden_icon_inactive.png',
-                        selectedRingColor: Colors.red,
-                        isSelected: _model.selectedMode ==
-                            NearbySearchPreferencesPageModel.invisibleValue,
-                        onTap: () {
-                          setState(() {
-                            _model.selectedMode =
-                                NearbySearchPreferencesPageModel.invisibleValue;
-                          });
-                        },
-                      ),
-                      _buildIconButton(
-                        context,
-                        activeAsset:
-                            'assets/images/point_shown_while_phone_on_icon.png',
-                        inactiveAsset:
-                            'assets/images/point_shown_while_phone_on_icon_inactive.png',
-                        selectedRingColor: theme.primary,
-                        isSelected: _model.selectedMode ==
-                            NearbySearchPreferencesPageModel.visibleValue,
-                        onTap: () {
-                          setState(() {
-                            _model.selectedMode =
-                                NearbySearchPreferencesPageModel.visibleValue;
-                          });
-                        },
-                      ),
-                      _buildIconButton(
-                        context,
-                        activeAsset:
-                            'assets/images/point_shown_always_icon.png',
-                        inactiveAsset:
-                            'assets/images/point_shown_always_icon_inactive.png',
-                        selectedRingColor: Colors.green,
-                        isSelected: _model.selectedMode ==
-                            NearbySearchPreferencesPageModel.frozenValue,
-                        onTap: () {
-                          setState(() {
-                            _model.selectedMode =
-                                NearbySearchPreferencesPageModel.frozenValue;
-                          });
-                        },
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 6.0),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      _buildLabel(
-                        context,
-                        labels.get('nearby_search_preferences.invisible'),
-                        isSelected: _model.selectedMode ==
-                            NearbySearchPreferencesPageModel.invisibleValue,
-                      ),
-                      _buildLabel(
-                        context,
-                        labels.get(
-                          'nearby_search_preferences.visible_while_using_the_app',
+                    const SizedBox(height: 16.0),
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        _buildIconButton(
+                          context,
+                          activeAsset: 'assets/images/point_hidden_icon.png',
+                          inactiveAsset:
+                              'assets/images/point_hidden_icon_inactive.png',
+                          selectedRingColor: Colors.red,
+                          isSelected: _model.selectedMode ==
+                              NearbySearchPreferencesPageModel.invisibleValue,
+                          onTap: () {
+                            setState(() {
+                              _model.selectedMode =
+                                  NearbySearchPreferencesPageModel
+                                      .invisibleValue;
+                            });
+                          },
                         ),
-                        isSelected: _model.selectedMode ==
-                            NearbySearchPreferencesPageModel.visibleValue,
-                      ),
-                      _buildLabel(
-                        context,
-                        labels.get(
-                          'nearby_search_preferences.your_last_location',
+                        _buildIconButton(
+                          context,
+                          activeAsset:
+                              'assets/images/point_shown_while_phone_on_icon.png',
+                          inactiveAsset:
+                              'assets/images/point_shown_while_phone_on_icon_inactive.png',
+                          selectedRingColor: theme.primary,
+                          isSelected: _model.selectedMode ==
+                              NearbySearchPreferencesPageModel.visibleValue,
+                          onTap: () {
+                            setState(() {
+                              _model.selectedMode =
+                                  NearbySearchPreferencesPageModel.visibleValue;
+                            });
+                          },
                         ),
-                        isSelected: _model.selectedMode ==
-                            NearbySearchPreferencesPageModel.frozenValue,
-                      ),
-                    ],
-                  ),
-                ],
+                        _buildIconButton(
+                          context,
+                          activeAsset:
+                              'assets/images/point_shown_always_icon.png',
+                          inactiveAsset:
+                              'assets/images/point_shown_always_icon_inactive.png',
+                          selectedRingColor: Colors.green,
+                          isSelected: _model.selectedMode ==
+                              NearbySearchPreferencesPageModel.frozenValue,
+                          onTap: () {
+                            setState(() {
+                              _model.selectedMode =
+                                  NearbySearchPreferencesPageModel.frozenValue;
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 6.0),
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        _buildLabel(
+                          context,
+                          labels.get('nearby_search_preferences.invisible'),
+                          isSelected: _model.selectedMode ==
+                              NearbySearchPreferencesPageModel.invisibleValue,
+                        ),
+                        _buildLabel(
+                          context,
+                          labels.get(
+                            'nearby_search_preferences.visible_while_using_the_app',
+                          ),
+                          isSelected: _model.selectedMode ==
+                              NearbySearchPreferencesPageModel.visibleValue,
+                        ),
+                        _buildLabel(
+                          context,
+                          labels.get(
+                            'nearby_search_preferences.your_last_location',
+                          ),
+                          isSelected: _model.selectedMode ==
+                              NearbySearchPreferencesPageModel.frozenValue,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
