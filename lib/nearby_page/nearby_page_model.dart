@@ -64,15 +64,41 @@ class NearbyPageModel extends FloterModel<NearbyPageWidget> {
 
   Future<void> _loadCurrentLocation() async {
     try {
+      final serviceEnabled = await Geolocator.isLocationServiceEnabled();
+      if (!serviceEnabled) {
+        loadError = 'location_disabled';
+        isLoadingProfiles = false;
+        onStateChanged?.call();
+        return;
+      }
+
+      var permission = await Geolocator.checkPermission();
+      if (permission == LocationPermission.denied) {
+        permission = await Geolocator.requestPermission();
+        if (permission == LocationPermission.denied) {
+          loadError = 'location_denied';
+          isLoadingProfiles = false;
+          onStateChanged?.call();
+          return;
+        }
+      }
+      if (permission == LocationPermission.deniedForever) {
+        loadError = 'location_denied_forever';
+        isLoadingProfiles = false;
+        onStateChanged?.call();
+        return;
+      }
+
       final position = await Geolocator.getCurrentPosition(
         locationSettings: const LocationSettings(
           accuracy: LocationAccuracy.low,
-          timeLimit: Duration(seconds: 10),
         ),
       );
       currentLocation = LatLng(position.latitude, position.longitude);
+      loadError = '';
       onStateChanged?.call();
-    } catch (_) {
+    } catch (e) {
+      loadError = e.toString();
       currentLocation = null;
       isLoadingProfiles = false;
       onStateChanged?.call();
