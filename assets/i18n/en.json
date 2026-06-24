@@ -292,7 +292,9 @@
                    "hidden_description":  "Your profile is not visible in Nearby. Change visibility to appear here.",
                    "no_one_nearby":  "No one nearby yet",
                    "retry":  "Retry",
-                   "unknown_location":  "You\u0027re off the map. Allow location access and try again."
+                   "unknown_location":  "You\u0027re off the map. Allow location access and try again.",
+                   "no_location_title":  "Location unavailable",
+                   "no_one_nearby_body":  "Try adjusting your visibility or check back later."
                },
     "email_auth":  {
                        "sign_in_with_email":  "Sign in with email",

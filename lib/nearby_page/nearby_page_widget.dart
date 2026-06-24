@@ -59,7 +59,7 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
             children: [
               Padding(
                 padding:
-                    const EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 8.0),
+                    const EdgeInsetsDirectional.fromSTEB(24.0, 36.0, 24.0, 0.0),
                 child: _buildHeader(context, theme),
               ),
               Expanded(
@@ -128,24 +128,91 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
 
   Widget _buildMap(BuildContext context, FloterTheme theme) {
     if (_model.currentLocation == null) {
-      return Center(
-        child: _model.isLoadingProfiles
-            ? const CircularProgressIndicator()
-            : Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(Icons.location_off,
-                      size: 48, color: theme.secondaryText),
-                  const SizedBox(height: 12),
-                  Text(
-                    AppLabels.of(context).get('nearby.unknown_location'),
-                    style: GoogleFonts.inter(
-                      color: theme.secondaryText,
-                      fontSize: 14,
+      if (_model.isLoadingProfiles) {
+        return const Center(child: CircularProgressIndicator());
+      }
+      return Align(
+        alignment: AlignmentDirectional.topStart,
+        child: Padding(
+          padding:
+              const EdgeInsetsDirectional.fromSTEB(40, 40, 40, 0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text: AppLabels.of(context)
+                          .get('nearby.no_location_title'),
+                      style: GoogleFonts.interTight(
+                        color: theme.primaryText,
+                        fontSize: 21,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0,
+                      ),
                     ),
-                  ),
-                ],
+                    const TextSpan(text: '\n\n'),
+                    TextSpan(
+                      text: AppLabels.of(context)
+                          .get('nearby.unknown_location'),
+                      style: GoogleFonts.inter(
+                        color: theme.primaryText,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        height: 1.4,
+                      ),
+                    ),
+                  ],
+                ),
               ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    if (!_model.isLoadingProfiles && _model.profiles.isEmpty) {
+      return Align(
+        alignment: AlignmentDirectional.topStart,
+        child: Padding(
+          padding:
+              const EdgeInsetsDirectional.fromSTEB(40, 40, 40, 0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text: AppLabels.of(context)
+                          .get('nearby.no_one_nearby'),
+                      style: GoogleFonts.interTight(
+                        color: theme.primaryText,
+                        fontSize: 21,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0,
+                      ),
+                    ),
+                    const TextSpan(text: '\n\n'),
+                    TextSpan(
+                      text: AppLabels.of(context)
+                          .get('nearby.no_one_nearby_body'),
+                      style: GoogleFonts.inter(
+                        color: theme.primaryText,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        height: 1.4,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       );
     }
 

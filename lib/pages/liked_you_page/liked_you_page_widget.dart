@@ -352,27 +352,36 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
 
     if (_model.profiles.isEmpty) {
       return Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(18, 40, 18, 0),
+        padding: const EdgeInsetsDirectional.fromSTEB(16, 40, 16, 0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              AppLabels.of(context).get('liked_you.empty_title'),
-              style: GoogleFonts.inter(
-                color: FloterTheme.of(context).primaryText,
-                fontSize: 21,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            const SizedBox(height: 12),
-            Text(
-              AppLabels.of(context).get('liked_you.empty_body'),
-              style: GoogleFonts.inter(
-                color: FloterTheme.of(context).primaryText,
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-                height: 1.4,
+            Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: AppLabels.of(context)
+                        .get('liked_you.empty_title'),
+                    style: GoogleFonts.interTight(
+                      color: FloterTheme.of(context).primaryText,
+                      fontSize: 21,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 0,
+                    ),
+                  ),
+                  const TextSpan(text: '\n\n'),
+                  TextSpan(
+                    text: AppLabels.of(context)
+                        .get('liked_you.empty_body'),
+                    style: GoogleFonts.inter(
+                      color: FloterTheme.of(context).primaryText,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      height: 1.4,
+                    ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(height: 36),

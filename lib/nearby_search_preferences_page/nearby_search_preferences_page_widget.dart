@@ -113,12 +113,12 @@ class _NearbySearchPreferencesPageWidgetState
                       children: [
                         FloterIconButton(
                           borderRadius: 8.0,
-                          buttonSize: 64.0,
+                          buttonSize: 48.0,
                           fillColor: theme.primaryBackground,
                           icon: Icon(
                             Icons.arrow_back,
                             color: theme.primaryText,
-                            size: 48.0,
+                            size: 24.0,
                           ),
                           onPressed: () async {
                             await _saveAndExit();
@@ -127,14 +127,11 @@ class _NearbySearchPreferencesPageWidgetState
                         const SizedBox(width: 12.0),
                         Text(
                           labels.get('nearby_search_preferences.title'),
-                          style: theme.titleLarge.override(
-                            font: GoogleFonts.interTight(
-                              fontWeight: theme.titleLarge.fontWeight,
-                              fontStyle: theme.titleLarge.fontStyle,
-                            ),
-                            letterSpacing: 0.0,
-                            fontWeight: theme.titleLarge.fontWeight,
-                            fontStyle: theme.titleLarge.fontStyle,
+                          maxLines: 2,
+                          style: GoogleFonts.inter(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w700,
+                            color: theme.primaryText,
                           ),
                         ),
                       ],
@@ -144,14 +141,10 @@ class _NearbySearchPreferencesPageWidgetState
                       labels.get(
                         'nearby_search_preferences.choose_how_visible_your_location_is_you_can_change_this_anytime',
                       ),
-                      style: theme.bodyMedium.override(
-                        font: GoogleFonts.inter(
-                          fontWeight: theme.bodyMedium.fontWeight,
-                          fontStyle: theme.bodyMedium.fontStyle,
-                        ),
-                        letterSpacing: 0.0,
-                        fontWeight: theme.bodyMedium.fontWeight,
-                        fontStyle: theme.bodyMedium.fontStyle,
+                      style: GoogleFonts.inter(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w400,
+                        color: theme.primaryText,
                       ),
                     ),
                     const SizedBox(height: 16.0),
@@ -159,14 +152,10 @@ class _NearbySearchPreferencesPageWidgetState
                       labels.get(
                         'nearby_search_preferences.visibility_modes',
                       ),
-                      style: theme.titleSmall.override(
-                        font: GoogleFonts.interTight(
-                          fontWeight: theme.titleSmall.fontWeight,
-                          fontStyle: theme.titleSmall.fontStyle,
-                        ),
-                        letterSpacing: 0.0,
-                        fontWeight: theme.titleSmall.fontWeight,
-                        fontStyle: theme.titleSmall.fontStyle,
+                      style: GoogleFonts.inter(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w700,
+                        color: theme.primaryText,
                       ),
                     ),
                     const SizedBox(height: 16.0),
@@ -329,13 +318,11 @@ class _NearbySearchPreferencesPageWidgetState
       child: Text(
         text,
         textAlign: TextAlign.center,
-        maxLines: 3,
         style: GoogleFonts.inter(
           fontSize: 16.0,
           fontWeight: isSelected ? FontWeight.w700 : FontWeight.w400,
           color: theme.primaryText,
         ),
-        overflow: TextOverflow.ellipsis,
       ),
     );
   }

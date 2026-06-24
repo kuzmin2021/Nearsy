@@ -215,32 +215,39 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
       child: SizedBox(
         height: math.max(viewportConstraints.maxHeight, 400),
         child: Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+          padding: const EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 54),
-              Text(
-                AppLabels.of(context).get('people.no_more_profiles'),
-                style: GoogleFonts.interTight(
-                  color: theme.primaryText,
-                  fontSize: 21,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 0,
+              const SizedBox(height: 28),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text:
+                          AppLabels.of(context).get('people.no_more_profiles'),
+                      style: GoogleFonts.interTight(
+                        color: theme.primaryText,
+                        fontSize: 21,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0,
+                      ),
+                    ),
+                    const TextSpan(text: '\n\n'),
+                    TextSpan(
+                      text: AppLabels.of(context).get('people.empty_state'),
+                      style: GoogleFonts.inter(
+                        color: theme.primaryText,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        height: 1.4,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(height: 18),
-              Text(
-                AppLabels.of(context).get('people.empty_state'),
-                style: GoogleFonts.inter(
-                  color: theme.primaryText,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                  height: 1.4,
-                ),
-              ),
-              const SizedBox(height: 36),
+              const SizedBox(height: 44),
               GestureDetector(
                 onTap: () async {
                   await context.pushNamed('SearchPreferencesPage');
