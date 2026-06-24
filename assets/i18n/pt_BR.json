@@ -58,7 +58,7 @@
     "account_settings":  {
                              "title":  "Configurações de Conta",
                              "member_id":  "ID de membro",
-                             "email":  "Email",
+                             "email":  "e-mail",
                              "phone":  "Telefone",
                              "password":  "Senha",
                              "edit_email":  "Editar",
@@ -164,7 +164,7 @@
                        "title":  "Contate-nos",
                        "let_us_know_what_you_think":  "Deixe-nos saber o que você pensa...",
                        "submit":  "Enviar",
-                       "your_email":  "Seu email",
+                       "your_email":  "Seu e-mail",
                        "message_required":  "Digite uma mensagem.",
                        "submit_success":  "Obrigado pelo seu feedback.",
                        "submit_error":  "Não foi possível enviar o feedback."
@@ -277,7 +277,7 @@
                        "use_your_email_and_password_or_create_a_new_account":  "Use seu e-mail e senha ou crie uma nova conta.",
                        "sign_in":  "Entrar",
                        "register":  "Cadastre-se",
-                       "email_address":  "Endereço de email",
+                       "email_address":  "Endereço de e-mail",
                        "password":  "Senha",
                        "repeat_password":  "Repetir senha",
                        "create_account":  "Criar uma conta",
@@ -305,7 +305,7 @@
     "reset_password":  {
                            "title":  "Redefinir senha",
                            "enter_your_email_and_we_will_send_a_password_reset_link":  "Digite seu e-mail e enviaremos um link de redefinição de senha.",
-                           "email_address":  "Endereço de email",
+                           "email_address":  "Endereço de e-mail",
                            "send_reset_link":  "Enviar link de redefinição"
                        },
     "update_password":  {
@@ -411,17 +411,17 @@
                       "ukrainian":  "Ukrainian"
                   },
     "account_email":  {
-                          "edit_title":  "Editar email",
-                          "add_title":  "Adicionar email",
-                          "label_1":  "Digite o email que deseja usar na sua conta.",
-                          "email_address":  "Endereço de email",
+                          "edit_title":  "Editar e-mail",
+                          "add_title":  "Adicionar e-mail",
+                          "label_1":  "Digite o e-mail que deseja usar na sua conta.",
+                          "email_address":  "Endereço de e-mail",
                           "save":  "Salvar",
-                          "invalid_email":  "Digite um email válido.",
+                          "invalid_email":  "Digite um e-mail válido.",
                           "confirmation_sent":  "Código de confirmação enviado.",
-                          "save_error":  "Não foi possível atualizar o email.",
-                          "title":  "Adicionar e verificar email",
-                          "your_email":  "Seu email",
-                          "code_label":  "Digite o código que enviamos para seu email. Ele deve chegar em até 20 segundos.",
+                          "save_error":  "Não foi possível atualizar o e-mail.",
+                          "title":  "Adicionar e verificar e-mail",
+                          "your_email":  "Seu e-mail",
+                          "code_label":  "Digite o código que enviamos para seu e-mail. Ele deve chegar em até 20 segundos.",
                           "resend_code":  "Reenviar código"
                       }
 }

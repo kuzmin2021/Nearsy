@@ -274,7 +274,7 @@
                },
     "email_auth":  {
                        "sign_in_with_email":  "Connectez-vous avec e-mail",
-                       "use_your_email_and_password_or_create_a_new_account":  "Utilisez votre email et votre mot de passe, ou créez un nouveau compte.",
+                       "use_your_email_and_password_or_create_a_new_account":  "Utilisez votre e-mail et votre mot de passe, ou créez un nouveau compte.",
                        "sign_in":  "Se connecter",
                        "register":  "S’inscrire",
                        "email_address":  "Adresse e-mail",

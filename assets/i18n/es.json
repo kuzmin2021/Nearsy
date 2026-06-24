@@ -5,7 +5,7 @@
     "auth":  {
                  "nearsy":  "Nearsy",
                  "meet_near_keep_it_easy":  "Reunirse cerca. Mantenlo fácil",
-                 "continue_with_email":  "Continuar con email",
+                 "continue_with_email":  "Continuar con correo",
                  "continue_with_phone":  "Continuar con el teléfono",
                  "by_signing_up_you_agree_to_the_terms_of":  "Al registrarte aceptas los Términos de",
                  "service_and_privacy_policy":  "Política de privacidad y servicio"
@@ -58,7 +58,7 @@
     "account_settings":  {
                              "title":  "Configuración de la cuenta",
                              "member_id":  "ID de miembro",
-                             "email":  "Email",
+                             "email":  "correo",
                              "phone":  "Teléfono",
                              "password":  "Contraseña",
                              "edit_email":  "Editar",
@@ -164,7 +164,7 @@
                        "title":  "Contáctanos",
                        "let_us_know_what_you_think":  "Cuéntanos qué opinas...",
                        "submit":  "Enviar",
-                       "your_email":  "Tu email",
+                       "your_email":  "Tu correo",
                        "message_required":  "Introduce un mensaje.",
                        "submit_success":  "Gracias por tus comentarios.",
                        "submit_error":  "No se pudieron enviar los comentarios."
@@ -277,7 +277,7 @@
                        "use_your_email_and_password_or_create_a_new_account":  "Utilice su correo electrónico y contraseña, o cree una nueva cuenta.",
                        "sign_in":  "Iniciar sesión",
                        "register":  "Registrarse",
-                       "email_address":  "Dirección de email",
+                       "email_address":  "Dirección de correo",
                        "password":  "Contraseña",
                        "repeat_password":  "repetir contraseña",
                        "create_account":  "Crear cuenta",
@@ -305,7 +305,7 @@
     "reset_password":  {
                            "title":  "Restablecer contraseña",
                            "enter_your_email_and_we_will_send_a_password_reset_link":  "Ingrese su correo electrónico y le enviaremos un enlace para restablecer su contraseña.",
-                           "email_address":  "Dirección de email",
+                           "email_address":  "Dirección de correo",
                            "send_reset_link":  "Enviar enlace de reinicio"
                        },
     "update_password":  {
@@ -411,17 +411,17 @@
                       "ukrainian":  "Ukrainian"
                   },
     "account_email":  {
-                          "edit_title":  "Editar email",
-                          "add_title":  "Agregar email",
-                          "label_1":  "Ingresa el email que quieres usar para tu cuenta.",
-                          "email_address":  "Dirección de email",
+                          "edit_title":  "Editar correo",
+                          "add_title":  "Agregar correo",
+                          "label_1":  "Ingresa el correo que quieres usar para tu cuenta.",
+                          "email_address":  "Dirección de correo",
                           "save":  "Guardar",
-                          "invalid_email":  "Ingresa un email válido.",
+                          "invalid_email":  "Ingresa un correo válido.",
                           "confirmation_sent":  "Codigo de confirmacion enviado.",
-                          "save_error":  "No se pudo actualizar el email.",
-                          "title":  "Agregar y verificar tu email",
-                          "your_email":  "Tu email",
-                          "code_label":  "Ingresa el codigo que enviamos a tu email. Deberia llegar en 20 segundos.",
+                          "save_error":  "No se pudo actualizar el correo.",
+                          "title":  "Agregar y verificar tu correo",
+                          "your_email":  "Tu correo",
+                          "code_label":  "Ingresa el codigo que enviamos a tu correo. Deberia llegar en 20 segundos.",
                           "resend_code":  "Reenviar codigo"
                       }
 }
