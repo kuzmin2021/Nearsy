@@ -4,6 +4,7 @@ import '/backend/supabase/supabase.dart';
 import '/app_state.dart';
 import '/floter/nav/nav.dart';
 import '/pages/matches_page/matches_page_widget.dart';
+import '/services/i18n/app_labels.dart';
 
 class NotificationService {
   static final NotificationService _instance = NotificationService._();
@@ -89,7 +90,7 @@ class NotificationService {
         final avatarPath = profileResp?['avatar_url'] as String?;
         final avatarUrl = SupaFlow.safePhotoUrl(avatarPath);
 
-        await _showMatchNotification(
+        await showMatchNotification(
           convId,
           otherId,
           name,
@@ -101,7 +102,7 @@ class NotificationService {
     await FTAppState().updateLastCheckedMatchAt(now);
   }
 
-  Future<void> _showMatchNotification(
+  Future<void> showMatchNotification(
     int conversationId,
     String otherUserId,
     String name,
@@ -134,8 +135,8 @@ class NotificationService {
 
     await _plugin.show(
       otherUserId.hashCode,
-      'New match!',
-      'You matched with $name',
+      AppLabels.t('notification.match_title'),
+      AppLabels.t('notification.match_body').replaceAll('%s', name),
       details,
       payload: payload,
     );

@@ -1,6 +1,7 @@
 import '/components/nearsy_bottom_nav_widget.dart';
 import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
+import '/services/notification_service.dart';
 import 'people_page_widget.dart' show PeoplePageWidget;
 import 'dart:async';
 import 'package:flutter/material.dart';
@@ -128,7 +129,7 @@ class DiscoveryProfile {
 
 class PeoplePageModel extends FloterModel<PeoplePageWidget> {
   VoidCallback? onStateChanged;
-  void Function(String userId, String matchName, String matchPhoto)?
+  Future<void> Function(String userId, String matchName, String matchPhoto)?
       onMatchFound;
 
   bool isLoadingProfiles = true;
@@ -235,17 +236,27 @@ class PeoplePageModel extends FloterModel<PeoplePageWidget> {
       if (rows.isEmpty) return;
 
       final users = [userId, targetUserId]..sort();
-      await SupaFlow.client.from('conversations').insert({
+      final inserted = await SupaFlow.client.from('conversations').insert({
         'user1': users[0],
         'user2': users[1],
-      });
+      }).select();
+      final convId = (inserted as List<dynamic>).first['id'] as int;
+      debugPrint('_checkAndCreateMatch: created conversation $convId ($userId ↔ $targetUserId)');
       FTAppState().updateLastCheckedMatchAt(DateTime.now().toUtc());
       onMatchFound?.call(
         targetUserId,
         targetName,
         targetPhotoUrl ?? '',
       );
-    } catch (_) {}
+      NotificationService().showMatchNotification(
+        convId,
+        targetUserId,
+        targetName,
+        targetPhotoUrl,
+      );
+    } catch (e) {
+      debugPrint('_checkAndCreateMatch error: $e');
+    }
   }
 
   void undoSwipe() {

@@ -37,9 +37,9 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
     super.initState();
     _model = createModel(context, () => PeoplePageModel());
     _model.onStateChanged = () => safeSetState(() {});
-    _model.onMatchFound = (userId, name, photoUrl) {
-      final myProfile = SupaFlow.client.auth.currentUser;
-      final myPhoto = myProfile?.userMetadata?['avatar_url']?.toString() ?? '';
+    _model.onMatchFound = (userId, name, photoUrl) async {
+      final myPhoto = await _fetchMyAvatar();
+      if (!mounted) return;
       showMatchCelebration(
         context,
         myPhotoUrl: myPhoto,
@@ -56,6 +56,21 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
   void dispose() {
     _model.dispose();
     super.dispose();
+  }
+
+  Future<String> _fetchMyAvatar() async {
+    final userId = SupaFlow.client.auth.currentUser?.id;
+    if (userId == null) return '';
+    try {
+      final resp = await SupaFlow.client
+          .from('profiles')
+          .select('avatar_url')
+          .eq('user_id', userId)
+          .maybeSingle();
+      return (resp as Map<String, dynamic>?)?['avatar_url']?.toString() ?? '';
+    } catch (_) {
+      return '';
+    }
   }
 
   @override

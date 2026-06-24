@@ -1,9 +1,8 @@
 import '/components/nearsy_bottom_nav_widget.dart';
 import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
-import '/app_state.dart';
+import '/services/notification_service.dart';
 import 'liked_you_page_widget.dart' show LikedYouPageWidget;
-import 'dart:convert';
 import 'package:flutter/material.dart';
 
 class InboundLikeProfile {
@@ -43,7 +42,7 @@ class LikedYouPageModel extends FloterModel<LikedYouPageWidget> {
   int outsideCount = 0;
 
   VoidCallback? onStateChanged;
-  void Function(String userId, String matchName, String matchPhoto)? onMatchFound;
+  Future<void> Function(String userId, String matchName, String matchPhoto)? onMatchFound;
 
   static const _pageSize = 20;
 
@@ -193,13 +192,21 @@ class LikedYouPageModel extends FloterModel<LikedYouPageWidget> {
 
     final isMutual = await _checkMutualLike(targetUserId);
     if (isMutual) {
-      await _createConversation(targetUserId);
-      FTAppState().updateLastCheckedMatchAt(DateTime.now().toUtc());
-      onMatchFound?.call(
-        targetUserId,
-        profile?.displayName ?? '',
-        profile?.avatarUrl ?? '',
-      );
+      final convId = await _createConversation(targetUserId);
+      if (convId != null) {
+        FTAppState().updateLastCheckedMatchAt(DateTime.now().toUtc());
+        onMatchFound?.call(
+          targetUserId,
+          profile?.displayName ?? '',
+          profile?.avatarUrl ?? '',
+        );
+        NotificationService().showMatchNotification(
+          convId,
+          targetUserId,
+          profile?.displayName ?? '',
+          profile?.avatarUrl,
+        );
+      }
     }
 
     profiles.removeWhere((p) => p.userId == targetUserId);
@@ -220,22 +227,27 @@ class LikedYouPageModel extends FloterModel<LikedYouPageWidget> {
           .limit(1);
       final rows = response as List<dynamic>? ?? [];
       return rows.isNotEmpty;
-    } catch (_) {
+    } catch (e) {
+      debugPrint('_checkMutualLike error: $e');
       return false;
     }
   }
 
-  Future<void> _createConversation(String otherUserId) async {
+  Future<int?> _createConversation(String otherUserId) async {
     final userId = SupaFlow.client.auth.currentUser?.id;
-    if (userId == null) return;
+    if (userId == null) return null;
 
     final users = [userId, otherUserId]..sort();
     try {
-      await SupaFlow.client.from('conversations').insert({
+      final inserted = await SupaFlow.client.from('conversations').insert({
         'user1': users[0],
         'user2': users[1],
-      });
-    } catch (_) {}
+      }).select();
+      return (inserted as List<dynamic>).first['id'] as int;
+    } catch (e) {
+      debugPrint('_createConversation error: $e');
+      return null;
+    }
   }
 
   void notify() {

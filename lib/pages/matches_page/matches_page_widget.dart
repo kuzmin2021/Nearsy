@@ -64,7 +64,10 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
                     ? const Center(child: CircularProgressIndicator())
                     : _model.conversations.isEmpty
                         ? _buildEmptyState(context, theme)
-                        : _buildConversationList(context),
+                        : RefreshIndicator(
+                            onRefresh: () => _model.loadConversations(),
+                            child: _buildConversationList(context),
+                          ),
               ),
               wrapWithModel(
                 model: _model.nearsyBottomNavModel,

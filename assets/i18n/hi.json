@@ -1,427 +1,438 @@
 ﻿{
     "connection":  {
-                       "offline_message":  "कोई इंटरनेट कनेक्शन नहीं। कृपया अपना नेटवर्क जांचें।"
+                       "offline_message":  "??? ??????? ??????? ????? ????? ???? ??????? ???????"
                    },
     "auth":  {
                  "nearsy":  "Nearsy",
-                 "meet_near_keep_it_easy":  "पास मिलो. इसे आसान रखें",
-                 "continue_with_email":  "ईमेल से जारी रखें",
-                 "continue_with_phone":  "फ़ोन जारी रखें",
-                 "by_signing_up_you_agree_to_the_terms_of":  "साइन अप करके आप इसकी शर्तों से सहमत होते हैं",
-                 "service_and_privacy_policy":  "सेवा और गोपनीयता नीति"
+                 "meet_near_keep_it_easy":  "??? ????. ??? ???? ????",
+                 "continue_with_email":  "???? ?? ???? ????",
+                 "continue_with_phone":  "???? ???? ????",
+                 "by_signing_up_you_agree_to_the_terms_of":  "???? ?? ???? ?? ???? ?????? ?? ???? ???? ???",
+                 "service_and_privacy_policy":  "???? ?? ???????? ????"
              },
     "profile":  {
-                    "title":  "प्रोफ़ाइल",
-                    "name":  "नाम",
-                    "catchphrase":  "तकिया कलाम",
-                    "about_me":  "मेरे बारे में",
-                    "gender":  "लिंग",
-                    "age":  "उम्र",
-                    "height":  "कद",
-                    "work":  "काम",
-                    "education":  "शिक्षा",
-                    "kids":  "बच्चे",
-                    "preferred_relationships":  "पसंदीदा रिश्ते",
-                    "beliefs":  "मान्यताएँ",
-                    "body_type":  "शरीर का प्रकार",
-                    "exercise":  "व्यायाम",
-                    "drinking":  "शराब",
-                    "smoking":  "धूम्रपान",
-                    "profile_alt":  "प्रोफ़ाइल"
+                    "title":  "?????????",
+                    "name":  "???",
+                    "catchphrase":  "????? ????",
+                    "about_me":  "???? ???? ???",
+                    "gender":  "????",
+                    "age":  "????",
+                    "height":  "??",
+                    "work":  "???",
+                    "education":  "??????",
+                    "kids":  "?????",
+                    "preferred_relationships":  "??????? ??????",
+                    "beliefs":  "?????????",
+                    "body_type":  "???? ?? ??????",
+                    "exercise":  "???????",
+                    "drinking":  "????",
+                    "smoking":  "????????",
+                    "profile_alt":  "?????????"
                 },
     "people":  {
                    "nearsy":  "Nearsy",
                    "guess_what_i":  "Guess what I",
-                   "title":  "लोग"
+                   "title":  "???"
                },
     "liked_you":  {
-                      "title":  "जिन्होंने आपको पसंद किया",
-                      "all_3":  "सभी 3",
-                      "filter_matches_0":  "फ़िल्टर 0 से मेल खाता है",
-                      "outside_3":  "बाहर 3",
-                      "all_filter":  "सभी",
-                      "matches_filter":  "मिलान",
-                      "outside_filter":  "बाहर",
-                      "empty_title":  "अभी कुछ नहीं — लेकिन अच्छी बात, कोई बोझ नहीं",
-                      "empty_body":  "अपने फ़िल्टर समायोजित करें या सही लोगों को आपको खोजने में मदद करने के लिए नियरबाय में दिखें",
-                      "empty":  "अभी तक कोई लाइक नहीं",
-                      "tab_label":  "जिन्होंने आपको पसंद किया"
+                      "title":  "????????? ???? ???? ????",
+                      "all_3":  "??? 3",
+                      "filter_matches_0":  "??????? 0 ?? ??? ???? ??",
+                      "outside_3":  "???? 3",
+                      "all_filter":  "???",
+                      "matches_filter":  "?????",
+                      "outside_filter":  "????",
+                      "empty_title":  "??? ??? ???? � ????? ????? ???, ??? ??? ????",
+                      "empty_body":  "???? ??????? ???????? ???? ?? ??? ????? ?? ???? ????? ??? ??? ???? ?? ??? ??????? ??? ?????",
+                      "empty":  "??? ?? ??? ???? ????",
+                      "tab_label":  "????????? ???? ???? ????"
                   },
     "matches":  {
-                    "chats":  "चैट",
-                    "tab_label":  "चैट"
+                    "chats":  "???",
+                    "tab_label":  "???"
                 },
     "chat":  {
-                 "write_a_message":  "संदेश",
-                 "no_messages":  "कोई संदेश नहीं"
+                 "write_a_message":  "?????",
+                 "no_messages":  "??? ????? ????"
              },
     "account_settings":  {
-                             "title":  "खाता सेटिंग्स",
-                             "member_id":  "सदस्य ID",
-                             "email":  "ईमेल",
-                             "phone":  "फ़ोन",
-                             "password":  "पासवर्ड",
-                             "edit_email":  "संपादित करें",
-                             "edit_phone":  "संपादित करें",
-                             "edit_password":  "संपादित करें",
-                             "email_authentication":  "ईमेल प्रमाणीकरण",
-                             "two_factor_authentication":  "दो-कारक प्रमाणीकरण",
-                             "manage":  "प्रबंधित करें",
-                             "notifications":  "सूचनाएँ",
-                             "push_notifications":  "सूचनाएं पुश करें",
-                             "matches":  "मैच",
-                             "messages":  "संदेश",
-                             "liked_you":  "तुम्हें पसंद आया",
-                             "email_notifications":  "ईमेल सूचनाएं",
-                             "matches_email":  "मैच",
-                             "messages_email":  "संदेश",
-                             "liked_you_email":  "तुम्हें पसंद आया",
-                             "feedback":  "प्रतिक्रिया",
-                             "hide_account":  "खाता छिपाएँ",
-                             "delete_account":  "खाता हटाएँ",
-                             "log_out":  "लॉग आउट",
-                             "chats":  "चैट"
+                             "title":  "???? ????????",
+                             "member_id":  "????? ID",
+                             "email":  "????",
+                             "phone":  "????",
+                             "password":  "???????",
+                             "edit_email":  "??????? ????",
+                             "edit_phone":  "??????? ????",
+                             "edit_password":  "??????? ????",
+                             "email_authentication":  "???? ??????????",
+                             "two_factor_authentication":  "??-???? ??????????",
+                             "manage":  "???????? ????",
+                             "notifications":  "???????",
+                             "push_notifications":  "??????? ??? ????",
+                             "matches":  "???",
+                             "messages":  "?????",
+                             "liked_you":  "??????? ???? ???",
+                             "email_notifications":  "???? ???????",
+                             "matches_email":  "???",
+                             "messages_email":  "?????",
+                             "liked_you_email":  "??????? ???? ???",
+                             "feedback":  "???????????",
+                             "hide_account":  "???? ??????",
+                             "delete_account":  "???? ?????",
+                             "log_out":  "??? ???",
+                             "chats":  "???"
                          },
     "search_preferences":  {
-                               "title":  "खोज प्राथमिकताएँ",
-                               "who_you_want_to_date":  "आप किसे डेट करना चाहते हैं:",
-                               "women":  "महिला",
-                               "men":  "पुरुष",
-                               "other_gender":  "अन्य",
-                               "age":  "उम्र:",
-                               "between_20_and_50":  "20 से 50 के बीच",
-                               "search_radius":  "खोज त्रिज्या:",
-                               "up_to_161_kilometres_away":  "161 किलोमीटर दूर तक",
-                               "languages_they_know":  "वे भाषाएँ जानते हैं:",
-                               "what_are_they_looking_for":  "वे क्या ढूंढ रहे हैं?",
-                               "something_serious":  "कुछ गंभीर",
-                               "just_dating":  "बस डेटिंग कर रहा हूँ",
-                               "just_fun":  "बस मज़ा",
-                               "open_to_anything":  "किसी भी चीज़ के लिए खुला",
-                               "not_sure":  "निश्चित नहीं",
-                               "what_are_their_beliefs":  "उनकी मान्यताएं क्या हैं?",
-                               "agnostic":  "अज्ञेयवादी",
-                               "atheist":  "नास्तिक",
-                               "buddhist":  "बौद्ध",
-                               "christian":  "ईसाई",
-                               "jewish":  "यहूदी",
-                               "muslim":  "मुसलमान",
-                               "other_beliefs":  "अन्य",
-                               "do_they_exercise":  "क्या वे व्यायाम करते हैं?",
-                               "regularly":  "नियमित रूप से",
-                               "occasionally":  "यदा-कदा",
-                               "rarely":  "शायद ही कभी",
-                               "do_they_drink":  "क्या वे पीते हैं?",
-                               "yes_drink":  "हाँ",
-                               "occasionally_drink":  "यदा-कदा",
-                               "rarely_drink":  "शायद ही कभी",
-                               "no_drink":  "नहीं",
-                               "do_they_smoke":  "क्या वे धूम्रपान करते हैं?",
-                               "yes_smoke":  "हाँ",
-                               "sometimes":  "कभी-कभी",
-                               "no_smoke":  "नहीं",
-                               "trying_to_quit":  "छोड़ने की कोशिश कर रहा हूँ",
-                               "nearby_visibility":  "आस-पास की दृश्यता",
-                               "apply_filters":  "फ़िल्टर लागू करें"
+                               "title":  "??? ????????????",
+                               "who_you_want_to_date":  "?? ???? ??? ???? ????? ???:",
+                               "women":  "?????",
+                               "men":  "?????",
+                               "other_gender":  "????",
+                               "age":  "????:",
+                               "between_20_and_50":  "20 ?? 50 ?? ???",
+                               "search_radius":  "??? ????????:",
+                               "up_to_161_kilometres_away":  "161 ???????? ??? ??",
+                               "languages_they_know":  "?? ?????? ????? ???:",
+                               "what_are_they_looking_for":  "?? ???? ???? ??? ????",
+                               "something_serious":  "??? ?????",
+                               "just_dating":  "?? ?????? ?? ??? ???",
+                               "just_fun":  "?? ????",
+                               "open_to_anything":  "???? ?? ???? ?? ??? ????",
+                               "not_sure":  "??????? ????",
+                               "what_are_their_beliefs":  "???? ????????? ???? ????",
+                               "agnostic":  "??????????",
+                               "atheist":  "???????",
+                               "buddhist":  "?????",
+                               "christian":  "????",
+                               "jewish":  "?????",
+                               "muslim":  "???????",
+                               "other_beliefs":  "????",
+                               "do_they_exercise":  "???? ?? ??????? ???? ????",
+                               "regularly":  "?????? ??? ??",
+                               "occasionally":  "???-???",
+                               "rarely":  "???? ?? ???",
+                               "do_they_drink":  "???? ?? ???? ????",
+                               "yes_drink":  "???",
+                               "occasionally_drink":  "???-???",
+                               "rarely_drink":  "???? ?? ???",
+                               "no_drink":  "????",
+                               "do_they_smoke":  "???? ?? ???????? ???? ????",
+                               "yes_smoke":  "???",
+                               "sometimes":  "???-???",
+                               "no_smoke":  "????",
+                               "trying_to_quit":  "?????? ?? ????? ?? ??? ???",
+                               "nearby_visibility":  "??-??? ?? ???????",
+                               "apply_filters":  "??????? ???? ????"
                            },
     "nearby_search_preferences":  {
-                                      "title":  "निकटवर्ती खोज प्राथमिकताएँ",
-                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "चुनें कि आपका स्थान कितना दृश्यमान है. आप इसे कभी भी बदल सकते हैं.",
-                                      "visibility_modes":  "दृश्यता मोड:",
-                                      "invisible":  "अदृश्य",
-                                      "visible_while_using_the_app":  "ऐप का उपयोग करते समय दृश्यमान",
-                                      "your_last_location":  "आपका अंतिम स्थान",
-                                      "to_update_your_status_go_to_profile_settings_location":  "अपना स्टेटस अपडेट करने के लिए प्रोफ़ाइल सेटिंग \u003e स्थान पर जाएं.",
-                                      "save_visibility":  "दृश्यता सहेजें",
-                                      "search_radius":  "खोज त्रिज्या:"
+                                      "title":  "????????? ??? ????????????",
+                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "????? ?? ???? ????? ????? ???????? ??. ?? ??? ??? ?? ??? ???? ???.",
+                                      "visibility_modes":  "??????? ???:",
+                                      "invisible":  "??????",
+                                      "visible_while_using_the_app":  "?? ?? ????? ???? ??? ????????",
+                                      "your_last_location":  "???? ????? ?????",
+                                      "to_update_your_status_go_to_profile_settings_location":  "???? ?????? ????? ???? ?? ??? ????????? ?????? \u003e ????? ?? ????.",
+                                      "save_visibility":  "??????? ??????",
+                                      "search_radius":  "??? ????????:"
                                   },
     "chat_preferences":  {
-                             "title":  "चैट प्राथमिकताएँ",
-                             "choose_who_can_message_you_you_can_change_this_anytime":  "चुनें कि आपको कौन संदेश भेज सकता है. आप इसे कभी भी बदल सकते हैं.",
-                             "availability_modes":  "उपलब्धता मोड:",
-                             "unavailable":  "अनुपलब्ध",
-                             "matched_users_only":  "केवल मिलान वाले उपयोगकर्ता",
-                             "available":  "उपलब्ध",
-                             "stuff_i_could_talk_about_for_hours":  "वह चीज़ जिसके बारे में मैं घंटों बात कर सकता हूँ:",
-                             "obscure_scifi_films_with_depressing_endings":  "निराशाजनक अंत वाली अस्पष्ट विज्ञान-फाई फिल्में",
-                             "save_chat_preferences":  "चैट प्राथमिकताएँ सहेजें"
+                             "title":  "??? ????????????",
+                             "choose_who_can_message_you_you_can_change_this_anytime":  "????? ?? ???? ??? ????? ??? ???? ??. ?? ??? ??? ?? ??? ???? ???.",
+                             "availability_modes":  "???????? ???:",
+                             "unavailable":  "????????",
+                             "matched_users_only":  "???? ????? ???? ??????????",
+                             "available":  "??????",
+                             "stuff_i_could_talk_about_for_hours":  "?? ???? ????? ???? ??? ??? ????? ??? ?? ???? ???:",
+                             "obscure_scifi_films_with_depressing_endings":  "????????? ??? ???? ??????? ???????-??? ???????",
+                             "save_chat_preferences":  "??? ???????????? ??????"
                          },
     "matches_block":  {
-                          "block_message":  "यह उपयोगकर्ता अब आपको संदेश नहीं भेज पाएगा या आपकी प्रोफ़ाइल नहीं देख पाएगा",
-                          "delete_message":  "इस बातचीत को हटाएं",
-                          "cancel":  "रद्द करें",
-                          "ok":  "ठीक है",
-                          "report_message":  "इस उपयोगकर्ता की रिपोर्ट करें"
+                          "block_message":  "?? ?????????? ?? ???? ????? ???? ??? ????? ?? ???? ????????? ???? ??? ?????",
+                          "delete_message":  "?? ?????? ?? ?????",
+                          "cancel":  "???? ????",
+                          "ok":  "??? ??",
+                          "report_message":  "?? ?????????? ?? ??????? ????"
                       },
     "report_user":  {
-                        "title":  "हमें बताएं कि क्या हुआ",
-                        "submit":  "जमा करें",
-                        "ok":  "ठीक है",
-                        "thank_you":  "आपकी रिपोर्ट के लिए धन्यवाद। हमारी टीम ने इसे प्राप्त कर लिया है और जल्द ही मामले की समीक्षा करेगी। यदि अधिक जानकारी की आवश्यकता हुई, तो हम आपसे ईमेल के माध्यम से संपर्क करेंगे।",
-                        "description_hint":  "बताएं कि क्या हुआ..."
+                        "title":  "???? ????? ?? ???? ???",
+                        "submit":  "??? ????",
+                        "ok":  "??? ??",
+                        "thank_you":  "???? ??????? ?? ??? ???????? ????? ??? ?? ??? ??????? ?? ???? ?? ?? ???? ?? ????? ?? ??????? ?????? ??? ???? ??????? ?? ???????? ???, ?? ?? ???? ???? ?? ?????? ?? ?????? ???????",
+                        "description_hint":  "????? ?? ???? ???..."
                     },
     "contact_us":  {
-                       "title":  "हमसे संपर्क करें",
-                       "let_us_know_what_you_think":  "हमें बताएं कि आप क्या सोचते हैं...",
-                       "submit":  "सबमिट करें",
-                       "your_email":  "आपका ईमेल",
-                       "message_required":  "कृपया संदेश दर्ज करें।",
-                       "submit_success":  "आपकी प्रतिक्रिया के लिए धन्यवाद।",
-                       "submit_error":  "प्रतिक्रिया भेजी नहीं जा सकी।"
+                       "title":  "???? ?????? ????",
+                       "let_us_know_what_you_think":  "???? ????? ?? ?? ???? ????? ???...",
+                       "submit":  "????? ????",
+                       "your_email":  "???? ????",
+                       "message_required":  "????? ????? ???? ?????",
+                       "submit_success":  "???? ??????????? ?? ??? ????????",
+                       "submit_error":  "??????????? ???? ???? ?? ????"
                    },
     "hide_account":  {
-                         "title":  "खाता छिपाएँ",
-                         "hide":  "छिपाएं",
-                         "label_1":  "जब आप किसी से मिलना नहीं चाहते, तो अपना प्रोफाइल छिपाएं; बाकी सब वैसा ही रहेगा।",
-                         "already_hidden_label":  "आपका प्रोफाइल छिपा है। जब आप फिर से मिलने के लिए तैयार हों, तो उसे दिखाएं।",
-                         "unhide":  "दिखाएं",
-                         "hide_success":  "अकाउंट छिपा दिया गया।",
-                         "unhide_success":  "अकाउंट दिखाई दे रहा है।",
-                         "save_error":  "अकाउंट अपडेट नहीं हो सका।"
+                         "title":  "???? ??????",
+                         "hide":  "??????",
+                         "label_1":  "?? ?? ???? ?? ????? ???? ?????, ?? ???? ???????? ??????; ???? ?? ???? ?? ??????",
+                         "already_hidden_label":  "???? ???????? ???? ??? ?? ?? ??? ?? ????? ?? ??? ????? ???, ?? ??? ???????",
+                         "unhide":  "??????",
+                         "hide_success":  "?????? ???? ???? ????",
+                         "unhide_success":  "?????? ????? ?? ??? ???",
+                         "save_error":  "?????? ????? ???? ?? ????"
                      },
     "delete_account":  {
-                           "title":  "खाता हटाएँ",
-                           "are_you_sure":  "क्या आप निश्चित हैं?",
-                           "absolutely":  "बिल्कुल",
-                           "not_quite":  "बिलकुल नहीं",
-                           "label_1":  "यह आपके अकाउंट डेटा को हटाएगा, प्रोफाइल छिपाएगा और आपको साइन आउट करेगा।",
-                           "delete_success":  "अकाउंट हटा दिया गया।",
-                           "delete_error":  "अकाउंट हटाया नहीं जा सका।"
+                           "title":  "???? ?????",
+                           "are_you_sure":  "???? ?? ??????? ????",
+                           "absolutely":  "???????",
+                           "not_quite":  "?????? ????",
+                           "label_1":  "?? ???? ?????? ???? ?? ??????, ???????? ??????? ?? ???? ???? ??? ??????",
+                           "delete_success":  "?????? ??? ???? ????",
+                           "delete_error":  "?????? ????? ???? ?? ????"
                        },
     "profile_about_me":  {
-                             "about_me":  "मेरे बारे में:",
-                             "no_pressure_leave_it_blank_if_you_like":  "कोई दबाव नहीं - चाहें तो खाली छोड़ दें।"
+                             "about_me":  "???? ???? ???:",
+                             "no_pressure_leave_it_blank_if_you_like":  "??? ???? ???? - ????? ?? ???? ???? ????"
                          },
     "profile_gender":  {
-                           "gender":  "लिंग:"
+                           "gender":  "????:"
                        },
     "profile_age":  {
-                        "when_were_you_born":  "आपका जन्म कब हुआ:",
-                        "day":  "दिन",
-                        "month":  "महीना",
-                        "year":  "वर्ष",
-                        "optional":  "वैकल्पिक",
+                        "when_were_you_born":  "???? ???? ?? ???:",
+                        "day":  "???",
+                        "month":  "?????",
+                        "year":  "????",
+                        "optional":  "????????",
                         "day_placeholder":  "--",
                         "month_placeholder":  "--",
                         "year_placeholder":  "--"
                     },
     "months":  {
-                   "january":  "जनवरी",
-                   "february":  "फ़रवरी",
-                   "march":  "मार्च",
-                   "april":  "अप्रैल",
-                   "may":  "मई",
-                   "june":  "जून",
-                   "july":  "जुलाई",
-                   "august":  "अगस्त",
-                   "september":  "सितंबर",
-                   "october":  "अक्टूबर",
-                   "november":  "नवंबर",
-                   "december":  "दिसंबर"
+                   "january":  "?????",
+                   "february":  "??????",
+                   "march":  "?????",
+                   "april":  "??????",
+                   "may":  "??",
+                   "june":  "???",
+                   "july":  "?????",
+                   "august":  "?????",
+                   "september":  "??????",
+                   "october":  "???????",
+                   "november":  "?????",
+                   "december":  "??????"
                },
     "profile_height":  {
-                           "my_height":  "कद:",
-                           "enter_your_height":  "अपनी लंबाई दर्ज करें",
-                           "ft":  "फ़ुट",
-                           "cm":  "सेमी"
+                           "my_height":  "??:",
+                           "enter_your_height":  "???? ????? ???? ????",
+                           "ft":  "????",
+                           "cm":  "????"
                        },
     "profile_body_type":  {
-                              "my_body_type":  "शरीर का प्रकार:"
+                              "my_body_type":  "???? ?? ??????:"
                           },
     "profile_work":  {
-                         "my_work":  "काम:",
-                         "what_do_you_do":  "आप क्या करते हैं?"
+                         "my_work":  "???:",
+                         "what_do_you_do":  "?? ???? ???? ????"
                      },
     "profile_education":  {
-                              "my_education":  "शिक्षा:",
-                              "pick_the_closest_match":  "सबसे नजदीकी मेल चुनें"
+                              "my_education":  "??????:",
+                              "pick_the_closest_match":  "???? ?????? ??? ?????"
                           },
     "profile_kids":  {
-                         "kids":  "बच्चे:"
+                         "kids":  "?????:"
                      },
     "profile_relationship":  {
-                                 "my_preferred_relationship":  "पसंदीदा रिश्ते:",
-                                 "what_are_you_looking_for":  "आप क्या ढूँढ रहे हैं?"
+                                 "my_preferred_relationship":  "??????? ??????:",
+                                 "what_are_you_looking_for":  "?? ???? ???? ??? ????"
                              },
     "profile_religion":  {
-                             "my_beliefs":  "मान्यताएँ:"
+                             "my_beliefs":  "?????????:"
                          },
     "profile_exercise":  {
-                             "exercise":  "व्यायाम:",
-                             "any_form_of_physical_activity":  "किसी भी प्रकार की शारीरिक गतिविधि"
+                             "exercise":  "???????:",
+                             "any_form_of_physical_activity":  "???? ?? ?????? ?? ??????? ???????"
                          },
     "profile_drinking":  {
-                             "my_drinking_habits":  "शराब:",
-                             "choose_what_best_describes_your_alcohol_use":  "अपने शराब उपयोग का सबसे अच्छा वर्णन चुनें।"
+                             "my_drinking_habits":  "????:",
+                             "choose_what_best_describes_your_alcohol_use":  "???? ???? ????? ?? ???? ????? ????? ??????"
                          },
     "profile_smoking":  {
-                            "my_smoking_habits":  "धूम्रपान:",
-                            "do_you_smoke":  "क्या आप धूम्रपान करते हैं?"
+                            "my_smoking_habits":  "????????:",
+                            "do_you_smoke":  "???? ?? ???????? ???? ????"
                         },
     "profile_location":  {
-                             "my_location":  "मेरा स्थान:",
-                             "automatically_detect_my_location_recommended":  "स्वचालित रूप से मेरे स्थान का पता लगाएं (अनुशंसित)",
-                             "status_in_nearby_local":  "आस-पास की स्थिति: स्थानीय",
-                             "i_will_set_my_location_manually":  "मैं अपना स्थान मैन्युअल रूप से सेट करूंगा",
-                             "select_location":  "स्थान चुनें..."
+                             "my_location":  "???? ?????:",
+                             "automatically_detect_my_location_recommended":  "???????? ??? ?? ???? ????? ?? ??? ????? (????????)",
+                             "status_in_nearby_local":  "??-??? ?? ??????: ???????",
+                             "i_will_set_my_location_manually":  "??? ???? ????? ???????? ??? ?? ??? ??????",
+                             "select_location":  "????? ?????..."
                          },
     "nearby":  {
-                   "title":  "पास में",
-                   "filters":  "फ़िल्टर",
-                   "visibility":  "दृश्यता",
-                   "tab_label":  "पास में",
+                   "title":  "??? ???",
+                   "filters":  "???????",
+                   "visibility":  "???????",
+                   "tab_label":  "??? ???",
                    "unknown_location":  "You\u0027re off the map. Allow location access and try again."
                },
     "email_auth":  {
-                       "sign_in_with_email":  "ईमेल से साइन इन करें",
-                       "use_your_email_and_password_or_create_a_new_account":  "अपने ईमेल और पासवर्ड का उपयोग करें, या एक नया खाता बनाएं।",
-                       "sign_in":  "साइन इन",
-                       "register":  "रजिस्टर करें",
-                       "email_address":  "ईमेल पता",
-                       "password":  "पासवर्ड",
-                       "repeat_password":  "पासवर्ड दोहराएँ",
-                       "create_account":  "खाता बनाएँ",
-                       "forgot_password":  "पासवर्ड भूल गए?",
-                       "continue_button":  "जारी रखें",
-                       "or_sign_up_with":  "या इससे साइन अप करें",
-                       "or_sign_in_with":  "या इससे साइन इन करें",
-                       "continue_with_google":  "Google से जारी रखें",
-                       "continue_with_apple":  "Apple से जारी रखें",
-                       "already_have_account":  "पहले से खाता है?",
-                       "dont_have_account":  "खाता नहीं है?",
-                       "sign_in_here":  "यहां साइन इन करें",
-                       "sign_up_here":  "यहां साइन अप करें",
-                       "enter_email":  "अपना ईमेल पता दर्ज करें।",
-                       "enter_password":  "अपना पासवर्ड दर्ज करें।"
+                       "sign_in_with_email":  "???? ?? ???? ?? ????",
+                       "use_your_email_and_password_or_create_a_new_account":  "???? ???? ?? ??????? ?? ????? ????, ?? ?? ??? ???? ??????",
+                       "sign_in":  "???? ??",
+                       "register":  "??????? ????",
+                       "email_address":  "???? ???",
+                       "password":  "???????",
+                       "repeat_password":  "??????? ???????",
+                       "create_account":  "???? ?????",
+                       "forgot_password":  "??????? ??? ???",
+                       "continue_button":  "???? ????",
+                       "or_sign_up_with":  "?? ???? ???? ?? ????",
+                       "or_sign_in_with":  "?? ???? ???? ?? ????",
+                       "continue_with_google":  "Google ?? ???? ????",
+                       "continue_with_apple":  "Apple ?? ???? ????",
+                       "already_have_account":  "???? ?? ???? ???",
+                       "dont_have_account":  "???? ???? ???",
+                       "sign_in_here":  "???? ???? ?? ????",
+                       "sign_up_here":  "???? ???? ?? ????",
+                       "enter_email":  "???? ???? ??? ???? ?????",
+                       "enter_password":  "???? ??????? ???? ?????"
                    },
     "phone_auth":  {
-                       "title":  "फ़ोन प्रमाणीकरण",
-                       "phone_verification_is_not_implemented_yet":  "फ़ोन सत्यापन अभी तक लागू नहीं किया गया है."
+                       "title":  "???? ??????????",
+                       "phone_verification_is_not_implemented_yet":  "???? ??????? ??? ?? ???? ???? ???? ??? ??."
                    },
     "verify_number":  {
-                          "title":  "नंबर सत्यापित करें",
-                          "sms_verification_is_not_implemented_yet":  "एसएमएस सत्यापन अभी तक लागू नहीं किया गया है."
+                          "title":  "???? ???????? ????",
+                          "sms_verification_is_not_implemented_yet":  "?????? ??????? ??? ?? ???? ???? ???? ??? ??."
                       },
     "reset_password":  {
-                           "title":  "पासवर्ड रीसेट करें",
-                           "enter_your_email_and_we_will_send_a_password_reset_link":  "अपना ईमेल दर्ज करें और हम एक पासवर्ड रीसेट लिंक भेजेंगे।",
-                           "email_address":  "ईमेल पता",
-                           "send_reset_link":  "रीसेट लिंक भेजें"
+                           "title":  "??????? ????? ????",
+                           "enter_your_email_and_we_will_send_a_password_reset_link":  "???? ???? ???? ???? ?? ?? ?? ??????? ????? ???? ????????",
+                           "email_address":  "???? ???",
+                           "send_reset_link":  "????? ???? ?????"
                        },
     "update_password":  {
-                            "title":  "पासवर्ड अपडेट करें",
-                            "choose_a_new_password_for_your_nearsy_account":  "अपने नियरसी खाते के लिए एक नया पासवर्ड चुनें।",
-                            "new_password":  "नया पासवर्ड",
-                            "repeat_password":  "पासवर्ड दोहराएँ",
-                            "submit_button":  "पासवर्ड अपडेट करें"
+                            "title":  "??????? ????? ????",
+                            "choose_a_new_password_for_your_nearsy_account":  "???? ?????? ???? ?? ??? ?? ??? ??????? ??????",
+                            "new_password":  "??? ???????",
+                            "repeat_password":  "??????? ???????",
+                            "submit_button":  "??????? ????? ????"
                         },
     "nearsy_bottom_nav":  {
-                              "profile":  "प्रोफ़ाइल",
-                              "people":  "लोग",
-                              "nearby":  "पास में",
-                              "liked_you":  "जिन्होंने आपको पसंद किया",
-                              "chats":  "चैट"
+                              "profile":  "?????????",
+                              "people":  "???",
+                              "nearby":  "??? ???",
+                              "liked_you":  "????????? ???? ???? ????",
+                              "chats":  "???"
                           },
     "profile_attributes":  {
                                "gender":  {
-                                              "woman":  "महिला",
-                                              "man":  "यार",
-                                              "non_binary":  "गैर-बाइनरी",
-                                              "other":  "अन्य"
+                                              "woman":  "?????",
+                                              "man":  "???",
+                                              "non_binary":  "???-??????",
+                                              "other":  "????"
                                           },
                                "education":  {
-                                                 "high_school":  "हाई स्कूल",
-                                                 "currently_studying":  "अभी पढ़ाई कर रहा है",
-                                                 "trade_qualification":  "व्यापार योग्यता",
-                                                 "bachelors_degree":  "स्नातक की डिग्री",
-                                                 "masters_degree":  "मास्टर डिग्री",
-                                                 "doctorate_phd":  "डॉक्टरेट/पीएचडी",
-                                                 "postgraduate":  "स्नातकोत्तर",
-                                                 "other":  "अन्य",
-                                                 "prefer_not_to_say":  "नहीं कहना पसंद करते हैं"
+                                                 "high_school":  "??? ?????",
+                                                 "currently_studying":  "??? ????? ?? ??? ??",
+                                                 "trade_qualification":  "??????? ???????",
+                                                 "bachelors_degree":  "?????? ?? ??????",
+                                                 "masters_degree":  "?????? ??????",
+                                                 "doctorate_phd":  "????????/??????",
+                                                 "postgraduate":  "???????????",
+                                                 "other":  "????",
+                                                 "prefer_not_to_say":  "???? ???? ???? ???? ???"
                                              },
                                "kids":  {
-                                            "yes":  "हाँ",
-                                            "no":  "नहीं",
-                                            "prefer_not_to_say":  "नहीं कहना पसंद करते हैं"
+                                            "yes":  "???",
+                                            "no":  "????",
+                                            "prefer_not_to_say":  "???? ???? ???? ???? ???"
                                         },
                                "relationship_type":  {
-                                                         "something_serious":  "कुछ गंभीर",
-                                                         "just_dating":  "बस डेटिंग",
-                                                         "just_fun":  "बस मज़ा",
-                                                         "open_to_anything":  "किसी भी चीज़ के लिए खुला",
-                                                         "not_sure":  "निश्चित नहीं"
+                                                         "something_serious":  "??? ?????",
+                                                         "just_dating":  "?? ??????",
+                                                         "just_fun":  "?? ????",
+                                                         "open_to_anything":  "???? ?? ???? ?? ??? ????",
+                                                         "not_sure":  "??????? ????"
                                                      },
                                "religion":  {
-                                                "agnostic":  "अज्ञेयवादी",
-                                                "atheist":  "नास्तिक",
-                                                "buddhist":  "बौद्ध",
-                                                "christian":  "ईसाई",
-                                                "hindu":  "हिंदू",
-                                                "jewish":  "यहूदी",
-                                                "muslim":  "मुसलमान",
-                                                "sikh":  "सिख",
-                                                "spiritual":  "आध्यात्मिक",
-                                                "other":  "अन्य"
+                                                "agnostic":  "??????????",
+                                                "atheist":  "???????",
+                                                "buddhist":  "?????",
+                                                "christian":  "????",
+                                                "hindu":  "?????",
+                                                "jewish":  "?????",
+                                                "muslim":  "???????",
+                                                "sikh":  "???",
+                                                "spiritual":  "??????????",
+                                                "other":  "????"
                                             },
                                "body_type":  {
-                                                 "slim":  "पतला",
-                                                 "lean":  "दुबला",
-                                                 "average":  "औसत",
-                                                 "fit":  "फ़िट",
-                                                 "athletic":  "पुष्ट",
-                                                 "muscular":  "मांसल",
-                                                 "broad":  "चौड़ा",
-                                                 "stocky":  "गठीला",
-                                                 "bigger":  "बड़ा",
-                                                 "curvy":  "सुडौल",
-                                                 "prefer_not_to_say":  "नहीं कहना पसंद करते हैं"
+                                                 "slim":  "????",
+                                                 "lean":  "?????",
+                                                 "average":  "???",
+                                                 "fit":  "????",
+                                                 "athletic":  "?????",
+                                                 "muscular":  "?????",
+                                                 "broad":  "?????",
+                                                 "stocky":  "?????",
+                                                 "bigger":  "????",
+                                                 "curvy":  "?????",
+                                                 "prefer_not_to_say":  "???? ???? ???? ???? ???"
                                              },
                                "exercise":  {
-                                                "regularly":  "नियमित रूप से",
-                                                "occasionally":  "यदा-कदा",
-                                                "rarely":  "शायद ही कभी",
-                                                "never":  "कभी नहीं"
+                                                "regularly":  "?????? ??? ??",
+                                                "occasionally":  "???-???",
+                                                "rarely":  "???? ?? ???",
+                                                "never":  "??? ????"
                                             },
                                "drinking":  {
-                                                "yes":  "हाँ",
-                                                "occasionally":  "यदा-कदा",
-                                                "rarely":  "शायद ही कभी",
-                                                "no":  "नहीं",
-                                                "stopped_for_now":  "फिलहाल रुक गया"
+                                                "yes":  "???",
+                                                "occasionally":  "???-???",
+                                                "rarely":  "???? ?? ???",
+                                                "no":  "????",
+                                                "stopped_for_now":  "?????? ??? ???"
                                             },
                                "smoking":  {
-                                               "yes":  "हाँ",
-                                               "sometimes":  "कभी-कभी",
-                                               "no":  "नहीं",
-                                               "trying_to_quit":  "छोड़ने की कोशिश कर रहा हूँ"
+                                               "yes":  "???",
+                                               "sometimes":  "???-???",
+                                               "no":  "????",
+                                               "trying_to_quit":  "?????? ?? ????? ?? ??? ???"
                                            }
                            },
     "languages":  {
-                      "afar":  "अफ़ार",
-                      "afrikaans":  "अफ़्रीकी",
-                      "albanian":  "अल्बानियाई",
-                      "amharic":  "अम्हारिक्",
-                      "arabic":  "अरबी",
-                      "armenian":  "अर्मेनियाई",
-                      "bengali":  "बंगाली",
-                      "catalan":  "कैटलन",
+                      "afar":  "?????",
+                      "afrikaans":  "????????",
+                      "albanian":  "??????????",
+                      "amharic":  "?????????",
+                      "arabic":  "????",
+                      "armenian":  "??????????",
+                      "bengali":  "??????",
+                      "catalan":  "?????",
                       "english":  "English",
                       "russian":  "Russian",
                       "ukrainian":  "Ukrainian"
                   },
     "account_email":  {
-                          "edit_title":  "ईमेल संपादित करें",
-                          "add_title":  "ईमेल जोड़ें",
-                          "label_1":  "वह ईमेल पता दर्ज करें जिसे आप अपने अकाउंट के लिए उपयोग करना चाहते हैं।",
-                          "email_address":  "ईमेल पता",
-                          "save":  "सहेजें",
-                          "invalid_email":  "मान्य ईमेल पता दर्ज करें।",
-                          "confirmation_sent":  "पुष्टि कोड भेज दिया गया।",
-                          "save_error":  "ईमेल अपडेट नहीं हो सका।",
-                          "title":  "ईमेल जोड़ें और सत्यापित करें",
-                          "your_email":  "आपका ईमेल",
-                          "code_label":  "हमने आपके ईमेल पर जो कोड भेजा है उसे दर्ज करें। यह 20 सेकंड में आ जाना चाहिए।",
-                          "resend_code":  "कोड फिर भेजें"
-                      }
+                          "edit_title":  "???? ??????? ????",
+                          "add_title":  "???? ??????",
+                          "label_1":  "?? ???? ??? ???? ???? ???? ?? ???? ?????? ?? ??? ????? ???? ????? ????",
+                          "email_address":  "???? ???",
+                          "save":  "??????",
+                          "invalid_email":  "????? ???? ??? ???? ?????",
+                          "confirmation_sent":  "?????? ??? ??? ???? ????",
+                          "save_error":  "???? ????? ???? ?? ????",
+                          "title":  "???? ?????? ?? ???????? ????",
+                          "your_email":  "???? ????",
+                          "code_label":  "???? ???? ???? ?? ?? ??? ???? ?? ??? ???? ????? ?? 20 ????? ??? ? ???? ??????",
+                          "resend_code":  "??? ??? ?????"
+                      },
+    "notification":  {
+                         "match_title":  "New match!",
+                         "match_body":  "You matched with %s"
+                     },
+    "match_celebration":  {
+                              "title":  "MATCH!",
+                              "you_and":  "You and",
+                              "liked_each_other":  "liked each other",
+                              "tap_to_continue":  "Tap to continue",
+                              "say_hello":  "Say hello"
+                          }
 }

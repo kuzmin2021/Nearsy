@@ -20,6 +20,8 @@ class ChatService {
         .or('user1.eq.$userId,user2.eq.$userId')
         .order('last_message_at', ascending: false);
 
+    debugPrint('getConversations: query returned ${(response as List).length} rows for user $userId');
+
     final conversations = <Conversation>[];
     final otherUserIds = <String>[];
 
@@ -102,9 +104,7 @@ class ChatService {
       ));
     }
 
-    debugPrint('getConversations: returning ' +
-        conversations.length.toString() +
-        ' convs');
+    debugPrint('getConversations: returning ${conversations.length} convs (after filters)');
     return conversations;
   }
 
@@ -372,5 +372,24 @@ class ChatService {
         ',user2.eq.' +
         user1 +
         ')');
+  }
+
+  Future<int?> debugCreateConversation(String targetUserId) async {
+    final userId = _client.auth.currentUser?.id;
+    if (userId == null) return null;
+
+    final users = [userId, targetUserId]..sort();
+    try {
+      final inserted = await _client.from('conversations').insert({
+        'user1': users[0],
+        'user2': users[1],
+      }).select();
+      final id = (inserted as List<dynamic>).first['id'] as int;
+      debugPrint('debugCreateConversation: created conversation $id ($userId ↔ $targetUserId)');
+      return id;
+    } catch (e) {
+      debugPrint('debugCreateConversation error: $e');
+      return null;
+    }
   }
 }

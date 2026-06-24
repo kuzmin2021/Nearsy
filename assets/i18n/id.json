@@ -42,7 +42,7 @@
                       "all_filter":  "Semua",
                       "matches_filter":  "Cocok",
                       "outside_filter":  "Di luar",
-                      "empty_title":  "Belum ada — tapi sisi baiknya, tanpa beban",
+                      "empty_title":  "Belum ada � tapi sisi baiknya, tanpa beban",
                       "empty_body":  "Sesuaikan filter Anda atau muncul di Terdekat untuk membantu orang yang tepat menemukan Anda",
                       "empty":  "Belum ada suka",
                       "tab_label":  "Menyukai Anda"
@@ -423,5 +423,16 @@
                           "your_email":  "Email kamu",
                           "code_label":  "Masukkan kode yang kami kirim ke email kamu. Kode akan tiba dalam 20 detik.",
                           "resend_code":  "Kirim ulang kode"
-                      }
+                      },
+    "notification":  {
+                         "match_title":  "New match!",
+                         "match_body":  "You matched with %s"
+                     },
+    "match_celebration":  {
+                              "title":  "MATCH!",
+                              "you_and":  "You and",
+                              "liked_each_other":  "liked each other",
+                              "tap_to_continue":  "Tap to continue",
+                              "say_hello":  "Say hello"
+                          }
 }

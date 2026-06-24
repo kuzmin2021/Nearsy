@@ -23,6 +23,11 @@ class MatchesPageModel extends FloterModel<MatchesPageWidget> {
     nearsyBottomNavModel =
         createModel(context, () => NearsyBottomNavModel());
     loadConversations();
+    _chatService.subscribeToConversations(_onConversationChanged);
+  }
+
+  void _onConversationChanged() {
+    loadConversations();
   }
 
   @override
@@ -37,9 +42,7 @@ class MatchesPageModel extends FloterModel<MatchesPageWidget> {
     onStateChanged?.call();
 
     try {
-      debugPrint('loadConversations: loaded ' + conversations.length.toString() + ' convs');
       conversations = await _chatService.getConversations();
-      debugPrint('loadConversations: got ' + conversations.length.toString() + ' convs after filter');
       isLoading = false;
     } catch (e) {
       loadError = e.toString();

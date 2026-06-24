@@ -1,427 +1,438 @@
 ﻿{
     "connection":  {
-                       "offline_message":  "لا يوجد اتصال بالإنترنت. يرجى التحقق من الشبكة."
+                       "offline_message":  "?? ???? ????? ?????????. ???? ?????? ?? ??????."
                    },
     "auth":  {
                  "nearsy":  "Nearsy",
-                 "meet_near_keep_it_easy":  "لقاء قريب. اجعل الأمر سهلاً",
-                 "continue_with_email":  "المتابعة بالبريد الإلكتروني",
-                 "continue_with_phone":  "تواصل مع الهاتف",
-                 "by_signing_up_you_agree_to_the_terms_of":  "بالتسجيل فإنك توافق على شروط",
-                 "service_and_privacy_policy":  "سياسة الخدمة والخصوصية"
+                 "meet_near_keep_it_easy":  "???? ????. ???? ????? ?????",
+                 "continue_with_email":  "???????? ??????? ??????????",
+                 "continue_with_phone":  "????? ?? ??????",
+                 "by_signing_up_you_agree_to_the_terms_of":  "???????? ???? ????? ??? ????",
+                 "service_and_privacy_policy":  "????? ?????? ?????????"
              },
     "profile":  {
-                    "title":  "الملف الشخصي",
-                    "name":  "الاسم",
-                    "catchphrase":  "عبارة شعار",
-                    "about_me":  "نبذة عني",
-                    "gender":  "الجنس",
-                    "age":  "العمر",
-                    "height":  "الطول",
-                    "work":  "العمل",
-                    "education":  "التعليم",
-                    "kids":  "الأطفال",
-                    "preferred_relationships":  "العلاقات المفضلة",
-                    "beliefs":  "المعتقدات",
-                    "body_type":  "نوع الجسم",
-                    "exercise":  "التمارين",
-                    "drinking":  "الشرب",
-                    "smoking":  "التدخين",
-                    "profile_alt":  "الملف الشخصي"
+                    "title":  "????? ??????",
+                    "name":  "?????",
+                    "catchphrase":  "????? ????",
+                    "about_me":  "???? ???",
+                    "gender":  "?????",
+                    "age":  "?????",
+                    "height":  "?????",
+                    "work":  "?????",
+                    "education":  "???????",
+                    "kids":  "???????",
+                    "preferred_relationships":  "???????? ???????",
+                    "beliefs":  "?????????",
+                    "body_type":  "??? ?????",
+                    "exercise":  "????????",
+                    "drinking":  "?????",
+                    "smoking":  "???????",
+                    "profile_alt":  "????? ??????"
                 },
     "people":  {
                    "nearsy":  "Nearsy",
                    "guess_what_i":  "Guess what I",
-                   "title":  "الأشخاص"
+                   "title":  "???????"
                },
     "liked_you":  {
-                      "title":  "أعجبوا بك",
-                      "all_3":  "الكل 3",
-                      "filter_matches_0":  "مرشح يطابق 0",
-                      "outside_3":  "خارج 3",
-                      "all_filter":  "الكل",
-                      "matches_filter":  "المطابقات",
-                      "outside_filter":  "خارج",
-                      "empty_title":  "لا شيء بعد — ولكن الجانب الإيجابي، لا أمتعة",
-                      "empty_body":  "اضبط عوامل التصفية أو اظهر في قسم القريب لمساعدة الأشخاص المناسبين في العثور عليك",
-                      "empty":  "لا توجد إعجابات بعد",
-                      "tab_label":  "أعجبوا بك"
+                      "title":  "?????? ??",
+                      "all_3":  "???? 3",
+                      "filter_matches_0":  "???? ????? 0",
+                      "outside_3":  "???? 3",
+                      "all_filter":  "????",
+                      "matches_filter":  "?????????",
+                      "outside_filter":  "????",
+                      "empty_title":  "?? ??? ??? � ???? ?????? ????????? ?? ?????",
+                      "empty_body":  "???? ????? ??????? ?? ???? ?? ??? ?????? ??????? ??????? ????????? ?? ?????? ????",
+                      "empty":  "?? ???? ??????? ???",
+                      "tab_label":  "?????? ??"
                   },
     "matches":  {
-                    "chats":  "الدردشات",
-                    "tab_label":  "الدردشات"
+                    "chats":  "????????",
+                    "tab_label":  "????????"
                 },
     "chat":  {
-                 "write_a_message":  "رسالة",
-                 "no_messages":  "لا توجد رسائل"
+                 "write_a_message":  "?????",
+                 "no_messages":  "?? ???? ?????"
              },
     "account_settings":  {
-                             "title":  "إعدادات الحساب",
-                             "member_id":  "معرّف العضو",
-                             "email":  "البريد الإلكتروني",
-                             "phone":  "الهاتف",
-                             "password":  "كلمة المرور",
-                             "edit_email":  "تعديل",
-                             "edit_phone":  "تعديل",
-                             "edit_password":  "تعديل",
-                             "email_authentication":  "مصادقة البريد الإلكتروني",
-                             "two_factor_authentication":  "المصادقة الثنائية",
-                             "manage":  "يدير",
-                             "notifications":  "الإشعارات",
-                             "push_notifications":  "دفع الإخطارات",
-                             "matches":  "المطابقات",
-                             "messages":  "الرسائل",
-                             "liked_you":  "أعجبك",
-                             "email_notifications":  "إشعارات البريد الإلكتروني",
-                             "matches_email":  "المطابقات",
-                             "messages_email":  "الرسائل",
-                             "liked_you_email":  "أعجبك",
-                             "feedback":  "ملاحظات",
-                             "hide_account":  "إخفاء الحساب",
-                             "delete_account":  "حذف الحساب",
-                             "log_out":  "تسجيل الخروج",
-                             "chats":  "الدردشات"
+                             "title":  "??????? ??????",
+                             "member_id":  "????? ?????",
+                             "email":  "?????? ??????????",
+                             "phone":  "??????",
+                             "password":  "???? ??????",
+                             "edit_email":  "?????",
+                             "edit_phone":  "?????",
+                             "edit_password":  "?????",
+                             "email_authentication":  "?????? ?????? ??????????",
+                             "two_factor_authentication":  "???????? ????????",
+                             "manage":  "????",
+                             "notifications":  "?????????",
+                             "push_notifications":  "??? ?????????",
+                             "matches":  "?????????",
+                             "messages":  "???????",
+                             "liked_you":  "?????",
+                             "email_notifications":  "??????? ?????? ??????????",
+                             "matches_email":  "?????????",
+                             "messages_email":  "???????",
+                             "liked_you_email":  "?????",
+                             "feedback":  "???????",
+                             "hide_account":  "????? ??????",
+                             "delete_account":  "??? ??????",
+                             "log_out":  "????? ??????",
+                             "chats":  "????????"
                          },
     "search_preferences":  {
-                               "title":  "تفضيلات البحث",
-                               "who_you_want_to_date":  "من تريد مواعدته:",
-                               "women":  "نحيف",
-                               "men":  "الرجال",
-                               "other_gender":  "آخر",
-                               "age":  "العمر:",
-                               "between_20_and_50":  "بين 20 و50",
-                               "search_radius":  "نطاق البحث:",
-                               "up_to_161_kilometres_away":  "يصل إلى 161 كيلومترا",
-                               "languages_they_know":  "اللغات التي يعرفونها:",
-                               "what_are_they_looking_for":  "ما الذي يبحثون عنه؟",
-                               "something_serious":  "شيء خطير",
-                               "just_dating":  "مجرد مواعدة",
-                               "just_fun":  "مجرد متعة",
-                               "open_to_anything":  "مفتوحة على أي شيء",
-                               "not_sure":  "لست متأكدا",
-                               "what_are_their_beliefs":  "ما هي معتقداتهم؟",
-                               "agnostic":  "ملحد",
-                               "atheist":  "الملحد",
-                               "buddhist":  "بوذي",
-                               "christian":  "مسيحي",
-                               "jewish":  "يهودي",
-                               "muslim":  "مسلم",
-                               "other_beliefs":  "آخر",
-                               "do_they_exercise":  "هل يمارسون الرياضة؟",
-                               "regularly":  "بانتظام",
-                               "occasionally":  "أحياناً",
-                               "rarely":  "نادرًا",
-                               "do_they_drink":  "هل يشربون؟",
-                               "yes_drink":  "أيوه",
-                               "occasionally_drink":  "أحياناً",
-                               "rarely_drink":  "نادرًا",
-                               "no_drink":  "لأ",
-                               "do_they_smoke":  "هل يدخنون؟",
-                               "yes_smoke":  "أيوه",
-                               "sometimes":  "أحيانا",
-                               "no_smoke":  "لأ",
-                               "trying_to_quit":  "تحاول الإقلاع عن التدخين",
-                               "nearby_visibility":  "الرؤية القريبة",
-                               "apply_filters":  "تطبيق المرشحات"
+                               "title":  "??????? ?????",
+                               "who_you_want_to_date":  "?? ???? ???????:",
+                               "women":  "????",
+                               "men":  "??????",
+                               "other_gender":  "???",
+                               "age":  "?????:",
+                               "between_20_and_50":  "??? 20 ?50",
+                               "search_radius":  "???? ?????:",
+                               "up_to_161_kilometres_away":  "??? ??? 161 ????????",
+                               "languages_they_know":  "?????? ???? ????????:",
+                               "what_are_they_looking_for":  "?? ???? ?????? ????",
+                               "something_serious":  "??? ????",
+                               "just_dating":  "???? ??????",
+                               "just_fun":  "???? ????",
+                               "open_to_anything":  "?????? ??? ?? ???",
+                               "not_sure":  "??? ??????",
+                               "what_are_their_beliefs":  "?? ?? ??????????",
+                               "agnostic":  "????",
+                               "atheist":  "??????",
+                               "buddhist":  "????",
+                               "christian":  "?????",
+                               "jewish":  "?????",
+                               "muslim":  "????",
+                               "other_beliefs":  "???",
+                               "do_they_exercise":  "?? ??????? ????????",
+                               "regularly":  "???????",
+                               "occasionally":  "???????",
+                               "rarely":  "??????",
+                               "do_they_drink":  "?? ???????",
+                               "yes_drink":  "????",
+                               "occasionally_drink":  "???????",
+                               "rarely_drink":  "??????",
+                               "no_drink":  "??",
+                               "do_they_smoke":  "?? ???????",
+                               "yes_smoke":  "????",
+                               "sometimes":  "??????",
+                               "no_smoke":  "??",
+                               "trying_to_quit":  "????? ??????? ?? ???????",
+                               "nearby_visibility":  "?????? ???????",
+                               "apply_filters":  "????? ????????"
                            },
     "nearby_search_preferences":  {
-                                      "title":  "تفضيلات البحث القريبة",
-                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "اختر مدى وضوح موقعك. يمكنك تغيير هذا في أي وقت.",
-                                      "visibility_modes":  "أوضاع الرؤية:",
-                                      "invisible":  "خفي",
-                                      "visible_while_using_the_app":  "مرئية أثناء استخدام التطبيق",
-                                      "your_last_location":  "موقعك الأخير",
-                                      "to_update_your_status_go_to_profile_settings_location":  "لتحديث حالتك، انتقل إلى إعدادات الملف الشخصي \u003e الموقع.",
-                                      "save_visibility":  "حفظ الظهور",
-                                      "search_radius":  "نطاق البحث:"
+                                      "title":  "??????? ????? ???????",
+                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "???? ??? ???? ?????. ????? ????? ??? ?? ?? ???.",
+                                      "visibility_modes":  "????? ??????:",
+                                      "invisible":  "???",
+                                      "visible_while_using_the_app":  "????? ????? ??????? ???????",
+                                      "your_last_location":  "????? ??????",
+                                      "to_update_your_status_go_to_profile_settings_location":  "?????? ?????? ????? ??? ??????? ????? ?????? \u003e ??????.",
+                                      "save_visibility":  "??? ??????",
+                                      "search_radius":  "???? ?????:"
                                   },
     "chat_preferences":  {
-                             "title":  "تفضيلات الدردشة",
-                             "choose_who_can_message_you_you_can_change_this_anytime":  "اختر من يمكنه مراسلتك. يمكنك تغيير هذا في أي وقت.",
-                             "availability_modes":  "أوضاع التوفر:",
-                             "unavailable":  "غير متاح",
-                             "matched_users_only":  "المستخدمين المتطابقين فقط",
-                             "available":  "متاح",
-                             "stuff_i_could_talk_about_for_hours":  "الأشياء التي يمكنني التحدث عنها لساعات:",
-                             "obscure_scifi_films_with_depressing_endings":  "أفلام خيال علمي غامضة ذات نهايات محبطة",
-                             "save_chat_preferences":  "حفظ تفضيلات الدردشة"
+                             "title":  "??????? ???????",
+                             "choose_who_can_message_you_you_can_change_this_anytime":  "???? ?? ????? ???????. ????? ????? ??? ?? ?? ???.",
+                             "availability_modes":  "????? ??????:",
+                             "unavailable":  "??? ????",
+                             "matched_users_only":  "?????????? ?????????? ???",
+                             "available":  "????",
+                             "stuff_i_could_talk_about_for_hours":  "??????? ???? ?????? ?????? ???? ??????:",
+                             "obscure_scifi_films_with_depressing_endings":  "????? ???? ???? ????? ??? ?????? ?????",
+                             "save_chat_preferences":  "??? ??????? ???????"
                          },
     "matches_block":  {
-                          "block_message":  "لن يتمكن المستخدم بعد الآن من مراسلتك أو عرض ملفك الشخصي",
-                          "delete_message":  "حذف هذه المحادثة",
-                          "cancel":  "إلغاء",
-                          "ok":  "موافق",
-                          "report_message":  "الإبلاغ عن هذا المستخدم"
+                          "block_message":  "?? ????? ???????? ??? ???? ?? ??????? ?? ??? ???? ??????",
+                          "delete_message":  "??? ??? ????????",
+                          "cancel":  "?????",
+                          "ok":  "?????",
+                          "report_message":  "??????? ?? ??? ????????"
                       },
     "report_user":  {
-                        "title":  "أخبرنا بما حدث",
-                        "submit":  "إرسال",
-                        "ok":  "موافق",
-                        "thank_you":  "شكرًا على بلاغك، لقد تلقاه فريقنا وسيراجع الحالة قريبًا، إذا كانت هناك حاجة إلى مزيد من المعلومات، فسنتواصل معك عبر البريد الإلكتروني،",
-                        "description_hint":  "صف ما حدث..."
+                        "title":  "?????? ??? ???",
+                        "submit":  "?????",
+                        "ok":  "?????",
+                        "thank_you":  "????? ??? ?????? ??? ????? ?????? ??????? ?????? ??????? ??? ???? ???? ???? ??? ???? ?? ?????????? ???????? ??? ??? ?????? ???????????",
+                        "description_hint":  "?? ?? ???..."
                     },
     "contact_us":  {
-                       "title":  "اتصل بنا",
-                       "let_us_know_what_you_think":  "اسمحوا لنا أن نعرف ما هو رأيك...",
-                       "submit":  "إرسال",
-                       "your_email":  "بريدك الإلكتروني",
-                       "message_required":  "يرجى إدخال رسالة.",
-                       "submit_success":  "شكرًا على ملاحظاتك.",
-                       "submit_error":  "تعذر إرسال الملاحظات."
+                       "title":  "???? ???",
+                       "let_us_know_what_you_think":  "?????? ??? ?? ???? ?? ?? ????...",
+                       "submit":  "?????",
+                       "your_email":  "????? ??????????",
+                       "message_required":  "???? ????? ?????.",
+                       "submit_success":  "????? ??? ????????.",
+                       "submit_error":  "???? ????? ?????????."
                    },
     "hide_account":  {
-                         "title":  "إخفاء الحساب",
-                         "hide":  "إخفاء",
-                         "label_1":  "اخفي بروفايلك لما مش عايز تقابل حد، وكل حاجة تانية هتفضل زي ما هي.",
-                         "already_hidden_label":  "بروفايلك مخفي. اظهره تاني لما تكون جاهز تقابل ناس.",
-                         "unhide":  "إظهار",
-                         "hide_success":  "تم إخفاء الحساب.",
-                         "unhide_success":  "الحساب ظاهر الآن.",
-                         "save_error":  "تعذر تحديث الحساب."
+                         "title":  "????? ??????",
+                         "hide":  "?????",
+                         "label_1":  "???? ???????? ??? ?? ???? ????? ??? ??? ???? ????? ????? ?? ?? ??.",
+                         "already_hidden_label":  "???????? ????. ????? ???? ??? ???? ???? ????? ???.",
+                         "unhide":  "?????",
+                         "hide_success":  "?? ????? ??????.",
+                         "unhide_success":  "?????? ???? ????.",
+                         "save_error":  "???? ????? ??????."
                      },
     "delete_account":  {
-                           "title":  "حذف الحساب",
-                           "are_you_sure":  "هل أنت متأكد؟",
-                           "absolutely":  "قطعاً",
-                           "not_quite":  "ليس تماما",
-                           "label_1":  "ده هيحذف بيانات حسابك ويخفي بروفايلك ويسجل خروجك.",
-                           "delete_success":  "تم حذف الحساب.",
-                           "delete_error":  "تعذر حذف الحساب."
+                           "title":  "??? ??????",
+                           "are_you_sure":  "?? ??? ??????",
+                           "absolutely":  "?????",
+                           "not_quite":  "??? ?????",
+                           "label_1":  "?? ????? ?????? ????? ????? ???????? ????? ?????.",
+                           "delete_success":  "?? ??? ??????.",
+                           "delete_error":  "???? ??? ??????."
                        },
     "profile_about_me":  {
-                             "about_me":  "نبذة عني:",
-                             "no_pressure_leave_it_blank_if_you_like":  "مفيش ضغط - سيبه فاضي لو حبيت."
+                             "about_me":  "???? ???:",
+                             "no_pressure_leave_it_blank_if_you_like":  "???? ??? - ???? ???? ?? ????."
                          },
     "profile_gender":  {
-                           "gender":  "الجنس:"
+                           "gender":  "?????:"
                        },
     "profile_age":  {
-                        "when_were_you_born":  "اتولدت إمتى:",
-                        "day":  "اليوم",
-                        "month":  "الشهر",
-                        "year":  "السنة",
-                        "optional":  "اختياري",
+                        "when_were_you_born":  "?????? ????:",
+                        "day":  "?????",
+                        "month":  "?????",
+                        "year":  "?????",
+                        "optional":  "???????",
                         "day_placeholder":  "--",
                         "month_placeholder":  "--",
                         "year_placeholder":  "--"
                     },
     "months":  {
-                   "january":  "يناير",
-                   "february":  "فبراير",
-                   "march":  "مارس",
-                   "april":  "أبريل",
-                   "may":  "مايو",
-                   "june":  "يونيو",
-                   "july":  "يوليو",
-                   "august":  "أغسطس",
-                   "september":  "سبتمبر",
-                   "october":  "أكتوبر",
-                   "november":  "نوفمبر",
-                   "december":  "ديسمبر"
+                   "january":  "?????",
+                   "february":  "??????",
+                   "march":  "????",
+                   "april":  "?????",
+                   "may":  "????",
+                   "june":  "?????",
+                   "july":  "?????",
+                   "august":  "?????",
+                   "september":  "??????",
+                   "october":  "??????",
+                   "november":  "??????",
+                   "december":  "??????"
                },
     "profile_height":  {
-                           "my_height":  "الطول:",
-                           "enter_your_height":  "ادخل طولك",
-                           "ft":  "قدم",
-                           "cm":  "سم"
+                           "my_height":  "?????:",
+                           "enter_your_height":  "???? ????",
+                           "ft":  "???",
+                           "cm":  "??"
                        },
     "profile_body_type":  {
-                              "my_body_type":  "نوع الجسم:"
+                              "my_body_type":  "??? ?????:"
                           },
     "profile_work":  {
-                         "my_work":  "العمل:",
-                         "what_do_you_do":  "بتشتغل إيه؟"
+                         "my_work":  "?????:",
+                         "what_do_you_do":  "?????? ????"
                      },
     "profile_education":  {
-                              "my_education":  "التعليم:",
-                              "pick_the_closest_match":  "اختار أقرب حاجة"
+                              "my_education":  "???????:",
+                              "pick_the_closest_match":  "????? ???? ????"
                           },
     "profile_kids":  {
-                         "kids":  "الأطفال:"
+                         "kids":  "???????:"
                      },
     "profile_relationship":  {
-                                 "my_preferred_relationship":  "العلاقات المفضلة:",
-                                 "what_are_you_looking_for":  "بتدور على إيه؟"
+                                 "my_preferred_relationship":  "???????? ???????:",
+                                 "what_are_you_looking_for":  "????? ??? ????"
                              },
     "profile_religion":  {
-                             "my_beliefs":  "المعتقدات:"
+                             "my_beliefs":  "?????????:"
                          },
     "profile_exercise":  {
-                             "exercise":  "التمارين:",
-                             "any_form_of_physical_activity":  "أي نوع من النشاط البدني"
+                             "exercise":  "????????:",
+                             "any_form_of_physical_activity":  "?? ??? ?? ?????? ??????"
                          },
     "profile_drinking":  {
-                             "my_drinking_habits":  "الشرب:",
-                             "choose_what_best_describes_your_alcohol_use":  "اختار أقرب وصف لاستخدامك للكحول."
+                             "my_drinking_habits":  "?????:",
+                             "choose_what_best_describes_your_alcohol_use":  "????? ???? ??? ????????? ??????."
                          },
     "profile_smoking":  {
-                            "my_smoking_habits":  "التدخين:",
-                            "do_you_smoke":  "بتدخن؟"
+                            "my_smoking_habits":  "???????:",
+                            "do_you_smoke":  "??????"
                         },
     "profile_location":  {
-                             "my_location":  "موقعي:",
-                             "automatically_detect_my_location_recommended":  "اكتشاف موقعي تلقائيًا (مستحسن)",
-                             "status_in_nearby_local":  "الحالة في مكان قريب: محلي",
-                             "i_will_set_my_location_manually":  "سأقوم بتعيين موقعي يدويًا",
-                             "select_location":  "تحديد الموقع..."
+                             "my_location":  "?????:",
+                             "automatically_detect_my_location_recommended":  "?????? ????? ???????? (??????)",
+                             "status_in_nearby_local":  "?????? ?? ???? ????: ????",
+                             "i_will_set_my_location_manually":  "????? ?????? ????? ??????",
+                             "select_location":  "????? ??????..."
                          },
     "nearby":  {
-                   "title":  "بالقرب منك",
-                   "filters":  "الفلاتر",
-                   "visibility":  "الرؤية",
-                   "tab_label":  "بالقرب منك",
+                   "title":  "?????? ???",
+                   "filters":  "???????",
+                   "visibility":  "??????",
+                   "tab_label":  "?????? ???",
                    "unknown_location":  "You\u0027re off the map. Allow location access and try again."
                },
     "email_auth":  {
-                       "sign_in_with_email":  "قم بتسجيل الدخول باستخدام البريد الإلكتروني",
-                       "use_your_email_and_password_or_create_a_new_account":  "استخدم بريدك الإلكتروني وكلمة المرور، أو قم بإنشاء حساب جديد.",
-                       "sign_in":  "تسجيل الدخول",
-                       "register":  "تسجيل",
-                       "email_address":  "البريد الإلكتروني",
-                       "password":  "كلمة المرور",
-                       "repeat_password":  "كرر كلمة المرور",
-                       "create_account":  "إنشاء حساب",
-                       "forgot_password":  "هل نسيت كلمة السر؟",
-                       "continue_button":  "متابعة",
-                       "or_sign_up_with":  "أو سجّل باستخدام",
-                       "or_sign_in_with":  "أو سجّل الدخول باستخدام",
-                       "continue_with_google":  "المتابعة باستخدام Google",
-                       "continue_with_apple":  "المتابعة باستخدام Apple",
-                       "already_have_account":  "عندك حساب بالفعل؟",
-                       "dont_have_account":  "معندكش حساب؟",
-                       "sign_in_here":  "سجّل الدخول هنا",
-                       "sign_up_here":  "سجّل هنا",
-                       "enter_email":  "أدخل عنوان بريدك الإلكتروني.",
-                       "enter_password":  "أدخل كلمة المرور."
+                       "sign_in_with_email":  "?? ?????? ?????? ???????? ?????? ??????????",
+                       "use_your_email_and_password_or_create_a_new_account":  "?????? ????? ?????????? ????? ??????? ?? ?? ?????? ???? ????.",
+                       "sign_in":  "????? ??????",
+                       "register":  "?????",
+                       "email_address":  "?????? ??????????",
+                       "password":  "???? ??????",
+                       "repeat_password":  "??? ???? ??????",
+                       "create_account":  "????? ????",
+                       "forgot_password":  "?? ???? ???? ?????",
+                       "continue_button":  "??????",
+                       "or_sign_up_with":  "?? ???? ????????",
+                       "or_sign_in_with":  "?? ???? ?????? ????????",
+                       "continue_with_google":  "???????? ???????? Google",
+                       "continue_with_apple":  "???????? ???????? Apple",
+                       "already_have_account":  "???? ???? ???????",
+                       "dont_have_account":  "?????? ?????",
+                       "sign_in_here":  "???? ?????? ???",
+                       "sign_up_here":  "???? ???",
+                       "enter_email":  "???? ????? ????? ??????????.",
+                       "enter_password":  "???? ???? ??????."
                    },
     "phone_auth":  {
-                       "title":  "مصادقة الهاتف",
-                       "phone_verification_is_not_implemented_yet":  "لم يتم تنفيذ التحقق من الهاتف بعد."
+                       "title":  "?????? ??????",
+                       "phone_verification_is_not_implemented_yet":  "?? ??? ????? ?????? ?? ?????? ???."
                    },
     "verify_number":  {
-                          "title":  "التحقق من الرقم",
-                          "sms_verification_is_not_implemented_yet":  "لم يتم تنفيذ التحقق عبر الرسائل القصيرة بعد."
+                          "title":  "?????? ?? ?????",
+                          "sms_verification_is_not_implemented_yet":  "?? ??? ????? ?????? ??? ??????? ??????? ???."
                       },
     "reset_password":  {
-                           "title":  "إعادة تعيين كلمة المرور",
-                           "enter_your_email_and_we_will_send_a_password_reset_link":  "أدخل بريدك الإلكتروني وسنرسل لك رابط إعادة تعيين كلمة المرور.",
-                           "email_address":  "البريد الإلكتروني",
-                           "send_reset_link":  "إرسال رابط إعادة التعيين"
+                           "title":  "????? ????? ???? ??????",
+                           "enter_your_email_and_we_will_send_a_password_reset_link":  "???? ????? ?????????? ?????? ?? ???? ????? ????? ???? ??????.",
+                           "email_address":  "?????? ??????????",
+                           "send_reset_link":  "????? ???? ????? ???????"
                        },
     "update_password":  {
-                            "title":  "تحديث كلمة المرور",
-                            "choose_a_new_password_for_your_nearsy_account":  "اختر كلمة مرور جديدة لحساب Nearsy الخاص بك.",
-                            "new_password":  "كلمة المرور الجديدة",
-                            "repeat_password":  "كرر كلمة المرور",
-                            "submit_button":  "تحديث كلمة المرور"
+                            "title":  "????? ???? ??????",
+                            "choose_a_new_password_for_your_nearsy_account":  "???? ???? ???? ????? ????? Nearsy ????? ??.",
+                            "new_password":  "???? ?????? ???????",
+                            "repeat_password":  "??? ???? ??????",
+                            "submit_button":  "????? ???? ??????"
                         },
     "nearsy_bottom_nav":  {
-                              "profile":  "الملف الشخصي",
-                              "people":  "الأشخاص",
-                              "nearby":  "بالقرب منك",
-                              "liked_you":  "أعجبوا بك",
-                              "chats":  "الدردشات"
+                              "profile":  "????? ??????",
+                              "people":  "???????",
+                              "nearby":  "?????? ???",
+                              "liked_you":  "?????? ??",
+                              "chats":  "????????"
                           },
     "profile_attributes":  {
                                "gender":  {
-                                              "woman":  "امرأة",
-                                              "man":  "رجل",
-                                              "non_binary":  "غير ثنائي",
-                                              "other":  "آخر"
+                                              "woman":  "?????",
+                                              "man":  "???",
+                                              "non_binary":  "??? ?????",
+                                              "other":  "???"
                                           },
                                "education":  {
-                                                 "high_school":  "مدرسة ثانوية",
-                                                 "currently_studying":  "يدرس حاليا",
-                                                 "trade_qualification":  "المؤهلات التجارية",
-                                                 "bachelors_degree":  "درجة البكالوريوس",
-                                                 "masters_degree":  "درجة الماجستير",
-                                                 "doctorate_phd":  "دكتوراه / دكتوراه",
-                                                 "postgraduate":  "الدراسات العليا",
-                                                 "other":  "آخر",
-                                                 "prefer_not_to_say":  "يفضل عدم القول"
+                                                 "high_school":  "????? ??????",
+                                                 "currently_studying":  "???? ?????",
+                                                 "trade_qualification":  "???????? ????????",
+                                                 "bachelors_degree":  "???? ???????????",
+                                                 "masters_degree":  "???? ?????????",
+                                                 "doctorate_phd":  "??????? / ???????",
+                                                 "postgraduate":  "???????? ??????",
+                                                 "other":  "???",
+                                                 "prefer_not_to_say":  "???? ??? ?????"
                                              },
                                "kids":  {
-                                            "yes":  "نعم",
-                                            "no":  "لا",
-                                            "prefer_not_to_say":  "يفضل عدم القول"
+                                            "yes":  "???",
+                                            "no":  "??",
+                                            "prefer_not_to_say":  "???? ??? ?????"
                                         },
                                "relationship_type":  {
-                                                         "something_serious":  "شيء خطير",
-                                                         "just_dating":  "فقط التعارف",
-                                                         "just_fun":  "مجرد متعة",
-                                                         "open_to_anything":  "مفتوح لأي شيء",
-                                                         "not_sure":  "غير متأكد"
+                                                         "something_serious":  "??? ????",
+                                                         "just_dating":  "??? ???????",
+                                                         "just_fun":  "???? ????",
+                                                         "open_to_anything":  "????? ??? ???",
+                                                         "not_sure":  "??? ?????"
                                                      },
                                "religion":  {
-                                                "agnostic":  "ملحد",
-                                                "atheist":  "الملحد",
-                                                "buddhist":  "بوذي",
-                                                "christian":  "مسيحي",
-                                                "hindu":  "هندوسي",
-                                                "jewish":  "يهودي",
-                                                "muslim":  "مسلم",
-                                                "sikh":  "السيخ",
-                                                "spiritual":  "روحي",
-                                                "other":  "آخر"
+                                                "agnostic":  "????",
+                                                "atheist":  "??????",
+                                                "buddhist":  "????",
+                                                "christian":  "?????",
+                                                "hindu":  "??????",
+                                                "jewish":  "?????",
+                                                "muslim":  "????",
+                                                "sikh":  "?????",
+                                                "spiritual":  "????",
+                                                "other":  "???"
                                             },
                                "body_type":  {
-                                                 "slim":  "نحيل",
-                                                 "lean":  "نحيف",
-                                                 "average":  "متوسط",
-                                                 "fit":  "ملائم",
-                                                 "athletic":  "رياضي",
-                                                 "muscular":  "عضلي",
-                                                 "broad":  "واسع",
-                                                 "stocky":  "ممتلئ الجسم",
-                                                 "bigger":  "أكبر",
-                                                 "curvy":  "متعرج",
-                                                 "prefer_not_to_say":  "يفضل عدم القول"
+                                                 "slim":  "????",
+                                                 "lean":  "????",
+                                                 "average":  "?????",
+                                                 "fit":  "?????",
+                                                 "athletic":  "?????",
+                                                 "muscular":  "????",
+                                                 "broad":  "????",
+                                                 "stocky":  "????? ?????",
+                                                 "bigger":  "????",
+                                                 "curvy":  "?????",
+                                                 "prefer_not_to_say":  "???? ??? ?????"
                                              },
                                "exercise":  {
-                                                "regularly":  "بانتظام",
-                                                "occasionally":  "أحياناً",
-                                                "rarely":  "نادرًا",
-                                                "never":  "أبداً"
+                                                "regularly":  "???????",
+                                                "occasionally":  "???????",
+                                                "rarely":  "??????",
+                                                "never":  "?????"
                                             },
                                "drinking":  {
-                                                "yes":  "نعم",
-                                                "occasionally":  "أحياناً",
-                                                "rarely":  "نادرًا",
-                                                "no":  "لا",
-                                                "stopped_for_now":  "توقفت الآن"
+                                                "yes":  "???",
+                                                "occasionally":  "???????",
+                                                "rarely":  "??????",
+                                                "no":  "??",
+                                                "stopped_for_now":  "????? ????"
                                             },
                                "smoking":  {
-                                               "yes":  "نعم",
-                                               "sometimes":  "أحيانا",
-                                               "no":  "لا",
-                                               "trying_to_quit":  "تحاول الإقلاع عن التدخين"
+                                               "yes":  "???",
+                                               "sometimes":  "??????",
+                                               "no":  "??",
+                                               "trying_to_quit":  "????? ??????? ?? ???????"
                                            }
                            },
     "languages":  {
-                      "afar":  "بعيد",
-                      "afrikaans":  "الأفريكانية",
-                      "albanian":  "الألبانية",
-                      "amharic":  "الأمهرية",
-                      "arabic":  "عربي",
-                      "armenian":  "الأرمينية",
-                      "bengali":  "البنغالية",
-                      "catalan":  "الكاتالونية",
+                      "afar":  "????",
+                      "afrikaans":  "???????????",
+                      "albanian":  "?????????",
+                      "amharic":  "????????",
+                      "arabic":  "????",
+                      "armenian":  "?????????",
+                      "bengali":  "?????????",
+                      "catalan":  "???????????",
                       "english":  "English",
                       "russian":  "Russian",
                       "ukrainian":  "Ukrainian"
                   },
     "account_email":  {
-                          "edit_title":  "تعديل البريد الإلكتروني",
-                          "add_title":  "إضافة بريد إلكتروني",
-                          "label_1":  "اكتب البريد الإلكتروني اللي عايز تستخدمه لحسابك.",
-                          "email_address":  "البريد الإلكتروني",
-                          "save":  "حفظ",
-                          "invalid_email":  "اكتب بريد إلكتروني صحيح.",
-                          "confirmation_sent":  "تم إرسال كود التأكيد.",
-                          "save_error":  "تعذر تحديث البريد الإلكتروني.",
-                          "title":  "إضافة وتأكيد البريد الإلكتروني",
-                          "your_email":  "بريدك الإلكتروني",
-                          "code_label":  "اكتب الكود اللي بعتناه على بريدك الإلكتروني. المفروض يوصل خلال 20 ثانية.",
-                          "resend_code":  "إعادة إرسال الكود"
-                      }
+                          "edit_title":  "????? ?????? ??????????",
+                          "add_title":  "????? ???? ????????",
+                          "label_1":  "???? ?????? ?????????? ???? ???? ??????? ??????.",
+                          "email_address":  "?????? ??????????",
+                          "save":  "???",
+                          "invalid_email":  "???? ???? ???????? ????.",
+                          "confirmation_sent":  "?? ????? ??? ???????.",
+                          "save_error":  "???? ????? ?????? ??????????.",
+                          "title":  "????? ?????? ?????? ??????????",
+                          "your_email":  "????? ??????????",
+                          "code_label":  "???? ????? ???? ?????? ??? ????? ??????????. ??????? ???? ???? 20 ?????.",
+                          "resend_code":  "????? ????? ?????"
+                      },
+    "notification":  {
+                         "match_title":  "New match!",
+                         "match_body":  "You matched with %s"
+                     },
+    "match_celebration":  {
+                              "title":  "MATCH!",
+                              "you_and":  "You and",
+                              "liked_each_other":  "liked each other",
+                              "tap_to_continue":  "Tap to continue",
+                              "say_hello":  "Say hello"
+                          }
 }

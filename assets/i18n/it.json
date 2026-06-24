@@ -16,7 +16,7 @@
                     "catchphrase":  "Slogan",
                     "about_me":  "Su di me",
                     "gender":  "Genere",
-                    "age":  "Età",
+                    "age":  "Eta",
                     "height":  "Altezza",
                     "work":  "Lavoro",
                     "education":  "Istruzione",
@@ -42,7 +42,7 @@
                       "all_filter":  "Tutti",
                       "matches_filter":  "Corrispondenze",
                       "outside_filter":  "Fuori",
-                      "empty_title":  "Ancora niente — ma il lato positivo, nessun bagaglio",
+                      "empty_title":  "Ancora niente � ma il lato positivo, nessun bagaglio",
                       "empty_body":  "Regola i filtri o compari in Nearby per aiutare le persone giuste a trovarti",
                       "empty":  "Ancora nessun like",
                       "tab_label":  "Mi sei piaciuto"
@@ -88,7 +88,7 @@
                                "women":  "Donne",
                                "men":  "Uomini",
                                "other_gender":  "Altro",
-                               "age":  "Età:",
+                               "age":  "Eta:",
                                "between_20_and_50":  "Tra i 20 e i 50",
                                "search_radius":  "Raggio di ricerca:",
                                "up_to_161_kilometres_away":  "Fino a 161 chilometri di distanza",
@@ -98,7 +98,7 @@
                                "just_dating":  "Solo appuntamenti",
                                "just_fun":  "Semplicemente divertente",
                                "open_to_anything":  "Aperto a qualsiasi cosa",
-                               "not_sure":  "Non è sicuro",
+                               "not_sure":  "Non e sicuro",
                                "what_are_their_beliefs":  "Quali sono le loro convinzioni?",
                                "agnostic":  "Agnostico",
                                "atheist":  "Ateo",
@@ -107,38 +107,38 @@
                                "jewish":  "Ebreo",
                                "muslim":  "musulmano",
                                "other_beliefs":  "Altro",
-                               "do_they_exercise":  "Fanno attività fisica?",
+                               "do_they_exercise":  "Fanno attivita fisica?",
                                "regularly":  "Regolarmente",
                                "occasionally":  "Occasionalmente",
                                "rarely":  "Raramente",
                                "do_they_drink":  "Bevono?",
-                               "yes_drink":  "SÌ",
+                               "yes_drink":  "SI",
                                "occasionally_drink":  "Occasionalmente",
                                "rarely_drink":  "Raramente",
                                "no_drink":  "NO",
                                "do_they_smoke":  "Fumano?",
-                               "yes_smoke":  "SÌ",
+                               "yes_smoke":  "SI",
                                "sometimes":  "A volte",
                                "no_smoke":  "NO",
                                "trying_to_quit":  "Cercando di smettere",
-                               "nearby_visibility":  "Visibilità nelle vicinanze",
+                               "nearby_visibility":  "Visibilita nelle vicinanze",
                                "apply_filters":  "Applica filtri"
                            },
     "nearby_search_preferences":  {
                                       "title":  "Preferenze di ricerca nelle vicinanze",
-                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "Scegli quanto è visibile la tua posizione. Puoi modificarlo in qualsiasi momento.",
-                                      "visibility_modes":  "Modalità di visibilità:",
+                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "Scegli quanto e visibile la tua posizione. Puoi modificarlo in qualsiasi momento.",
+                                      "visibility_modes":  "Modalita di visibilita:",
                                       "invisible":  "Invisibile",
                                       "visible_while_using_the_app":  "Visibile durante l\u0027utilizzo dell\u0027app",
                                       "your_last_location":  "La tua ultima posizione",
                                       "to_update_your_status_go_to_profile_settings_location":  "Per aggiornare il tuo stato, vai su Impostazioni profilo \u003e Posizione.",
-                                      "save_visibility":  "Salva visibilità",
+                                      "save_visibility":  "Salva visibilita",
                                       "search_radius":  "Raggio di ricerca:"
                                   },
     "chat_preferences":  {
                              "title":  "Preferenze chat",
-                             "choose_who_can_message_you_you_can_change_this_anytime":  "Scegli chi può inviarti messaggi. Puoi modificarlo in qualsiasi momento.",
-                             "availability_modes":  "Modalità di disponibilità:",
+                             "choose_who_can_message_you_you_can_change_this_anytime":  "Scegli chi puo inviarti messaggi. Puoi modificarlo in qualsiasi momento.",
+                             "availability_modes":  "Modalita di disponibilita:",
                              "unavailable":  "Non disponibile",
                              "matched_users_only":  "Solo utenti abbinati",
                              "available":  "Disponibile",
@@ -147,18 +147,18 @@
                              "save_chat_preferences":  "Salva le preferenze della chat"
                          },
     "matches_block":  {
-                          "block_message":  "L\u0027utente non potrà più inviarti messaggi o visualizzare il tuo profilo",
+                          "block_message":  "L\u0027utente non potra piu inviarti messaggi o visualizzare il tuo profilo",
                           "delete_message":  "Elimina questa conversazione",
                           "cancel":  "Annulla",
                           "ok":  "Ok",
                           "report_message":  "Segnala questo utente"
                       },
     "report_user":  {
-                        "title":  "Dicci cosa è successo",
+                        "title":  "Dicci cosa e successo",
                         "submit":  "Invia",
                         "ok":  "Ok",
-                        "thank_you":  "Grazie per la tua segnalazione. Il nostro team l\u0027ha ricevuta ed esaminerà il caso a breve. Se sono necessarie ulteriori informazioni, ti contatteremo via email.",
-                        "description_hint":  "Descrivi cosa è successo..."
+                        "thank_you":  "Grazie per la tua segnalazione. Il nostro team l\u0027ha ricevuta ed esaminera il caso a breve. Se sono necessarie ulteriori informazioni, ti contatteremo via email.",
+                        "description_hint":  "Descrivi cosa e successo..."
                     },
     "contact_us":  {
                        "title":  "Contattaci",
@@ -234,7 +234,7 @@
                      },
     "profile_education":  {
                               "my_education":  "La mia formazione:",
-                              "pick_the_closest_match":  "Scegli la corrispondenza più vicina"
+                              "pick_the_closest_match":  "Scegli la corrispondenza piu vicina"
                           },
     "profile_kids":  {
                          "kids":  "Bambini:"
@@ -248,11 +248,11 @@
                          },
     "profile_exercise":  {
                              "exercise":  "Esercizio:",
-                             "any_form_of_physical_activity":  "Qualsiasi forma di attività fisica"
+                             "any_form_of_physical_activity":  "Qualsiasi forma di attivita fisica"
                          },
     "profile_drinking":  {
                              "my_drinking_habits":  "Le mie abitudini nel bere:",
-                             "choose_what_best_describes_your_alcohol_use":  "Scegli ciò che meglio descrive il tuo consumo di alcol."
+                             "choose_what_best_describes_your_alcohol_use":  "Scegli cio che meglio descrive il tuo consumo di alcol."
                          },
     "profile_smoking":  {
                             "my_smoking_habits":  "Le mie abitudini di fumo:",
@@ -262,13 +262,13 @@
                              "my_location":  "La mia posizione:",
                              "automatically_detect_my_location_recommended":  "Rileva automaticamente la mia posizione (consigliato)",
                              "status_in_nearby_local":  "Stato nelle vicinanze: Locale",
-                             "i_will_set_my_location_manually":  "Imposterò la mia posizione manualmente",
+                             "i_will_set_my_location_manually":  "Impostero la mia posizione manualmente",
                              "select_location":  "Seleziona posizione..."
                          },
     "nearby":  {
                    "title":  "Nelle vicinanze",
                    "filters":  "Filtri",
-                   "visibility":  "Visibilità",
+                   "visibility":  "Visibilita",
                    "tab_label":  "Nelle vicinanze",
                    "unknown_location":  "You\u0027re off the map. Allow location access and try again."
                },
@@ -287,7 +287,7 @@
                        "or_sign_in_with":  "Oppure accedi con",
                        "continue_with_google":  "Continua con Google",
                        "continue_with_apple":  "Continua con Apple",
-                       "already_have_account":  "Hai già un account?",
+                       "already_have_account":  "Hai gia un account?",
                        "dont_have_account":  "Non hai un account?",
                        "sign_in_here":  "Accedi qui",
                        "sign_up_here":  "Registrati qui",
@@ -296,11 +296,11 @@
                    },
     "phone_auth":  {
                        "title":  "Aut. telefono",
-                       "phone_verification_is_not_implemented_yet":  "La verifica telefonica non è ancora stata implementata."
+                       "phone_verification_is_not_implemented_yet":  "La verifica telefonica non e ancora stata implementata."
                    },
     "verify_number":  {
                           "title":  "Verifica numero",
-                          "sms_verification_is_not_implemented_yet":  "La verifica via SMS non è ancora implementata."
+                          "sms_verification_is_not_implemented_yet":  "La verifica via SMS non e ancora implementata."
                       },
     "reset_password":  {
                            "title":  "Reimposta la password",
@@ -341,7 +341,7 @@
                                                  "prefer_not_to_say":  "Preferisco non dirlo"
                                              },
                                "kids":  {
-                                            "yes":  "SÌ",
+                                            "yes":  "SI",
                                             "no":  "NO",
                                             "prefer_not_to_say":  "Preferisco non dirlo"
                                         },
@@ -350,14 +350,14 @@
                                                          "just_dating":  "Solo appuntamenti",
                                                          "just_fun":  "Semplicemente divertente",
                                                          "open_to_anything":  "Aperto a qualsiasi cosa",
-                                                         "not_sure":  "Non è sicuro"
+                                                         "not_sure":  "Non e sicuro"
                                                      },
                                "religion":  {
                                                 "agnostic":  "Agnostico",
                                                 "atheist":  "Ateo",
                                                 "buddhist":  "buddista",
                                                 "christian":  "cristiano",
-                                                "hindu":  "indù",
+                                                "hindu":  "indu",
                                                 "jewish":  "Ebreo",
                                                 "muslim":  "musulmano",
                                                 "sikh":  "Sikh",
@@ -373,7 +373,7 @@
                                                  "muscular":  "Muscolare",
                                                  "broad":  "Ampio",
                                                  "stocky":  "Tozzo",
-                                                 "bigger":  "Più grande",
+                                                 "bigger":  "Piu grande",
                                                  "curvy":  "Formosa",
                                                  "prefer_not_to_say":  "Preferisco non dirlo"
                                              },
@@ -384,14 +384,14 @@
                                                 "never":  "Mai"
                                             },
                                "drinking":  {
-                                                "yes":  "SÌ",
+                                                "yes":  "SI",
                                                 "occasionally":  "Occasionalmente",
                                                 "rarely":  "Raramente",
                                                 "no":  "NO",
                                                 "stopped_for_now":  "Per ora mi sono fermato"
                                             },
                                "smoking":  {
-                                               "yes":  "SÌ",
+                                               "yes":  "SI",
                                                "sometimes":  "A volte",
                                                "no":  "NO",
                                                "trying_to_quit":  "Cercando di smettere"
@@ -423,5 +423,16 @@
                           "your_email":  "La tua email",
                           "code_label":  "Inserisci il codice inviato alla tua email. Dovrebbe arrivare entro 20 secondi.",
                           "resend_code":  "Reinvia codice"
-                      }
+                      },
+    "notification":  {
+                         "match_title":  "New match!",
+                         "match_body":  "You matched with %s"
+                     },
+    "match_celebration":  {
+                              "title":  "MATCH!",
+                              "you_and":  "You and",
+                              "liked_each_other":  "liked each other",
+                              "tap_to_continue":  "Tap to continue",
+                              "say_hello":  "Say hello"
+                          }
 }

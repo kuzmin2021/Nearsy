@@ -91,6 +91,30 @@ class AppLabels {
     return node is String ? node : key;
   }
 
+  static String t(String key) {
+    final parts = key.split('.');
+    dynamic node = _cache[_currentLang];
+    for (final part in parts) {
+      if (node is Map) {
+        node = node[part];
+      } else {
+        node = null;
+        break;
+      }
+    }
+    if (node is String && node.isNotEmpty) return node;
+    node = _cache['en'];
+    for (final part in parts) {
+      if (node is Map) {
+        node = node[part];
+      } else {
+        node = null;
+        break;
+      }
+    }
+    return node is String ? node : key;
+  }
+
   String profileLabel(String attribute, String value) {
     for (final lang in [_currentLang, 'en']) {
       final localized = _cache[lang]?['profile_attributes']?[attribute]?[value];

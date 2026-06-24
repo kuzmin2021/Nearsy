@@ -1,427 +1,438 @@
 ﻿{
     "connection":  {
-                       "offline_message":  "冇網絡連接。請檢查你嘅網絡。"
+                       "offline_message":  "??????????????"
                    },
     "auth":  {
                  "nearsy":  "Nearsy",
-                 "meet_near_keep_it_easy":  "喺附近見面。保持輕鬆",
-                 "continue_with_email":  "用電郵繼續",
-                 "continue_with_phone":  "繼續用電話",
-                 "by_signing_up_you_agree_to_the_terms_of":  "申請即係你同意嘅條款",
-                 "service_and_privacy_policy":  "服務同私隱政策"
+                 "meet_near_keep_it_easy":  "??????????",
+                 "continue_with_email":  "?????",
+                 "continue_with_phone":  "?????",
+                 "by_signing_up_you_agree_to_the_terms_of":  "??????????",
+                 "service_and_privacy_policy":  "???????"
              },
     "profile":  {
-                    "title":  "個人檔案",
-                    "name":  "姓名",
-                    "catchphrase":  "標語",
-                    "about_me":  "關於我",
-                    "gender":  "性別",
-                    "age":  "年齡",
-                    "height":  "身高",
-                    "work":  "工作",
-                    "education":  "教育",
-                    "kids":  "小朋友",
-                    "preferred_relationships":  "偏好關係",
-                    "beliefs":  "信念",
-                    "body_type":  "身型",
-                    "exercise":  "運動",
-                    "drinking":  "飲酒",
-                    "smoking":  "吸煙",
-                    "profile_alt":  "個人檔案"
+                    "title":  "????",
+                    "name":  "??",
+                    "catchphrase":  "??",
+                    "about_me":  "???",
+                    "gender":  "??",
+                    "age":  "??",
+                    "height":  "??",
+                    "work":  "??",
+                    "education":  "??",
+                    "kids":  "???",
+                    "preferred_relationships":  "????",
+                    "beliefs":  "??",
+                    "body_type":  "??",
+                    "exercise":  "??",
+                    "drinking":  "??",
+                    "smoking":  "??",
+                    "profile_alt":  "????"
                 },
     "people":  {
                    "nearsy":  "Nearsy",
                    "guess_what_i":  "Guess what I",
-                   "title":  "人"
+                   "title":  "?"
                },
     "liked_you":  {
-                      "title":  "鍾意你",
-                      "all_3":  "全部3",
-                      "filter_matches_0":  "篩選器匹配0",
-                      "outside_3":  "外面3",
-                      "all_filter":  "全部",
-                      "matches_filter":  "匹配",
-                      "outside_filter":  "外面",
-                      "empty_title":  "暫時未有 — 但好處係，冇包袱",
-                      "empty_body":  "調整你嘅篩選條件，或者喺 Nearby 出現，幫啲啱嘅人搵到你",
-                      "empty":  "仲未有人讚好",
-                      "tab_label":  "鍾意你"
+                      "title":  "???",
+                      "all_3":  "??3",
+                      "filter_matches_0":  "?????0",
+                      "outside_3":  "??3",
+                      "all_filter":  "??",
+                      "matches_filter":  "??",
+                      "outside_filter":  "??",
+                      "empty_title":  "???? � ????,???",
+                      "empty_body":  "????????,??? Nearby ??,????????",
+                      "empty":  "??????",
+                      "tab_label":  "???"
                   },
     "matches":  {
-                    "chats":  "聊天",
-                    "tab_label":  "聊天"
+                    "chats":  "??",
+                    "tab_label":  "??"
                 },
     "chat":  {
-                 "write_a_message":  "訊息",
-                 "no_messages":  "冇訊息"
+                 "write_a_message":  "??",
+                 "no_messages":  "???"
              },
     "account_settings":  {
-                             "title":  "帳戶設定",
-                             "member_id":  "會員 ID",
-                             "email":  "電郵",
-                             "phone":  "電話",
-                             "password":  "密碼",
-                             "edit_email":  "編輯",
-                             "edit_phone":  "編輯",
-                             "edit_password":  "編輯",
-                             "email_authentication":  "電郵驗證",
-                             "two_factor_authentication":  "雙重認證",
-                             "manage":  "管理",
-                             "notifications":  "通知",
-                             "push_notifications":  "推送通知",
-                             "matches":  "配對",
-                             "messages":  "訊息",
-                             "liked_you":  "鍾意咗你",
-                             "email_notifications":  "電郵通知",
-                             "matches_email":  "配對",
-                             "messages_email":  "訊息",
-                             "liked_you_email":  "鍾意咗你",
-                             "feedback":  "意見",
-                             "hide_account":  "隱藏帳戶",
-                             "delete_account":  "刪除帳戶",
-                             "log_out":  "登出",
-                             "chats":  "聊天"
+                             "title":  "????",
+                             "member_id":  "?? ID",
+                             "email":  "??",
+                             "phone":  "??",
+                             "password":  "??",
+                             "edit_email":  "??",
+                             "edit_phone":  "??",
+                             "edit_password":  "??",
+                             "email_authentication":  "????",
+                             "two_factor_authentication":  "????",
+                             "manage":  "??",
+                             "notifications":  "??",
+                             "push_notifications":  "????",
+                             "matches":  "??",
+                             "messages":  "??",
+                             "liked_you":  "????",
+                             "email_notifications":  "????",
+                             "matches_email":  "??",
+                             "messages_email":  "??",
+                             "liked_you_email":  "????",
+                             "feedback":  "??",
+                             "hide_account":  "????",
+                             "delete_account":  "????",
+                             "log_out":  "??",
+                             "chats":  "??"
                          },
     "search_preferences":  {
-                               "title":  "搜尋偏好",
-                               "who_you_want_to_date":  "你想同邊個拍拖：",
-                               "women":  "女人",
-                               "men":  "男人",
-                               "other_gender":  "其他",
-                               "age":  "年齡:",
-                               "between_20_and_50":  "至50之間",
-                               "search_radius":  "搜尋半徑：",
-                               "up_to_161_kilometres_away":  "最遠可達 161 公里",
-                               "languages_they_know":  "佢哋識嘅語言：",
-                               "what_are_they_looking_for":  "佢哋搵緊啲咩？",
-                               "something_serious":  "有啲嚴重嘅嘢",
-                               "just_dating":  "啱啱拍拖",
-                               "just_fun":  "只係好玩",
-                               "open_to_anything":  "對任何嘢都開放",
-                               "not_sure":  "唔肯定",
-                               "what_are_their_beliefs":  "佢哋嘅信念係點？",
-                               "agnostic":  "無神論者",
-                               "atheist":  "無神論者",
-                               "buddhist":  "佛教",
-                               "christian":  "基督徒",
-                               "jewish":  "猶太人",
-                               "muslim":  "穆斯林",
-                               "other_beliefs":  "其他",
-                               "do_they_exercise":  "佢哋做唔做運動？",
-                               "regularly":  "定期嘅",
-                               "occasionally":  "有時會",
-                               "rarely":  "好少",
-                               "do_they_drink":  "佢哋飲唔飲酒？",
-                               "yes_drink":  "係",
-                               "occasionally_drink":  "有時會",
-                               "rarely_drink":  "好少",
-                               "no_drink":  "唔係",
-                               "do_they_smoke":  "佢哋食唔食煙？",
-                               "yes_smoke":  "係",
-                               "sometimes":  "有時",
-                               "no_smoke":  "唔係",
-                               "trying_to_quit":  "試圖戒毒",
-                               "nearby_visibility":  "附近嘅可見度",
-                               "apply_filters":  "套用篩選器"
+                               "title":  "????",
+                               "who_you_want_to_date":  "???????:",
+                               "women":  "??",
+                               "men":  "??",
+                               "other_gender":  "??",
+                               "age":  "??:",
+                               "between_20_and_50":  "?50??",
+                               "search_radius":  "????:",
+                               "up_to_161_kilometres_away":  "???? 161 ??",
+                               "languages_they_know":  "??????:",
+                               "what_are_they_looking_for":  "???????",
+                               "something_serious":  "??????",
+                               "just_dating":  "????",
+                               "just_fun":  "????",
+                               "open_to_anything":  "???????",
+                               "not_sure":  "???",
+                               "what_are_their_beliefs":  "????????",
+                               "agnostic":  "????",
+                               "atheist":  "????",
+                               "buddhist":  "??",
+                               "christian":  "???",
+                               "jewish":  "???",
+                               "muslim":  "???",
+                               "other_beliefs":  "??",
+                               "do_they_exercise":  "????????",
+                               "regularly":  "???",
+                               "occasionally":  "???",
+                               "rarely":  "??",
+                               "do_they_drink":  "???????",
+                               "yes_drink":  "?",
+                               "occasionally_drink":  "???",
+                               "rarely_drink":  "??",
+                               "no_drink":  "??",
+                               "do_they_smoke":  "???????",
+                               "yes_smoke":  "?",
+                               "sometimes":  "??",
+                               "no_smoke":  "??",
+                               "trying_to_quit":  "????",
+                               "nearby_visibility":  "??????",
+                               "apply_filters":  "?????"
                            },
     "nearby_search_preferences":  {
-                                      "title":  "附近嘅搜尋偏好設定",
-                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "揀你嘅位置有幾顯眼。你可以隨時改呢個。",
-                                      "visibility_modes":  "可見度模式：",
-                                      "invisible":  "隱形",
-                                      "visible_while_using_the_app":  "用緊個應用程式嗰陣可以睇到",
-                                      "your_last_location":  "你最後嘅位置",
-                                      "to_update_your_status_go_to_profile_settings_location":  "如果要更新你嘅狀態，去個人檔案設定 \u003e 位置。",
-                                      "save_visibility":  "儲存可見度",
-                                      "search_radius":  "搜尋半徑："
+                                      "title":  "?????????",
+                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "???????????????????",
+                                      "visibility_modes":  "?????:",
+                                      "invisible":  "??",
+                                      "visible_while_using_the_app":  "?????????????",
+                                      "your_last_location":  "??????",
+                                      "to_update_your_status_go_to_profile_settings_location":  "?????????,??????? \u003e ???",
+                                      "save_visibility":  "?????",
+                                      "search_radius":  "????:"
                                   },
     "chat_preferences":  {
-                             "title":  "即時通訊偏好設定",
-                             "choose_who_can_message_you_you_can_change_this_anytime":  "揀邊個可以發訊息畀你。你可以隨時改呢個。",
-                             "availability_modes":  "可用性模式：",
-                             "unavailable":  "唔可以用",
-                             "matched_users_only":  "只限匹配嘅使用者",
-                             "available":  "有位",
-                             "stuff_i_could_talk_about_for_hours":  "我可以講幾個鐘嘅嘢：",
-                             "obscure_scifi_films_with_depressing_endings":  "模糊嘅科幻電影，結局令人郁氣",
-                             "save_chat_preferences":  "儲存即時通訊偏好設定"
+                             "title":  "????????",
+                             "choose_who_can_message_you_you_can_change_this_anytime":  "????????????????????",
+                             "availability_modes":  "?????:",
+                             "unavailable":  "????",
+                             "matched_users_only":  "????????",
+                             "available":  "??",
+                             "stuff_i_could_talk_about_for_hours":  "?????????:",
+                             "obscure_scifi_films_with_depressing_endings":  "???????,??????",
+                             "save_chat_preferences":  "??????????"
                          },
     "matches_block":  {
-                          "block_message":  "呢個用戶將無法再向你發送訊息或查看你嘅個人資料",
-                          "delete_message":  "刪除此對話",
-                          "cancel":  "取消",
-                          "ok":  "確定",
-                          "report_message":  "舉報此用戶"
+                          "block_message":  "???????????????????????",
+                          "delete_message":  "?????",
+                          "cancel":  "??",
+                          "ok":  "??",
+                          "report_message":  "?????"
                       },
     "report_user":  {
-                        "title":  "話俾我哋知發生咗乜事",
-                        "submit":  "提交",
-                        "ok":  "確定",
-                        "thank_you":  "多謝你嘅報告。我哋團隊已經收到，會盡快審查個案。如果需要更多資料，我哋會透過電郵聯絡你。",
-                        "description_hint":  "描述發生咗乜事..."
+                        "title":  "??????????",
+                        "submit":  "??",
+                        "ok":  "??",
+                        "thank_you":  "???????????????,????????????????,???????????",
+                        "description_hint":  "???????..."
                     },
     "contact_us":  {
-                       "title":  "聯絡我哋",
-                       "let_us_know_what_you_think":  "話畀我哋知你點睇 ...",
-                       "submit":  "提交",
-                       "your_email":  "你嘅電郵",
-                       "message_required":  "請輸入訊息。",
-                       "submit_success":  "多謝你嘅意見。",
-                       "submit_error":  "未能提交意見。"
+                       "title":  "????",
+                       "let_us_know_what_you_think":  "???????? ...",
+                       "submit":  "??",
+                       "your_email":  "????",
+                       "message_required":  "??????",
+                       "submit_success":  "???????",
+                       "submit_error":  "???????"
                    },
     "hide_account":  {
-                         "title":  "隱藏帳戶",
-                         "hide":  "隱藏",
-                         "label_1":  "唔想識新朋友嗰陣，可以隱藏你嘅個人資料，其他內容保持不變。",
-                         "already_hidden_label":  "你嘅個人資料已隱藏。準備好再識新朋友時可以重新顯示。",
-                         "unhide":  "顯示",
-                         "hide_success":  "帳戶已隱藏。",
-                         "unhide_success":  "帳戶已顯示。",
-                         "save_error":  "無法更新帳戶。"
+                         "title":  "????",
+                         "hide":  "??",
+                         "label_1":  "????????,??????????,?????????",
+                         "already_hidden_label":  "??????????????????????????",
+                         "unhide":  "??",
+                         "hide_success":  "??????",
+                         "unhide_success":  "??????",
+                         "save_error":  "???????"
                      },
     "delete_account":  {
-                           "title":  "刪除帳戶",
-                           "are_you_sure":  "你肯定？",
-                           "absolutely":  "絕對係",
-                           "not_quite":  "唔係幾",
-                           "label_1":  "呢個操作會刪除你嘅帳戶資料、隱藏你嘅個人資料，並登出。",
-                           "delete_success":  "帳戶已刪除。",
-                           "delete_error":  "無法刪除帳戶。"
+                           "title":  "????",
+                           "are_you_sure":  "????",
+                           "absolutely":  "???",
+                           "not_quite":  "???",
+                           "label_1":  "??????????????????????,????",
+                           "delete_success":  "??????",
+                           "delete_error":  "???????"
                        },
     "profile_about_me":  {
-                             "about_me":  "關於我:",
-                             "no_pressure_leave_it_blank_if_you_like":  "唔使有壓力，想留空也得。"
+                             "about_me":  "???:",
+                             "no_pressure_leave_it_blank_if_you_like":  "?????,??????"
                          },
     "profile_gender":  {
-                           "gender":  "性別:"
+                           "gender":  "??:"
                        },
     "profile_age":  {
-                        "when_were_you_born":  "你幾時出世:",
-                        "day":  "日",
-                        "month":  "月",
-                        "year":  "年",
-                        "optional":  "可選",
+                        "when_were_you_born":  "?????:",
+                        "day":  "?",
+                        "month":  "?",
+                        "year":  "?",
+                        "optional":  "??",
                         "day_placeholder":  "--",
                         "month_placeholder":  "--",
                         "year_placeholder":  "--"
                     },
     "months":  {
-                   "january":  "一月",
-                   "february":  "二月",
-                   "march":  "三月",
-                   "april":  "四月",
-                   "may":  "五月",
-                   "june":  "六月",
-                   "july":  "七月",
-                   "august":  "八月",
-                   "september":  "九月",
-                   "october":  "十月",
-                   "november":  "十一月",
-                   "december":  "十二月"
+                   "january":  "??",
+                   "february":  "??",
+                   "march":  "??",
+                   "april":  "??",
+                   "may":  "??",
+                   "june":  "??",
+                   "july":  "??",
+                   "august":  "??",
+                   "september":  "??",
+                   "october":  "??",
+                   "november":  "???",
+                   "december":  "???"
                },
     "profile_height":  {
-                           "my_height":  "身高:",
-                           "enter_your_height":  "輸入你嘅身高",
-                           "ft":  "呎",
-                           "cm":  "厘米"
+                           "my_height":  "??:",
+                           "enter_your_height":  "??????",
+                           "ft":  "?",
+                           "cm":  "??"
                        },
     "profile_body_type":  {
-                              "my_body_type":  "身型:"
+                              "my_body_type":  "??:"
                           },
     "profile_work":  {
-                         "my_work":  "工作:",
-                         "what_do_you_do":  "你做咩工作？"
+                         "my_work":  "??:",
+                         "what_do_you_do":  "??????"
                      },
     "profile_education":  {
-                              "my_education":  "教育:",
-                              "pick_the_closest_match":  "選最貼近嘅一項"
+                              "my_education":  "??:",
+                              "pick_the_closest_match":  "???????"
                           },
     "profile_kids":  {
-                         "kids":  "小朋友:"
+                         "kids":  "???:"
                      },
     "profile_relationship":  {
-                                 "my_preferred_relationship":  "偏好關係:",
-                                 "what_are_you_looking_for":  "你搵緊咩？"
+                                 "my_preferred_relationship":  "????:",
+                                 "what_are_you_looking_for":  "?????"
                              },
     "profile_religion":  {
-                             "my_beliefs":  "信念:"
+                             "my_beliefs":  "??:"
                          },
     "profile_exercise":  {
-                             "exercise":  "運動:",
-                             "any_form_of_physical_activity":  "任何形式嘅體育活動"
+                             "exercise":  "??:",
+                             "any_form_of_physical_activity":  "?????????"
                          },
     "profile_drinking":  {
-                             "my_drinking_habits":  "飲酒:",
-                             "choose_what_best_describes_your_alcohol_use":  "選最能描述你飲酒情況嘅選項。"
+                             "my_drinking_habits":  "??:",
+                             "choose_what_best_describes_your_alcohol_use":  "??????????????"
                          },
     "profile_smoking":  {
-                            "my_smoking_habits":  "吸煙:",
-                            "do_you_smoke":  "你有無吸煙？"
+                            "my_smoking_habits":  "??:",
+                            "do_you_smoke":  "??????"
                         },
     "profile_location":  {
-                             "my_location":  "我嘅位置：",
-                             "automatically_detect_my_location_recommended":  "自動偵測我嘅位置（建議）",
-                             "status_in_nearby_local":  "喺附近嘅狀態：本地",
-                             "i_will_set_my_location_manually":  "我會手動設定我嘅位置",
-                             "select_location":  "揀位置 ..."
+                             "my_location":  "????:",
+                             "automatically_detect_my_location_recommended":  "????????(??)",
+                             "status_in_nearby_local":  "??????:??",
+                             "i_will_set_my_location_manually":  "??????????",
+                             "select_location":  "??? ..."
                          },
     "nearby":  {
-                   "title":  "附近",
-                   "filters":  "篩選",
-                   "visibility":  "可見度",
-                   "tab_label":  "附近",
+                   "title":  "??",
+                   "filters":  "??",
+                   "visibility":  "???",
+                   "tab_label":  "??",
                    "unknown_location":  "You\u0027re off the map. Allow location access and try again."
                },
     "email_auth":  {
-                       "sign_in_with_email":  "用電郵登入",
-                       "use_your_email_and_password_or_create_a_new_account":  "用你嘅電郵同密碼，或者建立新帳戶。",
-                       "sign_in":  "登入",
-                       "register":  "註冊",
-                       "email_address":  "電郵地址",
-                       "password":  "密碼",
-                       "repeat_password":  "重複密碼",
-                       "create_account":  "建立帳戶",
-                       "forgot_password":  "唔記得密碼？",
-                       "continue_button":  "繼續",
-                       "or_sign_up_with":  "或者用以下方式註冊",
-                       "or_sign_in_with":  "或者用以下方式登入",
-                       "continue_with_google":  "用 Google 繼續",
-                       "continue_with_apple":  "用 Apple 繼續",
-                       "already_have_account":  "已有帳戶？",
-                       "dont_have_account":  "未有帳戶？",
-                       "sign_in_here":  "喺呢度登入",
-                       "sign_up_here":  "喺呢度註冊",
-                       "enter_email":  "請輸入你嘅電郵地址。",
-                       "enter_password":  "請輸入你嘅密碼。"
+                       "sign_in_with_email":  "?????",
+                       "use_your_email_and_password_or_create_a_new_account":  "????????,????????",
+                       "sign_in":  "??",
+                       "register":  "??",
+                       "email_address":  "????",
+                       "password":  "??",
+                       "repeat_password":  "????",
+                       "create_account":  "????",
+                       "forgot_password":  "??????",
+                       "continue_button":  "??",
+                       "or_sign_up_with":  "?????????",
+                       "or_sign_in_with":  "?????????",
+                       "continue_with_google":  "? Google ??",
+                       "continue_with_apple":  "? Apple ??",
+                       "already_have_account":  "?????",
+                       "dont_have_account":  "?????",
+                       "sign_in_here":  "?????",
+                       "sign_up_here":  "?????",
+                       "enter_email":  "??????????",
+                       "enter_password":  "????????"
                    },
     "phone_auth":  {
-                       "title":  "電話認證",
-                       "phone_verification_is_not_implemented_yet":  "電話驗證仲未實行。"
+                       "title":  "????",
+                       "phone_verification_is_not_implemented_yet":  "?????????"
                    },
     "verify_number":  {
-                          "title":  "驗證號碼",
-                          "sms_verification_is_not_implemented_yet":  "短訊驗證仲未實施。"
+                          "title":  "????",
+                          "sms_verification_is_not_implemented_yet":  "?????????"
                       },
     "reset_password":  {
-                           "title":  "重設密碼",
-                           "enter_your_email_and_we_will_send_a_password_reset_link":  "輸入你嘅電郵地址，我哋會傳送密碼重設連結。",
-                           "email_address":  "電郵地址",
-                           "send_reset_link":  "傳送重設連結"
+                           "title":  "????",
+                           "enter_your_email_and_we_will_send_a_password_reset_link":  "????????,????????????",
+                           "email_address":  "????",
+                           "send_reset_link":  "??????"
                        },
     "update_password":  {
-                            "title":  "更新密碼",
-                            "choose_a_new_password_for_your_nearsy_account":  "為你嘅 Nearsy 帳戶揀個新密碼。",
-                            "new_password":  "新密碼",
-                            "repeat_password":  "重複密碼",
-                            "submit_button":  "更新密碼"
+                            "title":  "????",
+                            "choose_a_new_password_for_your_nearsy_account":  "??? Nearsy ????????",
+                            "new_password":  "???",
+                            "repeat_password":  "????",
+                            "submit_button":  "????"
                         },
     "nearsy_bottom_nav":  {
-                              "profile":  "個人檔案",
-                              "people":  "人",
-                              "nearby":  "附近",
-                              "liked_you":  "鍾意你",
-                              "chats":  "聊天"
+                              "profile":  "????",
+                              "people":  "?",
+                              "nearby":  "??",
+                              "liked_you":  "???",
+                              "chats":  "??"
                           },
     "profile_attributes":  {
                                "gender":  {
-                                              "woman":  "女人",
-                                              "man":  "男人",
-                                              "non_binary":  "非二進制",
-                                              "other":  "其他"
+                                              "woman":  "??",
+                                              "man":  "??",
+                                              "non_binary":  "????",
+                                              "other":  "??"
                                           },
                                "education":  {
-                                                 "high_school":  "高中",
-                                                 "currently_studying":  "而家讀緊書",
-                                                 "trade_qualification":  "貿易資格",
-                                                 "bachelors_degree":  "學士學位",
-                                                 "masters_degree":  "碩士學位",
-                                                 "doctorate_phd":  "博士 / 博士",
-                                                 "postgraduate":  "研究生",
-                                                 "other":  "其他",
-                                                 "prefer_not_to_say":  "寧願唔講"
+                                                 "high_school":  "??",
+                                                 "currently_studying":  "?????",
+                                                 "trade_qualification":  "????",
+                                                 "bachelors_degree":  "????",
+                                                 "masters_degree":  "????",
+                                                 "doctorate_phd":  "?? / ??",
+                                                 "postgraduate":  "???",
+                                                 "other":  "??",
+                                                 "prefer_not_to_say":  "????"
                                              },
                                "kids":  {
-                                            "yes":  "係",
-                                            "no":  "唔得",
-                                            "prefer_not_to_say":  "寧願唔講"
+                                            "yes":  "?",
+                                            "no":  "??",
+                                            "prefer_not_to_say":  "????"
                                         },
                                "relationship_type":  {
-                                                         "something_serious":  "有啲嚴重嘅嘢",
-                                                         "just_dating":  "啱啱拍拖",
-                                                         "just_fun":  "只係好玩",
-                                                         "open_to_anything":  "開放畀任何嘢",
-                                                         "not_sure":  "唔肯定"
+                                                         "something_serious":  "??????",
+                                                         "just_dating":  "????",
+                                                         "just_fun":  "????",
+                                                         "open_to_anything":  "??????",
+                                                         "not_sure":  "???"
                                                      },
                                "religion":  {
-                                                "agnostic":  "無神論者",
-                                                "atheist":  "無神論者",
-                                                "buddhist":  "佛教",
-                                                "christian":  "基督徒",
-                                                "hindu":  "印度教",
-                                                "jewish":  "猶太人",
-                                                "muslim":  "穆斯林",
-                                                "sikh":  "錫克教",
-                                                "spiritual":  "精神上",
-                                                "other":  "其他"
+                                                "agnostic":  "????",
+                                                "atheist":  "????",
+                                                "buddhist":  "??",
+                                                "christian":  "???",
+                                                "hindu":  "???",
+                                                "jewish":  "???",
+                                                "muslim":  "???",
+                                                "sikh":  "???",
+                                                "spiritual":  "???",
+                                                "other":  "??"
                                             },
                                "body_type":  {
-                                                 "slim":  "瘦",
-                                                 "lean":  "傾斜",
-                                                 "average":  "平均",
-                                                 "fit":  "啱身",
-                                                 "athletic":  "運動型",
-                                                 "muscular":  "肌肉型",
-                                                 "broad":  "廣闊",
-                                                 "stocky":  "身材壯碩",
-                                                 "bigger":  "大啲",
-                                                 "curvy":  "曲線",
-                                                 "prefer_not_to_say":  "寧願唔講"
+                                                 "slim":  "?",
+                                                 "lean":  "??",
+                                                 "average":  "??",
+                                                 "fit":  "??",
+                                                 "athletic":  "???",
+                                                 "muscular":  "???",
+                                                 "broad":  "??",
+                                                 "stocky":  "????",
+                                                 "bigger":  "??",
+                                                 "curvy":  "??",
+                                                 "prefer_not_to_say":  "????"
                                              },
                                "exercise":  {
-                                                "regularly":  "定期嘅",
-                                                "occasionally":  "有時會",
-                                                "rarely":  "好少",
-                                                "never":  "從來冇"
+                                                "regularly":  "???",
+                                                "occasionally":  "???",
+                                                "rarely":  "??",
+                                                "never":  "???"
                                             },
                                "drinking":  {
-                                                "yes":  "係",
-                                                "occasionally":  "有時會",
-                                                "rarely":  "好少",
-                                                "no":  "唔得",
-                                                "stopped_for_now":  "暫時停咗"
+                                                "yes":  "?",
+                                                "occasionally":  "???",
+                                                "rarely":  "??",
+                                                "no":  "??",
+                                                "stopped_for_now":  "????"
                                             },
                                "smoking":  {
-                                               "yes":  "係",
-                                               "sometimes":  "有時",
-                                               "no":  "唔得",
-                                               "trying_to_quit":  "試圖戒毒"
+                                               "yes":  "?",
+                                               "sometimes":  "??",
+                                               "no":  "??",
+                                               "trying_to_quit":  "????"
                                            }
                            },
     "languages":  {
-                      "afar":  "遠方",
-                      "afrikaans":  "南非荷兰文",
-                      "albanian":  "阿爾巴尼亞人",
-                      "amharic":  "阿姆哈拉文",
-                      "arabic":  "阿拉伯文",
-                      "armenian":  "亞美尼亞人",
-                      "bengali":  "孟加拉文",
-                      "catalan":  "加泰羅尼亞人",
+                      "afar":  "??",
+                      "afrikaans":  "?????",
+                      "albanian":  "??????",
+                      "amharic":  "?????",
+                      "arabic":  "????",
+                      "armenian":  "?????",
+                      "bengali":  "????",
+                      "catalan":  "??????",
                       "english":  "English",
                       "russian":  "Russian",
                       "ukrainian":  "Ukrainian"
                   },
     "account_email":  {
-                          "edit_title":  "編輯電郵",
-                          "add_title":  "新增電郵",
-                          "label_1":  "輸入你想用於帳戶嘅電郵地址。",
-                          "email_address":  "電郵地址",
-                          "save":  "儲存",
-                          "invalid_email":  "請輸入有效嘅電郵地址。",
-                          "confirmation_sent":  "驗證碼已發送。",
-                          "save_error":  "無法更新電郵。",
-                          "title":  "新增並驗證電郵",
-                          "your_email":  "你嘅電郵",
-                          "code_label":  "輸入我哋發送到你電郵嘅驗證碼。應該會喺 20 秒內收到。",
-                          "resend_code":  "重新發送驗證碼"
-                      }
+                          "edit_title":  "????",
+                          "add_title":  "????",
+                          "label_1":  "??????????????",
+                          "email_address":  "????",
+                          "save":  "??",
+                          "invalid_email":  "???????????",
+                          "confirmation_sent":  "???????",
+                          "save_error":  "???????",
+                          "title":  "???????",
+                          "your_email":  "????",
+                          "code_label":  "??????????????????? 20 ?????",
+                          "resend_code":  "???????"
+                      },
+    "notification":  {
+                         "match_title":  "New match!",
+                         "match_body":  "You matched with %s"
+                     },
+    "match_celebration":  {
+                              "title":  "MATCH!",
+                              "you_and":  "You and",
+                              "liked_each_other":  "liked each other",
+                              "tap_to_continue":  "Tap to continue",
+                              "say_hello":  "Say hello"
+                          }
 }

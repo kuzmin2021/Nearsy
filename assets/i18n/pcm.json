@@ -42,7 +42,7 @@
                       "all_filter":  "All",
                       "matches_filter":  "Filter matches",
                       "outside_filter":  "Outside",
-                      "empty_title":  "Nothing yet — but di good side, no baggage",
+                      "empty_title":  "Nothing yet � but di good side, no baggage",
                       "empty_body":  "Adjust your filters or show up for Nearby to help the correct people find you",
                       "empty":  "No likes yet",
                       "tab_label":  "People wey like you"
@@ -423,5 +423,16 @@
                           "your_email":  "Your email",
                           "code_label":  "Enter the code we send to your email address. E suppose arrive within 20s.",
                           "resend_code":  "Resend code"
-                      }
+                      },
+    "notification":  {
+                         "match_title":  "New match!",
+                         "match_body":  "You matched with %s"
+                     },
+    "match_celebration":  {
+                              "title":  "MATCH!",
+                              "you_and":  "You and",
+                              "liked_each_other":  "liked each other",
+                              "tap_to_continue":  "Tap to continue",
+                              "say_hello":  "Say hello"
+                          }
 }

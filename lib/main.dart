@@ -28,7 +28,7 @@ Future<void> main() async {
     _runApp,
     (error, stackTrace) {
       if (_isInvalidRefreshTokenError(error)) {
-        unawaited(_handleInvalidRefreshToken());
+        unawaited(_handleInvalidRefreshToken('runZonedGuarded'));
         return;
       }
       debugPrint('Unhandled error: $error');
@@ -71,14 +71,18 @@ Future<void> _runApp() async {
   ));
 }
 
+bool _invalidTokenHandling = false;
+
 bool _isInvalidRefreshTokenError(Object error) {
   final text = error.toString();
   return text.contains('refresh_token_already_used') ||
       text.contains('Invalid Refresh Token');
 }
 
-Future<void> _handleInvalidRefreshToken() async {
-  debugPrint('Clearing invalid Supabase refresh token.');
+Future<void> _handleInvalidRefreshToken([String source = 'unknown']) async {
+  if (_invalidTokenHandling) return;
+  _invalidTokenHandling = true;
+  debugPrint('Clearing invalid Supabase refresh token (source: $source).');
   try {
     await SupaFlow.clearPersistedAuthSession();
   } catch (error) {
@@ -96,7 +100,7 @@ Future<void> _handleAuthDeepLink(Uri uri) async {
     await SupaFlow.client.auth.getSessionFromUrl(uri);
   } catch (error, stackTrace) {
     if (_isInvalidRefreshTokenError(error)) {
-      await _handleInvalidRefreshToken();
+      await _handleInvalidRefreshToken('deepLink');
       return;
     }
     debugPrint('Failed to recover Supabase session from deep link: $error');

@@ -1,30 +1,30 @@
 ﻿{
     "connection":  {
-                       "offline_message":  "Sem conexão com a Internet. Verifique sua rede."
+                       "offline_message":  "Sem conexao com a Internet. Verifique sua rede."
                    },
     "auth":  {
                  "nearsy":  "Nearsy",
-                 "meet_near_keep_it_easy":  "Conheça perto. Mantenha as coisas fáceis",
+                 "meet_near_keep_it_easy":  "Conheca perto. Mantenha as coisas faceis",
                  "continue_with_email":  "Continuar com e-mail",
                  "continue_with_phone":  "Continuar com telefone",
-                 "by_signing_up_you_agree_to_the_terms_of":  "Ao se inscrever você concorda com os Termos de",
-                 "service_and_privacy_policy":  "Política de Serviço e Privacidade"
+                 "by_signing_up_you_agree_to_the_terms_of":  "Ao se inscrever voce concorda com os Termos de",
+                 "service_and_privacy_policy":  "Politica de Servico e Privacidade"
              },
     "profile":  {
                     "title":  "Perfil",
                     "name":  "Nome",
                     "catchphrase":  "Frase de efeito",
                     "about_me":  "Sobre mim",
-                    "gender":  "Gênero",
+                    "gender":  "Genero",
                     "age":  "Idade",
                     "height":  "Altura",
                     "work":  "Trabalhar",
-                    "education":  "Educação",
-                    "kids":  "Crianças",
+                    "education":  "Educacao",
+                    "kids":  "Criancas",
                     "preferred_relationships":  "Relacionamentos preferenciais",
-                    "beliefs":  "Crenças",
+                    "beliefs":  "Crencas",
                     "body_type":  "Tipo de corpo",
-                    "exercise":  "Exercício",
+                    "exercise":  "Exercicio",
                     "drinking":  "Beber",
                     "smoking":  "Fumar",
                     "profile_alt":  "Perfil"
@@ -35,17 +35,17 @@
                    "title":  "Pessoas"
                },
     "liked_you":  {
-                      "title":  "Gostei de você",
+                      "title":  "Gostei de voce",
                       "all_3":  "Todos os 3",
                       "filter_matches_0":  "Filtro corresponde a 0",
                       "outside_3":  "Fora 3",
                       "all_filter":  "Todos",
-                      "matches_filter":  "Correspondências",
+                      "matches_filter":  "Correspondencias",
                       "outside_filter":  "Fora",
-                      "empty_title":  "Nada ainda — mas o lado bom, sem bagagem",
-                      "empty_body":  "Ajuste seus filtros ou apareça no Próximo para ajudar as pessoas certas a encontrarem você",
+                      "empty_title":  "Nada ainda � mas o lado bom, sem bagagem",
+                      "empty_body":  "Ajuste seus filtros ou apareca no Proximo para ajudar as pessoas certas a encontrarem voce",
                       "empty":  "Nenhum like ainda",
-                      "tab_label":  "Gostei de você"
+                      "tab_label":  "Gostei de voce"
                   },
     "matches":  {
                     "chats":  "Bate-papos",
@@ -56,7 +56,7 @@
                  "no_messages":  "Sem mensagens"
              },
     "account_settings":  {
-                             "title":  "Configurações de Conta",
+                             "title":  "Configuracoes de Conta",
                              "member_id":  "ID de membro",
                              "email":  "e-mail",
                              "phone":  "Telefone",
@@ -64,48 +64,48 @@
                              "edit_email":  "Editar",
                              "edit_phone":  "Editar",
                              "edit_password":  "Editar",
-                             "email_authentication":  "Autenticação de e-mail",
-                             "two_factor_authentication":  "Autenticação de dois fatores",
+                             "email_authentication":  "Autenticacao de e-mail",
+                             "two_factor_authentication":  "Autenticacao de dois fatores",
                              "manage":  "Gerenciar",
-                             "notifications":  "Notificações",
-                             "push_notifications":  "Notificações push",
+                             "notifications":  "Notificacoes",
+                             "push_notifications":  "Notificacoes push",
                              "matches":  "Partidas",
                              "messages":  "Mensagens",
-                             "liked_you":  "Gostei de você",
-                             "email_notifications":  "Notificações por e-mail",
+                             "liked_you":  "Gostei de voce",
+                             "email_notifications":  "Notificacoes por e-mail",
                              "matches_email":  "Partidas",
                              "messages_email":  "Mensagens",
-                             "liked_you_email":  "Gostei de você",
-                             "feedback":  "Opinião",
+                             "liked_you_email":  "Gostei de voce",
+                             "feedback":  "Opiniao",
                              "hide_account":  "Ocultar conta",
                              "delete_account":  "Excluir conta",
                              "log_out":  "Sair",
                              "chats":  "Bate-papos"
                          },
     "search_preferences":  {
-                               "title":  "Preferências de pesquisa",
-                               "who_you_want_to_date":  "Com quem você quer namorar:",
+                               "title":  "Preferencias de pesquisa",
+                               "who_you_want_to_date":  "Com quem voce quer namorar:",
                                "women":  "Mulheres",
                                "men":  "Homens",
                                "other_gender":  "Outro",
                                "age":  "Idade:",
                                "between_20_and_50":  "Entre 20 e 50",
                                "search_radius":  "Raio de pesquisa:",
-                               "up_to_161_kilometres_away":  "Até 161 quilômetros de distância",
+                               "up_to_161_kilometres_away":  "Ate 161 quilometros de distancia",
                                "languages_they_know":  "Idiomas que eles conhecem:",
-                               "what_are_they_looking_for":  "O que eles estão procurando?",
-                               "something_serious":  "Algo sério",
+                               "what_are_they_looking_for":  "O que eles estao procurando?",
+                               "something_serious":  "Algo serio",
                                "just_dating":  "Apenas namorando",
                                "just_fun":  "Apenas divertido",
                                "open_to_anything":  "Aberto para qualquer coisa",
-                               "not_sure":  "Não tenho certeza",
-                               "what_are_their_beliefs":  "Quais são suas crenças?",
-                               "agnostic":  "Agnóstico",
+                               "not_sure":  "Nao tenho certeza",
+                               "what_are_their_beliefs":  "Quais sao suas crencas?",
+                               "agnostic":  "Agnostico",
                                "atheist":  "Ateu",
                                "buddhist":  "budista",
-                               "christian":  "cristão",
+                               "christian":  "cristao",
                                "jewish":  "judaico",
-                               "muslim":  "muçulmano",
+                               "muslim":  "muculmano",
                                "other_beliefs":  "Outro",
                                "do_they_exercise":  "Eles se exercitam?",
                                "regularly":  "Regularmente",
@@ -115,59 +115,59 @@
                                "yes_drink":  "Sim",
                                "occasionally_drink":  "Ocasionalmente",
                                "rarely_drink":  "Raramente",
-                               "no_drink":  "Não",
+                               "no_drink":  "Nao",
                                "do_they_smoke":  "Eles fumam?",
                                "yes_smoke":  "Sim",
-                               "sometimes":  "Às vezes",
-                               "no_smoke":  "Não",
+                               "sometimes":  "As vezes",
+                               "no_smoke":  "Nao",
                                "trying_to_quit":  "Tentando desistir",
-                               "nearby_visibility":  "Visibilidade próxima",
+                               "nearby_visibility":  "Visibilidade proxima",
                                "apply_filters":  "Aplicar filtros"
                            },
     "nearby_search_preferences":  {
-                                      "title":  "Preferências de pesquisa nas proximidades",
-                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "Escolha o quão visível é a sua localização. Você pode alterar isso a qualquer momento.",
+                                      "title":  "Preferencias de pesquisa nas proximidades",
+                                      "choose_how_visible_your_location_is_you_can_change_this_anytime":  "Escolha o quao visivel e a sua localizacao. Voce pode alterar isso a qualquer momento.",
                                       "visibility_modes":  "Modos de visibilidade:",
-                                      "invisible":  "Invisível",
-                                      "visible_while_using_the_app":  "Visível durante o uso do aplicativo",
-                                      "your_last_location":  "Seu último local",
-                                      "to_update_your_status_go_to_profile_settings_location":  "Para atualizar seu status, vá para Configurações de perfil \u003e Localização.",
+                                      "invisible":  "Invisivel",
+                                      "visible_while_using_the_app":  "Visivel durante o uso do aplicativo",
+                                      "your_last_location":  "Seu ultimo local",
+                                      "to_update_your_status_go_to_profile_settings_location":  "Para atualizar seu status, va para Configuracoes de perfil \u003e Localizacao.",
                                       "save_visibility":  "Salvar visibilidade",
                                       "search_radius":  "Raio de pesquisa:"
                                   },
     "chat_preferences":  {
-                             "title":  "Preferências de bate-papo",
-                             "choose_who_can_message_you_you_can_change_this_anytime":  "Escolha quem pode enviar mensagens para você. Você pode alterar isso a qualquer momento.",
+                             "title":  "Preferencias de bate-papo",
+                             "choose_who_can_message_you_you_can_change_this_anytime":  "Escolha quem pode enviar mensagens para voce. Voce pode alterar isso a qualquer momento.",
                              "availability_modes":  "Modos de disponibilidade:",
-                             "unavailable":  "Indisponível",
-                             "matched_users_only":  "Somente usuários correspondentes",
-                             "available":  "Disponível",
+                             "unavailable":  "Indisponivel",
+                             "matched_users_only":  "Somente usuarios correspondentes",
+                             "available":  "Disponivel",
                              "stuff_i_could_talk_about_for_hours":  "Coisas que eu poderia falar por horas:",
-                             "obscure_scifi_films_with_depressing_endings":  "Filmes obscuros de ficção científica com finais deprimentes",
-                             "save_chat_preferences":  "Salvar preferências de bate-papo"
+                             "obscure_scifi_films_with_depressing_endings":  "Filmes obscuros de ficcao cientifica com finais deprimentes",
+                             "save_chat_preferences":  "Salvar preferencias de bate-papo"
                          },
     "matches_block":  {
-                          "block_message":  "O usuário não poderá mais enviar mensagens ou visualizar seu perfil",
+                          "block_message":  "O usuario nao podera mais enviar mensagens ou visualizar seu perfil",
                           "delete_message":  "Excluir esta conversa",
                           "cancel":  "Cancelar",
                           "ok":  "Ok",
-                          "report_message":  "Denunciar este usuário"
+                          "report_message":  "Denunciar este usuario"
                       },
     "report_user":  {
                         "title":  "Conte-nos o que aconteceu",
                         "submit":  "Enviar",
                         "ok":  "Ok",
-                        "thank_you":  "Obrigado pelo seu relatório. Nossa equipe o recebeu e analisará o caso em breve. Se forem necessárias mais informações, entraremos em contato por e-mail.",
+                        "thank_you":  "Obrigado pelo seu relatorio. Nossa equipe o recebeu e analisara o caso em breve. Se forem necessarias mais informacoes, entraremos em contato por e-mail.",
                         "description_hint":  "Descreva o que aconteceu..."
                     },
     "contact_us":  {
                        "title":  "Contate-nos",
-                       "let_us_know_what_you_think":  "Deixe-nos saber o que você pensa...",
+                       "let_us_know_what_you_think":  "Deixe-nos saber o que voce pensa...",
                        "submit":  "Enviar",
                        "your_email":  "Seu e-mail",
                        "message_required":  "Digite uma mensagem.",
                        "submit_success":  "Obrigado pelo seu feedback.",
-                       "submit_error":  "Não foi possível enviar o feedback."
+                       "submit_error":  "Nao foi possivel enviar o feedback."
                    },
     "hide_account":  {
                          "title":  "Ocultar conta",
@@ -183,22 +183,22 @@
                            "title":  "Excluir conta",
                            "are_you_sure":  "Tem certeza?",
                            "absolutely":  "Absolutamente",
-                           "not_quite":  "Não exatamente",
-                           "label_1":  "Isso excluirá os dados da sua conta, ocultará seu perfil e encerrará sua sessão.",
-                           "delete_success":  "Conta excluída.",
-                           "delete_error":  "Não foi possível excluir a conta."
+                           "not_quite":  "Nao exatamente",
+                           "label_1":  "Isso excluira os dados da sua conta, ocultara seu perfil e encerrara sua sessao.",
+                           "delete_success":  "Conta excluida.",
+                           "delete_error":  "Nao foi possivel excluir a conta."
                        },
     "profile_about_me":  {
                              "about_me":  "Sobre mim:",
-                             "no_pressure_leave_it_blank_if_you_like":  "Sem pressão – deixe em branco se quiser."
+                             "no_pressure_leave_it_blank_if_you_like":  "Sem pressao � deixe em branco se quiser."
                          },
     "profile_gender":  {
-                           "gender":  "Gênero:"
+                           "gender":  "Genero:"
                        },
     "profile_age":  {
-                        "when_were_you_born":  "Quando você nasceu:",
+                        "when_were_you_born":  "Quando voce nasceu:",
                         "day":  "Dia",
-                        "month":  "Mês",
+                        "month":  "Mes",
                         "year":  "Ano",
                         "optional":  "Opcional",
                         "day_placeholder":  "--",
@@ -222,7 +222,7 @@
     "profile_height":  {
                            "my_height":  "Minha altura:",
                            "enter_your_height":  "Digite sua altura",
-                           "ft":  "pés",
+                           "ft":  "pes",
                            "cm":  "cm"
                        },
     "profile_body_type":  {
@@ -230,54 +230,54 @@
                           },
     "profile_work":  {
                          "my_work":  "Meu trabalho:",
-                         "what_do_you_do":  "O que você faz?"
+                         "what_do_you_do":  "O que voce faz?"
                      },
     "profile_education":  {
-                              "my_education":  "Minha educação:",
-                              "pick_the_closest_match":  "Escolha a correspondência mais próxima"
+                              "my_education":  "Minha educacao:",
+                              "pick_the_closest_match":  "Escolha a correspondencia mais proxima"
                           },
     "profile_kids":  {
-                         "kids":  "Crianças:"
+                         "kids":  "Criancas:"
                      },
     "profile_relationship":  {
                                  "my_preferred_relationship":  "Meu relacionamento preferido:",
-                                 "what_are_you_looking_for":  "O que você está procurando?"
+                                 "what_are_you_looking_for":  "O que voce esta procurando?"
                              },
     "profile_religion":  {
-                             "my_beliefs":  "Minhas crenças:"
+                             "my_beliefs":  "Minhas crencas:"
                          },
     "profile_exercise":  {
-                             "exercise":  "Exercício:",
-                             "any_form_of_physical_activity":  "Qualquer forma de atividade física"
+                             "exercise":  "Exercicio:",
+                             "any_form_of_physical_activity":  "Qualquer forma de atividade fisica"
                          },
     "profile_drinking":  {
-                             "my_drinking_habits":  "Meus hábitos de consumo:",
-                             "choose_what_best_describes_your_alcohol_use":  "Escolha o que melhor descreve seu uso de álcool."
+                             "my_drinking_habits":  "Meus habitos de consumo:",
+                             "choose_what_best_describes_your_alcohol_use":  "Escolha o que melhor descreve seu uso de alcool."
                          },
     "profile_smoking":  {
-                            "my_smoking_habits":  "Meus hábitos de fumar:",
-                            "do_you_smoke":  "Você fuma?"
+                            "my_smoking_habits":  "Meus habitos de fumar:",
+                            "do_you_smoke":  "Voce fuma?"
                         },
     "profile_location":  {
-                             "my_location":  "Minha localização:",
-                             "automatically_detect_my_location_recommended":  "Detectar automaticamente minha localização (recomendado)",
+                             "my_location":  "Minha localizacao:",
+                             "automatically_detect_my_location_recommended":  "Detectar automaticamente minha localizacao (recomendado)",
                              "status_in_nearby_local":  "Status nas proximidades: Local",
-                             "i_will_set_my_location_manually":  "Vou definir minha localização manualmente",
+                             "i_will_set_my_location_manually":  "Vou definir minha localizacao manualmente",
                              "select_location":  "Selecione o local..."
                          },
     "nearby":  {
-                   "title":  "Próximo",
+                   "title":  "Proximo",
                    "filters":  "Filtros",
                    "visibility":  "Visibilidade",
-                   "tab_label":  "Próximo",
+                   "tab_label":  "Proximo",
                    "unknown_location":  "You\u0027re off the map. Allow location access and try again."
                },
     "email_auth":  {
-                       "sign_in_with_email":  "Faça login com e-mail",
+                       "sign_in_with_email":  "Faca login com e-mail",
                        "use_your_email_and_password_or_create_a_new_account":  "Use seu e-mail e senha ou crie uma nova conta.",
                        "sign_in":  "Entrar",
                        "register":  "Cadastre-se",
-                       "email_address":  "Endereço de e-mail",
+                       "email_address":  "Endereco de e-mail",
                        "password":  "Senha",
                        "repeat_password":  "Repetir senha",
                        "create_account":  "Criar uma conta",
@@ -287,26 +287,26 @@
                        "or_sign_in_with":  "Ou entre com",
                        "continue_with_google":  "Continuar com Google",
                        "continue_with_apple":  "Continuar com Apple",
-                       "already_have_account":  "Já tem uma conta?",
-                       "dont_have_account":  "Não tem uma conta?",
+                       "already_have_account":  "Ja tem uma conta?",
+                       "dont_have_account":  "Nao tem uma conta?",
                        "sign_in_here":  "Entre aqui",
                        "sign_up_here":  "Cadastre-se aqui",
                        "enter_email":  "Digite seu e-mail.",
                        "enter_password":  "Digite sua senha."
                    },
     "phone_auth":  {
-                       "title":  "Autenticação de telefone",
-                       "phone_verification_is_not_implemented_yet":  "A verificação por telefone ainda não foi implementada."
+                       "title":  "Autenticacao de telefone",
+                       "phone_verification_is_not_implemented_yet":  "A verificacao por telefone ainda nao foi implementada."
                    },
     "verify_number":  {
-                          "title":  "Verifique o número",
-                          "sms_verification_is_not_implemented_yet":  "A verificação por SMS ainda não foi implementada."
+                          "title":  "Verifique o numero",
+                          "sms_verification_is_not_implemented_yet":  "A verificacao por SMS ainda nao foi implementada."
                       },
     "reset_password":  {
                            "title":  "Redefinir senha",
-                           "enter_your_email_and_we_will_send_a_password_reset_link":  "Digite seu e-mail e enviaremos um link de redefinição de senha.",
-                           "email_address":  "Endereço de e-mail",
-                           "send_reset_link":  "Enviar link de redefinição"
+                           "enter_your_email_and_we_will_send_a_password_reset_link":  "Digite seu e-mail e enviaremos um link de redefinicao de senha.",
+                           "email_address":  "Endereco de e-mail",
+                           "send_reset_link":  "Enviar link de redefinicao"
                        },
     "update_password":  {
                             "title":  "Atualizar senha",
@@ -318,48 +318,48 @@
     "nearsy_bottom_nav":  {
                               "profile":  "Perfil",
                               "people":  "Pessoas",
-                              "nearby":  "Próximo",
-                              "liked_you":  "Gostei de você",
+                              "nearby":  "Proximo",
+                              "liked_you":  "Gostei de voce",
                               "chats":  "Bate-papos"
                           },
     "profile_attributes":  {
                                "gender":  {
                                               "woman":  "Mulher",
                                               "man":  "Homem",
-                                              "non_binary":  "Não binário",
+                                              "non_binary":  "Nao binario",
                                               "other":  "Outro"
                                           },
                                "education":  {
-                                                 "high_school":  "Ensino médio",
+                                                 "high_school":  "Ensino medio",
                                                  "currently_studying":  "Atualmente estudando",
-                                                 "trade_qualification":  "Qualificação Comercial",
+                                                 "trade_qualification":  "Qualificacao Comercial",
                                                  "bachelors_degree":  "Diploma de bacharel",
                                                  "masters_degree":  "Mestrado",
                                                  "doctorate_phd":  "Doutorado / Doutorado",
-                                                 "postgraduate":  "Pós-graduação",
+                                                 "postgraduate":  "Pos-graduacao",
                                                  "other":  "Outro",
-                                                 "prefer_not_to_say":  "Prefiro não dizer"
+                                                 "prefer_not_to_say":  "Prefiro nao dizer"
                                              },
                                "kids":  {
                                             "yes":  "Sim",
-                                            "no":  "Não",
-                                            "prefer_not_to_say":  "Prefiro não dizer"
+                                            "no":  "Nao",
+                                            "prefer_not_to_say":  "Prefiro nao dizer"
                                         },
                                "relationship_type":  {
-                                                         "something_serious":  "Algo sério",
+                                                         "something_serious":  "Algo serio",
                                                          "just_dating":  "Apenas namorando",
-                                                         "just_fun":  "Apenas diversão",
+                                                         "just_fun":  "Apenas diversao",
                                                          "open_to_anything":  "Aberto para qualquer coisa",
-                                                         "not_sure":  "Não tenho certeza"
+                                                         "not_sure":  "Nao tenho certeza"
                                                      },
                                "religion":  {
-                                                "agnostic":  "Agnóstico",
+                                                "agnostic":  "Agnostico",
                                                 "atheist":  "Ateu",
                                                 "buddhist":  "budista",
-                                                "christian":  "cristão",
+                                                "christian":  "cristao",
                                                 "hindu":  "hindu",
                                                 "jewish":  "judaico",
-                                                "muslim":  "muçulmano",
+                                                "muslim":  "muculmano",
                                                 "sikh":  "Sikh",
                                                 "spiritual":  "Espiritual",
                                                 "other":  "Outro"
@@ -367,15 +367,15 @@
                                "body_type":  {
                                                  "slim":  "Magro",
                                                  "lean":  "Magro",
-                                                 "average":  "Média",
+                                                 "average":  "Media",
                                                  "fit":  "Ajustar",
-                                                 "athletic":  "Atlético",
+                                                 "athletic":  "Atletico",
                                                  "muscular":  "Muscular",
                                                  "broad":  "Largo",
                                                  "stocky":  "Atarracado",
                                                  "bigger":  "Maior",
-                                                 "curvy":  "Curvilíneo",
-                                                 "prefer_not_to_say":  "Prefiro não dizer"
+                                                 "curvy":  "Curvilineo",
+                                                 "prefer_not_to_say":  "Prefiro nao dizer"
                                              },
                                "exercise":  {
                                                 "regularly":  "Regularmente",
@@ -387,25 +387,25 @@
                                                 "yes":  "Sim",
                                                 "occasionally":  "Ocasionalmente",
                                                 "rarely":  "Raramente",
-                                                "no":  "Não",
+                                                "no":  "Nao",
                                                 "stopped_for_now":  "Parou por enquanto"
                                             },
                                "smoking":  {
                                                "yes":  "Sim",
-                                               "sometimes":  "Às vezes",
-                                               "no":  "Não",
+                                               "sometimes":  "As vezes",
+                                               "no":  "Nao",
                                                "trying_to_quit":  "Tentando desistir"
                                            }
                            },
     "languages":  {
                       "afar":  "Longe",
                       "afrikaans":  "afrikaans",
-                      "albanian":  "albanês",
-                      "amharic":  "amárico",
-                      "arabic":  "árabe",
-                      "armenian":  "Armênio",
+                      "albanian":  "albanes",
+                      "amharic":  "amarico",
+                      "arabic":  "arabe",
+                      "armenian":  "Armenio",
                       "bengali":  "bengali",
-                      "catalan":  "catalão",
+                      "catalan":  "catalao",
                       "english":  "English",
                       "russian":  "Russian",
                       "ukrainian":  "Ukrainian"
@@ -414,14 +414,25 @@
                           "edit_title":  "Editar e-mail",
                           "add_title":  "Adicionar e-mail",
                           "label_1":  "Digite o e-mail que deseja usar na sua conta.",
-                          "email_address":  "Endereço de e-mail",
+                          "email_address":  "Endereco de e-mail",
                           "save":  "Salvar",
-                          "invalid_email":  "Digite um e-mail válido.",
-                          "confirmation_sent":  "Código de confirmação enviado.",
-                          "save_error":  "Não foi possível atualizar o e-mail.",
+                          "invalid_email":  "Digite um e-mail valido.",
+                          "confirmation_sent":  "Codigo de confirmacao enviado.",
+                          "save_error":  "Nao foi possivel atualizar o e-mail.",
                           "title":  "Adicionar e verificar e-mail",
                           "your_email":  "Seu e-mail",
-                          "code_label":  "Digite o código que enviamos para seu e-mail. Ele deve chegar em até 20 segundos.",
-                          "resend_code":  "Reenviar código"
-                      }
+                          "code_label":  "Digite o codigo que enviamos para seu e-mail. Ele deve chegar em ate 20 segundos.",
+                          "resend_code":  "Reenviar codigo"
+                      },
+    "notification":  {
+                         "match_title":  "New match!",
+                         "match_body":  "You matched with %s"
+                     },
+    "match_celebration":  {
+                              "title":  "MATCH!",
+                              "you_and":  "You and",
+                              "liked_each_other":  "liked each other",
+                              "tap_to_continue":  "Tap to continue",
+                              "say_hello":  "Say hello"
+                          }
 }

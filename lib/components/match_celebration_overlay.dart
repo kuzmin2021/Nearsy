@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '/backend/supabase/supabase.dart';
+import '/services/i18n/app_labels.dart';
 
 class MatchCelebrationOverlay extends StatefulWidget {
   const MatchCelebrationOverlay({
@@ -85,6 +86,7 @@ class _MatchCelebrationOverlayState extends State<MatchCelebrationOverlay>
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const Spacer(),
               if (index == 0) _buildMatchContent(),
               if (index == 1) _buildSlideContent(1),
               if (index == 2) _buildSlideContent(2),
@@ -107,7 +109,7 @@ class _MatchCelebrationOverlayState extends State<MatchCelebrationOverlay>
                     ),
                     onPressed: widget.onSayHello,
                     child: Text(
-                      'Say hello',
+                      AppLabels.of(context).get('match_celebration.say_hello'),
                       style: GoogleFonts.inter(
                         fontSize: 18.0,
                         fontWeight: FontWeight.w600,
@@ -155,7 +157,7 @@ class _MatchCelebrationOverlayState extends State<MatchCelebrationOverlay>
           ),
           const SizedBox(height: 24.0),
           Text(
-            'MATCH!',
+            AppLabels.of(context).get('match_celebration.title'),
             style: GoogleFonts.interTight(
               fontSize: 36.0,
               fontWeight: FontWeight.w800,
@@ -165,7 +167,7 @@ class _MatchCelebrationOverlayState extends State<MatchCelebrationOverlay>
           ),
           const SizedBox(height: 8.0),
           Text(
-            'You and ${widget.theirName} liked each other',
+            '${AppLabels.of(context).get('match_celebration.you_and')} ${widget.theirName} ${AppLabels.of(context).get('match_celebration.liked_each_other')}',
             style: GoogleFonts.inter(
               fontSize: 16.0,
               color: Colors.white.withValues(alpha: 0.9),
@@ -195,7 +197,7 @@ class _MatchCelebrationOverlayState extends State<MatchCelebrationOverlay>
           Opacity(
             opacity: 0.7,
             child: Text(
-              'Tap to continue',
+              AppLabels.of(context).get('match_celebration.tap_to_continue'),
               style: GoogleFonts.inter(
                 fontSize: 13.0,
                 color: Colors.white,
