@@ -1,12 +1,10 @@
-﻿import 'dart:io';
-import 'dart:typed_data';
+﻿import 'dart:typed_data';
 
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart' as emoji;
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
@@ -336,16 +334,11 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                   title: const Text('Gallery'),
                   onTap: () async {
                     Navigator.pop(ctx);
-                    final result = await FilePicker.platform.pickFiles(
-                      type: FileType.image,
-                      allowMultiple: false,
-                      withData: false,
-                    );
-                    if (result == null || result.files.isEmpty) return;
-                    final file = result.files.single;
-                    if (file.path == null) return;
-                    final bytes = await File(file.path!).readAsBytes();
-                    await _model.sendPhoto(bytes, file.name);
+                    final picker = ImagePicker();
+                    final picked = await picker.pickImage(source: ImageSource.gallery);
+                    if (picked == null) return;
+                    final bytes = await picked.readAsBytes();
+                    await _model.sendPhoto(bytes, picked.name);
                     safeSetState(() {});
                   },
                 ),

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/components/nearsy_bottom_nav_widget.dart';
@@ -11,11 +9,11 @@ import 'dart:ui';
 import '/floter/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:easy_debounce/easy_debounce.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'profile_page_model.dart';
 export 'profile_page_model.dart';
 
@@ -620,27 +618,16 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     highlightColor:
                                                         Colors.transparent,
                                                     onTap: () async {
-                                                     final result =
-                                                         await FilePicker
-                                                             .platform
-                                                             .pickFiles(
-                                                       type: FileType.image,
-                                                       allowMultiple: false,
-                                                       withData: false,
+                                                     final picker = ImagePicker();
+                                                     final picked = await picker.pickImage(
+                                                       source: ImageSource.gallery,
                                                      );
-                                                     if (result == null ||
-                                                         result
-                                                             .files.isEmpty) {
+                                                     if (picked == null) {
                                                        return;
                                                      }
-                                                     final pickedFile =
-                                                         result.files.single;
-                                                     final path = pickedFile.path;
-                                                     if (path == null) return;
                                                      final bytes =
-                                                         await File(path).readAsBytes();
-                                                          pickedFile.bytes;
-                                                      if (bytes == null ||
+                                                         await picked.readAsBytes();
+                                                       if (bytes == null ||
                                                           bytes.isEmpty) {
                                                         return;
                                                       }
@@ -1514,26 +1501,16 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                       return;
                                                     }
 
-                                                     final result =
-                                                         await FilePicker
-                                                             .platform
-                                                             .pickFiles(
-                                                       type: FileType.image,
-                                                       allowMultiple: false,
-                                                       withData: false,
+                                                      final picker = ImagePicker();
+                                                     final picked = await picker.pickImage(
+                                                       source: ImageSource.gallery,
                                                      );
-                                                     if (result == null ||
-                                                         result.files.isEmpty) {
+                                                     if (picked == null) {
                                                        return;
                                                      }
-                                                     final pickedFile =
-                                                         result.files.single;
-                                                     final path = pickedFile.path;
-                                                     if (path == null) return;
                                                      final bytes =
-                                                         await File(path).readAsBytes();
-                                                        pickedFile.bytes;
-                                                    if (bytes == null ||
+                                                         await picked.readAsBytes();
+                                                     if (bytes == null ||
                                                         bytes.isEmpty) {
                                                       ScaffoldMessenger.of(
                                                               context)

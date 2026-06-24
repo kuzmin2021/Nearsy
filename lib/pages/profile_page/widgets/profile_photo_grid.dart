@@ -1,6 +1,4 @@
-import 'dart:io';
 import 'dart:typed_data';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -110,15 +108,15 @@ class ProfilePhotoGrid extends StatelessWidget {
   }
 
   Future<Uint8List?> _pickFromGallery() async {
-    final result = await FilePicker.platform.pickFiles(
-      type: FileType.image,
-      allowMultiple: false,
-      withData: false,
+    final picker = ImagePicker();
+    final picked = await picker.pickImage(
+      source: ImageSource.gallery,
+      maxWidth: 1024,
+      maxHeight: 1024,
+      imageQuality: 85,
     );
-    if (result == null || result.files.isEmpty) return null;
-    final path = result.files.single.path;
-    if (path == null) return null;
-    return await File(path).readAsBytes();
+    if (picked == null) return null;
+    return await picked.readAsBytes();
   }
 
   Future<Uint8List?> _pickFromCamera() async {
