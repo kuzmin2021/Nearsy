@@ -1,5 +1,4 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/foundation.dart';
 import '../backend/supabase/supabase.dart';
 import '../models/chat_models.dart';
 
@@ -16,7 +15,8 @@ class ChatService {
 
     final response = await _client
         .from('conversations')
-        .select('id, user1, user2, match_created_at, last_message_at, last_message_id, deleted_for')
+        .select(
+            'id, user1, user2, match_created_at, last_message_at, last_message_id, deleted_for')
         .or('user1.eq.$userId,user2.eq.$userId')
         .order('last_message_at', ascending: false);
 
@@ -78,7 +78,8 @@ class ChatService {
         }
       }
 
-      final hasPhoto = lastMsg?['photo_url'] is String && (lastMsg!['photo_url'] as String).isNotEmpty;
+      final hasPhoto = lastMsg?['photo_url'] is String &&
+          (lastMsg!['photo_url'] as String).isNotEmpty;
       final body = lastMsg?['body'] as String?;
 
       conversations.add(Conversation(
@@ -95,12 +96,15 @@ class ChatService {
         lastMessagePhoto: lastMsg?['photo_url'] as String?,
         lastMessageSenderId: lastMsg?['sender_id'] as String?,
         otherUserName: profile?['display_name'] as String?,
-        otherUserAvatar: SupaFlow.safePhotoUrl(profile?['avatar_url'] as String?),
+        otherUserAvatar:
+            SupaFlow.safePhotoUrl(profile?['avatar_url'] as String?),
         otherUserAge: age,
       ));
     }
 
-    debugPrint('getConversations: returning ' + conversations.length.toString() + ' convs');
+    debugPrint('getConversations: returning ' +
+        conversations.length.toString() +
+        ' convs');
     return conversations;
   }
 
@@ -110,7 +114,8 @@ class ChatService {
 
     final response = await _client
         .from('messages')
-        .select('id, conversation_id, sender_id, body, created_at, photo_url, read_at')
+        .select(
+            'id, conversation_id, sender_id, body, created_at, photo_url, read_at')
         .eq('conversation_id', conversationId)
         .order('created_at', ascending: true);
 
@@ -136,11 +141,15 @@ class ChatService {
     final userId = _client.auth.currentUser?.id;
     if (userId == null || body.trim().isEmpty) return null;
 
-    final response = await _client.from('messages').insert({
-      'conversation_id': conversationId,
-      'sender_id': userId,
-      'body': body.trim(),
-    }).select('id, created_at').single();
+    final response = await _client
+        .from('messages')
+        .insert({
+          'conversation_id': conversationId,
+          'sender_id': userId,
+          'body': body.trim(),
+        })
+        .select('id, created_at')
+        .single();
 
     await _client.from('conversations').update({
       'last_message_at': DateTime.now().toUtc().toIso8601String(),
@@ -165,12 +174,16 @@ class ChatService {
 
     final photoUrl = SupaFlow.chatPhotoUrl(photoPath);
 
-    final response = await _client.from('messages').insert({
-      'conversation_id': conversationId,
-      'sender_id': userId,
-      'body': '',
-      'photo_url': photoUrl,
-    }).select('id, created_at').single();
+    final response = await _client
+        .from('messages')
+        .insert({
+          'conversation_id': conversationId,
+          'sender_id': userId,
+          'body': '',
+          'photo_url': photoUrl,
+        })
+        .select('id, created_at')
+        .single();
 
     await _client.from('conversations').update({
       'last_message_at': DateTime.now().toUtc().toIso8601String(),
@@ -190,17 +203,8 @@ class ChatService {
     );
   }
 
-  Future<String?> uploadChatPhoto(String userId, dynamic fileBytes, String fileName) async {
-    final timestamp = DateTime.now().millisecondsSinceEpoch;
-    final storagePath = '$userId/$timestamp-$fileName';
-
-    final bucket = _client.storage.from('chat_photos');
-    await bucket.uploadBinary(storagePath, fileBytes);
-
-    return storagePath;
-  }
-
-  Future<Map<String, dynamic>?> getConversationDetails(int conversationId) async {
+  Future<Map<String, dynamic>?> getConversationDetails(
+      int conversationId) async {
     final userId = _client.auth.currentUser?.id;
     if (userId == null) return null;
 
@@ -282,7 +286,8 @@ class ChatService {
 
   RealtimeChannel? _messagesChannel;
 
-  void subscribeToMessages(int conversationId, {
+  void subscribeToMessages(
+    int conversationId, {
     required void Function(Message) onNewMessage,
     required void Function(Message) onReadReceipt,
   }) {
@@ -344,18 +349,28 @@ class ChatService {
   }
 
   Future<void> blockUser(String blockerId, String blockedId) async {
-    final exists = await _client.from('blocks').select('id').eq('blocker', blockerId).eq('blocked', blockedId).maybeSingle();
+    final exists = await _client
+        .from('blocks')
+        .select('id')
+        .eq('blocker', blockerId)
+        .eq('blocked', blockedId)
+        .maybeSingle();
     if (exists != null) return;
     await _client.from('blocks').insert({
-        'blocker': blockerId,
-        'blocked': blockedId,
-      });
+      'blocker': blockerId,
+      'blocked': blockedId,
+    });
   }
 
   Future<void> deleteMatch(String user1, String user2) async {
-    await _client
-          .from('matches')
-          .delete()
-          .or('and(user1.eq.' + user1 + ',user2.eq.' + user2 + '),and(user1.eq.' + user2 + ',user2.eq.' + user1 + ')');
+    await _client.from('matches').delete().or('and(user1.eq.' +
+        user1 +
+        ',user2.eq.' +
+        user2 +
+        '),and(user1.eq.' +
+        user2 +
+        ',user2.eq.' +
+        user1 +
+        ')');
   }
 }

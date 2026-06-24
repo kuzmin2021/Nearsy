@@ -1,7 +1,7 @@
-﻿import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '/backend/supabase/offline_aware_http_client.dart';
 import '/core/config/app_config.dart';
@@ -21,15 +21,15 @@ class SupaFlow {
 
   static final Map<String, String> _signedUrlCache = {};
 
-  static Future<String> signedPhotoUrl(String bucket, String storagePath) async {
+  static Future<String> signedPhotoUrl(
+      String bucket, String storagePath) async {
     final cacheKey = '$bucket:$storagePath';
     if (_signedUrlCache.containsKey(cacheKey)) {
       return _signedUrlCache[cacheKey]!;
     }
     final encoded = storagePath.split('/').map(Uri.encodeComponent).join('/');
-    final signed = await client.storage
-        .from(bucket)
-        .createSignedUrl(encoded, 604800);
+    final signed =
+        await client.storage.from(bucket).createSignedUrl(encoded, 604800);
     _signedUrlCache[cacheKey] = signed;
     return signed;
   }
@@ -67,6 +67,19 @@ class SupaFlow {
     if (url == null || url.isEmpty) return false;
     if (url.contains('figma.com/api/mcp/asset')) return false;
     return true;
+  }
+
+  static String get _persistSessionKey {
+    final hostPrefix = Uri.parse(AppConfig.supabaseUrl).host.split('.').first;
+    return 'sb-$hostPrefix-auth-token';
+  }
+
+  static Future<void> clearPersistedAuthSession() async {
+    final localStorage = SharedPreferencesLocalStorage(
+      persistSessionKey: _persistSessionKey,
+    );
+    await localStorage.initialize();
+    await localStorage.removePersistedSession();
   }
 
   static String? safePhotoUrl(String? url) {
@@ -109,8 +122,12 @@ class SupaFlow {
         http.Client(),
         connectivityService,
       ),
-      authOptions:
-          FlutterAuthClientOptions(authFlowType: AuthFlowType.implicit),
+      authOptions: FlutterAuthClientOptions(
+        authFlowType: AuthFlowType.implicit,
+        localStorage: SharedPreferencesLocalStorage(
+          persistSessionKey: _persistSessionKey,
+        ),
+      ),
     );
   }
 }

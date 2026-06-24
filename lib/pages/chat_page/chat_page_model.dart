@@ -1,11 +1,9 @@
-﻿import '/floter/floter_util.dart';
-import '/backend/supabase/supabase.dart';
+import '/floter/floter_util.dart';
 import '/models/chat_models.dart';
 import '/services/chat_service.dart';
 import 'chat_page_widget.dart' show ChatPageWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'dart:typed_data';
 
 class ChatPageModel extends FloterModel<ChatPageWidget> {
   VoidCallback? onStateChanged;
@@ -20,7 +18,8 @@ class ChatPageModel extends FloterModel<ChatPageWidget> {
   late FocusNode messageTextFieldFocusNode;
   late ScrollController scrollController;
   String? messageText = '';
-  String? Function(BuildContext, String?)? messageTextFieldTextControllerValidator;
+  String? Function(BuildContext, String?)?
+      messageTextFieldTextControllerValidator;
 
   @override
   void initState(BuildContext context) {
@@ -123,12 +122,8 @@ class ChatPageModel extends FloterModel<ChatPageWidget> {
     }
   }
 
-  Future<void> sendPhoto(Uint8List bytes, String fileName) async {
+  Future<void> sendPhoto(String storagePath) async {
     if (conversationId == null) return;
-    final userId = SupaFlow.client.auth.currentUser?.id;
-    if (userId == null) return;
-    final storagePath = await _chatService.uploadChatPhoto(userId, bytes, fileName);
-    if (storagePath == null) return;
     final message = await _chatService.sendPhoto(conversationId!, storagePath);
     if (message != null) {
       messages.add(message);

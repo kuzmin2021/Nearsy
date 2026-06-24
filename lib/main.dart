@@ -23,7 +23,21 @@ import 'floter/floter_util.dart';
 import 'floter/internationalization.dart';
 import 'floter/nav/nav.dart';
 
-void main() async {
+Future<void> main() async {
+  await runZonedGuarded<Future<void>>(
+    _runApp,
+    (error, stackTrace) {
+      if (_isInvalidRefreshTokenError(error)) {
+        unawaited(_handleInvalidRefreshToken());
+        return;
+      }
+      debugPrint('Unhandled error: $error');
+      debugPrintStack(stackTrace: stackTrace);
+    },
+  );
+}
+
+Future<void> _runApp() async {
   WidgetsFlutterBinding.ensureInitialized();
   GoogleFonts.config.allowRuntimeFetching = false;
   GoRouter.optionURLReflectsImperativeAPIs = true;
@@ -34,7 +48,7 @@ void main() async {
 
   final appLinks = AppLinks();
   appLinks.uriLinkStream.listen((uri) {
-    SupaFlow.client.auth.getSessionFromUrl(uri);
+    unawaited(_handleAuthDeepLink(uri));
   });
 
   await FloterTheme.initialize();
@@ -55,6 +69,39 @@ void main() async {
     ],
     child: MyApp(),
   ));
+}
+
+bool _isInvalidRefreshTokenError(Object error) {
+  final text = error.toString();
+  return text.contains('refresh_token_already_used') ||
+      text.contains('Invalid Refresh Token');
+}
+
+Future<void> _handleInvalidRefreshToken() async {
+  debugPrint('Clearing invalid Supabase refresh token.');
+  try {
+    await SupaFlow.clearPersistedAuthSession();
+  } catch (error) {
+    debugPrint('Failed to clear persisted Supabase session: $error');
+  }
+  try {
+    await SupaFlow.client.auth.signOut();
+  } catch (_) {
+    // The client may still be initializing when the recover-session error fires.
+  }
+}
+
+Future<void> _handleAuthDeepLink(Uri uri) async {
+  try {
+    await SupaFlow.client.auth.getSessionFromUrl(uri);
+  } catch (error, stackTrace) {
+    if (_isInvalidRefreshTokenError(error)) {
+      await _handleInvalidRefreshToken();
+      return;
+    }
+    debugPrint('Failed to recover Supabase session from deep link: $error');
+    debugPrintStack(stackTrace: stackTrace);
+  }
 }
 
 String _localeCode(Locale locale) {

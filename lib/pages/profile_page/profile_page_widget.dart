@@ -5,6 +5,7 @@ import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/services/profile/profile_localization.dart';
+import '/services/photo/photo_upload_service.dart';
 import 'dart:ui';
 import '/floter/custom_functions.dart' as functions;
 import '/index.dart';
@@ -13,7 +14,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:image_picker/image_picker.dart';
 import 'profile_page_model.dart';
 export 'profile_page_model.dart';
 
@@ -300,7 +300,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
       _model.showProfileNameError = !_validProfileName(displayName);
       _model.profileDisplayNameFieldTextController?.text = displayName;
       _model.profileCatchphraseFieldTextController?.text = catchphrase;
-      _model.profileMainPhotoUrl = SupaFlow.resolvePhotoUrl(profile?['avatar_url']);
+      _model.profileMainPhotoUrl =
+          SupaFlow.resolvePhotoUrl(profile?['avatar_url']);
       _model.profileAbout = cleanValue(profile?['description']);
       _model.profileGender =
           localizeProfileAttribute('gender', profile?['gender']);
@@ -515,16 +516,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     .titleLarge
                                     .override(
                                       font: GoogleFonts.interTight(
-                                        fontWeight:
-                                            FloterTheme.of(context)
-                                                .titleLarge
-                                                .fontWeight,
+                                        fontWeight: FloterTheme.of(context)
+                                            .titleLarge
+                                            .fontWeight,
                                         fontStyle: FloterTheme.of(context)
                                             .titleLarge
                                             .fontStyle,
                                       ),
-                                      color:
-                                          FloterTheme.of(context).primary,
+                                      color: FloterTheme.of(context).primary,
                                       letterSpacing: 0.0,
                                       fontWeight: FloterTheme.of(context)
                                           .titleLarge
@@ -539,7 +538,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 buttonSize: 54.0,
                                 fillColor:
                                     FloterTheme.of(context).primaryBackground,
-                               icon: Icon(
+                                icon: Icon(
                                   Icons.tune,
                                   color: FloterTheme.of(context).primaryText,
                                   size: 22.0,
@@ -618,80 +617,42 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     highlightColor:
                                                         Colors.transparent,
                                                     onTap: () async {
-                                                     final picker = ImagePicker();
-                                                     final picked = await picker.pickImage(
-                                                       source: ImageSource.gallery,
-                                                     );
-                                                     if (picked == null) {
-                                                       return;
-                                                     }
-                                                     final bytes =
-                                                         await picked.readAsBytes();
-                                                       if (bytes == null ||
-                                                          bytes.isEmpty) {
-                                                        return;
-                                                      }
-
-                                                      final createDataTime =
-                                                          DateTime.now()
-                                                              .millisecondsSinceEpoch
-                                                              .toString();
                                                       final userId = SupaFlow
                                                           .client
                                                           .auth
                                                           .currentUser
                                                           ?.id;
-                                                       if (userId == null ||
-                                                           userId.isEmpty) {
-                                                         return;
-                                                       }
-                                                       final storagePath =
-                                                           '$userId/$createDataTime';
-
-                                                      var uploadedUrl = '';
-                                                      var uploadFailed = false;
-                                                      var uploadError = '';
+                                                      if (userId == null ||
+                                                          userId.isEmpty) {
+                                                        return;
+                                                      }
                                                       try {
-                                                        final storageBucket =
-                                                            SupaFlow
-                                                                .client.storage
-                                                                .from(
-                                                                    'user_photos');
-                                                        await storageBucket
-                                                            .uploadBinary(
-                                                                storagePath,
-                                                                bytes);
-                                                        uploadedUrl =
-                                                            SupaFlow
-                                                                .userPhotoUrl(
-                                                                    storagePath);
-                                                         await SupaFlow.client
+                                                        final upload =
+                                                            await const PhotoUploadService()
+                                                                .pickAndUploadUserPhoto(
+                                                          context,
+                                                          userId: userId,
+                                                        );
+                                                        if (upload == null) {
+                                                          return;
+                                                        }
+                                                        await SupaFlow.client
                                                             .from('profiles')
                                                             .update({
                                                           'avatar_url':
-                                                              storagePath
+                                                              upload.storagePath
                                                         }).eq('user_id',
                                                                 userId);
                                                         _model.profileMainPhotoUrl =
-                                                            SupaFlow.userPhotoUrl(
-                                                                storagePath);
+                                                            upload.publicUrl;
                                                         safeSetState(() {});
                                                       } catch (error) {
-                                                        uploadFailed = true;
-                                                        uploadError =
-                                                            error.toString();
-                                                      }
-
-                                                      if (uploadFailed ||
-                                                          uploadedUrl.isEmpty) {
                                                         ScaffoldMessenger.of(
                                                                 context)
                                                             .showSnackBar(
                                                           SnackBar(
-                                                              content: Text(uploadError
-                                                                      .isEmpty
-                                                                  ? 'Failed to upload photo'
-                                                                  : uploadError)),
+                                                              content: Text(
+                                                                  'Failed to upload photo: $error')),
                                                         );
                                                         return;
                                                       }
@@ -1285,29 +1246,30 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                         }
 
                                                         try {
-                                                           await SupaFlow.client
-                                                               .from(
-                                                                   'user_photos')
-                                                               .delete()
-                                                               .eq('user_id',
-                                                                   userId)
-                                                               .eq('photo_url',
-                                                                   SupaFlow.storagePathFromPhotoUrl(
-                                                                       selectedPhotoUrl) ??
-                                                                       '');
+                                                          await SupaFlow.client
+                                                              .from(
+                                                                  'user_photos')
+                                                              .delete()
+                                                              .eq('user_id',
+                                                                  userId)
+                                                              .eq(
+                                                                  'photo_url',
+                                                                  SupaFlow.storagePathFromPhotoUrl(
+                                                                          selectedPhotoUrl) ??
+                                                                      '');
 
                                                           final remainingRows =
                                                               await loadPhotoRows(
                                                                   userId);
-                                                           final urls = remainingRows
-                                                               .map((row) =>
-                                                                   SupaFlow.resolvePhotoUrl(
-                                                                       row['photo_url']) ??
-                                                                   '')
-                                                               .where((url) =>
-                                                                   url.isNotEmpty)
-                                                               .take(6)
-                                                               .toList();
+                                                          final urls = remainingRows
+                                                              .map((row) =>
+                                                                  SupaFlow.resolvePhotoUrl(row[
+                                                                      'photo_url']) ??
+                                                                  '')
+                                                              .where((url) =>
+                                                                  url.isNotEmpty)
+                                                              .take(6)
+                                                              .toList();
                                                           _model.profileGridSlots =
                                                               buildGridSlots(
                                                                   urls);
@@ -1447,13 +1409,13 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                           await loadPhotoRows(
                                                               userId);
                                                       final urls = rows
-                                                           .map((row) =>
-                                                               SupaFlow.resolvePhotoUrl(
-                                                                   row['photo_url']) ??
-                                                               '')
-                                                           .where((url) =>
-                                                               url.isNotEmpty)
-                                                           .toList();
+                                                          .map((row) =>
+                                                              SupaFlow.resolvePhotoUrl(row[
+                                                                  'photo_url']) ??
+                                                              '')
+                                                          .where((url) =>
+                                                              url.isNotEmpty)
+                                                          .toList();
                                                       _model.profileGridSlots =
                                                           buildGridSlots(urls);
                                                       safeSetState(() {});
@@ -1501,27 +1463,6 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                       return;
                                                     }
 
-                                                      final picker = ImagePicker();
-                                                     final picked = await picker.pickImage(
-                                                       source: ImageSource.gallery,
-                                                     );
-                                                     if (picked == null) {
-                                                       return;
-                                                     }
-                                                     final bytes =
-                                                         await picked.readAsBytes();
-                                                     if (bytes == null ||
-                                                        bytes.isEmpty) {
-                                                      ScaffoldMessenger.of(
-                                                              context)
-                                                          .showSnackBar(
-                                                        const SnackBar(
-                                                            content: Text(
-                                                                'Selected file is empty')),
-                                                      );
-                                                      return;
-                                                    }
-
                                                     final existingSlots =
                                                         existingRows
                                                             .map((row) =>
@@ -1538,50 +1479,34 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                                     : element);
                                                     final nextSlot =
                                                         maxSlot + 1;
-                                                    final createDataTime =
-                                                        DateTime.now()
-                                                            .millisecondsSinceEpoch
-                                                            .toString();
-                                                    final storagePath =
-                                                        '$userId/$createDataTime';
-                                                    final storageBucket =
-                                                        SupaFlow.client.storage
-                                                            .from(
-                                                                'user_photos');
-                                                    var uploadedUrl = '';
                                                     try {
-                                                      await storageBucket
-                                                          .uploadBinary(
-                                                              storagePath,
-                                                              bytes);
-                                                      uploadedUrl =
-                                                          SupaFlow
-                                                              .userPhotoUrl(
-                                                                  storagePath);
-                                                      if (uploadedUrl
-                                                          .trim()
-                                                          .isEmpty) {
-                                                        await storageBucket
-                                                            .remove(
-                                                                [storagePath]);
-                                                        throw Exception(
-                                                            'Uploaded photo URL is empty');
+                                                      final upload =
+                                                          await const PhotoUploadService()
+                                                              .pickAndUploadUserPhoto(
+                                                        context,
+                                                        userId: userId,
+                                                      );
+                                                      if (upload == null) {
+                                                        return;
                                                       }
                                                       try {
-                                                         await SupaFlow.client
+                                                        await SupaFlow.client
                                                             .from('user_photos')
                                                             .insert({
                                                           'user_id': userId,
                                                           'position': nextSlot,
-                                                          'photo_url':
-                                                              storagePath,
+                                                          'photo_url': upload
+                                                              .storagePath,
                                                           'slot': nextSlot,
                                                           'order': nextSlot,
                                                         });
                                                       } catch (error) {
-                                                        await storageBucket
-                                                            .remove(
-                                                                [storagePath]);
+                                                        await SupaFlow
+                                                            .client.storage
+                                                            .from('user_photos')
+                                                            .remove([
+                                                          upload.storagePath
+                                                        ]);
                                                         rethrow;
                                                       }
                                                       await refreshGrid(userId);
@@ -1696,8 +1621,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           ),
                                           Builder(
                                             builder: (context) {
-                                              final value =
-                                                  functions.effectiveProfileAttribute(
+                                              final value = functions
+                                                  .effectiveProfileAttribute(
                                                       'about',
                                                       widget!.aboutOverride,
                                                       _model.profileAbout);
@@ -1706,9 +1631,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                 return const SizedBox.shrink();
                                               }
                                               return Padding(
-                                                padding:
-                                                    const EdgeInsets.only(
-                                                        top: 8.0),
+                                                padding: const EdgeInsets.only(
+                                                    top: 8.0),
                                                 child: Text(
                                                   value,
                                                   style: GoogleFonts.inter(
@@ -1791,16 +1715,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            final value = functions.effectiveProfileAttribute(
-                                                'gender',
-                                                widget!.genderOverride,
-                                                _model.profileGender);
-                                            if (value == null || value.isEmpty) {
+                                            final value = functions
+                                                .effectiveProfileAttribute(
+                                                    'gender',
+                                                    widget!.genderOverride,
+                                                    _model.profileGender);
+                                            if (value == null ||
+                                                value.isEmpty) {
                                               return const SizedBox.shrink();
                                             }
                                             return Container(
                                               width: 150.0,
-                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
                                               child: Text(
                                                 value,
                                                 textAlign: TextAlign.end,
@@ -1878,16 +1805,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            final value = functions.effectiveProfileAttribute(
-                                                'birthday',
-                                                widget!.birthdayOverride,
-                                                _model.profileBirthday);
-                                            if (value == null || value.isEmpty) {
+                                            final value = functions
+                                                .effectiveProfileAttribute(
+                                                    'birthday',
+                                                    widget!.birthdayOverride,
+                                                    _model.profileBirthday);
+                                            if (value == null ||
+                                                value.isEmpty) {
                                               return const SizedBox.shrink();
                                             }
                                             return Container(
                                               width: 150.0,
-                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
                                               child: Text(
                                                 value,
                                                 textAlign: TextAlign.end,
@@ -2045,16 +1975,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            final value = functions.effectiveProfileAttribute(
-                                                'height',
-                                                widget!.heightOverride,
-                                                _model.profileHeight);
-                                            if (value == null || value.isEmpty) {
+                                            final value = functions
+                                                .effectiveProfileAttribute(
+                                                    'height',
+                                                    widget!.heightOverride,
+                                                    _model.profileHeight);
+                                            if (value == null ||
+                                                value.isEmpty) {
                                               return const SizedBox.shrink();
                                             }
                                             return Container(
                                               width: 150.0,
-                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
                                               child: Text(
                                                 value,
                                                 textAlign: TextAlign.end,
@@ -2133,16 +2066,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            final value = functions.effectiveProfileAttribute(
-                                                'work',
-                                                widget!.workOverride,
-                                                _model.profileWork);
-                                            if (value == null || value.isEmpty) {
+                                            final value = functions
+                                                .effectiveProfileAttribute(
+                                                    'work',
+                                                    widget!.workOverride,
+                                                    _model.profileWork);
+                                            if (value == null ||
+                                                value.isEmpty) {
                                               return const SizedBox.shrink();
                                             }
                                             return Container(
                                               width: 150.0,
-                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
                                               child: Text(
                                                 value,
                                                 textAlign: TextAlign.end,
@@ -2221,16 +2157,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            final value = functions.effectiveProfileAttribute(
-                                                'education',
-                                                widget!.educationOverride,
-                                                _model.profileEducation);
-                                            if (value == null || value.isEmpty) {
+                                            final value = functions
+                                                .effectiveProfileAttribute(
+                                                    'education',
+                                                    widget!.educationOverride,
+                                                    _model.profileEducation);
+                                            if (value == null ||
+                                                value.isEmpty) {
                                               return const SizedBox.shrink();
                                             }
                                             return Container(
                                               width: 150.0,
-                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
                                               child: Text(
                                                 value,
                                                 textAlign: TextAlign.end,
@@ -2309,16 +2248,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            final value = functions.effectiveProfileAttribute(
-                                                'kids',
-                                                widget!.kidsOverride,
-                                                _model.profileKids);
-                                            if (value == null || value.isEmpty) {
+                                            final value = functions
+                                                .effectiveProfileAttribute(
+                                                    'kids',
+                                                    widget!.kidsOverride,
+                                                    _model.profileKids);
+                                            if (value == null ||
+                                                value.isEmpty) {
                                               return const SizedBox.shrink();
                                             }
                                             return Container(
                                               width: 150.0,
-                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
                                               child: Text(
                                                 value,
                                                 textAlign: TextAlign.end,
@@ -2397,18 +2339,21 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            final value = functions.effectiveProfileAttribute(
-                                                'relationship_type',
-                                                widget!
-                                                    .relationshipTypeOverride,
-                                                _model
-                                                    .profileRelationshipType);
-                                            if (value == null || value.isEmpty) {
+                                            final value = functions
+                                                .effectiveProfileAttribute(
+                                                    'relationship_type',
+                                                    widget!
+                                                        .relationshipTypeOverride,
+                                                    _model
+                                                        .profileRelationshipType);
+                                            if (value == null ||
+                                                value.isEmpty) {
                                               return const SizedBox.shrink();
                                             }
                                             return Container(
                                               width: 150.0,
-                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
                                               child: Text(
                                                 value,
                                                 textAlign: TextAlign.end,
@@ -2487,16 +2432,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            final value = functions.effectiveProfileAttribute(
-                                                'religion',
-                                                widget!.religionOverride,
-                                                _model.profileBeliefs);
-                                            if (value == null || value.isEmpty) {
+                                            final value = functions
+                                                .effectiveProfileAttribute(
+                                                    'religion',
+                                                    widget!.religionOverride,
+                                                    _model.profileBeliefs);
+                                            if (value == null ||
+                                                value.isEmpty) {
                                               return const SizedBox.shrink();
                                             }
                                             return Container(
                                               width: 150.0,
-                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
                                               child: Text(
                                                 value,
                                                 textAlign: TextAlign.end,
@@ -2575,16 +2523,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            final value = functions.effectiveProfileAttribute(
-                                                'body_type',
-                                                widget!.bodyTypeOverride,
-                                                _model.profileBodyType);
-                                            if (value == null || value.isEmpty) {
+                                            final value = functions
+                                                .effectiveProfileAttribute(
+                                                    'body_type',
+                                                    widget!.bodyTypeOverride,
+                                                    _model.profileBodyType);
+                                            if (value == null ||
+                                                value.isEmpty) {
                                               return const SizedBox.shrink();
                                             }
                                             return Container(
                                               width: 150.0,
-                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
                                               child: Text(
                                                 value,
                                                 textAlign: TextAlign.end,
@@ -2663,16 +2614,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            final value = functions.effectiveProfileAttribute(
-                                                'exercise',
-                                                widget!.exerciseOverride,
-                                                _model.profileExercise);
-                                            if (value == null || value.isEmpty) {
+                                            final value = functions
+                                                .effectiveProfileAttribute(
+                                                    'exercise',
+                                                    widget!.exerciseOverride,
+                                                    _model.profileExercise);
+                                            if (value == null ||
+                                                value.isEmpty) {
                                               return const SizedBox.shrink();
                                             }
                                             return Container(
                                               width: 150.0,
-                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
                                               child: Text(
                                                 value,
                                                 textAlign: TextAlign.end,
@@ -2751,16 +2705,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            final value = functions.effectiveProfileAttribute(
-                                                'drinking',
-                                                widget!.drinkingOverride,
-                                                _model.profileDrinking);
-                                            if (value == null || value.isEmpty) {
+                                            final value = functions
+                                                .effectiveProfileAttribute(
+                                                    'drinking',
+                                                    widget!.drinkingOverride,
+                                                    _model.profileDrinking);
+                                            if (value == null ||
+                                                value.isEmpty) {
                                               return const SizedBox.shrink();
                                             }
                                             return Container(
                                               width: 150.0,
-                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
                                               child: Text(
                                                 value,
                                                 textAlign: TextAlign.end,
@@ -2839,16 +2796,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            final value = functions.effectiveProfileAttribute(
-                                                'smoking',
-                                                widget!.smokingOverride,
-                                                _model.profileSmoking);
-                                            if (value == null || value.isEmpty) {
+                                            final value = functions
+                                                .effectiveProfileAttribute(
+                                                    'smoking',
+                                                    widget!.smokingOverride,
+                                                    _model.profileSmoking);
+                                            if (value == null ||
+                                                value.isEmpty) {
                                               return const SizedBox.shrink();
                                             }
                                             return Container(
                                               width: 150.0,
-                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 0.0),
                                               child: Text(
                                                 value,
                                                 textAlign: TextAlign.end,

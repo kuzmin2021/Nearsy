@@ -1,5 +1,3 @@
-﻿import 'dart:typed_data';
-
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
@@ -7,10 +5,10 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart' as emoji;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'chat_page_model.dart';
 import '/models/chat_models.dart';
+import '/services/photo/photo_upload_service.dart';
 
 import '/backend/supabase/supabase.dart';
 export 'chat_page_model.dart';
@@ -168,16 +166,17 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
           padding: const EdgeInsets.only(bottom: 8),
           child: Row(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: msg.isOwn
-                ? MainAxisAlignment.end
-                : MainAxisAlignment.start,
+            mainAxisAlignment:
+                msg.isOwn ? MainAxisAlignment.end : MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Container(
                 constraints: BoxConstraints(
                     maxWidth: MediaQuery.of(context).size.width * 0.7),
                 decoration: BoxDecoration(
-                  color: msg.isOwn ? const Color(0xFFC9B0FF) : const Color(0xFFF1F1F1),
+                  color: msg.isOwn
+                      ? const Color(0xFFC9B0FF)
+                      : const Color(0xFFF1F1F1),
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Padding(
@@ -198,7 +197,9 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                                     fontSize: 15,
                                     fontWeight: FontWeight.w500,
                                     color: Colors.black,
-                                  ).copyWith(fontFamilyFallback: const ['NotoColorEmoji']),
+                                  ).copyWith(fontFamilyFallback: const [
+                                    'NotoColorEmoji'
+                                  ]),
                                 ),
                               ),
                               const SizedBox(width: 8),
@@ -212,7 +213,8 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                               ? const EdgeInsets.only(top: 4)
                               : EdgeInsets.zero,
                           child: GestureDetector(
-                            onTap: () => _showFullscreenPhoto(context, msg.photoUrl!),
+                            onTap: () =>
+                                _showFullscreenPhoto(context, msg.photoUrl!),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(6),
                               child: SupaPhoto(
@@ -236,7 +238,9 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                             ),
                           ),
                         ),
-                      if (msg.photoUrl != null && msg.photoUrl!.isNotEmpty && msg.body.isEmpty)
+                      if (msg.photoUrl != null &&
+                          msg.photoUrl!.isNotEmpty &&
+                          msg.body.isEmpty)
                         Padding(
                           padding: const EdgeInsets.only(top: 4),
                           child: Align(
@@ -263,7 +267,8 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
           Icon(
             Icons.check,
             size: 10,
-            color: msg.isRead ? const Color(0xFF34C759) : const Color(0x80000000),
+            color:
+                msg.isRead ? const Color(0xFF34C759) : const Color(0x80000000),
           ),
           const SizedBox(width: 3),
         ],
@@ -316,62 +321,16 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
     );
   }
 
-  void _showAttachmentPicker(BuildContext context) {
-    showModalBottomSheet(
-      context: context,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-      ),
-      builder: (ctx) {
-        return SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                ListTile(
-                  leading: const Icon(Icons.photo_library, color: Color(0xFFC9B0FF)),
-                  title: const Text('Gallery'),
-                  onTap: () async {
-                    Navigator.pop(ctx);
-                    final picker = ImagePicker();
-                    final picked = await picker.pickImage(source: ImageSource.gallery);
-                    if (picked == null) return;
-                    final bytes = await picked.readAsBytes();
-                    await _model.sendPhoto(bytes, picked.name);
-                    safeSetState(() {});
-                  },
-                ),
-                ListTile(
-                  leading: const Icon(Icons.camera_alt, color: Color(0xFFC9B0FF)),
-                  title: const Text('Camera'),
-                  onTap: () async {
-                    Navigator.pop(ctx);
-                    final picker = ImagePicker();
-                    try {
-                      final picked = await picker.pickImage(source: ImageSource.camera);
-                      if (picked == null) return;
-                      final bytes = await picked.readAsBytes();
-                      await _model.sendPhoto(bytes, picked.name);
-                      safeSetState(() {});
-                    } catch (_) {
-                      if (context.mounted) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Camera access denied. Enable it in Settings.'),
-                            duration: Duration(seconds: 3),
-                          ),
-                        );
-                      }
-                    }
-                  },
-                ),
-              ],
-            ),
-          ),
-        );
-      },
+  Future<void> _showAttachmentPicker(BuildContext context) async {
+    final userId = SupaFlow.client.auth.currentUser?.id;
+    if (userId == null || userId.isEmpty) return;
+    final upload = await const PhotoUploadService().pickAndUploadChatPhoto(
+      context,
+      userId: userId,
     );
+    if (upload == null) return;
+    await _model.sendPhoto(upload.storagePath);
+    safeSetState(() {});
   }
 
   void _showFullscreenPhoto(BuildContext context, String photoUrl) {
@@ -391,7 +350,8 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                   placeholder: const Center(
                     child: CircularProgressIndicator(),
                   ),
-                  errorWidget: const Icon(Icons.broken_image, size: 64, color: Colors.white),
+                  errorWidget: const Icon(Icons.broken_image,
+                      size: 64, color: Colors.white),
                 ),
               ),
             ),
@@ -455,7 +415,8 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                     textInputAction: TextInputAction.send,
                     obscureText: false,
                     decoration: InputDecoration(
-                      hintText: AppLabels.of(context).get('chat.write_a_message'),
+                      hintText:
+                          AppLabels.of(context).get('chat.write_a_message'),
                       hintStyle: GoogleFonts.inter(
                         fontSize: 15,
                         fontWeight: FontWeight.w500,
@@ -463,7 +424,8 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                       ).copyWith(fontFamilyFallback: const ['NotoColorEmoji']),
                       enabledBorder: InputBorder.none,
                       focusedBorder: InputBorder.none,
-                      contentPadding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 2),
+                      contentPadding:
+                          const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 2),
                       filled: false,
                       isDense: true,
                     ),
@@ -474,8 +436,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                       color: Colors.black,
                     ).copyWith(fontFamilyFallback: const ['NotoColorEmoji']),
                     maxLines: null,
-                    validator: _model
-                        .messageTextFieldTextControllerValidator
+                    validator: _model.messageTextFieldTextControllerValidator
                         .asValidator(context),
                   ),
                 ),
