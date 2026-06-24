@@ -42,8 +42,8 @@
                       "all_filter":  "すべて",
                       "matches_filter":  "一致",
                       "outside_filter":  "範囲外",
-                      "empty_title":  "Nothing yet� but on the bright side, no baggage.",
-                      "empty_body":  "Adjust your filters or show up in Nearby to help the right people find you.",
+                      "empty_title":  "まだ何もない — でも良い面は、手荷物なし",
+                      "empty_body":  "フィルターを調整するか、Nearbyに表示して適切な人があなたを見つけられるようにしましょう",
                       "empty":  "まだいいねはありません",
                       "tab_label":  "あなたをいいね"
                   },

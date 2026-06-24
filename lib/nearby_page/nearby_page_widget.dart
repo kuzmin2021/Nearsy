@@ -2,6 +2,7 @@ import '/components/nearsy_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
+import '/floter/hyphenation.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -135,36 +136,30 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
         alignment: AlignmentDirectional.topStart,
         child: Padding(
           padding:
-              const EdgeInsetsDirectional.fromSTEB(40, 40, 40, 0),
+              const EdgeInsetsDirectional.fromSTEB(40, 40, 25, 0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                      text: AppLabels.of(context)
-                          .get('nearby.no_location_title'),
-                      style: GoogleFonts.interTight(
-                        color: theme.primaryText,
-                        fontSize: 21,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 0,
-                      ),
-                    ),
-                    const TextSpan(text: '\n\n'),
-                    TextSpan(
-                      text: AppLabels.of(context)
-                          .get('nearby.unknown_location'),
-                      style: GoogleFonts.inter(
-                        color: theme.primaryText,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        height: 1.4,
-                      ),
-                    ),
-                  ],
+              Text(
+                AppLabels.of(context).get('nearby.no_location_title'),
+                style: GoogleFonts.interTight(
+                  color: theme.primaryText,
+                  fontSize: 21,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 0,
+                ),
+              ),
+              const SizedBox(height: 12),
+              Text(
+                hyphenate(AppLabels.of(context)
+                    .get('nearby.unknown_location')),
+                textAlign: TextAlign.justify,
+                style: GoogleFonts.inter(
+                  color: theme.primaryText,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  height: 1.4,
                 ),
               ),
             ],
@@ -178,36 +173,30 @@ class _NearbyPageWidgetState extends State<NearbyPageWidget> {
         alignment: AlignmentDirectional.topStart,
         child: Padding(
           padding:
-              const EdgeInsetsDirectional.fromSTEB(40, 40, 40, 0),
+              const EdgeInsetsDirectional.fromSTEB(40, 40, 25, 0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                      text: AppLabels.of(context)
-                          .get('nearby.no_one_nearby'),
-                      style: GoogleFonts.interTight(
-                        color: theme.primaryText,
-                        fontSize: 21,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 0,
-                      ),
-                    ),
-                    const TextSpan(text: '\n\n'),
-                    TextSpan(
-                      text: AppLabels.of(context)
-                          .get('nearby.no_one_nearby_body'),
-                      style: GoogleFonts.inter(
-                        color: theme.primaryText,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        height: 1.4,
-                      ),
-                    ),
-                  ],
+              Text(
+                AppLabels.of(context).get('nearby.no_one_nearby'),
+                style: GoogleFonts.interTight(
+                  color: theme.primaryText,
+                  fontSize: 21,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 0,
+                ),
+              ),
+              const SizedBox(height: 12),
+              Text(
+                hyphenate(AppLabels.of(context)
+                    .get('nearby.no_one_nearby_body')),
+                textAlign: TextAlign.justify,
+                style: GoogleFonts.inter(
+                  color: theme.primaryText,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  height: 1.4,
                 ),
               ),
             ],

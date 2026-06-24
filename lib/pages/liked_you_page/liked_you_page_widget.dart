@@ -2,6 +2,7 @@ import '/components/nearsy_bottom_nav_widget.dart';
 import '/components/match_celebration_overlay.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
+import '/floter/hyphenation.dart';
 import '/backend/supabase/supabase.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -238,44 +239,32 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Expanded(
-                flex: 1,
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(
-                      23.0, 36.0, 23.0, 24.0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                AppLabels.of(context).get(
-                                  'liked_you.title',
-                                ),
-                                style: FloterTheme.of(context)
-                                    .titleLarge
-                                    .override(
-                                      font: GoogleFonts.interTight(
-                                        fontWeight: FloterTheme.of(context)
-                                            .titleLarge
-                                            .fontWeight,
-                                        fontStyle: FloterTheme.of(context)
-                                            .titleLarge
-                                            .fontStyle,
-                                      ),
-                                      color:
-                                          FloterTheme.of(context).primary,
-                                      letterSpacing: 0.0,
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(
+                    23.0, 36.0, 23.0, 0.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              AppLabels.of(context).get(
+                                'liked_you.title',
+                              ),
+                              style: FloterTheme.of(context)
+                                  .titleLarge
+                                  .override(
+                                    font: GoogleFonts.interTight(
                                       fontWeight: FloterTheme.of(context)
                                           .titleLarge
                                           .fontWeight,
@@ -283,33 +272,43 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
                                           .titleLarge
                                           .fontStyle,
                                     ),
-                              ),
-                            ].divide(const SizedBox(width: 4.0)),
-                          ),
-                        ],
-                      ),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            _buildFilterChip(
-                                'all', '${AppLabels.of(context).get('liked_you.all_filter')} ${_model.allCount}'),
-                            _buildFilterChip(
-                                'matches', '${AppLabels.of(context).get('liked_you.matches_filter')} ${_model.matchesCount}'),
-                            _buildFilterChip(
-                                'outside', '${AppLabels.of(context).get('liked_you.outside_filter')} ${_model.outsideCount}'),
-                          ].divide(const SizedBox(width: 8.0)),
+                                    color:
+                                        FloterTheme.of(context).primary,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FloterTheme.of(context)
+                                        .titleLarge
+                                        .fontWeight,
+                                    fontStyle: FloterTheme.of(context)
+                                        .titleLarge
+                                        .fontStyle,
+                                  ),
+                            ),
+                          ].divide(const SizedBox(width: 4.0)),
                         ),
+                      ],
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          _buildFilterChip(
+                              'all', '${AppLabels.of(context).get('liked_you.all_filter')} ${_model.allCount}'),
+                          _buildFilterChip(
+                              'matches', '${AppLabels.of(context).get('liked_you.matches_filter')} ${_model.matchesCount}'),
+                          _buildFilterChip(
+                              'outside', '${AppLabels.of(context).get('liked_you.outside_filter')} ${_model.outsideCount}'),
+                        ].divide(const SizedBox(width: 8.0)),
                       ),
-                      Expanded(
-                        child: _buildContent(),
-                      ),
-                    ].divide(const SizedBox(height: 12.0)),
-                  ),
+                    ),
+                  ].divide(const SizedBox(height: 12.0)),
                 ),
+              ),
+              Expanded(
+                flex: 1,
+                child: _buildContent(),
               ),
               wrapWithModel(
                 model: _model.nearsyBottomNavModel,
@@ -352,36 +351,30 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
 
     if (_model.profiles.isEmpty) {
       return Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(16, 40, 16, 0),
+        padding: const EdgeInsetsDirectional.fromSTEB(40, 40, 25, 0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text.rich(
-              TextSpan(
-                children: [
-                  TextSpan(
-                    text: AppLabels.of(context)
-                        .get('liked_you.empty_title'),
-                    style: GoogleFonts.interTight(
-                      color: FloterTheme.of(context).primaryText,
-                      fontSize: 21,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: 0,
-                    ),
-                  ),
-                  const TextSpan(text: '\n\n'),
-                  TextSpan(
-                    text: AppLabels.of(context)
-                        .get('liked_you.empty_body'),
-                    style: GoogleFonts.inter(
-                      color: FloterTheme.of(context).primaryText,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                      height: 1.4,
-                    ),
-                  ),
-                ],
+            Text(
+              AppLabels.of(context).get('liked_you.empty_title'),
+              style: GoogleFonts.interTight(
+                color: FloterTheme.of(context).primaryText,
+                fontSize: 21,
+                fontWeight: FontWeight.w900,
+                letterSpacing: 0,
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              hyphenate(AppLabels.of(context)
+                  .get('liked_you.empty_body')),
+              textAlign: TextAlign.justify,
+              style: GoogleFonts.inter(
+                color: FloterTheme.of(context).primaryText,
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                height: 1.4,
               ),
             ),
             const SizedBox(height: 36),
@@ -423,7 +416,9 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
         _model.loadLikes();
         await Future.delayed(const Duration(milliseconds: 500));
       },
-      child: GridView.builder(
+      child: Padding(
+        padding: const EdgeInsetsDirectional.fromSTEB(23, 0, 23, 0),
+        child: GridView.builder(
         controller: _scrollController,
         padding: EdgeInsets.zero,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -439,6 +434,7 @@ class _LikedYouPageWidgetState extends State<LikedYouPageWidget> {
           }
           return _buildCard(_model.profiles[index]);
         },
+        ),
       ),
     );
   }

@@ -44,14 +44,14 @@
                       "all_filter":  "All",
                       "matches_filter":  "Filter matches",
                       "outside_filter":  "Outside",
-                      "empty_title":  "Nothing yet � but on the bright side, no baggage.",
+                      "empty_title":  "Nothing yet — but on the bright side, no baggage",
                       "empty_body":  "Adjust your filters or show up in Nearby to help the right people find you.",
                       "empty":  "No likes yet",
                       "tab_label":  "Liked You"
                   },
     "matches":  {
                     "chats":  "Chats",
-                    "no_chats_title":  "Still quiet here � which just means nothing�s complicated.",
+                    "no_chats_title":  "Still quiet here — which just means nothing's complicated",
                     "no_chats_body":  "Start a chat or wait for the right one to say something.",
                     "no_chats_yet":  "No conversations yet",
                     "tab_label":  "Chats"

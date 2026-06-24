@@ -2,6 +2,7 @@ import '/components/nearsy_bottom_nav_widget.dart';
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
+import '/floter/hyphenation.dart';
 import '/backend/supabase/supabase.dart';
 import '/auth/supabase_auth/auth_util.dart';
 import '/index.dart';
@@ -47,73 +48,61 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: theme.primaryBackground,
-      body: SafeArea(
-        top: true,
-        child: Column(
-          children: [
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(23, 36, 23, 0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    _buildHeader(context, theme),
-                    if (_model.isLoading || _model.conversations.isNotEmpty)
-                      const SizedBox(height: 24),
-                    Expanded(
-                      child: _model.isLoading
-                          ? const Center(child: CircularProgressIndicator())
-                          : _model.conversations.isEmpty
-                              ? _buildEmptyState(context, theme)
-                              : _buildConversationList(context),
-                    ),
-                  ],
-                ),
+        body: SafeArea(
+          top: true,
+          child: Column(
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(23, 36, 23, 0),
+                child: _buildHeader(context, theme),
               ),
-            ),
-            wrapWithModel(
-              model: _model.nearsyBottomNavModel,
-              updateCallback: () => safeSetState(() {}),
-              child: const NearsyBottomNavWidget(activeTab: 'Chats'),
-            ),
-          ],
+              if (_model.isLoading || _model.conversations.isNotEmpty)
+                const SizedBox(height: 24),
+              Expanded(
+                child: _model.isLoading
+                    ? const Center(child: CircularProgressIndicator())
+                    : _model.conversations.isEmpty
+                        ? _buildEmptyState(context, theme)
+                        : _buildConversationList(context),
+              ),
+              wrapWithModel(
+                model: _model.nearsyBottomNavModel,
+                updateCallback: () => safeSetState(() {}),
+                child: const NearsyBottomNavWidget(activeTab: 'Chats'),
+              ),
+            ],
+          ),
         ),
-      ),
     );
   }
 
   Widget _buildEmptyState(BuildContext context, dynamic theme) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(16, 40, 16, 0),
+      padding: const EdgeInsetsDirectional.fromSTEB(40, 40, 25, 0),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text.rich(
-            TextSpan(
-              children: [
-                TextSpan(
-                  text: AppLabels.of(context)
-                      .get('matches.no_chats_title'),
-                  style: GoogleFonts.interTight(
-                    color: theme.primaryText,
-                    fontSize: 21,
-                    fontWeight: FontWeight.w900,
-                    letterSpacing: 0,
-                  ),
-                ),
-                const TextSpan(text: '\n\n'),
-                TextSpan(
-                  text: AppLabels.of(context)
-                      .get('matches.no_chats_body'),
-                  style: GoogleFonts.inter(
-                    color: theme.primaryText,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    height: 1.4,
-                  ),
-                ),
-              ],
+          Text(
+            AppLabels.of(context).get('matches.no_chats_title'),
+            style: GoogleFonts.interTight(
+              color: theme.primaryText,
+              fontSize: 21,
+              fontWeight: FontWeight.w900,
+              letterSpacing: 0,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            hyphenate(AppLabels.of(context)
+                .get('matches.no_chats_body')),
+            textAlign: TextAlign.justify,
+            style: GoogleFonts.inter(
+              color: theme.primaryText,
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+              height: 1.4,
             ),
           ),
         ],
@@ -122,11 +111,14 @@ class _MatchesPageWidgetState extends State<MatchesPageWidget> {
   }
 
   Widget _buildConversationList(BuildContext context) {
-    return ListView.separated(
-      itemCount: _model.conversations.length,
-      separatorBuilder: (_, __) => const SizedBox(height: 6),
-      itemBuilder: (context, index) =>
-          _buildConversationItem(context, _model.conversations[index]),
+    return Padding(
+      padding: const EdgeInsetsDirectional.fromSTEB(23, 0, 23, 0),
+      child: ListView.separated(
+        itemCount: _model.conversations.length,
+        separatorBuilder: (_, __) => const SizedBox(height: 6),
+        itemBuilder: (context, index) =>
+            _buildConversationItem(context, _model.conversations[index]),
+      ),
     );
   }
 

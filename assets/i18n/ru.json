@@ -4,8 +4,8 @@
                    },
     "auth":  {
                  "nearsy":  "Nearsy",
-                 "meet_near_keep_it_easy":  "Встречаемся рядом. Будь проще",
-                 "continue_with_email":  "Продолжить с email",
+                 "meet_near_keep_it_easy":  "Знакомься рядом. Легко.",
+                 "continue_with_email":  "Продолжить с эл.почтой",
                  "continue_with_phone":  "Продолжить по телефону",
                  "by_signing_up_you_agree_to_the_terms_of":  "Регистрируясь, вы соглашаетесь с Условиями",
                  "service_and_privacy_policy":  "Политика обслуживания и конфиденциальности"
@@ -44,14 +44,14 @@
                       "all_filter":  "Все",
                       "matches_filter":  "Совпадения",
                       "outside_filter":  "Вне",
-                      "empty_title":  "Пока ничего — но это и к лучшему, никакого багажа.",
-                      "empty_body":  "Настрой фильтры или появись в Nearby, чтобы нужные люди тебя нашли.",
+                      "empty_title":  "Пока ничего — но это и к лучшему, никакого багажа",
+                      "empty_body":  "Настрой фильтры или появись в Рядом, чтобы нужные люди тебя нашли.",
                       "empty":  "Пока нет лайков",
                       "tab_label":  "Вы им понравились"
                   },
     "matches":  {
                     "chats":  "Чаты",
-                    "no_chats_title":  "Пока тишина — но это не значит, что всё сложно.",
+                    "no_chats_title":  "Пока тишина — но это не значит, что всё сложно",
                     "no_chats_body":  "Начни чат или подожди, пока кто-то особенный напишет первым.",
                     "no_chats_yet":  "Пока нет чатов",
                     "tab_label":  "Чаты"
@@ -63,7 +63,7 @@
     "account_settings":  {
                              "title":  "Настройки аккаунта",
                              "member_id":  "ID участника",
-                             "email":  "Email",
+                             "email":  "Почта",
                              "phone":  "Телефон",
                              "password":  "Пароль",
                              "edit_email":  "Изменить",
@@ -77,7 +77,7 @@
                              "matches":  "Пары",
                              "messages":  "Сообщения",
                              "liked_you":  "Ты мне понравился",
-                             "email_notifications":  "Email-уведомления",
+                             "email_notifications":  "Уведомления по почте",
                              "matches_email":  "Пары",
                              "messages_email":  "Сообщения",
                              "liked_you_email":  "Ты мне понравился",
@@ -171,7 +171,7 @@
                        "title":  "Свяжитесь с нами",
                        "let_us_know_what_you_think":  "Поделитесь своим мнением...",
                        "submit":  "Отправить",
-                       "your_email":  "Ваш email",
+                       "your_email":  "Ваша почта",
                        "message_required":  "Введите сообщение.",
                        "submit_success":  "Спасибо за обратную связь.",
                        "submit_error":  "Не удалось отправить обратную связь."
@@ -292,7 +292,7 @@
                        "use_your_email_and_password_or_create_a_new_account":  "Используйте свой адрес электронной почты и пароль или создайте новую учетную запись.",
                        "sign_in":  "Войти",
                        "register":  "Регистрация",
-                       "email_address":  "Адрес email",
+                       "email_address":  "Адрес почты",
                        "password":  "Пароль",
                        "repeat_password":  "Повторите пароль",
                        "create_account":  "Создать аккаунт",
@@ -320,7 +320,7 @@
     "reset_password":  {
                            "title":  "Сбросить пароль",
                            "enter_your_email_and_we_will_send_a_password_reset_link":  "Введите свой адрес электронной почты, и мы вышлем ссылку для сброса пароля.",
-                           "email_address":  "Адрес email",
+                           "email_address":  "Адрес почты",
                            "send_reset_link":  "Отправить ссылку для сброса"
                        },
     "update_password":  {
@@ -423,17 +423,17 @@
                       "catalan":  "каталанский"
                   },
     "account_email":  {
-                          "edit_title":  "Изменить email",
-                          "add_title":  "Добавить email",
-                          "label_1":  "Введите адрес email, который хотите использовать для аккаунта.",
-                          "email_address":  "Адрес email",
+                          "edit_title":  "Изменить почту",
+                          "add_title":  "Добавить почту",
+                          "label_1":  "Введите адрес почты, который хотите использовать для аккаунта.",
+                          "email_address":  "Адрес почты",
                           "save":  "Сохранить",
-                          "invalid_email":  "Введите корректный адрес email.",
+                          "invalid_email":  "Введите корректный адрес почты.",
                           "confirmation_sent":  "Код подтверждения отправлен.",
-                          "save_error":  "Не удалось обновить email.",
-                          "title":  "Добавить и подтвердить email",
-                          "your_email":  "Ваш email",
-                          "code_label":  "Введите код, который мы отправили на ваш email. Он должен прийти в течение 20 секунд.",
+                          "save_error":  "Не удалось обновить почту.",
+                          "title":  "Добавить и подтвердить почту",
+                          "your_email":  "Ваша почта",
+                          "code_label":  "Введите код, который мы отправили на вашу почту. Он должен прийти в течение 20 секунд.",
                           "resend_code":  "Отправить код повторно"
                       }
 }

@@ -8,6 +8,7 @@ import '/floter/floter_theme.dart';
 import '/floter/floter_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/floter/custom_functions.dart' as functions;
+import '/floter/hyphenation.dart';
 import '/services/profile/profile_localization.dart';
 import '/pages/matches_page/matches_page_widget.dart' show MatchesPageWidget;
 import 'package:flutter/material.dart';
@@ -215,36 +216,30 @@ class _PeoplePageWidgetState extends State<PeoplePageWidget> {
       child: SizedBox(
         height: math.max(viewportConstraints.maxHeight, 400),
         child: Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
+          padding: const EdgeInsetsDirectional.fromSTEB(40, 0, 25, 0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 28),
-              Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                      text:
-                          AppLabels.of(context).get('people.no_more_profiles'),
-                      style: GoogleFonts.interTight(
-                        color: theme.primaryText,
-                        fontSize: 21,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 0,
-                      ),
-                    ),
-                    const TextSpan(text: '\n\n'),
-                    TextSpan(
-                      text: AppLabels.of(context).get('people.empty_state'),
-                      style: GoogleFonts.inter(
-                        color: theme.primaryText,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        height: 1.4,
-                      ),
-                    ),
-                  ],
+              Text(
+                AppLabels.of(context).get('people.no_more_profiles'),
+                style: GoogleFonts.interTight(
+                  color: theme.primaryText,
+                  fontSize: 21,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 0,
+                ),
+              ),
+              const SizedBox(height: 12),
+              Text(
+                hyphenate(AppLabels.of(context).get('people.empty_state')),
+                textAlign: TextAlign.justify,
+                style: GoogleFonts.inter(
+                  color: theme.primaryText,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  height: 1.4,
                 ),
               ),
               const SizedBox(height: 44),
