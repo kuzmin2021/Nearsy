@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:typed_data';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
@@ -112,10 +113,12 @@ class ProfilePhotoGrid extends StatelessWidget {
     final result = await FilePicker.platform.pickFiles(
       type: FileType.image,
       allowMultiple: false,
-      withData: true,
+      withData: false,
     );
     if (result == null || result.files.isEmpty) return null;
-    return result.files.single.bytes;
+    final path = result.files.single.path;
+    if (path == null) return null;
+    return await File(path).readAsBytes();
   }
 
   Future<Uint8List?> _pickFromCamera() async {

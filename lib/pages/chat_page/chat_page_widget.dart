@@ -1,4 +1,5 @@
-﻿import 'dart:typed_data';
+﻿import 'dart:io';
+import 'dart:typed_data';
 
 import '/floter/floter_icon_button.dart';
 import '/floter/floter_theme.dart';
@@ -338,12 +339,13 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
                     final result = await FilePicker.platform.pickFiles(
                       type: FileType.image,
                       allowMultiple: false,
-                      withData: true,
+                      withData: false,
                     );
                     if (result == null || result.files.isEmpty) return;
                     final file = result.files.single;
-                    if (file.bytes == null) return;
-                    await _model.sendPhoto(file.bytes!, file.name);
+                    if (file.path == null) return;
+                    final bytes = await File(file.path!).readAsBytes();
+                    await _model.sendPhoto(bytes, file.name);
                     safeSetState(() {});
                   },
                 ),

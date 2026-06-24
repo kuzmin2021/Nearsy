@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/components/nearsy_bottom_nav_widget.dart';
@@ -618,22 +620,25 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                     highlightColor:
                                                         Colors.transparent,
                                                     onTap: () async {
-                                                      final result =
-                                                          await FilePicker
-                                                              .platform
-                                                              .pickFiles(
-                                                        type: FileType.image,
-                                                        allowMultiple: false,
-                                                        withData: true,
-                                                      );
-                                                      if (result == null ||
-                                                          result
-                                                              .files.isEmpty) {
-                                                        return;
-                                                      }
-                                                      final pickedFile =
-                                                          result.files.single;
-                                                      final bytes =
+                                                     final result =
+                                                         await FilePicker
+                                                             .platform
+                                                             .pickFiles(
+                                                       type: FileType.image,
+                                                       allowMultiple: false,
+                                                       withData: false,
+                                                     );
+                                                     if (result == null ||
+                                                         result
+                                                             .files.isEmpty) {
+                                                       return;
+                                                     }
+                                                     final pickedFile =
+                                                         result.files.single;
+                                                     final path = pickedFile.path;
+                                                     if (path == null) return;
+                                                     final bytes =
+                                                         await File(path).readAsBytes();
                                                           pickedFile.bytes;
                                                       if (bytes == null ||
                                                           bytes.isEmpty) {
@@ -1509,21 +1514,24 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                       return;
                                                     }
 
-                                                    final result =
-                                                        await FilePicker
-                                                            .platform
-                                                            .pickFiles(
-                                                      type: FileType.image,
-                                                      allowMultiple: false,
-                                                      withData: true,
-                                                    );
-                                                    if (result == null ||
-                                                        result.files.isEmpty) {
-                                                      return;
-                                                    }
-                                                    final pickedFile =
-                                                        result.files.single;
-                                                    final bytes =
+                                                     final result =
+                                                         await FilePicker
+                                                             .platform
+                                                             .pickFiles(
+                                                       type: FileType.image,
+                                                       allowMultiple: false,
+                                                       withData: false,
+                                                     );
+                                                     if (result == null ||
+                                                         result.files.isEmpty) {
+                                                       return;
+                                                     }
+                                                     final pickedFile =
+                                                         result.files.single;
+                                                     final path = pickedFile.path;
+                                                     if (path == null) return;
+                                                     final bytes =
+                                                         await File(path).readAsBytes();
                                                         pickedFile.bytes;
                                                     if (bytes == null ||
                                                         bytes.isEmpty) {
