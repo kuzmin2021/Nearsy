@@ -27,9 +27,7 @@ class MatchCelebrationOverlay extends StatefulWidget {
 }
 
 class _MatchCelebrationOverlayState extends State<MatchCelebrationOverlay>
-    with SingleTickerProviderStateMixin {
-  final _pageController = PageController();
-  int _currentPage = 0;
+    with TickerProviderStateMixin {
   late AnimationController _scaleController;
   late Animation<double> _scaleAnimation;
 
@@ -49,97 +47,8 @@ class _MatchCelebrationOverlayState extends State<MatchCelebrationOverlay>
 
   @override
   void dispose() {
-    _pageController.dispose();
     _scaleController.dispose();
     super.dispose();
-  }
-
-  void _goToPage(int page) {
-    if (page >= 4) {
-      return;
-    }
-    _pageController.animateToPage(
-      page,
-      duration: const Duration(milliseconds: 400),
-      curve: Curves.easeInOut,
-    );
-    setState(() => _currentPage = page);
-  }
-
-  Widget _buildPage(int index) {
-    final theme = FloterTheme.of(context);
-    return GestureDetector(
-      onTap: () => _goToPage(index + 1),
-      child: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              theme.primary.withValues(alpha: 0.9),
-              theme.primary.withValues(alpha: 0.6),
-              theme.secondaryBackground,
-            ],
-            begin: AlignmentDirectional.topStart,
-            end: AlignmentDirectional.bottomEnd,
-          ),
-        ),
-        child: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Spacer(),
-              if (index == 0) _buildMatchContent(),
-              if (index == 1) _buildSlideContent(1),
-              if (index == 2) _buildSlideContent(2),
-              if (index == 3) _buildSlideContent(3),
-              const Spacer(),
-              if (index == 3)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 40.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: theme.primary,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 48.0,
-                        vertical: 16.0,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                    ),
-                    onPressed: widget.onSayHello,
-                    child: Text(
-                      AppLabels.of(context).get('match_celebration.say_hello'),
-                      style: GoogleFonts.inter(
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(
-                  4,
-                  (i) => Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 4.0),
-                    width: i == _currentPage ? 12.0 : 8.0,
-                    height: 8.0,
-                    decoration: BoxDecoration(
-                      color: i == _currentPage
-                          ? Colors.white
-                          : Colors.white.withValues(alpha: 0.4),
-                      borderRadius: BorderRadius.circular(4.0),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 20.0),
-            ],
-          ),
-        ),
-      ),
-    );
   }
 
   Widget _buildMatchContent() {
@@ -173,36 +82,6 @@ class _MatchCelebrationOverlayState extends State<MatchCelebrationOverlay>
               color: Colors.white.withValues(alpha: 0.9),
             ),
             textAlign: TextAlign.center,
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildSlideContent(int slide) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 40.0),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(16.0),
-            child: Image.asset(
-              'assets/images/match_celebration_$slide.png',
-              fit: BoxFit.contain,
-              width: MediaQuery.of(context).size.width * 0.65,
-            ),
-          ),
-          const SizedBox(height: 16.0),
-          Opacity(
-            opacity: 0.7,
-            child: Text(
-              AppLabels.of(context).get('match_celebration.tap_to_continue'),
-              style: GoogleFonts.inter(
-                fontSize: 13.0,
-                color: Colors.white,
-              ),
-            ),
           ),
         ],
       ),
@@ -257,10 +136,53 @@ class _MatchCelebrationOverlayState extends State<MatchCelebrationOverlay>
 
   @override
   Widget build(BuildContext context) {
-    return PageView(
-      controller: _pageController,
-      onPageChanged: (page) => setState(() => _currentPage = page),
-      children: List.generate(4, (index) => _buildPage(index)),
+    final theme = FloterTheme.of(context);
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            theme.primary.withValues(alpha: 0.9),
+            theme.primary.withValues(alpha: 0.6),
+            theme.secondaryBackground,
+          ],
+          begin: AlignmentDirectional.topStart,
+          end: AlignmentDirectional.bottomEnd,
+        ),
+      ),
+      child: SafeArea(
+        child: Column(
+          children: [
+            const Spacer(flex: 3),
+            _buildMatchContent(),
+            const Spacer(flex: 2),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 40.0),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  foregroundColor: theme.primary,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 48.0,
+                    vertical: 16.0,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                ),
+                onPressed: widget.onSayHello,
+                child: Text(
+                  AppLabels.of(context).get('match_celebration.say_hello'),
+                  style: GoogleFonts.inter(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ),
+            const Spacer(flex: 1),
+          ],
+        ),
+      ),
     );
   }
 }
